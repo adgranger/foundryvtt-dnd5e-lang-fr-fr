@@ -1,4 +1,6 @@
 
+import { ActorSheet5eCharacter } from "../../systems/dnd5e/module/actor/sheets/character.js";
+
 Hooks.once('init', () => {
 
 	if(typeof Babele !== 'undefined') {
@@ -29,5 +31,8 @@ Hooks.once('init', () => {
 				}
 			}
 		});
+
+		CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
+		CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
 	}
 });
