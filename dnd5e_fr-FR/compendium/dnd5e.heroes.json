@@ -1,80 +1,120 @@
 {
 	"label": "Prétirés",
-	"mapping": { 
-	   "speed": "data.attributes.speed.value"
+	"mapping": {
+		"speed": {
+			"path": "data.attributes.speed",
+			"converter": "speed"
+		},
+		"race": "data.details.race",
+		"background": "data.details.background",
+		"alignment": {
+			"path": "data.details.alignment",
+			"converter": "alignement"
+		},
+		"senses": {
+			"path": "data.traits.senses",
+			"converter": "senses"
+		},
+		"ci": "data.traits.ci.custom",
+		"custom_armes": "data.traits.weaponProf.custom",
+		"custom_métier": "data.traits.toolProf.custom"
 	},
 	"entries": [
 		{
 			"id": "Bernard (Hill Dwarf Rogue)",
 			"name": "Bernard (Roublard Nain des collines)",
-			"description": "<p>Bernard used to be a courtier at the dwarven halls, dabbling in intruigue he picked up a few tricks. He once got discovered implicating someone in a scandal and was removed in disgrace. Since then, he looks to make a name for himself and regain his social status.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"description": "<p>Bernard était marchand dans les Halles de vente naines, qui lui ont permis d'acquérir quelques tours de passe-passe. Révélé alors qu'il était impliqué dans un scandale, il fut envoyé en disgrâce. Depuis lors, il cherche à se faire un nom et à retrouver son statut social.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Nain des collines",
+			"background": "Marchand de guilde",
+			"custom_armes": "Hache d'armes; Marteau léger; Marteau de guerre; Arbalète de poing; Épée longue; Rapière; Épée courte",
+			"custom_métier": "Outils de forgeron"
 		},
 		{
 			"id": "Brutus (Human Fighter)",
 			"name": "Brutus (Guerrier Humain)",
 			"description": "<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"race": "Humain",
+			"background": "Garde municipal"
 		},
 		{
 			"id": "Emil (Human Druid)",
-			"name": "Emil (Druide Humain)",
+			"name": "bug sur Emil - import en anglais seulement",
 			"description": "<p>Emil lived among animals so long that he speaks common difficultly. His natural habitat in danger, he decides to join an adventuring group to return balance to his land.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"race": "Humain"
 		},
 		{
 			"id": "Erin (High Elf Ranger)",
 			"name": "Erin (Rôdeur Haut-Elfe)",
-			"description": "<p>Erin cleanses monsters from her woods as a hobby, but now, a new force now menaces her land and she must band with adventurers to defeat it.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"description": "<p>Erin patrouille dans ses bois et en expurge les monstres, mais voila qu'une nouvelle force menace son monde et qu'elle doit se joindre à des aventuriers pour la vaincre.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Haut Elfe",
+			"background": "Chasseur",
+			"ci": "Sommeil magique; Avantage au jet de sauvegarde contre les charmes",
+			"custom_armes": "Épée longue; Épée courte; Arc long; Arc court"
 		},
 		{
 			"id": "Jeronimo (Half-Elf Bard)",
 			"name": "Jeronimo (Barde Demi-Elfe)",
-			"description": "<p>Jeronimo was a famed entertainer at his local tavern, when he one day ran out of stories to tell. To solve this, he set out to make his own stories, so as to one day tell them again at his tavern.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"description": "<p>Jeronimo était célèbre dans l'animation des soirées à la taverne locale, lorsqu'un jour il n'eu plus d'histoires à raconter. Il s'est donc prit à créer ses propres histoires, afin de pouvoir de nouveaux les raconter un jour dans sa taverne.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Demi-Elfe",
+			"background": "Artiste : Conteur",
+			"ci": "Sommeil magique; Avantage au jet de sauvegarde contre les charmes",
+			"custom_armes": "Épée longue; Épée courte; Rapières; Arbalète de poing",
+			"custom_métier": "Flûte; Lyre; Tambours; Luth"
 		},
 		{
 			"id": "John (Dragonborn Cleric)",
 			"name": "John (Clerc Sangdragon)",
-			"description": "<p>John is a priest of Lathander, roaming the land to speak his wisdom.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"description": "<p>John est un prêtre de Lathander, qui parcourt le pays pour parler de Sa Sagesse.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Sangdragon",
+			"background": "Acolyte"
 		},
 		{
 			"id": "Lukas (Half-Orc Paladin)",
 			"name": "Lukas (Paladin Demi-Orc)",
-			"description": "<p>Roaming the land to bring justice to them, Lukas has just one goal: the destruction of evil.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"description": "<p>Parcourant le monde pour apporter la justice, Lukas n'a qu'un seul but : la destruction du Mal.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Demi-Orc",
+			"background": "Héros du Peuple"
 		},
 		{
 			"id": "Olive (Gnome Wizard)",
-			"name": "Olive (Magicien Gnome)",
-			"description": "<p>Olive has always been interested in tinkering and discovering new spells. She set out for adventure in order to add more spells to her spellbook, and perhaps one day create one of her own.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "7,5 m"
+			"name": "Olivia (Magicien Gnome)",
+			"description": "<p>Olivia a toujours été intéressée par le bricolage et la découverte de nouveaux sorts. Elle s'est lancée dans l'aventure afin d'ajouter d'autres sorts à son livre de sorts, et peut-être un jour en créer un elle-même.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Gnome",
+			"background": "Etudiant",
+			"custom_armes": "Dague; Fléchette; Fronde; Bâton; Arbalète légère",
+			"custom_métier": "Outils de voleur"
 		},
 		{
 			"id": "Renee (Halfling Barbarian)",
-			"name": "Renee (Barbare Halfelin)",
-			"description": "<p>Renée was once a vigilante, due to her innate sense of street justice. Though her small size may not seem like much in combat, she more than makes up for it with her violent outbursts of anger.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "7,5 m"
+			"name": "Renée (Barbare Halfelin)",
+			"description": "<p>Renée était autrefois un justicier, en raison de son sens inné de la justice de rue. Bien que sa petite taille ne semble pas être un atout au combat, elle fait plus que compenser par ses violents accès de colère.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Halfelin",
+			"background": "Garde",
+			"ci": "avantage aux jets de sauvegarde pour ne pas être effrayé."
 		},
 		{
 			"id": "Tristan (Half-Elf Warlock)",
 			"name": "Tristan (Sorcier Demi-Elfe)",
 			"description": "<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"race": "Demi-Elfe",
+			"background": "Criminel",
+			"ci": "Sommeil magique; Avantage au jet de sauvegarde contre les charmes"
 		},
 		{
 			"id": "Vash (Halfling Monk)",
 			"name": "Vash (Moine Halfelin)",
 			"description": "<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "7,5 m"
+			"race": "Halfelin",
+			"background": "Acolyte",
+			"ci": "avantage aux jets de sauvegarde pour ne pas être effrayé."
 		},
 		{
 			"id": "Waldeck (Tiefling Sorcerer)",
 			"name": "Waldeck (Ensorceleur Tieffelin)",
-			"description": "<p>Waldeck's search for his complex draconic-infernal ancestry led him to an academic life, but it soon appeared that the answer to his origins were outside of a library. He thus embarked on an adventure to seek to know more.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"speed": "9 m"
+			"description": "<p>La recherche par Waldeck de ses origines infernales l'a conduit à une vie universitaire.Il est cependant vite apparu que la réponse à ses origines se trouvait en dehors d'une bibliothèque. Il s'est donc lancé dans une aventure pour chercher à en savoir plus.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
+			"race": "Tieffelin",
+			"background": "Etudiant",
+			"custom_armes": "Dague; Fléchette; Fronde; Bâton; Arbalète légère"
 		}
 	]
 }
