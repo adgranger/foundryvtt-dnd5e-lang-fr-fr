@@ -1,5 +1,5 @@
 
-import { ActorSheet5eCharacter } from "../../systems/dnd5e/module/actor/sheets/character.js";
+import ActorSheet5eCharacter from "../../systems/dnd5e/module/actor/sheets/character.js";
 
 Hooks.once('init', () => {
 
