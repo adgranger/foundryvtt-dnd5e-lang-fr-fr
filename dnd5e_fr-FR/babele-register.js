@@ -3,6 +3,45 @@ import ActorSheet5eCharacter from "../../systems/dnd5e/module/actor/sheets/chara
 
 Hooks.once('init', () => {
 
+	var remplLanguages = {
+		"giant eagle": "Aigle Géant",
+		"worg":"Worg",
+		"winter wolf":"Loup Artique",
+		"sahuagin":"Sahuagin",
+		"giant owl, understands but cannot speak all but giant owl":"Chouette Géante, comprend mais ne peut pas parler sauf en Chouette Géante",
+		"giant elk but can't speak them":"Elan Géant, mais ne peut pas le parler",
+		"understands infernal but can't speak it":"comprend l'infernal mais ne peut pas le parler",
+		"understands draconic but can't speak":"comprend le draconic mais ne peut pas le parler",
+		"understands common but doesn't speak it":"comprend le commun mais ne peut pas le parler",
+		"understands abyssal but can't speak":"comprend l'infernal mais ne peut pas le parler",
+		"understands all languages it knew in life but can't speak":"comprend toutes les langues qu'il a apprises dans sa vie mais ne peut pas les parler",
+		"understands commands given in any language but can't speak":"comprend les ordres donnés dans n'importe quelle langue mais ne peut pas parler",
+		"(can't speak in rat form)":"(Ne peut pas parler sous forme de rat)",	
+		"(can't speak in boar form)":"(ne peut pas parler sous forme de sanglier)",
+		"(can't speak in bear form)":"(ne peut pas parler sous forme d'ours)",
+		"(can't speak in tiger form)":"(ne peut pas parler sous forme de tigre)",
+		"any one language (usually common)":"une langue quelconque (généralement le commun)",
+		"any two languages":"deux langues quelconques",
+		"any four languages":"quatre langues quelconques",
+		"5 other languages":"5 autres langues",
+		"any, usually common":"généralement le commun",
+		"one language known by its creator":"une langue connue de son créateur",
+		"the languages it knew in life":"les langues qu'il connaissait dans la vie",
+		"those it knew in life":"les langues qu'il connaissait dans la vie",
+		"all it knew in life":"les langues qu'il connaissait dans la vie",
+		"any it knew in life":"les langues qu'il connaissait dans la vie",
+		"all, telepathy 120 ft.":"toutes, télépathie 36m",
+		"telepathy 60 ft.":"télépathie 18m",
+		"telepathy 60ft. (works only with creatures that understand abyssal)":"télépathie 18m (seulement avec les créatures qui connaissent l'abyssal)",
+		"telepathy 120 ft.":"télépathie 36m",
+		"but can't speak":"mais ne peut pas parler",
+		"but can't speak it":"mais ne peut pas le parler",
+		"choice":"au choix",
+		"understands the languages of its creator but can't speak":"comprend les langues de son créateur mais ne paut pas les parler",
+		"understands common and giant but can't speak":"comprend le géant et le commun mais ne peut pas les parler",
+		"cannot speak": "Ne parle pas"	
+	}
+
 	var typeAlignement = {
 		"chaotic evil": "Chaotique Mauvais",	
 		"chaotic neutral":"Chaotique Neutre",	
@@ -108,11 +147,26 @@ Hooks.once('init', () => {
  	 	chaine = chaine.replace(/Darvision/gi, "Vision dans le noir"); //bug ^^
  		chaine = chaine.replace(/Blindsight/gi, "Vision aveugle");
  		chaine = chaine.replace(/Truesight/gi, "Vision véritable"); 	 		
- 		chaine = chaine.replace(/tremorsense/gi, "Perception des vibrations");
+		 chaine = chaine.replace(/tremorsense/gi, "Perception des vibrations");
+		 chaine = chaine.replace(/Blind Beyond/gi, "Aveugle au-delà"); 
+		 chaine = chaine.replace(/this radius/gi,"de ce rayon");
  		chaine = chaine.replace((chaine.match(regexp)), parseInt(chaine.match(regexp))*0.3);
  	 	chaine = chaine.replace("(blind beyond this radius)", "(aveugle au-delà de ce rayon)");
 		return chaine;
 	}
+
+	function remplDi(chaine) {
+		chaine = chaine.replace(/bludgeoning/gi, 'contondant'); 
+		chaine = chaine.replace(/piercing/gi, 'perforant'); 
+		chaine = chaine.replace(/and/gi, 'et'); 
+		chaine = chaine.replace(/slashing/gi, 'tranchant'); 
+		chaine = chaine.replace(/from/gi, 'd\''); 
+		chaine = chaine.replace(/nonmagical attacks/gi, 'attaques non magiques'); 
+		chaine = chaine.replace(/that aren't silvered/gi, 'non réalisées avec des armes en argent');
+		chaine = chaine.replace(/not made with silvered weapons/gi, 'non réalisées avec des armes en argent');
+		return chaine;
+	}
+
 
 	if(typeof Babele !== 'undefined') {
 		
@@ -180,6 +234,28 @@ Hooks.once('init', () => {
 						}	
 					);
 					return sensTr; 
+				}
+			},
+			"di": (diC) => {
+				return remplDi(diC); 
+			},
+			"languages": (languages) => {
+				if (languages != null ) {
+					//console.log(JSON.parse(JSON.stringify(languages)));
+					const languagesSplit = languages.split('; ');
+					var languagesFin = '';
+					var languagesTr = '';
+					languagesSplit.forEach(function(el){
+						languagesTr = remplLanguages[el.toLowerCase()] ;
+						if (languagesTr != null) {
+							if (languagesFin == '') {
+								languagesFin = languagesTr;
+							}  else {
+								languagesFin = languagesFin + ' ; '  + languagesTr;
+							}
+						} 
+					});
+					return languagesFin; 
 				}
 			}
 	});
