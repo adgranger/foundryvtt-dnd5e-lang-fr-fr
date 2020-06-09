@@ -1,7 +1,74 @@
 
-import ActorSheet5eCharacter from "../../systems/dnd5e/module/actor/sheets/character.js";
+import Actor5e from "../../systems/dnd5e/module/actor/entity.js";
+import SpellCastDialog from "../../systems/dnd5e/module/apps/spell-cast-dialog.js";
+import AbilityTemplate_fr from "./ability-template_fr.js";
+
+// surcharge "largeur" du template du rayon (hard coded)
+export class Actor5e_fr extends Actor5e {
+
+    /**
+   * Cast a Spell, consuming a spell slot of a certain level
+   * @param {Item5e} item   The spell being cast by the actor
+   * @param {Event} event   The originating user interaction which triggered the cast
+   */
+  async useSpell(item, {configureDialog=true}={}) {
+	//super.useSpell(item, {configureDialog=true}={});
+    if ( item.data.type !== "spell" ) throw new Error("Wrong Item type");
+    const itemData = item.data.data;
+
+    // Configure spellcasting data
+    let lvl = itemData.level;
+    const usesSlots = (lvl > 0) && CONFIG.DND5E.spellUpcastModes.includes(itemData.preparation.mode);
+    const limitedUses = !!itemData.uses.per;
+    let consume = `spell${lvl}`;
+    let placeTemplate = false;
+
+    // Configure spell slot consumption and measured template placement from the form
+    if ( usesSlots && configureDialog ) {
+      const spellFormData = await SpellCastDialog.create(this, item);
+      const isPact = spellFormData.get('level') === 'pact';
+      const lvl = isPact ? this.data.data.spells.pact.level : parseInt(spellFormData.get("level"));
+      if (Boolean(spellFormData.get("consume"))) {
+        consume = isPact ? 'pact' : `spell${lvl}`;
+      } else {
+        consume = false;
+      }
+      placeTemplate = Boolean(spellFormData.get("placeTemplate"));
+
+      // Create a temporary owned item to approximate the spell at a higher level
+      if ( lvl !== item.data.data.level ) {
+        item = item.constructor.createOwned(mergeObject(item.data, {"data.level": lvl}, {inplace: false}), this);
+      }
+    }
+
+    // Update Actor data
+    if ( usesSlots && consume && (lvl > 0) ) {
+      await this.update({
+        [`data.spells.${consume}.value`]: Math.max(parseInt(this.data.data.spells[consume].value) - 1, 0)
+      });
+    }
+
+    // Update Item data
+    if ( limitedUses ) {
+      const uses = parseInt(itemData.uses.value || 0);
+      if ( uses <= 0 ) ui.notifications.warn(game.i18n.format("DND5E.ItemNoUses", {name: item.name}));
+      await item.update({"data.uses.value": Math.max(parseInt(item.data.data.uses.value || 0) - 1, 0)})
+    }
+
+    // Initiate ability template placement workflow if selected
+    if ( placeTemplate && item.hasAreaTarget ) {
+      const template = AbilityTemplate_fr.fromItem(item);
+      if ( template ) template.drawPreview(event);
+      if ( this.sheet.rendered ) this.sheet.minimize();
+    }
+
+    // Invoke the Item roll
+    return item.roll();
+  }
+}
 
 Hooks.once('init', () => {
+	CONFIG.Actor.entityClass = Actor5e_fr;
 
 	var remplLanguages = {
 		"giant eagle": "Aigle Géant",
@@ -261,5 +328,11 @@ Hooks.once('init', () => {
 	});
 	CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
 	CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
-	}
+	}	
 });
+
+// pour passer les scenes en 1.5
+Hooks.on('preCreateScene', (scenedata) => {
+    scenedata.gridDistance = 1.5
+    scenedata.gridUnits = "m"
+})
