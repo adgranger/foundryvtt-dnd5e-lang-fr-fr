@@ -68,8 +68,11 @@ export class Actor5e_fr extends Actor5e {
 }
 
 Hooks.once('init', () => {
+	
 	CONFIG.Actor.entityClass = Actor5e_fr;
 
+//	CONFIG.debug.hooks = true;
+	
 	var remplLanguages = {
 		"giant eagle": "Aigle Géant",
 		"worg":"Worg",
@@ -331,8 +334,34 @@ Hooks.once('init', () => {
 	}	
 });
 
+ // un ptit disclaimer de version dd5 & babele parce que bon ... 
+Hooks.once('ready', () => {
+	if ( game.system.data.name == "dnd5e" && game.system.data.version  < "0.93" ) {
+		ChatMessage.create(  {
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v0.93. </br> Vous trouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\\a>"
+		 } )	 
+	}
+	if ( game.modules.get("babele").active && game.modules.get("babele").data.version != "1.19") {
+		ChatMessage.create(  {
+			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v1.19"
+		} )	 
+	}		
+} );
+// pour initer avec 9m de déplacement 
+Hooks.on('createActor', (actor, options, userId) => {
+	if (actor.data.data.attributes.speed.value == "30 ft") {
+		mergeObject(actor.data.data.attributes.speed, {value : "9 m"})
+	}
+})
 // pour passer les scenes en 1.5
 Hooks.on('preCreateScene', (scenedata) => {
     scenedata.gridDistance = 1.5
     scenedata.gridUnits = "m"
 })
+// passer les templates 'rayon' en métrique de 1,5m  (et non 5 ft)
+//Hooks.on('hoverMeasuredTemplate', (measuredTemplate, modele) => {
+//	if (measuredTemplate.data.width == "5"&& measuredTemplate.data.t == "ray") {
+//		mergeObject(measuredTemplate.data, {width : 1.5})
+//	}
+//})
+
