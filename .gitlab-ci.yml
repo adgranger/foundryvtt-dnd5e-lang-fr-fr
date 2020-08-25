@@ -20,6 +20,7 @@ build:
     - zip dnd5e_fr-FR.zip -r dnd5e_fr-FR -x ".*"
   artifacts:
     name: dnd5e_fr-FR
+    expire_in: never 
     when: on_success
     paths:
       - dnd5e_fr-FR.zip
