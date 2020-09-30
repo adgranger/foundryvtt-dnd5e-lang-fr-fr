@@ -292,10 +292,11 @@ Hooks.on('preCreateScene', (scenedata) => {
 async function trieAlphabFR() {
     const lists = document.getElementsByClassName("skills-list");
     for (let list of lists) {
+        console.log(list.tagName)
         const competences = list.childNodes;
         let complist = [];
         for (let sk of competences) {
-            if (sk.innerText) {
+            if (sk.innerText && sk.tagName == "LI") {
                 complist.push(sk);
             }
         }
@@ -305,6 +306,7 @@ async function trieAlphabFR() {
         for (let sk of complist) {
             list.appendChild(sk)
         }
+
     }
 }
 Hooks.on("renderActorSheet", async function() {
