@@ -56,8 +56,8 @@ Hooks.once('init', () => {
 		"lawful chaotic evil":"Loyal/Chaotique Mauvais",	
 		"unaligned":"Sans alignement"	
 	}
-		
-	var typeCreature = {
+	
+		var typeCreature = {
 		"aberration (shapechanger)":"Aberration (métamorphe)",         
 		"aberration":"Aberration",                          
 		"beast":"Bête",
@@ -166,7 +166,46 @@ Hooks.once('init', () => {
 		return chaine;
 	}
 
-
+	function remplRequ(chaine) {
+		chaine = chaine.replace(/Human/gi, 'Humain'); 
+		chaine = chaine.replace(/Half-Orc/gi, 'Demi-Orc'); 
+		chaine = chaine.replace(/Halfling/gi, 'Halfelin'); 
+		chaine = chaine.replace(/Elf/gi, 'Elfe'); 
+		chaine = chaine.replace(/Gnome/gi, 'Gnome'); 
+		chaine = chaine.replace(/Dragonborn/gi, 'Sangdragon'); 
+		chaine = chaine.replace(/Rock Gnome/gi, 'Gnome des roches'); 
+		chaine = chaine.replace(/Dwarf/gi, 'Nain'); 
+		chaine = chaine.replace(/Elf, Half-Elf/gi, 'Elfe, Demi-elfe'); 
+		chaine = chaine.replace(/Tiefling/gi, 'Tieffelin');
+		chaine = chaine.replace(/Draconic Bloodlin/gi, 'Lignée Draconique');
+		chaine = chaine.replace(/Barbarian/gi, 'Barbare');
+		chaine = chaine.replace(/Bard/gi, 'Barde');
+		chaine = chaine.replace(/Wizard /gi, 'Magicien');
+		chaine = chaine.replace(/Warlock/gi, 'Sorcier');
+		chaine = chaine.replace(/Cleric /gi, 'Clerc');
+		chaine = chaine.replace(/Sorcerer /gi, 'Ensorceleur');
+		chaine = chaine.replace(/Ranger /gi, 'Rôdeur');
+		chaine = chaine.replace(/Paladin /gi, 'Paladin');
+		chaine = chaine.replace(/Monk/gi, 'Moine');
+		chaine = chaine.replace(/Druid /gi, 'Druide');
+		chaine = chaine.replace(/Fighter /gi, 'Guerrier');
+		chaine = chaine.replace(/Rogue/gi, 'Roublard');
+		chaine = chaine.replace(/Chmapion/gi, 'Champion');
+		chaine = chaine.replace(/Hunter/gi, 'Chasseur');
+		chaine = chaine.replace(/The Fiend/gi, 'Le fiélon');
+		chaine = chaine.replace(/Oath of Devotion/gi, 'Serment de dévotion');
+		chaine = chaine.replace(/Life Domain/gi, 'Domaine de la Vie');
+		chaine = chaine.replace(/Thief/gi, 'Voleur');
+		chaine = chaine.replace(/School of Evocation/gi, 'Ecole d\'évocation');
+		chaine = chaine.replace(/Path of the Berserker/gi, 'Berserker');
+		chaine = chaine.replace(/Way of the Open Hand/gi, 'Voie de la main ouverte');
+		chaine = chaine.replace(/STR/gi, 'FOR');
+		chaine = chaine.replace(/or higher/gi, 'ou plus');
+		chaine = chaine.replace(/College of Lore/gi, 'Collège du savoir');
+		chaine = chaine.replace(/Circle of the Land/gi, 'Cercle de la terre');
+		return chaine;
+		}
+		
 	if(typeof Babele !== 'undefined') {
 		
 		Babele.get().register({
@@ -196,11 +235,14 @@ Hooks.once('init', () => {
 			},
 			"alignement": (alignement) => {
 	   			return typeAlignement[alignement.toLowerCase()];
-    	},
-			"type": (typeC) => {
-					return typeCreature[typeC.toLowerCase()];
+    	    },
+			"requirements": (typeR) => {
+					return remplRequ(typeR);
 			},	
-			"speed": (testV) => {
+			"type": (typeC) => {
+				return typeCreature[typeC.toLowerCase()];
+		   },
+		   "speed": (testV) => {
 					//console.log(JSON.parse(JSON.stringify(testV))); //{value: "Fly 80 ft.", special: "Walk 10 ft."}
 					if (testV.special) {
 						const testVspecial = testV.special.split('. ');
@@ -265,7 +307,7 @@ Hooks.once('init', () => {
 
  // un ptit disclaimer de version dd5 & babele parce que bon ... 
 Hooks.once('ready', () => {
-	if ( game.system.data.name == "dnd5e" && game.system.data.version  < "0.93" ) {
+	if ( game.system.data.name == "dnd5e" && game.system.data.version  < "0.98" ) {
 		ChatMessage.create(  {
 			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v0.93. </br> Vous trouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\\a>"
 		 } )	 
