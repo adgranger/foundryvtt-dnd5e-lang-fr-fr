@@ -123,7 +123,7 @@ Hooks.once('init', () => {
 		"undead (shapechanger)":"Mort-vivant (métamorphe)",              
 		"undead":"Mort-vivant"        
 	};
-	
+	/** deprecated
 	function rempl(chaine) {
 			var regexp = /([0-9]+)/gi; // recherche des valeurs numériques
 			if (chaine.includes('ft')) { 
@@ -139,7 +139,7 @@ Hooks.once('init', () => {
 	  console.log("non transco =>" + chaine + "<<");
 	  return chaine;
 	}
-	
+	 */
 	function remplSens(chaine) {
 		var regexp = /([0-9]+)/gi; // recherche des valeurs numériques
  	 	chaine = chaine.replace(/ft/gi, 'm'); // toutes les occurences en ft
@@ -235,6 +235,30 @@ Hooks.once('init', () => {
 					return range;
 				}
 			},
+			"movement": (movement) => {
+				console.log(movement.units);
+				if(movement) {
+					if(movement.units === 'ft') {
+						for (var i in movement) {
+							if(movement[i] === 'ft') {
+								movement[i] = 'm'
+							} else {
+								movement[i] = movement[i]*0.3
+							}
+						}
+					}	
+					if(movement.units === 'mi') {
+						for (var i in movement) {
+							if(movement[i] === 'mi') {
+								movement[i] = 'km'
+							}	else {
+								movement[i] = movement[i]*1.5
+							}
+						}
+					}
+					return movement;
+				}
+			},
 			"alignement": (alignement) => {
 	   			return typeAlignement[alignement.toLowerCase()];
     	    },
@@ -244,6 +268,7 @@ Hooks.once('init', () => {
 			"type": (typeC) => {
 				return typeCreature[typeC.toLowerCase()];
 		   },
+		 /** deprecated  
 		   "speed": (testV) => {
 					//console.log(JSON.parse(JSON.stringify(testV))); //{value: "Fly 80 ft.", special: "Walk 10 ft."}
 					if (testV.special) {
@@ -265,6 +290,7 @@ Hooks.once('init', () => {
 					);
 					return	mergeObject(testV, { value: vitesse });
 			},
+			 */
 			"senses": (sens) => {
 				if (sens != null ) {
 					//console.log(JSON.parse(JSON.stringify(sens)));
