@@ -1,5 +1,7 @@
+import { FrenchClassFeatures } from './class/ClassFeatures.js'; //----WIP---
+
 Hooks.once('init', () => {
-	
+	CONFIG.DND5E.classFeatures=FrenchClassFeatures;
 	//	CONFIG.debug.hooks = true;
 	
 	var remplLanguages = {
@@ -57,7 +59,7 @@ Hooks.once('init', () => {
 		"unaligned":"Sans alignement"	
 	}
 	
-		var typeCreature = {
+	var typeCreature = {
 		"aberration (shapechanger)":"Aberration (métamorphe)",         
 		"aberration":"Aberration",                          
 		"beast":"Bête",
@@ -319,7 +321,7 @@ Hooks.once('ready', () => {
 	}		
 } );
 // pour initer avec 9m de déplacement 
-Hooks.on('createActor', (actor, options, userId) => {
+Hooks.on('preCreateActor', (actor, options, userId) => {
 	if (actor.data.data.attributes.speed.value == "30 ft") {
 		mergeObject(actor.data.data.attributes.speed, {value : "9 m"})
 	}
