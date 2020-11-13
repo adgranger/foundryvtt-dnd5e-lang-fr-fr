@@ -335,22 +335,24 @@ Hooks.once('init', () => {
 
  // un ptit disclaimer de version dd5 & babele parce que bon ... 
 Hooks.once('ready', () => {
-	if ( game.system.data.name == "dnd5e" && game.system.data.version  < "0.98" ) {
+	if ( game.system.data.name == "dnd5e" && game.system.data.version  < "1.1.1" ) {
 		ChatMessage.create(  {
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v0.93. </br> Vous trouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\\a>"
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.1.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\\a>"
 		 } )	 
 	}
-	if ( game.modules.get("babele").active && game.modules.get("babele").data.version != "1.19") {
+	if ( game.modules.get("babele").active && game.modules.get("babele").data.version != "1.20") {
 		ChatMessage.create(  {
-			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v1.19"
+			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v1.20"
 		} )	 
 	}		
 } );
-// pour initer avec 9m de déplacement 
 Hooks.on('preCreateActor', (actor, options, userId) => {
-	if (actor.data.data.attributes.speed.value == "30 ft") {
+
+if (actor.data.data.attributes.speed.value == "30 ft") {
 		mergeObject(actor.data.data.attributes.speed, {value : "9 m"})
 	}
+    // quelques surcharges définies :
+	//app.entity.data.details.alignment = typeAlignement[app.entity.data.details.alignment.toLowerCase()];
 })
 // pour passer les scenes en 1.5
 Hooks.on('preCreateScene', (scenedata) => {
@@ -380,6 +382,5 @@ async function trieAlphabFR() {
     }
 }
 Hooks.on("renderActorSheet", async function() {
-    trieAlphabFR();
-
+	trieAlphabFR()	;
 });
