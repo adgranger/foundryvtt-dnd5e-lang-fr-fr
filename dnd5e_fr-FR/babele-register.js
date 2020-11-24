@@ -1,10 +1,6 @@
 import { FrenchClassFeatures } from './class/ClassFeatures.js'; //----WIP---
 
-Hooks.once('init', () => {
-	CONFIG.DND5E.classFeatures = FrenchClassFeatures;
-	//	CONFIG.debug.hooks = true;
 
-	
 var typeAlignement = {
 	"chaotic evil": "Chaotique Mauvais",
 	"chaotic neutral": "Chaotique Neutre",
@@ -162,6 +158,7 @@ function remplRequ(chaine) {
 	chaine = chaine.replace(/Rock Gnome/gi, 'Gnome des roches');
 	chaine = chaine.replace(/Dwarf/gi, 'Nain');
 	chaine = chaine.replace(/Elf, Half-Elf/gi, 'Elfe, Demi-elfe');
+	chaine = chaine.replace(/Elfe, Half-Elfe/gi, 'Elfe, Demi-elfe');
 	chaine = chaine.replace(/Tiefling/gi, 'Tieffelin');
 	chaine = chaine.replace(/Draconic Bloodlin/gi, 'Lignée Draconique');
 	chaine = chaine.replace(/Barbarian/gi, 'Barbare');
@@ -192,6 +189,49 @@ function remplRequ(chaine) {
 	return chaine;
 }
 
+
+Hooks.once('init', () => {
+	CONFIG.DND5E.classFeatures = FrenchClassFeatures;
+	//	CONFIG.debug.hooks = true;
+
+	// affichage du chtit boutons traducFR ? (par défaut non)
+	game.settings.register("dnd5e_fr-FR", "noCtrlVersions", {
+        name: 'Désactiver le contrôle des versions',
+        hint: 'Permet de désactiver le contrôle et l\'éventuelle alerte d\'une version non testée du système Dnd5 et du module Babele par ce module de traduction',
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+		onChange: value => { 
+			window.location.reload();
+	  }
+    });
+	// affichage du chtit boutons traducFR ? (par défaut non)
+	game.settings.register("dnd5e_fr-FR", "noConvMetre", {
+        name: 'Ignorer les conversions',
+        hint: 'Désactive les conversions et les intialisations en système métrique ... sauf quand le texte est \'en dur\' dans la traduction ;) et sur la surcharge d\'acteur avec l\'option ci-dessous. ',
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+		onChange: value => { 
+			window.location.reload();
+	  }
+    });
+	// affichage du chtit boutons traducFR ? (par défaut non)
+	game.settings.register("dnd5e_fr-FR", "importFR", {
+        name: 'Afficher le bouton de tradFR',
+        hint: 'Un petit bouton sur les fiches de perso permettant quelques traductions supplémentaires (alignement, classes, etc) lors d\'import de campagnes ou d\'acteur de compendium non traduit (pas directement dans le compendium, mais dans les acteurs) . ATTENTION : cela écrase les valeurs initiales - pas de retour arrière... (faîtes une copie :) )',
+        type: Boolean,
+        default: false,
+        scope: 'world',
+        config: true,
+		onChange: value => { 
+			window.location.reload();
+	  }
+    });
+
+
 	if (typeof Babele !== 'undefined') {
 
 		Babele.get().register({
@@ -201,41 +241,51 @@ function remplRequ(chaine) {
 		});
 
 		Babele.get().registerConverters({
-			"weight": (value) => { return parseInt(value) / 2 },
+			"weight": (value) => { 
+				if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+					return parseInt(value) / 2
+				} else {
+					return value;
+				};
+			},
 			"range": (range) => {
 				if (range) {
-					if (range.units === 'ft') {
-						if (range.long) {
-							range = mergeObject(range, { long: range.long * 0.3 });
+					if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+						if (range.units === 'ft') {
+							if (range.long) {
+								range = mergeObject(range, { long: range.long * 0.3 });
+							}
+							return mergeObject(range, { value: range.value * 0.3 });
 						}
-						return mergeObject(range, { value: range.value * 0.3 });
-					}
-					if (range.units === 'mi') {
-						if (range.long) {
-							range = mergeObject(range, { long: range.long * 1.5 });
+						if (range.units === 'mi') {
+							if (range.long) {
+								range = mergeObject(range, { long: range.long * 1.5 });
+							}
+							return mergeObject(range, { value: range.value * 1.5 });
 						}
-						return mergeObject(range, { value: range.value * 1.5 });
 					}
 					return range;
 				}
 			},
 			"movement": (movement) => {
 				if (movement) {
-					if (movement.units === 'ft') {
-						for (var i in movement) {
-							if (movement[i] === 'ft') {
-								movement[i] = 'm'
-							} else {
-								movement[i] = movement[i] * 0.3
+					if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+						if (movement.units === 'ft') {
+							for (var i in movement) {
+								if (movement[i] === 'ft') {
+									movement[i] = 'm'
+								} else {
+									movement[i] = movement[i] * 0.3
+								}
 							}
 						}
-					}
-					if (movement.units === 'mi') {
-						for (var i in movement) {
-							if (movement[i] === 'mi') {
-								movement[i] = 'km'
-							} else {
-								movement[i] = movement[i] * 1.5
+						if (movement.units === 'mi') {
+							for (var i in movement) {
+								if (movement[i] === 'mi') {
+									movement[i] = 'km'
+								} else {
+									movement[i] = movement[i] * 1.5
+								}
 							}
 						}
 					}
@@ -289,11 +339,13 @@ function remplRequ(chaine) {
 				}
 			}
 		});
-		CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
-		CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
-		CONFIG.DND5E.movementUnits = {
-			"m": "DND5E.DistFt",
-			"km": "DND5E.DistMi"
+		if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+			CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
+			CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
+			CONFIG.DND5E.movementUnits = {
+				"m": "DND5E.DistFt",
+				"km": "DND5E.DistMi"
+			}
 		}
 	}
 });
@@ -301,9 +353,10 @@ function remplRequ(chaine) {
 // un ptit disclaimer de version dd5 & babele parce que bon ... 
 Hooks.once('ready', () => {
 	if (!game.user.isGM) return;
+	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
 	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.1.1") {
 		ChatMessage.create({
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.1.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\\a>"
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.1.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
 		})
 	}
 	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "1.20") {
@@ -314,22 +367,38 @@ Hooks.once('ready', () => {
 });
 // init fdp à 9m
 Hooks.on('createActor', (actor) => {
-	mergeObject(actor.data.data.attributes.movement, { units: "m" , walk : 9});
-	//console.log(actor.data.data.attributes.movement);
-	actor.update({ data: actor.data.data });
-	actor.render(true);	actor.render(true);
+	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+		mergeObject(actor.data.data.attributes.movement, { units: "m", walk: 9 });
+		//console.log(actor.data.data.attributes.movement);
+		actor.update({ data: actor.data.data });
+		actor.render(true);
+	}
 });
-/** avoir à l'occazzzz.
-Hooks.on('renderActorSheet', (renderActor) => {
-	console.log(renderActor.actor.data.data.attributes.movement.units);
-	// passage des valeurs de déplacements en systeme metrique si besoin				
-	if (!game.user.isGM) return;
-	if (renderActor.actor.compendium) return;
+
+// pour transco les acteurs (chargement de scenar tout fait)
+// éhontement adapté de babele
+// options a ajouter dans le menu  ???
+Hooks.on('renderActorSheet', (app, html, data) => {
+	if (game.user.isGM && data.editable && game.settings.get("dnd5e_fr-FR", "importFR") ) {
+		let title = "transcoFR";
+		let openBtn = $(`<a class="tradFR" title="${title}"><i class="fas fa-chevron-circle-down"></i>${title}</a>`);
+		openBtn.click(ev => {
+			transcoActor(app.entity);
+		});
+		html.closest('.app').find('.tradFR').remove();
+		let titleElement = html.closest('.app').find('.window-title');
+		openBtn.insertAfter(titleElement);
+	}
+});
+
+function transcoActor(actor) {
+	//console.log(actor.data.data.attributes.movement.units);
+	if (actor.compendium) return; //certainement plus nécessaire mais bon
 	// TODO sécurité simple avant ajout d'un parmetre en option
 	if (game.settings.get("core", "language") === "fr") {
-		let moveMetric = renderActor.actor.data.data.attributes.movement;
+	// passage des valeurs de déplacements en systeme metrique si besoin		
+		let moveMetric = actor.data.data.attributes.movement; 
 		if (moveMetric.units === "ft") {
-			//	console.log(renderActor);
 			mergeObject(moveMetric, { units: "m" });
 			// à améliorer :)
 			mergeObject(moveMetric, { walk: moveMetric.walk * 0.3 });
@@ -337,60 +406,58 @@ Hooks.on('renderActorSheet', (renderActor) => {
 			mergeObject(moveMetric, { climb: moveMetric.climb * 0.3 });
 			mergeObject(moveMetric, { fly: moveMetric.fly * 0.3 });
 			mergeObject(moveMetric, { swim: moveMetric.swim * 0.3 });
-
-			// on part du principe que si on est en feet , c'est qu'on est sur un pnj importé en anglais..
-			// donc autant avancer le taf 
-			let detailsFR = renderActor.actor.data.data.details;
-			if (detailsFR.alignment != null) { mergeObject(detailsFR, { alignment: typeAlignement[detailsFR.alignment.toLowerCase()] }) };
-			if (detailsFR.type != null) { mergeObject(detailsFR, { type: typeCreature[detailsFR.type.toLowerCase()] }) };
-
-			let traitsFR = renderActor.actor.data.data.traits;
-			if (traitsFR.senses != null) {
-				const sensSplit = traitsFR.senses.split(', ');
-				var sensTr = '';
-				sensSplit.forEach(function (el) {
-					sensTr = remplSens(el) + ' ' + sensTr;
-				});
-				mergeObject(traitsFR, { senses: sensTr });
-			};
-			if (traitsFR.languages.custom != null) {
-				const languagesSplit = traitsFR.languages.custom.split('; ');
-				var languagesFin = '';
-				var languagesTr = '';
-				languagesSplit.forEach(function (el) {
-					languagesTr = remplLanguages[el.toLowerCase()];
-					if (languagesTr != null) {
-						if (languagesFin == '') {
-							languagesFin = languagesTr;
-						} else {
-							languagesFin = languagesFin + ' ; ' + languagesTr;
-						}
-					}
-				});
-				mergeObject(traitsFR.languages, { custom: languagesFin });
-			}
-			if (traitsFR.di.custom != null) { mergeObject(traitsFR.di, { custom: remplDi(traitsFR.di.custom) }) };
-			if (traitsFR.dr.custom != null) { mergeObject(traitsFR.dr, { custom: remplDi(traitsFR.dr.custom) }) };
 		}
-		// on met à jour
-		renderActor.actor.update({ data: renderActor.actor.data.data });
+		let detailsFR = actor.data.data.details;
+		if (detailsFR.alignment != null) { mergeObject(detailsFR, { alignment: typeAlignement[detailsFR.alignment.toLowerCase()] }) };
+		if (detailsFR.type != null) { mergeObject(detailsFR, { type: typeCreature[detailsFR.type.toLowerCase()] }) };
+
+		let traitsFR = actor.data.data.traits;
+		if (traitsFR.senses != null) {
+			const sensSplit = traitsFR.senses.split(', ');
+			var sensTr = '';
+			sensSplit.forEach(function (el) {
+				sensTr = remplSens(el) + ' ' + sensTr;
+			});
+			mergeObject(traitsFR, { senses: sensTr });
+		};
+		if (traitsFR.languages.custom != null) {
+			const languagesSplit = traitsFR.languages.custom.split('; ');
+			var languagesFin = '';
+			var languagesTr = '';
+			languagesSplit.forEach(function (el) {
+				languagesTr = remplLanguages[el.toLowerCase()];
+				if (languagesTr != null) {
+					if (languagesFin == '') {
+						languagesFin = languagesTr;
+					} else {
+						languagesFin = languagesFin + ' ; ' + languagesTr;
+					}
+				}
+			});
+			mergeObject(traitsFR.languages, { custom: languagesFin });
+		}
+		if (traitsFR.di.custom != null) { mergeObject(traitsFR.di, { custom: remplDi(traitsFR.di.custom) }) };
+		if (traitsFR.dr.custom != null) { mergeObject(traitsFR.dr, { custom: remplDi(traitsFR.dr.custom) }) };
+	
+		// on met à jour l'acteur !!! 
+		actor.update({ data: actor.data.data });
 	}
+	// et si on voulait repasser en en ? 
 	if (game.settings.get("core", "language") === "en") {
-		let moveMetric = renderActor.actor.data.data.attributes.movement;
+		let moveMetric = actor.data.data.attributes.movement;
 		if (moveMetric.units === "m") {
 			mergeObject(moveMetric, { units: "ft" });
 		}
-		// on met à jour
-		renderActor.actor.update({ data: renderActor.actor.data.data });
+		actor.update({ data: actor.data.data });
 	}
-})
-*/
-
+}
 
 // pour passer les scenes en 1.5
 Hooks.on('preCreateScene', (scenedata) => {
-	scenedata.gridDistance = 1.5
-	scenedata.gridUnits = "m"
+	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+		scenedata.gridDistance = 1.5
+		scenedata.gridUnits = "m"
+	}
 })
 
 // tri des compétences @rwanoux
