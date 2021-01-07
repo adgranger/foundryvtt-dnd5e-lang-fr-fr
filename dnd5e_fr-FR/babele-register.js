@@ -354,12 +354,12 @@ Hooks.once('init', () => {
 Hooks.once('ready', () => {
 	if (!game.user.isGM) return;
 	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.1.1") {
+	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.2.2") {
 		ChatMessage.create({
 			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.1.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
 		})
 	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "1.20") {
+	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "1.24") {
 		ChatMessage.create({
 			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v1.20"
 		})
@@ -367,7 +367,8 @@ Hooks.once('ready', () => {
 });
 // init fdp à 9m
 Hooks.on('createActor', (actor) => {
-	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
+	console.log(JSON.parse(JSON.stringify(actor.data.data.attributes.movement.walk)));
+	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") && actor.data.data.attributes.movement.walk == 30 ) {
 		mergeObject(actor.data.data.attributes.movement, { units: "m", walk: 9 });
 		//console.log(actor.data.data.attributes.movement);
 		actor.update({ data: actor.data.data });
