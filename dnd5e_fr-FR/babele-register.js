@@ -367,7 +367,6 @@ Hooks.once('ready', () => {
 });
 // init fdp à 9m
 Hooks.on('createActor', (actor) => {
-	console.log(JSON.parse(JSON.stringify(actor.data.data.attributes.movement.walk)));
 	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") && actor.data.data.attributes.movement.walk == 30 ) {
 		mergeObject(actor.data.data.attributes.movement, { units: "m", walk: 9 });
 		//console.log(actor.data.data.attributes.movement);
