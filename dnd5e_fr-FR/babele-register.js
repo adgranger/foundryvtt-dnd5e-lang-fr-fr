@@ -1,5 +1,3 @@
-import { FrenchClassFeatures } from './class/ClassFeatures.js'; //----WIP---
-
 
 var typeAlignement = {
 	"chaotic evil": "Chaotique Mauvais",
@@ -191,7 +189,6 @@ function remplRequ(chaine) {
 
 
 Hooks.once('init', () => {
-	CONFIG.DND5E.classFeatures = FrenchClassFeatures;
 	//	CONFIG.debug.hooks = true;
 
 	// affichage du chtit boutons traducFR ? (par défaut non)
@@ -354,14 +351,14 @@ Hooks.once('init', () => {
 Hooks.once('ready', () => {
 	if (!game.user.isGM) return;
 	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.2.2") {
+	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.3.3") {
 		ChatMessage.create({
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.1.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.3.3. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
 		})
 	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "1.24") {
+	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.0") {
 		ChatMessage.create({
-			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v1.20"
+			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0"
 		})
 	}
 });
