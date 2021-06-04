@@ -299,7 +299,7 @@ Hooks.once('init', () => {
 				return remplRequ(typeR);
 			},
 			"type": (typeC) => {
-				return typeCreature[typeC.toLowerCase()];
+				return typeCreature[typeC.value.toLowerCase()];
 			},
 
 			"senses": (sens) => {
