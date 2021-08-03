@@ -189,7 +189,7 @@ function remplRequ(chaine) {
 
 
 Hooks.once('init', () => {
-	//	CONFIG.debug.hooks = true;
+    //CONFIG.debug.hooks = true;
 
 	// affichage du chtit boutons traducFR ? (par défaut non)
 	game.settings.register("dnd5e_fr-FR", "noCtrlVersions", {
@@ -336,6 +336,7 @@ Hooks.once('init', () => {
 				}
 			}
 		});
+/** mise à jour 1.4.1 plus besoin ==> reste à voir pour les m ... 
 		if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
 			CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
 			CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
@@ -344,6 +345,7 @@ Hooks.once('init', () => {
 				"km": "DND5E.DistMi"
 			}
 		}
+ */
 	}
 });
 
@@ -351,14 +353,14 @@ Hooks.once('init', () => {
 Hooks.once('ready', () => {
 	if (!game.user.isGM) return;
 	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.3.3") {
+	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.4.1") {
 		ChatMessage.create({
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.3.3. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.4.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
 		})
 	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.0") {
+	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.0.6") {
 		ChatMessage.create({
-			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0"
+			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0.6"
 		})
 	}
 });
@@ -450,11 +452,11 @@ function transcoActor(actor) {
 }
 
 // pour passer les scenes en 1.5
-Hooks.on('preCreateScene', (scenedata) => {
+Hooks.on('createScene', (scene) => {
+//	console.log(JSON.parse(JSON.stringify(scene)));
 	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
-		scenedata.gridDistance = 1.5
-		scenedata.gridUnits = "m"
-	}
+		scene.update({ gridUnits: "m", gridDistance: 1.5 });
+	} 
 })
 
 // tri des compétences @rwanoux
