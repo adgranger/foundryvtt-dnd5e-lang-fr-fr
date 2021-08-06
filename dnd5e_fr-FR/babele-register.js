@@ -252,12 +252,14 @@ Hooks.once('init', () => {
 							if (range.long) {
 								range = mergeObject(range, { long: range.long * 0.3 });
 							}
+							range.units = 'm';
 							return mergeObject(range, { value: range.value * 0.3 });
 						}
 						if (range.units === 'mi') {
 							if (range.long) {
 								range = mergeObject(range, { long: range.long * 1.5 });
 							}
+							range.units = 'km';
 							return mergeObject(range, { value: range.value * 1.5 });
 						}
 					}
@@ -336,7 +338,7 @@ Hooks.once('init', () => {
 				}
 			}
 		});
-/** mise à jour 1.4.1 plus besoin ==> reste à voir pour les m ... 
+/** mise à jour 1.4.1 plus besoin ==> reste à voir pour les m ... - 06/08 : modifier sur le range  
 		if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
 			CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
 			CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
