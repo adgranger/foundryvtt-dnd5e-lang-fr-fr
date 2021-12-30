@@ -355,12 +355,12 @@ Hooks.once('init', () => {
 Hooks.once('ready', () => {
 	if (!game.user.isGM) return;
 	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.4.1") {
+	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.5.6") {
 		ChatMessage.create({
 			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.4.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
 		})
 	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.0.6") {
+	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.2.0") {
 		ChatMessage.create({
 			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0.6"
 		})
