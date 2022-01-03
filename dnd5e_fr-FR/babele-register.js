@@ -1,4 +1,20 @@
 
+const classes = {
+	"Barbarian": "Barbare",
+	"Bard": "Barde",
+	"Cleric": "Clerc",
+	"Druid": "Druide",
+	"Fighter": "Guerrier",
+	"Monk": "Moine",
+	"Paladin": "Paladin",
+	"Ranger": "Rôdeur",
+	"Rogue": "Roublard",
+	"Sorcerer": "Ensorceleur",
+	"Warlock": "Sorcier",
+	"Wizard": "Magicien"
+ };
+
+
 var typeAlignement = {
 	"chaotic evil": "Chaotique Mauvais",
 	"chaotic neutral": "Chaotique Neutre",
@@ -336,59 +352,53 @@ Hooks.once('init', () => {
 					});
 					return languagesFin;
 				}
-			}
+			}, 
+			// thx @Simone 
+			"classNameFormula": (formula) => {
+				if(formula && typeof formula === 'string') {
+				   let translated = formula;
+				   const names = Object.keys(classes);
+				   names.forEach(name => {
+					  translated = translated.replaceAll(name.toLowerCase(), classes[name].toLowerCase())
+				   });
+				   return translated;
+				}
+			 },
+			 // thx @Simone (bis ^^)
+			 "damagePartClassName": (array1) => {
+				 for (let i=0; i< array1.length; i++) {
+					 let array2 = array1[i];
+					 for (let j=0; j< array2.length; j++) {
+						 let translated = array2[j];
+						 if (translated && typeof translated === 'string') {
+							 const names = Object.keys(classes);
+							 names.forEach(name => {
+								 translated = translated.replaceAll(name.toLowerCase(), classes[name].toLowerCase())
+							 });
+							 array2[j] = translated;
+						 }
+					 }
+					 array1[i] = array2;
+				 }
+				 return array1;
+			 }
 		});
-/** mise à jour 1.4.1 plus besoin ==> reste à voir pour les m ... - 06/08 : modifier sur le range  
-		if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
-			CONFIG.DND5E.encumbrance.currencyPerWeight = 100;
-			CONFIG.DND5E.encumbrance.strMultiplier = 7.5;
-			CONFIG.DND5E.movementUnits = {
-				"m": "DND5E.DistFt",
-				"km": "DND5E.DistMi"
-			}
-		}
- */
-	}
-});
+		//thx @Simone (pffff :D ) 	
+		CONFIG.DND5E.classFeatures = {
+			"barbare": CONFIG.DND5E.classFeatures["barbarian"],
+			"bard": CONFIG.DND5E.classFeatures["bard"],
+			"clerc": CONFIG.DND5E.classFeatures["cleric"],
+			"druide": CONFIG.DND5E.classFeatures["druid"],
+			"guerrier": CONFIG.DND5E.classFeatures["fighter"],
+			"moine": CONFIG.DND5E.classFeatures["monk"],
+			"paladin": CONFIG.DND5E.classFeatures["paladin"],
+			"rôdeur": CONFIG.DND5E.classFeatures["ranger"],
+			"roublard": CONFIG.DND5E.classFeatures["rogue"],
+			"ensorceleur": CONFIG.DND5E.classFeatures["sorcerer"],
+			"sorcier": CONFIG.DND5E.classFeatures["warlock"],
+			"magicien": CONFIG.DND5E.classFeatures["wizard"]
+		};
 
-// un ptit disclaimer de version dd5 & babele parce que bon ... 
-Hooks.once('ready', () => {
-	if (!game.user.isGM) return;
-	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.5.6") {
-		ChatMessage.create({
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.4.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
-		})
-	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.2.0") {
-		ChatMessage.create({
-			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0.6"
-		})
-	}
-});
-// init fdp à 9m
-Hooks.on('createActor', (actor) => {
-	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") && actor.data.data.attributes.movement.walk == 30 ) {
-		mergeObject(actor.data.data.attributes.movement, { units: "m", walk: 9 });
-		//console.log(actor.data.data.attributes.movement);
-		actor.update({ data: actor.data.data });
-		actor.render(true);
-	}
-});
-
-// pour transco les acteurs (chargement de scenar tout fait)
-// éhontement adapté de babele
-// options a ajouter dans le menu  ???
-Hooks.on('renderActorSheet', (app, html, data) => {
-	if (game.user.isGM && data.editable && game.settings.get("dnd5e_fr-FR", "importFR") ) {
-		let title = "transcoFR";
-		let openBtn = $(`<a class="tradFR" title="${title}"><i class="fas fa-chevron-circle-down"></i>${title}</a>`);
-		openBtn.click(ev => {
-			transcoActor(app.entity);
-		});
-		html.closest('.app').find('.tradFR').remove();
-		let titleElement = html.closest('.app').find('.window-title');
-		openBtn.insertAfter(titleElement);
 	}
 });
 
@@ -482,6 +492,48 @@ async function trieAlphabFR() {
 
 	}
 }
+// un ptit disclaimer de version dd5 & babele parce que bon ... 
+Hooks.once('ready', () => {
+	if (!game.user.isGM) return;
+	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
+	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.5.6") {
+		ChatMessage.create({
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.4.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
+		})
+	}
+	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.2.0") {
+		ChatMessage.create({
+			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0.6"
+		})
+	}
+});
+
+// init fdp à 9m
+Hooks.on('createActor', (actor) => {
+	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") && actor.data.data.attributes.movement.walk == 30 ) {
+		mergeObject(actor.data.data.attributes.movement, { units: "m", walk: 9 });
+		//console.log(actor.data.data.attributes.movement);
+		actor.update({ data: actor.data.data });
+		actor.render(true);
+	}
+});
+
+// pour transco les acteurs (chargement de scenar tout fait)
+// éhontement adapté de babele
+// options a ajouter dans le menu  ???
+Hooks.on('renderActorSheet', (app, html, data) => {
+	if (game.user.isGM && data.editable && game.settings.get("dnd5e_fr-FR", "importFR") ) {
+		let title = "transcoFR";
+		let openBtn = $(`<a class="tradFR" title="${title}"><i class="fas fa-chevron-circle-down"></i>${title}</a>`);
+		openBtn.click(ev => {
+			transcoActor(app.entity);
+		});
+		html.closest('.app').find('.tradFR').remove();
+		let titleElement = html.closest('.app').find('.window-title');
+		openBtn.insertAfter(titleElement);
+	}
+});
+
 Hooks.on("renderActorSheet", async function () {
 	trieAlphabFR();
 });

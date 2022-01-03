@@ -1,6 +1,22 @@
 ﻿{
 	"label": "Capacités des classes (SRD-AideDD)",
 	"mapping": {
+		"range": {
+            "path": "data.range",
+            "converter": "range"
+        },
+        "uses": {
+            "path": "data.uses.max",
+            "converter": "classNameFormula"
+        },
+        "formula": {
+            "path": "data.formula",
+            "converter": "classNameFormula"
+        },
+        "damageParts": {
+            "path": "data.damage.parts",
+            "converter": "damagePartClassName"
+        },
 		"requirements": {
 			"path": "data.requirements",
 			"converter": "requirements"
