@@ -212,7 +212,7 @@ Hooks.once('init', () => {
         name: 'Désactiver le contrôle des versions',
         hint: 'Permet de désactiver le contrôle et l\'éventuelle alerte d\'une version non testée du système Dnd5 et du module Babele par ce module de traduction',
         type: Boolean,
-        default: false,
+        default: true,
         scope: 'world',
         config: true,
 		onChange: value => { 
@@ -496,14 +496,14 @@ async function trieAlphabFR() {
 Hooks.once('ready', () => {
 	if (!game.user.isGM) return;
 	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.5.6") {
+	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.5.7") {
 		ChatMessage.create({
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.4.1. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
+			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.5.7. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
 		})
 	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.2.0") {
+	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.2.3") {
 		ChatMessage.create({
-			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.0.6"
+			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.2.3"
 		})
 	}
 });
