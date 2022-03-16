@@ -10,7 +10,7 @@ const classes = {
 	"Ranger": "Rôdeur",
 	"Rogue": "Roublard",
 	"Sorcerer": "Ensorceleur",
-	"Warlock": "Sorcier",
+	"Warlock": "Occultiste",
 	"Wizard": "Magicien"
  };
 
@@ -178,7 +178,7 @@ function remplRequ(chaine) {
 	chaine = chaine.replace(/Barbarian/gi, 'Barbare');
 	chaine = chaine.replace(/Bard/gi, 'Barde');
 	chaine = chaine.replace(/Wizard /gi, 'Magicien');
-	chaine = chaine.replace(/Warlock/gi, 'Sorcier');
+	chaine = chaine.replace(/Warlock/gi, 'Occultiste');
 	chaine = chaine.replace(/Cleric /gi, 'Clerc');
 	chaine = chaine.replace(/Sorcerer /gi, 'Ensorceleur');
 	chaine = chaine.replace(/Ranger /gi, 'Rôdeur');
