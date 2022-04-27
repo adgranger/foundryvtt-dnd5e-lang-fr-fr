@@ -22,4 +22,4 @@ une fois votre monde lancé, dans paramètres => gestionnaire de modules
 
 Votre jeu ( et celui de vos joueurs) sera normalement complètement en français
 
-### Note : le fichier de langue 'zz' permet d'utiliser le module Translation Editor et pouvoir rapidement comparé fr / en
+### Note : le fichier de langue 'zz' permet d'utiliser le module Translation Editor et pouvoir rapidement comparer fr / en
