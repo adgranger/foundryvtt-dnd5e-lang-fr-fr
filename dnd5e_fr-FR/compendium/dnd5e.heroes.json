@@ -1,20 +1,38 @@
 {
 	"label": "Prétirés",
 	"mapping": {
-		"movement": {
-			"path": "data.attributes.movement",
-			"converter":"movement"
-		}, 
-		"race": "data.details.race",
-		"background": "data.details.background",
-		"alignment": {
-			"path": "data.details.alignment",
-			"converter": "alignement"
-		},
-		"senses": {
-			"path": "data.traits.senses",
-			"converter": "senses"
-		},
+        "alignment": {
+            "path": "data.details.alignment",
+            "converter": "alignement"
+        },
+        "race": {
+            "path": "data.details.race",
+            "converter": "race"
+        },
+        "senses": {
+            "path": "data.traits.senses",
+            "converter": "senses"
+        },
+        "movement": {
+            "path": "data.attributes.movement",
+            "converter":"movement"
+        },
+        "languages": {
+            "path": "data.traits.languages.custom",
+            "converter":"languages"
+        },
+        "di": {
+            "path": "data.traits.di.custom",
+            "converter":"di"
+        },
+        "dr": {
+            "path": "data.traits.dr.custom",
+            "converter":"di"
+        },
+        "token": {
+            "path": "token",
+            "converter":"token"
+        },
 		"ci": "data.traits.ci.custom",
 		"custom_armes": "data.traits.weaponProf.custom",
 		"custom_métier": "data.traits.toolProf.custom"
@@ -24,7 +42,6 @@
 			"id": "Riswynn (Dwarf Rogue)",
 			"name": "Riswynn (Roublard Nain)",
 			"description": "<p>Autrefois bureaucrate très respectée dans les salles naines, Riswynn s'est montrée intrusive a appris quelques tours et a eu des 'problèmes' avec certains nobles. Elle cherche à se faire un nom et à retrouver son statut social.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Naine des collines",
 			"background": "Bureaucrate",
 			"custom_armes": "Hache d'armes; Marteau léger; Marteau de guerre; Arbalète de poing; Épée longue; Rapière; Épée courte",
 			"custom_métier": "Outils de forgeron"
@@ -33,21 +50,18 @@
 			"id": "Randal (Human Fighter)",
 			"name": "Randal (Guerrier Humain)",
 			"description": "Randal a appris son métier dans les rangs de la garde de sa ville natale, pour finalement s'ennuyer du menu fretin de la vie urbaine et partir à la recherche de l'aventure.<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Humain",
 			"background": "Garde municipal"
 		},
 		{
 			"id": "Aoth (Human Druid)",
 			"name": "Aoth (Druide Humain)",
 			"description": "<p>Aoth a vécu parmi les animaux pendant si longtemps qu'il a maintenant du mal à parler le langage courant. Son habitat naturel étant en danger, il a décidé de rejoindre un groupe d'aventuriers pour rétablir l'équilibre sur sa terre.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Humain",
 			"background": "Solitaire"
 		},
 		{
 			"id": "Quillathe (Elf Ranger)",
 			"name": "Quillathe (Rôdeur Elfe)",
 			"description": "<p>Quillathe patrouille dans ses bois et en expurge les monstres (*Ndt : Avec un nom pareil :) ), mais voila qu'une nouvelle force menace son monde et qu'elle doit se joindre à des aventuriers pour la vaincre.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Haut Elfe",
 			"background": "Chasseur de Monstres",
 			"ci": "Sommeil magique; Avantage au jet de sauvegarde contre les charmes",
 			"custom_armes": "Épée longue; Épée courte; Arc long; Arc court"
@@ -56,7 +70,6 @@
 			"id": "Beiro (Half-Elf Bard)",
 			"name": "Beiro (Barde Demi-Elfe)",
 			"description": "<p>Beiro était célèbre dans l'animation des soirées à la taverne locale, lorsqu'un jour il n'eu plus d'histoires à raconter. Il s'est donc prit à créer ses propres histoires, afin de pouvoir de nouveaux les raconter un jour dans sa taverne.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Demi-Elfe",
 			"background": "Musicien",
 			"ci": "Sommeil magique; Avantage au jet de sauvegarde contre les charmes",
 			"custom_armes": "Épée longue; Épée courte; Rapières; Arbalète de poing",
@@ -66,21 +79,18 @@
 			"id": "Akra (Dragonborn Cleric)",
 			"name": "Akra (Clerc Sangdragon)",
 			"description": "<p>Fervente adepte de sa divinité et des coutumes de sa société, Akra se sent quelque peu déplacée lorsqu'elle s'aventure en terre étrangère. Mais elle se sent obligée de faire tout ce qui est en son pouvoir pour apporter la paix dans la région.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Sangdragon",
 			"background": "Acolyte"
 		},
 		{
 			"id": "Krusk (Half-Orc Paladin)",
 			"name": "Krusk (Paladin Demi-Orc)",
 			"description": "<p>Parcourant le monde pour apporter la justice, Lukas n'a qu'un seul but : la destruction du Mal.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Demi-Orc",
 			"background": "Héros du Peuple"
 		},
 		{
 			"id": "Zanna (Gnome Wizard)",
 			"name": "Zanna (Magicien Gnome)",
 			"description": "<p>Zonna a toujours été intéressée par le bricolage et la découverte de nouveaux sorts. Elle s'est lancée dans l'aventure afin d'ajouter d'autres sorts à son livre de sorts, et peut-être un jour en créer un elle-même.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Gnome",
 			"background": "Etudiante",
 			"custom_armes": "Dague; Fléchette; Fronde; Bâton; Arbalète légère",
 			"custom_métier": "Outils de voleur"
@@ -89,7 +99,6 @@
 			"id": "Merric (Halfling Barbarian)",
 			"name": "Merric (Barbare Halfelin)",
 			"description": "<p>Merric était autrefois un justicier, en raison de son sens inné de la justice de rue. Bien que sa petite taille ne semble pas être un atout au combat, elle fait plus que compenser par ses violents accès de colère.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Halfelin",
 			"background": "Garde",
 			"ci": "avantage aux jets de sauvegarde pour ne pas être effrayé."
 		},
@@ -97,7 +106,6 @@
 			"id": "Sefris (Half-Elf Warlock)",
 			"name": "Sefris (Sorcier Demi-Elfe)",
 			"description": "Le vol à la tire de Sefris, enfant, s'est transformé en petits cambriolages et finalement en hold-up complexes, utilisant le lien obscur avec son monstre pour faciliter ses exploits. Il travaille pour tous ceux qui peuvent lui donner de l'argent.<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Demi-Elfe",
 			"background": "Cambrioleur",
 			"ci": "Sommeil magique; Avantage au jet de sauvegarde contre les charmes"
 		},
@@ -105,7 +113,6 @@
 			"id": "Perrin (Halfling Monk)",
 			"name": "Perrin (Moine Halfelin)",
 			"description": "Elève dévoué de son monastère local, Perrin a été chargé d'apporter l'équilibre aux terres environnantes.<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Halfelin",
 			"background": "Acolyte",
 			"ci": "avantage aux jets de sauvegarde pour ne pas être effrayé."
 		},
@@ -113,7 +120,6 @@
 			"id": "Morthos (Tiefling Sorcerer)",
 			"name": "Morthos (Ensorceleur Tieffelin)",
 			"description": "<p>La recherche par Morthos de ses origines infernales l'a conduit à une vie universitaire.Il est cependant vite apparu que la réponse à ses origines se trouvait en dehors d'une bibliothèque. Il s'est donc lancé dans une aventure pour chercher à en savoir plus.</p>\n<blockquote>Token artwork provided by Forgotten Adventures.</blockquote>",
-			"race": "Tieffelin",
 			"background": "Etudiant",
 			"custom_armes": "Dague; Fléchette; Fronde; Bâton; Arbalète légère"
 		}

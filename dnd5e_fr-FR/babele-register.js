@@ -1,36 +1,5 @@
 
-const classes = {
-	"Barbarian": "Barbare",
-	"Bard": "Barde",
-	"Cleric": "Clerc",
-	"Druid": "Druide",
-	"Fighter": "Guerrier",
-	"Monk": "Moine",
-	"Paladin": "Paladin",
-	"Ranger": "Rôdeur",
-	"Rogue": "Roublard",
-	"Sorcerer": "Ensorceleur",
-	"Warlock": "Occultiste",
-	"Wizard": "Magicien"
- };
-
-
-var typeAlignement = {
-	"chaotic evil": "Chaotique Mauvais",
-	"chaotic neutral": "Chaotique Neutre",
-	"chaotic good": "Chaotique Bon",
-	"neutral evil": "Neutre Mauvais",
-	"true neutral": "Neutre",
-	"neutral": "Neutre",
-	"neutral good": "Neutre Bon",
-	"lawful evil": "Loyal Mauvais",
-	"lawful neutral": "Loyal Neutre",
-	"lawful good": "Loyal Bon",
-	"chaotic good evil": "Chaotique Bon/Mauvais",
-	"lawful chaotic evil": "Loyal/Chaotique Mauvais",
-	"unaligned": "Sans alignement"
-};
-var typeCreature = {
+var types = {
 	"aberration (shapechanger)": "Aberration (métamorphe)",
 	"aberration": "Aberration",
 	"beast": "Bête",
@@ -95,7 +64,25 @@ var typeCreature = {
 	"undead": "Mort-vivant"
 };
 
-var remplLanguages = {
+var alignments = {
+	"chaotic evil": "Chaotique Mauvais",
+	"chaotic neutral": "Chaotique Neutre",
+	"chaotic good": "Chaotique Bon",
+	"neutral evil": "Neutre Mauvais",
+	"true neutral": "Neutre",
+	"neutral": "Neutre",
+	"neutral good": "Neutre Bon",
+	"lawful evil": "Loyal Mauvais",
+	"lawful neutral": "Loyal Neutre",
+	"lawful good": "Loyal Bon",
+	"chaotic good evil": "Chaotique Bon/Mauvais",
+	"lawful chaotic evil": "Loyal/Chaotique Mauvais",
+	"unaligned": "Sans alignement",
+	"any non-lawful": "n'importe lequel non loyal",
+	"any": "n'importe lequel",
+};
+
+var languages = {
 	"giant eagle": "Aigle Géant",
 	"worg": "Worg",
 	"winter wolf": "Loup Artique",
@@ -132,120 +119,155 @@ var remplLanguages = {
 	"understands the languages of its creator but can't speak": "comprend les langues de son créateur mais ne paut pas les parler",
 	"understands common and giant but can't speak": "comprend le géant et le commun mais ne peut pas les parler",
 	"cannot speak": "Ne parle pas"
+};
+
+var races = {
+	"Dragonborn": "Drakéide",
+	"Dwarf": "Nain",
+	"Hill Dwarf": "Nain des collines",
+	"Elf": "Elfe",
+	"High Elf": "Haut-elfe",
+	"Rock Gnome": "Gnome des roches",
+	"Gnome": "Gnome",
+	"Half Elf": "Demi-elfe",
+	"Half-Elf": "Demi-elfe",
+	"Half-elf": "Demi-elfe",
+	"Halfling": "Halfelin",
+	"Lightfoot Halfling": "Halfelin pied-léger",
+	"Half Orc": "Demi-Orc",
+	"Half-Orc": "Demi-Orc",
+	"HUMAN": "Humain",
+	"Human": "Humain",
+	"Variant Human": "Humain (variante)",
+	"Tiefling": "Tieffelin"
+};
+
+var classes = {
+	"Barbarian": "Barbare",
+	"Bard": "Barde",
+	"Cleric": "Clerc",
+	"Druid": "Druide",
+	"Fighter": "Guerrier",
+	"Monk": "Moine",
+	"Paladin": "Paladin",
+	"Ranger": "Rôdeur",
+	"Rogue": "Roublard",
+	"Sorcerer": "Ensorceleur",
+	"Warlock": "Occultiste",
+	"Wizard": "Magicien",
+	"Champion": "Champion",
+	"College of Lore": "Collège du savoir",
+	"Oath of Devotion": "Serment de dévotion",
+	"Life Domain": "Domaine de la Vie",
+	"Circle of the Land": "Cercle de la terre",
+	"The Fiend": "Le fiélon",
+	"Hunter": "Chasseur",
+	"School of Evocation": "Ecole d'évocation",
+	"Path of the Berserker": "Berserker",
+	"Eldritch Blast": "Décharge occulte", //??
+	"Pact of the Tome": "Pacte du grimoire",
+	"Pact of the Blade": "Pacte de la lame",
+	"Pact of the Chain": "Pacte de la chaîne",
+	"Way of the Open Hand": "Voie de la main ouverte"
+};
+
+var rarity = {
+	"Common": "Commun",
+	"Uncommon": "peu commun",
+	"Rare": "Rare",
+	"Very rare": "Très rare",
+	"Legendary": "Légendaire"
+};
+
+function round(num) {
+	return Math.round((num + Number.EPSILON) * 100) / 100;
 }
 
-function remplSens(chaine) {
-	var regexp = /([0-9]+)/gi; // recherche des valeurs numériques
-	chaine = chaine.replace(/ft/gi, 'm'); // toutes les occurences en ft
-	chaine = chaine.replace(/feet/gi, 'm'); // toutes les occurences en feet (pfff)
-	chaine = chaine.replace(/Darkvision/gi, "Vision dans le noir");
-	chaine = chaine.replace(/Darvision/gi, "Vision dans le noir"); //bug ^^
-	chaine = chaine.replace(/Blindsight/gi, "Vision aveugle");
-	chaine = chaine.replace(/Truesight/gi, "Vision véritable");
-	chaine = chaine.replace(/tremorsense/gi, "Perception des vibrations");
-	chaine = chaine.replace(/Blind Beyond/gi, "Aveugle au-delà");
-	chaine = chaine.replace(/this radius/gi, "de ce rayon");
-	chaine = chaine.replace((chaine.match(regexp)), parseInt(chaine.match(regexp)) * 0.3);
-	chaine = chaine.replace("(blind beyond this radius)", "(aveugle au-delà de ce rayon)");
-	return chaine;
+function lbToKg(lb) {
+	if(!lb) {
+		return lb;
+	}
+	return parseInt(lb)/2;
 }
 
-function remplDi(chaine) {
-	chaine = chaine.replace(/bludgeoning/gi, 'contondant');
-	chaine = chaine.replace(/piercing/gi, 'perforant');
-	chaine = chaine.replace(/and/gi, 'et');
-	chaine = chaine.replace(/slashing/gi, 'tranchant');
-	chaine = chaine.replace(/from/gi, 'd\'');
-	chaine = chaine.replace(/nonmagical attacks/gi, 'attaques non magiques');
-	chaine = chaine.replace(/that aren't silvered/gi, 'non réalisées avec des armes en argent');
-	chaine = chaine.replace(/not made with silvered weapons/gi, 'non réalisées avec des armes en argent');
-	return chaine;
+function footsToMeters(ft) {
+	if(!ft) {
+		return ft;
+	}
+	return round(parseInt(ft)*0.3);
 }
 
-function remplRequ(chaine) {
-	chaine = chaine.replace(/Human/gi, 'Humain');
-	chaine = chaine.replace(/Half-Orc/gi, 'Demi-Orc');
-	chaine = chaine.replace(/Halfling/gi, 'Halfelin');
-	chaine = chaine.replace(/Elf/gi, 'Elfe');
-	chaine = chaine.replace(/Gnome/gi, 'Gnome');
-	chaine = chaine.replace(/Dragonborn/gi, 'Sangdragon');
-	chaine = chaine.replace(/Rock Gnome/gi, 'Gnome des roches');
-	chaine = chaine.replace(/Dwarf/gi, 'Nain');
-	chaine = chaine.replace(/Elf, Half-Elf/gi, 'Elfe, Demi-elfe');
-	chaine = chaine.replace(/Elfe, Half-Elfe/gi, 'Elfe, Demi-elfe');
-	chaine = chaine.replace(/Tiefling/gi, 'Tieffelin');
-	chaine = chaine.replace(/Draconic Bloodlin/gi, 'Lignée Draconique');
-	chaine = chaine.replace(/Barbarian/gi, 'Barbare');
-	chaine = chaine.replace(/Bard/gi, 'Barde');
-	chaine = chaine.replace(/Wizard /gi, 'Magicien');
-	chaine = chaine.replace(/Warlock/gi, 'Occultiste');
-	chaine = chaine.replace(/Cleric /gi, 'Clerc');
-	chaine = chaine.replace(/Sorcerer /gi, 'Ensorceleur');
-	chaine = chaine.replace(/Ranger /gi, 'Rôdeur');
-	chaine = chaine.replace(/Paladin /gi, 'Paladin');
-	chaine = chaine.replace(/Monk/gi, 'Moine');
-	chaine = chaine.replace(/Druid /gi, 'Druide');
-	chaine = chaine.replace(/Fighter /gi, 'Guerrier');
-	chaine = chaine.replace(/Rogue/gi, 'Roublard');
-	chaine = chaine.replace(/Chmapion/gi, 'Champion');
-	chaine = chaine.replace(/Hunter/gi, 'Chasseur');
-	chaine = chaine.replace(/The Fiend/gi, 'Le fiélon');
-	chaine = chaine.replace(/Oath of Devotion/gi, 'Serment de dévotion');
-	chaine = chaine.replace(/Life Domain/gi, 'Domaine de la Vie');
-	chaine = chaine.replace(/Thief/gi, 'Voleur');
-	chaine = chaine.replace(/School of Evocation/gi, 'Ecole d\'évocation');
-	chaine = chaine.replace(/Path of the Berserker/gi, 'Berserker');
-	chaine = chaine.replace(/Way of the Open Hand/gi, 'Voie de la main ouverte');
-	chaine = chaine.replace(/STR/gi, 'FOR');
-	chaine = chaine.replace(/or higher/gi, 'ou plus');
-	chaine = chaine.replace(/College of Lore/gi, 'Collège du savoir');
-	chaine = chaine.replace(/Circle of the Land/gi, 'Cercle de la terre');
-	return chaine;
+function milesToMeters(mi) {
+	if(!mi) {
+		return mi;
+	}
+	return round(parseInt(mi)*1.5);
+}
+
+function parseSenses(sensesText) {
+	const senses = sensesText.split('. ');
+	let parsed = '';
+	senses.forEach(sense => { parsed = parseSense(sense) + ' ' + parsed; });
+	return parsed;
+}
+
+function parseSense(sense) {
+	var regexp = /([0-9]+)/gi;
+	sense = sense.replace(/ft/gi, 'm');
+	sense = sense.replace(/feet/gi, 'm');
+	sense = sense.replace(/Darkvision/gi, "Vision dans le noir");
+	sense = sense.replace(/Darvision/gi, "Vision dans le noir"); //bug ^^
+	sense = sense.replace(/Blindsight/gi, "Vision aveugle");
+	sense = sense.replace(/Truesight/gi, "Vision véritable");
+	sense = sense.replace(/tremorsense/gi, "Perception des vibrations");
+	sense = sense.replace(/Blind Beyond/gi, "Aveugle au-delà");
+	sense = sense.replace(/this radius/gi, "de ce rayon");
+	sense = sense.replace((sense.match(regexp)), footsToMeters(sense.match(regexp)));
+	sense = sense.replace("(blind beyond this radius)", "(aveugle au-delà de ce rayon)");
+	return sense;
+}
+
+function parseDamage(damage) {
+	damage = damage.replace(/bludgeoning/gi, 'contondant');
+	damage = damage.replace(/piercing/gi, 'perforant');
+	damage = damage.replace(/and/gi, 'et');
+	damage = damage.replace(/slashing/gi, 'tranchant');
+	damage = damage.replace(/from/gi, 'd\'');
+	damage = damage.replace(/nonmagical attacks/gi, 'attaques non magiques');
+	damage = damage.replace(/that aren't silvered/gi, 'non réalisées avec des armes en argent');
+	damage = damage.replace(/not made with silvered weapons/gi, 'non réalisées avec des armes en argent');
+	return damage;
 }
 
 
+function convertEnabled() {
+	return game.settings.get("dnd5e_fr-FR", "convert");
+}
+
+function setEncumbranceData() {
+	let convert = convertEnabled();
+	game.settings.set("dnd5e", "metricWeightUnits", convert);
+}
+
+// ==== \\
+//  Ne maintenant plus que du bout des doigts le module, 
+//   le code ci-dessous est repris depuis la version italienne ( @Simone ) 
+// ==== \\	
 Hooks.once('init', () => {
-    //CONFIG.debug.hooks = true;
 
-	// affichage du chtit boutons traducFR ? (par défaut non)
-	game.settings.register("dnd5e_fr-FR", "noCtrlVersions", {
-        name: 'Désactiver le contrôle des versions',
-        hint: 'Permet de désactiver le contrôle et l\'éventuelle alerte d\'une version non testée du système Dnd5 et du module Babele par ce module de traduction',
-        type: Boolean,
-        default: true,
-        scope: 'world',
-        config: true,
-		onChange: value => { 
-			window.location.reload();
-	  }
-    });
-	// affichage du chtit boutons traducFR ? (par défaut non)
-	game.settings.register("dnd5e_fr-FR", "noConvMetre", {
-        name: 'Ignorer les conversions',
-        hint: 'Désactive les conversions et les intialisations en système métrique ... sauf quand le texte est \'en dur\' dans la traduction ;) et sur la surcharge d\'acteur avec l\'option ci-dessous. ',
-        type: Boolean,
-        default: false,
-        scope: 'world',
-        config: true,
-		onChange: value => { 
-			window.location.reload();
-	  }
-    });
-	// affichage du chtit boutons traducFR ? (par défaut non)
-	game.settings.register("dnd5e_fr-FR", "importFR", {
-        name: 'Afficher le bouton de tradFR',
-        hint: 'Un petit bouton sur les fiches de perso permettant quelques traductions supplémentaires (alignement, classes, etc) lors d\'import de campagnes ou d\'acteur de compendium non traduit (pas directement dans le compendium, mais dans les acteurs) . ATTENTION : cela écrase les valeurs initiales - pas de retour arrière... (faîtes une copie :) )',
-        type: Boolean,
-        default: false,
-        scope: 'world',
-        config: true,
-		onChange: value => { 
-			window.location.reload();
-	  }
-    });
+	if(typeof Babele !== 'undefined') {
 
-
-	if (typeof Babele !== 'undefined') {
+		game.settings.register("dnd5e_fr-FR", "convert", {
+			name: "Conversions automatiques",
+			hint: "Applique le système métrique à toutes les mesures, distances",
+			scope: "world",
+			type: Boolean,
+			default: true,
+			config: true,
+			onChange: convert => {
+				setEncumbranceData();
+			}
+		});
 
 		Babele.get().register({
 			module: 'dnd5e_fr-FR',
@@ -254,228 +276,167 @@ Hooks.once('init', () => {
 		});
 
 		Babele.get().registerConverters({
-			"weight": (value) => { 
-				if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
-					return parseInt(value) / 2
-				} else {
+			"weight": (value) => {
+				if(!convertEnabled()) {
 					return value;
-				};
+				}
+				return lbToKg(value);
 			},
 			"range": (range) => {
-				if (range) {
-					if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
-						if (range.units === 'ft') {
-							if (range.long) {
-								range = mergeObject(range, { long: range.long * 0.3 });
-							}
-							range.units = 'm';
-							return mergeObject(range, { value: range.value * 0.3 });
-						}
-						if (range.units === 'mi') {
-							if (range.long) {
-								range = mergeObject(range, { long: range.long * 1.5 });
-							}
-							range.units = 'km';
-							return mergeObject(range, { value: range.value * 1.5 });
-						}
+				if(range) {
+					if(!convertEnabled()) {
+						return range;
+					}
+					if(range.units === "ft") {
+						return mergeObject(range, {
+							"value": footsToMeters(range.value),
+							"long": footsToMeters(range.long),
+							"units": "m"
+						});
+					}
+					if(range.units === "mi") {
+						return mergeObject(range, {
+							"value": milesToMeters(range.value),
+							"long": milesToMeters(range.long),
+							"units": "km"
+						});
 					}
 					return range;
 				}
 			},
+			"alignement": (alignment) => {
+				return alignments[alignment.toLowerCase()];
+			},
 			"movement": (movement) => {
-				if (movement) {
-					if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
-						if (movement.units === 'ft') {
-							for (var i in movement) {
-								if (movement[i] === 'ft') {
-									movement[i] = 'm'
-								} else {
-									movement[i] = movement[i] * 0.3
-								}
-							}
-						}
-						if (movement.units === 'mi') {
-							for (var i in movement) {
-								if (movement[i] === 'mi') {
-									movement[i] = 'km'
-								} else {
-									movement[i] = movement[i] * 1.5
-								}
-							}
-						}
-					}
+
+				if(!convertEnabled()) {
 					return movement;
 				}
-			},
-			"alignement": (alignement) => {
-				return typeAlignement[alignement.toLowerCase()];
-			},
-			"requirements": (typeR) => {
-				return remplRequ(typeR);
-			},
-			"type": (typeC) => {
-				return typeCreature[typeC.value.toLowerCase()];
-			},
 
-			"senses": (sens) => {
-				if (sens != null) {
-					//console.log(JSON.parse(JSON.stringify(sens)));
-					const sensSplit = sens.split(', ');
-					//console.log(JSON.parse(JSON.stringify(sensSplit)));
-					var sensTr = '';
-					sensSplit.forEach(function (el) {
-						//console.log(JSON.parse(JSON.stringify(el))); 
-						sensTr = remplSens(el) + ' ' + sensTr;
-					}
-					);
-					return sensTr;
+				let convert = (value) => { return value; };
+				let units = movement.units;
+				if(units === 'ft') {
+					convert = (value) => { return footsToMeters(value) };
+					units = "m";
 				}
+				if(units === 'ml') {
+					convert = (value) => { return milesToMeters(value) };
+					units = "m";
+				}
+
+				return mergeObject(movement, {
+					burrow: convert(movement.burrow),
+					climb: convert(movement.climb),
+					fly: convert(movement.fly),
+					swim: convert(movement.swim),
+					units: units,
+					walk: convert(movement.walk)
+				});
 			},
-			"di": (diC) => {
-				return remplDi(diC);
+			"senses": (senses) => {
+				return senses ? parseSenses(senses) : null;
 			},
-			"languages": (languages) => {
-				if (languages != null) {
-					//console.log(JSON.parse(JSON.stringify(languages)));
-					const languagesSplit = languages.split('; ');
-					var languagesFin = '';
-					var languagesTr = '';
-					languagesSplit.forEach(function (el) {
-						languagesTr = remplLanguages[el.toLowerCase()];
+			"di": (damage) => {
+				return parseDamage(damage);
+			},
+			"languages": (lang) => {
+				if (lang != null ) {
+					const languagesSplit = lang.split('; ');
+					let languagesFin = '';
+					let languagesTr = '';
+					languagesSplit.forEach(function(el){
+						languagesTr = languages[el.toLowerCase()] ;
 						if (languagesTr != null) {
-							if (languagesFin == '') {
+							if (languagesFin === '') {
 								languagesFin = languagesTr;
-							} else {
-								languagesFin = languagesFin + ' ; ' + languagesTr;
+							}  else {
+								languagesFin = languagesFin + ' ; '  + languagesTr;
 							}
 						}
 					});
 					return languagesFin;
 				}
-			}, 
-			// thx @Simone 
-			"classNameFormula": (formula) => {
-				if(formula && typeof formula === 'string') {
-				   let translated = formula;
-				   const names = Object.keys(classes);
-				   names.forEach(name => {
-					  translated = translated.replaceAll(name.toLowerCase(), classes[name].toLowerCase())
-				   });
-				   return translated;
-				}
-			 },
-			 // thx @Simone (bis ^^)
-			 "damagePartClassName": (array1) => {
-				 for (let i=0; i< array1.length; i++) {
-					 let array2 = array1[i];
-					 for (let j=0; j< array2.length; j++) {
-						 let translated = array2[j];
-						 if (translated && typeof translated === 'string') {
-							 const names = Object.keys(classes);
-							 names.forEach(name => {
-								 translated = translated.replaceAll(name.toLowerCase(), classes[name].toLowerCase())
-							 });
-							 array2[j] = translated;
-						 }
-					 }
-					 array1[i] = array2;
-				 }
-				 return array1;
-			 }
+			},
+			"token": (token) => {
+				mergeObject(
+					token, {
+						dimSight: footsToMeters(token.dimSight),
+						brightSight: footsToMeters(token.brightSight)
+					}
+				);
+			},
+			"race": (race) => {
+				return races[race] ? races[race] : race;
+			},
+			"rarity": (r) => {
+				return rarity[r] ? rarity[r] : r
+			},
+			"raceRequirements": (requirements) => {
+				let names = requirements.split(',');
+				let translated = [];
+				names.map(name => name.trim()).forEach(name => {
+					translated.push(races[name] ? races[name] : name)
+				});
+				return translated.join(', ');
+			},
+			"classRequirements": (requirements) => {
+				let names = requirements.split(',');
+				let translated = [];
+				names.map(name => name.trim()).forEach(name => {
+					let keys = Object.keys(classes);
+					let translatedName = name;
+					keys.forEach(key => {
+						translatedName = translatedName.replace(key, classes[key])
+					});
+					translated.push(translatedName)
+				});
+				return translated.join(', ');
+			}
 		});
-		//thx @Simone (pffff :D ) 	
-		CONFIG.DND5E.classFeatures = {
-			"barbare": CONFIG.DND5E.classFeatures["barbarian"],
-			"bard": CONFIG.DND5E.classFeatures["bard"],
-			"clerc": CONFIG.DND5E.classFeatures["cleric"],
-			"druide": CONFIG.DND5E.classFeatures["druid"],
-			"guerrier": CONFIG.DND5E.classFeatures["fighter"],
-			"moine": CONFIG.DND5E.classFeatures["monk"],
-			"paladin": CONFIG.DND5E.classFeatures["paladin"],
-			"rôdeur": CONFIG.DND5E.classFeatures["ranger"],
-			"roublard": CONFIG.DND5E.classFeatures["rogue"],
-			"ensorceleur": CONFIG.DND5E.classFeatures["sorcerer"],
-			"sorcier": CONFIG.DND5E.classFeatures["warlock"],
-			"magicien": CONFIG.DND5E.classFeatures["wizard"]
-		};
-
 	}
 });
 
-function transcoActor(actor) {
-	//console.log(actor.data.data.attributes.movement.units);
-	if (actor.compendium) return; //certainement plus nécessaire mais bon
-	// TODO sécurité simple avant ajout d'un parmetre en option
-	if (game.settings.get("core", "language") === "fr") {
-	// passage des valeurs de déplacements en systeme metrique si besoin		
-		let moveMetric = actor.data.data.attributes.movement; 
-		if (moveMetric.units === "ft") {
-			mergeObject(moveMetric, { units: "m" });
-			// à améliorer :)
-			mergeObject(moveMetric, { walk: moveMetric.walk * 0.3 });
-			mergeObject(moveMetric, { burrow: moveMetric.burrow * 0.3 });
-			mergeObject(moveMetric, { climb: moveMetric.climb * 0.3 });
-			mergeObject(moveMetric, { fly: moveMetric.fly * 0.3 });
-			mergeObject(moveMetric, { swim: moveMetric.swim * 0.3 });
-		}
-		let detailsFR = actor.data.data.details;
-		if (detailsFR.alignment != null) { mergeObject(detailsFR, { alignment: typeAlignement[detailsFR.alignment.toLowerCase()] }) };
-		if (detailsFR.type != null) { mergeObject(detailsFR, { type: typeCreature[detailsFR.type.toLowerCase()] }) };
+Hooks.once('ready', () => {
+	setEncumbranceData();
+});
 
-		let traitsFR = actor.data.data.traits;
-		if (traitsFR.senses != null) {
-			const sensSplit = traitsFR.senses.split(', ');
-			var sensTr = '';
-			sensSplit.forEach(function (el) {
-				sensTr = remplSens(el) + ' ' + sensTr;
-			});
-			mergeObject(traitsFR, { senses: sensTr });
-		};
-		if (traitsFR.languages.custom != null) {
-			const languagesSplit = traitsFR.languages.custom.split('; ');
-			var languagesFin = '';
-			var languagesTr = '';
-			languagesSplit.forEach(function (el) {
-				languagesTr = remplLanguages[el.toLowerCase()];
-				if (languagesTr != null) {
-					if (languagesFin == '') {
-						languagesFin = languagesTr;
-					} else {
-						languagesFin = languagesFin + ' ; ' + languagesTr;
-					}
-				}
-			});
-			mergeObject(traitsFR.languages, { custom: languagesFin });
-		}
-		if (traitsFR.di.custom != null) { mergeObject(traitsFR.di, { custom: remplDi(traitsFR.di.custom) }) };
-		if (traitsFR.dr.custom != null) { mergeObject(traitsFR.dr, { custom: remplDi(traitsFR.dr.custom) }) };
-	
-		// on met à jour l'acteur !!! 
-		actor.update({ data: actor.data.data });
-	}
-	// et si on voulait repasser en en ? 
-	if (game.settings.get("core", "language") === "en") {
-		let moveMetric = actor.data.data.attributes.movement;
-		if (moveMetric.units === "m") {
-			mergeObject(moveMetric, { units: "ft" });
-		}
-		actor.update({ data: actor.data.data });
-	}
-}
-
-// pour passer les scenes en 1.5
 Hooks.on('createScene', (scene) => {
-//	console.log(JSON.parse(JSON.stringify(scene)));
-	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") ) {
-		scene.update({ gridUnits: "m", gridDistance: 1.5 });
-	} 
+	if(convertEnabled()) {
+		scene.update({
+			"gridUnits": "m", "gridDistance": 1.5
+		});
+	}
+});
+
+Hooks.on('createActor', (actor) => {
+	if(actor.getFlag("babele", "translated")) {
+		return;
+	}
+	if(convertEnabled()) {
+		actor.update({
+			 token: {
+				 dimSight: footsToMeters(actor.data.token.dimSight),
+				 brightSight: footsToMeters(actor.data.token.brightSight)
+			 },
+			 data: {
+				 attributes: {
+					 movement: {
+						 burrow: 0,
+						 climb: 0,
+						 fly: 0,
+						 swim: 0,
+						 units: 'm',
+						 walk: 9
+					 }
+				 }
+			 }
+		 });
+	}
 })
 
-// tri des compétences @rwanoux
-async function trieAlphabFR() {
+async function skillSorting() {
 	const lists = document.getElementsByClassName("skills-list");
 	for (let list of lists) {
-		//	console.log(list.tagName)
 		const competences = list.childNodes;
 		let complist = [];
 		for (let sk of competences) {
@@ -483,57 +444,15 @@ async function trieAlphabFR() {
 				complist.push(sk);
 			}
 		}
-		complist.sort(function (a, b) {
+		complist.sort(function(a, b) {
 			return (a.innerText > b.innerText) ? 1 : -1;
 		});
 		for (let sk of complist) {
 			list.appendChild(sk)
 		}
-
 	}
 }
-// un ptit disclaimer de version dd5 & babele parce que bon ... 
-Hooks.once('ready', () => {
-	if (!game.user.isGM) return;
-	if (game.settings.get("dnd5e_fr-FR", "noCtrlVersions") ) return;
-	if (game.system.data.name == "dnd5e" && game.system.data.version < "1.5.7") {
-		ChatMessage.create({
-			"content": "<strong>Version dnd5e obsolète : </strong></br> Cette version du module fr a été vérifiée pour les versions de dnd5e v1.5.7. </br> Vous retrouverez les versions adaptées à votre version de dnd5e sur <a href=\"https://foundryvtt.com/packages/dnd5e_fr-FR/ \"> cette page  <\a>"
-		})
-	}
-	if (game.modules.get("babele").active && game.modules.get("babele").data.version != "2.2.3") {
-		ChatMessage.create({
-			"content": "<strong>Version Babele non testée : </strong></br> Cette version du module fr a été vérifiée pour la version de Babele  v2.2.3"
-		})
-	}
-});
 
-// init fdp à 9m
-Hooks.on('createActor', (actor) => {
-	if (!game.settings.get("dnd5e_fr-FR", "noConvMetre") && actor.data.data.attributes.movement.walk == 30 ) {
-		mergeObject(actor.data.data.attributes.movement, { units: "m", walk: 9 });
-		//console.log(actor.data.data.attributes.movement);
-		actor.update({ data: actor.data.data });
-		actor.render(true);
-	}
-});
-
-// pour transco les acteurs (chargement de scenar tout fait)
-// éhontement adapté de babele
-// options a ajouter dans le menu  ???
-Hooks.on('renderActorSheet', (app, html, data) => {
-	if (game.user.isGM && data.editable && game.settings.get("dnd5e_fr-FR", "importFR") ) {
-		let title = "transcoFR";
-		let openBtn = $(`<a class="tradFR" title="${title}"><i class="fas fa-chevron-circle-down"></i>${title}</a>`);
-		openBtn.click(ev => {
-			transcoActor(app.entity);
-		});
-		html.closest('.app').find('.tradFR').remove();
-		let titleElement = html.closest('.app').find('.window-title');
-		openBtn.insertAfter(titleElement);
-	}
-});
-
-Hooks.on("renderActorSheet", async function () {
-	trieAlphabFR();
+Hooks.on("renderActorSheet", async function() {
+	skillSorting();
 });
