@@ -1,51 +1,104 @@
 {
-  "name": "dnd5e_fr-FR",
+  "id": "dnd5e_fr-FR",
   "title": "fr-FR - DND5 System",
+  "version": "2.0.0.0",
   "description": "<p>Traduction du system DD5 [Atropos]. L'installation du module Babele est nécessaire pour les compendiums [texte du SRD : site aidedd.org]</p><p> *** Rejoignez la communauté Discord FR :<a href='https://discord.gg/pPSDNJk'> https://discord.gg/pPSDNJk </a></p>",
-  "author": "Baktov, Rwanoux, Olirin, thorni, jyah, Temvaryen, Matt D, Nedgehog, Pierrick, Padhiver, Yogiteck, DarKDinDoN, Nildran",
-  "authors": [],
-  "url": "https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr",
-  "flags": {},
-  "version": "1.62.0",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9",
-  "systems": [
-    "dnd5e"
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.279",
+    "maximum": "10"
+  },
+  "relationships": {
+    "systems": [{
+      "id": "dnd5e",
+      "type": "system",
+      "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/v10-dev/system.json",
+      "compatibility": {
+        "minimum": "2",
+        "verified": "2.0.0-alpha3",
+        "maximum": "3"
+      }
+    }],
+    "requires": [{
+      "id": "babele",
+      "type": "module",
+      "flags": {}
+      }]
+  },
+  "authors": [
+    {
+      "name": "baktov",
+      "flags": {}
+    },
+    {
+      "name": "Rwanoux",
+      "flags": {}
+    },
+    {
+      "name": "Olirin",
+      "flags": {}
+    },
+    {
+      "name": "thorni",
+      "flags": {}
+    },
+    {
+      "name": "jyah",
+      "flags": {}
+    },
+    {
+      "name": "Temvaryen",
+      "flags": {}
+    },
+    {
+      "name": "Matt D",
+      "flags": {}
+    },
+    {
+      "name": "Nedgehog",
+      "flags": {}
+    },
+    {
+      "name": "Pierrick",
+      "flags": {}
+    },
+    {
+      "name": "Nedgehog",
+      "flags": {}
+    },
+    {
+      "name": "Padhiver",
+      "flags": {}
+    },
+    {
+      "name": "Yogiteck",
+      "flags": {}
+    },
+    {
+      "name": "DarKDinDoN",
+      "flags": {}
+    },
+    {
+      "name": "Nildran",
+      "flags": {}
+    }
   ],
-  "scripts": [],
   "esmodules": [
     "babele-register.js"
   ],
-  "styles": [],
   "languages": [
     {
       "lang": "fr",
       "name": "Français",
-      "path": "fr.json"
-    }, 
-    {
-      "lang": "zz",
-      "name": "En.1.6.2",
-      "path": "en.1.6.2.json"
+      "path": "fr.json",
+      "flags": {}
     }
   ],
   "packs": [],
-  "dependencies": [
-    {
-      "name": "babele",
-      "type": "module"
-    },
-    {
-      "name": "lib-wrapper"
-    },
-    {
-      "name": "dnd5e",
-      "type": "system"
-    }
-  ],
+  "dependencies": [],
   "socket": false,
   "manifest": "https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/raw/master/dnd5e_fr-FR/module.json",
-  "download": "https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/-/jobs/artifacts/dnd5_fr-1.62.0/raw/dnd5e_fr-FR.zip?job=build",
+  "download": "https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/-/jobs/artifacts/dnd5_fr-1.60.5/raw/dnd5e_fr-FR.zip?job=build",
   "protected": false,
   "coreTranslation": false
 }
