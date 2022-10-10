@@ -272,7 +272,7 @@ Hooks.once('init', () => {
 		Babele.get().register({
 			module: 'dnd5e_fr-FR',
 			lang: 'fr',
-			dir: 'compendium'
+			dir: 'compendium_fr'
 		});
 
 		Babele.get().registerConverters({
