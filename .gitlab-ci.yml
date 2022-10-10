@@ -17,7 +17,7 @@ test:
 build:
   stage: build
   script:
-    - zip dnd5e_fr-FR.zip -r dnd5e_fr-FR -x ".*"
+    - zip dnd5e_fr-FR.zip fr.json module.json -r dnd5e_fr-FR/compendium_fr -x ".*"
   artifacts:
     name: dnd5e_fr-FR
     expire_in: never 
