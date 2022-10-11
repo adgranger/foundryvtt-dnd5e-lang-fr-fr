@@ -17,7 +17,7 @@ test:
 build:
   stage: build
   script:
-    - zip dnd5e_fr-FR.zip fr.json babele-register.js module.json -r dnd5e_fr-FR/compendium_fr -x ".*"
+    - zip dnd5e_fr-FR.zip dnd5e_fr-FR/fr.json dnd5e_fr-FR/babele-register.js dnd5e_fr-FR/module.json -r dnd5e_fr-FR/compendium_fr -x ".*"
   artifacts:
     name: dnd5e_fr-FR
     expire_in: never 
