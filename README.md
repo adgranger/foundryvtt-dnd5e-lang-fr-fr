@@ -6,6 +6,9 @@
 1. Vous pouvez retrouver toutes les mises à jour en français pour FoundryVTT sur le discord officiel francophone
 2. Lien vers [Discord Francophone](https://discord.gg/pPSDNJk)
 
+## Participer à la traduction 
+1. les traductions sont suivis par la communauté sur le [weblate foundry-hub](https://weblate.foundryvtt-hub.com/projects/foundryvtt-dnd5e-lang-fr-fr/)
+
 ## Installation : 
 via le menu des modules à l'accueil de Foundry : 
 - installer le module Translation: French [Core] 
@@ -20,6 +23,4 @@ une fois votre monde lancé, dans paramètres => gestionnaire de modules
 - cocher Babele, libWrapper et fr-FR - DND5 System 
    et Sauvegarder :)
 
-Votre jeu ( et celui de vos joueurs) sera normalement complètement en français
-
-### Note : le fichier de langue 'zz' permet d'utiliser le module Translation Editor et pouvoir rapidement comparer fr / en
+Votre jeu (et celui de vos joueurs) sera normalement complètement en français
