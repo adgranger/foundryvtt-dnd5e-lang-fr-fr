@@ -11,3 +11,8 @@ Liste des mappings pour générer le squelette EN :
         - utilisation du site https://jsonformatter.org/json-parser# avec en règle de transfo JMESPath : 
            @.entries.*.[name, {name: name, description: description, items: items[*].[name, {name: name}, system.{description: description.value}]}]
         - à partir de la sauvegarde du json généré, quelques manipulation pour obtenir le json voulu  (ajout label, entries & mise en forme)
+
+        16/10/2022 : à revoir => le converter FromPack fait quand même bien le boulot :
+            -> faut-il reprendre les spells : plutot non 
+            -> les feat : plutot oui (à voir avec les users)  
+            du coup cela demande d'ajouter un filtre supplémentaire ... à creuser
