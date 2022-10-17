@@ -304,6 +304,12 @@ Hooks.once('init', () => {
 					return range;
 				}
 			},
+			"sightRange": (range) => {
+				if(!convertEnabled()) {
+					return range;
+				}
+				return footsToMeters(range)
+			},
 			"alignement": (alignment) => {
 				return alignments[alignment.toLowerCase()];
 			},
@@ -334,7 +340,29 @@ Hooks.once('init', () => {
 				});
 			},
 			"senses": (senses) => {
-				return senses ? parseSenses(senses) : null;
+				if(!convertEnabled()) {
+					return senses;
+				}
+
+				let convert = (value) => { return value; };
+				let units = senses.units;
+				if(units === 'ft') {
+					convert = (value) => { return footsToMeters(value) };
+					units = "m";
+				}
+				if(units === 'ml') {
+					convert = (value) => { return milesToMeters(value) };
+					units = "m";
+				}
+
+				return mergeObject(senses, {
+					darkvision: convert(senses.darkvision),
+					blindsight: convert(senses.blindsight),
+					tremorsense: convert(senses.tremorsense),
+					truesight: convert(senses.truesight),
+					units: units,
+					special: convert(senses.special)
+				});
 			},
 			"di": (damage) => {
 				return parseDamage(damage);
@@ -360,7 +388,7 @@ Hooks.once('init', () => {
 			"token": (token) => {
 				mergeObject(
 					token, {
-						dimSight: footsToMeters(token.dimSight),
+						sight: footsToMeters(token.dimSight),
 						brightSight: footsToMeters(token.brightSight)
 					}
 				);
