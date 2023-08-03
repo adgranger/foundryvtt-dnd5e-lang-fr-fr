@@ -241,7 +241,7 @@ function parseDamage(damage) {
 
 
 function convertEnabled() {
-	return game.settings.get("dnd5e_fr-FR", "convert");
+	return game.settings.get("FoundryVTT-dnd5e-FR", "convert");
 }
 
 function setEncumbranceData() {
@@ -257,7 +257,7 @@ Hooks.once('init', () => {
 
 	if(typeof Babele !== 'undefined') {
 
-		game.settings.register("dnd5e_fr-FR", "convert", {
+		game.settings.register("FoundryVTT-dnd5e-FR", "convert", {
 			name: "Conversions automatiques",
 			hint: "Applique le système métrique à toutes les mesures, distances",
 			scope: "world",
@@ -270,7 +270,7 @@ Hooks.once('init', () => {
 		});
 
 		Babele.get().register({
-			module: 'dnd5e_fr-FR',
+			module: 'FoundryVTT-dnd5e-FR',
 			lang: 'fr',
 			dir: 'compendium_fr'
 		});
