@@ -27,7 +27,7 @@ jobs:
 
     # Create a zip file with all files required by the module to add to the release
     - name: Create archive
-      run: zip -r ./dnd5e_fr-FR.zip dnd5e_fr-FR/fr.json dnd5e_fr-FR/module.json fr.js dnd5e_fr-FR/compendium/
+      run: zip dnd5e_fr-FR.zip dnd5e_fr-FR/fr.json dnd5e_fr-FR/babele-register.js dnd5e_fr-FR/module.json -r dnd5e_fr-FR/compendium_fr -x ".*"
 
     # Create a release for this specific version
     - name: Update Release with Files
@@ -39,6 +39,6 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './module.json, ./dnd5e_fr-FR.zip'
+        artifacts: './dnd5e_fr-FR/module.json, ./dnd5e_fr-FR.zip'
         tag: ${{ github.event.release.tag_name }}
         body: ${{ github.event.release.body }}
