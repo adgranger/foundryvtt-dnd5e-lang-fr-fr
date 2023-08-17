@@ -1,7 +1,7 @@
 # FoundryVTT dnd5e lang fr-FR
 
 ## Ce module traduit les clés (termes) exposés par le créateur pour ce system de jeu DND5E. 
-[![Latest Version](https://img.shields.io/github/v/release/adgranger/foundryvtt-dnd5e-lang-fr-fr?display_name=tag&sort=semver&label=Latest%20Version)](https://github.com/adgranger/foundryvtt-dnd5e-lang-fr-fr/releases/latest)
+![Latest Release)](https://img.shields.io/github/v/release/adgranger/foundryvtt-dnd5e-lang-fr-fr?logo=github&display_name=tag&label=Latest%20Version)
 <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fversion%3Fstyle%3Dflat%26url%3Dhttps%3A%2F%2Fgithub.com%2Fadgranger%2Ffoundryvtt-dnd5e-lang-fr-fr%2Freleases%2Flatest%2Fdownload%2Fmodule.json">
 <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fsystem%3FnameType%3Dfoundry%26showVersion%3D1%26style%3Dflat%26url%3Dhttps%3A%2F%2Fgithub.com%2Fadgranger%2Ffoundryvtt-dnd5e-lang-fr-fr%2Freleases%2Flatest%2Fdownload%2Fmodule.json&colorB=DF0000">
 
