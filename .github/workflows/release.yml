@@ -43,3 +43,11 @@ jobs:
         artifacts: './module.json, ./dnd5e_fr-FR.zip'
         tag: ${{ github.event.release.tag_name }}
         body: ${{ github.event.release.body }}
+
+    # Update module json version in master branche
+    - name : Update module version
+      uses: pocket-apps/action-update-version@v1
+      with:
+        files: 'module.json'
+        version-regexp: '\d+.\d+.\d+.\d+'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
