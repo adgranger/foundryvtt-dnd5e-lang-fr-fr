@@ -174,6 +174,10 @@ var classes = {
 	"or higher" : "ou plus"
 };
 
+var sources = {
+	"SRD": "DRS"
+};
+
 var rarity = {
 	"Common": "Commun",
 	"Uncommon": "peu commun",
@@ -422,6 +426,15 @@ Hooks.once('init', () => {
 					translated.push(translatedName)
 				});
 				return translated.join(', ');
+			},
+			"source": (source) => {
+				let keys = Object.keys(sources);
+				let translatedSource = source;
+				keys.forEach(key => {
+					translatedSource = translatedSource.replace(key, sources[key])
+				});
+
+				return translatedSource;
 			}
 		});
 	}
