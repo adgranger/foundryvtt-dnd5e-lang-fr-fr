@@ -164,11 +164,18 @@ var classes = {
 	"Hunter": "Chasseur",
 	"School of Evocation": "Ecole d'évocation",
 	"Path of the Berserker": "Berserker",
-	"Eldritch Blast": "Décharge occulte", //??
+	"Eldritch Blast": "Décharge occulte",
 	"Pact of the Tome": "Pacte du grimoire",
 	"Pact of the Blade": "Pacte de la lame",
 	"Pact of the Chain": "Pacte de la chaîne",
-	"Way of the Open Hand": "Voie de la main ouverte"
+	"Way of the Open Hand": "Voie de la main ouverte",
+	"Draconic Bloodline": "Lignée draconique",
+	"STR": "FOR",
+	"or higher" : "ou plus"
+};
+
+var sources = {
+	"SRD": "DRS"
 };
 
 var rarity = {
@@ -419,6 +426,15 @@ Hooks.once('init', () => {
 					translated.push(translatedName)
 				});
 				return translated.join(', ');
+			},
+			"source": (source) => {
+				let keys = Object.keys(sources);
+				let translatedSource = source;
+				keys.forEach(key => {
+					translatedSource = translatedSource.replace(key, sources[key])
+				});
+
+				return translatedSource;
 			}
 		});
 	}
