@@ -14,6 +14,14 @@ jobs:
       with:
         submodules: recursive
 
+    # Update module json version in master branche
+    - name : Update module version
+      uses: pocket-apps/action-update-version@v1
+      with:
+        files: 'module.json'
+        version-regexp: '\d+.\d+.\d+.\d+'
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
     # Substitute the Manifest and Download URLs in the module.json
     - name: Substitute Manifest and Download Links For Versioned Ones
       id: sub_manifest_link_version
@@ -42,12 +50,4 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: './module.json, ./dnd5e_fr-FR.zip'
         tag: ${{ github.event.release.tag_name }}
-        body: ${{ github.event.release.body }}
-
-    # Update module json version in master branche
-    - name : Update module version
-      uses: pocket-apps/action-update-version@v1
-      with:
-        files: 'module.json'
-        version-regexp: '\d+.\d+.\d+.\d+'
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        body: ${{ github.event.release.body }}    
