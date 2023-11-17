@@ -234,6 +234,26 @@ function parseSense(sense) {
 	return sense;
 }
 
+function checkVersion(version1, version2) {
+    const v1 = version1.split('.');
+    const v2 = version2.split('.');
+    
+    const maxLength = Math.max(v1.length, v2.length);
+    
+    for (let i = 0; i < maxLength; i++) {
+        const num1 = parseInt(v1[i]) || 0;
+        const num2 = parseInt(v2[i]) || 0;
+        
+        if (num1 < num2) {
+            return -1;
+        } else if (num1 > num2) {
+            return 1;
+        }
+    }
+    
+    return 0;
+}
+
 function parseDamage(damage) {
 	damage = damage.replace(/bludgeoning/gi, 'contondant');
 	damage = damage.replace(/piercing/gi, 'perforant');
@@ -430,12 +450,25 @@ Hooks.once('init', () => {
 			"source": (source) => {
 				let keys = Object.keys(sources);
 				let translatedSource = source;
+				const isNewStructure = checkVersion(dnd5e.version, '2.4.0')>=0;
+				if (isNewStructure){
+					translatedSource = source.book;
+				}
+				
 				keys.forEach(key => {
 					translatedSource = translatedSource.replace(key, sources[key])
 				});
 
+				if (isNewStructure){
+					return mergeObject(
+						source, {
+							book: translatedSource
+						}
+					);
+				}
 				return translatedSource;
-			}
+			},
+			
 		});
 	}
 });
