@@ -454,10 +454,12 @@ Hooks.once('init', () => {
 				if (isNewStructure){
 					translatedSource = source.book;
 				}
-				
-				keys.forEach(key => {
-					translatedSource = translatedSource.replace(key, sources[key])
-				});
+
+				if (translatedSource){
+					keys.forEach(key => {
+						translatedSource = translatedSource.replace(key, sources[key])
+					});
+				}
 
 				if (isNewStructure){
 					return mergeObject(
