@@ -580,11 +580,11 @@
 					"text": "<p>Les états spéciaux (ou simplement « états ») influent sur les capacités d’une créature de diverses façons. Ils peuvent résulter d’un sort, d’une aptitude de classe, d’une attaque de monstre ou d’un autre effet. La plupart, comme l’état aveuglé, défavorisent le sujet, mais certains, comme l’état invisible, sont plutôt bénéfiques.</p><p>Un état persiste jusqu’à ce qu’on y mette fin (comme en se relevant pour l’état à terre) ou jusqu’à ce qu’on arrive au terme de la durée indiquée par l’effet qui a imposé l’état.</p><p>Si plusieurs effets imposent le même état à une créature donnée, chaque application de l’état a sa propre durée mais les effets de l’état n’empirent pas pour autant. L’état affecte la créature ou il ne l’affecte pas.</p><p>Les définitions suivantes indiquent ce qu’il advient d’une créature soumise à un état donné.</p>"
 
 				},
-				"Blinded" : {
+				"Prone" : {
 					"name" : "À terre",
 					"text" : "<ul> <li>Une créature à terre ne peut se déplacer qu’en rampant,.</li><li>La créature est désavantagée aux jets d’attaque.</li><li>Un jet d’attaque contre la créature est avantagé si l’assaillant se trouve dans un rayon de 1,50 m d’elle. Sans cela, le jet d’attaque est désavantagé.</li></ul>"					
 				},
-				"Charmed" : {
+				"Grappled" : {
 					"name"  : "Agrippé",
 					"text" : "<ul> <li>Une créature agrippée voit sa vitesse tomber à 0 et ne peut profiter d’aucun bonus en vitesse.</li><li>L’état prend fin si l’« agrippeur » est @UUID[.TpkZgLfxCmSndmpb]{neutralisé}.</li><li>L’état prend également fin si un effet extrait la créature agrippée de la zone d’allonge de l’agrippeur ou de l’effet qui agrippe, par exemple lorsqu’une créature est repoussée par le sort <em>vague tonnante</em></li></ul>"
 				},
@@ -592,47 +592,47 @@
 					"name" : "Assourdi",
 					"text" : "<ul><li>Une créature assourdie n’entend rien et rate automatiquement tout test de caractéristique impliquant l’ouïe.</li></ul>"
 				},
-				"Frightened" : {
+				"Blinded" : {
 					"name" : "Aveuglé",
 					"text" : "<ul> <li>Une créature aveuglée ne voit rien et rate automatiquement tout test de caractéristique demandant d’y voir.</li><li>Les jets d’attaque contre la créature sont avantagés, tandis que ceux de la créature sont désavantagés.</li></ul>"
 				},
-				"Grappled" : {
+				"Charmed" : {
 					"name" : "Charmé",
 					"text" : "<ul> <li>Une créature charmée ne peut pas attaquer son « charmeur » ni le cibler avec des aptitudes ou effets magiques nuisibles.</li><li>Le charmeur est avantagé aux tests de caractéristique d’interaction sociale avec la créature.</li></ul>"
 				},
-				"Incapacitated" : {
+				"Frightened" : {
 					"name" : "Effrayé",
 					"text" : "<ul> <li>Une créature effrayée est désavantagée aux tests de caractéristique et aux jets d’attaque tant que la source de sa peur est dans son champ de vision.</li><li>La créature ne peut pas se rapprocher volontairement de la source de sa peur.</li></ul>"
 				},
-				"Invisible" : {
+				"Poisoned" : {
 					"name" : "Empoisoné",
 					"text" : "<ul> <li>Une créature empoisonnée est désavantagée aux jets d’attaque et aux tests de caractéristique</li></ul>"
 				},
-				"Paralyzed" : {
+				"Restrained" : {
 					"name" : "Entravé",
 					"text" : "<ul> <li>Une créature entravée voit sa vitesse tomber à 0 et ne peut profiter d’aucun bonus en vitesse.</li><li>Les jets d’attaque contre la créature sont avantagés, tandis que ceux de la créature sont désavantagés.</li><li>La créature est désavantagée aux jets de sauvegarde de Dextérité.</li></ul>"
 				},
-				"Petrified" : {
+				"Stunned" : {
 					"name" : "Étourdi",
 					"text" : "<ul> <li>Une créature étourdie est @UUID[.TpkZgLfxCmSndmpb]{neutralisée}, ne peut pas bouger et bredouille si elle tente de parler.</li><li>Elle rate automatiquement ses jets de sauvegarde de Dextérité et de Force.</li><li>Les jets d’attaque contre la créature sont avantagés.</li></ul>"
 				},
-				"Poisoned": {
+				"Unconscious": {
 					"name" : "Inconscient",
 					"text" : "<ul> <li>Une créature inconsciente est @UUID[.TpkZgLfxCmSndmpb]{neutralisée}, ne peut ni parler ni bouger et n’est pas consciente de son environnement.</li><li>La créature lâche tout ce qu’elle tient et tombe à terre.</li><li>Elle rate automatiquement ses jets de sauvegarde de Dextérité et de Force.</li><li>Les jets d’attaque contre la créature sont avantagés.</li><li>Toute attaque qui touche la créature est un coup critique si l’assaillant se trouve dans un rayon de 1,50 m d’elle.</li></ul>"
 				},
-				"Prone" : {
+				"Invisible" : {
 					"name" : "Invisible",
 					"text" : "<ul> <li>On ne peut pas voir une créature invisible, à moins de disposer d’une magie adaptée ou de sens spécifiques. Si elle tente de se cacher, la créature est considérée comme en zone de visibilité nulle. On peut détecter la position de la créature en fonction des bruits qu’elle produit ou des traces qu’elle laisse.</li><li>Les jets d’attaque contre la créature sont désavantagés, tandis que ceux de la créature sont avantagés.</li></ul>"
 				},
-				"Restrained" : {
+				"Incapacitated" : {
 					"name" : "Neutralisé",
 					"text" : "<ul> <li>Une créature neutralisée ne peut pas entreprendre d’action ni jouer de réaction</li></ul>"
 				},
-				"Stunned" : {
+				"Paralyzed" : {
 					"name" : "Paralysé",
 					"text" : "<ul> <li>Une créature paralysée est @UUID[.TpkZgLfxCmSndmpb]{neutralisée}et ne peut ni parler ni bouger.</li><li>Elle rate automatiquement ses jets de sauvegarde de Dextérité et de Force.</li><li>Les jets d’attaque contre la créature sont avantagés.</li><li>Toute attaque qui touche la créature est un coup critique si l’assaillant se trouve dans un rayon de 1,50 m d’elle.</li></ul>"
 				},
-				"Unconscious" : {
+				"Petrified" : {
 					"name" : "Pétrifié",
 					"text" : "<ul> <li>Une créature pétrifiée est transformée en matière solide et inerte (généralement de la pierre), ainsi que tout l’équipement non magique qu’elle porte. Son poids est décuplé et la créature n’est plus soumise au vieillissement.</li><li>La créature est @UUID[.TpkZgLfxCmSndmpb]{neutralisée}ne peut ni parler ni bouger, et n’est pas consciente de son environnement.</li><li>Les jets d’attaque contre la créature sont avantagés</li><li>Elle rate automatiquement ses jets de sauvegarde de Dextérité et de Force.</li><li>La créature est dotée de la résistance à tous les dégâts.</li><li>Elle est immunisée contre le poison et les maladies, mais un poison ou une maladie affectant déjà son organisme n’est qu’interrompu, et non définitivement jugulé.</li></ul>"
 				},
