@@ -90,6 +90,23 @@ function convertEnabled() {
 function setEncumbranceData() {
 	let convert = convertEnabled();
 	game.settings.set("dnd5e", "metricWeightUnits", convert);
+
+	// Fix system bug 
+	CONFIG.DND5E.encumbrance.threshold.encumbered = mergeObject(
+		CONFIG.DND5E.encumbrance.threshold.encumbered, {
+			metric: 2.5
+		}
+	);
+	CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered = mergeObject(
+		CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered, {
+			metric: 5
+		}
+	);
+	CONFIG.DND5E.encumbrance.threshold.maximum = mergeObject(
+		CONFIG.DND5E.encumbrance.threshold.maximum , {
+			metric: 7.5
+		}
+	);
 }
 
 async function skillSorting() {
