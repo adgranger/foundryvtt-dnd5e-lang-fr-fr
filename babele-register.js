@@ -107,6 +107,12 @@ function setEncumbranceData() {
 			metric: 7.5
 		}
 	);
+	CONFIG.DND5E.encumbrance.speedReduction = mergeObject(
+		CONFIG.DND5E.encumbrance.speedReduction, {
+			encumbered : 3,
+			heavilyEncumbered : 6
+		}
+	);
 }
 
 async function skillSorting() {
