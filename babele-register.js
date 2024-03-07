@@ -37,7 +37,8 @@ Hooks.once('init', () => {
 			"classRequirements": Converters.classRequirements(),
 			"source": Converters.source(),
 			"type": Converters.type(),
-			"adv_sizehint": Converters.advsizehint()
+			"adv_sizehint": Converters.advsizehint(),
+			"advancement" : Converters.advancement()
 		});
 	}
 });
@@ -169,28 +170,6 @@ class Converters {
 				translated: true,
 			});
 		});
-	}
-
-	static advsizehint() {
-		return (advancements, translation) => Converters._advsizehint(advancements, translation);
-	}
-
-	static _advsizehint(advancements, translation) {	
-		if (!translation) {
-			return advancements;
-		}
-
-		advancements.forEach(adv => {
-			if (adv.type === "Size"){
-				mergeObject(adv, {
-					configuration:{
-						hint: translation
-					}
-				});
-			}
-		});
-
-		return advancements;
 	}
 
 	static weight() {
@@ -454,6 +433,72 @@ class Converters {
 				subtype: index ? races[index].toLowerCase() : type.subtype,				
 			}
 		);
+	}
+
+	static advsizehint() {
+		return (advancements, translation) => Converters._advsizehint(advancements, translation);
+	}
+
+	static _advsizehint(advancements, translation) {	
+		if (!translation) {
+			return advancements;
+		}
+
+		advancements.forEach(adv => {
+			if (adv.type === "Size"){
+				mergeObject(adv, {
+					configuration:{
+						hint: translation
+					}
+				});
+			}
+		});
+
+		return advancements;
+	}
+	
+	static advancement() {
+		return (advancements, translations, data, tc) => Converters._advancement(advancements, translations, data, tc);
+	}
+
+	static _advancement(advancements, translations, data, tc) {					
+		advancements.forEach(adv => {
+
+			switch (adv.type) {
+				case "HitPoints":
+					mergeObject(adv, {
+						title: game.i18n.localize("DND5E." + adv.type)
+					});
+					break;
+				case "ItemGrant":
+					mergeObject(adv, {
+						title: game.i18n.localize("DND5E." + adv.title)
+					});
+					break;
+				case "AbilityScoreImprovement":{
+					mergeObject(adv, {
+						title: game.i18n.localize("DND5E.AdvancementAbilityScoreImprovementTitle")
+					});
+					break;
+				}
+				case "ScaleValue":
+					const classFeaturesTranslations = game.babele.translations.find((item) => item.collection === "dnd5e.classfeatures");
+					if (classFeaturesTranslations.entries[adv.title]) {
+						mergeObject(adv, {
+							title: classFeaturesTranslations.entries[adv.title].name
+						});
+					}
+					else {
+						console.warn(`Can't find "${adv.title}" translation`);
+					}
+					break;
+				default:
+					break;
+			}
+			
+		});
+
+		return advancements;
 	}
 	
 	static round(num) {
