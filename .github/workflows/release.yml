@@ -51,3 +51,11 @@ jobs:
         files: 'module.json'
         version-regexp: '\d+.\d+.\d+.\d+'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    # Publish to foundry
+    - name: Publish Module to FoundryVTT Website
+      id: publish-to-foundry-website
+      uses: cs96and/FoundryVTT-release-package@v1
+      with:
+        package-token: ${{ secrets.PACKAGE_TOKEN }}
+        manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
