@@ -36,7 +36,8 @@ Hooks.once('init', () => {
 			"raceRequirements": Converters.raceRequirements(),
 			"classRequirements": Converters.classRequirements(),
 			"source": Converters.source(),
-			"type": Converters.type()
+			"type": Converters.type(),
+			"adv_sizehint": Converters.advsizehint()
 		});
 	}
 });
@@ -168,6 +169,28 @@ class Converters {
 				translated: true,
 			});
 		});
+	}
+
+	static advsizehint() {
+		return (advancements, translation) => Converters._advsizehint(advancements, translation);
+	}
+
+	static _advsizehint(advancements, translation) {	
+		if (!translation) {
+			return advancements;
+		}
+
+		advancements.forEach(adv => {
+			if (adv.type === "Size"){
+				mergeObject(adv, {
+					configuration:{
+						hint: translation
+					}
+				});
+			}
+		});
+
+		return advancements;
 	}
 
 	static weight() {
@@ -416,10 +439,6 @@ class Converters {
 	}
 
 	static _type(type) {	
-		console.log(typeof(races));
-		console.log(type)	;
-		console.log(type.subtype.toLowerCase());
-		console.log(races[type.subtype.toLowerCase()]);
 		let index;
 		for (let key of Object.keys(races)) {
 			if (key.toLowerCase() !== type.subtype.toLowerCase()){
@@ -436,9 +455,7 @@ class Converters {
 			}
 		);
 	}
-
-
-
+	
 	static round(num) {
 		return Math.round((num + Number.EPSILON) * 100) / 100;
 	}
