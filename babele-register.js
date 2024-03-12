@@ -482,14 +482,31 @@ class Converters {
 					break;
 				}
 				case "ScaleValue":
+				case "ItemChoice":
+				case "Trait":
 					const classFeaturesTranslations = game.babele.translations.find((item) => item.collection === "dnd5e.classfeatures");
-					if (classFeaturesTranslations.entries[adv.title]) {
-						mergeObject(adv, {
-							title: classFeaturesTranslations.entries[adv.title].name
-						});
+					if (adv.title !== "") {						
+						if (classFeaturesTranslations.entries[adv.title]) {
+							mergeObject(adv, {
+								title: classFeaturesTranslations.entries[adv.title].name
+							});		
+						}
+						else {
+							console.warn(`Can't find "${adv.title}" translation`);
+						}
 					}
-					else {
-						console.warn(`Can't find "${adv.title}" translation`);
+
+					if(adv.configuration && adv.configuration.hint && adv.configuration.hint !== ""){
+						if (classFeaturesTranslations.entries[adv.configuration.hint]) {
+							mergeObject(adv, {
+								configuration:{
+									hint: classFeaturesTranslations.entries[adv.configuration.hint].hint
+								}								
+							});
+						}
+						else {
+							console.warn(`Can't find hint "${adv.configuration.hint}" translation`);
+						}
 					}
 					break;
 				default:
