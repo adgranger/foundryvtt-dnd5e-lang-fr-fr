@@ -418,6 +418,10 @@ class Converters {
 	}
 
 	static _type(type) {	
+		if (!type.subtype) {
+			return 
+		};
+
 		let index;
 		for (let key of Object.keys(races)) {
 			if (key.toLowerCase() !== type.subtype.toLowerCase()){
