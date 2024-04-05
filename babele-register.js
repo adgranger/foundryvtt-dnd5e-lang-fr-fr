@@ -109,6 +109,15 @@ function setEncumbranceData() {
 			metric: 7.5
 		}
 	);
+
+	if (convert){
+		CONFIG.DND5E.movementUnits = {			
+			m: CONFIG.DND5E.movementUnits.m,
+			km: CONFIG.DND5E.movementUnits.km,
+			ft: CONFIG.DND5E.movementUnits.ft,
+			mi: CONFIG.DND5E.movementUnits.mi
+		  };
+	}
 }
 
 async function skillSorting() {
