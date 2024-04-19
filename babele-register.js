@@ -155,9 +155,13 @@ class Converters {
 				return data;
 			}
 
-			const translation = translations[data.name];
-			if (!translation) {
-				return data;
+			let translation = translations[data._id];
+			if (!translation) {								
+				translation = translations[data.name];
+				if (!translation) {	
+					console.warn(`Missing translation : ${data._id} ${data.name}`)
+					return data;
+				}
 			}
 
 			return mergeObject(data, {
