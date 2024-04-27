@@ -94,17 +94,17 @@ function setEncumbranceData() {
 	game.settings.set("dnd5e", "metricWeightUnits", convert);
 
 	// Fix system bug 
-	CONFIG.DND5E.encumbrance.threshold.encumbered = mergeObject(
+	CONFIG.DND5E.encumbrance.threshold.encumbered = foundry.utils.mergeObject(
 		CONFIG.DND5E.encumbrance.threshold.encumbered, {
 			metric: 2.5
 		}
 	);
-	CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered = mergeObject(
+	CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered = foundry.utils.mergeObject(
 		CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered, {
 			metric: 5
 		}
 	);
-	CONFIG.DND5E.encumbrance.threshold.maximum = mergeObject(
+	CONFIG.DND5E.encumbrance.threshold.maximum = foundry.utils.mergeObject(
 		CONFIG.DND5E.encumbrance.threshold.maximum , {
 			metric: 7.5
 		}
@@ -164,7 +164,7 @@ class Converters {
 				}
 			}
 
-			return mergeObject(data, {
+			return foundry.utils.mergeObject(data, {
 				name: translation.name,
 				image: { caption: translation.caption ?? data.image.caption },
 				src: translation.src ?? data.src,
@@ -203,14 +203,14 @@ class Converters {
 			return range;
 		}
 		if (range.units === "ft") {
-			return mergeObject(range, {
+			return foundry.utils.mergeObject(range, {
 				"value": Converters.footsToMeters(range.value),
 				"long": Converters.footsToMeters(range.long),
 				"units": "m"
 			});
 		}
 		if (range.units === "mi") {
-			return mergeObject(range, {
+			return foundry.utils.mergeObject(range, {
 				"value": Converters.milesToMeters(range.value),
 				"long": Converters.milesToMeters(range.long),
 				"units": "km"
@@ -267,7 +267,7 @@ class Converters {
 			units = "m";
 		}
 
-		return mergeObject(movement, {
+		return foundry.utils.mergeObject(movement, {
 			burrow: convert(movement.burrow),
 			climb: convert(movement.climb),
 			fly: convert(movement.fly),
@@ -297,7 +297,7 @@ class Converters {
 			units = "m";
 		}
 
-		return mergeObject(senses, {
+		return foundry.utils.mergeObject(senses, {
 			darkvision: convert(senses.darkvision),
 			blindsight: convert(senses.blindsight),
 			tremorsense: convert(senses.tremorsense),
@@ -345,7 +345,7 @@ class Converters {
 	}
 
 	static _token(token) {
-		return mergeObject(
+		return foundry.utils.mergeObject(
 			token, {
 				sight: Converters.footsToMeters(token.dimSight),
 				brightSight: Converters.footsToMeters(token.brightSight)
@@ -413,7 +413,7 @@ class Converters {
 				translatedSource = translatedSource.replace(key, sources[key])
 			});
 		}
-		return mergeObject(
+		return foundry.utils.mergeObject(
 			source, {
 			book: translatedSource
 		}
@@ -439,7 +439,7 @@ class Converters {
 			break;
 		}
 
-		return mergeObject(type,
+		return foundry.utils.mergeObject(type,
 			{
 				subtype: index ? races[index].toLowerCase() : type.subtype,				
 			}
@@ -457,7 +457,7 @@ class Converters {
 
 		advancements.forEach(adv => {
 			if (adv.type === "Size"){
-				mergeObject(adv, {
+				foundry.utils.mergeObject(adv, {
 					configuration:{
 						hint: translation
 					}
@@ -477,17 +477,17 @@ class Converters {
 
 			switch (adv.type) {
 				case "HitPoints":
-					mergeObject(adv, {
+					foundry.utils.mergeObject(adv, {
 						title: game.i18n.localize("DND5E." + adv.type)
 					});
 					break;
 				case "ItemGrant":
-					mergeObject(adv, {
+					foundry.utils.mergeObject(adv, {
 						title: game.i18n.localize("DND5E." + adv.title)
 					});
 					break;
 				case "AbilityScoreImprovement":{
-					mergeObject(adv, {
+					foundry.utils.mergeObject(adv, {
 						title: game.i18n.localize("DND5E.AdvancementAbilityScoreImprovementTitle")
 					});
 					break;
@@ -498,7 +498,7 @@ class Converters {
 					const classFeaturesTranslations = game.babele.translations.find((item) => item.collection === "dnd5e.classfeatures");
 					if (adv.title !== "") {						
 						if (classFeaturesTranslations.entries[adv.title]) {
-							mergeObject(adv, {
+							foundry.utils.mergeObject(adv, {
 								title: classFeaturesTranslations.entries[adv.title].name
 							});		
 						}
@@ -509,7 +509,7 @@ class Converters {
 
 					if(adv.configuration && adv.configuration.hint && adv.configuration.hint !== ""){
 						if (classFeaturesTranslations.entries[adv.configuration.hint]) {
-							mergeObject(adv, {
+							foundry.utils.mergeObject(adv, {
 								configuration:{
 									hint: classFeaturesTranslations.entries[adv.configuration.hint].hint
 								}								
