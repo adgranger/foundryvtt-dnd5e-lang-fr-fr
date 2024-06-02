@@ -12,7 +12,6 @@
 ## Nous rejoindre / Participer à la traduction 
 
 - Vous pouvez retrouver toutes les mises à jour en français pour FoundryVTT sur le [Discord Francophone](https://discord.gg/pPSDNJk)
-- les traductions sont suivis par la communauté sur le [weblate foundry-hub](https://weblate.foundryvtt-hub.com/projects/foundryvtt-dnd5e-lang-fr-fr/)
 
 ## Installation : 
 via le menu des modules à l'accueil de Foundry : 
