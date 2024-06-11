@@ -49,9 +49,17 @@ Hooks.once('ready', () => {
 
 Hooks.on('createScene', (scene) => {
 	if (convertEnabled()) {
-		scene.update({
-			"gridUnits": "m", "gridDistance": 1.5
-		});
+		// Structure changed in foundry v12
+		if (game.data.release.generation == 12){
+			scene.update({
+				"grid.units": "m", "grid.distance": 1.5
+			});
+		}
+		else {
+			scene.update({
+				"gridUnits": "m", "gridDistance": 1.5
+			});
+		}	
 	}
 });
 
