@@ -192,10 +192,13 @@ class Converters {
 	}
 
 	static _weight(value) {
-		if (!convertEnabled()) {
+		if (!convertEnabled() || value.units === "kg") {
 			return value;
 		}
-		return Converters.lbToKg(value);
+		return foundry.utils.mergeObject( value, {
+			"value" : Converters.lbToKg(value.value),
+			"units" : "kg"
+		});
 	}
 
 	static range() {
