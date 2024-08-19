@@ -17,8 +17,8 @@
   "TYPES.Actor.vehiclePl": "Véhicules",
   "TYPES.Actor.group": "Groupe",
   "TYPES.Actor.groupPl": "Groupes",
-  "TYPES.ActiveEffect.enchantment": "Enchantment",
-  "TYPES.ActiveEffect.enchantmentPl": "Enchantments",
+  "TYPES.ActiveEffect.enchantment": "Enchantement",
+  "TYPES.ActiveEffect.enchantmentPl": "Enchantements",
   "ITEM.TypeBackground": "Historique",
   "ITEM.TypeBackgroundPl": "Historiques",
   "ITEM.TypeContainer": "Conteneur",
@@ -167,8 +167,8 @@
     "Category": {
       "Standard": "Standard",
       "Time": "Time",
-      "Monster": "Monster",
-      "Vehicle": "Vehicle"
+      "Monster": "Monstre",
+      "Vehicle": "Véhicule"
     }
   },
   "DND5E.ACTIVITY": {
@@ -216,27 +216,27 @@
   "DND5E.Advanced": "Avancé",
   "DND5E.ADVANCEMENT": {
     "AbilityScoreImprovement": {
-      "Title": "Ability Score Improvement",
-      "Hint": "Allow the player to increase one or more ability scores or take an optional feat.",
+      "Title": "Amélioration de caractéristique",
+      "Hint": "Permet au joueur d'augmenter une ou plusieurs caractéristiques ou de prendre un don facultatif.",
       "CapDisplay": {
-        "one": "Max {points} point per score",
-        "other": "Max {points} points per score"
+        "one": "{points} point max par score",
+        "other": "{points} points max par score"
       },
       "Feat": {
-        "Hint": "Drop a feat here to choose one instead of an ability score improvement."
+        "Hint": "Déposez un don ici pour en choisir un au lieu d'une amélioration de score de caractéristique."
       },
       "FIELDS": {
         "cap": {
-          "label": "Point Cap",
-          "hint": "Maximum number of points a player can assign to a single score."
+          "label": "Limite de point",
+          "hint": "Nombre maximum de points qu'un joueur peut assigner à un seul score."
         },
         "locked": {
-          "label": "Locked",
-          "hint": "Ability cannot be improved."
+          "label": "Verrouillée",
+          "hint": "La caractéristique ne peut pas être améliorée."
         },
         "fixed": {
-          "label": "Fixed Improvement",
-          "hint": "Abilities that are improved by a fixed amount and cannot be manually improved during the process."
+          "label": "Amélioration fixe",
+          "hint": "Les caractéristiques qui sont améliorées par un montant fixe et ne peuvent pas être améliorées manuellement pendant le processus."
         },
         "points": {
           "label": "Points",
@@ -251,7 +251,7 @@
         "other": "{points} Points restants"
       },
       "Warning": {
-        "Level": "Must be at least level {level} to take this feat.",
+        "Level": "Vous devez être au moins au niveau {level} pour bénéficier de ce don.",
         "Type": "Only features with the \"feat\" type can be selected."
       }
     }
@@ -470,27 +470,27 @@
           "hint": "Ignore the ability modifier, proficiency, and any other bonuses from the actor and only use the bonus defined by the activity when calculating to hit."
         },
         "type": {
-          "label": "Attack Type",
+          "label": "Type d'attaque",
           "value": {
-            "label": "Attack Type",
-            "hint": "Is this a melee or ranged attack?"
+            "label": "Type d'attaque",
+            "hint": "Est-ce une attaque au corps à corps ou à distance ?"
           },
           "classification": {
-            "label": "Attack Classification",
-            "hint": "Is this an unarmed, weapon, or spell attack?"
+            "label": "Type d'attaque",
+            "hint": "S'agit-il d'une attaque à mains nues, d'une arme ou d'un sort ?"
           }
         }
       },
       "damage": {
-        "label": "Attack Damage",
+        "label": "Dégâts d'attaque",
         "critical": {
           "bonus": {
-            "label": "Extra Critical Damage",
-            "hint": "Extra damage applied when a critical is rolled. Added to the base damage or first damage part."
+            "label": "Dégâts supplémentaires dus aux coups critiques",
+            "hint": "Dégâts supplémentaires appliqués lors d'un coup critique. Ajouté aux dégâts de base ou à la première partie."
           }
         },
         "includeBase": {
-          "label": "Include Base Damage",
+          "label": "Inclure les dégâts de base",
           "hint": "Include the item's base damage with any additional damage parts."
         },
         "parts": {
@@ -500,12 +500,12 @@
       }
     },
     "Classification": {
-      "Spell": "Spell",
-      "Unarmed": "Unarmed",
-      "Weapon": "Weapon"
+      "Spell": "Sort",
+      "Unarmed": "Mains nues",
+      "Weapon": "Arme"
     },
     "Type": {
-      "Melee": "Melee",
+      "Melee": "Corps-à-corps",
       "Ranged": "Ranged"
     }
   },
@@ -665,7 +665,7 @@
   "DND5E.ContextMenuActionUnattune": "Désharmoniser",
   "DND5E.ContextMenuActionEnable": "Activer",
   "DND5E.ContextMenuActionDisable": "Désactiver",
-  "DND5E.ContextMenuActionView": "View",
+  "DND5E.ContextMenuActionView": "Afficher",
   "DND5E.Contiguous": "Contiguous",
   "DND5E.ConBlinded": "Aveuglé",
   "DND5E.ConCharmed": "Charmé",
@@ -752,11 +752,11 @@
   "DND5E.CONSUMPTION": {
     "FIELDS": {
       "consumption": {
-        "label": "Consumption",
+        "label": "Consommation",
         "scaling": {
           "label": "Consumption Scaling",
           "allowed": {
-            "label": "Allow Scaling",
+            "label": "Autoriser la mise à l'échelle",
             "hint": "Can an activity not on a spell be activated at higher levels?"
           },
           "max": {
@@ -921,7 +921,7 @@
         "label": "Damage",
         "critical": {
           "allow": {
-            "label": "Allow Critical",
+            "label": "Autoriser les critiques",
             "hint": "Should the use be able to roll critical damage?"
           },
           "bonus": {
@@ -934,27 +934,27 @@
           "hint": "Individual damage parts to include with the roll.",
           "FIELDS": {
             "bonus": {
-              "label": "Damage Bonus",
-              "hint": "Bonus added to the damage roll."
+              "label": "Bonus de dégâts",
+              "hint": "Bonus ajouté aux jets de dégâts."
             },
             "custom": {
-              "label": "Custom Damage Formula",
+              "label": "Formule de dégâts personnalisés",
               "enabled": {
-                "label": "Enable Custom Formula",
-                "hint": "Should the custom formula be used rather than the default dice."
+                "label": "Activer la formule personnalisée",
+                "hint": "La formule personnalisée doit-elle être utilisée plutôt que le dé par défaut."
               },
               "formula": {
-                "label": "Damage Formula",
-                "hint": "Custom damage formula."
+                "label": "Formule de dégâts",
+                "hint": "Formule de dégâts personnalisée."
               }
             },
             "denomination": {
-              "label": "Die Denomination",
-              "hint": "Denomination of the dice to roll."
+              "label": "Dénomination des dés",
+              "hint": "Dénomination des dés à lancer."
             },
             "number": {
-              "label": "Die Number",
-              "hint": "Number of dice to roll."
+              "label": "Nombre de dés",
+              "hint": "Nombre de dés à lancer."
             },
             "scaling": {
               "label": "Damage Scaling",
