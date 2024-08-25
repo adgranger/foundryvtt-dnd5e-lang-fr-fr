@@ -155,7 +155,7 @@
           "hint": "Utilisez ces valeurs d'activation au lieu de celles de l'objet lorsque vous utilisez cette activité."
         },
         "type": {
-          "label": "Type d'activation",
+          "label": "Activation Cost",
           "hint": "Type d'activation (ex : action, action légendaire, minutes)."
         },
         "value": {
@@ -434,6 +434,7 @@
   "DND5E.ArmorClassDraconic": "Résilience draconique",
   "DND5E.ArmorClassUnarmoredMonk": "Défense sans armure (Moine)",
   "DND5E.ArmorClassUnarmoredBarbarian": "Défense sans armure (Barbare)",
+  "DND5E.ArmorClassUnarmoredBard": "Unarmored Defense (Bard)",
   "DND5E.ArmorClassCustom": "Formule personnalisée",
   "DND5E.ArmorConfig": "Configurer l'armure",
   "DND5E.ArmorConfigHint": "Remplissez la case ci-dessus pour remplacer la classe d'armure calculée automatiquement.",
@@ -503,6 +504,13 @@
       "Spell": "Sort",
       "Unarmed": "Mains nues",
       "Weapon": "Arme"
+    },
+    "Mode": {
+      "Label": "Attack Mode",
+      "Offhand": "Offhand",
+      "OneHanded": "One-Handed",
+      "Thrown": "Thrown",
+      "TwoHanded": "Two-Handed"
     },
     "Type": {
       "Melee": "Corps-à-corps",
@@ -582,7 +590,61 @@
   "DND5E.ChatContextSelectHit": "Sélectionner les cibles touchées",
   "DND5E.ChatContextSelectMiss": "Sélectionner les cibles manquées",
   "DND5E.ChatFlavor": "Texte d'ambiance",
+  "DND5E.CHECK": {
+    "Title": "Check",
+    "FIELDS": {
+      "check": {
+        "label": "Check Details",
+        "ability": {
+          "label": "Check Ability",
+          "hint": "Ability to use when making the check."
+        },
+        "associated": {
+          "label": "Associated Skill or Tool",
+          "hint": "Proficiency and bonuses with this skill or tool will contribute to the ability check."
+        },
+        "dc": {
+          "label": "Difficulty Class",
+          "calculation": {
+            "label": "DC Calculation",
+            "hint": "Method or ability used to calculate the difficulty class."
+          },
+          "formula": {
+            "label": "DC Formula",
+            "hint": "Custom formula or flat value for defining the check DC."
+          }
+        }
+      }
+    },
+    "ThisTool": "This Tool"
+  },
   "DND5E.CheckBonus": "Jets bonus",
+  "DND5E.CLASS": {
+    "Multiclass": {
+      "Title": "Multiclassing"
+    },
+    "FIELDS": {
+      "hitDice": {
+        "label": "Hit Point Die"
+      },
+      "hitDiceUsed": {
+        "label": "Spent Hit Dice"
+      },
+      "levels": {
+        "label": "Class Levels"
+      },
+      "primaryAbility": {
+        "all": {
+          "label": "Require All",
+          "hint": "Require all primary abilities to meet the minimum in order to multi-class."
+        },
+        "value": {
+          "label": "Primary Ability",
+          "hint": "Abilities used most by this class. Used to determine multi-classing restrictions."
+        }
+      }
+    }
+  },
   "DND5E.ClassAdd": "Ajouter une classe",
   "DND5E.ClassIdentifier": "Identifiant de classe",
   "DND5E.ClassIdentifierHint": "Les données de cette classe seront accessibles en utilisant <strong>@classes.{identifier}</strong> dans les formules de jet.",
@@ -718,32 +780,72 @@
   "DND5E.ConsumeHitDiceSmallestLong": "Plus petit dé de vie disponible",
   "DND5E.ConsumeMaterial": "Matériel",
   "DND5E.ConsumeCharges": "Charge",
-  "DND5E.ConsumeWarningNoResource": "{name} consomme {type}, mais aucune ressource n'est indiquée !",
-  "DND5E.ConsumeWarningNoSource": "La ressource désignée {type} que consomme {name} n'existe plus !",
-  "DND5E.ConsumeWarningNoQuantity": "{name} est à court de {type} !",
-  "DND5E.ConsumeWarningZeroAttribute": "{name} a épuisé toutes ses ressources indiquées !",
   "DND5E.ConsumeResource": "Consommer la ressource ?",
-  "DND5E.ConsumeResourceAction": "Consommer une ressource",
   "DND5E.ConsumeRecharge": "Consommer la recharge ?",
   "DND5E.ConsumeScaling": "Mise à l'échelle des ressources",
   "DND5E.ConsumeScalingLabel": "Utiliser des ressources",
   "DND5E.ConsumeScalingTooltip": "Si coché, la consommation de ressources supplémentaires augmentera le niveau auquel le sort est lancé.",
-  "DND5E.ConsumableAmmo": "Munitions",
-  "DND5E.ConsumableAmmoArrow": "Flèche",
-  "DND5E.ConsumableAmmoBlowgunNeedle": "Aiguille de sarbacane",
-  "DND5E.ConsumableAmmoCrossbowBolt": "Carreau d'arbalète",
-  "DND5E.ConsumableAmmoSlingBullet": "BIlle de fronde",
-  "DND5E.ConsumableFood": "Nourriture",
-  "DND5E.ConsumablePoison": "Poison",
-  "DND5E.ConsumablePoisonContact": "Contact",
-  "DND5E.ConsumablePoisonIngested": "Ingéré",
-  "DND5E.ConsumablePoisonInhaled": "Inhalé",
-  "DND5E.ConsumablePoisonInjury": "Blessure",
-  "DND5E.ConsumablePotion": "Potion",
-  "DND5E.ConsumableRod": "Bâton",
-  "DND5E.ConsumableScroll": "Parchemin",
-  "DND5E.ConsumableTrinket": "Babiole",
-  "DND5E.ConsumableWand": "Baguette",
+  "DND5E.CONSUMABLE": {
+    "FIELDS": {
+      "damage": {
+        "label": "Ammunition Damage",
+        "replace": {
+          "label": "Replace Weapon Damage",
+          "hint": "Replace base weapon damage with this damage rather than augmenting it."
+        }
+      },
+      "magicalBonus": {
+        "label": "Magical Bonus"
+      },
+      "properties": {
+        "label": "Consumable Properties"
+      },
+      "uses": {
+        "autoDestroy": {
+          "label": "Destroy on Empty",
+          "hint": "Reduce the item's quantity by 1 whenever all of its limited uses are expended."
+        }
+      }
+    },
+    "Category": {
+      "Poison": "Poison"
+    },
+    "Type": {
+      "Ammunition": {
+        "Label": "Ammunition",
+        "Arrow": "Arrow",
+        "Bolt": "Bolt",
+        "BulletFirearm": "Bullet, Firearm",
+        "BulletSling": "Bullet, Sling",
+        "Needle": "Needle"
+      },
+      "Food": {
+        "Label": "Food"
+      },
+      "Poison": {
+        "Label": "Poison",
+        "Contact": "Contact",
+        "Ingested": "Ingested",
+        "Inhaled": "Inhaled",
+        "Injury": "Injury"
+      },
+      "Potion": {
+        "Label": "Potion"
+      },
+      "Rod": {
+        "Label": "Rod"
+      },
+      "Scroll": {
+        "Label": "Scroll"
+      },
+      "Trinket": {
+        "Label": "Trinket"
+      },
+      "Wand": {
+        "Label": "Wand"
+      }
+    }
+  },
   "DND5E.ConsumableUseWarnStart": "Ce consommable a",
   "DND5E.ConsumableUseWarnEnd": "de l'unité actuelle",
   "DND5E.ConsumableUnitWarn": "unités restantes",
@@ -754,6 +856,7 @@
       "consumption": {
         "label": "Consommation",
         "scaling": {
+          "abbr": "Scaling",
           "label": "Consumption Scaling",
           "allowed": {
             "label": "Autoriser la mise à l'échelle",
@@ -796,6 +899,7 @@
       }
     },
     "Action": {
+      "ConsumeResource": "Consume Resource",
       "Create": "Create Consumption Target",
       "Delete": "Delete Consumption Target"
     },
@@ -811,31 +915,42 @@
     "Type": {
       "ActivityUses": {
         "Label": "Activity Uses",
-        "Prompt": "Consume Activity Use?"
+        "Prompt": "Consume Activity Use?",
+        "Warning": "uses on {item}'s activity {activity}"
       },
       "Attribute": {
         "Label": "Attribute",
-        "Prompt": "Consume Attribute?"
+        "Prompt": "Consume Attribute?",
+        "Warning": "{attribute} amount"
       },
       "HitDice": {
         "Label": "Dés de vie",
-        "Prompt": "Consommer des dés de vie ?"
+        "Prompt": "Consommer des dés de vie ?",
+        "Warning": "{denomination} hit dice"
       },
       "ItemUses": {
         "Label": "Item Uses",
-        "Prompt": "Consume Item Use?"
+        "Prompt": "Consume Item Use?",
+        "Warning": "uses on {name}"
       },
       "Material": {
         "Label": "Matériau",
-        "Prompt": "Consommer le matériau ?"
+        "Prompt": "Consommer le matériau ?",
+        "Warning": "of {name}"
       },
       "SpellSlots": {
         "Label": "Emplacements de sort",
-        "Prompt": "Consomme un emplacement de sort ?"
+        "Prompt": "Consomme un emplacement de sort ?",
+        "Warning": "{level} slots"
       }
     },
     "Warning": {
-      "MissingTarget": "L'objet configuré pour être consommé par l'activité {activity} sur {item} n'a pas pu être trouvé."
+      "MissingAttribute": "Attribute {attribute} configured to be consumed by {activity} activity on {item} could not be found.",
+      "MissingHitDice": "Actor does not have a class with a {denomination} hit die.",
+      "MissingItem": "Item configured to be consumed by {activity} activity on {item} could not be found.",
+      "MissingSpellSlot": "No {level} slots available.",
+      "None": "No {type} available to spend, {cost} required.",
+      "NotEnough": "Not enough {type} available to spend, {cost} required and only {available} available."
     }
   },
   "DND5E.Consumed": "Consommé",
@@ -941,7 +1056,7 @@
               "label": "Formule de dégâts personnalisés",
               "enabled": {
                 "label": "Activer la formule personnalisée",
-                "hint": "La formule personnalisée doit-elle être utilisée plutôt que le dé par défaut."
+                "hint": "Use a custom formula rather than the default dice."
               },
               "formula": {
                 "label": "Formule de dégâts",
@@ -960,10 +1075,12 @@
               "label": "Damage Scaling",
               "mode": {
                 "label": "Scaling Mode",
+                "abbr": "Scaling",
                 "hint": "Method by which the scaling increase is calculated."
               },
               "number": {
                 "label": "Dice Scaling",
+                "abbr": "Dice",
                 "hint": "Number of dice to increase for each scaling step. Will be applied to the first die found in the damage formula if more than one is present."
               },
               "formula": {
@@ -1088,7 +1205,12 @@
     "FIELDS": {
       "duration": {
         "label": "Durée",
+        "concentration": {
+          "label": "Concentration",
+          "hint": "Creature must maintain concentration while active."
+        },
         "override": {
+          "label": "Override Duration",
           "hint": "Utilisez ces valeurs de durée au lieu de celles de l'objet lors de l'utilisation de cette activité."
         },
         "special": {
@@ -1118,8 +1240,10 @@
   "DND5E.EFFECT": {
     "Action": {
       "Create": "Créer un effet",
-      "Delete": "Supprimer l'effet"
-    }
+      "Delete": "Supprimer l'effet",
+      "Dissociate": "Dissociate Effect"
+    },
+    "Label": "Available Effects"
   },
   "DND5E.EffectsApplyTokens": "Appliquer aux tokens sélectionnés",
   "DND5E.EffectApplyWarningConcentration": "L'application d'un effet qui est en cours de concentration par un autre personnage nécessite la permission du MJ.",
@@ -1167,6 +1291,14 @@
           "label": "Allow Magical",
           "hint": "Allow items that are already magical to be enchanted."
         },
+        "categories": {
+          "label": "Valid Categories",
+          "hint": "Specific item categories to which this enchantment can be applied."
+        },
+        "properties": {
+          "label": "Valid Properties",
+          "hint": "Specific item properties which must be present for this enchantment to be applied."
+        },
         "type": {
           "label": "Type d'objet",
           "hint": "Type of item to which this enchantment can be applied.",
@@ -1179,12 +1311,21 @@
       "Enchantments": "Enchantements",
       "Restrictions": "Restrictions"
     },
+    "DropArea": "Place item here to enchant it…",
+    "Enchanted": "{current} &sol; {max} enchanted",
     "Enchantment": {
       "Action": {
         "Create": "Créer un enchantement",
         "Delete": "Supprimer l'enchantement"
       },
-      "Empty": "No associated enchantments, use the button below to create one or select an existing enchantment from the control above."
+      "Empty": "No associated enchantments. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing enchantment from the drop-down."
+    },
+    "Warning": {
+      "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
+      "MissingProperty": "Item must have one of these properties to be enchanted: {validProperties}.",
+      "NoMagicalItems": "Items that are already magical cannot be enchanted.",
+      "NoSubtype": "Only {allowedType} items can be enchanted by this enchantment, but this item doesn't have a sub-type.",
+      "WrongType": "{incorrectType} items cannot be enchanted by this enchantment, only {allowedType} items are allowed."
     }
   },
   "DND5E.ENCHANTMENT": {
@@ -1194,17 +1335,12 @@
       "Edit": "Modifier l’enchantement",
       "Enable": "Activer l'enchantement",
       "Remove": "Retirer l'enchantement"
-    }
-  },
-  "DND5E.Enchantment": {
+    },
     "Category": {
       "Active": "Active Enchantments",
       "General": "Enchantments",
       "Inactive": "Inactive Enchantments"
     },
-    "Configuration": "Enchantment Configuration",
-    "DropArea": "Place item here to enchant it…",
-    "Enchanted": "{current} &sol; {max} enchanted",
     "FIELDS": {
       "enchantment": {
         "label": "Enchantment Configuration",
@@ -1220,16 +1356,13 @@
         }
       }
     },
-    "Label": "Enchantment",
     "Items": {
       "Entry": "{item} on <em>{actor}</em>"
     },
+    "Label": "Enchantment",
     "Warning": {
-      "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
-      "NoMagicalItems": "Items that are already magical cannot be enchanted.",
       "NotOnActor": "Enchantments can only be added to items, not directly to actors.",
-      "Override": "This value is being modified by an Enchantment and cannot be edited. Disable the enchantment in the effects tab to edit it.",
-      "WrongType": "{incorrectType} items cannot be enchanted by this enchantment, only {allowedType} items are allowed."
+      "Override": "This value is being modified by an Enchantment and cannot be edited. Disable the enchantment in the effects tab to edit it."
     }
   },
   "DND5E.Environment": "Environnement",
@@ -1248,6 +1381,10 @@
   "DND5E.ExhaustionLevel": "Niveau d'épuisement {n}",
   "DND5E.ExperiencePoints": "Points d'expérience",
   "DND5E.ExperiencePointsAbbr": "PX",
+  "DND5E.ExperiencePointsBoons": {
+    "one": "{number} Boon",
+    "other": "{number} Boons"
+  },
   "DND5E.ExperiencePointsCurrent": "PX actuel",
   "DND5E.ExperiencePointsFormat": "{value} PX",
   "DND5E.ExperiencePointsLabel": "Progression vers le prochain niveau",
@@ -1281,7 +1418,13 @@
       "Rune": "Rune",
       "SuperiorHuntersDefense": "Superior Hunter's Defense"
     },
-    "Feat": "Feat",
+    "Feat": {
+      "Label": "Feat",
+      "EpicBoon": "Epic Boon Feat",
+      "FightingStyle": "Fighting Style Feat",
+      "General": "General Feat",
+      "Origin": "Origin Feat"
+    },
     "Monster": "Monster Feature",
     "Species": "Aptitude d'espèce",
     "SupernaturalGift": {
@@ -1332,7 +1475,6 @@
   "DND5E.ItemRarityVeryRare": "très rare",
   "DND5E.ItemRarityLegendary": "légendaire",
   "DND5E.ItemRarityArtifact": "artefact",
-  "DND5E.ItemNoUses": "{name} ne peut plus être utilisé.",
   "DND5E.Eyes": "Yeux",
   "DND5E.Faith": "Foi",
   "DND5E.FeatureActive": "Aptitudes actives",
@@ -1356,6 +1498,12 @@
   "DND5E.FilterGroupAction": "Grouper par action",
   "DND5E.FilterNoSpells": "Aucun sort n'a été trouvé pour ces filtres.",
   "DND5E.NoSpellLevels": "Ce personnage n'a pas de niveau de lanceur de sorts, mais vous pouvez ajouter des sorts manuellement.",
+  "DND5E.FLAGS": {
+    "EnhancedDualWielding": {
+      "Name": "Enhanced Dual Wielding",
+      "Hint": "Allow bonus action extra attacks using any melee weapon without the Two-Handed property."
+    }
+  },
   "DND5E.FlagsInstructions": "Configurez les aptitudes et les traits raciaux qui personnalisent les personnages.",
   "DND5E.FlagsSave": "Mettre à jour les traits spéciaux",
   "DND5E.FlagsTitle": "Configurer Traits spéciaux",
@@ -1502,7 +1650,6 @@
   "DND5E.HitDiceMax": "Dés de vie maximum",
   "DND5E.HitDiceRemaining": "Dés de vie restants",
   "DND5E.HitDiceRoll": "Lancer les dés de vie",
-  "DND5E.HitDiceUsed": "Dés de vie utilisés",
   "DND5E.HitDiceWarn": "{name} n'a pas de {formula} dés de vie restants !",
   "DND5E.HitDiceNPCWarn": "{nom} n'a plus de dés de vie disponibles !",
   "DND5E.Ideals": "Idéaux",
@@ -1551,8 +1698,6 @@
   "DND5E.ItemCritThreshold": "Seuil de coup critique",
   "DND5E.ItemCritExtraDamage": "Dégâts supplémentaires dus aux coups critiques",
   "DND5E.ItemDelete": "Effacer un Item",
-  "DND5E.ItemDestroyEmpty": "Détruire si vide",
-  "DND5E.ItemDestroyEmptyTooltip": "Si cet objet a un nombre limité d'utilisations, il sera détruit lorsqu'il n'en restera plus.",
   "DND5E.ItemEdit": "Éditer un Item",
   "DND5E.ItemEquipmentAction": "Action de s'équiper",
   "DND5E.ItemEquipmentBase": "Équipement de base",
@@ -1612,7 +1757,7 @@
   "DND5E.ItemRecoveryRoll": "{name} récupère {count} charges",
   "DND5E.ItemLossRoll": "{name} perd {count} charges",
   "DND5E.ItemRecoveryRollMax": "{name} récupère toutes les charges",
-  "DND5E.ItemRecoveryFormulaWarning": "Impossible de récupérer les charges pour {name}. La formule de recharge '{formula}' n'est pas valide.",
+  "DND5E.ItemRecoveryFormulaWarning": "Unable to recover uses for {name}. Invalid recovery formula '{formula}' ({uuid}).",
   "DND5E.ItemRequiredStr": "Force requise",
   "DND5E.ItemSiegeProperties": "Siege Properties",
   "DND5E.ItemSpeciesDetails": "Species Details",
@@ -1650,7 +1795,7 @@
   "DND5E.LanguagesDruidic": "Druidique",
   "DND5E.LanguagesDwarvish": "Nain",
   "DND5E.LanguagesElvish": "Elfique",
-  "DND5E.LanguagesExotic": "Langues exotiques",
+  "DND5E.LanguagesExotic": "Rare Languages",
   "DND5E.LanguagesGiant": "Géant",
   "DND5E.LanguagesGith": "Gith",
   "DND5E.LanguagesGnoll": "Gnoll",
@@ -1748,8 +1893,6 @@
   "DND5E.PassivePerception": "Perception passive",
   "DND5E.Period": "Period",
   "DND5E.PersonalityTraits": "Traits de personnalité",
-  "DND5E.PlaceTemplate": "Gabarit d'effet de zone",
-  "DND5E.PlaceTemplateError": "Impossible de placer le modèle mesuré",
   "DND5E.Polymorph": "Polymorphe",
   "DND5E.PolymorphAcceptSettings": "Paramètres personnalisés",
   "DND5E.PolymorphCustomTransformation": "Transformation personnalisée",
@@ -1904,6 +2047,10 @@
   "DND5E.NewDay": "Nouvelle journée ?",
   "DND5E.NewDayHint": "Récupérer des capacités à usage limité qui se rechargent \"par jour\" ?",
   "DND5E.SAVE": {
+    "Title": {
+      "one": "Save",
+      "other": "Saves"
+    },
     "FIELDS": {
       "damage": {
         "label": "Save Damage",
@@ -1918,6 +2065,12 @@
         "parts": {
           "label": "Damage Parts",
           "hint": "Individual damage parts to include with the roll."
+        }
+      },
+      "effects": {
+        "onSave": {
+          "label": "Always Apply",
+          "hint": "This effect will always be applied, even if the target succeeds on its saving throw."
         }
       },
       "save": {
@@ -2072,6 +2225,7 @@
   "DND5E.SourcePageDisplay": "p. {page}",
   "DND5E.SourceUUID": "Source originale",
   "DND5E.Special": "Spécial",
+  "DND5E.SpecialHint": "Special values separated by semi-colons.",
   "DND5E.SpecialTraits": "Traits spéciaux",
   "DND5E.Species": {
     "Label": "Species",
@@ -2255,7 +2409,7 @@
         },
         "saves": {
           "label": "Match Saves",
-          "hint": "Modify to saving throw DCs on the summoned creature's abilities to match that of the summoner."
+          "hint": "Modify saving throw DCs on the summoned creature's abilities to match that of the summoner."
         }
       },
       "profiles": {
@@ -2266,6 +2420,7 @@
           },
           "cr": {
             "label": "Challenge Rating",
+            "abbr": "CR",
             "hint": "Maximum CR of the summoned creature."
           },
           "level": {
@@ -2314,34 +2469,29 @@
       "Profiles": "Profiles",
       "Summoning": "Summoning"
     },
+    "Action": {
+      "Place": "Place Summons",
+      "Summon": "Summon",
+      "View": "View Summon"
+    },
     "CreatureChanges": {
       "Label": "Creature Changes",
-      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creature's stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
     },
     "ItemChanges": {
       "Label": "Item Changes",
       "Hint": "Changes made to items on the summoned creature."
     },
     "Profile": {
+      "Label": "Summons Profile",
       "Action": {
         "Create": "Create Profile",
         "Delete": "Delete Profile"
       },
+      "ChallengeRatingLabel": "Challenge Rating of {cr} or lower",
       "DropHint": "Drop creature here",
-      "Empty": "Click below to create a profile.",
-      "EmptyDrop": "Click below to create a profile or drop a creature to summon here."
-    }
-  },
-  "DND5E.Summoning": {
-    "Label": "Summoning",
-    "Action": {
-      "Place": "Place Summons",
-      "Summon": "Summon",
-      "View": "View Summon"
-    },
-    "Profile": {
-      "Label": "Summons Profile",
-      "ChallengeRatingLabel": "Challenge Rating of {cr} or lower"
+      "Empty": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile.",
+      "EmptyDrop": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile or drop a creature to summon here."
     },
     "Warning": {
       "CreateActor": "You must have 'Create New Actors' permission in order to summon directly from a compendium.",
@@ -2351,6 +2501,9 @@
       "NoProfile": "Cannot find summoning profile {profileId} on '{item}'.",
       "Wildcard": "You must have 'Use File Browser' permissions to summon creatures with wildcard artwork."
     }
+  },
+  "DND5E.Summoning": {
+    "Label": "Summoning"
   },
   "DND5E.Supply": "Réserve",
   "DND5E.Suppressed": "Supprimé",
@@ -2417,6 +2570,12 @@
           }
         }
       }
+    },
+    "Action": {
+      "PlaceTemplate": "Place Measured Template"
+    },
+    "Warning": {
+      "PlaceTemplate": "Failed to place measured template."
     }
   },
   "DND5E.Target": "Cible",
@@ -2432,7 +2591,7 @@
   "DND5E.TargetEvery": "Every",
   "DND5E.TargetLine": "Ligne",
   "DND5E.TargetObject": "Objet",
-  "DND5E.TargetRadius": "Rayon",
+  "DND5E.TargetRadius": "Emanation",
   "DND5E.TargetSelf": "Soi-même",
   "DND5E.TargetSpace": "Espace",
   "DND5E.TargetSphere": "Sphère",
@@ -2503,6 +2662,7 @@
   "DND5E.ToolPromptTitle": "Jet de {tool}",
   "DND5E.ToolThieves": "Outils de voleur",
   "DND5E.ToolVehicle": "Véhicule (terrestre ou maritime)",
+  "DND5E.TraitAll": "All {category}",
   "DND5E.TraitArmorPlural.one": "Maîtrise des armures",
   "DND5E.TraitArmorPlural.other": "Maîtrise des armures",
   "DND5E.TraitArmorProf": "Maîtrise d'armure",
@@ -2687,12 +2847,40 @@
   "DND5E.WarnCantAddMultipleAdvancements": "Il n'est actuellement pas possible d'ajouter plusieurs objets avec progression à un acteur en même temps. Veuillez les ajouter individuellement.",
   "DND5E.WarnMultipleArmor": "Plus d'une armure équipée, le calcul de la CA peut être incorrect.",
   "DND5E.WarnMultipleShields": "Plus d'un bouclier équipé, le calcul de la CA peut être incorrect.",
+  "DND5E.WEAPON": {
+    "FIELDS": {
+      "ammunition": {
+        "type": {
+          "label": "Ammunition Type"
+        }
+      },
+      "damage": {
+        "hint": "Intrinsic damage dice from the weapon. Ability modifier and additional damage parts will be provided automatically when attacking."
+      },
+      "mastery": {
+        "label": "Mastery",
+        "hint": "Special weapon ability unlocked for characters who have Weapon Mastery or a related feature."
+      }
+    },
+    "Mastery": {
+      "Label": "Weapon Mastery",
+      "Cleave": "Cleave",
+      "Graze": "Graze",
+      "Nick": "Nick",
+      "Push": "Push",
+      "Sap": "Sap",
+      "Slow": "Slow",
+      "Topple": "Topple",
+      "Vex": "Vex"
+    }
+  },
   "DND5E.WeaponCategory": "Arme {category}",
   "DND5E.WeaponImprov": "Improvisée",
   "DND5E.WeaponMartialM": "CàC de guerre",
   "DND5E.WeaponMartialProficiency": "Armes de guerre",
   "DND5E.WeaponMartialR": "À distance de guerre",
   "DND5E.WeaponNatural": "Naturelle",
+  "DND5E.WeaponOtherProficiency": "Other",
   "DND5E.WeaponSiege": "Armes de Siège",
   "DND5E.WeaponSimpleM": "CàC courantes",
   "DND5E.WeaponSimpleProficiency": "Armes courantes",
@@ -2896,8 +3084,6 @@
   "SETTINGS.5eNoAdvancementsL": "Ne demandez pas de choix pour la montée de niveau ou la création de personnage.",
   "SETTINGS.5eNoConcentrationN": "Désactiver le suivi de la concentration",
   "SETTINGS.5eNoConcentrationL": "Désactiver le suivi automatisé de la concentration du système.",
-  "SETTINGS.5eNoExpL": "Supprimer la barre d'expérience des feuilles de personnage.",
-  "SETTINGS.5eNoExpN": "Désactiver le suivi de l'expérience",
   "SETTINGS.5eProfBonus": "PHB: Bonus (+2, +3, +4, +5, +6)",
   "SETTINGS.5eProfDice": "DMG: Dés (1d4, 1d6, 1d8, 1d10, 1d12)",
   "SETTINGS.5eProfL": "Configurer le bonus de maitrise pour utiliser un bonus fixe ou un jet de dé. Le rechargement du monde est nécessaire pour que ce changement prenne effet.",
@@ -2940,9 +3126,22 @@
       "Name": "Compétences par défaut",
       "Hint": "Les compétences par défaut qui apparaissent sur les fiches des PNJ, quel que soit leur niveau de maîtrise."
     },
+    "LEVELING": {
+      "Name": "Leveling Mode",
+      "Hint": "Determine how the players gain new levels.",
+      "NoXP": "Level Advancement without XP",
+      "XP": "Experience Points",
+      "XPBoons": "Experience Points with Epic Boons"
+    },
     "THEME": {
       "Name": "Theme",
       "Hint": "Theme that will apply to the UI and all sheets by default. Automatic will be determined by your browser or operating system settings."
+    },
+    "RULESVERSION": {
+      "Name": "Rules Version",
+      "Hint": "Change handling of various rules between the 2024 and 2014 rule sets.",
+      "Legacy": "Legacy Rules (2014)",
+      "Modern": "Modern Rules (2024)"
     }
   },
   "SHEETS.DND5E": {
