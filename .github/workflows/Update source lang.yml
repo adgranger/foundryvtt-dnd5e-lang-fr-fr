@@ -3,6 +3,8 @@ name: Update en.json from system
 on:
   schedule:
     - cron: '0 0 * * *' # Se déclenche tous les jours à minuit (UTC)
+  workflow_dispatch: # Permet de déclencher manuellement l'action
+
 
 jobs:
   update-en-json:
