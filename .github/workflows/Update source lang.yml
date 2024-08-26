@@ -15,15 +15,22 @@ jobs:
       uses: actions/checkout@v3
       with:
         ref: ${{ github.ref_name }}
+     
+    - name: Clone the target repository
+      run: |
+        git clone https://github.com/foundryvtt/dnd5e.git target-repo
+        cd target-repo
+        git checkout 4.0.x  # Utilisez la branche par défaut ou spécifiez une autre branche si nécessaire
 
-    - name: Download en.json from foundryvtt/dnd5e
-      run: curl -o en.json https://raw.githubusercontent.com/foundryvtt/dnd5e/4.0.x/lang/en.json
-
-    - name: Download packs/_source from foundryvtt/dnd5e
+    - name: Copy files from packs source
       run: |
         mkdir -p en/packs/_source
-        wget -r -np -nH --cut-dirs=3 -P packs/_source --reject "index.html*" https://github.com/foundryvtt/dnd5e/raw/4.0.x/packs/_source/
+        cp -r target-repo/packs/_source/* en/packs/_source
 
+    - name: Copy en.json
+      run: |
+        cp target-repo/lang/en.json en.json
+        
     - name: Commit and push changes
       run: |
         git config --global user.name "GitHub Action"
