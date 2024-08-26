@@ -23,6 +23,10 @@ jobs:
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git add en.json
-        git commit -m "Update en.json from foundryvtt/dnd5e"
-        git push origin ${{ github.ref_name }}
+        if [ -n "$(git status --porcelain)" ]; then
+          git add en.json
+          git commit -m "Update en.json from foundryvtt/dnd5e"
+          git push origin ${{ github.ref_name }}
+        else
+          echo "No changes to commit"
+        fi
