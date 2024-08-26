@@ -1,0 +1,26 @@
+name: Update en.json from system
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Se déclenche tous les jours à minuit (UTC)
+
+jobs:
+  update-en-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: 4.0.x
+
+    - name: Download en.json from foundryvtt/dnd5e
+      run: curl -o lang/en.json https://raw.githubusercontent.com/foundryvtt/dnd5e/4.0.x/lang/en.json
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add lang/en.json
+        git commit -m "Update en.json from foundryvtt/dnd5e"
+        git push origin 4.0.x
