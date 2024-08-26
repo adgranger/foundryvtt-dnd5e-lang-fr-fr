@@ -155,7 +155,7 @@
           "hint": "Utilisez ces valeurs d'activation au lieu de celles de l'objet lorsque vous utilisez cette activité."
         },
         "type": {
-          "label": "Activation Cost",
+          "label": "Activation Type",
           "hint": "Type d'activation (ex : action, action légendaire, minutes)."
         },
         "value": {
@@ -867,6 +867,10 @@
             "hint": "Maximum number of scaling levels for this item, including the base level."
           }
         },
+        "spellSlot": {
+          "label": "Consume Spell Slot",
+          "hint": "Should using this activity consume a slot for this spell?"
+        },
         "targets": {
           "label": "Consumption Targets",
           "hint": "Targets of possible consumption when this activity is activated.",
@@ -915,33 +919,63 @@
     "Type": {
       "ActivityUses": {
         "Label": "Activity Uses",
-        "Prompt": "Consume Activity Use?",
+        "PromptDecrease": "Consume Activity Use?",
+        "PromptIncrease": "Restore Activity Use?",
+        "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of this activity.",
+        "PromptHintIncrease": "Recover <strong>{cost}</strong> {use} of this activity.",
         "Warning": "uses on {item}'s activity {activity}"
       },
       "Attribute": {
         "Label": "Attribute",
-        "Prompt": "Consume Attribute?",
+        "PromptDecrease": "Consume Attribute?",
+        "PromptIncrease": "Restore Attribute?",
+        "PromptHintDecrease": "Decrease <code>{attribute}</code> by <strong>{cost}</strong>.",
+        "PromptHintIncrease": "Increase <code>{attribute}</code> by <strong>{cost}</strong>.",
         "Warning": "{attribute} amount"
       },
       "HitDice": {
         "Label": "Dés de vie",
-        "Prompt": "Consommer des dés de vie ?",
+        "PromptDecrease": "Consume Hit Die?",
+        "PromptIncrease": "Restore Hit Die?",
+        "PromptHintDecrease": "Spend <strong>{cost}</strong> {denomination} {die}.",
+        "PromptHintIncrease": "Recover <strong>{cost}</strong> {denomination} {die}.",
         "Warning": "{denomination} hit dice"
+      },
+      "HitDie": {
+        "one": "hit die",
+        "other": "hit dice"
       },
       "ItemUses": {
         "Label": "Item Uses",
-        "Prompt": "Consume Item Use?",
+        "PromptDecrease": "Consume Item Use?",
+        "PromptIncrease": "Restore Item Use?",
+        "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of {item}.",
+        "PromptHintIncrease": "Recover <strong>{cost}</strong> {use} of {item}.",
         "Warning": "uses on {name}"
       },
       "Material": {
         "Label": "Matériau",
-        "Prompt": "Consommer le matériau ?",
+        "PromptDecrease": "Consume Material?",
+        "PromptIncrease": "Restore Material?",
+        "PromptHintDecrease": "Reduce quantity of {item} by <strong>{cost}</strong>.",
+        "PromptHintIncrease": "Increase quantity of {item} by <strong>{cost}</strong>.",
         "Warning": "of {name}"
+      },
+      "SpellSlot": {
+        "one": "{level} slot",
+        "other": "{level} slots"
       },
       "SpellSlots": {
         "Label": "Emplacements de sort",
-        "Prompt": "Consomme un emplacement de sort ?",
+        "PromptDecrease": "Consume Spell Slot?",
+        "PromptIncrease": "Restore Spell Slot?",
+        "PromptHintDecrease": "Spend <strong>{cost}</strong> {slot}.",
+        "PromptHintIncrease": "Recover <strong>{cost}</strong> {slot}.",
         "Warning": "{level} slots"
+      },
+      "Use": {
+        "one": "use",
+        "other": "uses"
       }
     },
     "Warning": {
@@ -1056,7 +1090,7 @@
               "label": "Formule de dégâts personnalisés",
               "enabled": {
                 "label": "Activer la formule personnalisée",
-                "hint": "Use a custom formula rather than the default dice."
+                "hint": "Should the custom formula be used rather than the default dice."
               },
               "formula": {
                 "label": "Formule de dégâts",
@@ -1318,7 +1352,7 @@
         "Create": "Créer un enchantement",
         "Delete": "Supprimer l'enchantement"
       },
-      "Empty": "No associated enchantments. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing enchantment from the drop-down."
+      "Empty": "No associated enchantments, use the button below to create one or select an existing enchantment from the control above."
     },
     "Warning": {
       "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
@@ -2409,7 +2443,7 @@
         },
         "saves": {
           "label": "Match Saves",
-          "hint": "Modify saving throw DCs on the summoned creature's abilities to match that of the summoner."
+          "hint": "Modify to saving throw DCs on the summoned creature's abilities to match that of the summoner."
         }
       },
       "profiles": {
@@ -2476,7 +2510,7 @@
     },
     "CreatureChanges": {
       "Label": "Creature Changes",
-      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creature's stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
     },
     "ItemChanges": {
       "Label": "Item Changes",
@@ -2490,8 +2524,8 @@
       },
       "ChallengeRatingLabel": "Challenge Rating of {cr} or lower",
       "DropHint": "Drop creature here",
-      "Empty": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile.",
-      "EmptyDrop": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile or drop a creature to summon here."
+      "Empty": "Click below to create a profile.",
+      "EmptyDrop": "Click below to create a profile or drop a creature to summon here."
     },
     "Warning": {
       "CreateActor": "You must have 'Create New Actors' permission in order to summon directly from a compendium.",
@@ -2591,7 +2625,7 @@
   "DND5E.TargetEvery": "Every",
   "DND5E.TargetLine": "Ligne",
   "DND5E.TargetObject": "Objet",
-  "DND5E.TargetRadius": "Rayon",
+  "DND5E.TargetRadius": "Radius",
   "DND5E.TargetSelf": "Soi-même",
   "DND5E.TargetSpace": "Espace",
   "DND5E.TargetSphere": "Sphère",
