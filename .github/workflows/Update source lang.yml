@@ -19,13 +19,18 @@ jobs:
     - name: Download en.json from foundryvtt/dnd5e
       run: curl -o en.json https://raw.githubusercontent.com/foundryvtt/dnd5e/4.0.x/lang/en.json
 
+    - name: Download packs/_source from foundryvtt/dnd5e
+      run: |
+        mkdir -p en/packs/_source
+        wget -r -np -nH --cut-dirs=3 -P packs/_source --reject "index.html*" https://github.com/foundryvtt/dnd5e/raw/4.0.x/packs/_source/
+
     - name: Commit and push changes
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
         if [ -n "$(git status --porcelain)" ]; then
-          git add en.json
-          git commit -m "Update en.json from foundryvtt/dnd5e"
+          git add en.json en/packs/_source
+          git commit -m "Update en.json and packs/_source from foundryvtt/dnd5e"
           git push origin ${{ github.ref_name }}
         else
           echo "No changes to commit"
