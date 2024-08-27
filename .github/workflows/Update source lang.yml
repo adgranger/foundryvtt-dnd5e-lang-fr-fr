@@ -21,7 +21,7 @@ jobs:
       run: |
         git clone https://github.com/foundryvtt/dnd5e.git target-repo
         cd target-repo
-        git checkout 4.0.x  # Utilisez la branche par défaut ou spécifiez une autre branche si nécessaire
+        git checkout ${{ github.ref_name }} 
 
     - name: Copy files from packs source
       run: |
