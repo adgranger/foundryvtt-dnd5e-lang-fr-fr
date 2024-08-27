@@ -155,7 +155,7 @@
           "hint": "Utilisez ces valeurs d'activation au lieu de celles de l'objet lorsque vous utilisez cette activité."
         },
         "type": {
-          "label": "Activation Cost",
+          "label": "Activation Type",
           "hint": "Type d'activation (ex : action, action légendaire, minutes)."
         },
         "value": {
@@ -885,7 +885,7 @@
             },
             "value": {
               "label": "Consumption Amount",
-              "hint": "Enter a negative value to restore rather than consume."
+              "hint": "Amount to consume of the target."
             },
             "scaling": {
               "label": "Consumption Scaling",
@@ -1071,11 +1071,11 @@
         "critical": {
           "allow": {
             "label": "Autoriser les critiques",
-            "hint": "Should the creature be able to roll critical damage?"
+            "hint": "Should the use be able to roll critical damage?"
           },
           "bonus": {
             "label": "Extra Critical Damage",
-            "hint": "Extra damage applied to the first damage part when a critical is rolled."
+            "hint": "Extra damage applied when a critical is rolled. Added to the first damage part."
           }
         },
         "parts": {
@@ -1090,7 +1090,7 @@
               "label": "Formule de dégâts personnalisés",
               "enabled": {
                 "label": "Activer la formule personnalisée",
-                "hint": "Use a custom formula rather than the default dice."
+                "hint": "Should the custom formula be used rather than the default dice."
               },
               "formula": {
                 "label": "Formule de dégâts",
@@ -1352,7 +1352,7 @@
         "Create": "Créer un enchantement",
         "Delete": "Supprimer l'enchantement"
       },
-      "Empty": "No associated enchantments. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing enchantment from the drop-down."
+      "Empty": "No associated enchantments, use the button below to create one or select an existing enchantment from the control above."
     },
     "Warning": {
       "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
@@ -2443,7 +2443,7 @@
         },
         "saves": {
           "label": "Match Saves",
-          "hint": "Modify saving throw DCs on the summoned creature's abilities to match that of the summoner."
+          "hint": "Modify to saving throw DCs on the summoned creature's abilities to match that of the summoner."
         }
       },
       "profiles": {
@@ -2510,7 +2510,7 @@
     },
     "CreatureChanges": {
       "Label": "Creature Changes",
-      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creature's stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
     },
     "ItemChanges": {
       "Label": "Item Changes",
@@ -2524,8 +2524,8 @@
       },
       "ChallengeRatingLabel": "Challenge Rating of {cr} or lower",
       "DropHint": "Drop creature here",
-      "Empty": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile.",
-      "EmptyDrop": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile or drop a creature to summon here."
+      "Empty": "Click below to create a profile.",
+      "EmptyDrop": "Click below to create a profile or drop a creature to summon here."
     },
     "Warning": {
       "CreateActor": "You must have 'Create New Actors' permission in order to summon directly from a compendium.",
@@ -2625,7 +2625,7 @@
   "DND5E.TargetEvery": "Every",
   "DND5E.TargetLine": "Ligne",
   "DND5E.TargetObject": "Objet",
-  "DND5E.TargetRadius": "Emanation",
+  "DND5E.TargetRadius": "Radius",
   "DND5E.TargetSelf": "Soi-même",
   "DND5E.TargetSpace": "Espace",
   "DND5E.TargetSphere": "Sphère",
