@@ -58,7 +58,7 @@
   "TYPES.Item.loot": "Butin",
   "TYPES.Item.lootPl": "Butin",
   "TYPES.Item.race": "Race",
-  "TYPES.Item.racePl": "Races",
+  "TYPES.Item.racePl": "Espèces",
   "TYPES.Item.spell": "Sort",
   "TYPES.Item.spellPl": "Sorts",
   "TYPES.Item.subclass": "Sous-classe",
@@ -155,7 +155,7 @@
           "hint": "Utilisez ces valeurs d'activation au lieu de celles de l'objet lorsque vous utilisez cette activité."
         },
         "type": {
-          "label": "Type d'activation",
+          "label": "Activation Cost",
           "hint": "Type d'activation (ex : action, action légendaire, minutes)."
         },
         "value": {
@@ -507,14 +507,14 @@
     },
     "Mode": {
       "Label": "Attack Mode",
-      "Offhand": "Offhand",
-      "OneHanded": "One-Handed",
-      "Thrown": "Thrown",
-      "TwoHanded": "Two-Handed"
+      "Offhand": "Main secondaire",
+      "OneHanded": "À une main",
+      "Thrown": "Lancer",
+      "TwoHanded": "À deux mains"
     },
     "Type": {
       "Melee": "Corps-à-corps",
-      "Ranged": "Ranged"
+      "Ranged": "À distance"
     }
   },
   "DND5E.Attack": "Attaque",
@@ -522,15 +522,15 @@
   "DND5E.AttackRoll": "Jet d'attaque",
   "DND5E.Attributes": "Caractéristiques",
   "DND5E.AttrConcentration": {
-    "Limit": "Limit"
+    "Limit": "Limite"
   },
   "DND5E.Automatic": "Automatique",
   "DND5E.AutomaticValue": "Automatique ({value})",
   "DND5E.Award": {
-    "Title": "Distribute Award",
-    "Action": "Award",
+    "Title": "Distribuer les récompenses",
+    "Action": "Récompense",
     "Distribution": {
-      "Split": "Split",
+      "Split": "Répartir",
       "Each": "Each"
     },
     "Message": "{name} has been awarded {award}.",
@@ -616,12 +616,12 @@
         }
       }
     },
-    "ThisTool": "This Tool"
+    "ThisTool": "Cet outil"
   },
   "DND5E.CheckBonus": "Jets bonus",
   "DND5E.CLASS": {
     "Multiclass": {
-      "Title": "Multiclassing"
+      "Title": "Multiclassage"
     },
     "FIELDS": {
       "hitDice": {
@@ -631,7 +631,7 @@
         "label": "Spent Hit Dice"
       },
       "levels": {
-        "label": "Class Levels"
+        "label": "Niveaux de classe"
       },
       "primaryAbility": {
         "all": {
@@ -788,14 +788,14 @@
   "DND5E.CONSUMABLE": {
     "FIELDS": {
       "damage": {
-        "label": "Ammunition Damage",
+        "label": "Dégâts de munitions",
         "replace": {
-          "label": "Replace Weapon Damage",
-          "hint": "Replace base weapon damage with this damage rather than augmenting it."
+          "label": "Remplacer les dégâts de l'arme",
+          "hint": "Remplacez les dégâts de base de l'arme avec ces dégâts plutôt que de les augmenter."
         }
       },
       "magicalBonus": {
-        "label": "Magical Bonus"
+        "label": "Bonus magique"
       },
       "properties": {
         "label": "Consumable Properties"
@@ -885,7 +885,7 @@
             },
             "value": {
               "label": "Consumption Amount",
-              "hint": "Amount to consume of the target."
+              "hint": "Entrez une valeur négative pour restaurer plutôt que consommer."
             },
             "scaling": {
               "label": "Consumption Scaling",
@@ -1071,11 +1071,11 @@
         "critical": {
           "allow": {
             "label": "Autoriser les critiques",
-            "hint": "Should the use be able to roll critical damage?"
+            "hint": "La créature est-elle en mesure d'effectuer des dégâts critiques ?"
           },
           "bonus": {
             "label": "Extra Critical Damage",
-            "hint": "Extra damage applied when a critical is rolled. Added to the first damage part."
+            "hint": "Extra damage applied to the first damage part when a critical is rolled."
           }
         },
         "parts": {
@@ -1090,7 +1090,7 @@
               "label": "Formule de dégâts personnalisés",
               "enabled": {
                 "label": "Activer la formule personnalisée",
-                "hint": "Should the custom formula be used rather than the default dice."
+                "hint": "Utiliser une formule personnalisée plutôt que la formule par défaut."
               },
               "formula": {
                 "label": "Formule de dégâts",
@@ -1209,7 +1209,7 @@
   "DND5E.Default": "Par défaut",
   "DND5E.DefaultSpecific": "Par défaut ({default})",
   "DND5E.DefaultAbilityCheck": "Jet de carac. par défaut",
-  "DND5E.Denomination": "Denomination",
+  "DND5E.Denomination": "Dénomination",
   "DND5E.Description": "Description",
   "DND5E.DescriptionChat": "Description du tchat",
   "DND5E.DescriptionEdit": "Modifier {description}",
@@ -1302,11 +1302,11 @@
             "label": "Attached",
             "effect": {
               "label": "Effets supplémentaires",
-              "hint": "These additional effects will be added to the enchanted item when this enchantment is added, and removed when the enchantment is removed."
+              "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement sera ajouté, et retirés lorsque l'enchantement sera supprimé."
             },
             "item": {
-              "label": "Additional Items",
-              "hint": "These additional items will be added to the creature when one of its items is enchanted, and will be removed if the enchantment is ever removed."
+              "label": "Objets supplémentaires",
+              "hint": "Ces objets supplémentaires seront ajoutés à la créature quand l'un de ses objets est enchanté, et sera retiré si l'enchantement est déjà enlevé."
             }
           }
         }
@@ -1320,7 +1320,7 @@
       },
       "restrictions": {
         "label": "Restrictions",
-        "hint": "Restrictions on the type of item to which this enchantment can be applied.",
+        "hint": "Restrictions sur le type d'objet auquel cet enchantement peut être appliqué.",
         "allowMagical": {
           "label": "Allow Magical",
           "hint": "Allow items that are already magical to be enchanted."
@@ -1345,21 +1345,21 @@
       "Enchantments": "Enchantements",
       "Restrictions": "Restrictions"
     },
-    "DropArea": "Place item here to enchant it…",
+    "DropArea": "Placez un objet ici pour l'enchanter…",
     "Enchanted": "{current} &sol; {max} enchanted",
     "Enchantment": {
       "Action": {
         "Create": "Créer un enchantement",
         "Delete": "Supprimer l'enchantement"
       },
-      "Empty": "No associated enchantments, use the button below to create one or select an existing enchantment from the control above."
+      "Empty": "Aucun enchantement associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un enchantement existant dans la liste déroulante."
     },
     "Warning": {
       "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
-      "MissingProperty": "Item must have one of these properties to be enchanted: {validProperties}.",
-      "NoMagicalItems": "Items that are already magical cannot be enchanted.",
-      "NoSubtype": "Only {allowedType} items can be enchanted by this enchantment, but this item doesn't have a sub-type.",
-      "WrongType": "{incorrectType} items cannot be enchanted by this enchantment, only {allowedType} items are allowed."
+      "MissingProperty": "L'objet doit avoir l'une de ces propriétés pour être enchanté : {validProperties}.",
+      "NoMagicalItems": "Les objets qui sont déjà magiques ne peuvent pas être enchantés.",
+      "NoSubtype": "Seuls les objets {allowedType} peuvent être enchantés par cet enchantement, mais cet objet n'a pas de sous-type.",
+      "WrongType": "Les objets {incorrectType} ne peuvent pas être enchantés par cet enchantement, seuls les objets {allowedType} sont autorisés."
     }
   },
   "DND5E.ENCHANTMENT": {
@@ -1371,13 +1371,13 @@
       "Remove": "Retirer l'enchantement"
     },
     "Category": {
-      "Active": "Active Enchantments",
-      "General": "Enchantments",
-      "Inactive": "Inactive Enchantments"
+      "Active": "Enchantements actifs",
+      "General": "Enchantements",
+      "Inactive": "Enchantements inactifs"
     },
     "FIELDS": {
       "enchantment": {
-        "label": "Enchantment Configuration",
+        "label": "Configuration de l'enchantement",
         "items": {
           "max": {
             "label": "Item Limit",
@@ -1393,7 +1393,7 @@
     "Items": {
       "Entry": "{item} on <em>{actor}</em>"
     },
-    "Label": "Enchantment",
+    "Label": "Enchantement",
     "Warning": {
       "NotOnActor": "Enchantments can only be added to items, not directly to actors.",
       "Override": "This value is being modified by an Enchantment and cannot be edited. Disable the enchantment in the effects tab to edit it."
@@ -1760,7 +1760,7 @@
     },
     "Property": {
       "Adamantine": "Adamantine",
-      "Ammunition": "Ammunition",
+      "Ammunition": "Munition",
       "Concentration": "Concentration",
       "Finesse": "Finesse",
       "Firearm": "Firearm",
@@ -2262,10 +2262,10 @@
   "DND5E.SpecialHint": "Special values separated by semi-colons.",
   "DND5E.SpecialTraits": "Traits spéciaux",
   "DND5E.Species": {
-    "Label": "Species",
+    "Label": "Espèce",
     "Add": "Add Species",
-    "Features": "Species Features",
-    "Name": "Species Name"
+    "Features": "Aptitudes d'espèces",
+    "Name": "Nom de l'espèce"
   },
   "DND5E.Speed": "Vitesse",
   "DND5E.SpeedConditions": "Conditions de vitesse",
@@ -2443,7 +2443,7 @@
         },
         "saves": {
           "label": "Match Saves",
-          "hint": "Modify to saving throw DCs on the summoned creature's abilities to match that of the summoner."
+          "hint": "Modify saving throw DCs on the summoned creature's abilities to match that of the summoner."
         }
       },
       "profiles": {
@@ -2461,10 +2461,10 @@
             "label": "Level Limit",
             "hint": "Range of levels required to use this profile.",
             "max": {
-              "label": "Maximum Level"
+              "label": "Niveau maximum"
             },
             "min": {
-              "label": "Minimum Level"
+              "label": "Niveau minimum"
             }
           },
           "name": {
@@ -2510,7 +2510,7 @@
     },
     "CreatureChanges": {
       "Label": "Creature Changes",
-      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creature's stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
     },
     "ItemChanges": {
       "Label": "Item Changes",
@@ -2524,8 +2524,8 @@
       },
       "ChallengeRatingLabel": "Challenge Rating of {cr} or lower",
       "DropHint": "Drop creature here",
-      "Empty": "Click below to create a profile.",
-      "EmptyDrop": "Click below to create a profile or drop a creature to summon here."
+      "Empty": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile.",
+      "EmptyDrop": "Click the <i class=\"fas fa-plus\"></i> button above to create a profile or drop a creature to summon here."
     },
     "Warning": {
       "CreateActor": "You must have 'Create New Actors' permission in order to summon directly from a compendium.",
@@ -2625,7 +2625,7 @@
   "DND5E.TargetEvery": "Every",
   "DND5E.TargetLine": "Ligne",
   "DND5E.TargetObject": "Objet",
-  "DND5E.TargetRadius": "Radius",
+  "DND5E.TargetRadius": "Emanation",
   "DND5E.TargetSelf": "Soi-même",
   "DND5E.TargetSpace": "Espace",
   "DND5E.TargetSphere": "Sphère",
