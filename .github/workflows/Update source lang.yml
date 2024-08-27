@@ -9,6 +9,7 @@ on:
 jobs:
   update-en-json:
     runs-on: ubuntu-latest
+    if: github.ref_name != 'master' # Exécute ce job uniquement si la branche n'est pas master
 
     steps:
     - name: Checkout repository
