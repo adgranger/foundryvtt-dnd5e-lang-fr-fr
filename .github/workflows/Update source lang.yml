@@ -31,6 +31,10 @@ jobs:
     - name: Copy en.json
       run: |
         cp target-repo/lang/en.json en.json
+    
+    - name: Remove target-repo directory
+      run: |
+        rm -rf target-repo/
         
     - name: Commit and push changes
       run: |
