@@ -17,8 +17,8 @@
   "TYPES.Actor.vehiclePl": "Véhicules",
   "TYPES.Actor.group": "Groupe",
   "TYPES.Actor.groupPl": "Groupes",
-  "TYPES.ActiveEffect.enchantment": "Enchantment",
-  "TYPES.ActiveEffect.enchantmentPl": "Enchantments",
+  "TYPES.ActiveEffect.enchantment": "Enchantement",
+  "TYPES.ActiveEffect.enchantmentPl": "Enchantements",
   "ITEM.TypeBackground": "Historique",
   "ITEM.TypeBackgroundPl": "Historiques",
   "ITEM.TypeContainer": "Conteneur",
@@ -33,8 +33,8 @@
   "ITEM.TypeFeaturePl": "Aptitudes",
   "ITEM.TypeLoot": "Trésor",
   "ITEM.TypeLootPl": "Butin",
-  "ITEM.TypeRace": "Species",
-  "ITEM.TypeRacePl": "Species",
+  "ITEM.TypeRace": "Espèces",
+  "ITEM.TypeRacePl": "Races",
   "ITEM.TypeSpell": "Sort",
   "ITEM.TypeSpellPl": "Sorts",
   "ITEM.TypeSubclass": "Sous-classe",
@@ -57,8 +57,8 @@
   "TYPES.Item.featurePl": "Aptitudes",
   "TYPES.Item.loot": "Butin",
   "TYPES.Item.lootPl": "Butin",
-  "TYPES.Item.race": "Species",
-  "TYPES.Item.racePl": "Species",
+  "TYPES.Item.race": "Espèces",
+  "TYPES.Item.racePl": "Espèces",
   "TYPES.Item.spell": "Sort",
   "TYPES.Item.spellPl": "Sorts",
   "TYPES.Item.subclass": "Sous-classe",
@@ -147,11 +147,11 @@
       "activation": {
         "label": "Activation",
         "condition": {
-          "label": "Activation Condition",
+          "label": "Condition d'activation",
           "hint": "Condition required to activate this activity."
         },
         "override": {
-          "label": "Override Activation",
+          "label": "Surcharger l'activation",
           "hint": "Use these activation values instead of the item's when using this activity."
         },
         "type": {
@@ -167,8 +167,8 @@
     "Category": {
       "Standard": "Standard",
       "Time": "Time",
-      "Monster": "Monster",
-      "Vehicle": "Vehicle"
+      "Monster": "Monstre",
+      "Vehicle": "Véhicule"
     }
   },
   "DND5E.ACTIVITY": {
@@ -189,13 +189,13 @@
         }
       },
       "effects": {
-        "label": "Applied Effects"
+        "label": "Effets appliqués"
       },
       "img": {
-        "label": "Icon"
+        "label": "Icône"
       },
       "name": {
-        "label": "Name"
+        "label": "Nom"
       }
     },
     "SECTIONS": {
@@ -219,30 +219,30 @@
       "Title": "Ability Score Improvement",
       "Hint": "Allow the player to increase one or more ability scores or take an optional feat.",
       "CapDisplay": {
-        "one": "Max {points} point per score",
-        "other": "Max {points} points per score"
+        "one": "{points} point max par score",
+        "other": "{points} points max par score"
       },
       "Feat": {
-        "Hint": "Drop a feat here to choose one instead of an ability score improvement."
+        "Hint": "Déposez un don ici pour en choisir un au lieu d'une amélioration de score de caractéristique."
       },
       "FIELDS": {
         "cap": {
-          "label": "Point Cap",
-          "hint": "Maximum number of points a player can assign to a single score."
+          "label": "Limite de point",
+          "hint": "Nombre maximum de points qu'un joueur peut assigner à un seul score."
         },
         "locked": {
-          "label": "Locked",
-          "hint": "Ability cannot be improved."
+          "label": "Verrouillé",
+          "hint": "La caractéristique ne peut pas être améliorée."
         },
         "fixed": {
-          "label": "Fixed Improvement",
-          "hint": "Abilities that are improved by a fixed amount and cannot be manually improved during the process."
+          "label": "Amélioration fixe",
+          "hint": "Les caractéristiques qui sont améliorées par un montant fixe et ne peuvent pas être améliorées manuellement pendant le processus."
         },
         "points": {
           "label": "Points",
-          "hint": "Number of points that can be assigned to any unlocked ability score.",
-          "decrease": "Decrease Points",
-          "increase": "Increase Points"
+          "hint": "Nombre de points qui peuvent être assignés à n'importe quel score de caractéristique débloqué.",
+          "decrease": "Diminuer les points",
+          "increase": "Augmenter les points"
         }
       },
       "LockedHint": "Scores cannot be modified with a feat selected.",
@@ -473,8 +473,8 @@
         "type": {
           "label": "Attack Type",
           "value": {
-            "label": "Attack Type",
-            "hint": "Is this a melee or ranged attack?"
+            "label": "Type d'attaque",
+            "hint": "Est-ce une attaque au corps à corps ou à distance ?"
           },
           "classification": {
             "label": "Attack Classification",
@@ -483,7 +483,7 @@
         }
       },
       "damage": {
-        "label": "Attack Damage",
+        "label": "Dégâts d'attaque",
         "critical": {
           "bonus": {
             "label": "Extra Critical Damage",
@@ -501,13 +501,13 @@
       }
     },
     "Classification": {
-      "Spell": "Spell",
-      "Unarmed": "Unarmed",
-      "Weapon": "Weapon"
+      "Spell": "Sort",
+      "Unarmed": "Mains nues",
+      "Weapon": "Arme"
     },
     "Mode": {
       "Label": "Attack Mode",
-      "Offhand": "Offhand",
+      "Offhand": "Main secondaire",
       "OneHanded": "One-Handed",
       "Thrown": "Thrown",
       "TwoHanded": "Two-Handed"
