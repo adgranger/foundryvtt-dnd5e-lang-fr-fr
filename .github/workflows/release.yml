@@ -25,6 +25,7 @@ jobs:
         manifest: https://github.com/${{github.repository}}/releases/latest/download/module.json
         download: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/dnd5e_fr-FR.zip
         url: https://github.com/${{github.repository}}
+        changelog: https://github.com/${{github.repository}}/releases/tag/${{github.event.release.tag_name}}
 
     # Create a zip file with all files required by the module to add to the release
     - name: Create archive
