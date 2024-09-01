@@ -254,6 +254,11 @@
         "Level": "Must be at least level {level} to take this feat.",
         "Type": "Only features with the \"feat\" type can be selected."
       }
+    },
+    "Subclass": {
+      "Title": "Subclass",
+      "Hint": "Specify what level this class receives its subclass.",
+      "FlowHint": "Select a subclass in the Features tab after level up has completed."
     }
   },
   "DND5E.AdvancementChoices": "choix",
@@ -385,6 +390,8 @@
   "DND5E.AdvancementTraitModeExpertiseHint": "Acquérir une expertise dans un trait pour lequel vous avez déjà une compétence.",
   "DND5E.AdvancementTraitModeForceLabel": "Expertise forcée",
   "DND5E.AdvancementTraitModeForceHint": "Acquérir une expertise dans un trait indépendamment de votre niveau de compétence antérieur.",
+  "DND5E.AdvancementTraitModeMasteryLabel": "Mastery",
+  "DND5E.AdvancementTraitModeMasteryHint": "Gain mastery with a weapon in which you already have proficiency.",
   "DND5E.AdvancementTraitModeUpgradeLabel": "Mise à niveau",
   "DND5E.AdvancementTraitModeUpgradeHint": "Acquérir une compétence dans un trait sauf si vous l'avez déjà, sinon acquérir une expertise.",
   "DND5E.AdvancementTraitType": "Trait",
@@ -575,9 +582,13 @@
   "DND5E.Conditions": "Conditions",
   "DND5E.Controls": {
     "Hint": "Activer divers indices dans l'interface utilisateur pour certaines commandes à la souris et au clavier.",
+    "LeftClick": "Left Click",
     "LockHint": "Verrouiller avec un clic central",
     "MiddleClick": "Clic central",
-    "Name": "Activer les conseils de contrôle"
+    "Name": "Activer les conseils de contrôle",
+    "Activity": {
+      "FastForwardHint": "<kbd>Shift</kbd> + <left-click> the item to skip this dialog"
+    }
   },
   "DND5E.ChallengeRating": "Indice de Dangerosité",
   "DND5E.Charged": "Chargé",
@@ -1107,9 +1118,10 @@
             },
             "scaling": {
               "label": "Damage Scaling",
+              "abbr": "Scaling",
               "mode": {
                 "label": "Scaling Mode",
-                "abbr": "Scaling",
+                "abbr": "Mode",
                 "hint": "Method by which the scaling increase is calculated."
               },
               "number": {
@@ -1277,6 +1289,7 @@
       "Delete": "Delete Effect",
       "Dissociate": "Dissociate Effect"
     },
+    "Empty": "No associated effects. Use the <i class=\"fas fa-plus\"></i> button above to create one, or select an existing effect from the drop-down.",
     "Label": "Available Effects"
   },
   "DND5E.EffectsApplyTokens": "Appliquer aux tokens sélectionnés",
@@ -1929,6 +1942,7 @@
   "DND5E.PersonalityTraits": "Traits de personnalité",
   "DND5E.Polymorph": "Polymorphe",
   "DND5E.PolymorphAcceptSettings": "Paramètres personnalisés",
+  "DND5E.PolymorphAddTemp": "Add the target's HP as temporary HP",
   "DND5E.PolymorphCustomTransformation": "Transformation personnalisée",
   "DND5E.PolymorphEffectTransformation": "Transformation et Effet",
   "DND5E.PolymorphKeepAE": "Conserver tous les effets (prévaut sur les autres options de conservation des effets).",
@@ -1939,6 +1953,7 @@
   "DND5E.PolymorphKeepEquipmentAE": "Conserver les effets qui proviennent de votre équipement ?",
   "DND5E.PolymorphKeepFeats": "Conserver les aptitudes",
   "DND5E.PolymorphKeepFeatureAE": "Conserver les effets qui proviennent de vos aptitudes ?",
+  "DND5E.PolymorphKeepHP": "Keep HP & HD",
   "DND5E.PolymorphKeepItems": "Conserver l'équipement",
   "DND5E.PolymorphKeepMental": "Conserver les caractéristiques mentales (INT, SAG, CHA)",
   "DND5E.PolymorphKeepOriginAE": "Conserver les effets qui proviennent de cet acteur (c'est-à-dire les effets qui ne sont pas liés à des aptitudes, des objets, des sorts).",
@@ -1949,6 +1964,7 @@
   "DND5E.PolymorphKeepSkills": "Conserver les compétences",
   "DND5E.PolymorphKeepSpellAE": "Conserver les effets qui proviennent de vos sorts ?",
   "DND5E.PolymorphKeepSpells": "Conserver les sorts",
+  "DND5E.PolymorphKeepType": "Keep creature type",
   "DND5E.PolymorphKeepVision": "Conserver la vision (personnage et token)",
   "DND5E.PolymorphMergeSaves": "Fusionner les jets de sauvegarde (prendre le plus élevé)",
   "DND5E.PolymorphMergeSkills": "Fusionner les compétences (prendre la plus élevée)",
@@ -2091,7 +2107,6 @@
         "onSave": {
           "label": "Damage on Save",
           "hint": "How much damage should be applied on a successful save?",
-          "Flavor": "<strong>On Save</strong> {amount}",
           "Full": "Tous les dégâts",
           "Half": "Moitié des dégâts",
           "None": "Aucun dégât"
@@ -2127,7 +2142,8 @@
           "DefaultFormula": "8 + @mod + @prof"
         }
       }
-    }
+    },
+    "OnSave": "On Save"
   },
   "DND5E.SaveBonus": "Bonus aux jets de sauvegarde",
   "DND5E.SaveGlobalBonusHint": "Ce bonus s'applique à tous les jets de sauvegarde effectués par cet acteur.",
@@ -2141,7 +2157,9 @@
       "Complete": "Règle",
       "Reference": "Sort"
     },
-    "RequiresConcentration": "Nécessite de la concentration"
+    "RequiresConcentration": "Nécessite de la concentration",
+    "SaveDC": "Save DC",
+    "Values": "Spell Values"
   },
   "DND5E.Senses": "Sens",
   "DND5E.SensesConfig": "Configurer le(s) Sens",
@@ -2389,6 +2407,7 @@
       "Hint": "Formule en PO qui peut être utilisée à la place de l'équipement de départ."
     }
   },
+  "DND5E.SubclassAdd": "Add Subclass",
   "DND5E.SubclassIdentifierHint": "Cet identifiant doit correspondre à l'identifiant de la classe parente afin de s'assurer qu'ils sont correctement liés.",
   "DND5E.SubclassAssignmentError": "{class} a déjà une sous-classe. Supprimez la sous-classe '{subclass}' existante avant d'en ajouter une nouvelle.",
   "DND5E.SubclassDuplicateError": "Une sous-classe avec l'identifiant {identifier} existe déjà sur cet acteur.",
@@ -2616,6 +2635,7 @@
   "DND5E.TargetPl": "Cibles",
   "DND5E.TargetAlly": "Allié",
   "DND5E.TargetAny": "N'importe",
+  "DND5E.TargetCircle": "Circle",
   "DND5E.TargetCone": "Cône",
   "DND5E.TargetCreature": "Créature",
   "DND5E.TargetCreatureOrObject": "Créature ou Objet",
@@ -2732,6 +2752,7 @@
   "DND5E.TraitWeaponProf": "Maîtrise d'armes",
   "DND5E.Traits": "Traits",
   "DND5E.TraitsChosen": "Traits choisis",
+  "DND5E.Trigger": "Trigger",
   "DND5E.Type": "Type",
   "DND5E.Uncrewed": "Dévissé",
   "DND5E.Unequipped": "Non équipé",
@@ -2898,6 +2919,7 @@
     },
     "Mastery": {
       "Label": "Weapon Mastery",
+      "Flavor": "Mastery",
       "Cleave": "Cleave",
       "Graze": "Graze",
       "Nick": "Nick",
