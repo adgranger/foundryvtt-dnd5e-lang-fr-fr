@@ -178,7 +178,7 @@
     },
     "Title": {
       "one": "Activity",
-      "other": "Activities"
+      "other": "Activités"
     },
     "FIELDS": {
       "description": {
@@ -200,9 +200,9 @@
     },
     "SECTIONS": {
       "Activation": "Activation",
-      "Behavior": "Behavior",
-      "Effect": "Effect",
-      "Identity": "Identity",
+      "Behavior": "Comportement",
+      "Effect": "Effet",
+      "Identity": "Identité",
       "Time": "Time"
     }
   },
@@ -484,8 +484,8 @@
             "hint": "Est-ce une attaque au corps à corps ou à distance ?"
           },
           "classification": {
-            "label": "Attack Classification",
-            "hint": "Is this an unarmed, weapon, or spell attack?"
+            "label": "Classification d'attaque",
+            "hint": "S'agit-il d'une attaque à mains nues, d'une arme ou d'un sort ?"
           }
         }
       },
@@ -867,15 +867,15 @@
       "consumption": {
         "label": "Consumption",
         "scaling": {
-          "abbr": "Scaling",
-          "label": "Consumption Scaling",
+          "abbr": "Évolution",
+          "label": "Évolution de la consommation",
           "allowed": {
-            "label": "Allow Scaling",
-            "hint": "Can an activity not on a spell be activated at higher levels?"
+            "label": "Autoriser l'évolution",
+            "hint": "Une activité qui n'est pas sur un sort peut-elle être activée à des niveaux plus élevés ?"
           },
           "max": {
-            "label": "Max Scaling",
-            "hint": "Maximum number of scaling levels for this item, including the base level."
+            "label": "Évolution maximale",
+            "hint": "Nombre maximum de niveaux d'évolution pour cet objet, y compris le niveau de base."
           }
         },
         "spellSlot": {
@@ -899,14 +899,14 @@
               "hint": "Enter a negative value to restore rather than consume."
             },
             "scaling": {
-              "label": "Consumption Scaling",
+              "label": "Évolution de la consommation",
               "mode": {
-                "label": "Scaling Mode",
-                "hint": "How consumption should be scaled."
+                "label": "Mode d'évolution",
+                "hint": "Comment la consommation doit-elle évoluer."
               },
               "formula": {
-                "label": "Scaling Formula",
-                "hint": "Custom scaling of consumption amount per level."
+                "label": "Formule d'évolution",
+                "hint": "Évolution personnalisée du montant de consommation par niveau."
               }
             }
           }
@@ -919,10 +919,10 @@
       "Delete": "Delete Consumption Target"
     },
     "Scaling": {
-      "Amount": "Amount",
+      "Amount": "Quantité",
       "Automatic": "Automatique",
-      "None": "No Scaling",
-      "SlotLevel": "Slot Level"
+      "None": "Pas d'évolution",
+      "SlotLevel": "Niveau d'emplacement de sort"
     },
     "Target": {
       "ThisItem": "This Item"
@@ -1117,21 +1117,21 @@
               "hint": "Nombre de dés à lancer."
             },
             "scaling": {
-              "label": "Damage Scaling",
-              "abbr": "Scaling",
+              "label": "Évolution des dégâts",
+              "abbr": "Évolution",
               "mode": {
-                "label": "Scaling Mode",
+                "label": "Mode d'évolution",
                 "abbr": "Mode",
-                "hint": "Method by which the scaling increase is calculated."
+                "hint": "Méthode par laquelle l'accroissement de l'évolution est calculé."
               },
               "number": {
-                "label": "Dice Scaling",
-                "abbr": "Dice",
-                "hint": "Number of dice to increase for each scaling step. Will be applied to the first die found in the damage formula if more than one is present."
+                "label": "Évolution des dés",
+                "abbr": "Dés",
+                "hint": "Nombre de dés à augmenter pour chaque étape de l'évolution. S'appliquera au premier dé trouvé dans la formule de dégâts s'il y en a plusieurs."
               },
               "formula": {
-                "label": "Scaling Formula",
-                "hint": "Arbitrary scaling formula that will be multiplied for each scaling step and added to the original formula."
+                "label": "Formule d'évolution",
+                "hint": "Formule d'évolution arbitraire qui sera multipliée pour chaque étape d'évolution et ajoutée à la formule originale."
               }
             },
             "types": {
@@ -1219,7 +1219,7 @@
   "DND5E.DeathSavingThrow": "Faire un jet de sauvegarde contre la mort",
   "DND5E.DeathSaveUnnecessary": "Vous n'avez pas besoin de faire un jet de sauvegarde contre la mort : soit vos points de vie sont positifs, soit vous avez déjà atteint 3 succès ou échecs.",
   "DND5E.Default": "Par défaut",
-  "DND5E.DefaultSpecific": "Default ({default})",
+  "DND5E.DefaultSpecific": "Par défaut ({default})",
   "DND5E.DefaultAbilityCheck": "Jet de carac. par défaut",
   "DND5E.Denomination": "Denomination",
   "DND5E.Description": "Description",
@@ -1253,7 +1253,7 @@
         "label": "Duration",
         "concentration": {
           "label": "Concentration",
-          "hint": "Creature must maintain concentration while active."
+          "hint": "La créature doit maintenir sa concentration si l'activité est active."
         },
         "override": {
           "label": "Override Duration",
@@ -1285,12 +1285,12 @@
   "DND5E.Effects": "Effets",
   "DND5E.EFFECT": {
     "Action": {
-      "Create": "Create Effect",
-      "Delete": "Delete Effect",
-      "Dissociate": "Dissociate Effect"
+      "Create": "Créer un effet",
+      "Delete": "Supprimer l'effet",
+      "Dissociate": "Dissocier l'effet"
     },
     "Empty": "Aucun effet associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un effet existant dans la liste déroulante.",
-    "Label": "Available Effects"
+    "Label": "Effets disponibles"
   },
   "DND5E.EffectsApplyTokens": "Appliquer aux tokens sélectionnés",
   "DND5E.EffectApplyWarningConcentration": "L'application d'un effet qui est en cours de concentration par un autre personnage nécessite la permission du MJ.",
@@ -2588,8 +2588,8 @@
           "hint": "Use these target values instead of the item's when using this activity."
         },
         "prompt": {
-          "label": "Measured Template Prompt",
-          "hint": "Should the player be prompted to place a measured template? Players will still be able to place templates from the chat card if prompt is disabled."
+          "label": "Proposition de gabarit",
+          "hint": "Le joueur doit-il être invité à placer un gabarit ? Les joueurs pourront toujours placer des gabarits à partir de la carte de tchat si l'invite est désactivée."
         },
         "template": {
           "label": "Zone d'effet",
@@ -2625,10 +2625,10 @@
       }
     },
     "Action": {
-      "PlaceTemplate": "Place Measured Template"
+      "PlaceTemplate": "Placer un gabarit"
     },
     "Warning": {
-      "PlaceTemplate": "Failed to place measured template."
+      "PlaceTemplate": "Impossible de placer le gabarit."
     }
   },
   "DND5E.Target": "Cible",
@@ -3105,7 +3105,7 @@
     "None": "Tout masquer"
   },
   "SETTINGS.5eChallengeVisibility": {
-    "Name": "Visibilité du défi",
+    "Name": "Visibilité du Degré de Difficulté",
     "Hint": "Contrôler les DD visibles par les joueurs et si les réussites/échecs sont mis en évidence.",
     "All": "Tout afficher",
     "None": "Tout masquer",
@@ -3151,8 +3151,8 @@
   "SETTINGS.5eRestPHB": "Manuel des Joueurs (RL: 8 heures, RC: 1 heure)",
   "SETTINGS.5eRestGritty": "Réaliste ~dur~ (RL: 7 jours, RC: 8 heures)",
   "SETTINGS.5eRestEpic": "Héroïsme épique (RL: 1 heure, RC: 1 min)",
-  "SETTINGS.5eGridAlignedSquareTemplatesL": "Lorsque des modèles carrés sont créés suite à un sort ou à l'utilisation d'un objet, ils seront verrouillés sur l'alignement de la grille et ne pourront pas être tournés.",
-  "SETTINGS.5eGridAlignedSquareTemplatesN": "Modèles carrés alignés sur la grille",
+  "SETTINGS.5eGridAlignedSquareTemplatesL": "Lorsque des gabarits carrés sont créés suite à un sort ou à l'utilisation d'un objet, ils seront verrouillés sur l'alignement de la grille et ne pourront pas être tournés.",
+  "SETTINGS.5eGridAlignedSquareTemplatesN": "Gabarits carrés alignés sur la grille",
   "SETTINGS.5eSanityL": "Permet d'utiliser la caractéristique facultatif Santé mental. Nécessite le rechargement du monde.",
   "SETTINGS.5eSanityN": "Score de Santé Mental",
   "SETTINGS.5eUndoChanges": "Annuler les modifications",
