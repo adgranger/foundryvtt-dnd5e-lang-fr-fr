@@ -255,6 +255,17 @@
         "Type": "Seules les aptitudes de type \"don\" peuvent être sélectionnées."
       }
     },
+    "SPELLCONFIG": {
+      "FIELDS": {
+        "uses": {
+          "requireSlot": {
+            "label": "Require Slot",
+            "hint": "Require a spell slot to be spent when using the limited uses. If not checked then the uses will be additional free uses that don't consume a slot."
+          }
+        }
+      },
+      "FreeCasting": "Free Casting"
+    },
     "Subclass": {
       "Title": "Sous-classe",
       "Hint": "Spécifie à quel niveau cette classe elle reçoit sa sous-classe.",
@@ -929,8 +940,8 @@
     },
     "Type": {
       "ActivityUses": {
-        "Label": "Charge de l'activité",
-        "PromptDecrease": "Consommer une charge de l'activité ?",
+        "Label": "Utilisations de l'activité",
+        "PromptDecrease": "Consommer une utilisation de l'activité ?",
         "PromptIncrease": "Restore Activity Use?",
         "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of this activity.",
         "PromptHintIncrease": "Recover <strong>{cost}</strong> {use} of this activity.",
@@ -957,7 +968,7 @@
         "other": "hit dice"
       },
       "ItemUses": {
-        "Label": "Charge d'objets",
+        "Label": "Utilisation d'un objet",
         "PromptDecrease": "Consommer une charge de l'objet ?",
         "PromptIncrease": "Restore Item Use?",
         "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of {item}.",
@@ -1314,18 +1325,18 @@
           "riders": {
             "label": "Attached",
             "effect": {
-              "label": "Additional Effects",
-              "hint": "These additional effects will be added to the enchanted item when this enchantment is added, and removed when the enchantment is removed."
+              "label": "Effets supplémentaires",
+              "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement sera ajouté, et retirés lorsque l'enchantement sera supprimé."
             },
             "item": {
-              "label": "Additional Items",
-              "hint": "These additional items will be added to the creature when one of its items is enchanted, and will be removed if the enchantment is ever removed."
+              "label": "Objets supplémentaires",
+              "hint": "Ces objets supplémentaires seront ajoutés à la créature quand l'un de ses objets est enchanté, et sera retiré si l'enchantement est déjà enlevé."
             }
           }
         }
       },
       "enchant": {
-        "label": "Enchantment Configuration",
+        "label": "Configuration de l'enchantement",
         "identifier": {
           "label": "Class Identifier",
           "hint": "Identifier used to determine whether the character level or a specific class level should be used for enchantment level limits."
@@ -1349,44 +1360,44 @@
         "type": {
           "label": "Item Type",
           "hint": "Type of item to which this enchantment can be applied.",
-          "Any": "Any Enchantable Type"
+          "Any": "Tout type d'enchantement"
         }
       }
     },
     "SECTIONS": {
       "Enchanting": "Enchanting",
-      "Enchantments": "Enchantments",
+      "Enchantments": "Enchantements",
       "Restrictions": "Restrictions"
     },
-    "DropArea": "Place item here to enchant it…",
-    "Enchanted": "{current} &sol; {max} enchanted",
+    "DropArea": "Placez un objet ici pour l'enchanter…",
+    "Enchanted": "{current} &sol; {max} enchanté",
     "Enchantment": {
       "Action": {
-        "Create": "Create Enchantment",
-        "Delete": "Delete Enchantment"
+        "Create": "Créer un enchantement",
+        "Delete": "Supprimer l'enchantement"
       },
       "Empty": "Aucun enchantement associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un enchantement existant dans la liste déroulante."
     },
     "Warning": {
-      "ConcentrationEnded": "Cannot apply this enchantment because concentration has ended.",
-      "MissingProperty": "Item must have one of these properties to be enchanted: {validProperties}.",
-      "NoMagicalItems": "Items that are already magical cannot be enchanted.",
-      "NoSubtype": "Only {allowedType} items can be enchanted by this enchantment, but this item doesn't have a sub-type.",
-      "WrongType": "{incorrectType} items cannot be enchanted by this enchantment, only {allowedType} items are allowed."
+      "ConcentrationEnded": "Impossible d'appliquer cet enchantement car la concentration est terminée.",
+      "MissingProperty": "L'objet doit avoir l'une de ces propriétés pour être enchanté : {validProperties}.",
+      "NoMagicalItems": "Les objets qui sont déjà magiques ne peuvent pas être enchantés.",
+      "NoSubtype": "Seuls les objets {allowedType} peuvent être enchantés par cet enchantement, mais cet objet n'a pas de sous-type.",
+      "WrongType": "Les objets {incorrectType} ne peuvent pas être enchantés par cet enchantement, seuls les objets {allowedType} sont autorisés."
     }
   },
   "DND5E.ENCHANTMENT": {
     "Action": {
-      "Apply": "Apply Enchantment",
-      "Disable": "Disable Enchantment",
-      "Edit": "Edit Enchantment",
-      "Enable": "Enable Enchantment",
-      "Remove": "Remove Enchantment"
+      "Apply": "Appliquer l'enchantement",
+      "Disable": "Désactiver l'enchantement",
+      "Edit": "Modifier l’enchantement",
+      "Enable": "Activer l'enchantement",
+      "Remove": "Retirer l'enchantement"
     },
     "Category": {
-      "Active": "Active Enchantments",
-      "General": "Enchantments",
-      "Inactive": "Inactive Enchantments"
+      "Active": "Enchantements actifs",
+      "General": "Enchantements",
+      "Inactive": "Enchantements inactifs"
     },
     "FIELDS": {
       "enchantment": {
@@ -1798,7 +1809,7 @@
       "WeightlessContents": "Contenu sans Poids"
     }
   },
-  "DND5E.ItemRechargeCheck": "Vérification des recharges de {name}",
+  "DND5E.ItemRechargeCheck": "{name} recharge check - {result}",
   "DND5E.ItemRechargeFailure": "Échec !",
   "DND5E.ItemRechargeSuccess": "Succès !",
   "DND5E.ItemRecoveryRoll": "{name} récupère {count} charges",
@@ -2772,7 +2783,7 @@
   "DND5E.Usage": "Utilisation",
   "DND5E.Use": "Utilisez",
   "DND5E.UseItem": "Utiliser {item}",
-  "DND5E.Uses": "Utilise",
+  "DND5E.Uses": "Utilisation",
   "DND5E.UsesAvailable": "Utilisations disponibles",
   "DND5E.UsesMax": "Utilisations maximales",
   "DND5E.UsesPeriod": "Période de récupération",
@@ -2835,8 +2846,8 @@
       },
       "Type": {
         "Formula": "Formule personnalisée",
-        "LoseAll": "Perdre toutes les charges",
-        "RecoverAll": "Récupérer toutes les charges"
+        "LoseAll": "Perdre toutes les utilisations",
+        "RecoverAll": "Récupérer toutes les utilisations"
       }
     }
   },
