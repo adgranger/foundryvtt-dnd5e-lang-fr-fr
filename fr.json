@@ -505,12 +505,12 @@
         "critical": {
           "bonus": {
             "label": "Dégâts critiques bonus",
-            "hint": "Dégâts supplémentaires appliqués lors d'un coup critique. Ajouté aux dégâts de base ou premier cadre de dégâts."
+            "hint": "Dégâts supplémentaires appliqués lors d'un coup critique. Ajouté aux dégâts de base ou à la première section de dégâts."
           }
         },
         "includeBase": {
           "label": "Inclure les dégâts de base",
-          "hint": "Inclure les dégâts de base de l'objet avec tous les cadres de dégâts."
+          "hint": "Inclure les dégâts de base de l'objet avec toutes les sections de dégâts."
         },
         "parts": {
           "label": "Damage Parts",
@@ -940,7 +940,7 @@
     },
     "Type": {
       "ActivityUses": {
-        "Label": "Utilisations de l'activité",
+        "Label": "Utilisation de l'activité",
         "PromptDecrease": "Consommer une utilisation de l'activité ?",
         "PromptIncrease": "Restore Activity Use?",
         "PromptHintDecrease": "Spend <strong>{cost}</strong> {use} of this activity.",
@@ -1092,12 +1092,12 @@
         "label": "Dégâts",
         "critical": {
           "allow": {
-            "label": "Allow Critical",
-            "hint": "Should the creature be able to roll critical damage?"
+            "label": "Autoriser les critiques",
+            "hint": "La créature est-elle en mesure d'effectuer des dégâts critiques ?"
           },
           "bonus": {
             "label": "Dégâts critiques bonus",
-            "hint": "Dégâts supplémentaires appliqués au premier cadre de dégâts quand un critique est lancé."
+            "hint": "Dégâts supplémentaires appliqués à la première section de dégâts quand un critique est lancé."
           }
         },
         "parts": {
@@ -1155,14 +1155,14 @@
     },
     "Part": {
       "Action": {
-        "Create": "Create Damage Part",
+        "Create": "Créer une section de dégâts",
         "Delete": "Delete Damage Part"
       }
     },
     "Scaling": {
-      "Half": "Every Other Level",
-      "None": "No Scaling",
-      "Whole": "Every Level"
+      "Half": "Un niveau sur deux",
+      "None": "Pas d'évolution",
+      "Whole": "Chaque niveau"
     }
   },
   "DND5E.DamImm": "Immunité aux dégâts",
@@ -1313,8 +1313,8 @@
       "effects": {
         "FIELDS": {
           "level": {
-            "label": "Level Limit",
-            "hint": "Range of levels required to use this enchantment.",
+            "label": "Niveau requis",
+            "hint": "Plage de niveaux requis pour utiliser cet enchantement.",
             "max": {
               "label": "Maximum Level"
             },
@@ -1338,7 +1338,7 @@
       "enchant": {
         "label": "Configuration de l'enchantement",
         "identifier": {
-          "label": "Class Identifier",
+          "label": "Identifiant de classe",
           "hint": "Identifiant utilisé pour déterminer si c'est le niveau du personnage ou un niveau de classe spécifique qui doit être utilisé pour les limites de niveau de l'enchantement."
         }
       },
@@ -1358,8 +1358,8 @@
           "hint": "Specific item properties which must be present for this enchantment to be applied."
         },
         "type": {
-          "label": "Item Type",
-          "hint": "Type of item to which this enchantment can be applied.",
+          "label": "Type d'objet",
+          "hint": "Type d'objet auquel cet enchantement peut être appliqué.",
           "Any": "N'importe quel type enchantable"
         }
       }
@@ -2477,7 +2477,7 @@
         }
       },
       "profiles": {
-        "label": "Summons Profiles",
+        "label": "Profils d'invocation",
         "FIELDS": {
           "count": {
             "label": "Count"
@@ -2488,7 +2488,7 @@
             "hint": "Maximum CR of the summoned creature."
           },
           "level": {
-            "label": "Level Limit",
+            "label": "Niveau requis",
             "hint": "Range of levels required to use this profile.",
             "max": {
               "label": "Niveau maximum"
@@ -2513,7 +2513,7 @@
       "summon": {
         "label": "Summoning Details",
         "identifier": {
-          "label": "Class Identifier",
+          "label": "Identifiant de classe",
           "hint": "Identifiant utilisé pour déterminer si le niveau de personnage ou un niveau de classe spécifique doit être utilisé pour les limites du niveau de profil."
         },
         "mode": {
@@ -2579,15 +2579,15 @@
           "label": "Affected Targets",
           "choice": {
             "label": "Choose Targets",
-            "hint": "When targeting an area, can the user choose who it affects?"
+            "hint": "Lors du ciblage d'une zone, l'utilisateur peut-il choisir qui elle affecte ?"
           },
           "count": {
             "label": "Nombre de cibles",
             "hint": "Number of individual targets that can be affected."
           },
           "special": {
-            "label": "Special Targeting",
-            "hint": "Description of any special targeting details."
+            "label": "Ciblage spécial",
+            "hint": "Description de tout détail de ciblage spécial."
           },
           "type": {
             "label": "Type de cible",
@@ -2646,17 +2646,17 @@
   "DND5E.TargetPl": "Cibles",
   "DND5E.TargetAlly": "Allié",
   "DND5E.TargetAny": "N'importe",
-  "DND5E.TargetCircle": "Circle",
+  "DND5E.TargetCircle": "Cercle",
   "DND5E.TargetCone": "Cône",
   "DND5E.TargetCreature": "Créature",
-  "DND5E.TargetCreatureOrObject": "Créature ou Objet",
+  "DND5E.TargetCreatureOrObject": "Créature ou objet",
   "DND5E.TargetCube": "Cube",
   "DND5E.TargetCylinder": "Cylindre",
   "DND5E.TargetEnemy": "Ennemi",
-  "DND5E.TargetEvery": "Every",
+  "DND5E.TargetEvery": "Tous les ...",
   "DND5E.TargetLine": "Ligne",
   "DND5E.TargetObject": "Objet",
-  "DND5E.TargetRadius": "Emanation",
+  "DND5E.TargetRadius": "Émanation",
   "DND5E.TargetSelf": "Soi-même",
   "DND5E.TargetSpace": "Espace",
   "DND5E.TargetSphere": "Sphère",
