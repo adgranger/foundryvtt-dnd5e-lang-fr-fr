@@ -628,11 +628,11 @@
         "dc": {
           "label": "Degré de difficulté",
           "calculation": {
-            "label": "Calcul DD",
+            "label": "Calcul du DD",
             "hint": "Méthode ou caractéristique utilisée pour calculer le degré de difficulté."
           },
           "formula": {
-            "label": "Formule DD",
+            "label": "Formule du DD",
             "hint": "Formule personnalisée ou valeur fixe pour définir le DD de sauvegarde."
           }
         }
@@ -1671,7 +1671,7 @@
         },
         "types": {
           "label": "Healing Types",
-          "hint": "Type of healing inflicted or multiple for the user to select from."
+          "hint": "Type de soins appliqués -choix multiple possible - à sélectionner par l'utilisateur."
         }
       }
     }
@@ -2114,10 +2114,10 @@
     },
     "FIELDS": {
       "damage": {
-        "label": "Save Damage",
+        "label": "Dégâts de sauvegarde",
         "onSave": {
-          "label": "Damage on Save",
-          "hint": "How much damage should be applied on a successful save?",
+          "label": "Dégâts lors d'une sauvegarde",
+          "hint": "Combien de dégâts à appliquer en cas de sauvegarde réussie ?",
           "Full": "Tous les dégâts",
           "Half": "Moitié des dégâts",
           "None": "Aucun dégât"
@@ -2134,20 +2134,20 @@
         }
       },
       "save": {
-        "label": "Save Details",
+        "label": "Détails de la sauvegarde",
         "ability": {
           "label": "Challenge Ability",
-          "hint": "Ability that must be rolled to attempt to save."
+          "hint": "Caractéristique qui doit être utilisée pour la sauvegarde."
         },
         "dc": {
           "label": "Difficulty Class",
           "calculation": {
-            "label": "DC Calculation",
-            "hint": "Method or ability used to calculate the difficulty class."
+            "label": "Calcul du DD",
+            "hint": "Méthode ou caractéristique utilisée pour calculer le degré de difficulté."
           },
           "formula": {
-            "label": "DC Formula",
-            "hint": "Custom formula or flat value for defining the save DC."
+            "label": "Formule du DD",
+            "hint": "Formule personnalisée ou valeur fixe pour définir le DD de sauvegarde."
           },
           "CustomFormula": "Formule personnalisée",
           "DefaultFormula": "8 + @mod + @prof"
@@ -2188,7 +2188,7 @@
   "DND5E.SheetClassContainer": "Feuille de conteneur 5e par défaut",
   "DND5E.SheetClassContainerLegacy": "Legacy 5e Container Sheet",
   "DND5E.SheetClassGroup": "Feuille de groupe 5e par défaut",
-  "DND5E.SheetClassItem": "Feuille d'Items par défaut",
+  "DND5E.SheetClassItem": "Feuille d'objet par défaut",
   "DND5E.SheetClassItemLegacy": "Ancienne feuille d'objet 5e",
   "DND5E.SheetClassJournalEntry": "Feuille de journal par défaut 5e",
   "DND5E.SheetClassMapLocation": "Feuille de carte 5e par défaut",
@@ -2430,50 +2430,50 @@
     "FIELDS": {
       "bonuses": {
         "ac": {
-          "label": "Bonus Armor Class",
-          "hint": "Bonus to the Armor Class set on the summoned creature added to what is specified in their statblock."
+          "label": "Bonus de classe d'armure",
+          "hint": "Bonus de classe d'armure pour la créature invoquée ajouté à celle qui est spécifié dans son bloc de statistiques."
         },
         "attackDamage": {
-          "label": "Bonus Attack Damage",
-          "hint": "Additional damage done by the creature's attacks."
+          "label": "Bonus de dégâts d'attaque",
+          "hint": "Dégâts supplémentaires infligés par les attaques de la créature."
         },
         "hd": {
-          "label": "Bonus Hit Dice",
-          "hint": "Additional hit dice added to the creature on top of what is derived from the HP formula in their statblock. Can only be used when summoning NPC actors."
+          "label": "Dés de vie bonus",
+          "hint": "Dés de vie supplémentaires ajoutés à la créature en plus de ceux spécifié dans sa formule de PV dans son bloc de statistiques. Utilisable uniquement lors de l'invocation d'acteur de type PNJ."
         },
         "healing": {
-          "label": "Bonus Healing",
-          "hint": "Additional healing provided by healing abilities."
+          "label": "Bonus de soin",
+          "hint": "Guérison supplémentaire fournie par les aptitudes de soins."
         },
         "hp": {
-          "label": "Bonus Hit Points",
-          "hint": "Additional hit points added to the creature on top of what is specified in their statblock."
+          "label": "Points de vie bonus",
+          "hint": "Points de vie supplémentaires ajoutés à la créature en plus de ce qui est spécifié dans son bloc de statistiques."
         },
         "saveDamage": {
-          "label": "Bonus Save Damage",
-          "hint": "Additional damage done by the creature's abilities that require saving throws."
+          "label": "Dégâts bonus aux sauvegardes",
+          "hint": "Dégâts supplémentaires infligés par les aptitudes de la créature qui nécessitent des jets de sauvegarde."
         }
       },
       "creatureSizes": {
-        "label": "Creature Sizes",
-        "hint": "Summoned creature and token will be changed to this size. If more than one size is selected, then the player will be able to choose from these sizes when summoning."
+        "label": "Tailles de la créature",
+        "hint": "La créature et le token invoqués prendront cette taille. Si plusieurs tailles sont sélectionnées, le joueur pourra choisir l'une d'entre elles lors de l'invocation."
       },
       "creatureTypes": {
-        "label": "Creature Types",
-        "hint": "Summoned creature will be changed to this type. If more than one type is selected, then the player will be able to choose from these types when summoning."
+        "label": "Type de la créature",
+        "hint": "La créature invoquée sera transformée en ce type. Si plusieurs types sont sélectionnés, le joueur pourra choisir l'un d'entre eux lors de l'invocation."
       },
       "match": {
         "attacks": {
-          "label": "Match Attacks",
-          "hint": "Modify to hit values on the summoned creature's attacks to match that of the summoner."
+          "label": "Lier les attaques",
+          "hint": "Faire correspondre les valeurs de toucher des attaques de la créature invoquée à celles de l'invocateur."
         },
         "proficiency": {
-          "label": "Match Proficiency",
-          "hint": "Modify the summoned creature's proficiency to match that of the summoner."
+          "label": "Lier la maîtrise",
+          "hint": "Faire correspondre la maîtrise de la créature invoquée à celle de l'invocateur."
         },
         "saves": {
-          "label": "Match Saves",
-          "hint": "Modify saving throw DCs on the summoned creature's abilities to match that of the summoner."
+          "label": "Lier les jets de sauvegarde",
+          "hint": "Faire correspondre le DD des jets de sauvegarde sur les aptitudes de la créature invoquée à celles de l'invocateur."
         }
       },
       "profiles": {
@@ -2489,7 +2489,7 @@
           },
           "level": {
             "label": "Niveau requis",
-            "hint": "Range of levels required to use this profile.",
+            "hint": "Plage de niveaux requis pour utiliser ce profil.",
             "max": {
               "label": "Niveau maximum"
             },
@@ -2503,7 +2503,7 @@
           },
           "types": {
             "label": "Types de créature",
-            "hint": "List of creature types from which the summoned creature can be selected."
+            "hint": "Liste des types de créatures à partir desquelles la créature invoquée peut être sélectionnée."
           },
           "uuid": {
             "label": "Linked Creature"
@@ -2518,9 +2518,9 @@
         },
         "mode": {
           "label": "Mode",
-          "hint": "Sets how the creatures that are to be summoned are specified.",
-          "CR": "By Challenge Rating & Type",
-          "Direct": "By Direct Link"
+          "hint": "Définit la manière dont les créatures à invoquer sont spécifiées.",
+          "CR": "Par degré de difficulté et type",
+          "Direct": "Par lien direct"
         },
         "prompt": {
           "label": "Fenêtre d'invocation",
@@ -2540,11 +2540,11 @@
     },
     "CreatureChanges": {
       "Label": "Altération de la créature",
-      "Hint": "Changes that will be made to the creature being summoned. Any @ references used in the following formulas will be based on the summoner's stats. Summoned creatures' stats can be referenced using @summon (e.g. @summon.attributes.hd.max to reference the creature's hit dice count)."
+      "Hint": "Les altérations qui seront apportées à la créature en cours d'invocation. Toutes les références @ utilisées dans les formules suivantes seront basées sur les statistiques de l'invocateur. Les statistiques des créatures invoquées peuvent être référencées en utilisant @summon (par exemple, @summon.attributes.hd.max pour faire référence au nombre de dés de vie de la créature)."
     },
     "ItemChanges": {
-      "Label": "Item Changes",
-      "Hint": "Changes made to items on the summoned creature."
+      "Label": "Altération des objets",
+      "Hint": "Altérations apportées aux objets de la créature invoquée."
     },
     "Profile": {
       "Label": "Summons Profile",
@@ -2858,15 +2858,15 @@
         "label": "Utility Roll",
         "formula": {
           "label": "Roll Formula",
-          "hint": "Formula for an arbitrary roll."
+          "hint": "Formule pour un jet de dés arbitraire."
         },
         "name": {
           "label": "Nom du jet",
           "hint": "Nom affiché sur le bouton du jet."
         },
         "prompt": {
-          "label": "Utility Roll Prompt",
-          "hint": "Should the roll configuration dialog be displayed when rolling?"
+          "label": "Invite du jet utilitaire",
+          "hint": "La boîte de dialogue de configuration du jet doit-elle s'afficher lors du jet de dés ?"
         },
         "visible": {
           "label": "Visible pour tous",
@@ -3105,7 +3105,7 @@
   "SETTINGS.5eAllowPolymorphingL": "Permettre aux acteurs de transformer (polymorphisme) leurs propres acteurs.",
   "SETTINGS.5eAllowPolymorphingN": "Permettre le polymorphisme",
   "SETTINGS.5eAutoCollapseCardL": "Réduire automatiquement les descriptions de la carte d'item dans le journal de tchat",
-  "SETTINGS.5eAutoCollapseCardN": "Réduire les cartes d'items dans le tchat",
+  "SETTINGS.5eAutoCollapseCardN": "Réduire les cartes d'objet dans le tchat",
   "SETTINGS.5eAutoSpellTemplateL": "Lorsqu'un sort est lancé, commence par créer le gabarit correspondant le cas échéant (nécessite un role de joueur de 'confiance' -TRUSTED- ou supérieur)",
   "SETTINGS.5eAutoSpellTemplateN": "Toujours poser le gabarit du sort",
   "SETTINGS.5eAttackRollVisibility": {
@@ -3122,7 +3122,7 @@
     "None": "Tout masquer",
     "Player": "Afficher uniquement aux autres joueurs"
   },
-  "SETTINGS.5eCriticalMaxDiceN": "Dégâts critiques Maximiser les dés",
+  "SETTINGS.5eCriticalMaxDiceN": "Maximiser les dégâts critiques",
   "SETTINGS.5eCriticalMaxDiceL": "Rendez les coups critiques plus mortels en maximisant les valeurs des dés de dégâts de base.",
   "SETTINGS.5eCriticalModifiersN": "Multiplication des modificateurs de dégâts critiques",
   "SETTINGS.5eCriticalModifiersL": "Rendez les coups critiques plus mortels en multipliant les modificateurs sans dés en plus des dés lancés.",
