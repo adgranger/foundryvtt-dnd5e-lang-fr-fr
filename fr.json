@@ -1295,9 +1295,13 @@
           },
           "riders": {
             "label": "Attached",
+            "activity": {
+              "label": "Additional Activities",
+              "hint": "These additional activities will be added to the enchanted item when this enchantment is applied, and removed when the enchantment is removed."
+            },
             "effect": {
               "label": "Effets supplémentaires",
-              "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement sera ajouté, et retirés lorsque l'enchantement sera supprimé."
+              "hint": "These additional effects will be added to the enchanted item when this enchantment is applied, and removed when the enchantment is removed."
             },
             "item": {
               "label": "Objets supplémentaires",
@@ -1825,7 +1829,7 @@
   "DND5E.LanguagesDwarvish": "Nain",
   "DND5E.LanguagesElvish": "Elfique",
   "DND5E.LanguagesExotic": "Langues exotiques",
-  "DND5E.LanguagesExoticLegacy": "Exotic Languages",
+  "DND5E.LanguagesExoticLegacy": "Langues exotiques",
   "DND5E.LanguagesGiant": "Géant",
   "DND5E.LanguagesGith": "Gith",
   "DND5E.LanguagesGnoll": "Gnoll",
@@ -1925,29 +1929,29 @@
   "DND5E.PersonalityTraits": "Traits de personnalité",
   "DND5E.Polymorph": "Polymorphe",
   "DND5E.PolymorphAcceptSettings": "Paramètres personnalisés",
-  "DND5E.PolymorphAddTemp": "Add the target's HP as temporary HP",
+  "DND5E.PolymorphAddTemp": "Ajoutez les PV de la cible comme PV temporaire",
   "DND5E.PolymorphCustomTransformation": "Transformation personnalisée",
   "DND5E.PolymorphEffectTransformation": "Transformation et Effet",
   "DND5E.PolymorphKeepAE": "Conserver tous les effets (prévaut sur les autres options de conservation des effets).",
   "DND5E.PolymorphKeepBackgroundAE": "Conserver des effets qui proviennent de votre historique ?",
   "DND5E.PolymorphKeepBio": "Conserver la biographie",
-  "DND5E.PolymorphKeepClass": "Conserver le bonus de maîtrise (laisse les éléments de la classe dans la feuille)",
+  "DND5E.PolymorphKeepClass": "Conserver le bonus de maîtrise (laisse les objets de la classe dans la feuille)",
   "DND5E.PolymorphKeepClassAE": "Conserver les effets qui proviennent de votre classe ou sous-classe ?",
   "DND5E.PolymorphKeepEquipmentAE": "Conserver les effets qui proviennent de votre équipement ?",
   "DND5E.PolymorphKeepFeats": "Conserver les aptitudes",
   "DND5E.PolymorphKeepFeatureAE": "Conserver les effets qui proviennent de vos aptitudes ?",
-  "DND5E.PolymorphKeepHP": "Keep HP & HD",
+  "DND5E.PolymorphKeepHP": "Garder les Points de vie et les Dés de vie",
   "DND5E.PolymorphKeepItems": "Conserver l'équipement",
   "DND5E.PolymorphKeepMental": "Conserver les caractéristiques mentales (INT, SAG, CHA)",
-  "DND5E.PolymorphKeepOriginAE": "Conserver les effets qui proviennent de cet acteur (c'est-à-dire les effets qui ne sont pas liés à des aptitudes, des objets, des sorts).",
+  "DND5E.PolymorphKeepOriginAE": "Conserver les effets de l'acteur (les effets non liés à des aptitudes, des objets, des sorts)",
   "DND5E.PolymorphKeepOtherOriginAE": "Conserver les effets qui proviennent d'un autre acteur ?",
   "DND5E.PolymorphKeepPhysical": "Conserver les caractéristiques physiques (FOR, DEX, CON)",
   "DND5E.PolymorphKeepSaves": "Conserver les jets de sauvegardes",
-  "DND5E.PolymorphKeepSelf": "Conservez votre identité (changez simplement l'image et la taille, par exemple pour les sorts tels que Déguisement).",
+  "DND5E.PolymorphKeepSelf": "Conserver l'identité (change l'apparence et la taille comme 'Déguisement')",
   "DND5E.PolymorphKeepSkills": "Conserver les compétences",
   "DND5E.PolymorphKeepSpellAE": "Conserver les effets qui proviennent de vos sorts ?",
   "DND5E.PolymorphKeepSpells": "Conserver les sorts",
-  "DND5E.PolymorphKeepType": "Keep creature type",
+  "DND5E.PolymorphKeepType": "Garder le type de la créature",
   "DND5E.PolymorphKeepVision": "Conserver la vision (personnage et token)",
   "DND5E.PolymorphMergeSaves": "Fusionner les jets de sauvegarde (prendre le plus élevé)",
   "DND5E.PolymorphMergeSkills": "Fusionner les compétences (prendre la plus élevée)",
@@ -2250,21 +2254,47 @@
   "DND5E.SkillPassives": "Compétences passives",
   "DND5E.Skin": "Peau",
   "DND5E.Skip": "Passer",
-  "DND5E.Source": "Source",
-  "DND5E.SourceBook": "Livre",
-  "DND5E.SourceConfig": "Configurer la source",
-  "DND5E.SourceCustom": "Libellé personnalisée",
-  "DND5E.SourceDisplay": "{book} {page}",
-  "DND5E.SourceLicense": "Licence",
-  "DND5E.SourcePage": "Page/Section",
-  "DND5E.SourcePageDisplay": "p. {page}",
-  "DND5E.SourceUUID": "Source originale",
+  "DND5E.SOURCE": {
+    "FIELDS": {
+      "source": {
+        "label": "Source",
+        "book": {
+          "label": "Livre"
+        },
+        "custom": {
+          "label": "Libellé personnalisé"
+        },
+        "license": {
+          "label": "Licence"
+        },
+        "page": {
+          "label": "Page/Section"
+        },
+        "revision": {
+          "label": "Révision"
+        },
+        "rules": {
+          "label": "Version des règles"
+        },
+        "uuid": {
+          "label": "Source originale"
+        }
+      }
+    },
+    "Action": {
+      "Configure": "Configurer la source"
+    },
+    "Display": {
+      "Full": "{book} {page}",
+      "Page": "p. {page}"
+    }
+  },
   "DND5E.Special": "Spécial",
-  "DND5E.SpecialHint": "Special values separated by semi-colons.",
+  "DND5E.SpecialHint": "Valeurs spéciales séparées par des points-virgules.",
   "DND5E.SpecialTraits": "Traits spéciaux",
   "DND5E.Species": {
-    "Label": "Species",
-    "Add": "Add Species",
+    "Label": "Espèce",
+    "Add": "Ajouter des espèces",
     "Features": "Species Features",
     "Name": "Species Name"
   },
@@ -2629,7 +2659,7 @@
   "DND5E.TargetLine": "Ligne",
   "DND5E.TargetObject": "Objet",
   "DND5E.TargetRadius": "Émanation",
-  "DND5E.TargetRadiusLegacy": "Radius",
+  "DND5E.TargetRadiusLegacy": "Rayon",
   "DND5E.TargetSelf": "Soi-même",
   "DND5E.TargetSpace": "Espace",
   "DND5E.TargetSphere": "Sphère",
@@ -2704,9 +2734,9 @@
   "DND5E.TraitArmorPlural.one": "Maîtrise d'armure",
   "DND5E.TraitArmorPlural.other": "Maîtrise d'armure",
   "DND5E.TraitArmorProf": "Maîtrise d'armure",
-  "DND5E.TraitArmorLegacyPlural.one": "Armor Proficiency",
-  "DND5E.TraitArmorLegacyPlural.other": "Armor Proficiencies",
-  "DND5E.TraitArmorLegacyProf": "Armor Proficiencies",
+  "DND5E.TraitArmorLegacyPlural.one": "Maîtrise des armures",
+  "DND5E.TraitArmorLegacyPlural.other": "Maîtrises d'armure",
+  "DND5E.TraitArmorLegacyProf": "Maîtrise d'armure",
   "DND5E.TraitCIPlural.one": "Immunité d'état",
   "DND5E.TraitCIPlural.other": "Immunités d'états",
   "DND5E.TraitConfig": "Configurer {trait}",
@@ -2833,7 +2863,7 @@
       "roll": {
         "label": "Utility Roll",
         "formula": {
-          "label": "Roll Formula",
+          "label": "Formule du jet",
           "hint": "Formule pour un jet de dés arbitraire."
         },
         "name": {
@@ -2972,7 +3002,7 @@
     "SaveLong": "Jet de sauvegarde {save}",
     "SpecificCheck": "{ability} ({type})",
     "Warning": {
-      "NoActivityOnItem": "{item} on {actor} does not have an Activity with name {activity}.",
+      "NoActivityOnItem": "{item} sur {actor} n'a pas d'activité avec le nom {activity}.",
       "NoActor": "Aucun acteur sélectionné ou assigné n'a pu être trouvé pour exécuter ce jet.",
       "NoItemOnActor": "{actor} n'a pas d'objet portant le nom {item}."
     }
