@@ -2,11 +2,10 @@ name: Update en.json from system
 
 on:
   push:
-    branches:
-      - '**' # Surveille toutes les branches
   schedule:
     - cron: '0 0 * * *' # Se déclenche tous les jours à minuit (UTC)
   workflow_dispatch: # Permet de déclencher manuellement l'action
+  
 
 
 jobs:
