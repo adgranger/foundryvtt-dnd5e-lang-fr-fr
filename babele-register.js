@@ -395,9 +395,8 @@ class Converters {
 	}
 
 	static _source(source) {
-		let keys = Object.keys(source);
+		let keys = Object.keys(sources);
 		let translatedSource = source.book;
-
 		if (translatedSource) {
 			keys.forEach(key => {
 				translatedSource = translatedSource.replace(key, sources[key])
