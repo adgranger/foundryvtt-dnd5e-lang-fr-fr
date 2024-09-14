@@ -101,23 +101,6 @@ function setEncumbranceData() {
 	let convert = convertEnabled();
 	game.settings.set("dnd5e", "metricWeightUnits", convert);
 
-	// Fix system bug 
-	CONFIG.DND5E.encumbrance.threshold.encumbered = foundry.utils.mergeObject(
-		CONFIG.DND5E.encumbrance.threshold.encumbered, {
-			metric: 2.5
-		}
-	);
-	CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered = foundry.utils.mergeObject(
-		CONFIG.DND5E.encumbrance.threshold.heavilyEncumbered, {
-			metric: 5
-		}
-	);
-	CONFIG.DND5E.encumbrance.threshold.maximum = foundry.utils.mergeObject(
-		CONFIG.DND5E.encumbrance.threshold.maximum , {
-			metric: 7.5
-		}
-	);
-
 	if (convert){
 		CONFIG.DND5E.movementUnits = {			
 			m: CONFIG.DND5E.movementUnits.m,
