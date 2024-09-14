@@ -68,12 +68,8 @@ Hooks.on('createActor', (actor) => {
 		return;
 	}
 	if (convertEnabled()) {
-		actor.update({
-			token: {
-				dimSight: footsToMeters(actor.data.token.dimSight),
-				brightSight: footsToMeters(actor.data.token.brightSight)
-			},
-			data: {
+		actor.update({			
+			system: {
 				attributes: {
 					movement: {
 						burrow: 0,
