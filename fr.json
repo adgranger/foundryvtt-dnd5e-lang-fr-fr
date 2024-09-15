@@ -909,7 +909,7 @@
     "Action": {
       "ConsumeResource": "Consommer la ressource",
       "Create": "Créer une section de consommation",
-      "Delete": "Delete Consumption Target",
+      "Delete": "Supprimer le profil de consommation",
       "RefundResource": "Restaurer la ressource"
     },
     "Scaling": {
@@ -925,7 +925,7 @@
       "ActivityUses": {
         "Label": "Utilisation de l'activité",
         "PromptDecrease": "Consommer une utilisation de l'activité ?",
-        "PromptIncrease": "Restore Activity Use?",
+        "PromptIncrease": "Restaurer l'utilisation de l'activité ?",
         "PromptHintDecrease": "Dépenser <strong>{cost}</strong> {use} de cette activité.",
         "PromptHintIncrease": "Récupérer <strong>{cost}</strong> {use} de cette activité.",
         "Warning": "uses on {item}'s activity {activity}"
@@ -933,9 +933,9 @@
       "Attribute": {
         "Label": "Caractéristique",
         "PromptDecrease": "Consommer la caractéristique ?",
-        "PromptIncrease": "Restore Attribute?",
+        "PromptIncrease": "Restaurer la caractéristique ?",
         "PromptHintDecrease": "Diminuer <code>{attribute}</code> de <strong>{cost}</strong>.",
-        "PromptHintIncrease": "Increase <code>{attribute}</code> by <strong>{cost}</strong>.",
+        "PromptHintIncrease": "Augmenter <code>{attribute}</code> de <strong>{cost}</strong>.",
         "Warning": "{attribute} amount"
       },
       "HitDice": {
@@ -953,7 +953,7 @@
       "ItemUses": {
         "Label": "Utilisation d'un objet",
         "PromptDecrease": "Consommer une charge de l'objet ?",
-        "PromptIncrease": "Restore Item Use?",
+        "PromptIncrease": "Restaurer l'utilisation de l'objet ?",
         "PromptHintDecrease": "Dépenser <strong>{cost}</strong> {use} de {item}.",
         "PromptHintIncrease": "Récupérer <strong>{cost}</strong> {use} de {item}.",
         "Warning": "uses on {name}"
@@ -984,12 +984,12 @@
       }
     },
     "Warning": {
-      "MissingAttribute": "Attribute {attribute} configured to be consumed by {activity} activity on {item} could not be found.",
-      "MissingHitDice": "Actor does not have a class with a {denomination} hit die.",
-      "MissingItem": "Item configured to be consumed by {activity} activity on {item} could not be found.",
+      "MissingAttribute": "La caractéristique {attribute} configurée pour être consommée par l'activité {activity} sur {item} n'a pas été trouvée.",
+      "MissingHitDice": "L'acteur n'a aucune classe avec des dés de vie de type {denomination}.",
+      "MissingItem": "L'objet configuré pour être consommée par l'activité {activity} sur {item} n'a pas été trouvé.",
       "MissingSpellSlot": "Aucun emplacement de niveau {level} disponible.",
       "None": "No {type} available to spend, {cost} required.",
-      "NotEnough": "Not enough {type} available to spend, {cost} required and only {available} available."
+      "NotEnough": "Pas assez de {type} disponible, {cost} requis et seulement {available} disponible."
     }
   },
   "DND5E.Consumed": "Consommé",
@@ -1308,7 +1308,7 @@
           "riders": {
             "label": "Attached",
             "activity": {
-              "label": "Additional Activities",
+              "label": "Activités supplémentaires",
               "hint": "Ces activités supplémentaires seront ajoutées à l'objet enchanté lorsque cet enchantement sera appliqué, et retirées lorsque l'enchantement sera supprimé."
             },
             "effect": {
@@ -1545,7 +1545,7 @@
   "DND5E.NoSpellLevels": "Ce personnage n'a pas de niveau de lanceur de sorts, mais vous pouvez ajouter des sorts manuellement.",
   "DND5E.FLAGS": {
     "EnhancedDualWielding": {
-      "Name": "Enhanced Dual Wielding",
+      "Name": "Combat à deux armes amélioré",
       "Hint": "Allow bonus action extra attacks using any melee weapon without the Two-Handed property."
     }
   },
@@ -1722,7 +1722,7 @@
   "DND5E.ItemAttackBonus": "Bonus d'attaque",
   "DND5E.ItemAttackFlat": "Bonus brute",
   "DND5E.ItemAttackFlatHint": "Si coché, n'ajoute pas de bonus de maîtrise, de modificateur de caractéristique ou tout autre bonus au jet d'attaque, sauf ce qui est inclus ici.",
-  "DND5E.ItemBackgroundDetails": "Background Details",
+  "DND5E.ItemBackgroundDetails": "Détails de l'historique",
   "DND5E.ItemClassDetails": "Class Details",
   "DND5E.ItemConsumableActivation": "Activation du consommable",
   "DND5E.ItemConsumableUsage": "Consommation",
@@ -1804,8 +1804,8 @@
   "DND5E.ItemRecoveryRollMax": "{name} récupère toutes les charges",
   "DND5E.ItemRecoveryFormulaWarning": "Unable to recover uses for {name}. Invalid recovery formula '{formula}' ({uuid}).",
   "DND5E.ItemRequiredStr": "Force requise",
-  "DND5E.ItemSiegeProperties": "Siege Properties",
-  "DND5E.ItemSpeciesDetails": "Species Details",
+  "DND5E.ItemSiegeProperties": "Propriétés de Siège",
+  "DND5E.ItemSpeciesDetails": "Détails de l'espèce",
   "DND5E.ItemSubclassDetails": "Détails de la sous-classe",
   "DND5E.ItemToolBase": "Outil de base",
   "DND5E.ItemToolBonus": "Bonus d'outils",
