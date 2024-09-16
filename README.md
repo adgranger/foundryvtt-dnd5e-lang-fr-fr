@@ -8,6 +8,8 @@
 [![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fdnd5e_fr-FR&colorB=blueviolet)](https://forge-vtt.com/bazaar#package=dnd5e_fr-FR)
 ![GitHub release (latest by SemVer and asset)](https://img.shields.io/github/downloads/adgranger/foundryvtt-dnd5e-lang-fr-fr/latest/dnd5e_fr-FR.zip?logo=github)
 ![Total Downloads](https://img.shields.io/github/downloads/adgranger/foundryvtt-dnd5e-lang-fr-fr/total?display_name=tag&sort=semver&label=Total%20downloads&logo=github)
+
+[![Crowdin](https://badges.crowdin.net/foundryvtt-dnd5e-fr/localized.svg)](https://crowdin.com/project/foundryvtt-dnd5e-fr)
 		
 ## Nous rejoindre / Participer à la traduction 
 
