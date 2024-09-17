@@ -476,9 +476,11 @@ class Converters {
 					});
 					break;
 				case "AbilityScoreImprovement":{
-					foundry.utils.mergeObject(adv, {
-						title: game.i18n.localize("DND5E.AdvancementAbilityScoreImprovementTitle")
-					});
+					if (adv.title === "Ability Score Improvement"){
+						foundry.utils.mergeObject(adv, {
+							title: game.i18n.localize("DND5E.ADVANCEMENT.AbilityScoreImprovement.Title")
+						});
+					}
 					break;
 				}
 				case "ScaleValue":
