@@ -14,13 +14,13 @@ Hooks.once('init', () => {
 			}
 		});
 
-		Babele.get().register({
+		game.babele.register({
 			module: 'dnd5e_fr-FR',
 			lang: 'fr',
 			dir: 'compendium_fr'
 		});
 
-		Babele.get().registerConverters({
+		game.babele.registerConverters({
 			"pages": Converters.pages(),
 			"weight": Converters.weight(),
 			"range": Converters.range(),
@@ -463,7 +463,6 @@ class Converters {
 
 	static _advancement(advancements, translations, data, tc) {					
 		advancements.forEach(adv => {
-
 			switch (adv.type) {
 				case "HitPoints":
 					foundry.utils.mergeObject(adv, {
@@ -485,7 +484,7 @@ class Converters {
 				}
 				case "ScaleValue":
 				case "ItemChoice":
-				case "Trait":
+				case "Trait":				
 					const classFeaturesTranslations = game.babele.translations.find((item) => item.collection === "dnd5e.classfeatures");
 					if (adv.title !== "") {						
 						if (classFeaturesTranslations.entries[adv.title]) {
@@ -498,16 +497,14 @@ class Converters {
 						}
 					}
 
-					if(adv.configuration && adv.configuration.hint && adv.configuration.hint !== ""){
-						if (classFeaturesTranslations.entries[adv.configuration.hint]) {
+					if(adv.hint && adv.hint !== ""){
+						if (hints[adv.hint]) {
 							foundry.utils.mergeObject(adv, {
-								configuration:{
-									hint: classFeaturesTranslations.entries[adv.configuration.hint].hint
-								}								
+								hint: hints[adv.hint]
 							});
 						}
 						else {
-							console.warn(`Can't find hint "${adv.configuration.hint}" translation`);
+							console.warn(`Can't find hint "${adv.hint}" translation`);
 						}
 					}
 					break;
@@ -679,3 +676,45 @@ var rarity = {
 	"Very rare": "Très rare",
 	"Legendary": "Légendaire"
 };
+
+var hints = {
+	"Light Armor, Medium Armor, & Shields (druids will not wear armor or use shields made of metal)": 
+	  "Armures légères, armures intermédiaires, Boucliers (les druides ne portent ni armure ni bouclier faits de métal)",
+  
+	"You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.":
+	  "Vous choisissez de vous spécialiser dans un style de combat particulier. Choisissez l’une des options suivantes. Vous ne pouvez pas opter plus d’une fois pour un même Style de combat, si vous avez de nouveau la possibilité d’en choisir un.",
+  
+	"Choose two 3rd-level wizard spells in your spellbook as your signature spells.":
+	  "Choisissez deux sorts de magicien du 3e niveau de votre grimoire comme sorts de prédilection.",
+  
+	"Your mastery of the ki flowing through you makes you immune to disease and poison.":
+	  "Votre maîtrise du ki qui circule en vous est telle que vous devenez immunisé contre les maladies et les poisons.",
+  
+	"If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class.":
+	  "Si une manifestation occulte a des prérequis, vous devez les remplir pour l’apprendre. Vous pouvez apprendre une manifestation dès l’instant où vous remplissez ses prérequis. Un prérequis de niveau fait référence à votre niveau dans cette classe.",
+  
+	"Choose one 6th-level spell from the warlock spell list as this arcanum.":
+	  "Choisissez comme arcanum un sort du 6e niveau dans la liste des sorts d’occultiste.",
+  
+	"Choose one 7th-level spell from the warlock spell list as this arcanum.":
+	  "Choisissez comme arcanum un sort du 7e niveau dans la liste des sorts d’occultiste.",
+  
+	"Choose one 8th-level spell from the warlock spell list as this arcanum.":
+	  "Choisissez comme arcanum un sort du 8e niveau dans la liste des sorts d’occultiste.",
+  
+	"Choose one 9th-level spell from the warlock spell list as this arcanum.":
+	  "Choisissez comme arcanum un sort du 9e niveau dans la liste des sorts d’occultiste.",
+  
+	"The divine magic flowing through you makes you immune to disease.":
+	  "La magie divine qui vous parcourt vous immunise contre les maladies.",
+  
+	"Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.":
+	  "Choisissez l’une des options suivantes. Vous ne pouvez pas opter plus d’une fois pour un même Style de combat, si vous avez de nouveau la possibilité d’en choisir un.",
+  
+	"Expertise": 
+	  "Expertise",
+  
+	"You have acquired greater mental strength. You gain proficiency in Wisdom saving throws.":
+	  "Vous avez acquis une grande force mentale. Vous recevez la maîtrise des jets de sauvegarde de Sagesse."
+  };
+  
