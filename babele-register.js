@@ -485,11 +485,10 @@ class Converters {
 				case "ScaleValue":
 				case "ItemChoice":
 				case "Trait":				
-					const classFeaturesTranslations = game.babele.translations.find((item) => item.collection === "dnd5e.classfeatures");
-					if (adv.title !== "") {						
-						if (classFeaturesTranslations.entries[adv.title]) {
+					if (adv.title !== "") {								
+						if (advName[adv.title]) {
 							foundry.utils.mergeObject(adv, {
-								title: classFeaturesTranslations.entries[adv.title].name
+								title: advName[adv.title]
 							});		
 						}
 						else {
@@ -498,7 +497,9 @@ class Converters {
 					}
 
 					if(adv.hint && adv.hint !== ""){
+						console.log(adv.hint);			
 						if (hints[adv.hint]) {
+							console.log(hints[adv.hint]);
 							foundry.utils.mergeObject(adv, {
 								hint: hints[adv.hint]
 							});
@@ -718,3 +719,27 @@ var hints = {
 	  "Vous avez acquis une grande force mentale. Vous recevez la maîtrise des jets de sauvegarde de Sagesse."
   };
   
+ var advName = {
+	"Unarmed Strike": "Frappe à mains nues (Moine)",
+	"Cantrips Known": "Sorts mineurs connus",
+	"Spells Known": "Sorts connus",
+	"Bardic Inspiration Die": "Inspiration bardique",
+	"Song of rest Die": "Chant reposant",
+	"Brutal Critical Dice": "Critique brutal",
+	"Rages": "Rages",
+	"Rage Damage": "Dégâts de rage",
+	"Wild Shape CR": "Forme sauvage",
+	"Channel Divinity Uses": "Utilisations du Conduit divin",
+	"Destroy Undead CR": "Destruction des morts-vivants",
+	"Indomitable Uses": "Utilisations d'Inflexible",
+	"Action Surge Uses": "Utilisations de la Fougue",
+	"Martial Arts Die": "Dés d'Arts martiaux",
+	"Aura Radius": "Rayon de l'Aura",
+	"Fighting Style": "Style de combat",
+	"Mystic Arcanum (6th level)": "Arcanum mystique (6e niveau)",
+	"Mystic Arcanum (7th level)": "Arcanum mystique (7e niveau)",
+	"Mystic Arcanum (8th level)": "Arcanum mystique (8e niveau)",
+	"Mystic Arcanum (9th level)": "Arcanum mystique (9e niveau)",
+	"Eldritch Invocations": "Manifestation occultes",
+	"Pact Boon": "Pacte [Occultiste]",
+};
