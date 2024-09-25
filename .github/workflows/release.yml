@@ -41,11 +41,11 @@ jobs:
         name: ${{ github.event.release.name }} 
         draft: ${{ github.event.release.unpublished }}
         prerelease: ${{ github.event.release.prerelease }}
-        makeLatest: ${{ github.event.release.prerelease || "legacy" }}
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: './module.json, ./dnd5e_fr-FR.zip'
         tag: ${{ github.event.release.tag_name }}
-        body: ${{ github.event.release.body }}
+        body: ${{ github.event.release.body }}        
+        makeLatest: ${{ github.event.release.prerelease && 'false' || 'legacy' }}
 
     # Update module json version in master branche
 #    - name : Update module version
