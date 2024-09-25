@@ -55,6 +55,7 @@ jobs:
 
     # Publish to foundry
     - name: Publish Module to FoundryVTT Website
+      if: '!github.event.prerelease'
       id: publish-to-foundry-website
       uses: cs96and/FoundryVTT-release-package@v1
       with:
