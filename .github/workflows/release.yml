@@ -1,8 +1,9 @@
 name: Release Creation
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:    
@@ -37,9 +38,9 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         allowUpdates: true # Set this to false if you want to prevent updating existing releases
-        name: ${{ github.event.release.name }}
-        draft: false
-        prerelease: ${{ github.event.prerelease }}
+        name: ${{ github.event.release.name }} 
+        draft: ${{ github.event.release.unpublished }}
+        prerelease: ${{ github.event.release.prerelease }}
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: './module.json, ./dnd5e_fr-FR.zip'
         tag: ${{ github.event.release.tag_name }}
@@ -47,7 +48,7 @@ jobs:
 
     # Update module json version in master branche
     - name : Update module version
-      if: '!github.event.prerelease'
+      if: ${{ !github.event.prerelease }}
       uses: pocket-apps/action-update-version@v1
       with:
         files: 'module.json'
@@ -55,11 +56,11 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     # Publish to foundry
-    - name: Publish Module to FoundryVTT Website  
-      if: '!github.event.prerelease'
-      id: publish-to-foundry-website
-      uses: cs96and/FoundryVTT-release-package@v1
-      with:
-        package-token: ${{ secrets.PACKAGE_TOKEN }}
-        manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
-        notes-url: https://github.com/${{github.repository}}/releases/tag/${{github.event.release.tag_name}}
+#    - name: Publish Module to FoundryVTT Website  
+#      if: '!github.event.prerelease'
+#      id: publish-to-foundry-website
+#      uses: cs96and/FoundryVTT-release-package@v1
+#      with:
+#        package-token: ${{ secrets.PACKAGE_TOKEN }}
+#        manifest-url: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.json
+#        notes-url: https://github.com/${{github.repository}}/releases/tag/${{github.event.release.tag_name}}
