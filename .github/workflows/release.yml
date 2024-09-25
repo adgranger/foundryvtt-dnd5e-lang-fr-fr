@@ -6,6 +6,7 @@ on:
 
 jobs:
   build:
+    if: '!github.event.prerelease'
     runs-on: ubuntu-latest
     steps:
     # Checkout files from Github
@@ -47,7 +48,6 @@ jobs:
 
     # Update module json version in master branche
     - name : Update module version
-      if: '!github.event.prerelease'
       uses: pocket-apps/action-update-version@v1
       with:
         files: 'module.json'
@@ -55,8 +55,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     # Publish to foundry
-    - name: Publish Module to FoundryVTT Website
-      if: '!github.event.prerelease'
+    - name: Publish Module to FoundryVTT Website      
       id: publish-to-foundry-website
       uses: cs96and/FoundryVTT-release-package@v1
       with:
