@@ -47,13 +47,13 @@ jobs:
         makeLatest: ${{ github.event.release.prerelease && 'false' || 'legacy' }}
 
     # Update module json version in master branche
-    - name : Update module version
-      if: ${{ !github.event.release.prerelease }}
-      uses: pocket-apps/action-update-version@v1
-      with:
-        files: 'module.json'
-        version-regexp: '\d+.\d+.\d+.\d+'
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    #- name : Update module version
+    #  if: ${{ !github.event.release.prerelease }}
+    #  uses: pocket-apps/action-update-version@v1
+    #  with:
+    #    files: 'module.json'
+    #    version-regexp: '\d+.\d+.\d+.\d+'
+    #    repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     # Publish to foundry
     - name: Publish Module to FoundryVTT Website  
