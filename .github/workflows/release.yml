@@ -5,8 +5,7 @@ on:
     types: [published]
 
 jobs:
-  build:
-    if: '!github.event.prerelease'
+  build:    
     runs-on: ubuntu-latest
     steps:
     # Checkout files from Github
@@ -40,7 +39,7 @@ jobs:
         allowUpdates: true # Set this to false if you want to prevent updating existing releases
         name: ${{ github.event.release.name }}
         draft: false
-        prerelease: false
+        prerelease: ${{ github.event.prerelease }}
         token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: './module.json, ./dnd5e_fr-FR.zip'
         tag: ${{ github.event.release.tag_name }}
