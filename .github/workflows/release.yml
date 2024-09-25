@@ -47,6 +47,7 @@ jobs:
 
     # Update module json version in master branche
     - name : Update module version
+      if: '!github.event.prerelease'
       uses: pocket-apps/action-update-version@v1
       with:
         files: 'module.json'
