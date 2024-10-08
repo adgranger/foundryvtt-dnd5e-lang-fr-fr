@@ -11,6 +11,7 @@ Hooks.once('init', () => {
 			config: true,
 			onChange: convert => {
 				setEncumbranceData();
+				fixExhaustion();
 			}
 		});
 
@@ -45,6 +46,7 @@ Hooks.once('init', () => {
 
 Hooks.once('ready', () => {
 	setEncumbranceData();
+	fixExhaustion();
 });
 
 Hooks.on('createScene', (scene) => {
@@ -67,6 +69,7 @@ Hooks.on('createActor', (actor) => {
 	if (actor.getFlag("babele", "translated")) {
 		return;
 	}
+	console.log(actor);
 	if (convertEnabled()) {
 		actor.update({			
 			system: {
@@ -104,6 +107,17 @@ function setEncumbranceData() {
 			ft: CONFIG.DND5E.movementUnits.ft,
 			mi: CONFIG.DND5E.movementUnits.mi
 		  };
+	}
+}
+
+function fixExhaustion() {
+	// Fix system bug (2024 rules)
+	if (convertEnabled()){
+		CONFIG.DND5E.conditionTypes.exhaustion.reduction = foundry.utils.mergeObject(
+			CONFIG.DND5E.conditionTypes.exhaustion.reduction, {
+				speed: 1.5
+			}
+		);
 	}
 }
 
