@@ -164,7 +164,11 @@ class Converters {
 					return data;
 				}
 			}
-
+		
+			// TODO: Need to add tooltip translation in weblate
+			if (data.system.tooltip.length > 0){
+				translation.tooltip = translation.text;
+			}
 			return foundry.utils.mergeObject(data, {
 				name: translation.name,
 				image: { caption: translation.caption ?? data.image.caption },
@@ -510,10 +514,8 @@ class Converters {
 						}
 					}
 
-					if(adv.hint && adv.hint !== ""){
-						console.log(adv.hint);			
+					if(adv.hint && adv.hint !== ""){	
 						if (hints[adv.hint]) {
-							console.log(hints[adv.hint]);
 							foundry.utils.mergeObject(adv, {
 								hint: hints[adv.hint]
 							});
