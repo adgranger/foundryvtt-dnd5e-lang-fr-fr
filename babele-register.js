@@ -166,7 +166,7 @@ class Converters {
 			}
 		
 			// TODO: Need to add tooltip translation in weblate
-			if (data.system.tooltip.length > 0){
+			if (data.system.tooltip && data.system.tooltip.length > 0){
 				translation.tooltip = translation.text;
 			}
 			return foundry.utils.mergeObject(data, {
