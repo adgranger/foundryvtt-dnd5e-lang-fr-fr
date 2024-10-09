@@ -536,7 +536,7 @@ class Converters {
 				}
 				case "ScaleValue":
 				case "ItemChoice":
-				case "Trait":				
+				case "Trait":	
 					if (adv.title !== "") {								
 						if (advName[adv.title]) {
 							foundry.utils.mergeObject(adv, {
@@ -593,6 +593,22 @@ class Converters {
 				case "feat": 
 					Converters.translateFromConverters(item, translations, "dnd5e.classfeatures");			
 					break;
+				case "race":
+					Converters.translateFromConverters(item, translations, "dnd5e.races");			
+					break;
+				case "class":
+					Converters.translateFromConverters(item, translations, "dnd5e.classes");			
+					break;
+				case "subclass":
+					Converters.translateFromConverters(item, translations, "dnd5e.subclasses");			
+					break;
+				case "background":
+					Converters.translateFromConverters(item, translations, "dnd5e.backgrounds");			
+					break;
+				default:
+					console.warn(`Can't find translation for ${item.type}`);
+					console.log(`${item.type}`);
+					break;
 			}
 		});
 
@@ -618,6 +634,10 @@ class Converters {
 				case "spell":
 					Converters.translateFromConverters(item, translations, "dnd5e.spells");				
 					break;
+				default:
+					console.warn(`Can't find translation for ${item.type}`);
+					console.log(`${item.type}`);
+					break;
 			}
 		});
 		
@@ -626,11 +646,11 @@ class Converters {
 	}
 
 	static translateFromConverters(item, translations, packName) {
-		const itemsConverter = game.babele.translations.find((item) => item.collection === packName).mapping;
+		const itemsConverter = game.babele.translations.find((item) => item.collection === packName)?.mapping;		
 		if (!itemsConverter) {
 			return;
 		}
-		
+				
 		const fields = Object.keys(itemsConverter).map(key => new FieldMapping(key, itemsConverter[key], item));
 		if (!fields){
 			return;
@@ -865,4 +885,11 @@ var hints = {
 	"Mystic Arcanum (9th level)": "Arcanum mystique (9e niveau)",
 	"Eldritch Invocations": "Manifestation occultes",
 	"Pact Boon": "Pacte [Occultiste]",
+	"Divine Strike Damage": "Dégâts d'Impact divin",
+	"Additional Fighting Style": "Style de combat supplémentaire",
+	"Hunter's Prey": "Proie du chasseur",
+	"Defensive Tactics": "Tactiques défensives",
+	"Multiattack": "Attaques multiples",
+	"Superior Hunter's Defense": "Défense supérieure du chasseur",
+	"Additionnal Magicat Secrets": "Secrets magiques supplémentaires",
 };
