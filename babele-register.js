@@ -219,7 +219,7 @@ class Converters {
 			return foundry.utils.mergeObject(range, {
 				"value": Converters.footsToMeters(range.value),
 				"long": Converters.footsToMeters(range.long),
-				"reach": Converters.footsToMeters(range.long),
+				"reach": Converters.footsToMeters(range.reach),
 				"units": "m"
 			});
 		}
@@ -227,7 +227,7 @@ class Converters {
 			return foundry.utils.mergeObject(range, {
 				"value": Converters.milesToMeters(range.value),
 				"long": Converters.milesToMeters(range.long),
-				"reach": Converters.milesToMeters(range.long),
+				"reach": Converters.milesToMeters(range.reach),
 				"units": "km"
 			});
 		}
@@ -610,6 +610,21 @@ class Converters {
 					console.log(`${item.type}`);
 					break;
 			}
+
+			let translation = translations[item._id];
+			if (!translation) {								
+				translation = translations[item.name];
+				if (!translation) {	
+					console.warn(`Missing translation : ${item._id} ${item.name}`)
+					return item;					
+				}
+			}
+
+			return foundry.utils.mergeObject(item, {
+				name: translation.name,				
+				system: { description: { value: translation.description ?? item.system.description.value }},		
+				translated: true,
+			});
 		});
 
 		return data;
@@ -623,7 +638,7 @@ class Converters {
 		if (!Array.isArray(data)) {
 			return data;
 		}
-		data.forEach(item => {		
+		data.forEach(item => {	
 			switch(item.type){				
 				case "feat": 	
 					Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures");			
@@ -639,6 +654,21 @@ class Converters {
 					console.log(`${item.type}`);
 					break;
 			}
+	
+			let translation = translations[item._id];
+			if (!translation) {								
+				translation = translations[item.name];
+				if (!translation) {	
+					console.warn(`Missing translation : ${item._id} ${item.name}`)
+					return item;					
+				}
+			}
+
+			return foundry.utils.mergeObject(item, {
+				name: translation.name,				
+				system: { description: { value: translation.description ?? item.system.description.value }},		
+				translated: true,
+			});
 		});
 		
 		return data;
