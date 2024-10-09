@@ -3278,5 +3278,28 @@
       "name": "Baguette d'if",
       "description": "<p>La baguette a été sculptée dans de l'if ou un autre bois spécial et gravé de puissantes runes pour invoquer la puissance de la nature par ceux qui entendent son appel. Focaliseur druidique. Un focaliseur druidique peut être un brin de gui ou de houx, une baguette ou un sceptre en bois d'if ou autre bois spécial, un bâton pris d'un arbre vivant, ou bien encore un objet totem qui intègre des plumes, de la fourrure, des os ou des dents d'animaux sacrés. Un druide peut utiliser ce type d'objet comme focaliseur pour ses sorts.</p>"
     }
+  },
+  "mapping": {
+    "weight": {
+      "path": "system.weight",
+      "converter": "weight"
+    },
+    "range": {
+      "path": "system.range",
+      "converter": "range"
+    },
+    "rarity": {
+      "path": "system.rarity",
+      "converter": "rarity"
+    },
+    "target": {
+      "path": "system.target",
+      "converter": "range"
+    },
+    "sources": {
+      "path": "system.source",
+      "converter": "source"
+    },
+    "conditional-activation": "system.activation.condition"
   }
 }
