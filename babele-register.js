@@ -584,6 +584,7 @@ class Converters {
 				case "consumable": 					
 				case "container": 
 				case "weapon":
+				case "equipment":
 					Converters.translateFromConverters(item, translations, "dnd5e.items");			
 					break;
 				case "spell":
