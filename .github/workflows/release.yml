@@ -29,7 +29,7 @@ jobs:
 
     # Create a zip file with all files required by the module to add to the release
     - name: Create archive
-      run: zip dnd5e_fr-FR.zip fr.json babele-register.js module.json -r compendium_fr -x ".*"
+      run: zip dnd5e_fr-FR.zip fr.json babele-register.js FieldMapping.js module.json -r compendium_fr -x ".*"
 
     # Create a release for this specific version
     - name: Update Release with Files
