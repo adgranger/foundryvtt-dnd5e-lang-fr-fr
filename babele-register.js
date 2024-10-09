@@ -39,7 +39,8 @@ Hooks.once('init', () => {
 			"source": Converters.source(),
 			"type": Converters.type(),
 			"adv_sizehint": Converters.advsizehint(),
-			"advancement" : Converters.advancement()
+			"advancement" : Converters.advancement(),
+			"items": Converters.items()
 		});
 	}
 });
@@ -184,6 +185,52 @@ class Converters {
 		});
 	}
 
+	static items() {
+		return (data, translations) => Converters._items(data, translations);
+	}
+
+	static _items(data, translations) {
+        if (typeof data !== 'object') {
+            return translations;
+        }
+
+        if (Array.isArray(data)) {
+            return data.map((item) => {
+			if (translations) {
+				const translation = translations[item.name];
+				if (translation) {
+					const itemTranslated = foundry.utils.mergeObject(item, {
+						name: translation.name,
+						system: { description: { value: translation.description ? translation.description : item.system.description.value } }
+					});
+
+					if (item.system.range) {
+						itemTranslated.system.range = Converters._range(item.system.range);
+					}
+
+					if (item.system.weight) {
+						itemTranslated.system.weight = Converters._weight(item.system.weight);
+					}
+					return itemTranslated;
+				}
+			}
+
+			const pack = game.babele.packs.find(pack => pack.translated && pack.hasTranslation(item));
+			const itemTranslated = pack ? pack.translate(item) : item;
+			if (item.system.range) {
+				itemTranslated.system.range = Converters._range(item.system.range);
+			}
+
+			if (item.system.weight) {
+				itemTranslated.system.weight = Converters._weight(item.system.weight);
+			}
+			return itemTranslated;
+    	  });
+        }
+
+        return data;
+	}
+
 	static weight() {
 		return (value) => Converters._weight(value);
 	}
@@ -211,16 +258,24 @@ class Converters {
 			return range;
 		}
 		if (range.units === "ft") {
+			if (!range.value) range.value = 5;
+		    
+		    if (!range.reach) range.reach = range.value;
+
 			return foundry.utils.mergeObject(range, {
 				"value": Converters.footsToMeters(range.value),
 				"long": Converters.footsToMeters(range.long),
+				"reach": Converters.footsToMeters(range.reach),
 				"units": "m"
 			});
 		}
 		if (range.units === "mi") {
+			if (!range.reach) range.reach = range.value;
+
 			return foundry.utils.mergeObject(range, {
 				"value": Converters.milesToMeters(range.value),
 				"long": Converters.milesToMeters(range.long),
+				"reach": Converters.milesToMeters(range.reach),
 				"units": "km"
 			});
 		}
