@@ -196,36 +196,23 @@ class Converters {
 
         if (Array.isArray(data)) {
             return data.map((item) => {
-			if (translations) {
-				const translation = translations[item.name];
-				if (translation) {
-					const itemTranslated = foundry.utils.mergeObject(item, {
-						name: translation.name,
-						system: { description: { value: translation.description ? translation.description : item.system.description.value } }
-					});
+				if (item.system.range) item.system.range = Converters._range(item.system.range);
 
-					if (item.system.range) {
-						itemTranslated.system.range = Converters._range(item.system.range);
+				if (item.system.weight) item.system.weight = Converters._weight(item.system.weight);
+			
+				if (translations) {
+					const translation = translations[item.name];
+					if (translation) {
+						return foundry.utils.mergeObject(item, {
+							name: translation.name,
+							system: { description: { value: translation.description ? translation.description : item.system.description.value } }
+						});
 					}
-
-					if (item.system.weight) {
-						itemTranslated.system.weight = Converters._weight(item.system.weight);
-					}
-					return itemTranslated;
 				}
-			}
 
-			const pack = game.babele.packs.find(pack => pack.translated && pack.hasTranslation(item));
-			const itemTranslated = pack ? pack.translate(item) : item;
-			if (item.system.range) {
-				itemTranslated.system.range = Converters._range(item.system.range);
-			}
-
-			if (item.system.weight) {
-				itemTranslated.system.weight = Converters._weight(item.system.weight);
-			}
-			return itemTranslated;
-    	  });
+				const pack = game.babele.packs.find(pack => pack.translated && pack.hasTranslation(item));
+				return pack ? pack.translate(item) : item;
+			});
         }
 
         return data;
