@@ -1,3 +1,5 @@
+import {FieldMapping} from "./FieldMapping.js";
+
 Hooks.once('init', () => {
 
 	if (typeof Babele !== 'undefined') {
@@ -25,6 +27,7 @@ Hooks.once('init', () => {
 			"pages": Converters.pages(),
 			"weight": Converters.weight(),
 			"range": Converters.range(),
+			"rangeActivities": Converters.rangeActivities(),
 			"sightRange": Converters.sightRange(),
 			"alignement": Converters.alignment(),
 			"movement": Converters.movement(),
@@ -39,7 +42,9 @@ Hooks.once('init', () => {
 			"source": Converters.source(),
 			"type": Converters.type(),
 			"adv_sizehint": Converters.advsizehint(),
-			"advancement" : Converters.advancement()
+			"advancement" : Converters.advancement(),
+			"items": Converters.items(),
+			"itemsMonster": Converters.itemsMonster()
 		});
 	}
 });
@@ -69,7 +74,7 @@ Hooks.on('createActor', (actor) => {
 	if (actor.getFlag("babele", "translated")) {
 		return;
 	}
-	console.log(actor);
+
 	if (convertEnabled()) {
 		actor.update({			
 			system: {
@@ -145,7 +150,7 @@ async function skillSorting() {
  */
 
 class Converters {
-
+	
 	// Override babele page to translate tooltips
 	static pages() {
 		return (pages, translations) => Converters._pages(pages, translations);
@@ -166,7 +171,7 @@ class Converters {
 			}
 		
 			// TODO: Need to add tooltip translation in weblate
-			if (data.system.tooltip && data.system.tooltip.length > 0){
+			if (data.system.tooltip && data.system.tooltip.length > 0 && !translation.tooltip ){
 				translation.tooltip = translation.text;
 			}
 			return foundry.utils.mergeObject(data, {
@@ -214,6 +219,7 @@ class Converters {
 			return foundry.utils.mergeObject(range, {
 				"value": Converters.footsToMeters(range.value),
 				"long": Converters.footsToMeters(range.long),
+				"reach": Converters.footsToMeters(range.long),
 				"units": "m"
 			});
 		}
@@ -221,10 +227,38 @@ class Converters {
 			return foundry.utils.mergeObject(range, {
 				"value": Converters.milesToMeters(range.value),
 				"long": Converters.milesToMeters(range.long),
+				"reach": Converters.milesToMeters(range.long),
 				"units": "km"
 			});
 		}
 		return range;
+	}
+
+	static rangeActivities() {
+		return (activities) => Converters._rangeActivities(activities);
+	}
+
+	static _rangeActivities(activities) {
+		if (!activities) {
+			return activities;
+		}
+
+		if (!convertEnabled()) {
+			return activities;
+		}
+
+		Object.keys(activities).forEach(key => {
+			Converters._range(activities[key].range);
+			
+			if (activities[key].target?.template?.units === "ft") {
+				foundry.utils.mergeObject( activities[key].target.template, {
+					"size": Converters.footsToMeters(activities[key].target.template.size),
+					"units": "m"
+				});
+			}
+		});
+
+		return activities;
 	}
 
 	static alignment() {
@@ -533,7 +567,79 @@ class Converters {
 
 		return advancements;
 	}
-	
+
+	static items() {
+		return (data, translations) => Converters._items(data, translations);
+	}
+
+	static _items(data, translations) {
+		if (!Array.isArray(data)) {
+			return data;
+		}
+		data.forEach(item => {
+			switch(item.type){
+				case "loot": 
+					Converters.translateFromConverters(item, translations, "dnd5e.tradegoods");	
+					break;		
+				case "consumable": 					
+				case "container": 
+				case "weapon":
+					Converters.translateFromConverters(item, translations, "dnd5e.items");			
+					break;
+				case "spell":
+					Converters.translateFromConverters(item, translations, "dnd5e.spells");			
+					break;
+				case "feat": 
+					Converters.translateFromConverters(item, translations, "dnd5e.classfeatures");			
+					break;
+			}
+		});
+
+		return data;
+	}
+
+	static itemsMonster() {
+		return (data, translations) => Converters._itemsMonster(data, translations);
+	}
+
+	static _itemsMonster(data, translations) {
+		if (!Array.isArray(data)) {
+			return data;
+		}
+		data.forEach(item => {		
+			switch(item.type){				
+				case "feat": 	
+					Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures");			
+					break;					
+				case "weapon":
+					Converters.translateFromConverters(item, translations, "dnd5e.items");			
+					break;
+				case "spell":
+					Converters.translateFromConverters(item, translations, "dnd5e.spells");				
+					break;
+			}
+		});
+		
+		return data;
+
+	}
+
+	static translateFromConverters(item, translations, packName) {
+		const itemsConverter = game.babele.translations.find((item) => item.collection === packName).mapping;
+		if (!itemsConverter) {
+			return;
+		}
+		
+		const fields = Object.keys(itemsConverter).map(key => new FieldMapping(key, itemsConverter[key], item));
+		if (!fields){
+			return;
+		}
+
+		fields.forEach(field => {
+			field.translate(item, translations);
+		});
+	}
+
 	static round(num) {
 		return Math.round((num + Number.EPSILON) * 100) / 100;
 	}
