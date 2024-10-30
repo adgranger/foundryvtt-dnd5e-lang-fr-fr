@@ -362,21 +362,21 @@ class Converters {
 	}
 
 	static _languages(lang) {
-		if (lang == null) {
+		if (!lang) {
 			return lang;
 		}
 
-		const languagesSplit = lang.split('; ');
+		const languagesSplit = lang.split(';');
 		let languagesFin = '';
 		let languagesTr = '';
 		languagesSplit.forEach(function (el) {
+			el = el.trim();
 			languagesTr = languages[el.toLowerCase()];
-			if (languagesTr != null) {
-				if (languagesFin === '') {
-					languagesFin = languagesTr;
-				} else {
-					languagesFin = languagesFin + ' ; ' + languagesTr;
-				}
+			if (languagesTr) {
+				languagesFin = languagesFin ? languagesFin + ';' + languagesTr : languagesTr;
+			}
+			else {
+				languagesFin = languagesFin ? languagesFin + ';' + el : el;
 			}
 		});
 		return languagesFin;
@@ -470,21 +470,20 @@ class Converters {
 			return 
 		};
 
-		let index;
-		for (let key of Object.keys(races)) {
-			if (key.toLowerCase() !== type.subtype.toLowerCase()){
-				continue;
+		const typesSplit = type.subtype.split(',');
+		let typesFin = '';
+		let typesTr = '';
+		typesSplit.forEach(function (el) {
+			el = el.trim();
+			typesTr = races[el.toLowerCase()];
+			if (typesTr) {
+				typesFin = typesFin ? typesFin + ', ' + typesTr : typesTr;
 			}
-
-			index = key;
-			break;
-		}
-
-		return foundry.utils.mergeObject(type,
-			{
-				subtype: index ? races[index].toLowerCase() : type.subtype,				
+			else {
+				typesFin = typesFin ? typesFin + ', ' + el : el;
 			}
-		);
+		});
+		return foundry.utils.mergeObject(type, { subtype: typesFin });
 	}
 
 	static advsizehint() {
@@ -737,14 +736,21 @@ var alignments = {
 	"true neutral": "Neutre",
 	"neutral": "Neutre",
 	"neutral good": "Neutre Bon",
+	"neutral good evil(50%) or neutral evil(50%)": "Neutre Bon (50 %) ou Neutre Mauvais (50 %)",
 	"lawful evil": "Loyal Mauvais",
 	"lawful neutral": "Loyal Neutre",
 	"lawful good": "Loyal Bon",
 	"chaotic good evil": "Chaotique Bon/Mauvais",
 	"lawful chaotic evil": "Loyal/Chaotique Mauvais",
-	"unaligned": "Sans alignement",
-	"any non-lawful": "n'importe lequel non loyal",
-	"any": "n'importe lequel",
+	"unaligned": "Non alignée",
+	"any non-lawful alignment": "Tout alignement autre que Loyal",
+	"any non-lawful": "Tout alignement autre que Loyal",
+	"any non-good alignment": "Tout alignement autre que Bon",
+	"any non-good": "Tout alignement autre que Bon",
+	"any chaotic": "Tout alignement Chaotique",
+	"any evil": "Tout alignement Mauvais",
+	"any alignment": "Tout alignement",
+	"any": "Tout alignement"
 };
 
 var languages = {
@@ -752,59 +758,90 @@ var languages = {
 	"worg": "Worg",
 	"winter wolf": "Loup Artique",
 	"sahuagin": "Sahuagin",
+	"giant owl": "chouette géante",
+	"blink dog": "chien esquiveur",
+	"giant elk": "cervidé géant",
 	"giant owl, understands but cannot speak all but giant owl": "Chouette Géante, comprend mais ne peut pas parler sauf en Chouette Géante",
 	"giant elk but can't speak them": "Elan Géant, mais ne peut pas le parler",
+	"common and auran (understands but cannot speak)": "comprend le commun et l'aérien mais ne les parle pas",
+	"understands abyssal, celestial, infernal, and primordial but can't speak": "comprend l'abyssal, le céleste, l'infernal et le primordial, mais ne parle pas",
+	"understands celestial, common, elvish, and sylvan but can't speak": "comprend le céleste, le commun, l'elfique et le sylvestre, mais ne parle pas",
+	"understands common, elvish, and sylvan but can't speak them": "comprend le commun, l'elfique et le sylvestre, mais ne peut pas les parler",
+	"understands abyssal, common, and infernal but can't speak": "comprend l'abyssal, le commun et l'infernal, mais ne parle pas",
 	"understands infernal but can't speak it": "comprend l'infernal mais ne peut pas le parler",
 	"understands draconic but can't speak": "comprend le draconic mais ne peut pas le parler",
 	"understands common but doesn't speak it": "comprend le commun mais ne peut pas le parler",
+	"understands common but can't speak": "comprend le commun, mais ne parle pas",
 	"understands abyssal but can't speak": "comprend l'infernal mais ne peut pas le parler",
-	"understands all languages it knew in life but can't speak": "comprend toutes les langues qu'il a apprises dans sa vie mais ne peut pas les parler",
+	"understands sylvan but can't speak it": "comprend le sylvestre, mais ne le parle pas",
+	"understands deep speech but can't speak": "comprend le profond, mais ne parle pas",
 	"understands commands given in any language but can't speak": "comprend les ordres donnés dans n'importe quelle langue mais ne peut pas parler",
+	"understands all languages it knew in life but can't speak": "comprend toutes les langues qu'il parlait de son vivant, mais ne parle pas",
+	"understands the languages it knew in life but can't speak": "comprend les langues qu'il parlait de son vivant, mais ne parle pas",
+	"understands but can't speak": "comprend mais ne parle pas",
 	"(can't speak in rat form)": "(Ne peut pas parler sous forme de rat)",
 	"(can't speak in boar form)": "(ne peut pas parler sous forme de sanglier)",
 	"(can't speak in bear form)": "(ne peut pas parler sous forme d'ours)",
 	"(can't speak in tiger form)": "(ne peut pas parler sous forme de tigre)",
+	"(can't speak in wolf form)": "(ne peut pas parler sous forme de loup)",
 	"any one language (usually common)": "une langue quelconque (généralement le commun)",
-	"any two languages": "deux langues quelconques",
-	"any four languages": "quatre langues quelconques",
+	"any one language": "une au choix",
+	"any two": "deux au choix",
+	"any two languages": "deux au choix",
+	"any four languages": "quatre au choix",
 	"5 other languages": "5 autres langues",
+	"(any 6 languages)": "six au choix",
 	"any, usually common": "généralement le commun",
 	"one language known by its creator": "une langue connue de son créateur",
-	"the languages it knew in life": "les langues qu'il connaissait dans la vie",
-	"those it knew in life": "les langues qu'il connaissait dans la vie",
-	"all it knew in life": "les langues qu'il connaissait dans la vie",
-	"any it knew in life": "les langues qu'il connaissait dans la vie",
+	"the languages it knew in life": "celles qu'il parlait de son vivant",
+	"those it knew in life": "celles qu'il parlait de son vivant",
+	"all it knew in life": "celles qu'il parlait de son vivant",
+	"any it knew in life": "celles qu'il parlait de son vivant",
+	"languages it knew in life": "celles qu'il parlait de son vivant",
+	"any languages it knew in life": "celles qu'il connaissait de son vivant",
 	"all, telepathy 120 ft.": "toutes, télépathie 36m",
 	"telepathy 60 ft.": "télépathie 18m",
-	"telepathy 60ft. (works only with creatures that understand abyssal)": "télépathie 18m (seulement avec les créatures qui connaissent l'abyssal)",
+	"telepathy 60ft. (works only with creatures that understand abyssal)": "télépathie 18 m (ne fonctionne qu'avec les créatures qui comprennent l'abyssal)",
+	"telepathy 60 ft. (works only with creatures that understand abyssal)": "télépathie 18 m (ne fonctionne qu'avec les créatures qui comprennent l'abyssal)",
 	"telepathy 120 ft.": "télépathie 36m",
 	"but can't speak": "mais ne peut pas parler",
 	"but can't speak it": "mais ne peut pas le parler",
 	"choice": "au choix",
+	"all languages known to its summoner": "toutes les langues connues de la créature qui l'a convoqué",
 	"understands the languages of its creator but can't speak": "comprend les langues de son créateur mais ne paut pas les parler",
-	"understands common and giant but can't speak": "comprend le géant et le commun mais ne peut pas les parler",
-	"cannot speak": "Ne parle pas"
+	"understands the languages of its creator but cannot speak": "comprend les langues de son créateur, mais ne parle pas",
+	"understands common and giant but can't speak": "comprend le commun et le gigant, mais ne parle pas",
+	"cannot speak": "ne parle pas",
+	"can't speak": "ne parle pas",
+	"all": "toutes"
 };
 
 var races = {
-	"Dragonborn": "Drakéide",
-	"Dwarf": "Nain",
-	"Hill Dwarf": "Nain des collines",
-	"Elf": "Elfe",
-	"High Elf": "Haut-elfe",
-	"Rock Gnome": "Gnome des roches",
-	"Gnome": "Gnome",
-	"Half Elf": "Demi-elfe",
-	"Half-Elf": "Demi-elfe",
-	"Half-elf": "Demi-elfe",
-	"Halfling": "Halfelin",
-	"Lightfoot Halfling": "Halfelin pied-léger",
-	"Half Orc": "Demi-Orc",
-	"Half-Orc": "Demi-Orc",
-	"HUMAN": "Humain",
-	"Human": "Humain",
-	"Variant Human": "Humain (variante)",
-	"Tiefling": "Tieffelin"
+	"dragonborn": "Drakéide",
+	"dwarf": "Nain",
+	"hill dwarf": "Nain des collines",
+	"elf": "Elfe",
+	"high elf": "Haut-elfe",
+	"rock gnome": "Gnome des roches",
+	"gnome": "Gnome",
+	"orc": "Orc",
+	"half elf": "Demi-elfe",
+	"half-elf": "Demi-elfe",
+	"halfling": "Halfelin",
+	"lightfoot halfling": "Halfelin pied-léger",
+	"half orc": "Demi-Orc",
+	"half-orc": "Demi-Orc",
+	"human": "Humain",
+	"variant human": "Humain (variante)",
+	"tiefling": "Tieffelin",
+	"any race": "Toute race",
+	"shapechanger": "Métamorphe",
+	"demon": "Démon",
+	"devil": "Diable",
+	"goblinoid" : "Gobelinoïde",
+	"lizardfolk": "Saurial",
+	"merfolk": "Thalasséen",
+	"grimlock": "Torve"
 };
 
 var classes = {
