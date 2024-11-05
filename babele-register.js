@@ -261,14 +261,6 @@ class Converters {
 		return activities;
 	}
 
-	static alignment() {
-		return (alignment) => Converters._alignment(alignment);
-	}
-
-	static _alignment(alignment) {
-		return alignments[alignment.toLowerCase()];
-	}
-
 	static sightRange() {
 		return (range) => Converters._sightRange(range);
 	}
@@ -728,7 +720,7 @@ class Converters {
 	}
 }
 
-var alignments = {
+export var alignments = {
 	"chaotic evil": "Chaotique Mauvais",
 	"chaotic neutral": "Chaotique Neutre",
 	"chaotic good": "Chaotique Bon",
@@ -753,7 +745,7 @@ var alignments = {
 	"any": "Tout alignement"
 };
 
-var languages = {
+export var languages = {
 	"giant eagle": "Aigle Géant",
 	"worg": "Worg",
 	"winter wolf": "Loup Artique",
@@ -816,7 +808,7 @@ var languages = {
 	"all": "toutes"
 };
 
-var races = {
+export var races = {
 	"dragonborn": "Drakéide",
 	"dwarf": "Nain",
 	"hill dwarf": "Nain des collines",
@@ -844,7 +836,7 @@ var races = {
 	"grimlock": "Torve"
 };
 
-var classes = {
+export var classes = {
 	"Barbarian": "Barbare",
 	"Bard": "Barde",
 	"Cleric": "Clerc",
@@ -929,7 +921,7 @@ var hints = {
 	  "Vous avez acquis une grande force mentale. Vous recevez la maîtrise des jets de sauvegarde de Sagesse."
   };
   
- var advName = {
+export var advName = {
 	"Unarmed Strike": "Frappe à mains nues (Moine)",
 	"Cantrips Known": "Sorts mineurs connus",
 	"Spells Known": "Sorts connus",
