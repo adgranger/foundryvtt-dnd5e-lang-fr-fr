@@ -1,5 +1,6 @@
 {
   "label": "Tables (SRD)",
+  "folders": {},
   "entries": {
     "Armor of Resistance": {
       "name": "Armor of Resistance",
@@ -19,17 +20,17 @@
     "Bag of Beans": {
       "name": "Bag of Beans",
       "results": {
-        "1-1": "[[5d4]] toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a DC 15 Constitution saving throw or take [[/r 5d6]] poison damage and become poisoned for 1 hour. On an even roll, the eater gains [[/r 5d6]] temporary hit points for 1 hour.",
-        "2-10": "A geyser erupts and spouts water, beer, berry juice, tea, vinegar, wine, or oil (GM's choice) 30 feet into the air for [[1d12]] rounds.",
+        "1-1": "[[/r 5d4]] toadstools sprout. If a creature eats a toadstool, roll any die. On an odd roll, the eater must succeed on a [[/save constitution dc=15]] saving throw or take [[/damage 5d6 poison]] damage and become &amp;Reference[poisoned] for 1 hour. On an even roll, the eater gains [[/healing 5d6 temp]]{5d6 temporary hit points} for 1 hour.",
+        "2-10": "A geyser erupts and spouts water, beer, berry juice, tea, vinegar, wine, or oil (GM's choice) 30 feet into the air for [[/r 1d12]] rounds.",
         "11-20": "A treant sprouts. There's a 50 percent chance that the treant is chaotic evil and attacks.",
         "21-30": "An animate, immobile stone statue in your likeness rises. It makes verbal threats against you. If you leave it and others come near, it describes you as the most heinous of villains and directs the newcomers to find and attack you. If you are on the same plane of existence as the statue, it knows where you are. The statue becomes inanimate after 24 hours.",
         "31-40": "A campfire with blue flames springs forth and burns for 24 hours (or until it is extinguished).",
-        "41-50": "[[1d6 + 6]] shriekers sprout",
-        "51-60": "[[1d4 + 8]] bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the GM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke.",
-        "61-70": "A hungry bulette burrows up and attacks.",
-        "71-80": "A fruit tree grows. It has [[1d10 + 20]] fruit, [[1d8]] of which act as randomly determined magic potions, while one acts as an ingested poison of the GM's choice. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days.",
-        "81-90": "A nest of [[1d4 + 3]] eggs springs up. Any creature that eats an egg must make a DC 20 Constitution saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes [[/r 10d6]] force damage from an internal magical explosion.",
-        "91-99": "A pyramid with a 60-foot‐square base bursts upward. Inside is a sarcophagus containing a mummy lord. The pyramid is treated as the mummy lord's lair, and its sarcophagus contains treasure of the GM's choice.",
+        "41-50": "[[/r 1d6 + 6]] @UUID[Compendium.dnd5e.monsters.Actor.TaK6nQMGqZ0y8gt7]{shriekers} sprout",
+        "51-60": "[[/r 1d4 + 8]] bright pink toads crawl forth. Whenever a toad is touched, it transforms into a Large or smaller monster of the GM's choice. The monster remains for 1 minute, then disappears in a puff of bright pink smoke.",
+        "61-70": "A hungry @UUID[Compendium.dnd5e.monsters.Actor.1ES45ODWg3pCrkzv]{bulette} burrows up and attacks.",
+        "71-80": "A fruit tree grows. It has [[/r 1d10 + 20]] fruits, [[/r 1d8]] of which act as randomly determined magic potions, while one acts as an ingested poison of the GM's choice. The tree vanishes after 1 hour. Picked fruit remains, retaining any magic for 30 days.",
+        "81-90": "A nest of [[/r 1d4 + 3]] eggs springs up. Any creature that eats an egg must make a [[/save constitution dc=20]] saving throw. On a successful save, a creature permanently increases its lowest ability score by 1, randomly choosing among equally low scores. On a failed save, the creature takes [[/damage 10d6 force]] damage from an internal magical explosion.",
+        "91-99": "A pyramid with a 60-foot-square base bursts upward. Inside is a sarcophagus containing a @UUID[Compendium.dnd5e.monsters.Actor.UFW8M3JHzHkxUEGM]{mummy lord}. The pyramid is treated as the mummy lord's lair, and its sarcophagus contains treasure of the GM's choice.",
         "100-100": "A giant beanstalk sprouts, growing to a height of the GM's choice. The top leads where the GM chooses, such as to a great view, a cloud giant's castle, or a different plane of existence."
       }
     },
@@ -185,7 +186,7 @@
     },
     "Long-Term Madness": {
       "name": "Long-Term Madness",
-      "description": "The character is afflicted with long-­term madness for [[1d10*10]] hours.",
+      "description": "<p>The character is afflicted with long-­term madness for [[/r 1d10*10]] hours.</p>",
       "results": {
         "1-10": "The character feels compelled to repeat a specific activity over and over, such as washing hands, touching things, praying, or counting coins.",
         "11-20": "The character experiences vivid hallucinations and has disadvantage on ability checks.",
@@ -362,7 +363,7 @@
     },
     "Short-Term Madness": {
       "name": "Short-Term Madness",
-      "description": "The character is afflicted with short-­term madness for [[1d10]] minutes.",
+      "description": "<p>The character is afflicted with short-­term madness for [[/r 1d10]] minutes.</p>",
       "results": {
         "1-20": "The character retreats into his or her mind and becomes paralyzed. The effect ends if the character takes any damage.",
         "21-30": "The character becomes incapacitated and spends the duration screaming, laughing, or weeping.",
@@ -402,9 +403,9 @@
       "results": {
         "1-5": "You cast @UUID[Compendium.dnd5e.spells.Item.yqUDoxk4x0NWG5Bz]{Slow}.",
         "6-10": "You cast @UUID[Compendium.dnd5e.spells.Item.nqBDWkVOfcGZt4YU]{Faerie Fire}.",
-        "11-15": "You are @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.ZyZMUwA2rboh4ObS]{Stunned} until the start of your next turn, believing something awesome just happened.",
+        "11-15": "You are &amp;Reference[Stunned] until the start of your next turn, believing something awesome just happened.",
         "16-20": "You cast @UUID[Compendium.dnd5e.spells.Item.FSMy6VAjDnXY9vWz]{Gust of Wind}.",
-        "21-25": "You cast @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} on the target you chose. If you didn't target a creature, you instead take [[1d6]] psychic damage.",
+        "21-25": "You cast @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} on the target you chose. If you didn't target a creature, you instead take [[/damage 1d6 psychic]] damage.",
         "26-30": "You cast @UUID[Compendium.dnd5e.spells.Item.TwlD4PLcltv7Xh7j]{Stinking Cloud}.",
         "31-33": "Heavy rain falls in a 60-foot radius centered on the target. The area becomes lightly obscured. The rain falls until the start of your next turn.",
         "34-36": "An animal appears in the unoccupied space nearest the target. The animal isn't under your control and acts as it normally would. Roll a [[/r 1d100]] to determine which animal appears. On a 01–25, a @UUID[Compendium.dnd5e.monsters.Actor.SBCe2BSa6opTS5M4]{Rhinoceros} appears; on a 26–50, an @UUID[Compendium.dnd5e.monsters.Actor.jLPhaBnMtAbB5dp1]{Elephant} appears; and on a 51–100, a @UUID[Compendium.dnd5e.monsters.Actor.pozQUPTnLZW8epox]{Rat} appears.",
@@ -418,10 +419,10 @@
         "70-79": "You cast @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball}.",
         "80-84": "You cast @UUID[Compendium.dnd5e.spells.Item.1N8dDMMgZ1h1YJ3B]{Invisibility} on yourself.",
         "85-87": "Leaves grow from the target. If you chose a point in space as the target, leaves sprout from the creature nearest to that point. Unless they are picked off, the leaves turn brown and fall off after 24 hours.",
-        "88-90": "A stream of [[1d4]] × 10 gems, each worth 1 gp, shoots from the wand's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line.",
-        "91-95": "A burst of colorful shimmering light extends from you in a 30‐foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.0b8N4FymGGfbZGpJ]{Blinded} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
-        "96-97": "The target's skin turns bright blue for [[1d10]] days. If you chose a point in space, the creature nearest to that point is affected.",
-        "98-100": "If you targeted a creature, it must make a DC 15 Constitution saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.xaNDaW6NwQTgHSmi]{Petrified}. On any other failed save, the target is @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.cSVcyZyNe2iG1fIc]{Restrained} and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn, becoming @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.xaNDaW6NwQTgHSmi]{Petrified} on a failure or ending the effect on a success. The petrification lasts until the target is freed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration} spell or similar magic."
+        "88-90": "A stream of [[/r 1d4 * 10]]{1d4 × 10} gems, each worth 1 gp, shoots from the wand's tip in a line 30 feet long and 5 feet wide. Each gem deals 1 bludgeoning damage, and the total damage of the gems is divided equally among all creatures in the line.",
+        "91-95": "A burst of colorful shimmering light extends from you in a 30‐foot radius. You and each creature in the area that can see must succeed on a DC 15 Constitution saving throw or become &amp;Reference[Blinded] for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+        "96-97": "The target's skin turns bright blue for [[/r 1d10]] days. If you chose a point in space, the creature nearest to that point is affected.",
+        "98-100": "If you targeted a creature, it must make a [[/save con 15]] saving throw. If you didn't target a creature, you become the target and must make the saving throw. If the saving throw fails by 5 or more, the target is instantly &amp;Reference[Petrified]. On any other failed save, the target is &amp;Reference[Restrained] and begins to turn to stone. While restrained in this way, the target must repeat the saving throw at the end of its next turn, becoming Petrified on a failure or ending the effect on a success. The petrification lasts until the target is freed by the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration} spell or similar magic."
       }
     }
   }
