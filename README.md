@@ -10,7 +10,8 @@
 ![Total Downloads](https://img.shields.io/github/downloads/adgranger/foundryvtt-dnd5e-lang-fr-fr/total?display_name=tag&sort=semver&label=Total%20downloads&logo=github)
 
 [![Crowdin](https://badges.crowdin.net/foundryvtt-dnd5e-fr/localized.svg)](https://crowdin.com/project/foundryvtt-dnd5e-fr)
-		
+[![État de la traduction](https://weblate.fonderievtt.fr/widget/dnd5e-lang-fr/svg-badge.svg)](https://weblate.fonderievtt.fr/engage/dnd5e-lang-fr/)
+
 ## Nous rejoindre / Participer à la traduction 
 
 - Vous pouvez retrouver toutes les mises à jour en français pour FoundryVTT sur le [Discord Francophone](https://discord.gg/pPSDNJk)

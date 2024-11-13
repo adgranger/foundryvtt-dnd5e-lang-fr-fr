@@ -44,7 +44,8 @@ Hooks.once('init', () => {
 			"adv_sizehint": Converters.advsizehint(),
 			"advancement" : Converters.advancement(),
 			"items": Converters.items(),
-			"itemsMonster": Converters.itemsMonster()
+			"itemsMonster": Converters.itemsMonster(),
+			"effects": Converters.effects()
 		});
 	}
 });
@@ -613,7 +614,11 @@ class Converters {
 
 			return foundry.utils.mergeObject(item, {
 				name: translation.name,				
-				system: { description: { value: translation.description ?? item.system.description.value }},		
+				system: {
+					description: { value: translation.description ?? item.system.description.value },
+					materials: { value: translation.materials ?? item.system.materials?.value }
+				},
+				effects: item.effects.length > 0 ? Converters._effects(item.effects, translation.effects) : item.effects,
 				translated: true,
 			});
 		});
@@ -657,7 +662,11 @@ class Converters {
 
 			return foundry.utils.mergeObject(item, {
 				name: translation.name,				
-				system: { description: { value: translation.description ?? item.system.description.value }},		
+				system: {
+					description: { value: translation.description ?? item.system.description.value },
+					materials: { value: translation.materials ?? item.system.materials?.value }
+				},
+				effects: item.effects.length > 0 ? Converters._effects(item.effects, translation.effects) : item.effects,
 				translated: true,
 			});
 		});
@@ -680,6 +689,34 @@ class Converters {
 		fields.forEach(field => {
 			field.translate(item, translations);
 		});
+	}
+
+	static effects() {
+		return (data, translations) => Converters._effects(data, translations);
+	}
+
+	static _effects(data, translations) {
+		if (!translations) {
+            return data;
+        }
+        if (typeof data !== 'object') {
+            return translations;
+        }
+        
+        if (Array.isArray(data)) {
+            return data.map(effect => {
+				const translation = translations[effect.name];
+				if (translation) {
+					return foundry.utils.mergeObject(effect, {
+						name: translation.name ?? effect.name,
+						description: translation.description ?? effect.description
+					});
+				}
+				return effect;
+			});
+        }
+        
+        return data;
 	}
 
 	static round(num) {
