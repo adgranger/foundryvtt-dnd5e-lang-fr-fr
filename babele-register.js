@@ -28,6 +28,7 @@ Hooks.once('init', () => {
 			"weight": Converters.weight(),
 			"range": Converters.range(),
 			"rangeActivities": Converters.rangeActivities(),
+			"target": Converters.target(),
 			"sightRange": Converters.sightRange(),
 			"alignement": Converters.alignment(),
 			"movement": Converters.movement(),
@@ -262,6 +263,44 @@ class Converters {
 		return activities;
 	}
 
+    static target() {
+        return (target) => Converters._target(target);
+    }
+
+    static _target(target) {
+        if (!target) return target;
+
+		if (!convertEnabled()) return target;
+		
+		if (target.template.units === "ft") {
+			return foundry.utils.mergeObject(target, {
+			    template: {
+					"size": Converters.footsToMeters(target.template.size),
+					"height": Converters.footsToMeters(target.template.height),
+					"width": Converters.footsToMeters(target.template.width),
+					"units": "m"
+			    },
+			    affects: {
+			        "count": Converters.footsToMeters(target.affects.count)
+			    }
+			});
+		}
+		if (target.template.units === "mi") {
+			return foundry.utils.mergeObject(target, {
+			    template: {
+					"size": Converters.milesToMeters(target.template.size),
+					"height": Converters.milesToMeters(target.template.height),
+					"width": Converters.milesToMeters(target.template.width),
+					"units": "km"
+			    },
+			    affects: {
+			        "count": Converters.milesToMeters(target.affects.count)
+			    }
+			});
+		}
+		return target;
+    }
+
 	static sightRange() {
 		return (range) => Converters._sightRange(range);
 	}
@@ -440,18 +479,11 @@ class Converters {
 	}
 
 	static _source(source) {
-		let keys = Object.keys(sources);
-		let translatedSource = source.book;
-		if (translatedSource) {
-			keys.forEach(key => {
-				translatedSource = translatedSource.replace(key, sources[key])
-			});
-		}
 		return foundry.utils.mergeObject(
 			source, {
-			book: translatedSource
-		}
-		);
+			book: sources[source.book],
+			custom: sources[source.custom]
+		});
 	}
 
 	static type() {
@@ -515,7 +547,7 @@ class Converters {
 					break;
 				case "ItemGrant":
 					foundry.utils.mergeObject(adv, {
-						title: game.i18n.localize("DND5E." + adv.title)
+						title: advName[adv.title] ?? game.i18n.localize("DND5E." + adv.title)
 					});
 					break;
 				case "AbilityScoreImprovement":{
@@ -564,38 +596,42 @@ class Converters {
 		return (data, translations) => Converters._items(data, translations);
 	}
 
-	static _items(data, translations) {
+	static itemsMonster() {
+		return (data, translations) => Converters._items(data, translations, true);
+	}
+
+	static _items(data, translations, fromMonster = false) {
 		if (!Array.isArray(data)) {
 			return data;
 		}
 		data.forEach(item => {
 			switch(item.type){
 				case "loot": 
-					Converters.translateFromConverters(item, translations, "dnd5e.tradegoods");	
-					break;		
-				case "consumable": 					
-				case "container": 
+					Converters.translateFromConverters(item, translations, "dnd5e.tradegoods");
+					break;
+				case "consumable":
+				case "container":
 				case "weapon":
 				case "equipment":
-					Converters.translateFromConverters(item, translations, "dnd5e.items");			
+					Converters.translateFromConverters(item, translations, "dnd5e.items");
 					break;
 				case "spell":
-					Converters.translateFromConverters(item, translations, "dnd5e.spells");			
+					Converters.translateFromConverters(item, translations, "dnd5e.spells");
 					break;
-				case "feat": 
-					Converters.translateFromConverters(item, translations, "dnd5e.classfeatures");			
+				case "feat":
+					fromMonster ? Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures") : Converters.translateFromConverters(item, translations, "dnd5e.classfeatures")
 					break;
 				case "race":
-					Converters.translateFromConverters(item, translations, "dnd5e.races");			
+					Converters.translateFromConverters(item, translations, "dnd5e.races");
 					break;
 				case "class":
-					Converters.translateFromConverters(item, translations, "dnd5e.classes");			
+					Converters.translateFromConverters(item, translations, "dnd5e.classes");
 					break;
 				case "subclass":
-					Converters.translateFromConverters(item, translations, "dnd5e.subclasses");			
+					Converters.translateFromConverters(item, translations, "dnd5e.subclasses");
 					break;
 				case "background":
-					Converters.translateFromConverters(item, translations, "dnd5e.backgrounds");			
+					Converters.translateFromConverters(item, translations, "dnd5e.backgrounds");
 					break;
 				default:
 					console.warn(`Can't find translation for ${item.type}`);
@@ -603,17 +639,14 @@ class Converters {
 					break;
 			}
 
-			let translation = translations[item._id];
-			if (!translation) {								
-				translation = translations[item.name];
-				if (!translation) {	
-					console.warn(`Missing translation : ${item._id} ${item.name}`)
-					return item;					
-				}
+			const translation = translations[item._id] || translations[item.name];
+			if (!translation) {
+				console.warn(`Missing translation : ${item._id} ${item.name}`)
+				return item;
 			}
 
 			return foundry.utils.mergeObject(item, {
-				name: translation.name,				
+				name: translation.name ?? item.name,
 				system: {
 					description: { value: translation.description ?? item.system.description.value },
 					materials: { value: translation.materials ?? item.system.materials?.value }
@@ -624,55 +657,6 @@ class Converters {
 		});
 
 		return data;
-	}
-
-	static itemsMonster() {
-		return (data, translations) => Converters._itemsMonster(data, translations);
-	}
-
-	static _itemsMonster(data, translations) {
-		if (!Array.isArray(data)) {
-			return data;
-		}
-		data.forEach(item => {	
-			switch(item.type){				
-				case "feat": 	
-					Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures");			
-					break;					
-				case "weapon":
-					Converters.translateFromConverters(item, translations, "dnd5e.items");			
-					break;
-				case "spell":
-					Converters.translateFromConverters(item, translations, "dnd5e.spells");				
-					break;
-				default:
-					console.warn(`Can't find translation for ${item.type}`);
-					console.log(`${item.type}`);
-					break;
-			}
-	
-			let translation = translations[item._id];
-			if (!translation) {								
-				translation = translations[item.name];
-				if (!translation) {	
-					console.warn(`Missing translation : ${item._id} ${item.name}`)
-					return item;					
-				}
-			}
-
-			return foundry.utils.mergeObject(item, {
-				name: translation.name,				
-				system: {
-					description: { value: translation.description ?? item.system.description.value },
-					materials: { value: translation.materials ?? item.system.materials?.value }
-				},
-				effects: item.effects.length > 0 ? Converters._effects(item.effects, translation.effects) : item.effects,
-				translated: true,
-			});
-		});
-		
-		return data;
-
 	}
 
 	static translateFromConverters(item, translations, packName) {
@@ -905,8 +889,8 @@ export var classes = {
 	"or higher": "ou plus"
 };
 
-var sources = {
-	"SRD": "DRS"
+export var sources = {
+	"SRD 5.1": "DRS 5.1"
 };
 
 var rarity = {
@@ -917,7 +901,7 @@ var rarity = {
 	"Legendary": "Légendaire"
 };
 
-var hints = {
+export var hints = {
 	"Light Armor, Medium Armor, & Shields (druids will not wear armor or use shields made of metal)": 
 	  "Armures légères, armures intermédiaires, Boucliers (les druides ne portent ni armure ni bouclier faits de métal)",
   
@@ -988,4 +972,5 @@ export var advName = {
 	"Multiattack": "Attaques multiples",
 	"Superior Hunter's Defense": "Défense supérieure du chasseur",
 	"Additionnal Magicat Secrets": "Secrets magiques supplémentaires",
+	"Feature": "Aptitude"
 };
