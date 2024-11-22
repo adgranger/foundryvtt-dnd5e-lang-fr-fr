@@ -601,6 +601,10 @@ export class Converters {
 	}
 
 	static _items(data, translations, fromMonster = false) {
+		if (!translations) {
+            return data;
+        }
+
 		if (!Array.isArray(data)) {
 			return data;
 		}
