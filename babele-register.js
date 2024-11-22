@@ -151,7 +151,7 @@ async function skillSorting() {
  * Utility class with all predefined converters
  */
 
-class Converters {
+export class Converters {
 	
 	// Override babele page to translate tooltips
 	static pages() {
