@@ -377,7 +377,7 @@ export class Converters {
 			tremorsense: convert(senses.tremorsense),
 			truesight: convert(senses.truesight),
 			units: units,
-			special: convert(senses.special)
+			special: specialSenses[senses.special]
 		});
 	}
 
@@ -977,4 +977,9 @@ export var advName = {
 	"Superior Hunter's Defense": "Défense supérieure du chasseur",
 	"Additionnal Magicat Secrets": "Secrets magiques supplémentaires",
 	"Feature": "Aptitude"
+};
+
+export var specialSenses = {
+    "Blind beyond this radius": "ne voit rien au-delà de ce rayon",
+    "10 ft. while deafened (blind beyond this radius)": " 3 m s'il est assourdi (ne voit rien au-delà de ce rayon)"
 };
