@@ -26,8 +26,12 @@
       "converter": "source"
     },
     "effects": {
-        "path": "effects",
-        "converter": "effects"
+      "path": "effects",
+      "converter": "effects"
+    },
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
     },
     "conditional-activation": "system.activation.condition"
   },
@@ -57,7 +61,12 @@
     },
     "Acid (vial)": {
       "name": "Acid (vial)",
-      "description": "<p>As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</p>"
+      "description": "<p>As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</p>",
+      "activities": {
+        "attack": {
+          "chatFlavor": "improvised weapon"
+        }
+      }
     },
     "Adamantine Breastplate": {
       "name": "Adamantine Breastplate",
@@ -93,7 +102,15 @@
     },
     "Alchemist's Fire": {
       "name": "Alchemist's Fire",
-      "description": "<p>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.</p>"
+      "description": "<p>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.</p>",
+      "activities": {
+        "attack": {
+          "chatFlavor": "improvised weapon"
+        },
+        "save": {
+          "chatFlavor": "improvised weapon"
+        }
+      }
     },
     "Alchemist's Supplies": {
       "name": "Alchemist's Supplies",
@@ -121,11 +138,24 @@
     },
     "Amulet of the Planes": {
       "name": "Amulet of the Planes",
-      "description": "<p><em>Wondrous Item (requires attunement)</em></p><p>While wearing this Amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the @UUID[Compendium.dnd5e.spells.Item.J6Jpw5XzB5aTeqnz]{Plane Shift} spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a d100. On a 1-60, you travel to a random location on the plane you named. On a 61-100, you travel to a randomly determined plane of existence.</p>"
+      "description": "<p><em>Wondrous Item (requires attunement)</em></p><p>While wearing this Amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the @UUID[Compendium.dnd5e.spells.Item.J6Jpw5XzB5aTeqnz]{Plane Shift} spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a d100. On a 1-60, you travel to a random location on the plane you named. On a 61-100, you travel to a randomly determined plane of existence.</p>",
+      "activities": {
+        "38pYKge1C3c2wPLF": {
+          "condition": "After a successful Intelligence check"
+        },
+        "Name Location": {
+          "name": "Name Location"
+        }
+      }
     },
     "Animated Shield": {
       "name": "Animated Shield",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command Word"
+        }
+      }
     },
     "Antitoxin": {
       "name": "Antitoxin",
@@ -165,7 +195,12 @@
     },
     "Arrow-Catching Shield": {
       "name": "Arrow-Catching Shield",
-      "description": "<p>You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead.</p>"
+      "description": "<p>You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield's normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead.</p>",
+      "activities": {
+        "utility": {
+          "condition": "A ranged attack within 5 ft."
+        }
+      }
     },
     "Backpack": {
       "name": "Backpack",
@@ -213,7 +248,12 @@
     },
     "Basic Poison": {
       "name": "Basic Poison",
-      "description": "<p>You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying.</p>"
+      "description": "<p>You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying.</p>",
+      "activities": {
+        "save": {
+          "condition": "one slashing or piercing weapon, or up to three pieces of ammunition"
+        }
+      }
     },
     "Basket": {
       "name": "Basket",
@@ -374,7 +414,12 @@
     },
     "Boots of Speed": {
       "name": "Boots of Speed",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While you wear these boots, you can use a bonus action and click the boots' heels together. If you do, the boots double your walking speed, and any creature that makes an opportunity attack against you has disadvantage on the attack roll. If you click your heels together again, you end the effect.</p>\n<p>When the boots' property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While you wear these boots, you can use a bonus action and click the boots' heels together. If you do, the boots double your walking speed, and any creature that makes an opportunity attack against you has disadvantage on the attack roll. If you click your heels together again, you end the effect.</p>\n<p>When the boots' property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Click the heels together."
+        }
+      }
     },
     "Boots of Striding and Springing": {
       "name": "Boots of Striding and Springing",
@@ -396,7 +441,12 @@
     },
     "Bowl of Commanding Water Elementals": {
       "name": "Bowl of Commanding Water Elementals",
-      "description": "<p><em>Wondrous item</em></p>\n<p>While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a <em>@UUID[Compendium.dnd5e.monsters.Actor.namJz755U1EhvEJa]{Water Elemental}</em>, as if you had cast the <em>@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental}</em> spell. The bowl can't be used this way again until the next dawn.</p>\n<p>The bowl is about 1 foot in diameter and half as deep. It weighs 3 pounds and holds about 3 gallons.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>While this bowl is filled with water, you can use an action to speak the bowl's command word and summon a <em>@UUID[Compendium.dnd5e.monsters.Actor.namJz755U1EhvEJa]{Water Elemental}</em>, as if you had cast the <em>@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental}</em> spell. The bowl can't be used this way again until the next dawn.</p>\n<p>The bowl is about 1 foot in diameter and half as deep. It weighs 3 pounds and holds about 3 gallons.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Bracers of Archery": {
       "name": "Bracers of Archery",
@@ -422,7 +472,12 @@
     },
     "Brazier of Commanding Fire Elementals": {
       "name": "Brazier of Commanding Fire Elementals",
-      "description": "<p><em>Wondrous item</em></p>\n<p>While a fire burns in this brazier, you can use an action to speak the brazier's command word and summon a @UUID[Compendium.dnd5e.monsters.Actor.8SMQl75HLjhuSeau]{Fire Elemental}, as if you had cast the <em>@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental}</em> spell. The brazier can't be used this way again until the next dawn.</p>\n<p>The brazier weighs 5 pounds.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>While a fire burns in this brazier, you can use an action to speak the brazier's command word and summon a @UUID[Compendium.dnd5e.monsters.Actor.8SMQl75HLjhuSeau]{Fire Elemental}, as if you had cast the <em>@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental}</em> spell. The brazier can't be used this way again until the next dawn.</p>\n<p>The brazier weighs 5 pounds.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Breastplate": {
       "name": "Breastplate",
@@ -458,7 +513,12 @@
     },
     "Broom of Flying": {
       "name": "Broom of Flying",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This wooden broom, which weighs 3 pounds, functions like a mundane broom until you stand astride it and speak its command word. It then hovers beneath you and can be ridden in the air. It has a flying speed of 50 feet. It can carry up to 400 pounds, but its flying speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land.</p>\n<p>You can send the broom to travel alone to a destination within 1 mile of you if you speak the command word, name the location, and are familiar with that place. The broom comes back to you when you speak another command word, provided that the broom is still within 1 mile of you.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This wooden broom, which weighs 3 pounds, functions like a mundane broom until you stand astride it and speak its command word. It then hovers beneath you and can be ridden in the air. It has a flying speed of 50 feet. It can carry up to 400 pounds, but its flying speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land.</p>\n<p>You can send the broom to travel alone to a destination within 1 mile of you if you speak the command word, name the location, and are familiar with that place. The broom comes back to you when you speak another command word, provided that the broom is still within 1 mile of you.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Bucket": {
       "name": "Bucket",
@@ -498,19 +558,39 @@
     },
     "Carpet of Flying (3x5)": {
       "name": "Carpet of Flying (3x5)",
-      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 3 ft. x 5 ft. and has a speed of 80 feet carrying up to 200 lb, or half that speed when carrying up to 400 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>"
+      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 3 ft. x 5 ft. and has a speed of 80 feet carrying up to 200 lb, or half that speed when carrying up to 400 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Carpet of Flying (4x6)": {
       "name": "Carpet of Flying (4x6)",
-      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 4 ft. x 6 ft. and has a speed of 60 feet carrying up to 400 lb, or half that speed when carrying up to 800 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>"
+      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 4 ft. x 6 ft. and has a speed of 60 feet carrying up to 400 lb, or half that speed when carrying up to 800 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Carpet of Flying (5x7)": {
       "name": "Carpet of Flying (5x7)",
-      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 5 ft. x 7 ft. and has a speed of 40 feet carrying up to 600 lb, or half that speed when carrying up to 1200 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>"
+      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 5 ft. x 7 ft. and has a speed of 40 feet carrying up to 600 lb, or half that speed when carrying up to 1200 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Carpet of Flying (6x9)": {
       "name": "Carpet of Flying (6x9)",
-      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 6 ft. x 9 ft. and has a speed of 30 feet carrying up to 800 lb, or half that speed when carrying up to 1600 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>"
+      "description": "<p><em>Wondrous item</em></p><p>You can speak the carpet's command word as an action to make the carpet hover and fly. It moves according to your spoken directions, provided that you are within 30 feet of it.</p><p>This carpet is 6 ft. x 9 ft. and has a speed of 30 feet carrying up to 800 lb, or half that speed when carrying up to 1600 lb.</p>\n<p>Four sizes of carpet of flying exist. The GM chooses the size of a given carpet or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.Z2OG7jt9R8zofxnJ]{Carpet of Flying} table.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Cartographer's Tools": {
       "name": "Cartographer's Tools",
@@ -522,7 +602,12 @@
     },
     "Censer of Controlling Air Elementals": {
       "name": "Censer of Controlling Air Elementals",
-      "description": "<p><em>Wondrous item</em></p>\n<p>While incense is burning in this censer, you can use an action to speak the censer's command word and summon an @UUID[Compendium.dnd5e.monsters.Actor.banHjKDMCegbUwYE]{Air Elemental}, as if you had cast the @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell. The censer can't be used this way again until the next dawn.</p>\n<p>This 6-inch-wide, 1-foot-high vessel resembles a chalice with a decorated lid. It weighs 1 pound.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>While incense is burning in this censer, you can use an action to speak the censer's command word and summon an @UUID[Compendium.dnd5e.monsters.Actor.banHjKDMCegbUwYE]{Air Elemental}, as if you had cast the @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell. The censer can't be used this way again until the next dawn.</p>\n<p>This 6-inch-wide, 1-foot-high vessel resembles a chalice with a decorated lid. It weighs 1 pound.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Chain (10 feet)": {
       "name": "Chain (10 feet)",
@@ -582,7 +667,12 @@
     },
     "Chime of Opening": {
       "name": "Chime of Opening",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This hollow metal tube measures about 1 foot long and weighs 1 pound. You can strike it as an action, pointing it at an object within 120 feet of you that can be opened, such as a door, lid, or lock. The chime issues a clear tone, and one lock or latch on the object opens unless the sound can't reach the object. If no locks or latches remain, the object itself opens.</p>\n<p>The chime can be used ten times. After the tenth time, it cracks and becomes useless.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This hollow metal tube measures about 1 foot long and weighs 1 pound. You can strike it as an action, pointing it at an object within 120 feet of you that can be opened, such as a door, lid, or lock. The chime issues a clear tone, and one lock or latch on the object opens unless the sound can't reach the object. If no locks or latches remain, the object itself opens.</p>\n<p>The chime can be used ten times. After the tenth time, it cracks and becomes useless.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The sound must reach the target."
+        }
+      }
     },
     "Circlet of Blasting": {
       "name": "Circlet of Blasting",
@@ -602,7 +692,12 @@
     },
     "Cloak of Elvenkind": {
       "name": "Cloak of Elvenkind",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While you wear this cloak with its hood up, Wisdom (Perception) checks made to see you have disadvantage, and you have advantage on Dexterity (Stealth) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Hood must be up."
+        }
+      }
     },
     "Cloak of Protection": {
       "name": "Cloak of Protection",
@@ -619,7 +714,12 @@
     },
     "Cloak of the Manta Ray": {
       "name": "Cloak of the Manta Ray",
-      "description": "<p><em>Wondrous item</em></p>\n<p>While wearing this cloak with its hood up, you can breathe underwater, and you have a swimming speed of 60 feet.</p>\n<p>Pulling the hood up or down requires an action.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>While wearing this cloak with its hood up, you can breathe underwater, and you have a swimming speed of 60 feet.</p>\n<p>Pulling the hood up or down requires an action.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Hood must be up."
+        }
+      }
     },
     "Club": {
       "name": "Club",
@@ -691,11 +791,21 @@
     },
     "Crystal Ball of Mind Reading": {
       "name": "Crystal Ball of Mind Reading",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>The Crystal Ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{Scrying}spell (save DC 17) with it.</p>\n<p>You can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 17) while you are Scrying with the Crystal Ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this Detect Thoughts to maintain it during its duration, but it ends if Scrying ends.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>The Crystal Ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{Scrying}spell (save DC 17) with it.</p>\n<p>You can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 17) while you are Scrying with the Crystal Ball, targeting creatures you can see within 30 feet of the spell's sensor. You don't need to concentrate on this Detect Thoughts to maintain it during its duration, but it ends if Scrying ends.</p>",
+      "activities": {
+        "fRkGCqgiCHP528xk": {
+          "condition": "While you are Scrying with the Crystal Ball"
+        }
+      }
     },
     "Crystal Ball of Telepathy": {
       "name": "Crystal Ball of Telepathy",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>The crystal ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{Scrying} spell (save DC 17) with it.</p>\n<p>While Scrying with the Crystal Ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{Suggestion} spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this Suggestion to maintain it during its duration, but it ends if Scrying ends.</p>\n<p>Once used, the Suggestion power of the Crystal Ball can't be used again until the next dawn.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>The crystal ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{Scrying} spell (save DC 17) with it.</p>\n<p>While Scrying with the Crystal Ball, you can communicate telepathically with creatures you can see within 30 feet of the spell's sensor. You can also use an action to cast the @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{Suggestion} spell (save DC 17) through the sensor on one of those creatures. You don't need to concentrate on this Suggestion to maintain it during its duration, but it ends if Scrying ends.</p>\n<p>Once used, the Suggestion power of the Crystal Ball can't be used again until the next dawn.</p>",
+      "activities": {
+        "5OrwGscvIsTh4piO": {
+          "condition": "While you are Scrying with the Crystal Ball"
+        }
+      }
     },
     "Crystal Ball of True Seeing": {
       "name": "Crystal Ball of True Seeing",
@@ -703,7 +813,12 @@
     },
     "Cube of Force": {
       "name": "Cube of Force",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains 1d20 expended charges daily at dawn.</p>\n<p>You can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of invisible force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration.</p>\n<p>If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains.</p>\n<table border=\"1\">\n<tbody>\n<tr>\n<td><strong>Face</strong></td>\n<td><strong>Charges</strong></td>\n<td><strong>Effect</strong></td>\n</tr>\n<tr>\n<td>1</td>\n<td>1</td>\n<td>Gases, wind, and fog can't pass through the barrier.</td>\n</tr>\n<tr>\n<td>2</td>\n<td>2</td>\n<td>Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion.</td>\n</tr>\n<tr>\n<td>3</td>\n<td>3</td>\n<td>Living matter can't pass through the barrier.</td>\n</tr>\n<tr>\n<td>4</td>\n<td>4</td>\n<td>Spell effects can't pass through the barrier.</td>\n</tr>\n<tr>\n<td>5</td>\n<td>5</td>\n<td>Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion.</td>\n</tr>\n<tr>\n<td>6</td>\n<td>0</td>\n<td>The barrier deactivates.</td>\n</tr>\n</tbody>\n</table>\n<p>The cube loses charges when the barrier is targeted by certain spells or comes into contact with certain spell or magic item effects, as shown in the table below.</p>\n<table border=\"1\">\n<tbody>\n<tr>\n<td><strong>Spell or Item</strong></td>\n<td><strong>Charges Lost</strong></td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.HBHbOGKNVVprSlwn]{Disintegrate}</td>\n<td>1d12</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.items.Item.t7GfyRp3dB3lqS9i]{Horn of Blasting}</td>\n<td>1d10</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.d9MwcXi7Il3HROXd]{Passwall}</td>\n<td>1d6</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.eGMhwmuleAM46C6L]{Prismatic Spray}</td>\n<td>1d20</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{Wall of Fire}</td>\n<td>1d4</td>\n</tr>\n</tbody>\n</table>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This cube is about an inch across. Each face has a distinct marking on it that can be pressed. The cube starts with 36 charges, and it regains 1d20 expended charges daily at dawn.</p>\n<p>You can use an action to press one of the cube's faces, expending a number of charges based on the chosen face, as shown in the Cube of Force Faces table. Each face has a different effect. If the cube has insufficient charges remaining, nothing happens. Otherwise, a barrier of invisible force springs into existence, forming a cube 15 feet on a side. The barrier is centered on you, moves with you, and lasts for 1 minute, until you use an action to press the cube's sixth face, or the cube runs out of charges. You can change the barrier's effect by pressing a different face of the cube and expending the requisite number of charges, resetting the duration.</p>\n<p>If your movement causes the barrier to come into contact with a solid object that can't pass through the cube, you can't move any closer to that object as long as the barrier remains.</p>\n<table border=\"1\">\n<tbody>\n<tr>\n<td><strong>Face</strong></td>\n<td><strong>Charges</strong></td>\n<td><strong>Effect</strong></td>\n</tr>\n<tr>\n<td>1</td>\n<td>1</td>\n<td>Gases, wind, and fog can't pass through the barrier.</td>\n</tr>\n<tr>\n<td>2</td>\n<td>2</td>\n<td>Nonliving matter can't pass through the barrier. Walls, floors, and ceilings can pass through at your discretion.</td>\n</tr>\n<tr>\n<td>3</td>\n<td>3</td>\n<td>Living matter can't pass through the barrier.</td>\n</tr>\n<tr>\n<td>4</td>\n<td>4</td>\n<td>Spell effects can't pass through the barrier.</td>\n</tr>\n<tr>\n<td>5</td>\n<td>5</td>\n<td>Nothing can pass through the barrier. Walls, floors, and ceilings can pass through at your discretion.</td>\n</tr>\n<tr>\n<td>6</td>\n<td>0</td>\n<td>The barrier deactivates.</td>\n</tr>\n</tbody>\n</table>\n<p>The cube loses charges when the barrier is targeted by certain spells or comes into contact with certain spell or magic item effects, as shown in the table below.</p>\n<table border=\"1\">\n<tbody>\n<tr>\n<td><strong>Spell or Item</strong></td>\n<td><strong>Charges Lost</strong></td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.HBHbOGKNVVprSlwn]{Disintegrate}</td>\n<td>1d12</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.items.Item.t7GfyRp3dB3lqS9i]{Horn of Blasting}</td>\n<td>1d10</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.d9MwcXi7Il3HROXd]{Passwall}</td>\n<td>1d6</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.eGMhwmuleAM46C6L]{Prismatic Spray}</td>\n<td>1d20</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{Wall of Fire}</td>\n<td>1d4</td>\n</tr>\n</tbody>\n</table>",
+      "activities": {
+        "utility": {
+          "condition": "Must have enough charges for the face pressed otherwise the Action is lost."
+        }
+      }
     },
     "Cubic Gate": {
       "name": "Cubic Gate",
@@ -767,7 +882,12 @@
     },
     "Decanter of Endless Water": {
       "name": "Decanter of Endless Water",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds.</p>\n<p>You can use an action to remove the stopper and speak one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following options:</p>\n<p>• \"Stream\" produces 1 gallon of water.</p>\n<p>• \"Fountain\" produces 5 gallons of water.</p>\n<p>• \"Geyser\" produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a Bonus Action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This stoppered flask sloshes when shaken, as if it contains water. The decanter weighs 2 pounds.</p>\n<p>You can use an action to remove the stopper and speak one of three command words, whereupon an amount of fresh water or salt water (your choice) pours out of the flask. The water stops pouring out at the start of your next turn. Choose from the following options:</p>\n<p>• \"Stream\" produces 1 gallon of water.</p>\n<p>• \"Fountain\" produces 5 gallons of water.</p>\n<p>• \"Geyser\" produces 30 gallons of water that gushes forth in a geyser 30 feet long and 1 foot wide. As a Bonus Action while holding the decanter, you can aim the geyser at a creature you can see within 30 feet of you. The target must succeed on a DC 13 Strength saving throw or take 1d4 bludgeoning damage and fall prone. Instead of a creature, you can target an object that isn't being worn or carried and that weighs no more than 200 pounds. The object is either knocked over or pushed up to 15 feet away from you.</p>",
+      "activities": {
+        "save": {
+          "condition": "Command word."
+        }
+      }
     },
     "Deck of Illusions": {
       "name": "Deck of Illusions",
@@ -807,7 +927,12 @@
     },
     "Dimensional Shackles": {
       "name": "Dimensional Shackles",
-      "description": "<p><em>Wondrous item</em></p>\n<p>You can use an action to place these shackles on an incapacitated creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing through an interdimensional portal.</p>\n<p>You and any creature you designate when you use the shackles can use an action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a success, the creature breaks free and destroys the shackles.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>You can use an action to place these shackles on an incapacitated creature. The shackles adjust to fit a creature of Small to Large size. In addition to serving as mundane manacles, the shackles prevent a creature bound by them from using any method of extradimensional movement, including teleportation or travel to a different plane of existence. They don't prevent the creature from passing through an interdimensional portal.</p>\n<p>You and any creature you designate when you use the shackles can use an action to remove them. Once every 30 days, the bound creature can make a DC 30 Strength (Athletics) check. On a success, the creature breaks free and destroys the shackles.</p>",
+      "activities": {
+        "save": {
+          "condition": "Creature of Small to Large and must be incapacitated."
+        }
+      }
     },
     "Diplomat's Pack": {
       "name": "Diplomat's Pack",
@@ -955,7 +1080,12 @@
     },
     "Feather Token Whip": {
       "name": "Feather Token Whip",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The GM chooses the kind of token or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.OEdr086W61t1DRJo]{Feather Token} table.</p>\n<p><strong>Whip.</strong> You can use an action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. On a hit, the target takes 1d6 + 5 force damage.</p>\n<p>As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are incapacitated or die.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This tiny object looks like a feather. Different types of feather tokens exist, each with a different single-use effect. The GM chooses the kind of token or determines it randomly from the @UUID[Compendium.dnd5e.tables.RollTable.OEdr086W61t1DRJo]{Feather Token} table.</p>\n<p><strong>Whip.</strong> You can use an action to throw the token to a point within 10 feet of you. The token disappears, and a floating whip takes its place. You can then use a bonus action to make a melee spell attack against a creature within 10 feet of the whip, with an attack bonus of +9. On a hit, the target takes 1d6 + 5 force damage.</p>\n<p>As a bonus action on your turn, you can direct the whip to fly up to 20 feet and repeat the attack against a creature within 10 feet of it. The whip disappears after 1 hour, when you use an action to dismiss it, or when you are incapacitated or die.</p>",
+      "activities": {
+        "attack": {
+          "condition": "A bonus action is used to control the whip."
+        }
+      }
     },
     "Feed": {
       "name": "Feed",
@@ -1031,23 +1161,48 @@
     },
     "Flame Tongue Greatsword": {
       "name": "Flame Tongue Greatsword",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attack (Flaming)"
+        }
+      }
     },
     "Flame Tongue Longsword": {
       "name": "Flame Tongue Longsword",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attack (Flaming)"
+        }
+      }
     },
     "Flame Tongue Rapier": {
       "name": "Flame Tongue Rapier",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attack (Flaming)"
+        }
+      }
     },
     "Flame Tongue Scimitar": {
       "name": "Flame Tongue Scimitar",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attack (Flaming)"
+        }
+      }
     },
     "Flame Tongue Shortsword": {
       "name": "Flame Tongue Shortsword",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>You can use a bonus action to speak this magic sword's command word, causing flames to erupt from the blade. These flames shed bright light in a 40-foot radius and dim light for an additional 40 feet. While the sword is ablaze, it deals an extra 2d6 fire damage to any target it hits. The flames last until you use a bonus action to speak the command word again or until you drop or sheathe the sword.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attack (Flaming)"
+        }
+      }
     },
     "Flask": {
       "name": "Flask",
@@ -1055,7 +1210,12 @@
     },
     "Flask of Holy Water": {
       "name": "Flask of Holy Water",
-      "description": "<p>As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged Attack against a target creature, treating the holy water as an Improvised Weapon. If the target is a fiend or Undead, it takes 2d6 radiant damage. A Cleric or Paladin may create holy water by performing a Special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.</p>"
+      "description": "<p>As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged Attack against a target creature, treating the holy water as an Improvised Weapon. If the target is a fiend or Undead, it takes 2d6 radiant damage. A Cleric or Paladin may create holy water by performing a Special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Target must be a fiend or undead."
+        }
+      }
     },
     "Flute": {
       "name": "Flute",
@@ -1100,11 +1260,21 @@
     },
     "Gem of Brightness": {
       "name": "Gem of Brightness",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This prism has 50 charges. While you are holding it, you can use an action to speak one of three command words to cause one of the following effects:</p>\n<ul>\n<li>The first command word causes the gem to shed bright light in a 30-foot radius and dim light for an additional 30 feet. This effect doesn't expend a charge. It lasts until you use a bonus action to repeat the command word or until you use another function of the gem.</li>\n<li>The second command word expends 1 charge and causes the gem to fire a brilliant beam of light at one creature you can see within 60 feet of you. The creature must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</li>\n<li>The third command word expends 5 charges and causes the gem to flare with blinding light in a 30- foot cone originating from it. Each creature in the cone must make a saving throw as if struck by the beam created with the second command word.</li>\n</ul>\n<p>When all of the gem's charges are expended, the gem becomes a nonmagical jewel worth 50 gp.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This prism has 50 charges. While you are holding it, you can use an action to speak one of three command words to cause one of the following effects:</p>\n<ul>\n<li>The first command word causes the gem to shed bright light in a 30-foot radius and dim light for an additional 30 feet. This effect doesn't expend a charge. It lasts until you use a bonus action to repeat the command word or until you use another function of the gem.</li>\n<li>The second command word expends 1 charge and causes the gem to fire a brilliant beam of light at one creature you can see within 60 feet of you. The creature must succeed on a DC 15 Constitution saving throw or become blinded for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</li>\n<li>The third command word expends 5 charges and causes the gem to flare with blinding light in a 30- foot cone originating from it. Each creature in the cone must make a saving throw as if struck by the beam created with the second command word.</li>\n</ul>\n<p>When all of the gem's charges are expended, the gem becomes a nonmagical jewel worth 50 gp.</p>",
+      "activities": {
+        "save": {
+          "condition": "Command word."
+        }
+      }
     },
     "Gem of Seeing": {
       "name": "Gem of Seeing",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This gem has 3 charges. As an action, you can speak the gem's command word and expend 1 charge. For the next 10 minutes, you have truesight out to 120 feet when you peer through the gem.</p>\n<p>The gem regains 1d3 expended charges daily at dawn.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This gem has 3 charges. As an action, you can speak the gem's command word and expend 1 charge. For the next 10 minutes, you have truesight out to 120 feet when you peer through the gem.</p>\n<p>The gem regains 1d3 expended charges daily at dawn.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Giant Slayer Battleaxe": {
       "name": "Giant Slayer Battleaxe",
@@ -1156,7 +1326,12 @@
     },
     "Glamoured Studded Leather": {
       "name": "Glamoured Studded Leather",
-      "description": "<p>While wearing this armor, you gain a +1 bonus to AC. You can also use a bonus action to speak the armor's command word and cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like, including color, style, and accessories, but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or remove the armor.</p>"
+      "description": "<p>While wearing this armor, you gain a +1 bonus to AC. You can also use a bonus action to speak the armor's command word and cause the armor to assume the appearance of a normal set of clothing or some other kind of armor. You decide what it looks like, including color, style, and accessories, but the armor retains its normal bulk and weight. The illusory appearance lasts until you use this property again or remove the armor.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Glass Bottle": {
       "name": "Glass Bottle",
@@ -1232,11 +1407,27 @@
     },
     "Greatsword of Life Stealing": {
       "name": "Greatsword of Life Stealing",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        },
+        "utility": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        }
+      }
     },
     "Greatsword of Sharpness": {
       "name": "Greatsword of Sharpness",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</p>\n<p>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.</p>\n<p>In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</p>\n<p>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.</p>\n<p>In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Command word."
+        },
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Greatsword of Wounding": {
       "name": "Greatsword of Wounding",
@@ -1285,6 +1476,19 @@
     "Hammer of Thunderbolts": {
       "name": "Hammer of Thunderbolts",
       "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon (maul).</p>\n<p><strong>Giant's Bane</strong> (<em>requires attunement</em>)</p>\n<p>You must be wearing a Belt of Giant Strength (any variety) and Gauntlets of Ogre Power to attune to this weapon. The attunement ends if you take off either of those items. While you are attuned to this weapon and holding it, your Strength score increases by 4 and can exceed 20, but not 30.</p>\n<p>When you roll a 20 on an attack roll made with this weapon against a giant, the giant must succeed on a DC 17 Constitution saving throw or die.</p>\n<p>The hammer also has 5 charges. While attuned to it, you can expend 1 charge and make a ranged weapon attack with the hammer, hurling it as if it had the thrown property with a normal range of 20 feet and a long range of 60 feet. If the attack hits, the hammer unleashes a thunderclap audible out to 300 feet. The target and every creature within 30 feet of it must succeed on a DC 17 Constitution saving throw or be stunned until the end of your next turn. The hammer regains 1d4 + 1 expended charges daily at dawn.</p>",
+      "activities": {
+        "Giant's Bane (On Crit)": {
+          "name": "Giant's Bane (On Crit)",
+          "chatFlavor": "A giant must succeed or die"
+        },
+        "Hurl Hammer": {
+          "name": "Hurl Hammer"
+        },
+        "Thunderclap": {
+          "name": "Thunderclap",
+          "chatFlavor": "Succeed or be stunned"
+        }
+      },
       "effects": {
         "Hammer of Thunderbolts": {
           "name": "Hammer of Thunderbolts",
@@ -1358,7 +1562,21 @@
     },
     "Helm of Brilliance": {
       "name": "Helm of Brilliance",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This dazzling helm is set with 1d10 diamonds, 2d10 rubies, 3d10 fire opals, and 4d10 opals. Any gem pried from the helm crumbles to dust. When all the gems are removed or destroyed, the helm loses its magic.</p>\n<p>You gain the following benefits while wearing it:</p>\n<ul>\n<li>You can use an action to cast one of the following spells (save DC 18), using one of the helm's gems of the specified type as a component: @UUID[Compendium.dnd5e.spells.Item.BP3GCwa66IAw1yTG]{Daylight} (opal), @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} (fire opal), @UUID[Compendium.dnd5e.spells.Item.eGMhwmuleAM46C6L]{Prismatic Spray} (diamond), or @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{Wall of Fire} (ruby). The gem is destroyed when the spell is cast and disappears from the helm.</li>\n<li>As long as it has at least one diamond, the helm emits dim light in a 30-foot radius when at least one undead is within that area. Any undead that starts its turn in that area takes 1d6 radiant damage.</li>\n<li>As long as the helm has at least one ruby, you have resistance to fire damage.</li>\n<li>As long as the helm has at least one fire opal, you can use an action and speak a command word to cause one weapon you are holding to burst into flames. The flames emit bright light in a 10-foot radius and dim light for an additional 10 feet. The flames are harmless to you and the weapon. When you hit with an attack using the blazing weapon, the target takes an extra 1d6 fire damage. The flames last until you use a bonus action to speak the command word again or until you drop or stow the weapon.</li>\n</ul>\n<p>Roll a d20 if you are wearing the helm and take fire damage as a result of failing a saving throw against a spell. On a roll of 1, the helm emits beams of light from its remaining gems. Each creature within 60 feet of the helm other than you must succeed on a DC 17 Dexterity saving throw or be struck by a beam, taking radiant damage equal to the number of gems in the helm. The helm and its gems are then destroyed.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This dazzling helm is set with 1d10 diamonds, 2d10 rubies, 3d10 fire opals, and 4d10 opals. Any gem pried from the helm crumbles to dust. When all the gems are removed or destroyed, the helm loses its magic.</p>\n<p>You gain the following benefits while wearing it:</p>\n<ul>\n<li>You can use an action to cast one of the following spells (save DC 18), using one of the helm's gems of the specified type as a component: @UUID[Compendium.dnd5e.spells.Item.BP3GCwa66IAw1yTG]{Daylight} (opal), @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} (fire opal), @UUID[Compendium.dnd5e.spells.Item.eGMhwmuleAM46C6L]{Prismatic Spray} (diamond), or @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{Wall of Fire} (ruby). The gem is destroyed when the spell is cast and disappears from the helm.</li>\n<li>As long as it has at least one diamond, the helm emits dim light in a 30-foot radius when at least one undead is within that area. Any undead that starts its turn in that area takes 1d6 radiant damage.</li>\n<li>As long as the helm has at least one ruby, you have resistance to fire damage.</li>\n<li>As long as the helm has at least one fire opal, you can use an action and speak a command word to cause one weapon you are holding to burst into flames. The flames emit bright light in a 10-foot radius and dim light for an additional 10 feet. The flames are harmless to you and the weapon. When you hit with an attack using the blazing weapon, the target takes an extra 1d6 fire damage. The flames last until you use a bonus action to speak the command word again or until you drop or stow the weapon.</li>\n</ul>\n<p>Roll a d20 if you are wearing the helm and take fire damage as a result of failing a saving throw against a spell. On a roll of 1, the helm emits beams of light from its remaining gems. Each creature within 60 feet of the helm other than you must succeed on a DC 17 Dexterity saving throw or be struck by a beam, taking radiant damage equal to the number of gems in the helm. The helm and its gems are then destroyed.</p>",
+      "activities": {
+        "Daylight (opal)": {
+          "name": "Daylight (opal)"
+        },
+        "Fireball (fire opal)": {
+          "name": "Fireball (fire opal)"
+        },
+        "Prismatic Spray (diamond)": {
+          "name": "Prismatic Spray (diamond)"
+        },
+        "Wall of Fire (opal)": {
+          "name": "Wall of Fire (opal)"
+        }
+      }
     },
     "Helm of Comprehending Languages": {
       "name": "Helm of Comprehending Languages",
@@ -1366,7 +1584,16 @@
     },
     "Helm of Telepathy": {
       "name": "Helm of Telepathy",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While wearing this helm, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 13) from it. As long as you maintain concentration on the spell, you can use a bonus action to send a telepathic message to a creature you are focused on. It can reply using a bonus action to do so while your focus on it continues.<br />While focusing on a creature with Detect Thoughts, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{Suggestion} spell (save DC 13) from the helm on that creature. Once used, the Suggestion property can't be used again until the next dawn.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While wearing this helm, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 13) from it. As long as you maintain concentration on the spell, you can use a bonus action to send a telepathic message to a creature you are focused on. It can reply using a bonus action to do so while your focus on it continues.<br />While focusing on a creature with Detect Thoughts, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{Suggestion} spell (save DC 13) from the helm on that creature. Once used, the Suggestion property can't be used again until the next dawn.</p>",
+      "activities": {
+        "HG9ikbJ7bHYwKcug": {
+          "condition": "While focusing on a creature with Detect Thoughts"
+        },
+        "Telepathic Message": {
+          "name": "Telepathic Message",
+          "condition": "While focusing on a creature with Detect Thoughts"
+        }
+      }
     },
     "Helm of Teleportation": {
       "name": "Helm of Teleportation",
@@ -1374,7 +1601,12 @@
     },
     "Hempen Rope (50 ft.)": {
       "name": "Hempen Rope (50 ft.)",
-      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>"
+      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>",
+      "activities": {
+        "Burst": {
+          "name": "Burst"
+        }
+      }
     },
     "Herbalism Kit": {
       "name": "Herbalism Kit",
@@ -1430,7 +1662,15 @@
     },
     "Horn of Blasting": {
       "name": "Horn of Blasting",
-      "description": "<p><em>Wondrous item</em></p>\n<p>You can use an action to speak the horn's command word and then blow the horn, which emits a thunderous blast in a 30-foot cone that is audible 600 feet away. Each creature in the cone must make a DC 15 Constitution saving throw. On a failed save, a creature takes 5d6 thunder damage and is deafened for 1 minute. On a successful save, a creature takes half as much damage and isn't deafened. Creatures and objects made of glass or crystal have disadvantage on the saving throw and take 10d6 thunder damage instead of 5d6.</p>\n<p>Each use of the horn's magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 fire damage to the blower and destroys the horn.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>You can use an action to speak the horn's command word and then blow the horn, which emits a thunderous blast in a 30-foot cone that is audible 600 feet away. Each creature in the cone must make a DC 15 Constitution saving throw. On a failed save, a creature takes 5d6 thunder damage and is deafened for 1 minute. On a successful save, a creature takes half as much damage and isn't deafened. Creatures and objects made of glass or crystal have disadvantage on the saving throw and take 10d6 thunder damage instead of 5d6.</p>\n<p>Each use of the horn's magic has a 20 percent chance of causing the horn to explode. The explosion deals 10d6 fire damage to the blower and destroys the horn.</p>",
+      "activities": {
+        "save": {
+          "condition": "Command word and blow the horn."
+        },
+        "utility": {
+          "condition": "Command word and blow the horn."
+        }
+      }
     },
     "Horseshoes of Speed": {
       "name": "Horseshoes of Speed",
@@ -1462,7 +1702,12 @@
     },
     "Instant Fortress": {
       "name": "Instant Fortress",
-      "description": "<p><em>Wondrous item</em></p>\n<p>You can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.</p>\n<p>The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the @UUID[Compendium.dnd5e.spells.Item.1nhIxh0DsJsntCfj]{Knock} spell and similar magic, such as that of a @UUID[Compendium.dnd5e.items.Item.vZdLYfHlLcZqQ8zc]{Chime of Opening}.</p>\n<p>Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically.</p>\n<p>The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points, immunity to damage from nonmagical weapons excluding siege weapons, and resistance to all other damage. Only a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell can repair the fortress (this use of the spell counts as replicating a spell of 8th level or lower). Each casting of Wish causes the roof, the door, or one wall to regain 50 hit points.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>You can use an action to place this 1-inch metal cube on the ground and speak its command word. The cube rapidly grows into a fortress that remains until you use an action to speak the command word that dismisses it, which works only if the fortress is empty.</p>\n<p>The fortress is a square tower, 20 feet on a side and 30 feet high, with arrow slits on all sides and a battlement atop it. Its interior is divided into two floors, with a ladder running along one wall to connect them. The ladder ends at a trapdoor leading to the roof. When activated, the tower has a small door on the side facing you. The door opens only at your command, which you can speak as a bonus action. It is immune to the @UUID[Compendium.dnd5e.spells.Item.1nhIxh0DsJsntCfj]{Knock} spell and similar magic, such as that of a @UUID[Compendium.dnd5e.items.Item.vZdLYfHlLcZqQ8zc]{Chime of Opening}.</p>\n<p>Each creature in the area where the fortress appears must make a DC 15 Dexterity saving throw, taking 10d10 bludgeoning damage on a failed save, or half as much damage on a successful one. In either case, the creature is pushed to an unoccupied space outside but next to the fortress. Objects in the area that aren't being worn or carried take this damage and are pushed automatically.</p>\n<p>The tower is made of adamantine, and its magic prevents it from being tipped over. The roof, the door, and the walls each have 100 hit points, immunity to damage from nonmagical weapons excluding siege weapons, and resistance to all other damage. Only a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell can repair the fortress (this use of the spell counts as replicating a spell of 8th level or lower). Each casting of Wish causes the roof, the door, or one wall to regain 50 hit points.</p>",
+      "activities": {
+        "save": {
+          "condition": "Command word."
+        }
+      }
     },
     "Ioun Stone of Absorption": {
       "name": "Ioun Stone of Absorption",
@@ -1562,7 +1807,12 @@
     },
     "Iron Bands of Binding": {
       "name": "Iron Bands of Binding",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can use an action to speak the command word and throw the sphere at a Huge or smaller creature you can see within 60 feet of you. As the sphere moves through the air, it opens into a tangle of metal bands.</p>\n<p>Make a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your proficiency bonus. On a hit, the target is restrained until you take a bonus action to speak the command word again to release it. Doing so, or missing with the attack, causes the bands to contract and become a sphere once more.</p>\n<p>A creature, including the one restrained, can use an action to make a DC 20 Strength check to break the iron bands. On a success, the item is destroyed, and the restrained creature is freed. If the check fails, any further attempts made by that creature automatically fail until 24 hours have elapsed.</p>\n<p>Once the bands are used, they can't be used again until the next dawn.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This rusty iron sphere measures 3 inches in diameter and weighs 1 pound. You can use an action to speak the command word and throw the sphere at a Huge or smaller creature you can see within 60 feet of you. As the sphere moves through the air, it opens into a tangle of metal bands.</p>\n<p>Make a ranged attack roll with an attack bonus equal to your Dexterity modifier plus your proficiency bonus. On a hit, the target is restrained until you take a bonus action to speak the command word again to release it. Doing so, or missing with the attack, causes the bands to contract and become a sphere once more.</p>\n<p>A creature, including the one restrained, can use an action to make a DC 20 Strength check to break the iron bands. On a success, the item is destroyed, and the restrained creature is freed. If the check fails, any further attempts made by that creature automatically fail until 24 hours have elapsed.</p>\n<p>Once the bands are used, they can't be used again until the next dawn.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Command word. Target creature must be Huge or smaller."
+        }
+      }
     },
     "Iron Flask": {
       "name": "Iron Flask",
@@ -1598,7 +1848,18 @@
     },
     "Javelin of Lightning": {
       "name": "Javelin of Lightning",
-      "description": "<p>This javelin is a magic weapon. When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding you and the target must make a DC 13 Dexterity saving throw, taking 4d6 lightning damage on a failed save, and half as much damage on a successful one. The lightning bolt turns back into a javelin when it reaches the target. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus 4d6 lightning damage.</p>\n<p>The javelin's property can't be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon.</p>"
+      "description": "<p>This javelin is a magic weapon. When you hurl it and speak its command word, it transforms into a bolt of lightning, forming a line 5 feet wide that extends out from you to a target within 120 feet. Each creature in the line excluding you and the target must make a DC 13 Dexterity saving throw, taking 4d6 lightning damage on a failed save, and half as much damage on a successful one. The lightning bolt turns back into a javelin when it reaches the target. Make a ranged weapon attack against the target. On a hit, the target takes damage from the javelin plus 4d6 lightning damage.</p>\n<p>The javelin's property can't be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Command word."
+        },
+        "save": {
+          "condition": "Command word."
+        },
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Jeweler's Tools": {
       "name": "Jeweler's Tools",
@@ -1730,11 +1991,27 @@
     },
     "Longsword of Life Stealing": {
       "name": "Longsword of Life Stealing",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        },
+        "utility": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        }
+      }
     },
     "Longsword of Sharpness": {
       "name": "Longsword of Sharpness",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</p>\n<p>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.</p>\n<p>In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</p>\n<p>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.</p>\n<p>In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Command word."
+        },
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Longsword of Wounding": {
       "name": "Longsword of Wounding",
@@ -1802,7 +2079,15 @@
     },
     "Manacles": {
       "name": "Manacles",
-      "description": "<p>These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check. Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points.</p>"
+      "description": "<p>These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check. Each set of manacles comes with one key. Without the key, a creature proficient with thieves' tools can pick the manacles' lock with a successful DC 15 Dexterity check. Manacles have 15 hit points.</p>",
+      "activities": {
+        "check": {
+          "condition": "Creature must be Small or Medium."
+        },
+        "save": {
+          "condition": "Creature must be Small or Medium."
+        }
+      }
     },
     "Mantle of Spell Resistance": {
       "name": "Mantle of Spell Resistance",
@@ -1810,11 +2095,21 @@
     },
     "Manual of Bodily Health": {
       "name": "Manual of Bodily Health",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains health and diet tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains health and diet tips, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Constitution score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The book must be completed in 6 days or less."
+        }
+      }
     },
     "Manual of Gainful Exercise": {
       "name": "Manual of Gainful Exercise",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This book describes fitness exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Strength score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The book must be completed in 6 days or less."
+        }
+      }
     },
     "Manual of Golems": {
       "name": "Manual of Golems",
@@ -1822,7 +2117,12 @@
     },
     "Manual of Quickness of Action": {
       "name": "Manual of Quickness of Action",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains coordination and balance exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Dexterity score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains coordination and balance exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Dexterity score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The book must be completed in 6 days or less."
+        }
+      }
     },
     "Map Case": {
       "name": "Map Case",
@@ -1878,7 +2178,12 @@
     },
     "Mirror of Life Trapping": {
       "name": "Mirror of Life Trapping",
-      "description": "<p><em>Wondrous item</em></p>\n<p>When this 4-foot-tall mirror is viewed indirectly, its surface shows faint images of creatures. The mirror weighs 50 pounds, and it has AC 11, 10 hit points, and vulnerability to bludgeoning damage. It shatters and is destroyed when reduced to 0 hit points.</p>\n<p>If the mirror is hanging on a vertical surface and you are within 5 feet of it, you can use an action to speak its command word and activate it. It remains activated until you use an action to speak the command word again.</p>\n<p>Any creature other than you that sees its reflection in the activated mirror while within 30 feet of it must succeed on a DC 15 Charisma saving throw or be trapped, along with anything it is wearing or carrying, in one of the mirror's twelve extradimensional cells. This saving throw is made with advantage if the creature knows the mirror's nature, and constructs succeed on the saving throw automatically.</p>\n<p>An extradimensional cell is an infinite expanse filled with thick fog that reduces visibility to 10 feet. Creatures trapped in the mirror's cells don't age, and they don't need to eat, drink, or sleep. A creature trapped within a cell can escape using magic that permits planar travel. Otherwise, the creature is confined to the cell until freed.</p>\n<p>If the mirror traps a creature but its twelve extradimensional cells are already occupied, the mirror frees one trapped creature at random to accommodate the new prisoner. A freed creature appears in an unoccupied space within sight of the mirror but facing away from it. If the mirror is shattered, all creatures it contains are freed and appear in unoccupied spaces near it.</p>\n<p>While within 5 feet of the mirror, you can use an action to speak the name of one creature trapped in it or call out a particular cell by number. The creature named or contained in the named cell appears as an image on the mirror's surface. You and the creature can then communicate normally.</p>\n<p>In a similar way, you can use an action to speak a second command word and free one creature trapped in the mirror. The freed creature appears, along with its possessions, in the unoccupied space nearest to the mirror and facing away from it.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>When this 4-foot-tall mirror is viewed indirectly, its surface shows faint images of creatures. The mirror weighs 50 pounds, and it has AC 11, 10 hit points, and vulnerability to bludgeoning damage. It shatters and is destroyed when reduced to 0 hit points.</p>\n<p>If the mirror is hanging on a vertical surface and you are within 5 feet of it, you can use an action to speak its command word and activate it. It remains activated until you use an action to speak the command word again.</p>\n<p>Any creature other than you that sees its reflection in the activated mirror while within 30 feet of it must succeed on a DC 15 Charisma saving throw or be trapped, along with anything it is wearing or carrying, in one of the mirror's twelve extradimensional cells. This saving throw is made with advantage if the creature knows the mirror's nature, and constructs succeed on the saving throw automatically.</p>\n<p>An extradimensional cell is an infinite expanse filled with thick fog that reduces visibility to 10 feet. Creatures trapped in the mirror's cells don't age, and they don't need to eat, drink, or sleep. A creature trapped within a cell can escape using magic that permits planar travel. Otherwise, the creature is confined to the cell until freed.</p>\n<p>If the mirror traps a creature but its twelve extradimensional cells are already occupied, the mirror frees one trapped creature at random to accommodate the new prisoner. A freed creature appears in an unoccupied space within sight of the mirror but facing away from it. If the mirror is shattered, all creatures it contains are freed and appear in unoccupied spaces near it.</p>\n<p>While within 5 feet of the mirror, you can use an action to speak the name of one creature trapped in it or call out a particular cell by number. The creature named or contained in the named cell appears as an image on the mirror's surface. You and the creature can then communicate normally.</p>\n<p>In a similar way, you can use an action to speak a second command word and free one creature trapped in the mirror. The freed creature appears, along with its possessions, in the unoccupied space nearest to the mirror and facing away from it.</p>",
+      "activities": {
+        "save": {
+          "condition": "Command word. Target must be able to see its reflection."
+        }
+      }
     },
     "Mithral Breastplate": {
       "name": "Mithral Breastplate",
@@ -1942,7 +2247,30 @@
     },
     "Necklace of Prayer Beads": {
       "name": "Necklace of Prayer Beads",
-      "description": "<p><em>Wondrous item, (requires attunement by a cleric, druid, or paladin)</em></p><p>This necklace has 1d4 + 2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.</p><p>Six types of magic beads exist. The GM decides the type of each bead on the necklace or determines it randomly. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a bonus action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn.</p><p>Use the @UUID[Compendium.dnd5e.tables.RollTable.XHTUTUXdyzcPbodw]{Necklace of Prayer Beads} table and refer to the table below for detailed descriptions on each bead</p><table><thead><tr><th><strong>d20</strong></th><th><strong>Bead of…</strong></th><th><strong>Spell</strong></th><th><strong>Guide Price per Bead (gp)</strong></th></tr></thead><tbody><tr><td>1-6</td><td>Blessing</td><td>@UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{Bless}</td><td>2,000</td></tr><tr><td>7-12</td><td>Curing</td><td>@UUID[Compendium.dnd5e.spells.Item.uUWb1wZgtMou0TVP]{Cure Wounds} (2nd level) or @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{Lesser Restoration}</td><td>4,000</td></tr><tr><td>13-16</td><td>Favor</td><td>@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration}</td><td>32,000</td></tr><tr><td>17-18</td><td>Smiting</td><td>@UUID[Compendium.dnd5e.spells.Item.7UwUjJ6owIQkEPrs]{Branding Smite}</td><td>1,500</td></tr><tr><td>19</td><td>Summons</td><td>@UUID[Compendium.dnd5e.spells.Item.fkREcytuZ8sngWtC]{Planar Ally}</td><td>128,000</td></tr><tr><td>20</td><td>Wind Walking</td><td>@UUID[Compendium.dnd5e.spells.Item.8PJAsHmbu6UgDHC0]{Wind Walk}</td><td>96,000</td></tr></tbody></table><section class=\"secret foundry-note\" id=\"secret-7DOXr3q6fDOOCepZ\"><p><strong>Foundry Note</strong></p><p>Each activity uses correspond to the number of beads of that type available, and should be adjusted to match the proper values. The item's uses as a whole track the number of Beads of Curing.</p><p>Additionally, the guide price is a guide only and should be adjusted accordingly to reflect the Dungeon Master's world.</p></section>"
+      "description": "<p><em>Wondrous item, (requires attunement by a cleric, druid, or paladin)</em></p><p>This necklace has 1d4 + 2 magic beads made from aquamarine, black pearl, or topaz. It also has many nonmagical beads made from stones such as amber, bloodstone, citrine, coral, jade, pearl, or quartz. If a magic bead is removed from the necklace, that bead loses its magic.</p><p>Six types of magic beads exist. The GM decides the type of each bead on the necklace or determines it randomly. A necklace can have more than one bead of the same type. To use one, you must be wearing the necklace. Each bead contains a spell that you can cast from it as a bonus action (using your spell save DC if a save is necessary). Once a magic bead's spell is cast, that bead can't be used again until the next dawn.</p><p>Use the @UUID[Compendium.dnd5e.tables.RollTable.XHTUTUXdyzcPbodw]{Necklace of Prayer Beads} table and refer to the table below for detailed descriptions on each bead</p><table><thead><tr><th><strong>d20</strong></th><th><strong>Bead of…</strong></th><th><strong>Spell</strong></th><th><strong>Guide Price per Bead (gp)</strong></th></tr></thead><tbody><tr><td>1-6</td><td>Blessing</td><td>@UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{Bless}</td><td>2,000</td></tr><tr><td>7-12</td><td>Curing</td><td>@UUID[Compendium.dnd5e.spells.Item.uUWb1wZgtMou0TVP]{Cure Wounds} (2nd level) or @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{Lesser Restoration}</td><td>4,000</td></tr><tr><td>13-16</td><td>Favor</td><td>@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration}</td><td>32,000</td></tr><tr><td>17-18</td><td>Smiting</td><td>@UUID[Compendium.dnd5e.spells.Item.7UwUjJ6owIQkEPrs]{Branding Smite}</td><td>1,500</td></tr><tr><td>19</td><td>Summons</td><td>@UUID[Compendium.dnd5e.spells.Item.fkREcytuZ8sngWtC]{Planar Ally}</td><td>128,000</td></tr><tr><td>20</td><td>Wind Walking</td><td>@UUID[Compendium.dnd5e.spells.Item.8PJAsHmbu6UgDHC0]{Wind Walk}</td><td>96,000</td></tr></tbody></table><section class=\"secret foundry-note\" id=\"secret-7DOXr3q6fDOOCepZ\"><p><strong>Foundry Note</strong></p><p>Each activity uses correspond to the number of beads of that type available, and should be adjusted to match the proper values. The item's uses as a whole track the number of Beads of Curing.</p><p>Additionally, the guide price is a guide only and should be adjusted accordingly to reflect the Dungeon Master's world.</p></section>",
+      "activities": {
+        "Bead of Blessing (bless)": {
+          "name": "Bead of Blessing (bless)"
+        },
+        "Bead of Curing (cure wounds)": {
+          "name": "Bead of Curing (cure wounds)"
+        },
+        "Bead of Curing (lesser restoration)": {
+          "name": "Bead of Curing (lesser restoration)"
+        },
+        "Bead of Favor (greater restoration)": {
+          "name": "Bead of Favor (greater restoration)"
+        },
+        "Bead of Smiting (branding smite)": {
+          "name": "Bead of Smiting (branding smite)"
+        },
+        "Bead of Summons (planar ally)": {
+          "name": "Bead of Summons (planar ally)"
+        },
+        "Bead of Wind Walking (wind walk)": {
+          "name": "Bead of Wind Walking (wind walk)"
+        }
+      }
     },
     "Net": {
       "name": "Net",
@@ -1962,27 +2290,75 @@
     },
     "Nine Lives Stealer Greatsword": {
       "name": "Nine Lives Stealer Greatsword",
-      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-XU1Smd3yWr2RbK2h\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>"
+      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-XU1Smd3yWr2RbK2h\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>",
+      "activities": {
+        "attack": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        },
+        "save": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        }
+      }
     },
     "Nine Lives Stealer Longsword": {
       "name": "Nine Lives Stealer Longsword",
-      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-ckS4CQSkeNGqH9YG\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>"
+      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-ckS4CQSkeNGqH9YG\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>",
+      "activities": {
+        "attack": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        },
+        "save": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        }
+      }
     },
     "Nine Lives Stealer Rapier": {
       "name": "Nine Lives Stealer Rapier",
-      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-CNX3bDFw8VVGhJ1M\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>"
+      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-CNX3bDFw8VVGhJ1M\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>",
+      "activities": {
+        "attack": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        },
+        "save": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        }
+      }
     },
     "Nine Lives Stealer Scimitar": {
       "name": "Nine Lives Stealer Scimitar",
-      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-njpOaQoYGXWt6oBj\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>"
+      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-njpOaQoYGXWt6oBj\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>",
+      "activities": {
+        "attack": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        },
+        "save": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        }
+      }
     },
     "Nine Lives Stealer Shortsword": {
       "name": "Nine Lives Stealer Shortsword",
-      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-frvYcC8zMAoCd8sF\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>"
+      "description": "<p><em>(Requires attunement)</em></p><p>You gain a +2 bonus to attack and damage rolls made with this magic weapon.</p><p>The sword has 1d8 + 1 charges. If you score a critical hit against a creature that has fewer than 100 hit points, it must succeed on a DC 15 Constitution saving throw or be slain instantly as the sword tears its life force from its body (a construct or an undead is immune). The sword loses 1 charge if the creature is slain. When the sword has no charges remaining, it loses this property.</p><section class=\"secret foundry-note\" id=\"secret-frvYcC8zMAoCd8sF\"><p><strong>Foundry Note</strong></p><p>The 9 charges reflect a fully charged blade. Please adjust accordingly as required.</p></section>",
+      "activities": {
+        "attack": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        },
+        "save": {
+          "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
+        }
+      }
     },
     "Oathbow": {
       "name": "Oathbow",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat to my enemies.\" When you use this weapon to make a ranged attack, you can, as a command phrase, say, \"Swift death to you who have wronged me.\" The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.</p>\n<p>When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage.</p>\n<p>While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you nock an arrow on this bow, it whispers in Elvish, \"Swift defeat to my enemies.\" When you use this weapon to make a ranged attack, you can, as a command phrase, say, \"Swift death to you who have wronged me.\" The target of your attack becomes your sworn enemy until it dies or until dawn seven days later. You can have only one such sworn enemy at a time. When your sworn enemy dies, you can choose a new one after the next dawn.</p>\n<p>When you make a ranged attack roll with this weapon against your sworn enemy, you have advantage on the roll. In addition, your target gains no benefit from cover, other than total cover, and you suffer no disadvantage due to long range. If the attack hits, your sworn enemy takes an extra 3d6 piercing damage.</p>\n<p>While your sworn enemy lives, you have disadvantage on attack rolls with all other weapons.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Command phrase."
+        },
+        "utility": {
+          "condition": "Command phrase."
+        }
+      }
     },
     "Oil Flask": {
       "name": "Oil Flask",
@@ -1990,7 +2366,12 @@
     },
     "Oil of Etherealness": {
       "name": "Oil of Etherealness",
-      "description": "<p><em>Beads of this cloudy gray oil form on the outside of its container and quickly evaporate.  </em></p>\n<p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium).  Applying the oil takes 10 minutes.  The affected creature then gains the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{Etherealness} spell for 1 hour.</p>"
+      "description": "<p><em>Beads of this cloudy gray oil form on the outside of its container and quickly evaporate.  </em></p>\n<p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium).  Applying the oil takes 10 minutes.  The affected creature then gains the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{Etherealness} spell for 1 hour.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Medium or smaller creature. Takes 10 minutes to apply."
+        }
+      }
     },
     "Oil of Sharpness": {
       "name": "Oil of Sharpness",
@@ -2050,7 +2431,12 @@
     },
     "Pearl of Power": {
       "name": "Pearl of Power",
-      "description": "<p><em>Wondrous item, (requires attunement by a spellcaster)</em></p>\n<p>While this pearl is on your person, you can use an action to speak its command word and regain one expended spell slot. If the expended slot was of 4th level or higher, the new slot is 3rd level. Once you use the pearl, it can't be used again until the next dawn.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement by a spellcaster)</em></p>\n<p>While this pearl is on your person, you can use an action to speak its command word and regain one expended spell slot. If the expended slot was of 4th level or higher, the new slot is 3rd level. Once you use the pearl, it can't be used again until the next dawn.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Perfume": {
       "name": "Perfume",
@@ -2090,11 +2476,24 @@
     },
     "Pipes of Haunting": {
       "name": "Pipes of Haunting",
-      "description": "<p><em>Wondrous item</em></p>\n<p>You must be proficient with wind instruments to use these pipes. They have 3 charges. You can use an action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature within 30 feet of you that hears you play must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. If you wish, all creatures in the area that aren't hostile toward you automatically succeed on the saving throw. A creature that fails the saving throw can repeat it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its saving throw is immune to the effect of these pipes for 24 hours.</p>\n<p>The pipes regain 1d3 expended charges daily at dawn.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>You must be proficient with wind instruments to use these pipes. They have 3 charges. You can use an action to play them and expend 1 charge to create an eerie, spellbinding tune. Each creature within 30 feet of you that hears you play must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. If you wish, all creatures in the area that aren't hostile toward you automatically succeed on the saving throw. A creature that fails the saving throw can repeat it at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on its saving throw is immune to the effect of these pipes for 24 hours.</p>\n<p>The pipes regain 1d3 expended charges daily at dawn.</p>",
+      "activities": {
+        "save": {
+          "condition": "Proficiency with wind instruments."
+        }
+      }
     },
     "Pipes of the Sewers": {
       "name": "Pipes of the Sewers",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>You must be proficient with wind instruments to use these pipes. While you are attuned to the pipes, ordinary rats and giant rats are indifferent toward you and will not attack you unless you threaten or harm them.</p>\n<p>The pipes have 3 charges. If you play the pipes as an action, you can use a bonus action to expend 1 to 3 charges, calling forth one @UUID[Compendium.dnd5e.monsters.Actor.8ihbbjkaOFTPbI73]{Swarm of Rats} with each expended charge, provided that enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren't enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren't under your control otherwise. The pipes regain 1d3 expended charges daily at dawn.</p>\n<p>Whenever a swarm of rats that isn't under another creature's control comes within 30 feet of you while you are playing the pipes, you can make a Charisma check contested by the swarm's Wisdom check. If you lose the contest, the swarm behaves as it normally would and can't be swayed by the pipes' music for the next 24 hours. If you win the contest, the swarm is swayed by the pipes' music and becomes friendly to you and your companions for as long as you continue to play the pipes each round as an action. A friendly swarm obeys your commands. If you issue no commands to a friendly swarm, it defends itself but otherwise takes no actions. If a friendly swarm starts its turn and can't hear the pipes' music, your control over that swarm ends, and the swarm behaves as it normally would and can't be swayed by the pipes' music for the next 24 hours.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>You must be proficient with wind instruments to use these pipes. While you are attuned to the pipes, ordinary rats and giant rats are indifferent toward you and will not attack you unless you threaten or harm them.</p>\n<p>The pipes have 3 charges. If you play the pipes as an action, you can use a bonus action to expend 1 to 3 charges, calling forth one @UUID[Compendium.dnd5e.monsters.Actor.8ihbbjkaOFTPbI73]{Swarm of Rats} with each expended charge, provided that enough rats are within half a mile of you to be called in this fashion (as determined by the GM). If there aren't enough rats to form a swarm, the charge is wasted. Called swarms move toward the music by the shortest available route but aren't under your control otherwise. The pipes regain 1d3 expended charges daily at dawn.</p>\n<p>Whenever a swarm of rats that isn't under another creature's control comes within 30 feet of you while you are playing the pipes, you can make a Charisma check contested by the swarm's Wisdom check. If you lose the contest, the swarm behaves as it normally would and can't be swayed by the pipes' music for the next 24 hours. If you win the contest, the swarm is swayed by the pipes' music and becomes friendly to you and your companions for as long as you continue to play the pipes each round as an action. A friendly swarm obeys your commands. If you issue no commands to a friendly swarm, it defends itself but otherwise takes no actions. If a friendly swarm starts its turn and can't hear the pipes' music, your control over that swarm ends, and the swarm behaves as it normally would and can't be swayed by the pipes' music for the next 24 hours.</p>",
+      "activities": {
+        "check": {
+          "condition": "Proficiency with wind instruments."
+        },
+        "save": {
+          "condition": "Proficiency with wind instruments."
+        }
+      }
     },
     "Pitcher": {
       "name": "Pitcher",
@@ -2122,7 +2521,12 @@
     },
     "Plate Armor of Etherealness": {
       "name": "Plate Armor of Etherealness",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body. This particular armor has been inscribed with certain magical runes or other means to imbue power upon it.</p>\n<p>While you're wearing this armor, you can speak its command word as an action to gain the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{Etherealness} spell, which last for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body. This particular armor has been inscribed with certain magical runes or other means to imbue power upon it.</p>\n<p>While you're wearing this armor, you can speak its command word as an action to gain the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{Etherealness} spell, which last for 10 minutes or until you remove the armor or use an action to speak the command word again. This property of the armor can't be used again until the next dawn.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Plate Armor of Resistance": {
       "name": "Plate Armor of Resistance",
@@ -2154,7 +2558,12 @@
     },
     "Potion of Animal Friendship": {
       "name": "Potion of Animal Friendship",
-      "description": "<p><em>Agitating this muddy liquid brings little bits into view: a fish scale, hummingbird tongue, a cat claw, or a squirrel hair.</em></p>\n<p>When you drink this potion, you can cast the @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{Animal Friendship}  spell (save DC 13) for 1 hour at will.</p>"
+      "description": "<p><em>Agitating this muddy liquid brings little bits into view: a fish scale, hummingbird tongue, a cat claw, or a squirrel hair.</em></p>\n<p>When you drink this potion, you can cast the @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{Animal Friendship}  spell (save DC 13) for 1 hour at will.</p>",
+      "activities": {
+        "save": {
+          "condition": "Beast must have an Intelligence of 3 or lower."
+        }
+      }
     },
     "Potion of Clairvoyance": {
       "name": "Potion of Clairvoyance",
@@ -2338,7 +2747,15 @@
     },
     "Rapier of Life Stealing": {
       "name": "Rapier of Life Stealing",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        },
+        "utility": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        }
+      }
     },
     "Rapier of Wounding": {
       "name": "Rapier of Wounding",
@@ -2354,7 +2771,12 @@
     },
     "Restorative Ointment": {
       "name": "Restorative Ointment",
-      "description": "<p><em>Wondrous item</em></p><p>This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.</p><p>As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains 2d8 + 2 hit points, ceases to be poisoned, and is cured of any disease.</p><section class=\"secret foundry-note\" id=\"secret-hzyPBoWppRXYnf9A\"><p><strong>Foundry Note</strong></p><p>The 5 charges reflect the maximum number of doses possible. Similarly, the guide price of 600 gp is calculated at 120 gp per dose. Adjust both as required.</p></section>"
+      "description": "<p><em>Wondrous item</em></p><p>This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.</p><p>As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains 2d8 + 2 hit points, ceases to be poisoned, and is cured of any disease.</p><section class=\"secret foundry-note\" id=\"secret-hzyPBoWppRXYnf9A\"><p><strong>Foundry Note</strong></p><p>The 5 charges reflect the maximum number of doses possible. Similarly, the guide price of 600 gp is calculated at 120 gp per dose. Adjust both as required.</p></section>",
+      "activities": {
+        "heal": {
+          "condition": "The ointment needs to be swallowed or applied to the skin."
+        }
+      }
     },
     "Riding Saddle": {
       "name": "Riding Saddle",
@@ -2408,7 +2830,12 @@
     },
     "Ring of Djinni Summoning": {
       "name": "Ring of Djinni Summoning",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>While wearing this ring, you can speak its command word as an action to summon a particular @UUID[Compendium.dnd5e.monsters.Actor.5P1VGAZQwOilwZQf]{Djinni} from the Elemental Plane of Air. The djinni appears in an unoccupied space you choose within 120 feet of you. It remains as long as you concentrate (as if concentrating on a spell), to a maximum of 1 hour, or until it drops to 0 hit points. It then returns to its home plane.</p>\n<p>While summoned, the djinni is friendly to you and your companions. It obeys any commands you give it, no matter what language you use. If you fail to command it, the djinni defends itself against attackers but takes no other actions.</p>\n<p>After the djinni departs, it can't be summoned again for 24 hours, and the ring becomes nonmagical if the djinni dies.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>While wearing this ring, you can speak its command word as an action to summon a particular @UUID[Compendium.dnd5e.monsters.Actor.5P1VGAZQwOilwZQf]{Djinni} from the Elemental Plane of Air. The djinni appears in an unoccupied space you choose within 120 feet of you. It remains as long as you concentrate (as if concentrating on a spell), to a maximum of 1 hour, or until it drops to 0 hit points. It then returns to its home plane.</p>\n<p>While summoned, the djinni is friendly to you and your companions. It obeys any commands you give it, no matter what language you use. If you fail to command it, the djinni defends itself against attackers but takes no other actions.</p>\n<p>After the djinni departs, it can't be summoned again for 24 hours, and the ring becomes nonmagical if the djinni dies.</p>",
+      "activities": {
+        "summon": {
+          "condition": "Command word."
+        }
+      }
     },
     "Ring of Earth Elemental Command": {
       "name": "Ring of Earth Elemental Command",
@@ -2416,7 +2843,12 @@
     },
     "Ring of Evasion": {
       "name": "Ring of Evasion",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. When you fail a Dexterity saving throw while wearing it, you can use your reaction to expend 1 of its charges to succeed on that saving throw instead.</p>",
+      "activities": {
+        "Evade": {
+          "name": "Evade"
+        }
+      }
     },
     "Ring of Feather Falling": {
       "name": "Ring of Feather Falling",
@@ -2451,6 +2883,11 @@
     "Ring of Invisibility": {
       "name": "Ring of Invisibility",
       "description": "<p><em>(Requires attunement)</em></p>\n<p>While wearing this ring, you can turn invisible as an action. Anything you are wearing or carrying is invisible with you. You remain invisible until the ring is removed, until you attack or cast a spell, or until you use a bonus action to become visible again.</p>",
+      "activities": {
+        "Become Invisible": {
+          "name": "Become Invisible"
+        }
+      },
       "effects": {
         "Invisibility": {
           "name": "Invisibility"
@@ -2472,7 +2909,12 @@
     },
     "Ring of Mind Shielding": {
       "name": "Ring of Mind Shielding",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.</p>\n<p>You can use an action to cause the ring to become invisible until you use another action to make it visible, until you remove the ring, or until you die.</p>\n<p>If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>While wearing this ring, you are immune to magic that allows other creatures to read your thoughts, determine whether you are lying, know your alignment, or know your creature type. Creatures can telepathically communicate with you only if you allow it.</p>\n<p>You can use an action to cause the ring to become invisible until you use another action to make it visible, until you remove the ring, or until you die.</p>\n<p>If you die while wearing the ring, your soul enters it, unless it already houses a soul. You can remain in the ring or depart for the afterlife. As long as your soul is in the ring, you can telepathically communicate with any creature wearing it. A wearer can't prevent this telepathic communication.</p>",
+      "activities": {
+        "Conceal Ring": {
+          "name": "Conceal Ring"
+        }
+      }
     },
     "Ring of Necrotic Resistance": {
       "name": "Ring of Necrotic Resistance",
@@ -2521,11 +2963,21 @@
     },
     "Ring of Regeneration": {
       "name": "Ring of Regeneration",
-      "description": "<p><em>(Requires attunement)</em></p><p>While wearing this ring, you regain 1d6 hit points every 10 minutes, provided that you have at least 1 hit point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after [[/r 1d6 + 1]] days if you have at least 1 hit point the whole time.</p>"
+      "description": "<p><em>(Requires attunement)</em></p><p>While wearing this ring, you regain 1d6 hit points every 10 minutes, provided that you have at least 1 hit point. If you lose a body part, the ring causes the missing part to regrow and return to full functionality after [[/r 1d6 + 1]] days if you have at least 1 hit point the whole time.</p>",
+      "activities": {
+        "heal": {
+          "condition": "You need at least 1 hit point."
+        }
+      }
     },
     "Ring of Shooting Stars": {
       "name": "Ring of Shooting Stars",
-      "description": "<p><em>(Requires attunement outdoors at night)</em></p><p>While wearing this ring in dim light or darkness, you can cast @UUID[Compendium.dnd5e.spells.Item.CAxSzHWizrafT033]{Dancing Lights} and @UUID[Compendium.dnd5e.spells.Item.Bnn9Nzajixvow9xi]{Light} from the ring at will. Casting either spell from the ring requires an action.</p><p>The ring has 6 charges for the following other properties. The ring regains 1d6 expended charges daily at dawn.</p><p><strong>Faerie Fire</strong>. You can expend 1 charge as an action to cast @UUID[Compendium.dnd5e.spells.Item.nqBDWkVOfcGZt4YU]{Faerie Fire} from the ring.</p><p><strong>Ball Lightning</strong>. You can expend 2 charges as an action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually.</p><p>Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius.</p><p>As a bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created.</p><table><thead><tr><td><strong>Spheres</strong></td><td><strong>Lightning Damage</strong></td></tr></thead><tbody><tr><td>4</td><td>2d4</td></tr><tr><td>3</td><td>2d6</td></tr><tr><td>2</td><td>5d4</td></tr><tr><td>1</td><td>4d12</td></tr></tbody></table><p><strong>Shooting Stars</strong>. You can expend 1 to 3 charges as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one.</p>"
+      "description": "<p><em>(Requires attunement outdoors at night)</em></p><p>While wearing this ring in dim light or darkness, you can cast @UUID[Compendium.dnd5e.spells.Item.CAxSzHWizrafT033]{Dancing Lights} and @UUID[Compendium.dnd5e.spells.Item.Bnn9Nzajixvow9xi]{Light} from the ring at will. Casting either spell from the ring requires an action.</p><p>The ring has 6 charges for the following other properties. The ring regains 1d6 expended charges daily at dawn.</p><p><strong>Faerie Fire</strong>. You can expend 1 charge as an action to cast @UUID[Compendium.dnd5e.spells.Item.nqBDWkVOfcGZt4YU]{Faerie Fire} from the ring.</p><p><strong>Ball Lightning</strong>. You can expend 2 charges as an action to create one to four 3-foot-diameter spheres of lightning. The more spheres you create, the less powerful each sphere is individually.</p><p>Each sphere appears in an unoccupied space you can see within 120 feet of you. The spheres last as long as you concentrate (as if concentrating on a spell), up to 1 minute. Each sphere sheds dim light in a 30-foot radius.</p><p>As a bonus action, you can move each sphere up to 30 feet, but no farther than 120 feet away from you. When a creature other than you comes within 5 feet of a sphere, the sphere discharges lightning at that creature and disappears. That creature must make a DC 15 Dexterity saving throw. On a failed save, the creature takes lightning damage based on the number of spheres you created.</p><table><thead><tr><td><strong>Spheres</strong></td><td><strong>Lightning Damage</strong></td></tr></thead><tbody><tr><td>4</td><td>2d4</td></tr><tr><td>3</td><td>2d6</td></tr><tr><td>2</td><td>5d4</td></tr><tr><td>1</td><td>4d12</td></tr></tbody></table><p><strong>Shooting Stars</strong>. You can expend 1 to 3 charges as an action. For every charge you expend, you launch a glowing mote of light from the ring at a point you can see within 60 feet of you. Each creature within a 15-foot cube originating from that point is showered in sparks and must make a DC 15 Dexterity saving throw, taking 5d4 fire damage on a failed save, or half as much damage on a successful one.</p>",
+      "activities": {
+        "Shooting Star": {
+          "name": "Shooting Star"
+        }
+      }
     },
     "Ring of Spell Storing": {
       "name": "Ring of Spell Storing",
@@ -2584,11 +3036,26 @@
     },
     "Ring of the Ram": {
       "name": "Ring of the Ram",
-      "description": "<p><em>(Requires attunement)</em></p><p>This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing the ring, you can use an action to expend 1 to 3 of its charges to attack one creature you can see within 60 feet of you. The ring produces a spectral ram's head and makes its attack roll with a +7 bonus. On a hit, for each charge you spend, the target takes 2d10 force damage and is pushed 5 feet away from you.</p><p>Alternatively, you can expend 1 to 3 of the ring's charges as an action to try to break an object you can see within 60 feet of you that isn't being worn or carried. The ring makes a Strength check with a +5 bonus for each charge you spend.</p>"
+      "description": "<p><em>(Requires attunement)</em></p><p>This ring has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing the ring, you can use an action to expend 1 to 3 of its charges to attack one creature you can see within 60 feet of you. The ring produces a spectral ram's head and makes its attack roll with a +7 bonus. On a hit, for each charge you spend, the target takes 2d10 force damage and is pushed 5 feet away from you.</p><p>Alternatively, you can expend 1 to 3 of the ring's charges as an action to try to break an object you can see within 60 feet of you that isn't being worn or carried. The ring makes a Strength check with a +5 bonus for each charge you spend.</p>",
+      "activities": {
+        "Break Object": {
+          "name": "Break Object"
+        }
+      }
     },
     "Robe of Eyes": {
       "name": "Robe of Eyes",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:</p>\n<ul>\n<li>The robe lets you see in all directions, and you have advantage on Wisdom (Perception) checks that rely on sight.</li>\n<li>You have darkvision out to a range of 120 feet.</li>\n<li>You can see invisible creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet.</li>\n</ul>\n<p>The eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe.</p>\n<p>A @UUID[Compendium.dnd5e.spells.Item.Bnn9Nzajixvow9xi]{Light} spell cast on the robe or a @UUID[Compendium.dnd5e.spells.Item.BP3GCwa66IAw1yTG]{Daylight} spell cast within 5 feet of the robe causes you to be blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for light or DC 15 for daylight), ending the blindness on a success.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>This robe is adorned with eyelike patterns. While you wear the robe, you gain the following benefits:</p>\n<ul>\n<li>The robe lets you see in all directions, and you have advantage on Wisdom (Perception) checks that rely on sight.</li>\n<li>You have darkvision out to a range of 120 feet.</li>\n<li>You can see invisible creatures and objects, as well as see into the Ethereal Plane, out to a range of 120 feet.</li>\n</ul>\n<p>The eyes on the robe can't be closed or averted. Although you can close or avert your own eyes, you are never considered to be doing so while wearing this robe.</p>\n<p>A @UUID[Compendium.dnd5e.spells.Item.Bnn9Nzajixvow9xi]{Light} spell cast on the robe or a @UUID[Compendium.dnd5e.spells.Item.BP3GCwa66IAw1yTG]{Daylight} spell cast within 5 feet of the robe causes you to be blinded for 1 minute. At the end of each of your turns, you can make a Constitution saving throw (DC 11 for light or DC 15 for daylight), ending the blindness on a success.</p>",
+      "activities": {
+        "Save vs. Light": {
+          "name": "Save vs. Light",
+          "condition": "A Light spell is cast on the robe"
+        },
+        "Save vs. Daylight": {
+          "name": "Save vs. Daylight",
+          "condition": "A Daylight spell is cast within 5 feet of the robe"
+        }
+      }
     },
     "Robe of Scintillating Colors": {
       "name": "Robe of Scintillating Colors",
@@ -2621,15 +3088,31 @@
     },
     "Rod of Absorption": {
       "name": "Rod of Absorption",
-      "description": "<p><em>(Requires attunement)</em></p><p>While holding this rod, you can use your reaction to absorb a spell that is targeting only you and not with an area of effect. The absorbed spell's effect is canceled, and the spell's energy not the spell itself - is stored in the rod. The energy has the same level as the spell when it was cast. The rod can absorb and store up to 50 levels of energy over the course of its existence. Once the rod absorbs 50 levels of energy, it can't absorb more. If you are targeted by a spell that the rod can't store, the rod has no effect on that spell.</p><p>When you become attuned to the rod, you know how many levels of energy the rod has absorbed over the course of its existence, and how many levels of spell energy it currently has stored.</p><p>If you are a spellcaster holding the rod, you can convert energy stored in it into spell slots to cast spells you have prepared or know. You can create spell slots only of a level equal to or lower than your own spell slots, up to a maximum of 5th level. You use the stored levels in place of your slots, but otherwise cast the spell as normal. For example, you can use 3 levels stored in the rod as a 3rd-level spell slot.</p><p>A newly found rod has 1d10 levels of spell energy stored in it already. A rod that can no longer absorb spell energy and has no energy remaining becomes nonmagical.</p><section class=\"secret foundry-note\" id=\"secret-4moLuVa8eSuTndZO\"><p><strong>Foundry Note</strong></p><p>The rod currently has the maximum 10 charges for a newly found rod. Adjust as required.</p></section>"
+      "description": "<p><em>(Requires attunement)</em></p><p>While holding this rod, you can use your reaction to absorb a spell that is targeting only you and not with an area of effect. The absorbed spell's effect is canceled, and the spell's energy not the spell itself - is stored in the rod. The energy has the same level as the spell when it was cast. The rod can absorb and store up to 50 levels of energy over the course of its existence. Once the rod absorbs 50 levels of energy, it can't absorb more. If you are targeted by a spell that the rod can't store, the rod has no effect on that spell.</p><p>When you become attuned to the rod, you know how many levels of energy the rod has absorbed over the course of its existence, and how many levels of spell energy it currently has stored.</p><p>If you are a spellcaster holding the rod, you can convert energy stored in it into spell slots to cast spells you have prepared or know. You can create spell slots only of a level equal to or lower than your own spell slots, up to a maximum of 5th level. You use the stored levels in place of your slots, but otherwise cast the spell as normal. For example, you can use 3 levels stored in the rod as a 3rd-level spell slot.</p><p>A newly found rod has 1d10 levels of spell energy stored in it already. A rod that can no longer absorb spell energy and has no energy remaining becomes nonmagical.</p><section class=\"secret foundry-note\" id=\"secret-4moLuVa8eSuTndZO\"><p><strong>Foundry Note</strong></p><p>The rod currently has the maximum 10 charges for a newly found rod. Adjust as required.</p></section>",
+      "activities": {
+        "utility": {
+          "condition": "Spell slots created can be no higher than 5th level."
+        }
+      }
     },
     "Rod of Alertness": {
       "name": "Rod of Alertness",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>This rod has a flanged head and the following properties.</p>\n<p><strong>Alertness</strong>. While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.</p>\n<p><strong>Spells</strong>. While holding the rod, you can use an action to cast one of the following spells from it: @UUID[Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}, @UUID[Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l]{Detect Poison and Disease}, or @UUID[Compendium.dnd5e.spells.Item.DQzlB5Y3k791W5bH]{See Invisibility}.</p>\n<p><strong>Protective Aura</strong>. As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any invisible hostile creature that is also in the bright light.</p>\n<p>The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground.. This property can't be used again until the next dawn.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>This rod has a flanged head and the following properties.</p>\n<p><strong>Alertness</strong>. While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.</p>\n<p><strong>Spells</strong>. While holding the rod, you can use an action to cast one of the following spells from it: @UUID[Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}, @UUID[Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l]{Detect Poison and Disease}, or @UUID[Compendium.dnd5e.spells.Item.DQzlB5Y3k791W5bH]{See Invisibility}.</p>\n<p><strong>Protective Aura</strong>. As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any invisible hostile creature that is also in the bright light.</p>\n<p>The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground.. This property can't be used again until the next dawn.</p>",
+      "activities": {
+        "Protective Aura": {
+          "name": "Protective Aura",
+          "condition": "Rod must be planted in the ground."
+        }
+      }
     },
     "Rod of Lordly Might": {
       "name": "Rod of Lordly Might",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.</p>\n<p><strong>Six Buttons</strong>. You can press one of the rod's six buttons as a bonus action. A button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.</p>\n<p>If you press <strong>button 1</strong>, the rod becomes a flame tongue, as a fiery blade sprouts from the end opposite the rod's flanged head.</p>\n<p>If you press <strong>button 2</strong>, the rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.</p>\n<p>If you press <strong>button 3</strong>, the rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a +3 bonus to attack and damage rolls made with it.</p>\n<p>If you press <strong>button 4</strong>, the rod transforms into a climbing pole up to 50 feet long, as you specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.</p>\n<p>If you press <strong>button 5</strong>, the rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.</p>\n<p>If you press <strong>button 6</strong>, the rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.</p>\n<p><strong>Drain Life</strong>. When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failure, the target takes an extra 4d6 necrotic damage, and you regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn.</p>\n<p><strong>Paralyze</strong>. When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failure, the target is paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.</p>\n<p><strong>Terrify</strong>. While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is frightened of you for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>This rod has a flanged head, and it functions as a magic mace that grants a +3 bonus to attack and damage rolls made with it. The rod has properties associated with six different buttons that are set in a row along the haft. It has three other properties as well, detailed below.</p>\n<p><strong>Six Buttons</strong>. You can press one of the rod's six buttons as a bonus action. A button's effect lasts until you push a different button or until you push the same button again, which causes the rod to revert to its normal form.</p>\n<p>If you press <strong>button 1</strong>, the rod becomes a flame tongue, as a fiery blade sprouts from the end opposite the rod's flanged head.</p>\n<p>If you press <strong>button 2</strong>, the rod's flanged head folds down and two crescent-shaped blades spring out, transforming the rod into a magic battleaxe that grants a +3 bonus to attack and damage rolls made with it.</p>\n<p>If you press <strong>button 3</strong>, the rod's flanged head folds down, a spear point springs from the rod's tip, and the rod's handle lengthens into a 6-foot haft, transforming the rod into a magic spear that grants a +3 bonus to attack and damage rolls made with it.</p>\n<p>If you press <strong>button 4</strong>, the rod transforms into a climbing pole up to 50 feet long, as you specify. In surfaces as hard as granite, a spike at the bottom and three hooks at the top anchor the pole. Horizontal bars 3 inches long fold out from the sides, 1 foot apart, forming a ladder. The pole can bear up to 4,000 pounds. More weight or lack of solid anchoring causes the rod to revert to its normal form.</p>\n<p>If you press <strong>button 5</strong>, the rod transforms into a handheld battering ram and grants its user a +10 bonus to Strength checks made to break through doors, barricades, and other barriers.</p>\n<p>If you press <strong>button 6</strong>, the rod assumes or remains in its normal form and indicates magnetic north. (Nothing happens if this function of the rod is used in a location that has no magnetic north.) The rod also gives you knowledge of your approximate depth beneath the ground or your height above it.</p>\n<p><strong>Drain Life</strong>. When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Constitution saving throw. On a failure, the target takes an extra 4d6 necrotic damage, and you regain a number of hit points equal to half that necrotic damage. This property can't be used again until the next dawn.</p>\n<p><strong>Paralyze</strong>. When you hit a creature with a melee attack using the rod, you can force the target to make a DC 17 Strength saving throw. On a failure, the target is paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on a success. This property can't be used again until the next dawn.</p>\n<p><strong>Terrify</strong>. While holding the rod, you can use an action to force each creature you can see within 30 feet of you to make a DC 17 Wisdom saving throw. On a failure, a target is frightened of you for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. This property can't be used again until the next dawn.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Button presses are a bonus action."
+        }
+      }
     },
     "Rod of Rulership": {
       "name": "Rod of Rulership",
@@ -2641,11 +3124,21 @@
     },
     "Rope of Climbing": {
       "name": "Rope of Climbing",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one end of the rope and use an action to speak the command word, the rope animates. As a bonus action, you can command the other end to move toward a destination you choose. That end moves 10 feet on your turn when you first command it and 10 feet on each of your turns until reaching its destination, up to its maximum length away, or until you tell it to stop. You can also tell the rope to fasten itself securely to an object or to unfasten itself, to knot or unknot itself, or to coil itself for carrying.</p>\n<p>If you tell the rope to knot, large knots appear at 1- foot intervals along the rope. While knotted, the rope shortens to a 50-foot length and grants advantage on checks made to climb it.</p>\n<p>The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points, it is destroyed.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This 60-foot length of silk rope weighs 3 pounds and can hold up to 3,000 pounds. If you hold one end of the rope and use an action to speak the command word, the rope animates. As a bonus action, you can command the other end to move toward a destination you choose. That end moves 10 feet on your turn when you first command it and 10 feet on each of your turns until reaching its destination, up to its maximum length away, or until you tell it to stop. You can also tell the rope to fasten itself securely to an object or to unfasten itself, to knot or unknot itself, or to coil itself for carrying.</p>\n<p>If you tell the rope to knot, large knots appear at 1- foot intervals along the rope. While knotted, the rope shortens to a 50-foot length and grants advantage on checks made to climb it.</p>\n<p>The rope has AC 20 and 20 hit points. It regains 1 hit point every 5 minutes as long as it has at least 1 hit point. If the rope drops to 0 hit points, it is destroyed.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word. A bonus action to move one end 10 ft."
+        }
+      }
     },
     "Rope of Entanglement": {
       "name": "Rope of Entanglement",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, the other end darts forward to entangle a creature you can see within 20 feet of you. The target must succeed on a DC 15 Dexterity saving throw or become restrained.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This rope is 30 feet long and weighs 3 pounds. If you hold one end of the rope and use an action to speak its command word, the other end darts forward to entangle a creature you can see within 20 feet of you. The target must succeed on a DC 15 Dexterity saving throw or become restrained.</p>",
+      "activities": {
+        "save": {
+          "condition": "Command word."
+        }
+      }
     },
     "Sack": {
       "name": "Sack",
@@ -2677,7 +3170,12 @@
     },
     "Scarab of Protection": {
       "name": "Scarab of Protection",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>If you hold this beetle-shaped medallion in your hand for 1 round, an inscription appears on its surface revealing its magical nature. It provides two benefits while it is on your person:</p>\n<ul>\n<li>You have advantage on saving throws against spells.</li>\n<li>The scarab has 12 charges. If you fail a saving throw against a necromancy spell or a harmful effect originating from an undead creature, you can use your reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.</li>\n</ul>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>If you hold this beetle-shaped medallion in your hand for 1 round, an inscription appears on its surface revealing its magical nature. It provides two benefits while it is on your person:</p>\n<ul>\n<li>You have advantage on saving throws against spells.</li>\n<li>The scarab has 12 charges. If you fail a saving throw against a necromancy spell or a harmful effect originating from an undead creature, you can use your reaction to expend 1 charge and turn the failed save into a successful one. The scarab crumbles into powder and is destroyed when its last charge is expended.</li>\n</ul>",
+      "activities": {
+        "utility": {
+          "condition": "Charges are consumed by necromancy spells or an undead caster."
+        }
+      }
     },
     "Scholar's Pack": {
       "name": "Scholar's Pack",
@@ -2701,11 +3199,27 @@
     },
     "Scimitar of Life Stealing": {
       "name": "Scimitar of Life Stealing",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        },
+        "utility": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        }
+      }
     },
     "Scimitar of Sharpness": {
       "name": "Scimitar of Sharpness",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</p>\n<p>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.</p>\n<p>In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.</p>\n<p>When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 4d6 slashing damage. Then roll another d20. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the GM. If the creature has no limb to sever, you lop off a portion of its body instead.</p>\n<p>In addition, you can speak the sword's command word to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Command word."
+        },
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Scimitar of Speed": {
       "name": "Scimitar of Speed",
@@ -2781,7 +3295,15 @@
     },
     "Shortsword of Life Stealing": {
       "name": "Shortsword of Life Stealing",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 3d6 necrotic damage, provided that the target isn't a construct or an undead. You gain temporary hit points equal to the extra damage dealt.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        },
+        "utility": {
+          "condition": "Must roll a 20 and the target cannot be undead."
+        }
+      }
     },
     "Shortsword of Wounding": {
       "name": "Shortsword of Wounding",
@@ -2817,7 +3339,12 @@
     },
     "Silk Rope (50 ft.)": {
       "name": "Silk Rope (50 ft.)",
-      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>"
+      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>",
+      "activities": {
+        "Burst": {
+          "name": "Burst"
+        }
+      }
     },
     "Silver Horn of Valhalla": {
       "name": "Silver Horn of Valhalla",
@@ -2865,7 +3392,12 @@
     },
     "Slippers of Spider Climbing": {
       "name": "Slippers of Spider Climbing",
-      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil.</p>"
+      "description": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While you wear these light shoes, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free. You have a climbing speed equal to your walking speed. However, the slippers don't allow you to move this way on a slippery surface, such as one covered by ice or oil.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Surface cannot be slippery."
+        }
+      }
     },
     "Small Knife": {
       "name": "Small Knife",
@@ -2881,7 +3413,12 @@
     },
     "Sovereign Glue": {
       "name": "Sovereign Glue",
-      "description": "<p><em>Wondrous item</em></p><p>This viscous, milky-white substance can form a permanent adhesive bond between any two objects. It must be stored in a jar or flask that has been coated inside with oil of slipperiness. When found, a container contains 1d6 + 1 ounces.</p><p>One ounce of the glue can cover a 1-foot square surface. The glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of universal solvent or oil of etherealness, or with a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell.</p><section class=\"secret foundry-note\" id=\"secret-s3MCPshCsEZEYTHn\"><p><strong>Foundry Note</strong></p><p>The 7 charges reflect the maximum amount a character can find. Please adjust as required.</p></section>"
+      "description": "<p><em>Wondrous item</em></p><p>This viscous, milky-white substance can form a permanent adhesive bond between any two objects. It must be stored in a jar or flask that has been coated inside with oil of slipperiness. When found, a container contains 1d6 + 1 ounces.</p><p>One ounce of the glue can cover a 1-foot square surface. The glue takes 1 minute to set. Once it has done so, the bond it creates can be broken only by the application of universal solvent or oil of etherealness, or with a @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell.</p><section class=\"secret foundry-note\" id=\"secret-s3MCPshCsEZEYTHn\"><p><strong>Foundry Note</strong></p><p>The 7 charges reflect the maximum amount a character can find. Please adjust as required.</p></section>",
+      "activities": {
+        "utility": {
+          "condition": "Takes 1 minute to set."
+        }
+      }
     },
     "Spear": {
       "name": "Spear",
@@ -2949,7 +3486,12 @@
     },
     "Sphere of Annihilation": {
       "name": "Sphere of Annihilation",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.</p>\n<p>The sphere obliterates all matter it passes through and all matter that passes through it. Artifacts are the exception. Unless an artifact is susceptible to damage from a Sphere of Annihilation, it passes through the sphere unscathed. Anything else that touches the sphere but isn't wholly engulfed and obliterated by it takes 4d10 force damage.</p>\n<p>The sphere is stationary until someone controls it. If you are within 60 feet of an uncontrolled sphere, you can use an action to make a DC 25 Intelligence (Arcana) check. On a success, the sphere levitates in one direction of your choice, up to a number of feet equal to 5 × your Intelligence modifier (minimum 5 feet). On a failure, the sphere moves 10 feet toward you. A creature whose space the sphere enters must succeed on a DC 13 Dexterity saving throw or be touched by it, taking 4d10 force damage.</p>\n<p>If you attempt to control a sphere that is under another creature's control, you make an Intelligence (Arcana) check contested by the other creature's Intelligence (Arcana) check. The winner of the contest gains control of the sphere and can levitate it as normal.</p>\n<p>If the sphere comes into contact with a planar portal, such as that created by the @UUID[Compendium.dnd5e.spells.Item.XbwGq5kDJNvAxNXV]{Gate} spell, or an extradimensional space, such as that within a portable hole, the GM determines randomly what happens, using the @UUID[Compendium.dnd5e.tables.RollTable.hHR0Zw75o9PXYl4c]{Sphere of Annihilation} table.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This 2-foot-diameter black sphere is a hole in the multiverse, hovering in space and stabilized by a magical field surrounding it.</p>\n<p>The sphere obliterates all matter it passes through and all matter that passes through it. Artifacts are the exception. Unless an artifact is susceptible to damage from a Sphere of Annihilation, it passes through the sphere unscathed. Anything else that touches the sphere but isn't wholly engulfed and obliterated by it takes 4d10 force damage.</p>\n<p>The sphere is stationary until someone controls it. If you are within 60 feet of an uncontrolled sphere, you can use an action to make a DC 25 Intelligence (Arcana) check. On a success, the sphere levitates in one direction of your choice, up to a number of feet equal to 5 × your Intelligence modifier (minimum 5 feet). On a failure, the sphere moves 10 feet toward you. A creature whose space the sphere enters must succeed on a DC 13 Dexterity saving throw or be touched by it, taking 4d10 force damage.</p>\n<p>If you attempt to control a sphere that is under another creature's control, you make an Intelligence (Arcana) check contested by the other creature's Intelligence (Arcana) check. The winner of the contest gains control of the sphere and can levitate it as normal.</p>\n<p>If the sphere comes into contact with a planar portal, such as that created by the @UUID[Compendium.dnd5e.spells.Item.XbwGq5kDJNvAxNXV]{Gate} spell, or an extradimensional space, such as that within a portable hole, the GM determines randomly what happens, using the @UUID[Compendium.dnd5e.tables.RollTable.hHR0Zw75o9PXYl4c]{Sphere of Annihilation} table.</p>",
+      "activities": {
+        "save": {
+          "condition": "An uncontrolled sphere requires a DC 25 Intelligence (Arcana) check."
+        }
+      }
     },
     "Splint Armor": {
       "name": "Splint Armor",
@@ -2985,7 +3527,17 @@
     },
     "Staff of Charming": {
       "name": "Staff of Charming",
-      "description": "<p><em>(Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard)</em></p><p>While holding this staff, you can use an action to expend 1 of its 10 charges to cast @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs]{Charm Person}, @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command}, or @UUID[Compendium.dnd5e.spells.Item.4dSvfvTy2ZIJ3K4k]{Comprehend Languages} from it using your spell save DC. The staff can also be used as a magic quarterstaff.</p><p>If you are holding the staff and fail a saving throw against an enchantment spell that targets only you, you can turn your failed save into a successful one. You can't use this property of the staff again until the next dawn. If you succeed on a save against an enchantment spell that targets only you, with or without the staff's intervention, you can use your reaction to expend 1 charge from the staff and turn the spell back on its caster as if you had cast the spell.</p><p>The staff regains 1d8 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff becomes a nonmagical quarterstaff.</p>"
+      "description": "<p><em>(Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard)</em></p><p>While holding this staff, you can use an action to expend 1 of its 10 charges to cast @UUID[Compendium.dnd5e.spells.Item.eS7XnnApoxRxYXPs]{Charm Person}, @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command}, or @UUID[Compendium.dnd5e.spells.Item.4dSvfvTy2ZIJ3K4k]{Comprehend Languages} from it using your spell save DC. The staff can also be used as a magic quarterstaff.</p><p>If you are holding the staff and fail a saving throw against an enchantment spell that targets only you, you can turn your failed save into a successful one. You can't use this property of the staff again until the next dawn. If you succeed on a save against an enchantment spell that targets only you, with or without the staff's intervention, you can use your reaction to expend 1 charge from the staff and turn the spell back on its caster as if you had cast the spell.</p><p>The staff regains 1d8 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff becomes a nonmagical quarterstaff.</p>",
+      "activities": {
+        "Save Against Enchantment": {
+          "name": "Save Against Enchantment",
+          "condition": "If you are holding the staff and fail a saving throw against an enchantment spell that targets only you"
+        },
+        "Turn Back Spell": {
+          "name": "Turn Back Spell",
+          "condition": "If you succeed on a save against an enchantment spell that targets only you, with or without the staff's intervention"
+        }
+      }
     },
     "Staff of Fire": {
       "name": "Staff of Fire",
@@ -3014,6 +3566,15 @@
     "Staff of Power": {
       "name": "Staff of Power",
       "description": "<p><em>(Requires attunement by a sorcerer, warlock, or wizard)</em></p><p>This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you gain a +2 bonus to Armor Class, saving throws, and spell attack rolls.</p><p>The staff has 20 charges for the following properties. The staff regains 2d8 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff retains its +2 bonus to attack and damage rolls but loses all other properties. On a 20, the staff regains 1d8 + 2 charges.</p><p><strong>Power Strike</strong>. When you hit with a melee attack using the staff, you can expend 1 charge to deal an extra 1d6 force damage to the target.</p><p><strong>Spells</strong>. While holding this staff, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC and spell attack bonus: @UUID[Compendium.dnd5e.spells.Item.RpKjTlYASrfqUPVA]{Cone of Cold} (5 charges), @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} (5th-level version, 5 charges), @UUID[Compendium.dnd5e.spells.Item.WmQpxfjZwF3MGUby]{Globe of Invulnerability} (6 charges), @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges), @UUID[Compendium.dnd5e.spells.Item.MRxldJd6C4bsBo3O]{Levitate} (2 charges), @UUID[Compendium.dnd5e.spells.Item.IyikgTEOTv701jgQ]{Lightning Bolt} (5th-level version, 5 charges), @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile} (1 charge), @UUID[Compendium.dnd5e.spells.Item.ODhLKBxLnvvLOnw1]{Ray of Enfeeblement} (1 charge), or @UUID[Compendium.dnd5e.spells.Item.o9ZCvuD2B1OTcubb]{Wall of Force} (5 charges).</p><p><strong>Retributive Strike</strong>. You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.</p><p>You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take force damage equal to 16 × the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage.</p><table><thead><tr><td><strong>Distance from Origin</strong></td><td><strong>Damage</strong></td></tr></thead><tbody><tr><td>10 ft. away or closer</td><td>8 x the number of charges in the staff</td></tr><tr><td>11 to 20 ft. away</td><td>6 x the number of charges in the staff</td></tr><tr><td>21 to 30 ft. away</td><td>4 x the number of charges in the staff</td></tr></tbody></table>",
+      "activities": {
+        "Power Strike": {
+          "name": "Power Strike",
+          "condition": "When you hit with a melee attack using the staff"
+        },
+        "Retributive Strike": {
+          "name": "Retributive Strike"
+        }
+      },
       "effects": {
         "Staff of Power": {
           "name": "Staff of Power",
@@ -3027,7 +3588,12 @@
     },
     "Staff of Swarming Insects": {
       "name": "Staff of Swarming Insects",
-      "description": "<p><em>(Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard)</em></p><p>This staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, a swarm of insects consumes and destroys the staff, then disperses.</p><p><strong>Spells</strong>. While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5e.spells.Item.czXrVRx6XYRWsHAi]{Giant Insect} (4 charges) or @UUID[Compendium.dnd5e.spells.Item.OVikYmSdHliAG2YD]{Insect Plague} (5 charges).</p><p><strong>Insect Cloud</strong>. While holding the staff, you can use an action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect.</p>"
+      "description": "<p><em>(Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard)</em></p><p>This staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, a swarm of insects consumes and destroys the staff, then disperses.</p><p><strong>Spells</strong>. While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5e.spells.Item.czXrVRx6XYRWsHAi]{Giant Insect} (4 charges) or @UUID[Compendium.dnd5e.spells.Item.OVikYmSdHliAG2YD]{Insect Plague} (5 charges).</p><p><strong>Insect Cloud</strong>. While holding the staff, you can use an action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect.</p>",
+      "activities": {
+        "Insect Cloud": {
+          "name": "Insect Cloud"
+        }
+      }
     },
     "Staff of Thunder and Lightning": {
       "name": "Staff of Thunder and Lightning",
@@ -3035,11 +3601,26 @@
     },
     "Staff of Withering": {
       "name": "Staff of Withering",
-      "description": "<p><em>(Requires attunement)</em></p><p>This staff has 3 charges and regains 1d3 expended charges daily at dawn.</p><p>The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to deal an extra [[/damage 2d10 necrotic]] damage to the target. In addition, the target must succeed on a DC 15 Constitution saving throw or have disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution.</p>"
+      "description": "<p><em>(Requires attunement)</em></p><p>This staff has 3 charges and regains 1d3 expended charges daily at dawn.</p><p>The staff can be wielded as a magic quarterstaff. On a hit, it deals damage as a normal quarterstaff, and you can expend 1 charge to deal an extra [[/damage 2d10 necrotic]] damage to the target. In addition, the target must succeed on a DC 15 Constitution saving throw or have disadvantage for 1 hour on any ability check or saving throw that uses Strength or Constitution.</p>",
+      "activities": {
+        "Wither": {
+          "name": "Wither",
+          "condition": "When you hit with an attack using the staff"
+        }
+      }
     },
     "Staff of the Magi": {
       "name": "Staff of the Magi",
       "description": "<p><em>(Requires attunement by a sorcerer, warlock, or wizard)</em></p><p>This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While you hold it, you gain a +2 bonus to spell attack rolls.</p><p>The staff has 50 charges for the following properties. It regains 4d6 + 2 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 20, the staff regains 1d12 + 1 charges.</p><p><strong>Spell Absorption</strong>. While holding the staff, you have advantage on saving throws against spells. In addition, you can use your reaction when another creature casts a spell that targets only you. If you do, the staff absorbs the magic of the spell, canceling its effect and gaining a number of charges equal to the absorbed spell's level. However, if doing so brings the staff's total number of charges above 50, the staff explodes as if you activated its <strong>Retributive Strike</strong> (see below).</p><p><strong>Spells</strong>. While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC and spellcasting ability: @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} (7 charges), @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{Dispel Magic} (3 charges), @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} (7th-level version, 7 charges), @UUID[Compendium.dnd5e.spells.Item.FjYE214HTERCRZNm]{Flaming Sphere} (2 charges), @UUID[Compendium.dnd5e.spells.Item.WN2LWEljYU6QqnRH]{Ice Storm} (4 charges), @UUID[Compendium.dnd5e.spells.Item.1N8dDMMgZ1h1YJ3B]{Invisibility} (2 charges), @UUID[Compendium.dnd5e.spells.Item.1nhIxh0DsJsntCfj]{Knock} (2 charges), @UUID[Compendium.dnd5e.spells.Item.IyikgTEOTv701jgQ]{Lightning Bolt} (7th-level version, 7 charges), @UUID[Compendium.dnd5e.spells.Item.d9MwcXi7Il3HROXd]{Passwall} (5 charges), @UUID[Compendium.dnd5e.spells.Item.J6Jpw5XzB5aTeqnz]{Plane Shift} (7 charges), @UUID[Compendium.dnd5e.spells.Item.HQfd7jJyULIoGxrZ]{Telekinesis} (5 charges), @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{Wall of Fire} (4 charges), or @UUID[Compendium.dnd5e.spells.Item.UJJu9c2UvCzVljiP]{Web} (2 charges).</p><p>You can also use an action to cast one of the following spells from the staff without using any charges: @UUID[Compendium.dnd5e.spells.Item.8cse7rit0oswRPUP]{Arcane Lock}, @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}, @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce}, @UUID[Compendium.dnd5e.spells.Item.Bnn9Nzajixvow9xi]{Light}, @UUID[Compendium.dnd5e.spells.Item.Utk1OQRwYkMkFRD3]{Mage Hand}, or @UUID[Compendium.dnd5e.spells.Item.xmDBqZhRVrtLP8h2]{Protection from Evil and Good}.</p><p><strong>Retributive Strike</strong>. You can use an action to break the staff over your knee or against a solid surface, performing a retributive strike. The staff is destroyed and releases its remaining magic in an explosion that expands to fill a 30-foot-radius sphere centered on it.</p><p>You have a 50 percent chance to instantly travel to a random plane of existence, avoiding the explosion. If you fail to avoid the effect, you take force damage equal to 16 × the number of charges in the staff. Every other creature in the area must make a DC 17 Dexterity saving throw. On a failed save, a creature takes an amount of damage based on how far away it is from the point of origin, as shown in the following table. On a successful save, a creature takes half as much damage.</p><table><thead><tr><td><strong>Distance from Origin</strong></td><td><strong>Damage</strong></td></tr></thead><tbody><tr><td>10 ft. away or closer</td><td>8 x the number of charges in the staff</td></tr><tr><td>11 to 20 ft. away</td><td>6 x the number of charges in the staff</td></tr><tr><td>21 to 30 ft. away</td><td>4 x the number of charges in the staff</td></tr></tbody></table>",
+      "activities": {
+        "Retributive Strike": {
+          "name": "Retributive Strike"
+        },
+        "Absorb Spell": {
+          "name": "Absorb Spell",
+          "condition": "When another creature casts a spell that targets only you"
+        }
+      },
       "effects": {
         "Staff of the Magi": {
           "name": "Staff of the Magi",
@@ -3049,11 +3630,22 @@
     },
     "Staff of the Python": {
       "name": "Staff of the Python",
-      "description": "<p><em>(Requires attunement by a cleric, druid, or warlock)</em></p>\n<p>You can use an action to speak this staff's command word and throw the staff on the ground within 10 feet of you. The staff becomes a @UUID[Compendium.dnd5e.monsters.Actor.NpvwE1feOHyEqAbP]{Giant Constrictor Snake} under your control and acts on its own initiative count. By using a bonus action to speak the command word again, you return the staff to its normal form in a space formerly occupied by the snake.</p>\n<p>On your turn, you can mentally command the snake if it is within 60 feet of you and you aren't incapacitated. You decide what action the snake takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location.</p>\n<p>If the snake is reduced to 0 hit points, it dies and reverts to its staff form. The staff then shatters and is destroyed. If the snake reverts to staff form before losing all its hit points, it regains all of them.</p>"
+      "description": "<p><em>(Requires attunement by a cleric, druid, or warlock)</em></p>\n<p>You can use an action to speak this staff's command word and throw the staff on the ground within 10 feet of you. The staff becomes a @UUID[Compendium.dnd5e.monsters.Actor.NpvwE1feOHyEqAbP]{Giant Constrictor Snake} under your control and acts on its own initiative count. By using a bonus action to speak the command word again, you return the staff to its normal form in a space formerly occupied by the snake.</p>\n<p>On your turn, you can mentally command the snake if it is within 60 feet of you and you aren't incapacitated. You decide what action the snake takes and where it moves during its next turn, or you can issue it a general command, such as to attack your enemies or guard a location.</p>\n<p>If the snake is reduced to 0 hit points, it dies and reverts to its staff form. The staff then shatters and is destroyed. If the snake reverts to staff form before losing all its hit points, it regains all of them.</p>",
+      "activities": {
+        "Transform": {
+          "name": "Transform",
+          "condition": "Command word."
+        }
+      }
     },
     "Staff of the Woodlands": {
       "name": "Staff of the Woodlands",
       "description": "<p><em>(Requires attunement by a druid)</em></p><p>This staff can be wielded as a magic quarterstaff that grants a +2 bonus to attack and damage rolls made with it. While holding it, you have a +2 bonus to spell attack rolls.</p><p>The staff has 10 charges for the following properties. It regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff loses its properties and becomes a nonmagical quarterstaff.</p><p><strong>Spells</strong>. You can use an action to expend 1 or more of the staff's charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{Animal Friendship} (1 charge), @UUID[Compendium.dnd5e.spells.Item.MCEpGpvovcXagwQS]{Awaken} (5 charges), @UUID[Compendium.dnd5e.spells.Item.JPwIEfgUPVebr5AH]{Barkskin} (2 charges), @UUID[Compendium.dnd5e.spells.Item.Iv2qqSAT7OkXKPFx]{Locate Animals or Plants} (2 charges), @UUID[Compendium.dnd5e.spells.Item.aL1F8fvYLtNzUbKu]{Speak with Animals} (1 charge), @UUID[Compendium.dnd5e.spells.Item.2VXGS206tuChoeXy]{Speak with Plants} (3 charges), or @UUID[Compendium.dnd5e.spells.Item.AQsBc94ES7W7s7iG]{Wall of Thorns} (6 charges).</p><p>You can also use an action to cast the @UUID[Compendium.dnd5e.spells.Item.pRMvmknwLf2tdMTj]{Pass without Trace} spell from the staff without using any charges.</p><p><strong>Tree Form</strong>. You can use an action to plant one end of the staff in fertile earth and expend 1 charge to transform the staff into a healthy tree. The tree is 60 feet tall and has a 5-foot-diameter trunk, and its branches at the top spread out in a 20-foot radius. The tree appears ordinary but radiates a faint aura of transmutation magic if targeted by @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}. While touching the tree and using another action to speak its command word, you return the staff to its normal form. Any creature in the tree falls when it reverts to a staff.</p>",
+      "activities": {
+        "Tree Form": {
+          "name": "Tree Form"
+        }
+      },
       "effects": {
         "Staff of the Woodlands": {
           "name": "Staff of the Woodlands",
@@ -3071,7 +3663,12 @@
     },
     "Stone of Controlling Earth Elementals": {
       "name": "Stone of Controlling Earth Elementals",
-      "description": "<p><em>Wondrous item</em></p>\n<p>If the stone is touching the ground, you can use an action to speak the stone's command word and summon an @UUID[Compendium.dnd5e.monsters.Actor.sApYLZj9PTZ40wJr]{Earth Elemental}, as if you had cast the @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell. The stone can't be used this way again until the next dawn.</p>\n<p>The stone weighs 5 pounds.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>If the stone is touching the ground, you can use an action to speak the stone's command word and summon an @UUID[Compendium.dnd5e.monsters.Actor.sApYLZj9PTZ40wJr]{Earth Elemental}, as if you had cast the @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell. The stone can't be used this way again until the next dawn.</p>\n<p>The stone weighs 5 pounds.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Command word."
+        }
+      }
     },
     "Stone of Good Luck (Luckstone)": {
       "name": "Stone of Good Luck (Luckstone)",
@@ -3139,15 +3736,30 @@
     },
     "Tome of Clear Thought": {
       "name": "Tome of Clear Thought",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains memory and logic exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Intelligence score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains memory and logic exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Intelligence score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The book must be completed in 6 days or less."
+        }
+      }
     },
     "Tome of Leadership and Influence": {
       "name": "Tome of Leadership and Influence",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains guidelines for influencing and charming others, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Charisma score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains guidelines for influencing and charming others, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Charisma score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The book must be completed in 6 days or less."
+        }
+      }
     },
     "Tome of Understanding": {
       "name": "Tome of Understanding",
-      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Wisdom score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>"
+      "description": "<p><em>Wondrous item</em></p>\n<p>This book contains intuition and insight exercises, and its words are charged with magic. If you spend 48 hours over a period of 6 days or fewer studying the book's contents and practicing its guidelines, your Wisdom score increases by 2, as does your maximum for that score. The manual then loses its magic, but regains it in a century.</p>",
+      "activities": {
+        "utility": {
+          "condition": "The book must be completed in 6 days or less."
+        }
+      }
     },
     "Torch": {
       "name": "Torch",
@@ -3375,15 +3987,30 @@
     },
     "Wand of Binding": {
       "name": "Wand of Binding",
-      "description": "<p><em>(Requires attunement by a spellcaster)</em></p>\n<p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>\n<p><strong>Spells</strong>. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).</p>\n<p><strong>Assisted Escape</strong>. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.</p>"
+      "description": "<p><em>(Requires attunement by a spellcaster)</em></p>\n<p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>\n<p><strong>Spells</strong>. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).</p>\n<p><strong>Assisted Escape</strong>. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.</p>",
+      "activities": {
+        "Assisted Escape": {
+          "name": "Assisted Escape"
+        }
+      }
     },
     "Wand of Enemy Detection": {
       "name": "Wand of Enemy Detection",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>This wand has 7 charges. While holding it, you can use an action and expend 1 charge to speak its command word. For the next minute, you know the direction of the nearest creature hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of hostile creatures that are ethereal, invisible, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.</p>\n<p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>This wand has 7 charges. While holding it, you can use an action and expend 1 charge to speak its command word. For the next minute, you know the direction of the nearest creature hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of hostile creatures that are ethereal, invisible, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.</p>\n<p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "activities": {
+        "Detect Enemy": {
+          "name": "Detect Enemy"
+        }
+      }
     },
     "Wand of Fear": {
       "name": "Wand of Fear",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>\n<p><strong>Command</strong>. While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command} spell (save DC 15).</p>\n<p><strong>Cone of Fear</strong>. While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>\n<p><strong>Command</strong>. While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command} spell (save DC 15).</p>\n<p><strong>Cone of Fear</strong>. While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become frightened of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.</p>",
+      "activities": {
+        "Cone of Fear": {
+          "name": "Cone of Fear"
+        }
+      }
     },
     "Wand of Fireballs": {
       "name": "Wand of Fireballs",
@@ -3416,7 +4043,12 @@
     },
     "Wand of Secrets": {
       "name": "Wand of Secrets",
-      "description": "<p>The wand has 3 charges. While holding it, you can use an action to expend 1 of its charges, and if a secret door or trap is within 30 feet of you, the wand pulses and points at the one nearest to you. The wand regains 1d3 expended charges daily at dawn.</p>"
+      "description": "<p>The wand has 3 charges. While holding it, you can use an action to expend 1 of its charges, and if a secret door or trap is within 30 feet of you, the wand pulses and points at the one nearest to you. The wand regains 1d3 expended charges daily at dawn.</p>",
+      "activities": {
+        "Detect Secret": {
+          "name": "Detect Secret"
+        }
+      }
     },
     "Wand of Web": {
       "name": "Wand of Web",
@@ -3424,7 +4056,36 @@
     },
     "Wand of Wonder": {
       "name": "Wand of Wonder",
-      "description": "<p><em>(Requires attunement by a spellcaster)</em></p>\n<p>This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges and choose a target within 120 feet of you. The target can be a creature, an object, or a point in space. Roll on the @UUID[Compendium.dnd5e.tables.RollTable.X03rbSjVcNNJNqa8]{Wand of Wonder} table to discover what happens.</p>\n<p>If the effect causes you to cast a spell from the wand, the spell's save DC is 15. If the spell normally has a range expressed in feet, its range becomes 120 feet if it isn't already. If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the GM randomly determines which ones are affected.</p>\n<p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed.</p>"
+      "description": "<p><em>(Requires attunement by a spellcaster)</em></p>\n<p>This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges and choose a target within 120 feet of you. The target can be a creature, an object, or a point in space. Roll on the @UUID[Compendium.dnd5e.tables.RollTable.X03rbSjVcNNJNqa8]{Wand of Wonder} table to discover what happens.</p>\n<p>If the effect causes you to cast a spell from the wand, the spell's save DC is 15. If the spell normally has a range expressed in feet, its range becomes 120 feet if it isn't already. If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the GM randomly determines which ones are affected.</p>\n<p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed.</p>",
+      "activities": {
+        "Slow (1–5)": {
+          "name": "Slow (1–5)"
+        },
+        "Faerie Fire (6–10)": {
+          "name": "Faerie Fire (6–10)"
+        },
+        "Gust of Wind (16–20)": {
+          "name": "Gust of Wind (16–20)"
+        },
+        "Detect Thoughts (21–25)": {
+          "name": "Detect Thoughts (21–25)"
+        },
+        "Stinking Cloud (26–30)": {
+          "name": "Stinking Cloud (26–30)"
+        },
+        "Lightning Bolt (37–46)": {
+          "name": "Lightning Bolt (37–46)"
+        },
+        "Darkness (54–58)": {
+          "name": "Darkness (54–58)"
+        },
+        "Fireball (70–79)": {
+          "name": "Fireball (70–79)"
+        },
+        "Invisibility (80–84)": {
+          "name": "Invisibility (80–84)"
+        }
+      }
     },
     "Wand of the War Mage +1": {
       "name": "Wand of the War Mage +1",

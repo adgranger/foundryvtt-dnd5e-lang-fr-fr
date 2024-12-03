@@ -20,6 +20,10 @@
     "sources": {
       "path": "system.source",
       "converter": "source"
+    },
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
     }
   },
   "folders": {},
@@ -234,7 +238,15 @@
     },
     "Death Burst": {
       "name": "Death Burst",
-      "description": "<section class=\"secret\">\n<p>When the [[lookup @name lowercase]] dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must then succeed on a <strong>DC 10 Constitution saving throw</strong> or be blinded for <strong>1 minute</strong>. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>When the [[lookup @name lowercase]] dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must make a <strong>Constitution</strong> saving throw.</p>"
+      "description": "<section class=\"secret\">\n<p>When the [[lookup @name lowercase]] dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must then succeed on a <strong>DC 10 Constitution saving throw</strong> or be blinded for <strong>1 minute</strong>. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>When the [[lookup @name lowercase]] dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must make a <strong>Constitution</strong> saving throw.</p>",
+      "activities": {
+        "utility": {
+          "condition": "on death"
+        },
+        "save": {
+          "condition": "on death"
+        }
+      }
     },
     "Death Glare": {
       "name": "Death Glare",
@@ -242,11 +254,24 @@
     },
     "Death Throes": {
       "name": "Death Throes",
-      "description": "<section class=\"secret\">\n<p>When the [[lookup @name lowercase]] dies, it explodes, and each creature within 30 feet of it must make a  <strong>DC 20 Dexterity</strong> saving throw, taking <strong>70 (20d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p>The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]'s weapons.</p>\n</section>\n<p>When the [[lookup @name lowercase]] dies, it explodes, and each creature within 30 feet of it must make a <strong>Dexterity</strong> saving throw. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]'s weapons.</p>"
+      "description": "<section class=\"secret\">\n<p>When the [[lookup @name lowercase]] dies, it explodes, and each creature within 30 feet of it must make a  <strong>DC 20 Dexterity</strong> saving throw, taking <strong>70 (20d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p>The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]'s weapons.</p>\n</section>\n<p>When the [[lookup @name lowercase]] dies, it explodes, and each creature within 30 feet of it must make a <strong>Dexterity</strong> saving throw. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the [[lookup @name lowercase]]'s weapons.</p>",
+      "activities": {
+        "save": {
+          "condition": "Upon death"
+        }
+      }
     },
     "Detect (Legendary)": {
       "name": "Detect (Legendary)",
-      "description": "<p>the [[lookup @name lowercase]] makes a Wisdom (Perception) check.</p>"
+      "description": "<p>the [[lookup @name lowercase]] makes a Wisdom (Perception) check.</p>",
+      "activities": {
+        "check": {
+          "chatFlavor": "The aboleth focuses its gaze!"
+        },
+        "utility": {
+          "chatFlavor": "The aboleth focuses its gaze!"
+        }
+      }
     },
     "Devil Sight": {
       "name": "Devil Sight",
@@ -346,7 +371,15 @@
     },
     "Fey Charm": {
       "name": "Fey Charm",
-      "description": "<section class=\"secret\">\n<p>the [[lookup @name lowercase]] targets one humanoid or beast that she can see within 30 feet of her. If the target can see the [[lookup @name lowercase]], it must succeed on a <strong>DC 14 Wisdom</strong> saving throw or be magically charmed.</p><p>The charmed creature regards the [[lookup @name lowercase]] as a trusted friend to be heeded and protected. Although the target isn't under the [[lookup @name lowercase]]'s control, it takes the [[lookup @name lowercase]]'s requests or actions in the most favorable way it can.Each time the [[lookup @name lowercase]] or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the [[lookup @name lowercase]] dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the [[lookup @name lowercase]]'s Fey Charm for the next 24 hours. the [[lookup @name lowercase]] can have no more than one humanoid and up to three beasts charmed at a time.</p>\n</section>\n<p>the [[lookup @name lowercase]] targets one humanoid or beast that she can see within 30 feet of her. If the target can see the [[lookup @name lowercase]], it must make a <strong>Wisdom</strong> saving throw. Each time the [[lookup @name lowercase]] or its allies do anything harmful to the target, it can repeat the saving throw.</p>"
+      "description": "<section class=\"secret\">\n<p>the [[lookup @name lowercase]] targets one humanoid or beast that she can see within 30 feet of her. If the target can see the [[lookup @name lowercase]], it must succeed on a <strong>DC 14 Wisdom</strong> saving throw or be magically charmed.</p><p>The charmed creature regards the [[lookup @name lowercase]] as a trusted friend to be heeded and protected. Although the target isn't under the [[lookup @name lowercase]]'s control, it takes the [[lookup @name lowercase]]'s requests or actions in the most favorable way it can.Each time the [[lookup @name lowercase]] or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the [[lookup @name lowercase]] dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the [[lookup @name lowercase]]'s Fey Charm for the next 24 hours. the [[lookup @name lowercase]] can have no more than one humanoid and up to three beasts charmed at a time.</p>\n</section>\n<p>the [[lookup @name lowercase]] targets one humanoid or beast that she can see within 30 feet of her. If the target can see the [[lookup @name lowercase]], it must make a <strong>Wisdom</strong> saving throw. Each time the [[lookup @name lowercase]] or its allies do anything harmful to the target, it can repeat the saving throw.</p>",
+      "activities": {
+        "utility": {
+          "condition": "one humanoid or beast"
+        },
+        "save": {
+          "condition": "one humanoid or beast"
+        }
+      }
     },
     "Fire Absorption": {
       "name": "Fire Absorption",
@@ -762,7 +795,12 @@
     },
     "Shadow Stealth": {
       "name": "Shadow Stealth",
-      "description": "<section class=\"secret\"><p>While in dim light or darkness, the [[lookup @name lowercase]] can take the Hide action as a bonus action.</p></section><p>the [[lookup @name lowercase]] can take the Hide action as a bonus action.</p>"
+      "description": "<section class=\"secret\"><p>While in dim light or darkness, the [[lookup @name lowercase]] can take the Hide action as a bonus action.</p></section><p>the [[lookup @name lowercase]] can take the Hide action as a bonus action.</p>",
+      "activities": {
+        "utility": {
+          "condition": "In dim light or darkness"
+        }
+      }
     },
     "Shapechanger": {
       "name": "Shapechanger",
@@ -802,7 +840,12 @@
     },
     "Sneak Attack": {
       "name": "Sneak Attack",
-      "description": "<section class=\"secret\">Once per turn.</section>\n<p>the [[lookup @name lowercase]] deals an extra 13 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the [[lookup @name lowercase]] that isn't incapacitated and the [[lookup @name lowercase]] doesn't have disadvantage on the attack roll.</p>"
+      "description": "<section class=\"secret\">Once per turn.</section>\n<p>the [[lookup @name lowercase]] deals an extra 13 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the [[lookup @name lowercase]] that isn't incapacitated and the [[lookup @name lowercase]] doesn't have disadvantage on the attack roll.</p>",
+      "activities": {
+        "utility": {
+          "condition": "once per turn"
+        }
+      }
     },
     "Snow Camouflage": {
       "name": "Snow Camouflage",
@@ -990,7 +1033,18 @@
     },
     "Wall of Ice": {
       "name": "Wall of Ice",
-      "description": "<section class=\"secret\">\n<p>the [[lookup @name lowercase]] magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.</p><p>When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a <strong>DC 17 Dexterity</strong> saving throw, taking <strong>35 (10d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p>The wall lasts for 1 minute or until the [[lookup @name lowercase]] is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to <em>fire damage</em>, and immunity to acid, cold, necrotic, poison, and <em>psychic damage</em>. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a <strong>DC 17 Constitution</strong> saving throw, taking <strong>17 (5d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.</p>\n</section>\n<p>the [[lookup @name lowercase]] magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter. When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a Dexterity saving throw.</p><p>The wall can be damaged and breached. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a <strong>Constitution</strong> saving throw.</p>"
+      "description": "<section class=\"secret\">\n<p>the [[lookup @name lowercase]] magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.</p><p>When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a <strong>DC 17 Dexterity</strong> saving throw, taking <strong>35 (10d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p>The wall lasts for 1 minute or until the [[lookup @name lowercase]] is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to <em>fire damage</em>, and immunity to acid, cold, necrotic, poison, and <em>psychic damage</em>. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a <strong>DC 17 Constitution</strong> saving throw, taking <strong>17 (5d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.</p>\n</section>\n<p>the [[lookup @name lowercase]] magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter. When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a Dexterity saving throw.</p><p>The wall can be damaged and breached. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a <strong>Constitution</strong> saving throw.</p>",
+      "activities": {
+        "attack": {
+          "condition": "a solid surface it can see within 60 ft."
+        },
+        "save": {
+          "condition": "a solid surface it can see within 60 ft."
+        },
+        "utility": {
+          "condition": "a solid surface it can see within 60 ft."
+        }
+      }
     },
     "Water Breathing": {
       "name": "Water Breathing",

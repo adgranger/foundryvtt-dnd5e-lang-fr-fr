@@ -46,6 +46,7 @@
     "Akra (Dragonborn Cleric)": {
       "name": "Akra (Dragonborn Cleric)",
       "tokenName": "Akra",
+      "description": "<p>A devout follower of her deity and of her society's customs, Akra feels somewhat out of place adventuring in foreign lands. But she feels bound to do everything in her power to bring peace to the region.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Holy Symbol": {
           "name": "Holy Symbol",
@@ -262,6 +263,7 @@
     "Aoth (Human Druid)": {
       "name": "Aoth (Human Druid)",
       "tokenName": "Aoth",
+      "description": "<p>Aoth lived among animals for so long that he now has difficulty speaking Common. His natural habitat in danger, he decided to join an adventuring group to return balance to his land.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Druidic Focus: Cowbell": {
           "name": "Druidic Focus: Cowbell",
@@ -436,6 +438,7 @@
     "Beiro (Half-Elf Bard)": {
       "name": "Beiro (Half-Elf Bard)",
       "tokenName": "Beiro",
+      "description": "<p>Beiro was a famed entertainer at his local tavern, when he one day ran out of stories to tell. To solve this, he set out to make his own stories, so as to one day tell them again at his tavern.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Musical Instrument: Lute": {
           "name": "Musical Instrument: Lute",
@@ -584,10 +587,16 @@
     "Krusk (Half-Orc Paladin)": {
       "name": "Krusk (Half-Orc Paladin)",
       "tokenName": "Krusk",
+      "description": "<p>Roaming the land brigning justice to all, Krusk has just one goal: the destruction of evil wherever it lies.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Amulet (Holy Symbol)": {
           "name": "Amulet (Holy Symbol)",
-          "description": "<p>An amulet depicting a symbol representing a deity through which a true believer can call forth their power and in doing so spread the faith.</p><p><strong>Spellcasting Focus</strong>. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.</p>"
+          "description": "<p>An amulet depicting a symbol representing a deity through which a true believer can call forth their power and in doing so spread the faith.</p><p><strong>Spellcasting Focus</strong>. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.</p>",
+          "activities": {
+            "utility": {
+              "condition": "Holy symbol must be clearly visible."
+            }
+          }
         },
         "Javelin (melee)": {
           "name": "Javelin (melee)",
@@ -667,7 +676,12 @@
         },
         "Lay on Hands": {
           "name": "Lay on Hands",
-          "description": "<p>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.</p><p>As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.</p><p>Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.</p><p>This feature has no effect on undead and constructs.</p>"
+          "description": "<p>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.</p><p>As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.</p><p>Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.</p><p>This feature has no effect on undead and constructs.</p>",
+          "activities": {
+            "heal": {
+              "condition": "Target cannot be Undead or a Construct."
+            }
+          }
         },
         "Half-Orc": {
           "name": "Half-Orc",
@@ -675,7 +689,12 @@
         },
         "Relentless Endurance": {
           "name": "Relentless Endurance",
-          "description": "<p>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.</p>"
+          "description": "<p>When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.</p>",
+          "activities": {
+            "heal": {
+              "condition": "When you are reduced to 0 hit points"
+            }
+          }
         },
         "Savage Attacks": {
           "name": "Savage Attacks",
@@ -686,6 +705,7 @@
     "Merric (Halfling Barbarian)": {
       "name": "Merric (Halfling Barbarian)",
       "tokenName": "Merric",
+      "description": "<p>Merric was once a vigilante, due to her innate sense of street justice. Though her small size may not seem like much in combat, she more than makes up for it with her violent outbursts of anger.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Javelin (melee)": {
           "name": "Javelin (melee)",
@@ -799,6 +819,7 @@
     "Morthos (Tiefling Sorcerer)": {
       "name": "Morthos (Tiefling Sorcerer)",
       "tokenName": "Morthos",
+      "description": "<p>Morthos's investigation into her complex draconic-infernal ancestry led her to an academic life, but it soon became apparent that the fools in charge were keeping many secrets from her.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Orb": {
           "name": "Orb",
@@ -967,6 +988,7 @@
     "Perrin (Halfling Monk)": {
       "name": "Perrin (Halfling Monk)",
       "tokenName": "Perrin",
+      "description": "<p>A devoted student of his local monastery, Perrin has been tasked with bringing balance to the surrounding lands.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Shortsword": {
           "name": "Shortsword",
@@ -982,7 +1004,12 @@
         },
         "Reliquary": {
           "name": "Reliquary",
-          "description": "<p>A tiny box or other container holding a fragment of a precious relic, saint, or other historical figure that dedicated their life to walk the path of a true believer. A deity imbues the bearer of this artifact with the ability to call forth their power and in doing so spread the faith once more.</p><p><strong>Spellcasting Focus</strong>. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.</p>"
+          "description": "<p>A tiny box or other container holding a fragment of a precious relic, saint, or other historical figure that dedicated their life to walk the path of a true believer. A deity imbues the bearer of this artifact with the ability to call forth their power and in doing so spread the faith once more.</p><p><strong>Spellcasting Focus</strong>. A cleric or paladin can use a holy symbol as a spellcasting focus. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.</p>",
+          "activities": {
+            "utility": {
+              "condition": "Holy symbol must be clearly visible."
+            }
+          }
         },
         "Common Clothes": {
           "name": "Common Clothes",
@@ -1095,6 +1122,7 @@
     "Quillathe (Elf Ranger)": {
       "name": "Quillathe (Elf Ranger)",
       "tokenName": "Quillathe",
+      "description": "<p>Quillathe cleanses monsters from her woods as a hobby, but now a new force menaces her land and she must band with adventurers to defeat it.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Tinderbox": {
           "name": "Tinderbox",
@@ -1189,6 +1217,7 @@
     "Randal (Human Fighter)": {
       "name": "Randal (Human Fighter)",
       "tokenName": "Randal",
+      "description": "<p>Randal worked his way through the ranks of his hometown's guard, ultimately growing restless with city life and wandering off in search of adventure.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Horn": {
           "name": "Horn",
@@ -1312,6 +1341,7 @@
     "Riswynn (Dwarf Rogue)": {
       "name": "Riswynn (Dwarf Rogue)",
       "tokenName": "Riswynn",
+      "description": "<p>Once a well-respected bureaucrat at the dwarven halls, Riswynn dabbled in intruigue, picked up a few tricks, and ran intro trouble with some nobles. She looks to make a name for herself and regain her social status.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Fine Clothes": {
           "name": "Fine Clothes",
@@ -1444,6 +1474,7 @@
     "Sefris (Half-Elf Warlock)": {
       "name": "Sefris (Half-Elf Warlock)",
       "tokenName": "Sefris",
+      "description": "<p>Sefris's pickpocketing as a child grew into small burglaries and eventually complex heists, using the dark bond with his fiend to aid his exploits. He'll work for anyone who can throw some coin his way.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Expanded Spell List": {
           "name": "Expanded Spell List",
@@ -1574,6 +1605,7 @@
     "Zanna (Gnome Wizard)": {
       "name": "Zanna (Gnome Wizard)",
       "tokenName": "Zanna",
+      "description": "<p>Always interested in tinkering, Zanna set out for adventure in order to find more spells for her spellbook, and perhaps one day create some of her own.</p><p>\n        <em>\n          Token artwork by\n          <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.\n        </em>      \n      </p>",
       "items": {
         "Component Pouch": {
           "name": "Component Pouch",
@@ -1650,6 +1682,11 @@
         "Tinker": {
           "name": "Tinker",
           "description": "<p>You have proficiency with artisan's tools (tinker's tools). Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you spend 1 hour repairing it to keep the device functioning), or when you use your action to dismantle it; at that time, you can reclaim the materials used to create it. You can have up to three such devices active at a time. When you create a device, choose one of the following options:</p>\n<p><em>Clockwork Toy:</em> This toy is a clockwork animal, monster, or person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy moves 5 feet across the ground on each of your turns in a random direction. It makes noises as appropriate to the creature it represents.</p>\n<p><em>Fire Starter:</em> The device produces a miniature flame, which you can use to light a candle, torch, or campfire. Using the device requires your action.</p>\n<p><em>Music Box:</em> When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed.</p>",
+          "activities": {
+            "utility": {
+              "condition": "Expend 10 gp worth of materials"
+            }
+          },
           "effects": {
             "Tinker": {
               "name": "Tinker"
@@ -1721,7 +1758,12 @@
         },
         "Arcane Recovery": {
           "name": "Arcane Recovery",
-          "description": "<p>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</p><p>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>"
+          "description": "<p>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</p><p>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>",
+          "activities": {
+            "utility": {
+              "chatFlavor": "The wizard can recover this number worth of spells slots (of 5th-level or lower):"
+            }
+          }
         },
         "Rock Gnome": {
           "name": "Rock Gnome",
