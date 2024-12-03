@@ -46,7 +46,8 @@ Hooks.once('init', () => {
 			"advancement" : Converters.advancement(),
 			"items": Converters.items(),
 			"itemsMonster": Converters.itemsMonster(),
-			"effects": Converters.effects()
+			"effects": Converters.effects(),
+			"activities": Converters.activities()
 		});
 	}
 });
@@ -653,7 +654,8 @@ export class Converters {
 				name: translation.name ?? item.name,
 				system: {
 					description: { value: translation.description ?? item.system.description.value },
-					materials: { value: translation.materials ?? item.system.materials?.value }
+					materials: { value: translation.materials ?? item.system.materials?.value },
+					activities: item.system.activities ? Converters._activities(item.system.activities, translation.activities) : item.system.activities
 				},
 				effects: item.effects.length > 0 ? Converters._effects(item.effects, translation.effects) : item.effects,
 				translated: true,
@@ -705,6 +707,29 @@ export class Converters {
         }
         
         return data;
+	}
+
+	static activities() {
+		return (activities, translations) => Converters._activities(activities, translations);
+	}
+
+	static _activities(activities, translations) {
+		if (!translations) return activities;
+
+		Object.keys(activities).forEach(key => {
+			const activity = activities[key];
+			const translationKey = activity.name?.length ? activity.name : activity.type;
+			const translation = translations[activity._id] || translations[translationKey];
+			if (translation) {
+				foundry.utils.mergeObject(activity, {
+					name: translation.name ?? activity.name,
+					activation: { condition: translation.condition ?? activity.activation?.condition },
+					description: { chatFlavor: translation.chatFlavor ?? activity.description?.chatFlavor }
+				});
+			}
+		});
+
+		return activities;
 	}
 
 	static round(num) {

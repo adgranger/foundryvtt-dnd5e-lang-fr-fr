@@ -66,7 +66,15 @@
         },
         "Detect": {
           "name": "Detect",
-          "description": "<p>The aboleth makes a Wisdom (Perception) check.</p>"
+          "description": "<p>The aboleth makes a Wisdom (Perception) check.</p>",
+          "activities": {
+            "check": {
+              "chatFlavor": "The aboleth focuses its gaze!"
+            },
+            "utility": {
+              "chatFlavor": "The aboleth focuses its gaze!"
+            }
+          }
         },
         "Tail Swipe": {
           "name": "Tail Swipe",
@@ -1897,7 +1905,12 @@
         },
         "Sneak Attack": {
           "name": "Sneak Attack",
-          "description": "<section class=\"secret\">Once per turn.</section>\n<p>The assassin deals an extra 13 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the assassin that isn't incapacitated and the assassin doesn't have disadvantage on the attack roll.</p>"
+          "description": "<section class=\"secret\">Once per turn.</section>\n<p>The assassin deals an extra 13 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 ft. of an ally of the assassin that isn't incapacitated and the assassin doesn't have disadvantage on the attack roll.</p>",
+          "activities": {
+            "damage": {
+              "condition": "once per turn"
+            }
+          }
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -2015,7 +2028,15 @@
       "items": {
         "Keen Smell": {
           "name": "Keen Smell",
-          "description": "<p>The badger has<strong> advantage </strong>on Wisdom (Perception) checks that rely on smell.</p>"
+          "description": "<p>The badger has<strong> advantage </strong>on Wisdom (Perception) checks that rely on smell.</p>",
+          "activities": {
+            "check": {
+              "chatFlavor": "The badger sniffs around!"
+            },
+            "utility": {
+              "chatFlavor": "The badger sniffs around!"
+            }
+          }
         },
         "Bite": {
           "name": "Bite",
@@ -2029,7 +2050,12 @@
       "items": {
         "Death Throes": {
           "name": "Death Throes",
-          "description": "<section class=\"secret\">\n<p>When the balor dies, it explodes, and each creature within 30 feet of it must make a  <strong>DC 20 Dexterity</strong> saving throw, taking <strong>70 (20d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n<p>The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.</p>\n</section>\n<p>When the balor dies, it explodes, and each creature within 30 feet of it must make a <strong>Dexterity</strong> saving throw. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.</p>"
+          "description": "<section class=\"secret\">\n<p>When the balor dies, it explodes, and each creature within 30 feet of it must make a  <strong>DC 20 Dexterity</strong> saving throw, taking <strong>70 (20d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n<p>The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.</p>\n</section>\n<p>When the balor dies, it explodes, and each creature within 30 feet of it must make a <strong>Dexterity</strong> saving throw. The explosion ignites flammable objects in that area that aren't being worn or carried, and it destroys the balor's weapons.</p>",
+          "activities": {
+            "save": {
+              "condition": "Upon death"
+            }
+          }
         },
         "Fire Aura": {
           "name": "Fire Aura",
@@ -2335,7 +2361,15 @@
       "items": {
         "Keen Sight": {
           "name": "Keen Sight",
-          "description": "<p>The hawk has<strong> advantage </strong>on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>The hawk has<strong> advantage </strong>on Wisdom (Perception) checks that rely on sight.</p>",
+          "activities": {
+            "check": {
+              "chatFlavor": "The hawk focuses its gaze!"
+            },
+            "utility": {
+              "chatFlavor": "The hawk focuses its gaze!"
+            }
+          }
         },
         "Pack Tactics": {
           "name": "Pack Tactics",
@@ -2543,7 +2577,15 @@
         },
         "Keen Smell": {
           "name": "Keen Smell",
-          "description": "<p>The cat has<strong> advantage </strong>on Wisdom (Perception) checks that rely on smell.</p>"
+          "description": "<p>The cat has<strong> advantage </strong>on Wisdom (Perception) checks that rely on smell.</p>",
+          "activities": {
+            "check": {
+              "chatFlavor": "The cat raises its head, sniffing the air."
+            },
+            "utility": {
+              "chatFlavor": "The cat raises its head, sniffing the air."
+            }
+          }
         }
       }
     },
@@ -3589,7 +3631,15 @@
         },
         "Fey Charm": {
           "name": "Fey Charm",
-          "description": "<section class=\"secret\">\n<p>The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a  <strong>DC 14 Wisdom</strong> saving throw or be magically charmed.</p>\n<p>The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.The dryad can have no more than one humanoid and up to three beasts charmed at a time.</p>\n</section>\n<p>The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must make a <strong>Wisdom</strong> saving throw. Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must succeed on a  <strong>DC 14 Wisdom</strong> saving throw or be magically charmed.</p>\n<p>The charmed creature regards the dryad as a trusted friend to be heeded and protected. Although the target isn't under the dryad's control, it takes the dryad's requests or actions in the most favorable way it can.Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the dryad dies, is on a different plane of existence from the target, or ends the effect as a bonus action. If a target's saving throw is successful, the target is immune to the dryad's Fey Charm for the next 24 hours.The dryad can have no more than one humanoid and up to three beasts charmed at a time.</p>\n</section>\n<p>The dryad targets one humanoid or beast that she can see within 30 feet of her. If the target can see the dryad, it must make a <strong>Wisdom</strong> saving throw. Each time the dryad or its allies do anything harmful to the target, it can repeat the saving throw.</p>",
+          "activities": {
+            "utility": {
+              "condition": "one humanoid or beast"
+            },
+            "save": {
+              "condition": "one humanoid or beast"
+            }
+          }
         },
         "Entangle": {
           "name": "Entangle",
@@ -3670,7 +3720,15 @@
       "items": {
         "Death Burst": {
           "name": "Death Burst",
-          "description": "<section class=\"secret\">\n<p>When the mephit dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must then succeed on a <strong>DC 10 Constitution saving throw</strong> or be blinded for <strong>1 minute</strong>. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>When the mephit dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must make a <strong>Constitution</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>When the mephit dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must then succeed on a <strong>DC 10 Constitution saving throw</strong> or be blinded for <strong>1 minute</strong>. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>When the mephit dies, it explodes in a burst of dust. Each creature within <strong>5 ft.</strong> of it must make a <strong>Constitution</strong> saving throw.</p>",
+          "activities": {
+            "utility": {
+              "condition": "on death"
+            },
+            "save": {
+              "condition": "on death"
+            }
+          }
         },
         "Innate Spellcasting": {
           "name": "Innate Spellcasting",
@@ -3810,7 +3868,12 @@
         },
         "Stomp": {
           "name": "Stomp",
-          "description": "<section class=\"secret\">\n<p><em>Melee Weapon Attack:</em><strong>+8 to hit,</strong>, <strong>5 ft.,</strong> one <strong>prone</strong> creature. Hit: <strong>22 (3d10 + 6) <em>bludgeoning damage</em></strong>.</p></section>\n<p>The Elephant attacks with its Stomp.</p>"
+          "description": "<section class=\"secret\">\n<p><em>Melee Weapon Attack:</em><strong>+8 to hit,</strong>, <strong>5 ft.,</strong> one <strong>prone</strong> creature. Hit: <strong>22 (3d10 + 6) <em>bludgeoning damage</em></strong>.</p></section>\n<p>The Elephant attacks with its Stomp.</p>",
+          "activities": {
+            "attack": {
+              "condition": "one prone creature"
+            }
+          }
         }
       }
     },
@@ -5636,7 +5699,18 @@
         },
         "Wall of Ice": {
           "name": "Wall of Ice",
-          "description": "<section class=\"secret\">\n<p>The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.</p>\n<p>When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a  <strong>DC 17 Dexterity</strong> saving throw, taking <strong>35 (10d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n<p>The wall lasts for 1 minute or until the devil is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to <em>fire damage</em>, and immunity to acid, cold, necrotic, poison, and <em>psychic damage</em>. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a  <strong>DC 17 Constitution</strong> saving throw, taking <strong>17 (5d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.</p>\n</section>\n<p>The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a Dexterity saving throw.</p>\n<p>The wall can be damaged and breached. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a <strong>Constitution</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.</p>\n<p>When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a  <strong>DC 17 Dexterity</strong> saving throw, taking <strong>35 (10d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n<p>The wall lasts for 1 minute or until the devil is incapacitated or dies. The wall can be damaged and breached; each 10-foot section has AC 5, 30 hit points, vulnerability to <em>fire damage</em>, and immunity to acid, cold, necrotic, poison, and <em>psychic damage</em>. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a  <strong>DC 17 Constitution</strong> saving throw, taking <strong>17 (5d6) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one. The frigid air dissipates when the rest of the wall vanishes.</p>\n</section>\n<p>The devil magically forms an opaque wall of ice on a solid surface it can see within 60 feet of it. The wall is 1 foot thick and up to 30 feet long and 10 feet high, or it's a hemispherical dome up to 20 feet in diameter.When the wall appears, each creature in its space is pushed out of it by the shortest route. The creature chooses which side of the wall to end up on, unless the creature is incapacitated. The creature then makes a Dexterity saving throw.</p>\n<p>The wall can be damaged and breached. If a section is destroyed, it leaves behind a sheet of frigid air in the space the wall occupied. Whenever a creature finishes moving through the frigid air on a turn, willingly or otherwise, the creature must make a <strong>Constitution</strong> saving throw.</p>",
+          "activities": {
+            "attack": {
+              "condition": "a solid surface it can see within 60 ft."
+            },
+            "save": {
+              "condition": "a solid surface it can see within 60 ft."
+            },
+            "utility": {
+              "condition": "a solid surface it can see within 60 ft."
+            }
+          }
         },
         "Tail": {
           "name": "Tail",
@@ -5658,7 +5732,12 @@
       "items": {
         "Death Burst": {
           "name": "Death Burst",
-          "description": "<section class=\"secret\"><p>When the mephit dies, it explodes in a burst of jagged ice. </p><p>Each creature within 5 ft. of it must make a  <strong>DC 10 Dexterity</strong> saving throw, taking <strong>4 (1d8) <em>slashing damage</em></strong> on a failed save, or half as much damage on a successful one.</p></section><p>When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 ft. of it must make a <strong>Dexterity</strong> saving throw.</p>"
+          "description": "<section class=\"secret\"><p>When the mephit dies, it explodes in a burst of jagged ice. </p><p>Each creature within 5 ft. of it must make a  <strong>DC 10 Dexterity</strong> saving throw, taking <strong>4 (1d8) <em>slashing damage</em></strong> on a failed save, or half as much damage on a successful one.</p></section><p>When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 ft. of it must make a <strong>Dexterity</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "death"
+            }
+          }
         },
         "False Appearance": {
           "name": "False Appearance",
@@ -6352,7 +6431,12 @@
         },
         "Death Burst": {
           "name": "Death Burst",
-          "description": "<section class=\"secret\"><p>When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a  <strong>DC 11 Dexterity</strong> saving throw, taking <strong>7 (2d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p></p></section><p>When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a <strong>Dexterity</strong> saving throw.</p>"
+          "description": "<section class=\"secret\"><p>When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a  <strong>DC 11 Dexterity</strong> saving throw, taking <strong>7 (2d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p></p></section><p>When the mephit dies, it explodes in a burst of lava. Each creature within 5 ft. of it must make a <strong>Dexterity</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "death"
+            }
+          }
         },
         "False Appearance": {
           "name": "False Appearance",
@@ -6379,7 +6463,12 @@
       "items": {
         "Death Burst": {
           "name": "Death Burst",
-          "description": "<section class=\"secret\"><p>When the magmin dies, it explodes in a burst of fire and magma. </p><p>Each creature within 10 ft. of it must make a  <strong>DC 11 Dexterity</strong> saving throw, taking <strong>7 (2d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited.</p></section><p>When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 ft. of it must make a <strong>Dexterity</strong> saving throw. Flammable objects that aren't being worn or carried in that area are ignited.</p>"
+          "description": "<section class=\"secret\"><p>When the magmin dies, it explodes in a burst of fire and magma. </p><p>Each creature within 10 ft. of it must make a  <strong>DC 11 Dexterity</strong> saving throw, taking <strong>7 (2d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited.</p></section><p>When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 ft. of it must make a <strong>Dexterity</strong> saving throw. Flammable objects that aren't being worn or carried in that area are ignited.</p>",
+          "activities": {
+            "save": {
+              "condition": "death"
+            }
+          }
         },
         "Ignited Illumination": {
           "name": "Ignited Illumination",
@@ -8024,7 +8113,12 @@
         },
         "Shadow Stealth": {
           "name": "Shadow Stealth",
-          "description": "<section class=\"secret\">\n<p>While in dim light or darkness, the shadow can take the Hide action as a bonus action.</p>\n</section>\n<p>The shadow can take the Hide action as a bonus action.</p>"
+          "description": "<section class=\"secret\">\n<p>While in dim light or darkness, the shadow can take the Hide action as a bonus action.</p>\n</section>\n<p>The shadow can take the Hide action as a bonus action.</p>",
+          "activities": {
+            "utility": {
+              "condition": "In dim light or darkness"
+            }
+          }
         },
         "Sunlight Weakness": {
           "name": "Sunlight Weakness",
@@ -8415,7 +8509,15 @@
         },
         "Death Burst": {
           "name": "Death Burst",
-          "description": "<section class=\"secret\"><p>When the mephit dies, it explodes in a cloud of steam. </p><p>Each creature within 5 ft. of the mephit must succeed on a  <strong>DC 10 Dexterity</strong> saving throw or take <strong>4 (1d8) <em>fire damage</em></strong>.</p></section><p>When the mephit dies, it explodes in a cloud of steam. Each creature within 5 ft. of the mephit must make a <strong>Dexterity</strong> saving throw.</p>"
+          "description": "<section class=\"secret\"><p>When the mephit dies, it explodes in a cloud of steam. </p><p>Each creature within 5 ft. of the mephit must succeed on a  <strong>DC 10 Dexterity</strong> saving throw or take <strong>4 (1d8) <em>fire damage</em></strong>.</p></section><p>When the mephit dies, it explodes in a cloud of steam. Each creature within 5 ft. of the mephit must make a <strong>Dexterity</strong> saving throw.</p>",
+          "activities": {
+            "damage": {
+              "condition": "on death"
+            },
+            "save": {
+              "condition": "on death"
+            }
+          }
         },
         "Innate Spellcasting": {
           "name": "Innate Spellcasting",
@@ -8808,7 +8910,12 @@
         },
         "Swallow": {
           "name": "Swallow",
-          "description": "<section class=\"secret\"><p>The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. </p><p>While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the tarrasque, and it takes <strong>56 (16d6) <em>acid damage</em></strong> at the start of each of the tarrasque's turns.If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a  <strong>DC 20 Constitution</strong> saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 30 feet of movement, exiting prone.</p></section><p>The Tarrasque attacks with its Swallow.</p>"
+          "description": "<section class=\"secret\"><p>The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. </p><p>While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the tarrasque, and it takes <strong>56 (16d6) <em>acid damage</em></strong> at the start of each of the tarrasque's turns.If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a  <strong>DC 20 Constitution</strong> saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 30 feet of movement, exiting prone.</p></section><p>The Tarrasque attacks with its Swallow.</p>",
+          "activities": {
+            "attack": {
+              "condition": "Large or smaller creature it is grappling"
+            }
+          }
         },
         "Lair Actions": {
           "name": "Lair Actions",
@@ -8942,7 +9049,12 @@
         },
         "Stomp": {
           "name": "Stomp",
-          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+9 to hit,</strong>, <strong>5 ft.,</strong> one prone creature. Hit: <strong>22 (3d10 + 6) <em>bludgeoning damage</em></strong>.</p><p></p></section><p>The Triceratops attacks with its Stomp.</p>"
+          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+9 to hit,</strong>, <strong>5 ft.,</strong> one prone creature. Hit: <strong>22 (3d10 + 6) <em>bludgeoning damage</em></strong>.</p><p></p></section><p>The Triceratops attacks with its Stomp.</p>",
+          "activities": {
+            "attack": {
+              "condition": "one prone creature"
+            }
+          }
         },
         "Trampling Charge": {
           "name": "Trampling Charge",
@@ -9778,11 +9890,21 @@
         },
         "Fire Breath": {
           "name": "Fire Breath",
-          "description": "<section class=\"secret\">\n<p>**Fire Breath.** The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a  <strong>DC 14 Dexterity</strong> saving throw, taking <strong>42 (12d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n</section>\n<p>The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a <strong>Dexterity</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>**Fire Breath.** The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a  <strong>DC 14 Dexterity</strong> saving throw, taking <strong>42 (12d6) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n</section>\n<p>The dragon exhales fire in a 40-foot line that is 5 feet wide. Each creature in that line must make a <strong>Dexterity</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "Breath weapon must be charged"
+            }
+          }
         },
         "Sleep Breath": {
           "name": "Sleep Breath",
-          "description": "<section class=\"secret\">\n<p>**Sleep Breath.** The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 14 Constitution</strong> saving throw or fall unconscious for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.</p>\n</section>\n<p>The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>**Sleep Breath.** The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 14 Constitution</strong> saving throw or fall unconscious for 5 minutes. This effect ends for a creature if the creature takes damage or someone uses an action to wake it.</p>\n</section>\n<p>The dragon exhales sleep gas in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "Breath Weapon must be charged"
+            }
+          }
         },
         "Claw": {
           "name": "Claw",
@@ -9884,11 +10006,21 @@
         },
         "Fire Breath": {
           "name": "Fire Breath",
-          "description": "<section class=\"secret\">\n<p>**Fire Breath.** The dragon exhales fire in a 30-foot cone. Each creature in that area must make a  <strong>DC 17 Dexterity</strong> saving throw, taking <strong>55 (10d10) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n</section>\n<p>The dragon exhales fire in a 30-foot cone. Each creature in that area must make a <strong>Dexterity</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>**Fire Breath.** The dragon exhales fire in a 30-foot cone. Each creature in that area must make a  <strong>DC 17 Dexterity</strong> saving throw, taking <strong>55 (10d10) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n</section>\n<p>The dragon exhales fire in a 30-foot cone. Each creature in that area must make a <strong>Dexterity</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "Breath Weapon must be charged"
+            }
+          }
         },
         "Weakening Breath": {
           "name": "Weakening Breath",
-          "description": "<section class=\"secret\">\n<p>**Weakening Breath.** The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 17 Strength</strong> saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>The dragon exhales gas in a 30-foot cone. Each creature in that area must make a <strong>Strength</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>**Weakening Breath.** The dragon exhales gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 17 Strength</strong> saving throw or have disadvantage on Strength-based attack rolls, Strength checks, and Strength saving throws for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>The dragon exhales gas in a 30-foot cone. Each creature in that area must make a <strong>Strength</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "Breath Weapon must be charged"
+            }
+          }
         }
       }
     },
@@ -9924,7 +10056,12 @@
       "items": {
         "Bite": {
           "name": "Bite",
-          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+10 to hit,</strong>, <strong>10 ft.,</strong> one target. Hit: <strong>17 (2d10 + 6) <em>piercing damage</em></strong> plus <strong>3 (1d6) <em>fire damage</em></strong>.</p><p></p></section><p>The Young Red Dragon attacks with its Bite.</p>"
+          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+10 to hit,</strong>, <strong>10 ft.,</strong> one target. Hit: <strong>17 (2d10 + 6) <em>piercing damage</em></strong> plus <strong>3 (1d6) <em>fire damage</em></strong>.</p><p></p></section><p>The Young Red Dragon attacks with its Bite.</p>",
+          "activities": {
+            "attack": {
+              "chatFlavor": "The dragon snaps its mighty jaws shut!"
+            }
+          }
         },
         "Claw": {
           "name": "Claw",
@@ -9962,11 +10099,21 @@
         },
         "Cold Breath": {
           "name": "Cold Breath",
-          "description": "<section class=\"secret\">\n<p>**Cold Breath.** The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a  <strong>DC 17 Constitution</strong> saving throw, taking <strong>54 (12d8) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n</section>\n<p>The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>**Cold Breath.** The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a  <strong>DC 17 Constitution</strong> saving throw, taking <strong>54 (12d8) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p>\n</section>\n<p>The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "Breath Weapons must be charged"
+            }
+          }
         },
         "Paralyzing Breath": {
           "name": "Paralyzing Breath",
-          "description": "<section class=\"secret\">\n<p>**Paralyzing Breath.** The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 17 Constitution</strong> saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>"
+          "description": "<section class=\"secret\">\n<p>**Paralyzing Breath.** The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 17 Constitution</strong> saving throw or be paralyzed for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>\n</section>\n<p>The dragon exhales paralyzing gas in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "condition": "Breath Weapons must be charged"
+            }
+          }
         }
       }
     },
@@ -9976,15 +10123,30 @@
       "items": {
         "Bite": {
           "name": "Bite",
-          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+7 to hit,</strong>, <strong>10 ft.,</strong> one target. Hit: <strong>15 (2d10 + 4) <em>piercing damage</em></strong> plus <strong>4 (1d8) <em>cold damage</em></strong>.</p><p></p></section><p>The Young White Dragon attacks with its Bite.</p>"
+          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+7 to hit,</strong>, <strong>10 ft.,</strong> one target. Hit: <strong>15 (2d10 + 4) <em>piercing damage</em></strong> plus <strong>4 (1d8) <em>cold damage</em></strong>.</p><p></p></section><p>The Young White Dragon attacks with its Bite.</p>",
+          "activities": {
+            "attack": {
+              "chatFlavor": "The dragon opens its wide mouth to bite its foe."
+            }
+          }
         },
         "Claw": {
           "name": "Claw",
-          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+7 to hit,</strong>, <strong>5 ft.,</strong> one target. Hit: <strong>11 (2d6 + 4) <em>slashing damage</em></strong>.</p><p></p></section><p>The Young White Dragon attacks with its Claw.</p>"
+          "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+7 to hit,</strong>, <strong>5 ft.,</strong> one target. Hit: <strong>11 (2d6 + 4) <em>slashing damage</em></strong>.</p><p></p></section><p>The Young White Dragon attacks with its Claw.</p>",
+          "activities": {
+            "attack": {
+              "chatFlavor": "The dragon strikes with one of its claws."
+            }
+          }
         },
         "Cold Breath": {
           "name": "Cold Breath",
-          "description": "<section class=\"secret\"><p>The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a  <strong>DC 15 Constitution</strong> saving throw, taking <strong>45 (10d8) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p></p></section><p>The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>"
+          "description": "<section class=\"secret\"><p>The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a  <strong>DC 15 Constitution</strong> saving throw, taking <strong>45 (10d8) <em>cold damage</em></strong> on a failed save, or half as much damage on a successful one.</p><p></p></section><p>The dragon exhales an icy blast in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "chatFlavor": "The dragon exhales its deadly breath attack."
+            }
+          }
         },
         "Ice Walk": {
           "name": "Ice Walk",

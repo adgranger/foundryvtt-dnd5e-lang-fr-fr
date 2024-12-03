@@ -2,8 +2,12 @@
   "label": "Class & Subclass Features (SRD)",
   "mapping": {
     "effects": {
-        "path": "effects",
-        "converter": "effects"
+      "path": "effects",
+      "converter": "effects"
+    },
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
     }
   },
   "folders": {
@@ -55,7 +59,12 @@
     },
     "06NVMYf58Z76O85O": {
       "name": "Protection",
-      "description": "<p>When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.</p>"
+      "description": "<p>When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Must be wearing a shield."
+        }
+      }
     },
     "0C04rwyvoknvFYiy": {
       "name": "Eldritch Master",
@@ -104,6 +113,11 @@
     "3jwFt3hSqDswBlOH": {
       "name": "Empty Body",
       "description": "<p>Beginning at 18th level, you can use your action to spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage but force damage.</p>\n<p>Additionally, you can spend 8 ki points to cast the @UUID[Compendium.dnd5e.spells.Item.TIoadMIsUKD4edXi]{Astral Projection} spell, without needing material components. When you do so, you can't take any other creatures with you.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Also requires 4 ki points (or 8 for Astral Projection)."
+        }
+      },
       "effects": {
         "Ki: Empty Body": {
           "name": "Ki: Empty Body"
@@ -137,7 +151,12 @@
     },
     "5MwNlVZK7m6VolOH": {
       "name": "Flurry of Blows",
-      "description": "<p>Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.</p>"
+      "description": "<p>Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Comes immediately after taking the Attack action."
+        }
+      }
     },
     "5gx1O0sxK08awEO9": {
       "name": "Colossus Slayer",
@@ -145,7 +164,12 @@
     },
     "5zPmHPQUne7RDfaU": {
       "name": "Cutting Words",
-      "description": "<p>Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others.</p><p>When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of @UUID[Compendium.dnd5e.classfeatures.Item.hpLNiGq7y67d2EHA]{Bardic Inspiraton}, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll.</p><p>You can choose to use this feature after the creature makes its roll, but before the GM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed.</p>"
+      "description": "<p>Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others.</p><p>When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of @UUID[Compendium.dnd5e.classfeatures.Item.hpLNiGq7y67d2EHA]{Bardic Inspiraton}, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll.</p><p>You can choose to use this feature after the creature makes its roll, but before the GM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Target must be able to hear you and not be immune to being Charmed."
+        }
+      }
     },
     "61kXR1sniXHjvN17": {
       "name": "Beast Speech",
@@ -157,7 +181,12 @@
     },
     "65ReXU4ZWqcSs3Cm": {
       "name": "Gaze of Two Minds",
-      "description": "<p>You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings.</p>"
+      "description": "<p>You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Target must be a willing humanoid."
+        }
+      }
     },
     "68bYIOvx6rIqnlOW": {
       "name": "Bonus Proficiency",
@@ -170,6 +199,11 @@
     "7D2EkLdISwShEDlN": {
       "name": "Diamond Soul",
       "description": "<p>Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws. Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Whenever you make a saving throw and fail"
+        }
+      },
       "effects": {
         "Diamond Soul": {
           "name": "Diamond Soul"
@@ -178,7 +212,12 @@
     },
     "7O85kj6uDEG5NzUE": {
       "name": "Empowered Evocation",
-      "description": "<p>Beginning at 10th level, you can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast.</p><blockquote></blockquote>"
+      "description": "<p>Beginning at 10th level, you can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast.</p><blockquote></blockquote>",
+      "activities": {
+        "damage": {
+          "chatFlavor": "The bonus to one damage roll:"
+        }
+      }
     },
     "7flZKruSSu6dHg6D": {
       "name": "Ki-Empowered Strikes",
@@ -186,7 +225,12 @@
     },
     "7pyZjz5vlUWV01qQ": {
       "name": "Uncanny Dodge",
-      "description": "<p>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.</p>"
+      "description": "<p>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Attacker must be visible."
+        }
+      }
     },
     "7uzJ2JkmsdRGLra3": {
       "name": "Evocation Savant",
@@ -325,11 +369,21 @@
     },
     "GBYN5rH4nh1ocRlY": {
       "name": "Superior Inspiration",
-      "description": "<p>At 20th level, when you roll initiative and have no uses of @UUID[Compendium.dnd5e.classfeatures.Item.hpLNiGq7y67d2EHA]{Bardic Inspiraton} left, you regain one use.</p>"
+      "description": "<p>At 20th level, when you roll initiative and have no uses of @UUID[Compendium.dnd5e.classfeatures.Item.hpLNiGq7y67d2EHA]{Bardic Inspiraton} left, you regain one use.</p>",
+      "activities": {
+        "utility": {
+          "condition": "When you roll initiative and have no uses of Bardic Inspiration"
+        }
+      }
     },
     "Gsha4bl0apxqspFy": {
       "name": "Draconic Presence",
-      "description": "<p>Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.</p>"
+      "description": "<p>Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.</p>",
+      "activities": {
+        "save": {
+          "condition": "Also requires 5 sorcery points."
+        }
+      }
     },
     "Ho7dVxBlOYFlfBHk": {
       "name": "Fighting Style",
@@ -457,7 +511,16 @@
     },
     "OdrvL3afwLOPeuYZ": {
       "name": "Lay on Hands",
-      "description": "<p>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.</p><p>As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.</p><p>Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.</p><p>This feature has no effect on undead and constructs.</p>"
+      "description": "<p>Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.</p><p>As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.</p><p>Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.</p><p>This feature has no effect on undead and constructs.</p>",
+      "activities": {
+        "heal": {
+          "condition": "Target cannot be Undead or a Construct."
+        },
+        "Cure Disease and Poison": {
+          "name": "Cure Disease and Poison",
+          "condition": "Target cannot be Undead or a Construct."
+        }
+      }
     },
     "Phy02H5x0TKHd7T3": {
       "name": "Chains of Carceri",
@@ -501,7 +564,12 @@
     },
     "SEJmsjkEhdAZ90ki": {
       "name": "Countercharm",
-      "description": "<p>At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).</p>"
+      "description": "<p>At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).</p>",
+      "activities": {
+        "utility": {
+          "condition": "Creatures must be able to hear you to benefit."
+        }
+      }
     },
     "SZbsNbaxFFGwBpNK": {
       "name": "Unarmored Defense (Barbarian)",
@@ -514,7 +582,12 @@
     },
     "StfmqK1twVfukpa0": {
       "name": "Giant Killer",
-      "description": "<p>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</p>"
+      "description": "<p>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Creature must be Large or larger and visible."
+        }
+      }
     },
     "T6u5z8ZTX6UftXqE": {
       "name": "Divine Strike",
@@ -530,7 +603,12 @@
     },
     "U7BIPVPsptBmwsnV": {
       "name": "Cleansing Touch",
-      "description": "<p>Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.</p><p>You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.</p>"
+      "description": "<p>Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.</p><p>You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Target must be willing."
+        }
+      }
     },
     "UAvV7N7T4zJhxdfI": {
       "name": "Unarmored Defense",
@@ -677,7 +755,12 @@
     },
     "e0uTcFPpgxjIyUW9": {
       "name": "Arcane Recovery",
-      "description": "<p>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</p><p>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>"
+      "description": "<p>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</p><p>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>",
+      "activities": {
+        "utility": {
+          "chatFlavor": "The wizard can recover [[ceil(@classes.wizard.levels/2)]] levels worth of spell slots (of 5th-level or lower)."
+        }
+      }
     },
     "e9ytGikyLFgwZ5wi": {
       "name": "Bonus Proficiencies",
@@ -693,7 +776,12 @@
     },
     "eVXqHn0ojWrEuYGU": {
       "name": "Divine Intervention",
-      "description": "<p>Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.</p><p>Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The GM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate.</p><p>If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.</p><p>At 20th level, your call for intervention succeeds automatically, no roll required.</p>"
+      "description": "<p>Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.</p><p>Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The GM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate.</p><p>If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.</p><p>At 20th level, your call for intervention succeeds automatically, no roll required.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Your need must be great..."
+        }
+      }
     },
     "evEWCpE5MYgr5RRW": {
       "name": "Potent Cantrip",
@@ -738,7 +826,12 @@
     },
     "h1gM8SH3BNRtFevE": {
       "name": "Quivering Palm",
-      "description": "<p>At 17th level, you gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.</p><p>You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.</p>"
+      "description": "<p>At 17th level, you gain the ability to set up lethal vibrations in someone's body. When you hit a creature with an unarmed strike, you can spend 3 ki points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.</p><p>You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.</p>",
+      "activities": {
+        "save": {
+          "condition": "Only ending the vibrations harmfully requires an action."
+        }
+      }
     },
     "hCop9uJrWhF1QPb4": {
       "name": "Dueling",
@@ -751,7 +844,12 @@
     },
     "hEymt45rICi4f9eL": {
       "name": "Channel Divinity: Preserve Life",
-      "description": "<p>Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.</p><p>As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level.</p><p>Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.</p>"
+      "description": "<p>Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.</p><p>As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level.</p><p>Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.</p>",
+      "activities": {
+        "heal": {
+          "condition": "The target cannot be Undead or a Construct"
+        }
+      }
     },
     "he8RpPXwSl2lVSIk": {
       "name": "Song of Rest",
@@ -811,7 +909,12 @@
     },
     "kaHcUGiwi8AtfZIm": {
       "name": "Primeval Awareness",
-      "description": "<p>Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number.</p>"
+      "description": "<p>Beginning at 3rd level, you can use your action and expend one ranger spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of creatures are present within 1 mile of you (or within up to 6 miles if you are in your favored terrain): aberrations, celestials, dragons, elementals, fey, fiends, and undead. This feature doesn't reveal the creatures' location or number.</p>",
+      "activities": {
+        "utility": {
+          "condition": "It also expends a spell slot; the slot level dictates duration."
+        }
+      }
     },
     "l50hjTxO2r0iecKw": {
       "name": "Martial Arts",
@@ -929,7 +1032,12 @@
     },
     "r91UIgwFdHwkXdia": {
       "name": "Channel Divinity: Turn Undead",
-      "description": "<p>As an action, you present your holy symbol and speak a prayer censuring the undead.</p><p>Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.</p><p>A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions.</p><p>For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.</p>"
+      "description": "<p>As an action, you present your holy symbol and speak a prayer censuring the undead.</p><p>Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.</p><p>A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions.</p><p>For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.</p>",
+      "activities": {
+        "save": {
+          "condition": "Targets must be able to see or hear you."
+        }
+      }
     },
     "rBDZLatuoolT2FUW": {
       "name": "Tranquility",
@@ -1005,7 +1113,12 @@
     },
     "wKdRtFsvGfMKQHLY": {
       "name": "Natural Recovery",
-      "description": "<p>Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature.</p><p>During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.</p><p>For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots.</p>"
+      "description": "<p>Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature.</p><p>During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.</p><p>For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots.</p>",
+      "activities": {
+        "utility": {
+          "chatFlavor": "The druid can recover this number worth of spell slots (of 5th level or lower):"
+        }
+      }
     },
     "wrxIW5sDfmGr3u5s": {
       "name": "Hunter's Prey",
@@ -1021,7 +1134,12 @@
     },
     "x6eEZ9GUsuOcEa3G": {
       "name": "Elemental Affinity",
-      "description": "<p>Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.</p>"
+      "description": "<p>Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.</p>",
+      "activities": {
+        "damage": {
+          "condition": "1 sorcery point is also required if the resistance is desired."
+        }
+      }
     },
     "xF1VTcJ3AdkbTsdQ": {
       "name": "Action Surge",
