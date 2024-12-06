@@ -73,29 +73,6 @@ Hooks.on('createScene', (scene) => {
 	}
 });
 
-Hooks.on('createActor', (actor) => {
-	if (actor.getFlag("babele", "translated")) {
-		return;
-	}
-
-	if (convertEnabled()) {
-		actor.update({			
-			system: {
-				attributes: {
-					movement: {
-						burrow: 0,
-						climb: 0,
-						fly: 0,
-						swim: 0,
-						units: 'm',
-						walk: 9
-					}
-				}
-			}
-		});
-	}
-})
-
 Hooks.on("renderActorSheet", async function () {
 	skillSorting();
 });
