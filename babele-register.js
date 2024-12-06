@@ -724,12 +724,29 @@ export class Converters {
 				foundry.utils.mergeObject(activity, {
 					name: translation.name ?? activity.name,
 					activation: { condition: translation.condition ?? activity.activation?.condition },
-					description: { chatFlavor: translation.chatFlavor ?? activity.description?.chatFlavor }
+					description: { chatFlavor: translation.chatFlavor ?? activity.description?.chatFlavor },
+    			    profiles : activity.profiles ? Converters._summonProfiles(activity.profiles, translation.profiles) : activity.profiles
 				});
 			}
 		});
 
 		return activities;
+	}
+
+	static _summonProfiles(profiles, translations) {
+		if (!translations) return profiles;
+
+		if (Array.isArray(profiles)) {
+			return profiles.map(profile => {
+				const translation = translations[profile.name];
+				if (translation) {
+					return foundry.utils.mergeObject(profile, { name: translation.name ?? profile.name });
+				}
+				return profile;
+			});
+		}
+
+		return profiles;
 	}
 
 	static round(num) {
