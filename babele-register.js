@@ -33,13 +33,11 @@ Hooks.once('init', () => {
 			"alignement": Converters.alignment(),
 			"movement": Converters.movement(),
 			"senses": Converters.senses(),
-			"di": Converters.damage(),
+			"damage": Converters.damage(),
+			"armor": Converters.armor(),
 			"languages": Converters.languages(),
 			"token": Converters.token(),
-			"race": Converters.race(),
-			"rarity": Converters.rarity(),
-			"raceRequirements": Converters.raceRequirements(),
-			"classRequirements": Converters.classRequirements(),
+			"requirements": Converters.requirements(),
 			"source": Converters.source(),
 			"type": Converters.type(),
 			"adv_sizehint": Converters.advsizehint(),
@@ -310,7 +308,7 @@ export class Converters {
 
 		let convert = (value) => { return value; };
 		let units = movement.units;
-		if (units === 'ft') {
+		if (units === 'ft' || units === null) {
 			convert = (value) => { return Converters.footsToMeters(value) };
 			units = "m";
 		}
@@ -340,7 +338,7 @@ export class Converters {
 
 		let convert = (value) => { return value; };
 		let units = senses.units;
-		if(units === 'ft') {
+		if(units === 'ft' || units === null) {
 			convert = (value) => { return Converters.footsToMeters(value) };
 			units = "m";
 		}
@@ -355,7 +353,7 @@ export class Converters {
 			tremorsense: convert(senses.tremorsense),
 			truesight: convert(senses.truesight),
 			units: units,
-			special: specialSenses[senses.special]
+			special: specialSenses[senses.special] ?? senses.special
 		});
 	}
 
@@ -364,7 +362,25 @@ export class Converters {
 	}
 
 	static _damage(damage) {
-		return Converters.parseDamage(damage);
+		let names = damage.split(';');
+		let translated = [];
+		names.map(name => name.trim()).forEach(name => {
+			translated.push(damages[name.toLowerCase()] ?? name);
+		});
+		return translated.join('; ');
+	}
+
+	static armor() {
+		return (armor) => Converters._armor(armor);
+	}
+
+	static _armor(armor) {
+		let names = armor.split(';');
+		let translated = [];
+		names.map(name => name.trim()).forEach(name => {
+			translated.push(armors[name.toLowerCase()] ?? name);
+		});
+		return translated.join('; ');
 	}
 
 	static languages() {
@@ -405,49 +421,20 @@ export class Converters {
 		);
 	}
 
-	static race() {
-		return (race) => Converters._race(race);
+	static requirements() {
+		return (requis) => Converters._requirements(requis);
 	}
 
-	static _race(race) {
-		return races[race] ? races[race] : race;
-	}
-
-	static rarity() {
-		return (r) => Converters._rarity(r);
-	}
-
-	static _rarity(r) {
-		return rarity[r] ? rarity[r] : r
-	}
-
-	static raceRequirements() {
-		return (requirements) => Converters._raceRequirements(requirements);
-	}
-
-	static _raceRequirements(requirements) {
-		let names = requirements.split(',');
+	static _requirements(requis) {
+		let names = requis.split(',');
 		let translated = [];
 		names.map(name => name.trim()).forEach(name => {
-			translated.push(races[name] ? races[name] : name)
-		});
-		return translated.join(', ');
-	}
-
-	static classRequirements() {
-		return (requirements) => Converters._classRequirements(requirements);
-	}
-
-	static _classRequirements(requirements) {
-		let names = requirements.split(',');
-		let translated = [];
-		names.map(name => name.trim()).forEach(name => {
-			let keys = Object.keys(classes);
-			let translatedName = name;
+			let keys = Object.keys(requirements);
+			let translatedName = name.toLowerCase();
 			keys.forEach(key => {
-				translatedName = translatedName.replace(key, classes[key])
+				translatedName = translatedName.replace(key, requirements[key]);
 			});
-			translated.push(translatedName)
+			translated.push(translatedName);
 		});
 		return translated.join(', ');
 	}
@@ -468,25 +455,26 @@ export class Converters {
 		return (type) => Converters._type(type);
 	}
 
-	static _type(type) {	
-		if (!type.subtype) {
-			return 
-		};
-
-		const typesSplit = type.subtype.split(',');
+	static _type(type) {
 		let typesFin = '';
 		let typesTr = '';
-		typesSplit.forEach(function (el) {
-			el = el.trim();
-			typesTr = races[el.toLowerCase()];
-			if (typesTr) {
-				typesFin = typesFin ? typesFin + ', ' + typesTr : typesTr;
-			}
-			else {
-				typesFin = typesFin ? typesFin + ', ' + el : el;
-			}
+		if (type.subtype) {
+			const typesSplit = type.subtype.split(',');
+			typesSplit.forEach(function (el) {
+				el = el.trim();
+				typesTr = types[el.toLowerCase()];
+				if (typesTr) {
+					typesFin = typesFin ? typesFin + ', ' + typesTr : typesTr;
+				}
+				else {
+					typesFin = typesFin ? typesFin + ', ' + el : el;
+				}
+			});
+		}
+		return foundry.utils.mergeObject(type, {
+			custom: types[type.custom?.toLowerCase()] ?? type.custom,
+			subtype: typesFin
 		});
-		return foundry.utils.mergeObject(type, { subtype: typesFin });
 	}
 
 	static advsizehint() {
@@ -588,7 +576,7 @@ export class Converters {
 		}
 		data.forEach(item => {
 			switch(item.type){
-				case "loot": 
+				case "loot":
 					Converters.translateFromConverters(item, translations, "dnd5e.tradegoods");
 					break;
 				case "consumable":
@@ -601,7 +589,7 @@ export class Converters {
 					Converters.translateFromConverters(item, translations, "dnd5e.spells");
 					break;
 				case "feat":
-					fromMonster ? Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures") : Converters.translateFromConverters(item, translations, "dnd5e.classfeatures")
+					fromMonster ? Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures") : Converters.translateFromConverters(item, translations, "dnd5e.classfeatures");
 					break;
 				case "race":
 					Converters.translateFromConverters(item, translations, "dnd5e.races");
@@ -623,19 +611,20 @@ export class Converters {
 
 			const translation = translations[item._id] || translations[item.name];
 			if (!translation) {
-				console.warn(`Missing translation : ${item._id} ${item.name}`)
+				console.warn(`Missing translation : ${item._id} ${item.name}`);
 				return item;
 			}
 
 			return foundry.utils.mergeObject(item, {
 				name: translation.name ?? item.name,
 				system: {
+				    requirements: item.system.requirements ? Converters._requirements(item.system.requirements) : item.system.requirements,
 					description: { value: translation.description ?? item.system.description.value },
 					materials: { value: translation.materials ?? item.system.materials?.value },
 					activities: item.system.activities ? Converters._activities(item.system.activities, translation.activities) : item.system.activities
 				},
 				effects: item.effects.length > 0 ? Converters._effects(item.effects, translation.effects) : item.effects,
-				translated: true,
+				translated: true
 			});
 		});
 
@@ -647,7 +636,7 @@ export class Converters {
 		if (!itemsConverter) {
 			return;
 		}
-				
+		
 		const fields = Object.keys(itemsConverter).map(key => new FieldMapping(key, itemsConverter[key], item));
 		if (!fields){
 			return;
@@ -750,18 +739,6 @@ export class Converters {
 		}
 		return Converters.round(parseInt(mi) * 1.5);
 	}
-
-	static parseDamage(damage) {
-		damage = damage.replace(/bludgeoning/gi, 'contondant');
-		damage = damage.replace(/piercing/gi, 'perforant');
-		damage = damage.replace(/and/gi, 'et');
-		damage = damage.replace(/slashing/gi, 'tranchant');
-		damage = damage.replace(/from/gi, 'd\'');
-		damage = damage.replace(/nonmagical attacks/gi, 'attaques non magiques');
-		damage = damage.replace(/that aren't silvered/gi, 'non réalisées avec des armes en argent');
-		damage = damage.replace(/not made with silvered weapons/gi, 'non réalisées avec des armes en argent');
-		return damage;
-	}
 }
 
 export var alignments = {
@@ -852,23 +829,14 @@ export var languages = {
 	"all": "toutes"
 };
 
-export var races = {
+export var types = {
 	"dragonborn": "Drakéide",
 	"dwarf": "Nain",
-	"hill dwarf": "Nain des collines",
 	"elf": "Elfe",
-	"high elf": "Haut-elfe",
-	"rock gnome": "Gnome des roches",
 	"gnome": "Gnome",
 	"orc": "Orc",
-	"half elf": "Demi-elfe",
-	"half-elf": "Demi-elfe",
 	"halfling": "Halfelin",
-	"lightfoot halfling": "Halfelin pied-léger",
-	"half orc": "Demi-Orc",
-	"half-orc": "Demi-Orc",
 	"human": "Humain",
-	"variant human": "Humain (variante)",
 	"tiefling": "Tieffelin",
 	"any race": "Toute race",
 	"shapechanger": "Métamorphe",
@@ -880,48 +848,78 @@ export var races = {
 	"grimlock": "Torve"
 };
 
-export var classes = {
-	"Barbarian": "Barbare",
-	"Bard": "Barde",
-	"Cleric": "Clerc",
-	"Druid": "Druide",
-	"Fighter": "Guerrier",
-	"Monk": "Moine",
-	"Paladin": "Paladin",
-	"Ranger": "Rôdeur",
-	"Rogue": "Roublard",
-	"Sorcerer": "Ensorceleur",
-	"Warlock": "Occultiste",
-	"Wizard": "Magicien",
-	"Champion": "Champion",
-	"College of Lore": "Collège du savoir",
-	"Oath of Devotion": "Serment de dévotion",
-	"Life Domain": "Domaine de la Vie",
-	"Circle of the Land": "Cercle de la terre",
-	"The Fiend": "Le fiélon",
-	"Hunter": "Chasseur",
-	"School of Evocation": "Ecole d'évocation",
-	"Path of the Berserker": "Berserker",
-	"Eldritch Blast": "Décharge occulte",
-	"Pact of the Tome": "Pacte du grimoire",
-	"Pact of the Blade": "Pacte de la lame",
-	"Pact of the Chain": "Pacte de la chaîne",
-	"Way of the Open Hand": "Voie de la main ouverte",
-	"Draconic Bloodline": "Lignée draconique",
-	"STR": "FOR",
-	"or higher": "ou plus"
+export var requirements = {
+    "barbarian": "Barbare",
+	"bard": "Barde",
+	"cleric": "Clerc",
+	"druid": "Druide",
+	"fighter": "Guerrier",
+	"monk": "Moine",
+	"paladin": "Paladin",
+	"ranger": "Rôdeur",
+	"rogue": "Roublard",
+	"sorcerer": "Ensorceleur",
+	"warlock": "Occultiste",
+	"wizard": "Magicien",
+	"champion": "Champion",
+	"college of lore": "Collège du savoir",
+	"oath of devotion": "Serment de dévotion",
+	"life domain": "Domaine de la Vie",
+	"circle of the land": "Cercle de la terre",
+	"the fiend": "Le fiélon",
+	"hunter": "Chasseur",
+	"school of evocation": "Ecole d'évocation",
+	"path of the berserker": "Berserker",
+	"eldritch blast": "Décharge occulte",
+	"pact of the tome": "Pacte du grimoire",
+	"pact of the blade": "Pacte de la lame",
+	"pact of the chain": "Pacte de la chaîne",
+	"way of the open hand": "Voie de la main ouverte",
+	"draconic bloodline": "Lignée draconique",
+	"str": "FOR",
+	"or higher": "ou plus",
+ 	"thief": "Voleur",
+	"lightfoot halfling": "Halfelin pied-léger",
+	"copper dragonborn": "Drakéide de cuivre",
+	"bronze dragonborn": "Drakéide de bronze",
+	"silver dragonborn": "Drakéide d'argent",
+	"brass dragonborn": "Drakéide d'airain",
+	"white dragonborn": "Drakéide blanc",
+	"black dragonborn": "Drakéide noir",
+	"green dragonborn": "Drakéide vert",
+	"blue dragonborn": "Drakéide bleu",
+	"gold dragonborn": "Drakéide d'or",
+	"red dragonborn": "Drakéide rouge",
+	"rock gnome": "Gnome des roches",
+	"half-elf": "Demi-elfe",
+	"tiefling": "Tieffelin",
+	"half-orc": "Demi-Orc",
+	"halfling": "Halfelin",
+	"dwarf": "Nain",
+	"elf": "Elfe",
+	"owl": "Chouette",
+	"octopus": "Pieuvre",
+	"baboon": "Babouin",
+	"lemure": "Lémure",
+	"bats": "Chauves-souris",
+	"bat": "Chauve-souris",
+	"eagle": "Aigle",
+	"frog": "Grenouille",
+	"raven": "Corbeau",
+	"jackal": "Chacal",
+	"weasel": "Belette",
+	"fire beetle": "Scarabée de feu",
+	"vulture": "Vautour",
+	"hawk": "Faucon",
+	"awakened shrub": "Arbuste éveillé",
+	"cat": "Chat",
+	"badger": "Blaireau",
+	"goat": "Chèvre",
+	"hyena": "Hyène"
 };
 
 export var sources = {
 	"SRD 5.1": "DRS 5.1"
-};
-
-var rarity = {
-	"Common": "Commun",
-	"Uncommon": "peu commun",
-	"Rare": "Rare",
-	"Very rare": "Très rare",
-	"Legendary": "Légendaire"
 };
 
 export var hints = {
@@ -1001,4 +999,18 @@ export var advName = {
 export var specialSenses = {
     "Blind beyond this radius": "ne voit rien au-delà de ce rayon",
     "10 ft. while deafened (blind beyond this radius)": " 3 m s'il est assourdi (ne voit rien au-delà de ce rayon)"
+};
+
+export var damages = {
+    "advantage on saving throws against being charmed": "avantagé aux jets de sauvegarde contre l'état charmé",
+    "advantage on saving throws against charms": "avantagé aux jets de sauvegarde contre l'état charmé",
+    "advantage against being frightenned": "avantagé contre l'état effrayé",
+    "advantage against being frightened": "avantagé contre l'état effrayé",
+    "magic can't put you to sleep": "la magie ne peut pas vous endormir",
+    "magical sleep": "sommeil magique",
+    "damage from spells": "dégâts des sorts"
+};
+
+export var armors = {
+    "(no metal)": "(pas en métal)"
 };
