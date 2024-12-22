@@ -513,7 +513,7 @@ export class Converters {
 					break;
 				case "ItemGrant":
 					foundry.utils.mergeObject(adv, {
-						title: advName[adv.title] ?? game.i18n.localize("DND5E." + adv.title)
+						title: advName[adv.title] ?? (game.i18n.has("DND5E." + adv.title) ? game.i18n.localize("DND5E." + adv.title) : adv.title)
 					});
 					break;
 				case "AbilityScoreImprovement":{
@@ -653,26 +653,62 @@ export class Converters {
 
 	static _effects(data, translations) {
 		if (!translations) {
-            return data;
-        }
-        if (typeof data !== 'object') {
-            return translations;
-        }
-        
-        if (Array.isArray(data)) {
-            return data.map(effect => {
-				const translation = translations[effect.name];
+			return data;
+		}
+		if (typeof data !== 'object') {
+			return translations;
+		}
+
+		if (Array.isArray(data)) {
+			return data.map(effect => {
+				const translation = translations[effect._id] || translations[effect.name];
 				if (translation) {
 					return foundry.utils.mergeObject(effect, {
 						name: translation.name ?? effect.name,
-						description: translation.description ?? effect.description
+						description: translation.description ?? effect.description,
+						changes: effect.changes ? Converters.effectsChanges(effect.changes, translation.changes) : effect.changes
 					});
 				}
 				return effect;
 			});
-        }
-        
-        return data;
+		}
+
+		return data;
+	}
+
+	static effectsChanges(changes, translations) {
+		const movementSensesType = [
+			"system.attributes.movement.burrow",
+			"system.attributes.movement.climb",
+			"system.attributes.movement.fly",
+			"system.attributes.movement.swim",
+			"system.attributes.movement.walk",
+			"system.attributes.senses.blindsight",
+			"system.attributes.senses.darkvision",
+			"system.attributes.senses.tremorsense",
+			"system.attributes.senses.truesight"
+		];
+
+		changes.forEach(change => {
+			if (movementSensesType.includes(change.key)) {
+				change.value = Converters.footsToMeters(change.value);
+			}
+			return change;
+		});
+
+		if (!translations) return changes;
+
+		if (Array.isArray(changes)) {
+			return changes.map(change => {
+				const translation = translations[change.key];
+				if (translation) {
+					return foundry.utils.mergeObject(change, { value: translation ?? change.value });
+				}
+				return change;
+			});
+		}
+
+		return changes;
 	}
 
 	static activities() {
@@ -691,7 +727,7 @@ export class Converters {
 					name: translation.name ?? activity.name,
 					activation: { condition: translation.condition ?? activity.activation?.condition },
 					description: { chatFlavor: translation.chatFlavor ?? activity.description?.chatFlavor },
-    			    profiles : activity.profiles ? Converters._summonProfiles(activity.profiles, translation.profiles) : activity.profiles
+    			    profiles : activity.profiles ? Converters.summonProfiles(activity.profiles, translation.profiles) : activity.profiles
 				});
 			}
 		});
@@ -699,7 +735,7 @@ export class Converters {
 		return activities;
 	}
 
-	static _summonProfiles(profiles, translations) {
+	static summonProfiles(profiles, translations) {
 		if (!translations) return profiles;
 
 		if (Array.isArray(profiles)) {
