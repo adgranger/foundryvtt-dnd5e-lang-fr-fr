@@ -139,13 +139,10 @@ export class Converters {
 				return data;
 			}
 
-			let translation = translations[data._id];
-			if (!translation) {								
-				translation = translations[data.name];
-				if (!translation) {	
-					console.warn(`Missing translation : ${data._id} ${data.name}`)
-					return data;
-				}
+			const translation = translations[data._id] || translations[data.name];
+			if (!translation) {	
+				console.warn(`Missing translation : ${data._id} ${data.name}`);
+				return data;
 			}
 		
 			// TODO: Need to add tooltip translation in weblate
@@ -153,7 +150,7 @@ export class Converters {
 				translation.tooltip = translation.text;
 			}
 			return foundry.utils.mergeObject(data, {
-				name: translation.name,
+				name: translation.name ?? data.name,
 				image: { caption: translation.caption ?? data.image.caption },
 				src: translation.src ?? data.src,
 				text: { content: translation.text ?? data.text.content },
@@ -161,10 +158,38 @@ export class Converters {
 					width: translation.width ?? data.video.width,
 					height: translation.height ?? data.video.height,
 				},
-				system: { tooltip: translation.tooltip ?? data.system.tooltip },
+				system: {
+					tooltip: translation.tooltip ?? data.system.tooltip,
+					subclassHeader: translation.subclassHeader ?? data.system.subclassHeader,
+					unlinkedSpells: data.system.unlinkedSpells ? Converters.unlinkedSpells(data.system.unlinkedSpells, translation.unlinkedSpells) : data.system.unlinkedSpells,
+					description: {
+						value: translation.description ?? data.system.description?.value,
+						additionalEquipment: translation.additionalEquipment ?? data.system.description?.additionalEquipment,
+						additionalHitPoints: translation.additionalHitPoints ?? data.system.description?.additionalHitPoints,
+						additionalTraits: translation.additionalTraits ?? data.system.description?.additionalTraits,
+						subclass: translation.subclass ?? data.system.description?.subclass
+					}
+				},
+				flags: { dnd5e: { title: translation.flagsTitle ?? data.flags.dnd5e?.title } },
 				translated: true,
 			});
 		});
+	}
+
+	static unlinkedSpells(unlinkedSpells, translations) {
+		if (!translations) return unlinkedSpells;
+
+		if (Array.isArray(unlinkedSpells)) {
+			return unlinkedSpells.map(spell => {
+				const translation = translations[spell.name];
+				if (translation) {
+					return foundry.utils.mergeObject(spell, { name: translation.name ?? spell.name });
+				}
+				return profile;
+			});
+		}
+
+		return unlinkedSpells;
 	}
 
 	static weight() {
