@@ -3,7 +3,8 @@
     "Activity": "Activité",
     "Warning": {
       "SelectType": "Le type {name} doit être sélectionné pour la création."
-    }
+    },
+    "Advancement": "Progression"
   },
   "TYPES.Actor.character": "Personnage joueur",
   "TYPES.Actor.characterPl": "Personnages des joueurs",
@@ -122,8 +123,8 @@
           "hint": "Type d'activation (ex : action, action légendaire, minutes)."
         },
         "value": {
-          "label": "",
-          "hint": ""
+          "label": "Valeur d'activation",
+          "hint": "Valeur d'échelle associée à l'activation."
         }
       }
     },
@@ -131,7 +132,29 @@
       "Standard": "Standard",
       "Time": "Durée",
       "Monster": "Monstre",
-      "Vehicle": "Véhicule"
+      "Vehicle": "Véhicule",
+      "Combat": "Combat"
+    },
+    "Type": {
+      "Encounter": {
+        "Label": "Début de la rencontre"
+      },
+      "Legendary": {
+        "Counted": {
+          "other": "{number} actions légendaires",
+          "one": "{number} action légendaire"
+        }
+      },
+      "TurnEnd": {
+        "Label": "Fin du tour"
+      },
+      "TurnStart": {
+        "Label": "Début du tour"
+      }
+    },
+    "Warning": {
+      "NoActions": "Aucune {type} n'est disponible, mais l'activation de ceci nécessite au moins {required}.",
+      "NotEnoughActions": "Pas assez de {type} pour activer, {required} requis mais seulement {available} disponibles."
     }
   },
   "DND5E.ACTIVITY": {
@@ -167,6 +190,9 @@
       "Effect": "Effet",
       "Identity": "Identité",
       "Time": "Durée"
+    },
+    "Warning": {
+      "UsageNotAllowed": "L'utilisation de cette activité n'est pas possible pour le moment."
     }
   },
   "DND5E.ActorWarningInvalidItem": "les éléments de type {itemType} ne peuvent être ajoutés à un {actorType}.",
@@ -219,20 +245,103 @@
       }
     },
     "SPELLCONFIG": {
+      "FreeCasting": "",
       "FIELDS": {
-        "uses": {
-          "requireSlot": {
-            "label": "Nécessite un emplacement",
-            "hint": "Si cette case est cochée, un emplacement de sort est dépensé pour les utilisations limitées. Sinon, elles sont gratuites et ne consomment pas d'emplacement."
+        "spell": {
+          "label": "Détails du sort",
+          "ability": {
+            "label": "Caractéristique"
+          },
+          "preparation": {
+            "label": "Mode de préparation"
+          },
+          "uses": {
+            "max": {
+              "label": "Utilisations"
+            },
+            "per": {
+              "label": "Période"
+            },
+            "requireSlot": {
+              "label": "Nécessite un emplacement",
+              "hint": "Nécessite un emplacement de sort à utiliser lorsque vous utilisez les utilisations limitées. Si non coché, les utilisations seront des utilisations supplémentaires gratuites qui ne consomment pas d'emplacement."
+            }
           }
         }
-      },
-      "FreeCasting": ""
+      }
     },
     "Subclass": {
       "Title": "Sous-classe",
       "Hint": "Spécifie à quel niveau cette classe reçoit sa sous-classe.",
-      "FlowHint": "Sélectionnez une sous-classe dans l'onglet Aptitude une fois la montée de niveau terminée."
+      "Warning": {
+        "InvalidType": "Seules les sous-classes peuvent être sélectionnées."
+      }
+    },
+    "Config": {
+      "Details": "Détails de la progression"
+    },
+    "HitPoints": {
+      "Action": {
+        "Roll": "Lancer {die}"
+      },
+      "Average": "Moyenne",
+      "MaxAtFirstLevel": "Max au 1er niveau : <strong>{max}</strong>",
+      "Roll": "Lancer les points de vie de {class}",
+      "Starting": "Points de vie au 1er niveau",
+      "TakeAverage": "Prendre la moyenne",
+      "Title": "Points de Vie",
+      "Warning": {
+        "Empty": "Les points de vie doivent être lancés ou la valeur moyenne doit être prise.",
+        "Invalid": "Les points de vie doivent être un nombre entier valide."
+      },
+      "Hint": "Suivre les points de vie du joueur pour chaque niveau dans la classe."
+    },
+    "ItemGrant": {
+      "Details": "Détails de l'attribution",
+      "DropHint": "Déposez les objets ici pour les ajouter à la liste accordée par cet progression.",
+      "FIELDS": {
+        "items": {
+          "label": "Objets"
+        },
+        "optional": {
+          "label": "Optionnel",
+          "hint": "Si l'ensemble de la progression est marqué comme optionnel, les joueurs peuvent se désinscrire de tout objets suivant, sinon tous les objets non optionnels sont accordés."
+        }
+      },
+      "Title": "Attribuer des objets",
+      "Warning": {
+        "Container": "Le contenu du conteneur ne sera pas ajouté avec les conteneurs.",
+        "Duplicate": "Cet objet existe déjà dans cette progression.",
+        "Recursive": "Vous ne pouvez pas attribuer un objet dans sa propre progression."
+      },
+      "Hint": "Attribuez des objets au personnage (comme de l'équipement, des caractéristiques ou des sorts) lorsqu'il atteint un certain niveau."
+    },
+    "Manager": {
+      "Action": {
+        "Complete": "Terminer",
+        "NextStep": "Suivant",
+        "PreviousStep": "Précédent",
+        "Restart": "Redémarrer"
+      },
+      "ClosePrompt": {
+        "Action": {
+          "Continue": "Continuer",
+          "Stop": "Arrêter la progression"
+        },
+        "Title": "Arrêter la progression",
+        "Message": "<p>Si le processus de progression est annulé, les choix effectués jusqu'à présent seront abandonnés et aucune modification ne sera apportée à l'acteur.</p>"
+      },
+      "RestartPrompt": {
+        "Message": "Êtes-vous sûr de vouloir annuler tous les choix effectués jusqu'à présent ?",
+        "Title": "Redémarrer les choix de progression"
+      },
+      "Title": {
+        "Default": "Progression",
+        "LevelNewClass": "Ajouter une classe",
+        "ModifyChoices": "Modifier les choix",
+        "LevelIncreased": "Faire monter de niveau le personnage"
+      },
+      "Steps": "Étape {current} sur {total}"
     }
   },
   "DND5E.AdvancementChoices": "choix",
@@ -261,14 +370,6 @@
   "DND5E.AdvancementDeleteConfirmationTitle": "Confirmer la suppression",
   "DND5E.AdvancementFlowDropAreaHint": "Déposez un objet ici pour le choisir.",
   "DND5E.AdvancementHint": "Conseil",
-  "DND5E.AdvancementHitPointsTitle": "Points de Vie",
-  "DND5E.AdvancementHitPointsHint": "Suivi des points de vie du joueur pour chaque niveau de la classe.",
-  "DND5E.AdvancementHitPointsAverage": "Prendre la moyenne",
-  "DND5E.AdvancementHitPointsEmptyError": "Les points de vie doivent être jetés ou la valeur moyenne doit être prise.",
-  "DND5E.AdvancementHitPointsInvalidError": "Les points de Vie doivent être un nombre entier valide.",
-  "DND5E.AdvancementHitPointsMaxAtFirstLevel": "Max au 1er niveau : <strong>{max}</strong>",
-  "DND5E.AdvancementHitPointsRollMessage": "{class} : Jeter les points de Vie",
-  "DND5E.AdvancementHitPointsRollButton": "Jeter {die}",
   "DND5E.AdvancementItemChoiceTitle": "Choisir les objets",
   "DND5E.AdvancementItemChoiceHint": "Présenter au joueur un choix d'objets (équipement, aptitudes ou sorts) qu'il peut choisir pour son personnage à un ou plusieurs niveaux.",
   "DND5E.AdvancementItemChoiceChoices": "Choix",
@@ -289,35 +390,12 @@
   "DND5E.AdvancementItemChoiceTypeHint": "Restreindre les types d'objets pouvant être choisis.",
   "DND5E.AdvancementItemChoiceTypeAny": "Tout",
   "DND5E.AdvancementItemChoiceTypeWarning": "Seuls les objets de type {type} peuvent être sélectionnés pour ce choix.",
-  "DND5E.AdvancementItemGrantTitle": "Accorde l'objet",
-  "DND5E.AdvancementItemGrantHint": "Accorder au personnage des objets (tels que des équipements, des aptitudes ou des sorts) lorsqu'il atteint un certain niveau.",
-  "DND5E.AdvancementItemGrantDropHint": "Déposez des objets ici pour les ajouter à la liste de progression.",
-  "DND5E.AdvancementItemGrantContainerWarning": "Le contenu des conteneurs ne sera pas ajouté aux conteneurs.",
-  "DND5E.AdvancementItemGrantDuplicateWarning": "Cet objet existe déjà dans la progression.",
-  "DND5E.AdvancementItemGrantRecursiveWarning": "Vous ne pouvez pas accorder un objet dans sa propre progression.",
-  "DND5E.AdvancementItemGrantOptional": "Facultatif",
-  "DND5E.AdvancementItemGrantOptionalHint": "S'il s'agit d'un élément facultatif, les joueurs auront la possibilité de refuser l'un des éléments suivants, sinon tous sont accordés.",
   "DND5E.AdvancementItemTypeInvalidWarning": "Les objets {type} ne peuvent pas être ajoutés avec ce type de progression.",
   "DND5E.AdvancementLevelHeader": "Niveau {level}",
   "DND5E.AdvancementLevelAnyHeader": "Tout niveau",
   "DND5E.AdvancementLevelNoneHeader": "Aucun niveau",
   "DND5E.AdvancementLevelDownConfirmationMessage": "Réduire le niveau de cette classe annulera également tous les choix de Progression faits pour elle. Ces changements seront supprimés de votre personnage tant que la case ci-dessous est cochée.",
   "DND5E.AdvancementLevelDownConfirmationTitle": "Confirmer la baisse de niveau",
-  "DND5E.AdvancementManagerCloseTitle": "Arrêter la progression",
-  "DND5E.AdvancementManagerCloseMessage": "<p>Si le processus de progression est annulé, les choix effectués jusqu'à présent seront écartés et aucune modification ne sera apportée à l'acteur.</p>",
-  "DND5E.AdvancementManagerCloseButtonContinue": "Continuer",
-  "DND5E.AdvancementManagerCloseButtonStop": "Arrêter la progression",
-  "DND5E.AdvancementManagerComplete": "Compléter",
-  "DND5E.AdvancementManagerLevelIncreasedTitle": "Monter de niveau le personnage",
-  "DND5E.AdvancementManagerLevelNewClassTitle": "Ajouter une classe",
-  "DND5E.AdvancementManagerModifyChoicesTitle": "Modifier les choix",
-  "DND5E.AdvancementManagerNextStep": "Suivant",
-  "DND5E.AdvancementManagerPreviousStep": "Précédent",
-  "DND5E.AdvancementManagerRestart": "Recommencer",
-  "DND5E.AdvancementManagerRestartConfirm": "Êtes-vous sûr de vouloir annuler tous les choix effectués jusqu'à présent ?",
-  "DND5E.AdvancementManagerRestartConfirmTitle": "Recommencer les choix de progression",
-  "DND5E.AdvancementManagerSteps": "Étape {current} sur {total}",
-  "DND5E.AdvancementManagerTitle": "Progression",
   "DND5E.AdvancementMigrationConfirm": "Appliquer les migrations",
   "DND5E.AdvancementMigrationHint": "Sélectionnez les avancements suivants qui seront ajoutés à {name}.",
   "DND5E.AdvancementMigrationTitle": "Migrer l'avancement",
@@ -496,18 +574,23 @@
       "OneHanded": "À une main",
       "Thrown": "Lancer",
       "ThrownOffhand": "Lancer main secondaire",
-      "TwoHanded": "À deux mains"
+      "TwoHanded": "À deux mains",
+      "Ranged": "À distance"
     },
     "Type": {
       "Melee": "Corps-à-corps",
       "Ranged": "À distance"
     },
     "Warning": {
-      "NoQuantity": ""
+      "NoQuantity": "Tentative d'attaque avec une arme ayant une quantité de zéro."
     },
     "Weapon": {
       "Melee": "Arme de corps-à-corps",
       "Ranged": "Arme à distance"
+    },
+    "Formatted": {
+      "2024": "Jet d'attaque {type}",
+      "2014": "Attaque {type} {classification}"
     }
   },
   "DND5E.Attack": "Attaque",
@@ -621,12 +704,6 @@
       "Title": "Multiclassage"
     },
     "FIELDS": {
-      "hitDice": {
-        "label": "Dés de vie"
-      },
-      "hitDiceUsed": {
-        "label": "Dés de vie dépensés"
-      },
       "levels": {
         "label": "Niveaux de classe"
       },
@@ -1662,7 +1739,7 @@
   },
   "DND5E.Healing": "Soin",
   "DND5E.HealingRoll": "Jet de soin",
-  "DND5E.HealingTemp": "Guérison (temporaire)",
+  "DND5E.HealingTemp": "Points de vie temporaires",
   "DND5E.Height": "Taille",
   "DND5E.HitPoints": "Points de Vie",
   "DND5E.HitPointsBonusLevel": "Bonus par niveau",
@@ -1683,10 +1760,6 @@
   "DND5E.HPFormulaRollMessage": "Formule de calcul des points de vie",
   "DND5E.HitDie": "Dé de Vie",
   "DND5E.HitDice": "Dés de vie",
-  "DND5E.HitDiceAutoSpend": {
-    "Label": "Dépenser automatiquement les DV",
-    "Hint": "Dépenser automatiquement les dés de vie jusqu'à épuisement ou santé complète."
-  },
   "DND5E.HitDiceConfig": "Ajuster les dés de vie",
   "DND5E.HitDiceConfigHint": "Ajuster les niveaux des dés de vie pour chaque classe.",
   "DND5E.HitDiceMax": "Dés de vie maximum",
@@ -1728,14 +1801,6 @@
   "DND5E.ItemConsumableStatus": "Statut du consommable",
   "DND5E.ItemConsumableSubtype": "Type {category}",
   "DND5E.ItemConsumableType": "Type de consommable",
-  "DND5E.ItemContainerCapacity": "Capacité",
-  "DND5E.ItemContainerCapacityItems": "Objets",
-  "DND5E.ItemContainerCapacityMax": "Capacité maximale",
-  "DND5E.ItemContainerCapacityType": "Type de Capacité",
-  "DND5E.ItemContainerCapacityWeight": "Poids",
-  "DND5E.ItemContainerDetails": "Détails du conteneur",
-  "DND5E.ItemContainerProperties": "Propriétés du conteneur",
-  "DND5E.ItemContainerStatus": "Etat du conteneur",
   "DND5E.ItemCreate": "Créer un Item",
   "DND5E.ItemCritThreshold": "Seuil de coup critique",
   "DND5E.ItemCritExtraDamage": "Dégâts supplémentaires dus aux coups critiques",
@@ -1826,50 +1891,6 @@
   "DND5E.LairActionLabel": "Action d'antre",
   "DND5E.LairActionInitiative": "Initiative d'action d'antre",
   "DND5E.Languages": "Langues",
-  "DND5E.LanguagesAarakocra": "Aarakocra",
-  "DND5E.LanguagesAbyssal": "Abyssal",
-  "DND5E.LanguagesAquan": "Aquatique",
-  "DND5E.LanguagesAuran": "Aérien",
-  "DND5E.LanguagesCelestial": "Céleste",
-  "DND5E.LanguagesCommon": "Commun",
-  "DND5E.LanguagesCommonSign": "Langue des signes commune",
-  "DND5E.LanguagesDeepSpeech": "Profond",
-  "DND5E.LanguagesDraconic": "Draconique",
-  "DND5E.LanguagesDruidic": "Druidique",
-  "DND5E.LanguagesDwarvish": "Nain",
-  "DND5E.LanguagesElvish": "Elfique",
-  "DND5E.LanguagesExotic": "Langues exotiques",
-  "DND5E.LanguagesExoticLegacy": "Langues exotiques",
-  "DND5E.LanguagesGiant": "Gigant",
-  "DND5E.LanguagesGith": "Gith",
-  "DND5E.LanguagesGnoll": "Gnoll",
-  "DND5E.LanguagesGnomish": "Gnome",
-  "DND5E.LanguagesGoblin": "Gobelin",
-  "DND5E.LanguagesHalfling": "Halfelin",
-  "DND5E.LanguagesIgnan": "Igné",
-  "DND5E.LanguagesInfernal": "Infernal",
-  "DND5E.LanguagesOrc": "Orc",
-  "DND5E.LanguagesPrimordial": "Primordial",
-  "DND5E.LanguagesStandard": "Langues standard",
-  "DND5E.LanguagesSylvan": "Sylvestre",
-  "DND5E.LanguagesTerran": "Terreux",
-  "DND5E.LanguagesThievesCant": "Argot des voleurs",
-  "DND5E.LanguagesUndercommon": "Commun des profondeurs",
-  "DND5E.LegAct": "Actions Légendaires",
-  "DND5E.LegActN.one": "1ère Action légendaire",
-  "DND5E.LegActN.two": "2ème Action légendaire",
-  "DND5E.LegActN.few": "3ème Action légendaire",
-  "DND5E.LegActN.other": "{n}ème Action légendaire",
-  "DND5E.LegActMax": "Actions légendaires maximales",
-  "DND5E.LegActRemaining": "Actions légendaires restantes",
-  "DND5E.LegendaryActionLabel": "Action Légendaire",
-  "DND5E.LegRes": "Résistance légendaire",
-  "DND5E.LegResN.one": "1ère Résistance légendaire",
-  "DND5E.LegResN.two": "2ème Résistance légendaire",
-  "DND5E.LegResN.few": "3ème Résistance légendaire",
-  "DND5E.LegResN.other": "{n}ème Résistance légendaire",
-  "DND5E.LegResMax": "Résistances légendaires maximales",
-  "DND5E.LegResRemaining": "Résistances légendaires restantes",
   "DND5E.Level": "Niveau",
   "DND5E.LevelPl": "Niveaux",
   "DND5E.LevelActionDecrease": "Baisser de niveau",
@@ -1889,18 +1910,6 @@
   "DND5E.LimitedUsesPrompt": "Utiliser la suggestion",
   "DND5E.LimitedUsesPromptTooltip": "Si non cochée, la suggestion de consommer une utilisation disponible sera supprimée.",
   "DND5E.Long": "Long",
-  "DND5E.LongRest": "Repos Long",
-  "DND5E.LongRestNormal": "Repos Long (8 heures)",
-  "DND5E.LongRestGritty": "Repos Long (7 jours)",
-  "DND5E.LongRestEpic": "Repos Long (1 heure)",
-  "DND5E.LongRestOvernight": "Repos Long (Nouvelle Journée)",
-  "DND5E.LongRestHint": "Prendre un repos long ? Lors d'un repos long, vous récupérez des points de vie, des dés de vie, des ressources de classe, des charges d'objets à usage limité et des emplacements de sorts.",
-  "DND5E.LongRestHintGroup": "Prendre un repos long ? Lors d'un repos long, les membres du groupe récupéreront des points de vie, des dés de vie, les ressources de classe, les charges d'objets à utilisation limitée et les emplacements de sorts.",
-  "DND5E.LongRestRecovery": "Récupération après un repos long",
-  "DND5E.LongRestResult": "{name} prend un repos long et récupère {health} Points de Vie et {dice} Dés de Vie.",
-  "DND5E.LongRestResultHitDice": "{name} prend un repos long et récupère {dice} Dés de Vie.",
-  "DND5E.LongRestResultHitPoints": "{name} prend un repos long et récupère {health} Points de Vie.",
-  "DND5E.LongRestResultShort": "{name} prend un repos long.",
   "DND5E.MagicalBonus": "Bonus magique",
   "DND5E.Materials": "Matériaux",
   "DND5E.Max": "Max",
@@ -1929,7 +1938,6 @@
   "DND5E.Normal": "Normal",
   "DND5E.NotProficient": "Non maîtrisé",
   "DND5E.Notes": "Notes",
-  "DND5E.NPC": "PNJ",
   "DND5E.Number": "Nombre",
   "DND5E.OtherFormula": "Autre formule",
   "DND5E.PactMagic": "Magie de pacte",
@@ -2002,7 +2010,7 @@
   "DND5E.QuantityAbbr": "Qté",
   "DND5E.QuantityFormula": "Formule de quantité",
   "DND5E.QuantityRoll": "Lancer les quantités",
-  "DND5E.RacialTraits": "Traits raciaux",
+  "DND5E.RacialTraits": "Traits d'espèce",
   "DND5E.RANGE": {
     "FIELDS": {
       "range": {
@@ -2055,9 +2063,6 @@
   "DND5E.ResourcePrimary": "Ressource 1",
   "DND5E.ResourceSecondary": "Ressource 2",
   "DND5E.ResourceTertiary": "Ressource 3",
-  "DND5E.Rest": "Repos",
-  "DND5E.RestL": "Rep. L.",
-  "DND5E.RestS": "Rep. C.",
   "DND5E.Ritual": "Rituel",
   "DND5E.RitualAbbr": "R",
   "DND5E.Roll": "Lancer",
@@ -2091,8 +2096,6 @@
   "DND5E.MovementAir": "Air",
   "DND5E.MovementSpeeds": "Vitesses de déplacement",
   "DND5E.MovementUnits": "Unités",
-  "DND5E.NewDay": "Nouvelle journée ?",
-  "DND5E.NewDayHint": "Récupérer des capacités à usage limité qui se rechargent \"par jour\" ?",
   "DND5E.SAVE": {
     "Title": {
       "one": "Sauvegarde",
@@ -2203,18 +2206,6 @@
   "DND5E.SchoolIll": "Illusion",
   "DND5E.SchoolNec": "Nécromancie",
   "DND5E.SchoolTrs": "Transmutation",
-  "DND5E.ShortRest": "Repos court",
-  "DND5E.ShortRestNormal": "Repos court (1 heure)",
-  "DND5E.ShortRestGritty": "Repos court (8 heures)",
-  "DND5E.ShortRestEpic": "Repos court (5 minutes)",
-  "DND5E.ShortRestOvernight": "Repos court (Nouvelle Journée)",
-  "DND5E.ShortRestHint": "Prendre un peu de repos ? Lors d'un repos court, vous pouvez lancer vos dés de vies et récupérer des utilisations d'objets.",
-  "DND5E.ShortRestHintGroup": "Prendre un repos court ? Lors d'un repos court, les membres du groupe peuvent dépenser des dés de vie et récupérer des utilisations d'objets.",
-  "DND5E.ShortRestNoHD": "Aucun dé de vie restant",
-  "DND5E.ShortRestRecovery": "Récupère après un repos court",
-  "DND5E.ShortRestResult": "{name} prend un repos court et dépense {dice} Dés de Vie pour récupérer {health} Points de Vie.",
-  "DND5E.ShortRestResultShort": "{name} prend un repos court.",
-  "DND5E.ShortRestSelect": "Sélectionner les dés à lancer",
   "DND5E.Size": "Taille",
   "DND5E.SizeGargantuan": "Gigantesque",
   "DND5E.SizeGargantuanAbbr": "Gig",
@@ -2652,36 +2643,36 @@
     },
     "Warning": {
       "PlaceTemplate": "Impossible de placer le gabarit."
+    },
+    "Type": {
+      "Cube": {
+        "Label": "Cube"
+      },
+      "Cylinder": {
+        "Label": "Cylindre"
+      },
+      "Sphere": {
+        "Label": "Sphère"
+      },
+      "Space": {
+        "Label": "Espace"
+      },
+      "Cone": {
+        "Label": "Cône"
+      },
+      "Line": {
+        "Label": "Ligne"
+      }
     }
   },
   "DND5E.Target": "Cible",
   "DND5E.TargetPl": "Cibles",
-  "DND5E.TargetAlly": "Allié",
-  "DND5E.TargetAny": "N'importe",
-  "DND5E.TargetCircle": "Cercle",
-  "DND5E.TargetCone": "Cône",
-  "DND5E.TargetCreature": "Créature",
-  "DND5E.TargetCreatureOrObject": "Créature ou objet",
-  "DND5E.TargetCube": "Cube",
-  "DND5E.TargetCylinder": "Cylindre",
-  "DND5E.TargetEnemy": "Ennemi",
-  "DND5E.TargetEvery": "Tous les",
-  "DND5E.TargetLine": "Ligne",
-  "DND5E.TargetObject": "Objet",
-  "DND5E.TargetRadius": "Émanation",
-  "DND5E.TargetRadiusLegacy": "Rayon",
-  "DND5E.TargetSelf": "Soi-même",
-  "DND5E.TargetSpace": "Espace",
-  "DND5E.TargetSphere": "Sphère",
-  "DND5E.TargetSquare": "Carré",
   "DND5E.TargetType": "Type de cible",
   "DND5E.TargetTypeArea": "Zone",
   "DND5E.TargetTypeIndividual": "Individuel",
   "DND5E.TargetUnits": "Unités de la zone d'effet",
   "DND5E.TargetValue": "Nombre de cible",
-  "DND5E.TargetWall": "Mur",
   "DND5E.TargetWidth": "Largeur de Ligne",
-  "DND5E.TargetWilling": "Créature consentante",
   "DND5E.TemplatePrompt": "Suggestion de modèle",
   "DND5E.TemplatePromptTooltip": "Si non cochée, la demande de placer un modèle mesuré sera supprimée.",
   "DND5E.Temp": "Temp",
@@ -2868,10 +2859,10 @@
     }
   },
   "DND5E.UTILITY": {
-    "Title": "Utilitaire",
+    "Title": "Utiliser",
     "FIELDS": {
       "roll": {
-        "label": "Jet utilitaire",
+        "label": "Jet",
         "formula": {
           "label": "Formule du jet",
           "hint": "Formule pour un jet de dés arbitraire."
@@ -2881,7 +2872,7 @@
           "hint": "Nom affiché sur le bouton du jet."
         },
         "prompt": {
-          "label": "Invite du jet utilitaire",
+          "label": "Invite de jet",
           "hint": "La boîte de dialogue de configuration du jet doit-elle s'afficher lors du jet de dés ?"
         },
         "visible": {
@@ -2968,25 +2959,6 @@
   "DND5E.WeaponSimpleProficiency": "Armes courantes",
   "DND5E.WeaponSimpleR": "À distance courantes",
   "DND5E.Weight": "Poids",
-  "DND5E.WeightUnit": {
-    "Label": "Unités de poids",
-    "Kilograms": {
-      "Label": "Kilogrammes",
-      "Abbreviation": "kg"
-    },
-    "Megagrams": {
-      "Label": "Tonnes",
-      "Abbreviation": "t"
-    },
-    "Pounds": {
-      "Label": "Livres",
-      "Abbreviation": "lb"
-    },
-    "Tons": {
-      "Label": "Tonne",
-      "Abbreviation": "tn"
-    }
-  },
   "DND5E.WhisperedTo": "Murmuré à",
   "DND5E.Wiki": "Wiki",
   "DND5E.available": "Disponible",
@@ -3185,20 +3157,6 @@
   "SETTINGS.5eAutoCollapseCardN": "Réduire les cartes d'objet dans le tchat",
   "SETTINGS.5eAutoSpellTemplateL": "Lorsqu'un sort est lancé, commence par créer le gabarit correspondant le cas échéant (nécessite un role de joueur de 'confiance' -TRUSTED- ou supérieur)",
   "SETTINGS.5eAutoSpellTemplateN": "Toujours poser le gabarit du sort",
-  "SETTINGS.5eAttackRollVisibility": {
-    "Name": "Visibilité des résultats d'attaque",
-    "Hint": "Contrôler la visibilité des résultats des jets d'attaque dans les cartes de tchat pour les joueurs.",
-    "All": "Afficher les résultats et les CA des cibles",
-    "HideAC": "Afficher uniquement les résultats",
-    "None": "Tout masquer"
-  },
-  "SETTINGS.5eChallengeVisibility": {
-    "Name": "Visibilité du Degré de Difficulté",
-    "Hint": "Contrôler les DD visibles par les joueurs et si les réussites/échecs sont mis en évidence.",
-    "All": "Tout afficher",
-    "None": "Tout masquer",
-    "Player": "Afficher uniquement aux autres joueurs"
-  },
   "SETTINGS.5eCriticalMaxDiceN": "Maximiser les dégâts critiques",
   "SETTINGS.5eCriticalMaxDiceL": "Rendez les coups critiques plus mortels en maximisant les valeurs des dés de dégâts de base.",
   "SETTINGS.5eCriticalModifiersN": "Multiplication des modificateurs de dégâts critiques",
@@ -3223,8 +3181,6 @@
   "SETTINGS.5eHonorN": "Score d'Honneur",
   "SETTINGS.5eInitTBL": "Ajouter en décimal le score brut de Dextérité pour départager les initiatives identiques.",
   "SETTINGS.5eInitTBN": "Départager les initiatives identiques",
-  "SETTINGS.5eMetricN": "Utiliser les unités de poids métriques",
-  "SETTINGS.5eMetricL": "Remplace toutes les références aux livres (lbs) par des kilogrammes et met à jour le calcul des charges pour utiliser les unités de poids métriques.",
   "SETTINGS.5eNoAdvancementsN": "Désactiver l'automatisation des niveaux supérieurs",
   "SETTINGS.5eNoAdvancementsL": "Ne demandez pas de choix pour la montée de niveau ou la création de personnage.",
   "SETTINGS.5eNoConcentrationN": "Désactiver le suivi de la concentration",
@@ -3344,6 +3300,87 @@
     "Confirm": "Avancer d'un tour de bastion ?",
     "Action": {
       "BastionTurn": "Avancer le tour du bastion"
+    },
+    "Attack": {
+      "Result": {
+        "Deaths": {
+          "other": "<strong>{deaths}</strong> défenseurs ont été tués lors d'une attaque sur leur bastion !",
+          "one": "<strong>{deaths}</strong> défenseur a été tué lors d'une attaque sur leur bastion !"
+        },
+        "Damaged": "{link} a été endommagé lors de l'attaque."
+      },
+      "Automatic": "Résoudre automatiquement",
+      "Resolve": "Résoudre l'attaque",
+      "NoActorWarning": "Aucun personnage sélectionné comme cible de l'attaque. Sélectionnez un token ou ouvrez leur fiche de personnage.",
+      "Formula": "Formule d'attaque"
     }
-  }
+  },
+  "DND5E.ArmorValue": "Valeur d'armure",
+  "DND5E.ABILITY": {
+    "SECTIONS": {
+      "Score": "Score de {ability}",
+      "Bonuses": {
+        "Hint": "Ces bonus s'appliquent aux tests et aux jets de sauvegarde effectués avec {ability}.",
+        "Label": "Bonus de {ability}"
+      },
+      "Global": {
+        "Hint": "Ces bonus s'appliquent aux tests et aux jets de sauvegarde effectués avec n'importe quelle caractéristique.",
+        "Label": "Bonus globaux"
+      }
+    },
+    "Configure": {
+      "Title": "Configurer {ability}"
+    }
+  },
+  "DND5E.AbilityScoreMaxShort": "Maximum",
+  "DND5E.AbilityScoreShort": "Score",
+  "TYPES.ChatMessage": {
+    "turn": "Message de tour de combat"
+  },
+  "DND5E.Language": {
+    "Language": {
+      "Druidic": "Druidique",
+      "Giant": "Géant",
+      "Gnoll": "Gnoll",
+      "Goblin": "Gobelin",
+      "Halfling": "Halfelin",
+      "Orc": "Orc",
+      "ThievesCant": "Jargon des voleurs",
+      "Celestial": "Céleste"
+    },
+    "Communication": {
+      "Telepathy": "Télépathie"
+    }
+  },
+  "DND5E.LegendaryResistance": {
+    "Action": {
+      "Resist": "Résistance légendaire"
+    },
+    "Label": "Résistance légendaire"
+  },
+  "DND5E.NPC": {
+    "SECTIONS": {
+      "Actions": "Actions",
+      "BonusActions": "Actions bonus",
+      "LegendaryActions": "Actions légendaires",
+      "Reactions": "Réactions"
+    }
+  },
+  "DND5E.RechargeShort": "Recharge après un repos court ou long",
+  "DND5E.REST": {
+    "Long": {
+      "Label": "Repos long"
+    },
+    "Short": {
+      "Label": "Repos court"
+    }
+  },
+  "DND5E.UNITS": {
+    "VOLUME": {
+      "Liter": {
+        "Abbreviation": "L"
+      }
+    }
+  },
+  "DND5E.AbilityModifierShort": "Mod"
 }
