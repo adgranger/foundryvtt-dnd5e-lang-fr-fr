@@ -15,8 +15,18 @@
     },
     "items": {
       "path": "items",
-      "converter": "itemsMonster"
-    }
+      "converter": "items"
+    },
+    "languages": "system.traits.languages.custom",
+    "specialSenses": "system.attributes.senses.special",
+    "dr": "system.traits.dr.custom",
+    "dv": "system.traits.dv.custom",
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    },
+    "alignment": "system.details.alignment",
+    "subtype": "system.details.type.subtype"
   },
   "folders": {
     "Aberration": "Aberration",
@@ -1612,7 +1622,8 @@
           "name": "Coup",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 2 bludgeoning average]]</em></strong>.</p></section><p>L'[[lookup @name]] attaque avec Coup.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Ankheg": {
       "name": "Ankheg",
@@ -1805,7 +1816,8 @@
           "name": "Déguisement",
           "description": "<p>Vous vous donnez un aspect différent jusqu’à la fin du sort ou jusqu’à ce que vous le révoquiez en y consacrant votre action. Vous pouvez ainsi altérer l’apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu’à 30 cm plus grand ou plus petit, sembler plus maigre ou plus dodu. Vous ne pouvez pas changer d’anatomie, si bien que la forme choisie doit conserver votre répartition de membres. Pour le reste, les détails de l’illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n’est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l’air, votre crâne ou vos cheveux. Si le sort vous fait paraître plus mince que la réalité, quelqu’un qui tend la main pour vous toucher vous heurtera plus tôt que prévu.</p><p>Pour comprendre que vous êtes déguisé, une créature peut consacrer son action à vous examiner et doit réussir un test d’Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts.</p>"
         }
-      }
+      },
+      "dr": "dégâts des sorts"
     },
     "Assassin": {
       "name": "Assassin",
@@ -1987,7 +1999,8 @@
           "name": "Fouet",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+14 pour toucher</strong>, allonge <strong>9 m,</strong> une cible. Touché : <strong><em>[[/damage 2d6 + 8 slashing average]]</em></strong> plus <strong><em>[[/damage 3d6 fire average]]</em></strong>, et la cible doit réussir un [[/save str 20 format=long]]  sous peine d’être tirée d’un maximum de 7,50 m vers le [[lookup @name]].</p></section><p>Le [[lookup @name]] attaque avec Fouet.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Bandit": {
       "name": "Bandit",
@@ -2031,7 +2044,8 @@
           "name": "Parade",
           "description": "<p>Le capitaine ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l’assaillant et manier une arme de corps à corps.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Barbed Devil": {
       "name": "Diable barbelé",
@@ -2065,7 +2079,8 @@
           "name": "Jet de flammes",
           "description": "<section class=\"secret\"><p><em>Attaque de sort à distance :</em> <strong>+5 pour toucher</strong>, portée <strong>45 m,</strong> une cible. Touché : <strong><em>[[/damage 3d6 fire average]]</em></strong>. Si la cible est un objet inflammable qui n’est porté par personne, elle prend également feu.</p></section><p>Le [[lookup @name]] attaque avec Jet de flammes.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Basilisk": {
       "name": "Basilic",
@@ -2127,7 +2142,8 @@
           "name": "Attaques multiples",
           "description": "<p>Le diable effectue deux attaques : une de Barbe et une de Coutille.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Behir": {
       "name": "Béhir",
@@ -2171,7 +2187,8 @@
           "name": "Hache à deux mains",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em><strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d12 + 3 slashing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Hache à deux mains.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Black Bear": {
       "name": "Ours noir",
@@ -2237,7 +2254,8 @@
           "name": "Division",
           "description": "<section class=\"secret\"><p>Quand un pouding de taille M ou supérieure est soumis à des dégâts tranchants ou de foudre, il se scinde en deux nouveaux poudings s’il dispose d’au moins 10 points de vie. Chaque nouveau pouding est doté de la moitié des points de vie de celui de départ, arrondie à l’inférieur. La catégorie de taille des nouveaux poudings est d’un cran inférieure à celle du pouding de départ.</p></section><p>Le [[lookup @name]] utilise Division.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Blink Dog": {
       "name": "Chien esquiveur",
@@ -2331,7 +2349,8 @@
           "name": "Attaques multiples",
           "description": "<p>Le diable effectue trois attaques : deux de Griffe et une de Dard.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Brass Dragon Wyrmling": {
       "name": "Dragonnet d'airain",
@@ -2529,7 +2548,8 @@
           "name": "Chaînes animées",
           "description": "<section class=\"secret\"><p>Un maximum de quatre chaînes visibles du diable dans un rayon de 18 m se dotent magiquement de barbelures tranchantes et s’animent sous le contrôle du diable, à condition qu’elles ne soient portées par personne. Chacune de ces chaînes animées est un objet doté d’une CA de 20, de 20 points de vie, de la résistance aux dégâts perforants et de l’immunité contre les dégâts psychiques et de tonnerre. Lorsque le diable recourt à Attaques multiples à son tour, il peut se servir de chacune de ces chaînes animées pour effectuer une attaque de Chaîne supplémentaire. Une chaîne animée peut agripper individuellement une créature, mais ne peut pas effectuer d’attaques quand elle agrippe. Une chaîne animée redevient inerte si elle tombe à 0 point de vie, ou si le diable est &Reference[incapacitated] ou mort.</p></section><p>Le [[lookup @name]] utilise Chaînes animées.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Chimera": {
       "name": "Chimère",
@@ -2943,7 +2963,8 @@
           "name": "Arme spirituelle",
           "description": "<p>Vous créez une arme spectrale et flottante à portée, qui persiste pour toute la durée ou jusqu’à ce que vous relanciez ce sort. À l’incantation, vous pouvez effectuer une attaque de sort au corps à corps contre une créature située dans un rayon de 1,50 m de l’arme. Si l’attaque touche, la cible subit des dégâts de force égaux à 1d8 + votre modificateur de caractéristique d’incantation.</p><p>Par une action bonus, vous pouvez déplacer l’arme d’un maximum de 6 m et répéter l’attaque contre une créature située dans un rayon de 1,50 m de l’arme.</p><p>L’arme prend la forme de votre choix. Les clercs de divinités associées à une arme donnée (saint Cuthbert est par exemple connu pour sa masse d’armes et Thor pour son marteau) donnent l’aspect de cet objet à leur arme spirituelle.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 3e niveau ou supérieur, les dégâts augmentent de 1d8 par tranche de deux niveaux d’emplacement au-delà du 2e.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Cultist": {
       "name": "Sectateur (membre de secte)",
@@ -3055,7 +3076,8 @@
           "name": "Déguisement",
           "description": "<p>Vous vous donnez un aspect différent jusqu’à la fin du sort ou jusqu’à ce que vous le révoquiez en y consacrant votre action. Vous pouvez ainsi altérer l’apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu’à 30 cm plus grand ou plus petit, sembler plus maigre ou plus dodu. Vous ne pouvez pas changer d’anatomie, si bien que la forme choisie doit conserver votre répartition de membres. Pour le reste, les détails de l’illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n’est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l’air, votre crâne ou vos cheveux. Si le sort vous fait paraître plus mince que la réalité, quelqu’un qui tend la main pour vous toucher vous heurtera plus tôt que prévu.</p><p>Pour comprendre que vous êtes déguisé, une créature peut consacrer son action à vous examiner et doit réussir un test d’Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts.</p>"
         }
-      }
+      },
+      "subtype": "Gnome"
     },
     "Deer": {
       "name": "Petit cervidé",
@@ -3233,7 +3255,8 @@
           "name": "Métamorphe",
           "description": "<section class=\"secret\"><p>Le [[lookup @name]] peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu’il porte n’est transformé. S’il meurt, il reprend sa forme véritable.</p></section><p>Le [[lookup @name]] utilise Métamorphe.</p>"
         }
-      }
+      },
+      "subtype": "Métamorphe"
     },
     "Draft Horse": {
       "name": "Cheval de trait",
@@ -3295,7 +3318,8 @@
           "name": "Nuage fétide",
           "description": "<section class=\"secret\"><p>Un immonde nuage de vapeurs vertes et toxiques s’étend sur un rayon de 3 m autour du [[lookup @name]]. Le gaz contourne les angles et sa zone est à visibilité réduite. Il persiste pendant 1 minute, mais prend fin si un vent fort le disperse. Une créature qui commence son tour dans cette zone doit réussir un [[/save con 11 format=long]]  sous peine d’être &Reference[poisoned] jusqu’au début de son tour suivant. Tant qu’elle est ainsi empoisonnée, la cible ne peut jouer aucune réaction et n’a droit qu’à une action ou une action bonus lors de son tour (pas les deux).</p></section><p>Le [[lookup @name]] utilise Nuage fétide.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Drider": {
       "name": "Drider",
@@ -3391,7 +3415,8 @@
           "name": "Lumières dansantes",
           "description": "<p>Vous créez jusqu’à quatre lumières de la taille d’une torche, à portée ; pour toute la durée, elles ont l’aspect de torches, de lanternes ou de globes luisants qui flottent dans les airs. Vous pouvez également fusionner les quatre lueurs pour former une silhouette vaguement humanoïde de taille M. Quelle que soit la forme choisie, chaque lueur émet une lumière faible dans un rayon de 3 m.</p><p>Par une action bonus à chacun de vos tours, vous pouvez déplacer les lueurs d’un maximum de 18 m vers un nouvel endroit à portée. Chaque lueur du sort, à sa création, doit se situer dans un rayon de 6 m d’une autre, et s’évanouit si jamais elle quitte la portée du sort.</p>"
         }
-      }
+      },
+      "subtype": "Elfe"
     },
     "Druid": {
       "name": "Druide",
@@ -3441,7 +3466,8 @@
           "name": "Peau d’écorce",
           "description": "<p>Vous touchez une créature consentante. Jusqu’à la fin du sort, la peau de la cible présente un aspect rugueux qui rappelle l’écorce d’un arbre et sa CA ne peut être inférieure à 16 quelle que soit l’éventuelle armure qu’elle porte.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Dryad": {
       "name": "Dryade",
@@ -3533,7 +3559,8 @@
           "name": "Invisibilité",
           "description": "<section class=\"secret\"><p>Pendant un maximum de 1 heure, le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque, qu’il lance un sort, qu’il recoure à Agrandissement ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p></section><p>Le [[lookup @name]] utilise Invisibilité.</p>"
         }
-      }
+      },
+      "subtype": "Nain"
     },
     "Dust Mephit": {
       "name": "Méphite poussiéreux",
@@ -3727,7 +3754,8 @@
           "name": "Attaques multiples",
           "description": "<p>L’[[lookup @name]] effectue trois attaques.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Ettercap": {
       "name": "Ettercap",
@@ -3905,7 +3933,8 @@
           "name": "Épée longue",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+3 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d8 + 1 slashing average]]</em></strong>.</p></section><p>L'[[lookup @name]] attaque avec Épée longue.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Frog": {
       "name": "Grenouille",
@@ -3985,7 +4014,8 @@
           "name": "Enveloppement",
           "description": "<section class=\"secret\"><p>Le cube se déplace dans les limites de sa vitesse. Ce faisant, il peut entrer dans les espaces de créatures de taille G ou inférieure. Chaque fois que le cube pénètre dans l’espace d’une créature, celle-ci effectue un [[/save dex 12 format=long]] .</p><p>En cas de réussite, la créature peut choisir d’être repoussée de 1,50 m, en arrière ou sur le côté du cube. Si elle refuse d’être repoussée, elle subit les mêmes conséquences que si elle avait raté le JS.</p><p>En cas d’échec, le cube pénètre dans l’espace de la créature, et celle-ci subit <strong><em>[[/damage 3d6 acid average]]</em></strong> et se retrouve enveloppée. Une créature enveloppée ne peut pas respirer, est &Reference[restrained], et subit <strong><em>[[/damage 6d6 acid average]]</em></strong> au début de chacun des tours du cube. Lorsque le cube se déplace, la créature enveloppée l’accompagne.</p><p>Une créature enveloppée peut tenter de s’extraire du cube au prix d’une action, en tentant un test de Force DD 12. En cas de réussite, elle se libère du cube et entre dans l’espace de son choix, dans un rayon de 1,50 m du monstre.</p></section><p>Le [[lookup @name]] utilise Enveloppement.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Ghast": {
       "name": "Blême",
@@ -4649,7 +4679,8 @@
           "name": "Mot de pouvoir étourdissant",
           "description": "<p>Vous prononcez une parole de pouvoir capable de submerger l’esprit d’une créature que vous voyez à portée et de la sidérer. Si la cible choisie est dotée de 150 points de vie ou moins, elle est &Reference[stunned]. Dans le cas contraire, le sort est sans effet.</p><p>Une cible ainsi étourdie effectue un jet de sauvegarde de Constitution à la fin de chacun de ses tours. En cas de réussite, l’effet étourdissant prend fin.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Gladiator": {
       "name": "Gladiateur",
@@ -4717,7 +4748,8 @@
           "name": "Arc long",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme à distance :</em> <strong>+3 pour toucher</strong>, portée <strong>45/180 m,</strong> une cible. Touché : <strong><em>[[/damage 1d8 + 1 piercing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Arc long.</p>"
         }
-      }
+      },
+      "subtype": "Gnoll"
     },
     "Goat": {
       "name": "Chèvre",
@@ -4761,7 +4793,8 @@
           "name": "Arc court",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme à distance :</em> <strong>+4 pour toucher</strong>, portée <strong>24/96 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 2 piercing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Arc court.</p>"
         }
-      }
+      },
+      "subtype": "Gobelinoïde"
     },
     "Gold Dragon Wyrmling": {
       "name": "Dragonnet d'or",
@@ -4831,7 +4864,8 @@
           "name": "Pseudopode",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+3 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 1 bludgeoning average]]</em></strong> plus <strong><em>[[/damage 2d6 acid average]]</em></strong> et toute armure métallique non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de –1 à la CA qu’elle procure. L’armure est détruite si ce malus réduit sa CA à 10.</p></section><p>La [[lookup @name]] attaque avec Pseudopode.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Green Dragon Wyrmling": {
       "name": "Dragonnet vert",
@@ -4957,7 +4991,9 @@
           "name": "Gourdin à pointes en os",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 + 3 bludgeoning average]]</em></strong> plus <strong><em>[[/damage 1d4 piercing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Gourdin à pointes en os.</p>"
         }
-      }
+      },
+      "subtype": "Torve",
+      "specialSenses": "3 m s'il est assourdi (ne voit rien au-delà de ce rayon)"
     },
     "Guard": {
       "name": "Garde",
@@ -5197,7 +5233,8 @@
           "name": "Souffle de feu",
           "description": "<section class=\"secret\"><p>Le [[lookup @name]] crache des flammes sous forme d’un cône de 4,50 m. Chaque créature prise dans la zone effectue un [[/save dex 15 format=long]]  et subit <strong><em>[[/damage 7d6 fire average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p></section><p>Le [[lookup @name]] utilise Souffle de feu.</p>"
         }
-      }
+      },
+      "subtype": "Humain"
     },
     "Harpy": {
       "name": "Harpie",
@@ -5281,7 +5318,8 @@
           "name": "Claws",
           "description": "<section class=\"secret\"><p><em>Melee Weapon Attack:</em><strong>+7 to hit,</strong>, <strong>5 ft.,</strong> one target. Hit: <strong>11 (2d6 + 4) <em>slashing damage</em></strong>.</p><p></p></section><p>The Hezrou attacks with its Claws.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Hill Giant": {
       "name": "Géant des collines",
@@ -5347,7 +5385,8 @@
           "name": "Bouclier",
           "description": "<p>Un bouclier est fait de bois ou de métal et est porté dans une main. Le fait de porter un bouclier augmente votre classe d'armure de 2. Vous ne pouvez bénéficier que d'un seul bouclier à la fois.</p>"
         }
-      }
+      },
+      "subtype": "Gobelinoïde"
     },
     "Homunculus": {
       "name": "Homoncule",
@@ -5391,7 +5430,8 @@
           "name": "Jet de flammes",
           "description": "<section class=\"secret\"><p><em>Attaque de sort à distance :</em> <strong>+7 pour toucher</strong>, portée <strong>45 m,</strong> une cible. Touché : <strong><em>[[/damage 4d6 fire average]]</em></strong>. Si la cible est un objet inflammable qui n’est porté par personne, elle prend également feu.</p><p></p></section><p>Le [[lookup @name]] attaque avec Jet de flammes.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Hunter Shark": {
       "name": "Requin-chasseur",
@@ -5487,7 +5527,8 @@
           "name": "Attaques multiples",
           "description": "<p>Le diable effectue trois attaques : une de Morsure, une de Griffes et une de Queue.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Ice Mephit": {
       "name": "Méphite gelé",
@@ -5547,7 +5588,8 @@
           "name": "Morsure (forme de bête uniquement)",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 + 3 piercing average]]</em></strong> et la cible effectue un [[/save con 11 format=long]]  sous peine de subir <strong><em>[[/damage 3d6 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p></section><p>Le [[lookup @name]] attaque avec Morsure (forme de bête uniquement).</p>"
         }
-      }
+      },
+      "subtype": "Diable, Métamorphe"
     },
     "Invisible Stalker": {
       "name": "Traqueur invisible",
@@ -5681,7 +5723,8 @@
           "name": "Brave",
           "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux jets de sauvegarde contre l’état &Reference[frightened].</p><p></p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Kobold": {
       "name": "Kobold",
@@ -5703,7 +5746,8 @@
           "name": "Fronde",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme à distance :</em> <strong>+4 pour toucher</strong>, portée <strong>9/36 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 + 2 bludgeoning average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Fronde.</p>"
         }
-      }
+      },
+      "subtype": "Kobold"
     },
     "Kraken": {
       "name": "Kraken",
@@ -5761,7 +5805,8 @@
           "name": "Nuage d’encre",
           "description": "<section class=\"secret\"><p>À condition d’être sous l’eau, le [[lookup @name]] libère un nuage d’encre dans un rayon de 18 m. Le nuage contourne les angles et sa zone présente une visibilité nulle pour les créatures autres que lui. Toute créature autre que le [[lookup @name]] qui y termine son tour effectue un [[/save con 23 format=long]]  et subit <strong><em>[[/damage 3d10 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite. Un courant fort disperse le nuage, qui disparaît sans cela à la fin du tour suivant du [[lookup @name]].</p></section><p>Le [[lookup @name]] utilise Nuage d’encre.</p>"
         }
-      }
+      },
+      "subtype": "Titan"
     },
     "Lamia": {
       "name": "Lamie",
@@ -5833,7 +5878,8 @@
           "name": "Poing",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+3 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 bludgeoning average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Poing.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Lich": {
       "name": "Liche",
@@ -6061,7 +6107,8 @@
           "name": "Bouclier",
           "description": "<p>Un bouclier est fait de bois ou de métal et est porté dans une main. Le fait de porter un bouclier augmente votre classe d'armure de 2. Vous ne pouvez bénéficier que d'un seul bouclier à la fois.</p>"
         }
-      }
+      },
+      "subtype": "Saurial"
     },
     "Mage": {
       "name": "Mage",
@@ -6139,7 +6186,8 @@
           "name": "Cône de froid",
           "description": "<p>Vous faites jaillir une gerbe d’air glacial de vos mains. Chaque créature prise dans un cône de 18 m effectue un jet de sauvegarde de Constitution. Elle subit 8d8 dégâts de froid en cas d’échec, la moitié en cas de réussite.</p><p>Une créature tuée par ce sort se transforme en statue givrée, jusqu’à ce qu’elle dégèle.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 6e niveau ou supérieur, les dégâts augmentent de 1d8 par niveau d’emplacement au-delà du 5e.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Mage Hand": {
       "name": "Mage Hand",
@@ -6273,7 +6321,8 @@
           "name": "Parade",
           "description": "<section class=\"secret\"><p>La [[lookup @name]] ajoute 5 à sa CA contre une attaque de corps à corps censée la toucher. Pour ce faire, la [[lookup @name]] doit voir l’assaillant et manier une arme de corps à corps.</p></section><p>La [[lookup @name]] utilise Parade.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Mastiff": {
       "name": "Molosse",
@@ -6327,7 +6376,8 @@
           "name": "Lance",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps ou à distance :</em> <strong>+2 pour toucher</strong>, allonge 1, portée <strong>6/18 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 piercing average]]</em></strong>, ou <strong><em>[[/damage 1d8 piercing average]]</em></strong> si utilisée à deux mains dans le cadre d’une attaque de corps à corps.</p></section><p>Le [[lookup @name]] attaque avec Lance.</p>"
         }
-      }
+      },
+      "subtype": "Thalasséen"
     },
     "Merrow": {
       "name": "Merrow",
@@ -6383,7 +6433,8 @@
           "name": "Morsure",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d8 + 3 piercing average]]</em></strong> plus <strong><em>[[/damage 1d8 acid average]]</em></strong>.</p></section><p>La [[lookup @name]] attaque avec Morsure.</p>"
         }
-      }
+      },
+      "subtype": "Métamorphe"
     },
     "Minotaur": {
       "name": "Minotaure",
@@ -6615,7 +6666,8 @@
           "name": "Téléportation",
           "description": "<section class=\"secret\"><p>Le [[lookup @name]] se téléporte magiquement d’un maximum de 36 m avec tout l’équipement qu’il porte dans un espace inoccupé qu’il voit.</p></section><p>Le [[lookup @name]] utilise Téléportation.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Night Hag": {
       "name": "Guenaude nocturne (tormante)",
@@ -6705,7 +6757,8 @@
           "name": "Parade",
           "description": "<section class=\"secret\"><p>Le [[lookup @name]] ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l’assaillant et manier une arme de corps à corps.</p></section><p>Le [[lookup @name]] utilise Parade.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Ochre Jelly": {
       "name": "Gelée ocre",
@@ -6727,7 +6780,8 @@
           "name": "Division",
           "description": "<section class=\"secret\"><p>Quand une gelée de taille M ou supérieure est soumise à des dégâts tranchants ou de foudre, elle se scinde en deux nouvelles gelées si elle dispose d’au moins 10 points de vie. Chaque nouvelle gelée est dotée de la moitié des points de vie de la gelée de départ, arrondie à l’inférieur. La catégorie de taille des nouvelles gelées est d’un cran inférieure à celle de la gelée de départ.</p></section><p>La [[lookup @name]] utilise Division.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Octopus": {
       "name": "Pieuvre",
@@ -6869,7 +6923,8 @@
           "name": "Javeline",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps ou à distance :</em> <strong>+5 pour toucher</strong>, allonge 1, portée <strong>9/36 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 3 piercing average]]</em></strong>.</p></section><p>L'[[lookup @name]] attaque avec Javeline.</p>"
         }
-      }
+      },
+      "subtype": "Orc"
     },
     "Otyugh": {
       "name": "Otyugh",
@@ -7047,7 +7102,8 @@
           "name": "Mur de feu",
           "description": "<p>Vous créez un mur de flammes sur une surface solide à portée. Vous pouvez ainsi ériger un mur dont la hauteur n’excède pas 6 m et l’épaisseur 30 cm ; pour le reste, vous avez le choix entre un mur droit long d’un maximum de 18 m et un mur circulaire dont le diamètre ne dépasse pas 6 m. Ce mur opaque persiste pour toute la durée.</p><p>Quand le mur apparaît, chaque créature prise dans sa zone effectue un jet de sauvegarde de Dextérité. Elle subit 5d8 dégâts de feu en cas d’échec, la moitié en cas de réussite.</p><p>L’un des côtés du mur que vous choisissez à l’incantation du sort inflige 5d8 dégâts de feu à toute créature qui termine son tour à 3 m ou moins de ce côté ou dans le mur. Une créature qui pénètre dans le mur pour la première fois d’un tour ou qui y termine son tour subit ces mêmes dégâts. L’autre côté du mur n’inflige pas de dégâts.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 5e niveau ou supérieur, les dégâts augmentent de 1d8 par niveau d’emplacement au-delà du 4e.</p>"
         }
-      }
+      },
+      "subtype": "Diable"
     },
     "Planetar": {
       "name": "Planétar",
@@ -7235,7 +7291,8 @@
           "name": "Soins",
           "description": "<p>La créature que vous touchez récupère un nombre de points de vie égal à 1d8 + votre modificateur de caractéristique d’incantation. Ce sort est sans effet sur les morts-vivants et les artificiels.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 2e niveau ou supérieur, il soigne 1d8 supplémentaires par niveau d’emplacement au-delà du 1er.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Pseudodragon": {
       "name": "Pseudodragon",
@@ -7309,7 +7366,8 @@
           "name": "Frayeur",
           "description": "<section class=\"secret\"><p>Une créature choisie par le [[lookup @name]] dans un rayon de 6 m de lui doit réussir un [[/save wis 10 format=long]]  sous peine d’être &Reference[frightened] pendant 1 minute. Ainsi effrayée, la cible peut réitérer le JS à la fin de chacun de ses tours, avec<strong> désavantage</strong> si le [[lookup @name]] est dans son champ de vision, et met un terme à l’effet sur elle-même en cas de réussite.</p></section><p>Le [[lookup @name]] utilise Frayeur.</p>"
         }
-      }
+      },
+      "subtype": "Démon, Métamorphe"
     },
     "Quipper": {
       "name": "Piranha",
@@ -7401,7 +7459,8 @@
           "name": "Vision suprême",
           "description": "<p>Ce sort octroie à la créature consentante que vous touchez la faculté de voir les choses telles qu’elles sont. Pour toute la durée, la créature est dotée de la vision lucide, détecte les passages secrets cachés par magie et perçoit le Plan Éthéré, le tout sur une portée de 36 m.</p>"
         }
-      }
+      },
+      "dv": "perforants des armes magiques maniées par des créatures bonnes"
     },
     "Rat": {
       "name": "Rat",
@@ -7581,7 +7640,8 @@
           "name": "Étouffement",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature de taille M ou inférieure. Touché : La créature est agrippée (évasion DD 13). Tant que le tapis l’agrippe, la cible est &Reference[restrained], &Reference[blinded] et risque l’asphyxie, et le tapis ne peut pas étouffer d’autre cible. De plus, au début de chacun de ses propres tours, la cible subit <strong><em>[[/damage 2d6 + 3 bludgeoning average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Étouffement.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Rust Monster": {
       "name": "Oxydeur",
@@ -7659,7 +7719,8 @@
           "name": "Télépathie avec les requins",
           "description": "<p>Le [[lookup @name]] peut magiquement donner des instructions à tout requin dans un rayon de 36 m, par une forme limitée de télépathie.</p>"
         }
-      }
+      },
+      "subtype": "Sahuagin"
     },
     "Salamander": {
       "name": "Salamandre",
@@ -7827,7 +7888,8 @@
           "name": "Coup",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+7 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 2d8 + 4 bludgeoning average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Coup.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Shield Guardian": {
       "name": "Garde animé",
@@ -7871,7 +7933,8 @@
           "name": "Faux-semblant",
           "description": "<p>Tant que le [[lookup @name]] reste immobile, on ne peut le distinguer d’un champignon ordinaire.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Silver Dragon Wyrmling": {
       "name": "Dragonnet d'argent",
@@ -8163,7 +8226,8 @@
           "name": "Arbalète de poing",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme à distance :</em> <strong>+4 pour toucher</strong>, portée <strong>9/36 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 2 piercing average]]</em></strong>.</p></section><p>L'[[lookup @name]] attaque avec Arbalète de poing.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Steam Mephit": {
       "name": "Méphite vaporeux",
@@ -8343,7 +8407,8 @@
           "name": "Forme éthérée",
           "description": "<section class=\"secret\"><p>Le fiélon pénètre magiquement dans le Plan Éthéré depuis le Plan Matériel, ou inversement.</p></section><p>La [[lookup @name]] utilise Forme éthérée.</p>"
         }
-      }
+      },
+      "subtype": "Métamorphe"
     },
     "Swarm of Bats": {
       "name": "Nuée de chauves-souris",
@@ -8589,7 +8654,8 @@
           "name": "Mastication",
           "description": "<p>La [[lookup @name]] effectue une attaque de Morsure ou recourt à son Engloutissement.</p>"
         }
-      }
+      },
+      "subtype": "Titan"
     },
     "Thug": {
       "name": "Malfrat",
@@ -8911,7 +8977,8 @@
           "name": "Morsure",
           "description": "<p>Le [[lookup @name]] effectue une attaque de Morsure.</p>"
         }
-      }
+      },
+      "subtype": "Métamorphe"
     },
     "Vampire Spawn": {
       "name": "Vampirien",
@@ -8967,7 +9034,8 @@
           "name": "Arbalète lourde",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme à distance :</em> <strong>+3 pour toucher</strong>, portée <strong>30/120 m,</strong> une cible. Touché : <strong><em>[[/damage 1d10 + 1 piercing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Arbalète lourde.</p>"
         }
-      }
+      },
+      "subtype": "Toute race"
     },
     "Violet Fungus": {
       "name": "Thallophyte violette",
@@ -8985,7 +9053,8 @@
           "name": "Faux-semblant",
           "description": "<p>Tant que la [[lookup @name]] reste immobile, on ne peut la distinguer d’un champignon ordinaire.</p>"
         }
-      }
+      },
+      "specialSenses": "ne voit rien au-delà de ce rayon"
     },
     "Vrock": {
       "name": "Vrock",
@@ -9015,7 +9084,8 @@
           "name": "Piaillement étourdissant",
           "description": "<section class=\"secret\"><p>Le [[lookup @name]] pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l’entend et n’est pas un démon, doit réussir un [[/save con 14 format=long]]  sous peine d’être &Reference[stunned] jusqu’à la fin du tour suivant du [[lookup @name]].</p></section><p>Le [[lookup @name]] utilise Piaillement étourdissant.</p>"
         }
-      }
+      },
+      "subtype": "Démon"
     },
     "Vulture": {
       "name": "Vautour",
@@ -9127,7 +9197,8 @@
           "name": "Hache à deux mains (forme humanoïde ou hybride uniquement)",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+7 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d12 + 4 slashing average]]</em></strong>.</p></section><p>L'[[lookup @name]] attaque avec Hache à deux mains (forme humanoïde ou hybride uniquement).</p>"
         }
-      }
+      },
+      "subtype": "Humain, Métamorphe"
     },
     "Wereboar": {
       "name": "Sanglier-garou",
@@ -9157,7 +9228,8 @@
           "name": "Maillet d’armes (forme humanoïde ou hybride uniquement)",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 2d6 + 3 bludgeoning average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Maillet d’armes (forme humanoïde ou hybride uniquement).</p>"
         }
-      }
+      },
+      "subtype": "Humain, Métamorphe"
     },
     "Wererat": {
       "name": "Rat-garou",
@@ -9187,7 +9259,8 @@
           "name": "Épée courte (forme humanoïde ou hybride uniquement)",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 2 piercing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Épée courte (forme humanoïde ou hybride uniquement).</p>"
         }
-      }
+      },
+      "subtype": "Humain, Métamorphe"
     },
     "Weretiger": {
       "name": "Tigre-garou",
@@ -9225,7 +9298,8 @@
           "name": "Arc long (forme humanoïde ou hybride uniquement)",
           "description": "<section class=\"secret\"><p><em>Attaque d’arme à distance :</em> <strong>+4 pour toucher</strong>, portée <strong>45/180 m,</strong> une cible. Touché : <strong><em>[[/damage 1d8 + 2 piercing average]]</em></strong>.</p></section><p>Le [[lookup @name]] attaque avec Arc long (forme humanoïde ou hybride uniquement).</p>"
         }
-      }
+      },
+      "subtype": "Humain, Métamorphe"
     },
     "Werewolf": {
       "name": "Loup-garou",
@@ -9255,7 +9329,8 @@
           "name": "Odorat et ouïe aiguisés",
           "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe ou l’odorat.</p>"
         }
-      }
+      },
+      "subtype": "Humain, Métamorphe"
     },
     "White Dragon Wyrmling": {
       "name": "Dragonnet blanc",
