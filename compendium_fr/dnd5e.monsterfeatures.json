@@ -1,5 +1,5 @@
 {
-  "label": "Capacités de Monstres (DRS)",
+  "label": "Aptitudes de Monstres (DRS)",
   "mapping": {
     "range": {
       "path": "system.range",
@@ -7,7 +7,7 @@
     },
     "target": {
       "path": "system.target",
-      "converter": "range"
+      "converter": "target"
     },
     "sources": {
       "path": "system.source",
@@ -16,6 +16,11 @@
     "rangeActivities": {
       "path": "system.activities",
       "converter": "rangeActivities"
+    },
+    "requirements": "system.requirements",
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
     }
   },
   "entries": {
@@ -28,7 +33,7 @@
       "description": "<p>Lorsque le golem subit des dégâts d'acide, il ne subit aucun dommage et récupère un nombre de points de vie égal aux dégâts d'acide causés.</p>"
     },
     "Acid Breath": {
-      "name": "Souffle d'acide ",
+      "name": "Souffle d'acide",
       "description": "<p>(Recharge 5-6). Le dragon crache un jet d'acide sur une ligne de 9 mètres de long et de 1,50 mètre de large. Chaque créature sur cette ligne doit effectuer un jet de sauvegarde de Dextérité DD 14, subissant 49 (11d8) dégâts d'acide en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p>"
     },
     "Acid Spray": {
@@ -229,7 +234,15 @@
     },
     "Death Burst": {
       "name": "Mort explosive",
-      "description": "<p>Lorsque la créature meurt, il éclate dans une explosion de lave. Chaque créature présente dans un rayon de 1,50 mètre autour du méphite doit effectuer un jet de sauvegarde de Dextérité DD 11, subissant 7 (2d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p>"
+      "description": "<p>Lorsque la créature meurt, il éclate dans une explosion de lave. Chaque créature présente dans un rayon de 1,50 mètre autour du méphite doit effectuer un jet de sauvegarde de Dextérité DD 11, subissant 7 (2d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p>",
+      "activities": {
+        "utility": {
+          "condition": "à la mort"
+        },
+        "save": {
+          "condition": "à la mort"
+        }
+      }
     },
     "Death Glare": {
       "name": "Éblouissement mortel",
@@ -237,11 +250,24 @@
     },
     "Death Throes": {
       "name": "Spasmes d'agonie",
-      "description": "Le {creature} explose lorsqu'il meurt, et toutes les créatures situées à 9 mètres ou moins de lui doivent réaliser un jet de sauvegarde de Dextérité DD 20, subissant 70 (20d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite. L'explosion embrase les objets inflammables qui ne sont pas tenus ou portés se trouvant dans la zone, et détruit les armes du balor."
+      "description": "Le {creature} explose lorsqu'il meurt, et toutes les créatures situées à 9 mètres ou moins de lui doivent réaliser un jet de sauvegarde de Dextérité DD 20, subissant 70 (20d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite. L'explosion embrase les objets inflammables qui ne sont pas tenus ou portés se trouvant dans la zone, et détruit les armes du balor.",
+      "activities": {
+        "save": {
+          "condition": "à la mort"
+        }
+      }
     },
     "Detect (Legendary)": {
       "name": "Détection (Action Légendaire)",
-      "description": "Le {creature} effectue un jet de Sagesse (Perception)."
+      "description": "Le {creature} effectue un jet de Sagesse (Perception).",
+      "activities": {
+        "check": {
+          "chatFlavor": "L'aboleth concentre son regard !"
+        },
+        "utility": {
+          "chatFlavor": "L'aboleth concentre son regard !"
+        }
+      }
     },
     "Devil Sight": {
       "name": "Vision de diable",
@@ -277,7 +303,8 @@
     },
     "Echolocation": {
       "name": "Écholocation",
-      "description": "<p>La créature ne peut utiliser sa vision aveugle quand elle est assourdie.</p>"
+      "description": "<p>La créature ne peut utiliser sa vision aveugle quand elle est assourdie.</p>",
+      "requirements": "Chauve-souris"
     },
     "Elemental Demise": {
       "name": "Disparition élémentaire",
@@ -341,7 +368,15 @@
     },
     "Fey Charm": {
       "name": "Charme des fées",
-      "description": "<p>La dryade cible un humanoïde ou une bête qu'elle peut voir et se trouvant à 9 mètres maximum d'elle. Si la cible peut voir la dryade, elle doit réussir un jet de sauvegarde de Sagesse DD 14 ou être charmée par magie. La créature charmée considère la dryade comme une amie de confiance dont elle doit tenir compte et qu'elle doit protéger. Néanmoins la créature n'est pas sous le contrôle de la dryade, mais elle prend les requêtes et les actions de la dryade de la meilleure façon qui soit. Chaque fois que la dryade ou ses alliés font quelque chose de dangereux pour la cible, elle peut retenter son jet de sauvegarde, mettant fin à l'effet qui l'affecte en cas de réussite. Sinon, l'effet prend fin au bout de 24 heures ou jusqu'à ce que la dryade meure, jusqu'à ce qu'elle soit sur un plan d'existence différent de celui de la cible, ou mette fin à l'effet en utilisant son action bonus. Si le jet de sauvegarde de la cible est une réussite, la cible est immunisée au Charme des fées de la dryade pour les prochaines 24 heures. La dryade ne peut avoir sous son charme plus d'un humanoïde et plus de trois bêtes à la fois.</p>"
+      "description": "<p>La dryade cible un humanoïde ou une bête qu'elle peut voir et se trouvant à 9 mètres maximum d'elle. Si la cible peut voir la dryade, elle doit réussir un jet de sauvegarde de Sagesse DD 14 ou être charmée par magie. La créature charmée considère la dryade comme une amie de confiance dont elle doit tenir compte et qu'elle doit protéger. Néanmoins la créature n'est pas sous le contrôle de la dryade, mais elle prend les requêtes et les actions de la dryade de la meilleure façon qui soit. Chaque fois que la dryade ou ses alliés font quelque chose de dangereux pour la cible, elle peut retenter son jet de sauvegarde, mettant fin à l'effet qui l'affecte en cas de réussite. Sinon, l'effet prend fin au bout de 24 heures ou jusqu'à ce que la dryade meure, jusqu'à ce qu'elle soit sur un plan d'existence différent de celui de la cible, ou mette fin à l'effet en utilisant son action bonus. Si le jet de sauvegarde de la cible est une réussite, la cible est immunisée au Charme des fées de la dryade pour les prochaines 24 heures. La dryade ne peut avoir sous son charme plus d'un humanoïde et plus de trois bêtes à la fois.</p>",
+      "activities": {
+        "utility": {
+          "condition": "un humanoïde ou une bête"
+        },
+        "save": {
+          "condition": "un humanoïde ou une bête"
+        }
+      }
     },
     "Fire Absorption": {
       "name": "Absorption du feu",
@@ -369,7 +404,8 @@
     },
     "Flyby": {
       "name": "Vol agile",
-      "description": "<p>La créature ne provoque pas d'attaques d'opportunité lorsqu'elle quitte l'allonge d'un ennemi en volant.</p>"
+      "description": "<p>La créature ne provoque pas d'attaques d'opportunité lorsqu'elle quitte l'allonge d'un ennemi en volant.</p>",
+      "requirements": "Chouette"
     },
     "Flying Sword": {
       "name": "Épée volante",
@@ -437,7 +473,8 @@
     },
     "Hellish Rejuvenation": {
       "name": "Reconstitution infernale",
-      "description": "Le lémure qui meurt dans les Neuf enfers revient à la vie avec tous ses points de vie en 1d10 jours à moins qu'il n'ait été tué par une créature d'alignement Bon sous l'effet du sort bénédiction ou que son cadavre ait été aspergé d'eau bénite."
+      "description": "Le lémure qui meurt dans les Neuf enfers revient à la vie avec tous ses points de vie en 1d10 jours à moins qu'il n'ait été tué par une créature d'alignement Bon sous l'effet du sort bénédiction ou que son cadavre ait été aspergé d'eau bénite.",
+      "requirements": "Lémure"
     },
     "Hellish Weapons": {
       "name": "Armes infernales",
@@ -625,7 +662,8 @@
     },
     "Pack Tactics": {
       "name": "Tactique de groupe",
-      "description": "<p>La créature a un avantage aux jets d'attaque contre une créature si au moins l'un de ses alliés est à 1,50 mètre ou moins de la créature et n'est pas incapable d'agir.</p>"
+      "description": "<p>La créature a un avantage aux jets d'attaque contre une créature si au moins l'un de ses alliés est à 1,50 mètre ou moins de la créature et n'est pas incapable d'agir.</p>",
+      "requirements": "Babouin"
     },
     "Paralyzing Breath": {
       "name": "Souffle paralysant",
@@ -757,7 +795,12 @@
     },
     "Shadow Stealth": {
       "name": "Dissimulation dans l'ombre",
-      "description": "<p>Si elle se trouve dans des ténèbres ou est exposée à une lumière faible, l'ombre peut effectuer l'action Se cacher en utilisant une action bonus..</p>"
+      "description": "<p>Si elle se trouve dans des ténèbres ou est exposée à une lumière faible, l'ombre peut effectuer l'action Se cacher en utilisant une action bonus..</p>",
+      "activities": {
+        "utility": {
+          "condition": "Dans des ténèbres ou une lumière faible"
+        }
+      }
     },
     "Shapechanger": {
       "name": "Métamorphe",
@@ -797,7 +840,12 @@
     },
     "Sneak Attack": {
       "name": "Attaque sournoise",
-      "description": "<p>(1/tour). La créature inflige 7 (2d6) dégâts supplémentaires quand il touche une cible lors d'une attaque avec une arme et qu'il a un avantage au jet d'attaque, ou lorsque la cible est 1,50 mètre ou moins d'un allié de l'assassin qui n'est pas incapable d'agir et si l'assassin n'a pas un désavantage à son jet d'attaque.</p>"
+      "description": "<p>(1/tour). La créature inflige 7 (2d6) dégâts supplémentaires quand il touche une cible lors d'une attaque avec une arme et qu'il a un avantage au jet d'attaque, ou lorsque la cible est 1,50 mètre ou moins d'un allié de l'assassin qui n'est pas incapable d'agir et si l'assassin n'a pas un désavantage à son jet d'attaque.</p>",
+      "activities": {
+        "utility": {
+          "condition": "une fois par tour"
+        }
+      }
     },
     "Snow Camouflage": {
       "name": "Camouflage dans la neige",
@@ -877,7 +925,8 @@
     },
     "Swarm": {
       "name": "Nuée",
-      "description": "<p>La nuée peut occuper l'espace d'une créature et vice versa, et peut passer par une ouverture suffisamment grande pour une créature de taille TP. La nuée ne peut pas regagner de points de vie ou gagner des points de vie temporaires.</p>"
+      "description": "<p>La nuée peut occuper l'espace d'une créature et vice versa, et peut passer par une ouverture suffisamment grande pour une créature de taille TP. La nuée ne peut pas regagner de points de vie ou gagner des points de vie temporaires.</p>",
+      "requirements": "Chauves-souris"
     },
     "Tail Spike Regrowth": {
       "name": "Refloraison de piquants",
@@ -965,7 +1014,8 @@
     },
     "Underwater Camouflage": {
       "name": "Camouflage dans l'eau",
-      "description": "<p>La créature a un avantage aux jets de Dextérité (Discrétion) réalisés lorsqu'elle se trouve sous l'eau.</p>"
+      "description": "<p>La créature a un avantage aux jets de Dextérité (Discrétion) réalisés lorsqu'elle se trouve sous l'eau.</p>",
+      "requirements": "Pieuvre"
     },
     "Unnerving Mask": {
       "name": "Masque déstabilisant",
@@ -985,11 +1035,23 @@
     },
     "Wall of Ice": {
       "name": "Mur de glace",
-      "description": "(Recharge 6). Le diable crée par magie un mur de glace opaque sur une surface solide qu'il peut voir dans un rayon de 18 mètres. Le mur fait 30 centimètres d'épaisseur, 9 mètres de long et 3 mètres de haut, ou bien prend la forme d'un dôme hémisphérique de 6 mètres de diamètre. Lorsque le mur apparaît, chaque créature se trouvant sur sa trajectoire est repoussée par le chemin le plus court. La créature choisit de quel côté du mur elle est repoussée, à moins qu'elle ne soit incapable d'agir. La créature effectue alors un jet de sauvegarde de Dextérité DD 17, subissant 35 (10d6) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Le mur reste en place pendant 1 minute ou jusqu'à ce que le diable soit incapable d'agir ou meurt. Le mur peut être endommagé, une brèche peut donc y être percée ; chaque section de 3 mètres de côté a une CA de 5, 30 points de vie, est vulnérable aux dégâts de feu, et est immunisée aux dégâts d'acide, de froid, nécrotiques, de poison, et psychiques. Si une section est détruite, elle laisse derrière elle un voile d'air glacial à l'endroit que le mur occupait. Lorsqu'une créature traverse le voile d'air glacial au cours d'un tour, que ce soit volontairement ou non, la créature doit effectuer un jet de sauvegarde de Constitution DD 17, subissant 17 (5d6) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Le voile d'air glacial se dissipe lorsque le reste du mur disparaît."
+      "description": "(Recharge 6). Le diable crée par magie un mur de glace opaque sur une surface solide qu'il peut voir dans un rayon de 18 mètres. Le mur fait 30 centimètres d'épaisseur, 9 mètres de long et 3 mètres de haut, ou bien prend la forme d'un dôme hémisphérique de 6 mètres de diamètre. Lorsque le mur apparaît, chaque créature se trouvant sur sa trajectoire est repoussée par le chemin le plus court. La créature choisit de quel côté du mur elle est repoussée, à moins qu'elle ne soit incapable d'agir. La créature effectue alors un jet de sauvegarde de Dextérité DD 17, subissant 35 (10d6) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Le mur reste en place pendant 1 minute ou jusqu'à ce que le diable soit incapable d'agir ou meurt. Le mur peut être endommagé, une brèche peut donc y être percée ; chaque section de 3 mètres de côté a une CA de 5, 30 points de vie, est vulnérable aux dégâts de feu, et est immunisée aux dégâts d'acide, de froid, nécrotiques, de poison, et psychiques. Si une section est détruite, elle laisse derrière elle un voile d'air glacial à l'endroit que le mur occupait. Lorsqu'une créature traverse le voile d'air glacial au cours d'un tour, que ce soit volontairement ou non, la créature doit effectuer un jet de sauvegarde de Constitution DD 17, subissant 17 (5d6) dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Le voile d'air glacial se dissipe lorsque le reste du mur disparaît.",
+      "activities": {
+        "save": {
+          "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
+        },
+        "utility": {
+          "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
+        },
+        "attack": {
+          "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
+        }
+      }
     },
     "Water Breathing": {
       "name": "Respiration aquatique",
-      "description": "<p>. La créature ne peut respirer que sous l'eau.</p>"
+      "description": "<p>. La créature ne peut respirer que sous l'eau.</p>",
+      "requirements": "Pieuvre"
     },
     "Water Form": {
       "name": "Forme d'eau",
