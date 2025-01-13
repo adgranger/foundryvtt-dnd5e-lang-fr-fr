@@ -555,7 +555,7 @@
         },
         "parts": {
           "label": "Section de dégâts",
-          "hint": ""
+          "hint": "Sections de dégâts individuelles à inclure dans le jet."
         }
       }
     },
@@ -715,6 +715,12 @@
         "value": {
           "label": "Caractéristique principale",
           "hint": "Caractéristiques utilisées le plus par cette classe. Utilisé pour déterminer les restrictions de multi-classage."
+        }
+      },
+      "hd": {
+        "additional": {
+          "label": "Dés de vie supplémentaires",
+          "hint": "Formule pour les dés de vie disponibles pour cette classe au-delà du nombre normal."
         }
       }
     }
@@ -876,7 +882,7 @@
         }
       },
       "magicalBonus": {
-        "label": ""
+        "label": "Bonus magique"
       },
       "properties": {
         "label": ""
@@ -898,7 +904,8 @@
         "Bolt": "Carreau",
         "BulletFirearm": "Balle, arme à feu",
         "BulletSling": "Bille, fronde",
-        "Needle": "Aiguille"
+        "Needle": "Aiguille",
+        "EnergyCell": "Cellule d'énergie"
       },
       "Food": {
         "Label": "Nourriture"
@@ -1065,8 +1072,9 @@
       "MissingHitDice": "L'acteur n'a aucune classe avec des dés de vie de type {denomination}.",
       "MissingItem": "L'objet configuré pour être consommé par l'activité {activity} sur {item} n'a pas été trouvé.",
       "MissingSpellSlot": "Aucun emplacement de niveau {level} disponible.",
-      "None": "",
-      "NotEnough": "Pas assez de {type} disponible, {cost} requis et seulement {available} disponible."
+      "None": "Aucun {type} disponible à dépenser, {cost} requis.",
+      "NotEnough": "Pas assez de {type} disponible, {cost} requis et seulement {available} disponible.",
+      "WillDestroy": "Consommer {item} utilisera son dernier usage et il sera détruit."
     }
   },
   "DND5E.Consumed": "Consommé",
@@ -1142,9 +1150,12 @@
       "Action": "Transférer la sélection",
       "All": "Tout",
       "Half": "Moitié"
+    },
+    "Error": {
+      "InsufficientFunds": "Échec de la déduction de {amount}{denomination} de {name}. Fonds insuffisants."
     }
   },
-  "DND5E.Current": "",
+  "DND5E.Current": "Actuel",
   "DND5E.DAMAGE": {
     "Title": "Dégâts",
     "FIELDS": {
@@ -1162,21 +1173,21 @@
         },
         "parts": {
           "label": "Section de dégâts",
-          "hint": "",
+          "hint": "Sections de dégâts individuelles à inclure dans le jet.",
           "FIELDS": {
             "bonus": {
-              "label": "",
-              "hint": ""
+              "label": "Bonus de dégâts",
+              "hint": "Bonus ajouté au jet de dégâts."
             },
             "custom": {
-              "label": "",
+              "label": "Formule de dégâts personnalisée",
               "enabled": {
-                "label": "",
+                "label": "Activer la formule personnalisée",
                 "hint": "Utiliser une formule personnalisée plutôt que les dés par défaut."
               },
               "formula": {
-                "label": "",
-                "hint": ""
+                "label": "Formule de dégâts",
+                "hint": "Formule de dégât personnalisée."
               }
             },
             "denomination": {
@@ -1697,14 +1708,14 @@
           "hint": ""
         },
         "custom": {
-          "label": "",
+          "label": "Formule de soin personnalisée",
           "enabled": {
-            "label": "",
-            "hint": ""
+            "label": "Activer la formule personnalisée",
+            "hint": "La formule personnalisée doit-elle être utilisée plutôt que les dés par défaut."
           },
           "formula": {
-            "label": "",
-            "hint": ""
+            "label": "Formule de soin",
+            "hint": "Formule de soin personnalisée."
           }
         },
         "denomination": {
@@ -2662,6 +2673,13 @@
       },
       "Line": {
         "Label": "Ligne"
+      },
+      "Emanation": {
+        "Label": "Émanation",
+        "Counted": {
+          "other": "{number} émanations",
+          "one": "{number} émanation"
+        }
       }
     }
   },
@@ -3243,6 +3261,11 @@
       "Hint": "Modifier la gestion des règles entre les versions 2024 et 2014.",
       "Legacy": "Anciennes règles (2014)",
       "Modern": "Règles modernes (2024)"
+    },
+    "VISIBILITY": {
+      "ITEMDESCRIPTIONS": {
+        "Name": "Masquer les descriptions des PNJ"
+      }
     }
   },
   "SHEETS.DND5E": {
@@ -3280,6 +3303,11 @@
         "subtype": {
           "label": "Type"
         }
+      },
+      "defenders": {
+        "max": {
+          "label": "Défenseurs"
+        }
       }
     },
     "Orders": {
@@ -3294,7 +3322,8 @@
         "Reliquary": "Reliquaire",
         "Demiplane": "Demi-plan"
       }
-    }
+    },
+    "NoDefenders": "Le Bastion n'est pas défendu."
   },
   "DND5E.Bastion": {
     "Confirm": "Avancer d'un tour de bastion ?",
@@ -3307,12 +3336,41 @@
           "other": "<strong>{deaths}</strong> défenseurs ont été tués lors d'une attaque sur leur bastion !",
           "one": "<strong>{deaths}</strong> défenseur a été tué lors d'une attaque sur leur bastion !"
         },
-        "Damaged": "{link} a été endommagé lors de l'attaque."
+        "Damaged": "{link} a été endommagé lors de l'attaque.",
+        "Undefended": "Bastion non défendu attaqué !",
+        "NoDeaths": "Ils ont repoussé l'attaque de leur bastion sans subir de pertes !"
       },
       "Automatic": "Résoudre automatiquement",
       "Resolve": "Résoudre l'attaque",
       "NoActorWarning": "Aucun personnage sélectionné comme cible de l'attaque. Sélectionnez un token ou ouvrez leur fiche de personnage.",
       "Formula": "Formule d'attaque"
+    },
+    "Button": {
+      "Hint": "Affiche un bouton pour avancer les tours de bastion dans l'interface principale du jeu.",
+      "Label": "Afficher le bouton de tour de bastion"
+    },
+    "Configuration": {
+      "Hint": "Diverses options de configuration pour le système de bastion tel que présenté dans le DMG 2024.",
+      "Label": "Configurer les bastions",
+      "Name": "Bastions"
+    },
+    "Duration": {
+      "Label": "Durée du tour du bastion (jours)"
+    },
+    "Enabled": {
+      "Label": "Activer la fonctionnalité Bastion",
+      "Hint": "Lorsqu'elle est activée, les personnages joueurs auront accès à un nouvel onglet Bastion sur leurs feuilles de personnage dès le niveau 5, et pourront construire des installations et leur donner des ordres."
+    },
+    "Gold": {
+      "Unclaimed": "non réclamé",
+      "Claimed": "réclamé",
+      "Claim": "Réclamer les revenus"
+    },
+    "Label": "Bastion",
+    "Summary": {
+      "Order": "{link} a complété l'ordre <strong>{order}</strong>.",
+      "NoOrders": "Aucun ordre donné aux installations spéciales ce tour.",
+      "Gold": "{value} ({claimed})"
     }
   },
   "DND5E.ArmorValue": "Valeur d'armure",
@@ -3382,5 +3440,65 @@
       }
     }
   },
-  "DND5E.AbilityModifierShort": "Mod"
+  "DND5E.AbilityModifierShort": "Mod",
+  "DND5E.CAST": {
+    "Action": {
+      "RemoveSpell": "Retirer le sort"
+    },
+    "FIELDS": {
+      "spell": {
+        "properties": {
+          "label": "Propriétés ignorées",
+          "hint": "Composants et étiquettes à ignorer lors de l'incantation."
+        },
+        "level": {
+          "hint": "Niveau de base pour lancer le sort, s'il est différent du niveau du sort.",
+          "label": "Niveau d'incantation"
+        },
+        "challenge": {
+          "attack": {
+            "label": "Bonus d'attaque",
+            "hint": "Bonus fixe pour toucher à la place du bonus d'attaque normal du sort."
+          },
+          "save": {
+            "label": "DD de sauvegarde",
+            "hint": "DD fixe à utiliser à la place du DD normal du sort."
+          },
+          "override": {
+            "label": "Surcharger les valeurs",
+            "hint": "Surcharger le bonus d'attaque et le DD normal du sort lors du lancement."
+          }
+        },
+        "label": "Détails de l'incantation",
+        "spellbook": {
+          "label": "Afficher dans le Grimoire",
+          "hint": "Afficher le sort dans l'onglet Sorts de la feuille de personnage."
+        }
+      }
+    },
+    "SECTIONS": {
+      "Spell": "Sort",
+      "Spellbook": "Sorts supplémentaires"
+    }
+  },
+  "TYPES.Item.facility": "Installation",
+  "TYPES.Item.facilityPl": "Installations",
+  "DND5E.CONTAINER": {
+    "Details": "Détails du conteneur",
+    "FIELDS": {
+      "capacity": {
+        "label": "Capacité",
+        "count": {
+          "label": "Nombre d'objets"
+        }
+      }
+    }
+  },
+  "DND5E.CHATMESSAGE": {
+    "TURN": {
+      "Activities": "Activités",
+      "NoCombatant": "Le combattant n'existe plus !"
+    }
+  },
+  "DND5E.CreatureTag": "{size} {type}, {alignment}"
 }
