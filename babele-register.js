@@ -32,6 +32,7 @@ Hooks.once('init', () => {
 			"movement": Converters.imperialToMetric("movement"),
 			"sightRange": Converters.imperialToMetric("sightRange"),
 			"rangeActivities": Converters.imperialToMetric("rangeActivities"),
+			"distanceAdvancement": Converters.imperialToMetric("distanceAdvancement"),
 			"pages": Converters.pages(),
 			"source": Converters.source(),
 			"effects": Converters.effects(),
@@ -97,6 +98,7 @@ export class Converters {
 				case "movement": return Converters.movement(value);
 				case "sightRange": return Converters.footsToMeters(value);
 				case "rangeActivities": return Converters.rangeActivities(value);
+				case "distanceAdvancement": return Converters.distanceAdvancement(value);
 				default:
 					console.warn(`Type: '${type}' not implemented !`);
 					break;
@@ -194,6 +196,23 @@ export class Converters {
 		});
 
 		return activities;
+	}
+
+	static distanceAdvancement(advancements) {
+		advancements.forEach(adv => {
+			if (adv.type === "ScaleValue" && adv.configuration.type === "distance") {
+				const conversion = Converters.conversionInfo[adv.configuration.distance.units];
+				if (conversion) {
+					foundry.utils.mergeObject(adv.configuration.distance, { "units": conversion.units });
+
+					Object.keys(adv.configuration.scale).forEach(key => {
+						foundry.utils.mergeObject(adv.configuration.scale[key], {
+							"value": conversion.converter(adv.configuration.scale[key].value)
+						});
+					});
+				}
+			}
+		});
 	}
 
 	static footsToMeters(ft) {
