@@ -721,6 +721,10 @@
         "additional": {
           "label": "Dés de vie supplémentaires",
           "hint": "Formule pour les dés de vie disponibles pour cette classe au-delà du nombre normal."
+        },
+        "label": "Dés de vie",
+        "spent": {
+          "label": "Dés de vie utilisés"
         }
       }
     }
@@ -869,7 +873,7 @@
   "DND5E.ConsumeCharges": "Charge",
   "DND5E.ConsumeResource": "Consommer la ressource ?",
   "DND5E.ConsumeRecharge": "Consommer la recharge ?",
-  "DND5E.ConsumeScaling": "Mise à l'échelle des ressources",
+  "DND5E.ConsumeScaling": "Évolution des ressources",
   "DND5E.ConsumeScalingLabel": "Utiliser des ressources",
   "DND5E.ConsumeScalingTooltip": "Si coché, la consommation de ressources supplémentaires augmentera le niveau auquel le sort est lancé.",
   "DND5E.CONSUMABLE": {
@@ -964,7 +968,7 @@
           "hint": "",
           "FIELDS": {
             "type": {
-              "label": "",
+              "label": "Type de consommation",
               "hint": ""
             },
             "target": {
@@ -1012,7 +1016,7 @@
         "PromptIncrease": "Récupérer l'utilisation de l'activité ?",
         "PromptHintDecrease": "Dépenser <strong>{cost}</strong> {use} de cette activité ({available} {availableUse} disponible(s)).",
         "PromptHintIncrease": "Récupérer <strong>{cost}</strong> {use} de cette activité.",
-        "Warning": ""
+        "Warning": "utilisations pour l'activité {activity} de {item}"
       },
       "Attribute": {
         "Label": "Caractéristique",
@@ -1020,7 +1024,7 @@
         "PromptIncrease": "Récupérer la caractéristique ?",
         "PromptHintDecrease": "Diminuer <code>{attribute}</code> de <strong>{cost}</strong> (actuellement {current}).",
         "PromptHintIncrease": "Augmenter <code>{attribute}</code> de <strong>{cost}</strong> (actuellement {current}).",
-        "Warning": ""
+        "Warning": "Quantité de {attribute}"
       },
       "HitDice": {
         "Label": "Dé de vie",
@@ -1028,7 +1032,7 @@
         "PromptIncrease": "Restaurer les dés de vie ?",
         "PromptHintDecrease": "Dépenser <strong>{cost}</strong> {denomination} {die}. ({available} restants).",
         "PromptHintIncrease": "Restaurer <strong>{cost}</strong> {denomination} {die}.",
-        "Warning": ""
+        "Warning": "{denomination} dés de vie"
       },
       "HitDie": {
         "one": "dé de vie",
@@ -1040,7 +1044,7 @@
         "PromptIncrease": "Récupérer l'utilisation de l'objet ?",
         "PromptHintDecrease": "Dépenser <strong>{cost}</strong> {use} de {item} ({available} {availableUse} disponible(s)).",
         "PromptHintIncrease": "Récupérer <strong>{cost}</strong> {use} de {item}.",
-        "Warning": ""
+        "Warning": "utilisations sur {name}"
       },
       "Material": {
         "Label": "Matériau",
@@ -1063,8 +1067,12 @@
         "Warning": "{level} emplacements"
       },
       "Use": {
-        "one": "",
-        "other": ""
+        "one": "utiliser",
+        "other": "utilisations"
+      },
+      "Action": {
+        "Prompt": "Consommer {type} ?",
+        "PromptHint": "Dépenser {cost} ({available} disponibles)."
       }
     },
     "Warning": {
@@ -1191,11 +1199,11 @@
               }
             },
             "denomination": {
-              "label": "",
-              "hint": ""
+              "label": "Dénomination du dé",
+              "hint": "Type de dés à lancer."
             },
             "number": {
-              "label": "",
+              "label": "Nombre de dés",
               "hint": "Nombre de dés à lancer."
             },
             "scaling": {
@@ -1218,7 +1226,7 @@
             },
             "types": {
               "label": "Types de dégâts",
-              "hint": ""
+              "hint": "Type de dégâts infligés ou multiples que l’utilisateur peut sélectionner."
             }
           }
         }
@@ -1342,16 +1350,16 @@
           "hint": "Utilisez ces valeurs de durée au lieu de celles de l'objet lorsque vous utilisez cette activité."
         },
         "special": {
-          "label": "",
-          "hint": ""
+          "label": "Durée spéciale",
+          "hint": "Description des détails spécifiques liés à une durée spéciale."
         },
         "units": {
-          "label": "",
-          "hint": ""
+          "label": "Unités de durée",
+          "hint": "Unités utilisées pour mesurer la durée."
         },
         "value": {
-          "label": "",
-          "hint": ""
+          "label": "Valeur de durée",
+          "hint": "Valeur de la durée dans les unités spécifiées, si applicable."
         }
       }
     }
@@ -1394,7 +1402,7 @@
             }
           },
           "riders": {
-            "label": "",
+            "label": "Attaché",
             "activity": {
               "label": "Activités supplémentaires",
               "hint": "Ces activités supplémentaires seront ajoutées à l'objet enchanté lorsque cet enchantement sera appliqué, et retirées lorsque l'enchantement sera supprimé."
@@ -1419,7 +1427,7 @@
       },
       "restrictions": {
         "label": "Restrictions",
-        "hint": "",
+        "hint": "Restrictions sur le type d’objet auquel cet enchantement peut être appliqué.",
         "allowMagical": {
           "label": "Permettre les objets magiques",
           "hint": "Permettre aux objets déjà magiques d'être enchantés."
@@ -1476,7 +1484,7 @@
     },
     "FIELDS": {
       "enchantment": {
-        "label": "",
+        "label": "Configuration des enchantements",
         "items": {
           "max": {
             "label": "Limite d'objet",
@@ -1494,7 +1502,7 @@
     },
     "Label": "Enchantement",
     "Warning": {
-      "NotOnActor": "",
+      "NotOnActor": "Les enchantements peuvent uniquement être ajoutés aux objets, pas directement aux acteurs.",
       "Override": "Cette valeur a été modifiée par un Enchantement et ne peut pas être éditée. Effacer l'enchantement de l'onglet Effets pour l'éditer."
     }
   },
@@ -1634,7 +1642,7 @@
       "Hint": ""
     }
   },
-  "DND5E.FlagsInstructions": "Configurez les aptitudes et les traits raciaux qui personnalisent les personnages.",
+  "DND5E.FlagsInstructions": "Configurez les caractéristiques et traits du personnage qui ajustent le fonctionnement du système de la cinquième édition de D&D.",
   "DND5E.FlagsSave": "Mettre à jour les traits spéciaux",
   "DND5E.FlagsTitle": "Configurer Traits spéciaux",
   "DND5E.FlagsDiamondSoul": "Âme de diamant",
@@ -1729,12 +1737,12 @@
         "scaling": {
           "label": "",
           "mode": {
-            "label": "",
-            "hint": ""
+            "label": "Mode d'évolution",
+            "hint": "Méthode par laquelle l'accroissement de l'évolution est calculé."
           },
           "number": {
-            "label": "",
-            "hint": ""
+            "label": "Évolution des dés",
+            "hint": "Nombre de dés à ajouter à chaque étape d'évolution. S'appliquera au premier dé trouvé dans la formule de soin s'il y en a plusieurs."
           },
           "formula": {
             "label": "Formule d'évolution",
@@ -2203,7 +2211,7 @@
   "DND5E.SaveDC": "DD {dc} {ability}",
   "DND5E.SavePromptTitle": "Jet de sauvegarde : {ability}",
   "DND5E.ScalingFormula": "Formule d'évolution",
-  "DND5E.ScalingMode": "Mode de mise à l'échelle",
+  "DND5E.ScalingMode": "Mode d'évolution",
   "DND5E.ScalingValue": "Valeur d'évolution",
   "DND5E.School": "École",
   "DND5E.SchoolAbj": "Abjuration",
@@ -2677,7 +2685,13 @@
           "other": "{number} émanations",
           "one": "{number} émanation"
         }
+      },
+      "Any": {
+        "Label": ""
       }
+    },
+    "Count": {
+      "Any": ""
     }
   },
   "DND5E.Target": "Cible",
@@ -3288,6 +3302,15 @@
       },
       "Ring": {
         "Label": "Anneau"
+      },
+      "Clothing": {
+        "Label": "Vêtements"
+      },
+      "Wondrous": {
+        "Label": "Objet merveilleux"
+      },
+      "Vehicle": {
+        "Label": "Équipement de véhicule"
       }
     }
   },
@@ -3299,17 +3322,86 @@
       "type": {
         "subtype": {
           "label": "Type"
+        },
+        "value": {
+          "label": "Catégorie"
         }
       },
       "defenders": {
         "max": {
           "label": "Défenseurs"
         }
+      },
+      "level": {
+        "label": "Niveau requis"
+      },
+      "trade": {
+        "stock": {
+          "value": {
+            "label": "Valeur"
+          },
+          "stocked": {
+            "hint": "Approprié pour les installations qui ne stockent pas une quantité variable de biens, mais sont considérées comme approvisionnées ou vides.",
+            "label": "Approvisionné"
+          },
+          "max": {
+            "label": "Max"
+          }
+        }
+      },
+      "disabled": {
+        "label": "Désactivé",
+        "hint": "Les installations désactivées ne peuvent pas recevoir d'ordres et sont réparées au début du prochain tour."
+      },
+      "free": {
+        "label": "Installation gratuite",
+        "hint": "Les installations gratuites ne comptent pas dans votre limite d'installations spéciales."
+      },
+      "order": {
+        "label": "Ordre"
+      },
+      "building": {
+        "built": {
+          "label": "Construit",
+          "hint": "Les installations de base doivent d’abord être construites avant de pouvoir être utilisées."
+        }
+      },
+      "enlargeable": {
+        "hint": "Certaines installations spéciales peuvent voir leur catégorie de taille augmentée moyennant un coût.",
+        "label": "Peut être agrandie"
+      },
+      "hirelings": {
+        "max": {
+          "label": "Recrues"
+        }
+      },
+      "progress": {
+        "max": {
+          "label": "Total"
+        },
+        "order": {
+          "label": "Exécution"
+        },
+        "value": {
+          "label": "Actuel"
+        }
       }
     },
     "Orders": {
       "enlarge": {
         "inf": "Agrandissement"
+      },
+      "craft": {
+        "present": "",
+        "inf": ""
+      },
+      "change": {
+        "present": "",
+        "inf": ""
+      },
+      "build": {
+        "inf": "",
+        "present": ""
       }
     },
     "Types": {
@@ -3317,10 +3409,111 @@
         "Sanctuary": "Sanctuaire",
         "TeleportationCircle": "Cercle de téléportation",
         "Reliquary": "Reliquaire",
-        "Demiplane": "Demi-plan"
+        "Demiplane": "Demi-plan",
+        "Observatory": "Observatoire",
+        "Barrack": "Caserne",
+        "GamingHall": "Salle de Jeux",
+        "Label": {
+          "one": "Installation spéciale",
+          "other": "Installations spéciale"
+        },
+        "Armory": "Armurerie",
+        "Garden": "Jardin",
+        "Library": "Bibliothèque",
+        "Smithy": "Forge",
+        "Storehouse": "Entrepôt",
+        "Workshop": "Atelier",
+        "Greenhouse": "Serre",
+        "Laboratory": "Laboratoire",
+        "Sacristy": "Sacristie",
+        "Scriptorium": "Scriptorium",
+        "Stable": "Écurie",
+        "Theater": "Théâtre",
+        "TrainingArea": "Terrain d'entraînement",
+        "TrophyRoom": "Salle des trophées",
+        "Archive": "Archives",
+        "MeditationChamber": "Chambre de méditation",
+        "Menagerie": "Ménagerie",
+        "Pub": "Bar",
+        "Sanctum": "Sanctuaire"
+      },
+      "Basic": {
+        "Kitchen": "Cuisine",
+        "Label": {
+          "other": "Installations de base",
+          "one": "Installation de base"
+        },
+        "Bedroom": "Chambre",
+        "DiningRoom": "Salle à Manger",
+        "Parlor": "Salon",
+        "Courtyard": "Cour",
+        "Storage": "Stockage"
       }
     },
-    "NoDefenders": "Le Bastion n'est pas défendu."
+    "NoDefenders": "Le Bastion n'est pas défendu.",
+    "AvailableFacility": {
+      "basic": {
+        "build": "Construire une installation",
+        "free": "Installation gratuite"
+      },
+      "special": {
+        "free": "Ajouter une installation"
+      }
+    },
+    "Order": {
+      "Issue": "",
+      "Execute": ""
+    },
+    "Action": {
+      "DeleteOccupant": "Supprimer l’occupant",
+      "DeleteDefender": "Supprimer le défenseur",
+      "RemoveCraft": "Retirer l’artisanat"
+    },
+    "Costs": {
+      "Automatic": "Déduire automatiquement",
+      "Days": "{days} jours",
+      "Label": "Coûts",
+      "Paid": "payé",
+      "Unpaid": "non payé",
+      "Manual": "Marquer comme payé"
+    },
+    "Craft": {
+      "BaseItem": {
+        "Hint": "Si activé, l’objet de base sera acheté au prix fort au lieu d’être fabriqué.",
+        "Label": "Acheter l’objet de base"
+      },
+      "Hint": "Les objets que cette installation est actuellement en train de fabriquer ou de récolter, le cas échéant."
+    },
+    "Description": "Description",
+    "Build": {
+      "Unbuilt": "Non construit"
+    },
+    "Goods": "Biens",
+    "Occupants": "Occupants",
+    "Trade": {
+      "Creatures": {
+        "Buy": "Déposez les animaux que vous souhaitez acheter dans les cases ci-dessus et mettez à jour le coût ci-dessous."
+      },
+      "Stocked": {
+        "Label": "Entièrement approvisionné",
+        "Hint": "Entrez le coût nécessaire pour approvisionner entièrement cette installation ci-dessous."
+      },
+      "Price": {
+        "Label": "Prix de base",
+        "Hint": "Sélectionnez quel stock vendre et entrez le prix de base ci-dessus."
+      },
+      "Sell": {
+        "Label": "Vendre du stock",
+        "Supplement": "Vendre"
+      },
+      "Stock": {
+        "Buy": "Achat",
+        "Sell": "Vente"
+      }
+    },
+    "Use": {
+      "Description": "A donné l'ordre <strong>{order}</strong> à leur {link} {facilityType}."
+    }
   },
   "DND5E.Bastion": {
     "Confirm": "Avancer d'un tour de bastion ?",
@@ -3470,13 +3663,24 @@
         "spellbook": {
           "label": "Afficher dans le Grimoire",
           "hint": "Afficher le sort dans l'onglet Sorts de la feuille de personnage."
+        },
+        "uuid": {
+          "label": "Sort à incanter"
+        },
+        "ability": {
+          "label": "Caractéristique d'incantation",
+          "hint": "Capacité permettant d'outrepasser la capacité normale d'incanter des sorts d'une créature."
         }
       }
     },
     "SECTIONS": {
       "Spell": "Sort",
       "Spellbook": "Sorts supplémentaires"
-    }
+    },
+    "Enchantment": {
+      "Name": "Modifications de Sort"
+    },
+    "Title": "Incantation"
   },
   "TYPES.Item.facility": "Installation",
   "TYPES.Item.facilityPl": "Installations",
@@ -3487,15 +3691,38 @@
         "label": "Capacité",
         "count": {
           "label": "Nombre d'objets"
+        },
+        "weight": {
+          "label": "Capacité de poids",
+          "units": {
+            "label": "Unités de poids"
+          },
+          "value": {
+            "label": "Poids maximum"
+          }
         }
+      },
+      "properties": {
+        "label": "Propriétés du conteneur"
       }
     }
   },
   "DND5E.CHATMESSAGE": {
     "TURN": {
       "Activities": "Activités",
-      "NoCombatant": "Le combattant n'existe plus !"
+      "NoCombatant": "Le combattant n'existe plus !",
+      "Recovery": "Récupération"
     }
   },
-  "DND5E.CreatureTag": "{size} {type}, {alignment}"
+  "DND5E.CreatureTag": "{size} {type}, {alignment}",
+  "DND5E.Habitat": {
+    "Categories": {
+      "Any": ""
+    }
+  },
+  "DND5E.Treasure": {
+    "Categories": {
+      "Arcana": ""
+    }
+  }
 }
