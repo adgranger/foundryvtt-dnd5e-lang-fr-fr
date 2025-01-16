@@ -94,7 +94,12 @@
     "Antipathy/Sympathy": {
       "name": "Aversion/attirance",
       "description": "<p>Ce sort attire ou repousse les créatures de votre choix. Vous ciblez quelque chose à portée, soit un objet de taille TG ou inférieure, soit une créature, soit une zone dont les dimensions maximales ne dépassent pas celles d'un cube de 60 mètres d'arête. Puis spécifiez une sorte de créature intelligente, comme les dragons rouges, les gobelins ou les vampires.</p><p>Vous conférez à la cible une aura qui va soit attirer, soit repousser les créatures spécifiées pour toute la durée du sort. Choisissez l'effet de l'aura, entre l'attirance et la répulsion.</p><p><strong>Répulsion</strong>. L'enchantement donne, aux créatures que vous avez désignées, le besoin urgent de quitter la zone et de fuir la cible. Lorsqu'une créature désignée peut voir la cible ou s'approche à 18 mètres ou moins d'elle, la créature doit réussir un jet de sauvegarde de Sagesse ou être effrayée. La créature reste effrayée tant qu'elle peut voir la cible ou qu'elle se trouve à 18 mètres ou moins d'elle. Tant qu'elle est effrayée par la cible, la créature doit utiliser son mouvement pour se déplacer vers l'endroit sûr le plus proche et duquel elle ne pourra pas voir la cible. Si la créature se déplace à plus de 18 mètres de la cible et qu'elle ne peut pas la voir, la créature n'est plus effrayée, mais elle redevient immédiatement effrayée si elle a de nouveau la cible en ligne de mire ou si elle se trouve de nouveau à 18 mètres ou moins de la cible.</p><p><strong>Attirance</strong>. L'enchantement donne, aux créatures que vous avez désignées, le besoin urgent de s'approcher de la cible tant qu'elles se trouvent à 18 mètres ou moins d'elle ou qu'elles peuvent la voir. Lorsqu'une créature désignée peut voir la cible ou se trouve à 18 mètres ou moins d'elle, la créature doit réussir un jet de sauvegarde de Sagesse sous peine de devoir utiliser son mouvement, à chaque tour, pour entrer dans la zone ou se déplacer à portée de la cible. Une fois que la créature a agi de la sorte, elle ne peut s'éloigner volontairement de la cible.</p><p>Si la cible inflige des dégâts ou quelque autre tort à une créature affectée, la créature affectée peut effectuer un jet de sauvegarde de Sagesse pour mettre un terme à l'effet, comme décrit ci-dessous.</p><p><strong>Mettre un terme à l'effet</strong>. Si une créature affectée termine son tour en étant à plus de 18 mètres de la cible et sans être capable de la voir, la créature effectue un jet de sauvegarde de Sagesse. Sur une réussite, la créature n'est plus affectée par la cible et se rend compte que son sentiment de répulsion ou d'attirance lui avait été magiquement inspiré. De plus, une créature affectée par le sort est autorisée à effectuer un autre de jet de sauvegarde de Sagesse toutes les 24 heures tant que le sort persiste.</p><p>Une créature qui réussit son jet de sauvegarde contre cet effet y est immunisée pour 1 minute, après quoi elle peut de nouveau être affectée.</p>",
-      "materials": "un morceau d'alun trempé dans du vinaigre pour l'effet aversion, une goutte de miel pour l'effet attirance"
+      "materials": "un morceau d'alun trempé dans du vinaigre pour l'effet aversion, une goutte de miel pour l'effet attirance",
+      "effects": {
+        "Antipathy": {
+          "name": "Aversion"
+        }
+      }
     },
     "Arcane Eye": {
       "name": "Œil du mage",
@@ -536,7 +541,16 @@
     "Find Familiar": {
       "name": "Appel de familier",
       "description": "<p>Vous gagnez les services d'un familier, un esprit qui prend la forme d'un animal de votre choix : une chauve-souris, un chat, un crabe, une grenouille (crapaud), un faucon, un lézard, une pieuvre, une chouette, un serpent venimeux, un poisson (piranha), un rat, un corbeau, un hippocampe, une araignée ou une belette. Apparaissant dans un espace inoccupé à portée, le familier a les statistiques de la forme choisie mais est du type céleste, fée ou fiélon (au choix), au lieu du type bête.</p><p>Votre familier agit de manière indépendante, mais obéit toujours à vos ordres. En combat, il lance sa propre initiative et agit au cours de ses propres tours de jeu. Un familier ne peut pas attaquer, mais il peut utiliser normalement les autres actions.</p><p>Lorsqu'un familier tombe à 0 point de vie, il disparaît, ne laissant derrière lui aucune forme physique. Il réapparaît lorsque vous lancez de nouveau ce sort.</p><p>Lorsque votre familier se trouve à 30 mètres de vous maximum, vous pouvez communiquer avec lui par télépathie. De plus, par une action, vous pouvez voir au travers des yeux du familier et entendre ce qu'il entend jusqu'au début de votre prochain tour, bénéficiant alors des sens spéciaux de votre familier, s'il en a. Au cours de cette période, vous êtes considéré comme étant sourd et aveugle (en ce qui concerne vos propres sens).</p><p>Par une action, vous pouvez temporairement renvoyer votre familier. Il disparaît dans une poche dimensionnelle, de laquelle il attend votre rappel. Vous pouvez sinon le renvoyer pour toujours. Par une action, alors que votre familier est temporairement renvoyé, vous pouvez le faire réapparaître dans un espace inoccupé situé à 9 mètres de vous maximum.</p><p>Vous ne pouvez pas avoir plus d'un familier à la fois. Si vous lancez ce sort alors que vous possédez déjà un familier, votre familier actuel prend une nouvelle forme. Choisissez cette nouvelle forme parmi celles présentées dans la liste ci-dessus. Votre familier prend alors la forme de la créature choisie.</p><p>Enfin, lorsque vous lancez un sort qui a une portée de contact, votre familier peut lancer le sort comme s'il était celui qui avait réalisé l'incantation. Votre familier doit se situer à 30 mètres de vous maximum, et doit utiliser sa réaction pour lancer le sort au moment où vous l'incantez. Si le sort requiert un jet d'attaque, vous utilisez votre modificateur à l'attaque pour ce jet.</p>",
-      "materials": "l'équivalent de 10 po de charbon, d'encens et d'herbes consumés par les flammes d'un brasero de laiton"
+      "materials": "l'équivalent de 10 po de charbon, d'encens et d'herbes consumés par les flammes d'un brasero de laiton",
+      "activities": {
+        "summon": {
+          "profiles": {
+            "Fish": {
+              "name": "Poisson"
+            }
+          }
+        }
+      }
     },
     "Find Steed": {
       "name": "Appel de destrier",
@@ -1235,7 +1249,15 @@
     "Shillelagh": {
       "name": "Crosse des druides",
       "description": "<p>Le bois du bâton ou du gourdin que vous tenez est altéré par les pouvoirs de la nature. Pour la durée du sort, vous pouvez utiliser votre caractéristique d'incantation plutôt que votre Force pour les jets d'attaque au corps à corps et de dégâts avec cette arme, et les dégâts de l'arme deviennent des d8. De plus, l'arme devient une arme magique, si ce n'est pas déjà le cas. Ce sort se termine si vous le lancez de nouveau ou si vous lâchez l'arme enchantée.</p>",
-      "materials": "du gui, une feuille de trèfle et un gourdin ou un bâton de combat"
+      "materials": "du gui, une feuille de trèfle et un gourdin ou un bâton de combat",
+      "activities": {
+        "Imbue Weapon": {
+          "name": "Imprégner l'arme"
+        },
+        "Spellcasting Attack": {
+          "name": "Attaque de sort"
+        }
+      }
     },
     "Shocking Grasp": {
       "name": "Poigne électrique",
@@ -1248,12 +1270,12 @@
     "Silent Image": {
       "name": "Image silencieuse",
       "description": "<p>Vous créez l'image d'un objet, d'une créature ou d'un autre phénomène visible dont les dimensions n'excèdent pas un cube 4,50 mètres de côtés. L'image apparaît à un endroit choisi à l'intérieur de la portée du sort et perdure pendant toute la durée du sort. L'image est purement visuelle ; ce qui implique qu'elle n'est pas accompagnée par un son, une odeur ou d'autres effets sensoriels.</p><p>Vous pouvez utiliser votre action pour déplacer l'image à n'importe quel endroit dans la portée du sort. Comme l'image change de lieu, vous pouvez modifier son apparence afin que ses mouvements apparaissent fluides et naturels dans l'image. Par exemple, si vous créez l'image d'une créature et vous la déplacez, vous pouvez modifier l'image de sorte que la créature semble réellement marcher.</p><p>Une interaction physique avec l'image révèle qu'il s'agit d'une illusion, parce que les choses peuvent passer au travers. Une créature qui utilise son action pour examiner l'image peut déterminer qu'il s'agit en fait d'une illusion en réussissant un jet d'Intelligence (Investigation) contre votre DD du jet de sauvegarde de ce sort. Si une créature voit l'illusion pour ce qu'elle est, la créature peut voir à travers l'image.</p>",
-      "materials": "un peu de laine de mouton"
+      "materials": "un peu de laine brute"
     },
     "Simulacrum": {
       "name": "Simulacre",
       "description": "<p>Vous créez un clone illusoire d'une bête ou d'un humanoïde se trouvant à portée pendant toute la durée de l'incantation du sort. Le clone est une créature partiellement réelle, formée de glace et de neige, qui peut agir et être affectée comme une créature normale. La copie semble être identique à l'originale, mais elle ne possède que la moitié des points de vie maximums de la créature et est créée sans aucun équipement. Sinon, la créature utilise toutes les statistiques de la créature dupliquée, mis à part que c'est une créature artificielle.</p><p>Le simulacre a une attitude amicale avec vous et toute créature que vous désignez. Il obéit à vos commandes verbales, se déplace et agit selon vos souhaits et agit pendant votre tour au cours des combats. Le simulacre n'a pas la capacité d'apprendre ou de devenir plus puissant, il ne monte donc jamais de niveau, n'améliore pas ses capacités, ni ne peut récupérer un emplacement de sort dépensé.</p><p>Si le simulacre subit des dégâts, vous pouvez le réparer dans un laboratoire d'alchimie, en utilisant des herbes et des minerais rares valant au moins 100 po par point de vie récupéré. Le simulacre persiste jusqu'à ce qu'il tombe à 0 point de vie, à ce moment-là il reprend sa forme de neige et fond instantanément.</p><p>Si vous lancez ce sort de nouveau, tout clone actuellement actif que vous avez créé grâce à ce sort est instantanément détruit.</p>",
-      "materials": "de la neige ou de la glace en quantité suffisante pour créer un double moitié moins grand de la créature à dupliquer ; quelques cheveux, des bouts d'ongles, ou tout autre fragment du corps de la créature placé dans la neige ou la glace ; et de la poudre de rubis valant au moins 1 500 po, répandue sur le double, et que le sort consomme"
+      "materials": "de la neige ou de la glace en quantité suffisante pour modeler une réplique grandeur nature de la créature ; des cheveux, des rognures d'ongle ou autres fragments du corps de la créature disposés dans la neige ou la glace ; de la poussière de rubis d'une valeur de 1 500 po, saupoudrée sur la réplique et détruite par le sort"
     },
     "Sleep": {
       "name": "Sommeil",
@@ -1295,7 +1317,7 @@
     "Spike Growth": {
       "name": "Croissance d'épines",
       "description": "<p>Le sol, sur un rayon de 6 mètres centré sur un point dans la portée du sort, se retourne et fait germer des épines rigides et des ronces. La zone devient un terrain difficile pour la durée du sort. Lorsqu'une créature entre ou se déplace dans la zone, elle subit 2d4 dégâts perforants pour chaque 1,50 mètre de déplacement.</p><p>La transformation du sol est camouflée afin de paraître naturelle. Toute créature qui ne voit pas la zone lorsque le sort est incanté doit réussir un jet de Sagesse (Perception) contre le DD de sauvegarde de votre sort, sans quoi elle ne reconnait pas la nature dangereuse du terrain avant d'y pénétrer.</p>",
-      "materials": "sept épines pointues ou sept brindilles taillées en pointe"
+      "materials": "sept épines acérées ou sept brindilles, toutes affûtées"
     },
     "Spirit Guardians": {
       "name": "Esprits gardiens",
@@ -1314,12 +1336,12 @@
     "Stone Shape": {
       "name": "Façonnage de la pierre",
       "description": "<p>Vous touchez un objet en pierre de taille M ou P ou un bloc de pierre d'un maximum de 1,50 mètre de côté et vous lui donnez n'importe quelle forme qui vous convient. Par exemple, vous pouvez transformer un gros rocher en arme, statue ou coffre, ou réaliser un petit passage à travers un mur, tant que le mur fait moins de 1,50 mètre d'épaisseur. Vous pouvez aussi façonner une porte de pierre et son encadrement pour pouvoir la fermer. L'objet que vous créez peut avoir un maximum de deux charnières et un verrou mais des détails mécaniques plus fins sont impossibles.</p>",
-      "materials": "de l'argile molle, qui devra être travaillée grossièrement dans la forme souhaitée pour l'objet en pierre"
+      "materials": "terre glaise qu'il faut modeler grossièrement selon la forme désirée pour l'objet de pierre"
     },
     "Stoneskin": {
       "name": "Peau de pierre",
       "description": "<p>Ce sort transforme la chair d'une créature consentante que vous touchez en un revêtement aussi dur que la pierre. Jusqu'à ce que le sort se termine, la cible obtient la résistante aux dégâts non magiques contondants, perforants et tranchants.</p>",
-      "materials": "de la poussière de diamant d'une valeur d'au moins 100 po, que le sort consomme"
+      "materials": "100 po de poudre de diamant, que le sort détruit"
     },
     "Storm of Vengeance": {
       "name": "Tempête vengeresse",
@@ -1328,7 +1350,7 @@
     "Suggestion": {
       "name": "Suggestion",
       "description": "<p>Vous proposez un plan d'activité (limitée à une phrase ou deux) et influencez magiquement une créature que vous pouvez voir dans la portée du sort et qui peut vous entendre et vous comprendre. Les créatures qui ne peuvent pas être charmées sont à l'abri de cet effet. La suggestion doit être formulée de manière que la réalisation de l'action semble raisonnable. Demander à la créature de se poignarder, de s'empaler sur une lance, de s'immoler ou tout autre acte qui lui serait dommageable met un terme au sort.</p><p>La cible doit faire un jet de sauvegarde de Sagesse. En cas d'échec, elle poursuit le cours de l'action que vous avez décrit au mieux de ses possibilités. Le plan d'action proposé peut se poursuivre pendant toute la durée du sort. Si l'activité qui est suggérée peut être réalisée en un temps plus court, le sort prend fin lorsque le sujet termine ce qu'il lui a été demandé de faire.</p><p>Vous pouvez également spécifier des conditions qui déclencheront une activité spéciale pendant la durée du sort. Par exemple, vous pourriez suggérer à un chevalier de donner son cheval de bataille au premier mendiant qu'il rencontre. Si la condition n'est pas remplie avant que le sort expire, l'activité n'est pas effectuée.</p><p>Si vous, ou un de vos compagnons, blessez la cible, le sort se termine.</p>",
-      "materials": "une langue de serpent et un rayon de miel ou une goutte d'huile douce"
+      "materials": "une langue de serpent, et un peu de rayon de miel ou une goutte d'huile sucrée"
     },
     "Sunbeam": {
       "name": "Rayon de soleil",
@@ -1336,14 +1358,14 @@
       "materials": "une loupe"
     },
     "Sunburst": {
-      "name": "Eclat du soleil",
+      "name": "Éclat du soleil",
       "description": "<p>Une vive lumière équivalente à celle du soleil éclaire dans un rayon de 18 mètres, centrée sur un point que vous choisissez dans la portée du sort. Chaque créature dans la lumière doit faire un jet de sauvegarde de Constitution. En cas d'échec, une créature subit 12d6 dégâts radiants et est aveuglée pendant 1 minute. En cas de réussite, elle subit la moitié de ces dégâts et n'est pas aveuglée par le sort. Les morts-vivants et vases ont un désavantage à ce jet de sauvegarde.</p><p>Une créature aveuglée par le sort fait un autre jet de sauvegarde de Constitution à la fin de chacun de ses tours. En cas de réussite, elle n'est plus aveuglée.</p><p>Ce sort dissipe dans sa zone toute ténèbres créées par un sort.</p>",
-      "materials": "une source de feu et une pierre de soleil/héliolite"
+      "materials": "des flammes et un morceau d'héliolite"
     },
     "Symbol": {
       "name": "Symbole",
       "description": "<p>Lorsque vous lancez ce sort, vous inscrivez un dangereux glyphe soit sur une surface (comme une table ou une portion de plancher ou de mur) ou à l'intérieur d'un objet qui peut être fermé pour dissimuler le glyphe (comme un livre, un rouleau de parchemin ou un coffre). Si vous optez pour la surface, le glyphe peut couvrir une superficie de 3 mètres de diamètre maximum. Si vous choisissez un objet, cet objet doit rester en place ; si l'objet est déplacé à plus de 3 mètres de l'endroit où le sort a été lancé, le glyphe est brisé, et le sort prend fin sans s'être déclenché.</p><p>Le glyphe est pratiquement invisible et un jet d'Intelligence (Investigation) contre le DD de sauvegarde de votre sort est requis pour le découvrir.</p><p>Vous déterminez le déclencheur du glyphe lors de l'incantation du sort. Pour les glyphes inscrits sur une surface, les déclencheurs sont typiquement le toucher ou se tenir sur un glyphe, retirer un objet posé sur le glyphe, s'approcher à une certaine distance du glyphe ou manipuler l'objet gardé par le glyphe. Pour les glyphes inscrits dans un objet, les déclencheurs les plus fréquents sont : ouvrir l'objet, s'approcher à une certaine distance de l'objet, apercevoir ou lire le glyphe.</p><p>Vous pouvez affiner les conditions de déclenchement de sorte que le sort ne s'active que dans certaines circonstances ou en fonction des attributs physiques de la créature (comme sa taille ou son poids), son type morphologique (par exemple, le glyphe pourrait n'affecter que les guenaudes ou les métamorphes). Vous pouvez aussi spécifier que certaines créatures ne déclenchent pas le glyphe, en utilisant un mot de passe, par exemple.</p><p>Lorsque vous inscrivez le glyphe, choisissez l'un des options suivantes pour déterminer son effet. Une fois déclenché, le glyphe rougeoie, emplissant une sphère de 18 mètres de rayon de lumière faible pendant 10 minutes, après quoi le sort prend fin. Chaque créature présente dans la sphère lorsque le glyphe est activé est ciblée par son effet, tout comme les créatures qui pénètrent dans la sphère pour la première fois de leur tour ou celles qui y finissent leur tour.</p><p><strong>Mort</strong>. Chaque créature doit effectuer un jet de sauvegarde de Constitution, subissant 10d10 dégâts nécrotiques en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p><p><strong>Discorde</strong>. Chaque cible doit réussir un jet de sauvegarde de Constitution. En cas d'échec, une cible se chamaille et se dispute avec les autres créatures pendant 1 minute. Pendant cette période, elle est incapable de communiquer de manière claire et distincte et a un désavantage à ses jets d'attaque et à ses jets de caractéristique.</p><p><strong>Peur</strong>. Chaque cible doit réussir un jet de sauvegarde de Sagesse sous peine d'être effrayée pendant 1 minute. Tant qu'elle est effrayée, la cible lâche tout ce qu'elle tient et doit s'éloigner du glyphe d'au moins 9 mètres à chaque tour, si elle le peut.</p><p><strong>Désespoir</strong>. Chaque cible doit effectuer un jet de sauvegarde de Charisme. En cas d'échec, la cible est accablée de désespoir pendant 1 minute. Pendant cette période, elle ne peut ni attaquer, ni cibler de créature avec des capacités, sorts, ou effets magiques néfastes.</p><p><strong>Démence</strong>. Chaque cible doit effectuer un jet de sauvegarde d'Intelligence. En cas d'échec, la cible est en proie à la folie pendant 1 minute. Une créature démente ne peut pas utiliser d'action, ne peut ni comprendre ce que les autres créatures disent ni lire, et ne plus parler qu'un charabia inintelligible. Le MD contrôle les mouvements de la cible, qui sont imprévisibles.</p><p><strong>Douleur</strong>. Chaque cible doit réussir un jet de sauvegarde de Constitution sous peine d'être incapable d'agir pendant 1 minute à causes des atroces souffrances qui l'assaillent.</p><p><strong>Sommeil</strong>. Chaque cible doit réussir un jet de sauvegarde de Sagesse sous peine de sombrer dans l'inconscience pendant 10 minutes. Une créature est réveillée si elle subit des dégâts ou si quelqu'un utilise son action pour la réveiller en la secouant ou la giflant.</p><p><strong>Étourdissement</strong>. Chaque cible doit réussir un jet de sauvegarde de Sagesse sous peine d'être étourdie pendant 1 minute.</p>",
-      "materials": "du mercure, du phosphore, et de la poudre de diamant et d'opale pour une valeur totale minimum de 1 000 po, que le sort consomme"
+      "materials": "du mercure, du phosphore et de la poudre de diamant et d'opale dont la valeur totale est d'au moins 1 000 po, que le sort détruit"
     },
     "Telekinesis": {
       "name": "Télékinésie",
@@ -1352,7 +1374,7 @@
     "Telepathic Bond": {
       "name": "Lien télépathique",
       "description": "<p>Vous tissez un lien télépathique unissant jusqu'à huit créatures consentantes de votre choix et à portée, chacune psychiquement liée aux autres pour toute la durée du sort. Les créatures ayant une valeur d'Intelligence inférieure ou égale à 2 ne peuvent pas être affectées par ce sort.</p><p>Jusqu'à ce que le sort prenne fin, les cibles peuvent communiquer télépathiquement via ce lien, qu'elles aient ou non une langue en commun. La communication est possible quelle que soit la distance qui sépare les cibles, mais elle ne fonctionne plus pour des créatures se trouvant sur différents plans d'existence.</p>",
-      "materials": "des coquilles d'œufs pondus par des créatures d'espèces différentes"
+      "materials": "des fragments de coquille d'œuf de deux sortes de créature"
     },
     "Teleport": {
       "name": "Téléportation",
@@ -1361,7 +1383,7 @@
     "Teleportation Circle": {
       "name": "Cercle de téléportation",
       "description": "<p>Pendant que vous incantez le sort, vous dessinez sur le sol un cercle de 3 mètres de diamètre constitué de symboles qui lient votre position à un cercle de téléportation permanent de votre choix dont vous connaissez la séquence des symboles et qui se trouve sur le même plan d'existence que vous. Un portail scintillant s'ouvre dans le cercle que vous avez dessiné et reste ouvert jusqu'à la fin de votre prochain tour. Toute créature qui entre dans le portail apparaît instantanément à 1,50 mètre du portail de destination ou dans l'espace inoccupé le plus proche si cet espace est déjà pris.</p><p>Nombre de grands temples, guildes et autres endroits importants ont installé des portails de téléportation permanents quelque part dans leur enceinte. Chacun de ces cercles de téléportation permanent a sa propre et unique séquence de symboles ; une chaîne de runes magiques arrangées d'une manière particulière. Lorsque vous gagnez pour la première fois la possibilité de lancer ce sort, vous apprenez les séquences de symboles pour deux destinations du plan matériel, déterminées par le MD. Vous pouvez apprendre de nouvelles séquences au cours de vos aventures. Vous pouvez mémoriser une nouvelle séquence de symboles après l'avoir étudiée pendant 1 minute.</p><p>Vous pouvez créer un cercle de téléportation permanent en lançant ce sort au même endroit, tous les jours pendant 1 an. Vous n'êtes pas obligé de traverser le cercle de téléportation lorsque vous lancez ce sort pour créer un cercle de téléportation permanent.</p>",
-      "materials": "des craies et encres rares imprégnées de pierres précieuses d'une valeur d'au moins 50 po, que le sort consomme"
+      "materials": "50 po d'encres et craies rares imprégnées de gemmes que le sort détruit"
     },
     "Thaumaturgy": {
       "name": "Thaumaturgie",
@@ -1378,12 +1400,12 @@
     "Tiny Hut": {
       "name": "Petite hutte",
       "description": "<p>Un dôme immobile de 3 mètres de rayon apparaît autour et au-dessus de vous et reste à cet endroit, immobile, jusqu'à la fin du sort. Le sort prend fin si vous quittez cette zone.</p><p>Neuf créatures de taille M ou inférieure peuvent tenir sous le dôme avec vous. Le sort échoue si la zone contient une créature plus grande ou plus de neuf créatures. Les créatures et objets qui se trouvent sous le dôme lorsque vous lancez ce sort peuvent en sortir et y rentrer librement. Toutes les autres créatures et objets sont bloqués et ne peuvent le traverser. Les sorts et effets magiques, lancés de l'intérieur ou de l'extérieur du dôme, ne peuvent pas non plus passer au travers. L'atmosphère dans la zone est confortable et sec, quel que soit le climat extérieur.</p><p>Jusqu'à ce que le sort prenne fin, vous pouvez faire en sorte que l'intérieur du dôme soit faiblement éclairé voire plongé dans les ténèbres. Le dôme est opaque depuis l'extérieur, de la couleur de votre choix, mais il est transparent depuis l'intérieur.</p>",
-      "materials": "une petite perle de cristal"
+      "materials": "une petite bille de cristal"
     },
     "Tongues": {
       "name": "Don des langues",
       "description": "<p>Ce sort confère à la créature que vous touchez la capacité de comprendre toutes les langues parlées qu'elle entend. De plus, lorsque la cible parle, toutes les créatures qui connaissent au moins un langage, et peuvent l'entendre, comprennent ce qu'elle dit.</p>",
-      "materials": "une petite pyramide à degrés en argile"
+      "materials": "une ziggourat miniature en argile"
     },
     "Transport via Plants": {
       "name": "Voie végétale",
@@ -1396,17 +1418,17 @@
     "True Polymorph": {
       "name": "Métamorphose suprême",
       "description": "<p>Choisissez une créature ou un objet non magique que vous pouvez voir et à portée. Vous transformez la créature en une créature différente, la créature en un objet non magique, ou l'objet en une créature (l'objet ne doit ni être porté ni être tenu par une autre créature). La transformation reste effective pour toute la durée du sort, ou jusqu'à ce que la cible tombe à 0 point de vie ou meurt. Le sort ne peut pas affecter une cible dont les points de vie sont à 0. Si vous vous concentrez sur ce sort pendant toute sa durée, la transformation devient permanente.</p><p>Les métamorphes ne sont pas affectés par ce sort. Une créature non-consentante peut effectuer un jet de sauvegarde de Sagesse pour, si elle le réussit, ne pas être affectée par ce sort.</p><p><strong>Créature en créature</strong>. Si vous transformez une créature en un autre type de créature, la nouvelle forme peut être du type de votre choix à condition que le FP de la nouvelle forme soit inférieur ou égal à celui de la cible (ou à son niveau, si la cible n'a pas de facteur de puissance). Les statistiques de jeu de la cible, y compris ses valeurs de caractéristiques psychiques, sont remplacées par celles de la nouvelle forme. Elle conserve son alignement et sa personnalité. La cible obtient les points de vie de sa nouvelle forme, et lorsqu'elle retrouve sa forme normale, la créature récupère également les points de vie qu'elle avait avant d'être transformée. Si elle retrouve sa forme originelle parce que les points de vie de sa nouvelle forme sont tombés à 0, les dégâts restants sont infligés à sa forme normale. Tant que les dégâts restant ne font pas tomber la forme de la créature à 0 point de vie, elle ne sombre pas dans l'inconscience.</p><p>La créature est limitée dans les actions qu'elle peut entreprendre par la nature de sa nouvelle forme, et elle ne peut pas parler, ni lancer des sorts, ni effectuer la moindre action qui nécessite des mains ou la parole, à moins que sa nouvelle forme ne soit capable de telles actions.</p><p>L'équipement de la cible fusionne avec sa nouvelle forme. La créature ne peut pas activer, utiliser, manipuler ou recevoir le moindre avantage de son équipement.</p><p><strong>Objet en créature</strong>. Vous pouvez transformer un objet en une créature de n'importe quel type, à condition que la taille de la créature ne soit pas supérieure à celle de l'objet et que son FP soit inférieur ou égal à 9. La créature a une attitude amicale envers vous et vos compagnons. Elle agit à chacun de vos tours. Vous décidez des actions qu'elle effectue et de ses déplacements. Le MD possède les statistiques de la créature et résout les actions et les déplacements de celle-ci.</p><p>Si le sort devient permanent, vous ne pouvez plus contrôler la créature. Elle pourrait conserver son attitude amicale envers vous, en fonction de la manière dont vous l'avez traité.</p><p><strong>Créature en objet</strong>. Si vous transformez une créature en objet, elle endosse sa nouvelle forme avec tout l'équipement qu'elle transporte ou tient, à condition que la taille de l'objet ne soit pas supérieure à celle de la créature. Les statistiques de la créature deviennent celles de l'objet, et la créature n'a aucun souvenir du temps passé sous cette forme une fois qu'elle retrouve sa forme normale.</p>",
-      "materials": "une goutte de mercure, une bonne dose de gomme arabique, et une volute de fumée"
+      "materials": "une goutte de mercure, un bon morceau de gomme arabique et une volute de fumée"
     },
     "True Resurrection": {
       "name": "Résurrection suprême",
       "description": "<p>Vous touchez une créature qui est morte depuis moins de 200 ans mais qui n'est pas morte de vieillesse. Si l'âme de la créature est libre et consentante, la créature est ramenée à la vie avec tous ses points de vie.</p><p>Ce sort referme toutes les blessures, neutralise tout poison, guérit toutes les maladies et lève toutes les malédictions affectant la créature lorsqu'elle est morte. Le sort remplace les organes endommagés ou les membres manquants. Si la créature était un mort-vivant, elle revient sous la forme qu'elle avait avant de devenir un mort-vivant.</p><p>Le sort peut même fournir un nouveau corps si l'original n'existe plus. Dans ce cas, vous devez prononcer le nom de la créature et la créature apparaît alors dans un espace inoccupé que vous choisissez à 3 mètres ou moins de vous.</p>",
-      "materials": "une aspersion d'eau bénite et des diamants d'une valeur d'au moins 25 000 po, que le sort consomme"
+      "materials": "de l'eau bénite aspergée et de la poussière de diamant que vous saupoudrez d'une valeur minimale de 25 000 po, que le sort détruit"
     },
     "True Seeing": {
       "name": "Vision suprême",
       "description": "<p>Ce sort donne à la créature consentante que vous touchez la capacité de voir les choses telles qu'elles sont réellement. Pour la durée du sort, la créature est dotée d'une vision véritable, remarque les portes secrètes cachées par magie et peut voir dans le plan éthéré jusqu'à une portée de 36 mètres.</p>",
-      "materials": "une pommade pour les yeux coûtant 25 po ; elle est fabriquée à partir d'une poudre de champignon, de safran et de graisse, et est consommée par le sort"
+      "materials": "un onguent pour les yeux d'une valeur de 25 po, fait de poudre de champignons, de safran et de graisse, que le sort détruit"
     },
     "True Strike": {
       "name": "Coup au but",
@@ -1415,7 +1437,7 @@
     "Unseen Servant": {
       "name": "Serviteur invisible",
       "description": "<p>Ce sort crée une force invisible, sans volonté propre, informe mais de taille M, qui exécute les ordres simples que vous lui transmettez, jusqu'à la fin du sort. Le serviteur prend vie dans un espace inoccupé sur le sol et à portée. Il possède les caractéristiques suivantes : CA 10 ; 1 point de vie ; Force 2 ; ne peut pas attaquer. Le sort se termine si le serviteur tombe à 0 point de vie.</p><p>Une fois par tour, par une action bonus, vous pouvez mentalement ordonner au serviteur de se déplacer de 4,50 mètres et d'interagir avec un objet. Le serviteur peut exécuter des tâches simples comme un serviteur humain le ferait, comme rapporter quelque chose, nettoyer, raccommoder, plier des vêtements, entretenir un feu, servir à manger, et verser du vin. Une fois votre ordre donné, le serviteur cherche à l'exécuter du mieux qu'il peut jusqu'à ce que la tâche soit accomplie, puis il attend votre ordre suivant.</p><p>Si vous demandez à votre serviteur d'effectuer une tâche qui devrait l'envoyer à plus de 18 mètres de vous, le sort prend fin.</p>",
-      "materials": "un morceau de ficelle et un bout de bois"
+      "materials": "un bout de ficelle et un morceau de bois"
     },
     "Vampiric Touch": {
       "name": "Caresse du vampire",
@@ -1433,12 +1455,12 @@
     "Wall of Force": {
       "name": "Mur de force",
       "description": "<p>Un mur de force invisible apparaît en un point de votre choix à portée. Le mur prend l'orientation que choisissez, comme une barrière verticale, horizontale, ou avec angle. Il peut flotter librement dans les airs ou s'appuyer sur une surface solide. Vous pouvez lui donner la forme d'un dôme hémisphérique ou d'une sphère ayant un rayon de 3 mètres maximum, ou lui donner la forme d'une surface plane constituée de dix panneaux de 3 mètres de côté chacun. Chaque panneau doit être contigu à un autre panneau. Quelle que soit sa forme, le mur a une épaisseur de 6 millimètres. Il reste en place pendant toute la durée du sort. Si le mur traverse l'espace occupé par une créature lorsqu'il apparaît, la créature est repoussée d'un côté du mur (vous choisissez le côté).</p><p>Rien ne peut traverser physiquement le mur. Il est immunisé à tous les types de dégâts et ne peut être dissipé avec un sort de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=dissipation-de-la-magie\">dissipation de la magie</a></em>. Cependant, un sort de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=desintegration\">désintégration</a></em> détruit le mur instantanément. Le mur est également présent dans le plan éthéré, bloquant les voyages éthérés au travers du mur.</p>",
-      "materials": "une pincée de poudre réalisée en pilant une pierre semi-précieuse translucide"
+      "materials": "une pincée de poudre obtenue en concassant une gemme limpide"
     },
     "Wall of Ice": {
       "name": "Mur de glace",
       "description": "<p>Vous créez un mur de glace sur une surface solide à portée. Vous pouvez lui donner la forme d'un dôme hémisphérique ou d'une sphère de 3 mètres de rayon maximum, ou bien lui donner la forme d'une surface plane composée de 10 panneaux de 3 mètres de côté chacun, chaque panneau devant être contigu à un autre panneau. Quelle que soit sa forme, le mur est épais de 30 centimètres et reste en place pendant toute la durée du sort.</p><p>Si le mur traverse l'espace occupé par une créature lorsqu'il apparaît, la créature est repoussée d'un côté du mur et doit effectuer un jet de sauvegarde de Dextérité. La créature subit 10d6 dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p><p>Le mur est un objet qui peut être endommagé, il est donc possible d'y créer une brèche. Il possède une CA de 12 et 30 points de vie par section de 3 mètres, et est vulnérable aux dégâts de feu. Réduire une section de 3 mètres à 0 point de vie la détruit et laisse place à un voile d'air glacial à l'endroit que le mur occupait. Une créature se déplaçant au travers de ce voile glacial pour la première fois de son tour doit effectuer un jet de sauvegarde de Constitution. La créature subit 5d6 dégâts de froid en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p><p><strong><em>Aux niveaux supérieurs</em></strong>. Lorsque vous lancez ce sort en utilisant un emplacement de sort de niveau 7 ou supérieur, les dégâts qu'inflige le mur lorsqu'il apparaît augmentent de 2d6, et les dégâts infligés aux créatures qui traversent le voile d'air glacial augmentent de 1d6, pour chaque niveau d'emplacement supérieur au 6eme.</p>",
-      "materials": "un petit morceau de quartz"
+      "materials": "un fragment de quartz"
     },
     "Wall of Stone": {
       "name": "Mur de pierre",
@@ -1453,12 +1475,12 @@
     "Warding Bond": {
       "name": "Lien de protection",
       "description": "<p>Ce sort protège une créature consentante que vous touchez et crée une connexion mystique entre vous et la cible jusqu'à ce que le sort se termine. Aussi longtemps que la cible n'est pas éloignée de plus de 18 mètres de vous, elle gagne un bonus de +1 à la CA, +1 aux jets de sauvegarde et obtient une résistance à tous les dégâts. De plus, chaque fois qu'elle subit des dégâts, vous recevez la même quantité de dégâts.</p><p>Le sort se termine si vous tombez à 0 point de vie ou si vous et la cible êtes séparés de plus de 18 mètres de distance. Le sort prend également fin s'il est lancé à nouveau sur l'une des créatures connectées. Vous pouvez également rompre le sort au prix d'une action.</p>",
-      "materials": "une paire d'anneaux de platine d'une valeur d'au moins de 50 po chacun, que vous et la cible devez porter durant la durée du sort"
+      "materials": "deux bagues de platine d'une valeur de 50 po chacune, que la cible et vous devez porter pour toute la durée"
     },
     "Water Breathing": {
       "name": "Respiration aquatique",
       "description": "<p>Ce sort procure à un maximum de dix créatures consentantes, à portée et que vous pouvez voir, la capacité de respirer sous l'eau jusqu'à la fin de sa durée. Les créatures affectées conservent également leur mode de respiration normale.</p>",
-      "materials": "un court roseau ou un morceau de paille"
+      "materials": "un court roseau ou une paille"
     },
     "Water Walk": {
       "name": "Marche sur l'onde",
@@ -1468,7 +1490,7 @@
     "Web": {
       "name": "Toile d'araignée",
       "description": "<p>Vous invoquez une masse de toiles d'araignées épaisse et collante à un point de votre choix dans la portée du sort. Les toiles remplissent un cube de 6 mètres sur 6 mètres à cet endroit pendant la durée du sort. Les toiles sont considérées comme un terrain difficile et la visibilité y est réduite.</p><p>Si les toiles ne sont pas ancrées entre deux masses solides (comme des murs ou des arbres) ou superposées à partir du sol, d'un mur ou du plafond, la masse de toiles invoquée s'effondre sur elle-même et le sort se termine au début de votre prochain tour. Les toiles superposées sur une surface plane ont une épaisseur de 1,50 mètre.</p><p>Chaque créature qui commence son tour dans les toiles ou qui y entre au cours de son tour doit faire un jet de sauvegarde de Dextérité. En cas d'échec, la créature est entravée aussi longtemps qu'elle demeure dans les toiles ou jusqu'à ce qu'elle se libère.</p><p>Une créature entravée par les toiles peut utiliser son action pour faire un jet de Force contre votre DD de sauvegarde du sort. Si elle réussit, elle n'est plus entravée.</p><p>Les toiles sont inflammables. Un cube de 1,50 x 1,50 mètre de toiles exposé au feu se consume en un round, causant 2d4 dégâts de feu à toute créature commençant son tour dans les toiles enflammées.</p>",
-      "materials": "un peu de toile d'araignée"
+      "materials": "quelques filandres de toile d'araignée"
     },
     "Weird": {
       "name": "Ennemi subconscient",
@@ -1477,12 +1499,12 @@
     "Wind Walk": {
       "name": "Vent divin",
       "description": "<p>Vous et jusqu'à 10 créatures consentantes que vous pouvez voir et à portée, êtes transformés en vapeur pour la durée du sort, ressemblant à de petits nuages. Tant qu'elle est sous cette forme de nuage, une créature obtient une vitesse de vol de 90 mètres ainsi que la résistance aux dégâts des armes non magiques. Les seules actions que peut effectuer une créature sous cette forme sont l'action Foncer et le retour à sa forme normale. Revenir à sa forme normale prend 1 minute, durant laquelle la créature est incapable d'agir et ne peut pas se déplacer. Jusqu'à la fin du sort, une créature peut revenir en forme nuageuse, ce qui lui prendra également 1 minute de transformation.</p><p>Si une créature est sous forme nuageuse et en train de voler lorsque l'effet prend fin, la créature redescend à la vitesse de 18 mètres par round pendant 1 minute jusqu'à ce qu'elle touche terre, ce qu'elle fait sans encombre. Si elle ne touche pas le sol après 1 minute, la créature chute de la distance restante.</p>",
-      "materials": "du feu et de l'eau bénite"
+      "materials": "des flammes et de l'eau bénite"
     },
     "Wind Wall": {
       "name": "Mur de vent",
       "description": "<p>Un mur de puissants vents s'élève du sol à un endroit de votre choix. Vous pouvez créer un mur pouvant faire, au mieux, 15 mètres de long, 4,50 mètres de haut et 30 centimètres d'épaisseur. Vous pouvez donner au mur la forme que vous souhaitez, à condition qu'il soit continuellement en contact avec le sol. Le mur reste en place pour toute la durée du sort.</p><p>Lorsque le mur apparaît, chaque créature se trouvant dans la zone doit effectuer un jet de sauvegarde de Force. Une créature subit 3d8 dégâts contondants en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p><p>Le vent violent garde les brumes, brouillards, et autres gaz éloignés. Les objets et créatures volants de taille P ou inférieure ne peuvent pas passer au travers du mur. S'ils ne sont pas tenus ou fixés, les objets légers amenés dans le mur s'envolent. Les flèches, carreaux et autres projectiles ordinaires tirés en direction de cibles situées de l'autre côté du mur sont détournés et automatiquement perdus (les rochers projetés par des géants ou des engins de siège, ou tout autre projectile similaire, ne sont pas affectés). Les créatures sous forme gazeuse ne peuvent pas traverser le mur de vent.</p>",
-      "materials": "un minuscule éventail et une plume d'oiseau exotique"
+      "materials": "un minuscule éventail et une plume d'origine exotique"
     },
     "Wish": {
       "name": "Souhait",

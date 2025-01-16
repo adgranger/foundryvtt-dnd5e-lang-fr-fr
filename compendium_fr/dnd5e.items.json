@@ -56,7 +56,12 @@
     },
     "Acid (vial)": {
       "name": "Acide (fiole)",
-      "description": "<p>Au prix d'une action, vous pouvez lancer le contenu de ce flacon sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet, en considérant l'acide comme une arme improvisée. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>"
+      "description": "<p>Au prix d'une action, vous pouvez lancer le contenu de ce flacon sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, le brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature ou un objet, en considérant l'acide comme une arme improvisée. En cas de succès, la cible reçoit 2d6 dégâts d'acide.</p>",
+      "activities": {
+        "attack": {
+          "chatFlavor": "arme improvisée"
+        }
+      }
     },
     "Adamantine Breastplate": {
       "name": "Plastron en Adamantium",
@@ -92,7 +97,15 @@
     },
     "Alchemist's Fire": {
       "name": "Feu grégeois (flasque)",
-      "description": "<p>Ce liquide adhésif et collant s'enflamme lorsqu'il est exposé à l'air. Au prix d'une action, vous pouvez jeter cette flasque jusqu'à 6 mètres, la brisant à l'impact. Faire une attaque à distance contre une créature ou un objet, en considérant le feu grégeois comme une arme improvisée. En cas de succès, la cible reçoit 1d4 dégâts de feu au début de chacun de ses tours. Une créature peut mettre fin à ces dégâts en utilisant son action pour faire un jet de Dextérité DD 10 pour éteindre les flammes.</p>"
+      "description": "<p>Ce liquide adhésif et collant s'enflamme lorsqu'il est exposé à l'air. Au prix d'une action, vous pouvez jeter cette flasque jusqu'à 6 mètres, la brisant à l'impact. Faire une attaque à distance contre une créature ou un objet, en considérant le feu grégeois comme une arme improvisée. En cas de succès, la cible reçoit 1d4 dégâts de feu au début de chacun de ses tours. Une créature peut mettre fin à ces dégâts en utilisant son action pour faire un jet de Dextérité DD 10 pour éteindre les flammes.</p>",
+      "activities": {
+        "attack": {
+          "chatFlavor": "arme improvisée"
+        },
+        "save": {
+          "chatFlavor": "arme improvisée"
+        }
+      }
     },
     "Alchemist's Supplies": {
       "name": "Matériel d'alchimiste",
@@ -120,11 +133,24 @@
     },
     "Amulet of the Planes": {
       "name": "Amulette des plans",
-      "description": "<div><em>Objet merveilleux (nécessite un lien)</em></div>\n<div> </div>\n<div>Lorsque vous portez cette amulette, vous pouvez utiliser une action pour nommer un lieu qui vous est familier sur un autre plan d'existence. Faites ensuite un test d'Intelligence DD 15. En cas de réussite, vous lancez le sort <em>@Compendium[dnd5e.spells.J6Jpw5XzB5aTeqnz]{Changement de plan}</em>. Sur un échec, vous et chaque créature et objet dans un rayon de 4,50 m de vous voyagez vers une destination aléatoire. Lancez un d100. Sur un résultat de 1 à 60, vous voyagez vers un endroit aléatoire du plan que vous avez nommé. Sur un 61-100, vous voyagez vers un plan d'existence déterminé au hasard.</div>"
+      "description": "<div><em>Objet merveilleux (nécessite un lien)</em></div>\n<div> </div>\n<div>Lorsque vous portez cette amulette, vous pouvez utiliser une action pour nommer un lieu qui vous est familier sur un autre plan d'existence. Faites ensuite un test d'Intelligence DD 15. En cas de réussite, vous lancez le sort <em>@Compendium[dnd5e.spells.J6Jpw5XzB5aTeqnz]{Changement de plan}</em>. Sur un échec, vous et chaque créature et objet dans un rayon de 4,50 m de vous voyagez vers une destination aléatoire. Lancez un d100. Sur un résultat de 1 à 60, vous voyagez vers un endroit aléatoire du plan que vous avez nommé. Sur un 61-100, vous voyagez vers un plan d'existence déterminé au hasard.</div>",
+      "activities": {
+        "38pYKge1C3c2wPLF": {
+          "condition": "Après un test d'Intelligence réussi"
+        },
+        "Name Location": {
+          "name": "Nom du lieu"
+        }
+      }
     },
     "Animated Shield": {
       "name": "Bouclier animé",
-      "description": "<p><em>(Nécessite un lien)</em></p>\n<p>Lorsque vous tenez ce bouclier, vous pouvez prononcer son mot de commande comme action bonus pour le faire s'animer. Le bouclier bondit dans les airs et plane dans votre espace pour vous protéger comme si vous le brandissiez, laissant vos mains libres. Le bouclier reste animé pendant 1 minute, jusqu'à ce que vous utilisiez une action bonus pour mettre fin à cet effet, ou jusqu'à ce que vous soyez frappé d'incapacité ou mouriez, auquel cas le bouclier tombe au sol ou dans votre main si vous en avez une de libre.</p>"
+      "description": "<p><em>(Nécessite un lien)</em></p>\n<p>Lorsque vous tenez ce bouclier, vous pouvez prononcer son mot de commande comme action bonus pour le faire s'animer. Le bouclier bondit dans les airs et plane dans votre espace pour vous protéger comme si vous le brandissiez, laissant vos mains libres. Le bouclier reste animé pendant 1 minute, jusqu'à ce que vous utilisiez une action bonus pour mettre fin à cet effet, ou jusqu'à ce que vous soyez frappé d'incapacité ou mouriez, auquel cas le bouclier tombe au sol ou dans votre main si vous en avez une de libre.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande"
+        }
+      }
     },
     "Antitoxin": {
       "name": "Antidote (fiole)",
@@ -164,7 +190,12 @@
     },
     "Arrow-Catching Shield": {
       "name": "Bouclier antiprojectiles",
-      "description": "<p>Vous gagnez un bonus de +2 à la CA contre les attaques à distance lorsque vous maniez ce bouclier. Ce bonus vient en plus du bonus normal à la CA du bouclier. En outre, chaque fois qu'un attaquant effectue une attaque à distance contre une cible à 1,50 mètre ou moins de vous, vous pouvez utiliser votre réaction pour devenir la cible de l'attaque.</p>"
+      "description": "<p>Vous gagnez un bonus de +2 à la CA contre les attaques à distance lorsque vous maniez ce bouclier. Ce bonus vient en plus du bonus normal à la CA du bouclier. En outre, chaque fois qu'un attaquant effectue une attaque à distance contre une cible à 1,50 mètre ou moins de vous, vous pouvez utiliser votre réaction pour devenir la cible de l'attaque.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Une attaque à distance dans un rayon de 1,50 m"
+        }
+      }
     },
     "Backpack": {
       "name": "Sac à dos",
@@ -212,7 +243,12 @@
     },
     "Basic Poison": {
       "name": "Poison (fiole)",
-      "description": "<p>Vous pouvez utiliser le poison de cette fiole pour couvrir une arme tranchante ou perforante, ou jusqu'à trois munitions. Appliquer le poison prend une action. Une créature touchée par une arme ou une munition empoisonnée doit réussir un jet de sauvegarde de Constitution DD 10 ou prendre 1d4 points de dégâts de poison. Une fois appliqué, le poison conserve son activité 1 minute avant de sécher.</span></p>"
+      "description": "<p>Vous pouvez utiliser le poison de cette fiole pour couvrir une arme tranchante ou perforante, ou jusqu'à trois munitions. Appliquer le poison prend une action. Une créature touchée par une arme ou une munition empoisonnée doit réussir un jet de sauvegarde de Constitution DD 10 ou prendre 1d4 points de dégâts de poison. Une fois appliqué, le poison conserve son activité 1 minute avant de sécher.</span></p>",
+      "activities": {
+        "save": {
+          "condition": "une arme tranchante ou perforante, ou jusqu'à trois munitions"
+        }
+      }
     },
     "Basket": {
       "name": "Panier",
@@ -348,7 +384,12 @@
     },
     "Boots of Speed": {
       "name": "Bottes de rapidité",
-      "description": "<p>Lorsque vous portez ces bottes, vous pouvez utiliser une action bonus pour claquer vos talons l'un contre l'autre. Si vous le faites, les bottes doublent votre vitesse de marche et toute créature qui tente une attaque d'opportunité à votre encontre le fait avec un désavantage au jet d'attaque. Claquer des talons à nouveau permet de mettre fin à l'effet.\n<br>Lorsque la propriété des bottes a été utilisée pour un total de 10 minutes, la magie cesse de fonctionner jusqu'à ce que vous finissiez un repos long.</p>"
+      "description": "<p>Lorsque vous portez ces bottes, vous pouvez utiliser une action bonus pour claquer vos talons l'un contre l'autre. Si vous le faites, les bottes doublent votre vitesse de marche et toute créature qui tente une attaque d'opportunité à votre encontre le fait avec un désavantage au jet d'attaque. Claquer des talons à nouveau permet de mettre fin à l'effet.\n<br>Lorsque la propriété des bottes a été utilisée pour un total de 10 minutes, la magie cesse de fonctionner jusqu'à ce que vous finissiez un repos long.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Claquer vos talons l'un contre l'autre."
+        }
+      }
     },
     "Boots of Striding and Springing": {
       "name": "Bottes de sept lieues",
@@ -360,7 +401,12 @@
     },
     "Bowl of Commanding Water Elementals": {
       "name": "Jatte de contrôle des élémentaires de l’eau",
-      "description": "<p>Une fois ce bol rempli d'eau, vous pouvez utiliser une action pour prononcer son mot de commande et convoquer un élémentaire de l'eau comme si vous aviez lancé le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=invocation-d-elementaire\">invocation d'élémentaire</a></em>. Le bol ne peut être utilisé de nouveau de cette façon avant le prochain lever du soleil.\n<br>Il fait environ 30 centimètres de diamètre et la moitié en profondeur, pèse 1,5 kg et peut contenir environ 12 litres.</p>"
+      "description": "<p>Une fois ce bol rempli d'eau, vous pouvez utiliser une action pour prononcer son mot de commande et convoquer un élémentaire de l'eau comme si vous aviez lancé le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=invocation-d-elementaire\">invocation d'élémentaire</a></em>. Le bol ne peut être utilisé de nouveau de cette façon avant le prochain lever du soleil.\n<br>Il fait environ 30 centimètres de diamètre et la moitié en profondeur, pèse 1,5 kg et peut contenir environ 12 litres.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Bracers of Archery": {
       "name": "Bracelets d'archer",
@@ -376,7 +422,12 @@
     },
     "Brazier of Commanding Fire Elementals": {
       "name": "Brasero de contrôle des élémentaires du feu",
-      "description": "<p>Tant qu'un feu brûle dans ce brasero en cuivre, vous pouvez utiliser une action pour prononcer son mot de commande et convoquer un élémentaire du feu, comme si vous aviez lancé le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=invocation-d-elementaire\">invocation d'élémentaire</a></em>. Le brasero ne peut plus être utilisé de cette façon avant le prochain lever du soleil. Le brasero pèse 2,5 kg.</p>"
+      "description": "<p>Tant qu'un feu brûle dans ce brasero en cuivre, vous pouvez utiliser une action pour prononcer son mot de commande et convoquer un élémentaire du feu, comme si vous aviez lancé le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=invocation-d-elementaire\">invocation d'élémentaire</a></em>. Le brasero ne peut plus être utilisé de cette façon avant le prochain lever du soleil. Le brasero pèse 2,5 kg.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Breastplate": {
       "name": "Cuirasse",
@@ -412,7 +463,12 @@
     },
     "Broom of Flying": {
       "name": "Balai volant",
-      "description": "<p>Ce balai de bois pèse 1,5 kg et ressemble à un balai normal jusqu'à ce que vous l'enfourchiez à califourchon et prononciez son mot de commande. Il se met alors à planer et peut être chevauché dans les airs. Sa vitesse de vol est de 15 mètres. Il peut porter 200 kg, mais s'il en transporte plus de 100, sa vitesse est limitée à 9 mètres. Le balai cesse de planer une fois que vous atterrissez.\n<br>Vous pouvez ordonner au balai de voyager seul vers une destination qui vous est familière et distante de 1,5 kilomètre ou moins en prononçant le mot de commande et en nommant le lieu. Tant que le balai est à 1,5 kilomètre ou moins de vous, vous pouvez le rappeler à vous en prononçant un autre mot de commande.</p>"
+      "description": "<p>Ce balai de bois pèse 1,5 kg et ressemble à un balai normal jusqu'à ce que vous l'enfourchiez à califourchon et prononciez son mot de commande. Il se met alors à planer et peut être chevauché dans les airs. Sa vitesse de vol est de 15 mètres. Il peut porter 200 kg, mais s'il en transporte plus de 100, sa vitesse est limitée à 9 mètres. Le balai cesse de planer une fois que vous atterrissez.\n<br>Vous pouvez ordonner au balai de voyager seul vers une destination qui vous est familière et distante de 1,5 kilomètre ou moins en prononçant le mot de commande et en nommant le lieu. Tant que le balai est à 1,5 kilomètre ou moins de vous, vous pouvez le rappeler à vous en prononçant un autre mot de commande.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Bucket": {
       "name": "Seau",
@@ -452,19 +508,39 @@
     },
     "Carpet of Flying (3x5)": {
       "name": "Tapis de vol (3x5)",
-      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 1m sur 1.5m et a une vitesse de 27m en portant jusqu'à 100 kg, ou la moitié de cette vitesse en portant jusqu'à 200 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>"
+      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 1m sur 1.5m et a une vitesse de 27m en portant jusqu'à 100 kg, ou la moitié de cette vitesse en portant jusqu'à 200 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Carpet of Flying (4x6)": {
       "name": "Tapis de vol (4x6)",
-      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 1,2m sur 1.8m et a une vitesse de 18m en portant jusqu'à 200 kg, ou la moitié de cette vitesse en portant jusqu'à 400 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>"
+      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 1,2m sur 1.8m et a une vitesse de 18m en portant jusqu'à 200 kg, ou la moitié de cette vitesse en portant jusqu'à 400 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Carpet of Flying (5x7)": {
       "name": "Tapis de vol (5x7)",
-      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 1.5m sur 2.1m et a une vitesse de 12m en portant jusqu'à 300 kg, ou la moitié de cette vitesse en portant jusqu'à 600 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>"
+      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 1.5m sur 2.1m et a une vitesse de 12m en portant jusqu'à 300 kg, ou la moitié de cette vitesse en portant jusqu'à 600 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Carpet of Flying (6x9)": {
       "name": "Tapis volant (6x9)",
-      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 2m sur 3m et a une vitesse de 10m en portant jusqu'à 400 kg, ou la moitié de cette vitesse en portant jusqu'à 800 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>"
+      "description": "<p><em>Objet merveilleux</em></p><p> Vous pouvez prononcer le mot de commande du tapis en tant qu'action pour faire planer et voler le tapis. Il se déplace selon vos instructions vocales, à condition que vous soyez à moins de 9m de lui.</p><p>Ce tapis mesure 2m sur 3m et a une vitesse de 10m en portant jusqu'à 400 kg, ou la moitié de cette vitesse en portant jusqu'à 800 kg.</p>\n<p>Il existe quatre tailles de tapis de vol. Le MJ choisit la taille d'un tapis donné ou la détermine aléatoirement à partir de la table @Compendium[dnd5e.tables.Z2OG7jt9R8zofxnJ]{Carpet of Flying}.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Cartographer's Tools": {
       "name": "Outils de cartographe",
@@ -476,7 +552,12 @@
     },
     "Censer of Controlling Air Elementals": {
       "name": "Encensoir de contrôle des élémentaires de l'air",
-      "description": "Tant que de l'encens brûle dans cet encensoir, vous pouvez utiliser une action pour prononcer le mot de commande de l'encensoir et invoquer un @Compendium[dnd5e.monsters.banHjKDMCegbUwYE]{élémentaire de l'air}, comme si vous aviez lancé le sort @Compendium[dnd5e.spells.1LkZvINag7KqBmDR]{invocation d'élémentaire}. L'encensoir ne peut être réutilisé de la sorte avant le prochain lever de soleil. Ce récipient de 30 centimètres de hauteur et de 15 centimètres de diamètre ressemble à un calice au couvercle ouvragé. Il pèse 500 grammes. "
+      "description": "Tant que de l'encens brûle dans cet encensoir, vous pouvez utiliser une action pour prononcer le mot de commande de l'encensoir et invoquer un @Compendium[dnd5e.monsters.banHjKDMCegbUwYE]{élémentaire de l'air}, comme si vous aviez lancé le sort @Compendium[dnd5e.spells.1LkZvINag7KqBmDR]{invocation d'élémentaire}. L'encensoir ne peut être réutilisé de la sorte avant le prochain lever de soleil. Ce récipient de 30 centimètres de hauteur et de 15 centimètres de diamètre ressemble à un calice au couvercle ouvragé. Il pèse 500 grammes. ",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Chain (10 feet)": {
       "name": "Chaîne (3 m)",
@@ -536,7 +617,12 @@
     },
     "Chime of Opening": {
       "name": "Carillon d'ouverture",
-      "description": "<p>Ce tube de métal creux mesure environ 30 centimètres de long et pèse 500 grammes. Vous pouvez le frapper en utilisant une action, et le pointer vers un objet pouvant être ouvert et se trouvant à 36 mètres de vous maximum, comme une porte, un couvercle ou une serrure. En faisant cela, le carillon sonne d'un ton clair, et une serrure ou un loquet sur l'objet s'ouvre, à moins que le son ne puisse pas atteindre l'objet. S'il ne reste aucune serrure ou loquet en place, l'objet s'ouvre de lui-même. Le carillon peut être utilisé dix fois. Après ces dix utilisations, il se fissure et ne sert plus à rien.</p>"
+      "description": "<p>Ce tube de métal creux mesure environ 30 centimètres de long et pèse 500 grammes. Vous pouvez le frapper en utilisant une action, et le pointer vers un objet pouvant être ouvert et se trouvant à 36 mètres de vous maximum, comme une porte, un couvercle ou une serrure. En faisant cela, le carillon sonne d'un ton clair, et une serrure ou un loquet sur l'objet s'ouvre, à moins que le son ne puisse pas atteindre l'objet. S'il ne reste aucune serrure ou loquet en place, l'objet s'ouvre de lui-même. Le carillon peut être utilisé dix fois. Après ces dix utilisations, il se fissure et ne sert plus à rien.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Le son doit atteindre la cible."
+        }
+      }
     },
     "Circlet of Blasting": {
       "name": "Diadème de destruction",
@@ -556,7 +642,12 @@
     },
     "Cloak of Elvenkind": {
       "name": "Cape elfique",
-      "description": "<p>Lorsque vous portez cette cape avec sa capuche rabattue sur votre tête, les jets de Sagesse (Perception) pour vous voir ont un désavantage, et vous avez un avantage aux jets de Dextérité (Discrétion) pour vous cacher, grâce aux changements de couleur de la cape qui vous aident à vous camoufler. Mettre ou enlever la capuche nécessite une action.</p>"
+      "description": "<p>Lorsque vous portez cette cape avec sa capuche rabattue sur votre tête, les jets de Sagesse (Perception) pour vous voir ont un désavantage, et vous avez un avantage aux jets de Dextérité (Discrétion) pour vous cacher, grâce aux changements de couleur de la cape qui vous aident à vous camoufler. Mettre ou enlever la capuche nécessite une action.</p>",
+      "activities": {
+        "utility": {
+          "condition": "La capuche doit être rabattue."
+        }
+      }
     },
     "Cloak of Protection": {
       "name": "Cape de protection",
@@ -568,7 +659,12 @@
     },
     "Cloak of the Manta Ray": {
       "name": "Cape de la raie manta",
-      "description": "<p>Tant que vous êtes équipé de cette cape et que vous avez enfilé sa capuche, vous pouvez respirer sous l'eau, et vous obtenez une vitesse de nage de 18 mètres. Enfiler ou retirer la capuche prend une action.</p>"
+      "description": "<p>Tant que vous êtes équipé de cette cape et que vous avez enfilé sa capuche, vous pouvez respirer sous l'eau, et vous obtenez une vitesse de nage de 18 mètres. Enfiler ou retirer la capuche prend une action.</p>",
+      "activities": {
+        "utility": {
+          "condition": "La capuche doit être rabattue."
+        }
+      }
     },
     "Club": {
       "name": "Gourdin",
@@ -640,11 +736,21 @@
     },
     "Crystal Ball of Mind Reading": {
       "name": "Boule de cristal de lecture des pensées",
-      "description": "<p>La <em>boule de cristal</em> typique, un objet très rare, a un diamètre de 15 centimètres. Tant que vous la touchez, vous pouvez lancer un sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> (sauvegarde DD 17) grâce à elle.\n<br>Les variantes de <em>boule de cristal</em> présentées ci-dessous sont des objets légendaires et ont des propriétés supplémentaires.\n<br><strong>Boule de cristal de lecture des pensées</strong>. Vous pouvez utiliser votre action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> (sauvegarde DD 17) tant que vous êtes en pleine scrutation avec la <em>boule de cristal</em>, vous ciblez alors une créature que vous pouvez voir et située à 9 mètres maximum du capteur créé par le sort. Vous n'avez pas besoin de vous concentrer sur ce sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine.\n<br><strong>Boule de cristal de télépathie</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous pouvez communiquer par télépathie avec toutes les créatures que vous pouvez voir et qui se trouvent à 9 mètres maximum du capteur créé par le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>. Vous pouvez également utiliser une action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> (sauvegarde DD 17) au travers du capteur sur l'une de ces créatures. Vous n'avez pas besoin de vous concentrer sur le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine. Une fois qu'il est utilisé, le pouvoir de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> de la <em>boule de cristal</em> ne peut être réutilisé avant le prochain lever de soleil.\n<br><strong>Boule de cristal de vision véritable</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous possédez la vision véritable dans un rayon de 36 mètres centré sur le capteur du sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>.</p>"
+      "description": "<p>La <em>boule de cristal</em> typique, un objet très rare, a un diamètre de 15 centimètres. Tant que vous la touchez, vous pouvez lancer un sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> (sauvegarde DD 17) grâce à elle.\n<br>Les variantes de <em>boule de cristal</em> présentées ci-dessous sont des objets légendaires et ont des propriétés supplémentaires.\n<br><strong>Boule de cristal de lecture des pensées</strong>. Vous pouvez utiliser votre action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> (sauvegarde DD 17) tant que vous êtes en pleine scrutation avec la <em>boule de cristal</em>, vous ciblez alors une créature que vous pouvez voir et située à 9 mètres maximum du capteur créé par le sort. Vous n'avez pas besoin de vous concentrer sur ce sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine.\n<br><strong>Boule de cristal de télépathie</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous pouvez communiquer par télépathie avec toutes les créatures que vous pouvez voir et qui se trouvent à 9 mètres maximum du capteur créé par le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>. Vous pouvez également utiliser une action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> (sauvegarde DD 17) au travers du capteur sur l'une de ces créatures. Vous n'avez pas besoin de vous concentrer sur le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine. Une fois qu'il est utilisé, le pouvoir de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> de la <em>boule de cristal</em> ne peut être réutilisé avant le prochain lever de soleil.\n<br><strong>Boule de cristal de vision véritable</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous possédez la vision véritable dans un rayon de 36 mètres centré sur le capteur du sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>.</p>",
+      "activities": {
+        "fRkGCqgiCHP528xk": {
+          "condition": "Lors d'une scrutation avec cette boule de cristal"
+        }
+      }
     },
     "Crystal Ball of Telepathy": {
       "name": "Boule de cristal de télépathie",
-      "description": "<p>La <em>boule de cristal</em> typique, un objet très rare, a un diamètre de 15 centimètres. Tant que vous la touchez, vous pouvez lancer un sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> (sauvegarde DD 17) grâce à elle.\n<br>Les variantes de <em>boule de cristal</em> présentées ci-dessous sont des objets légendaires et ont des propriétés supplémentaires.\n<br><strong>Boule de cristal de lecture des pensées</strong>. Vous pouvez utiliser votre action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> (sauvegarde DD 17) tant que vous êtes en pleine scrutation avec la <em>boule de cristal</em>, vous ciblez alors une créature que vous pouvez voir et située à 9 mètres maximum du capteur créé par le sort. Vous n'avez pas besoin de vous concentrer sur ce sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine.\n<br><strong>Boule de cristal de télépathie</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous pouvez communiquer par télépathie avec toutes les créatures que vous pouvez voir et qui se trouvent à 9 mètres maximum du capteur créé par le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>. Vous pouvez également utiliser une action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> (sauvegarde DD 17) au travers du capteur sur l'une de ces créatures. Vous n'avez pas besoin de vous concentrer sur le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine. Une fois qu'il est utilisé, le pouvoir de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> de la <em>boule de cristal</em> ne peut être réutilisé avant le prochain lever de soleil.\n<br><strong>Boule de cristal de vision véritable</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous possédez la vision véritable dans un rayon de 36 mètres centré sur le capteur du sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>.</p>"
+      "description": "<p>La <em>boule de cristal</em> typique, un objet très rare, a un diamètre de 15 centimètres. Tant que vous la touchez, vous pouvez lancer un sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> (sauvegarde DD 17) grâce à elle.\n<br>Les variantes de <em>boule de cristal</em> présentées ci-dessous sont des objets légendaires et ont des propriétés supplémentaires.\n<br><strong>Boule de cristal de lecture des pensées</strong>. Vous pouvez utiliser votre action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> (sauvegarde DD 17) tant que vous êtes en pleine scrutation avec la <em>boule de cristal</em>, vous ciblez alors une créature que vous pouvez voir et située à 9 mètres maximum du capteur créé par le sort. Vous n'avez pas besoin de vous concentrer sur ce sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine.\n<br><strong>Boule de cristal de télépathie</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous pouvez communiquer par télépathie avec toutes les créatures que vous pouvez voir et qui se trouvent à 9 mètres maximum du capteur créé par le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>. Vous pouvez également utiliser une action pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> (sauvegarde DD 17) au travers du capteur sur l'une de ces créatures. Vous n'avez pas besoin de vous concentrer sur le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> pour le maintenir pendant toute sa durée, mais il prend fin si le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em> se termine. Une fois qu'il est utilisé, le pouvoir de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> de la <em>boule de cristal</em> ne peut être réutilisé avant le prochain lever de soleil.\n<br><strong>Boule de cristal de vision véritable</strong>. Tant que vous êtes en pleine scrutation avec cette <em>boule de cristal</em>, vous possédez la vision véritable dans un rayon de 36 mètres centré sur le capteur du sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=scrutation\">scrutation</a></em>.</p>",
+      "activities": {
+        "5OrwGscvIsTh4piO": {
+          "condition": "Lors d'une scrutation avec cette boule de cristal"
+        }
+      }
     },
     "Crystal Ball of True Seeing": {
       "name": "Boule de cristal de vision véritable",
@@ -652,7 +758,12 @@
     },
     "Cube of Force": {
       "name": "Cube de force",
-      "description": "<p>Ce cube fait environ 2,50 centimètres d'arête. Chaque face possède une marque distincte sur laquelle on peut appuyer. Le cube débute en possédant 36 charges, et il récupère 1d20 charges dépensées chaque jour au lever du soleil.\n<br>Vous pouvez utiliser une action pour appuyer sur l'une des faces du cube, tout en dépensant le nombre de charges associé à la face en question comme indiqué sur la table Faces du Cube de Force. Chaque face à son propre effet. Si le cube ne possède plus suffisamment de charges, rien ne se produit. Sinon, une barrière de force invisible apparaît, formant un cube de 4,50 mètres d'arête. La barrière est centrée sur vous, se déplace avec vous, et reste en place pendant 1 minute, jusqu'à ce que vous utilisiez une action pour appuyer sur la sixième face du cube, ou jusqu'à ce que le cube épuise toutes ses charges. Vous pouvez changer l'effet de la barrière en appuyant sur une face différente du cube et en dépensant les charges nécessaires, la durée d'apparition de la barrière est alors réinitialisée.\n<br>Si votre mouvement implique que la barrière entre en contact avec un objet solide qui ne peut pas passer au travers du cube, vous ne pouvez pas vous approcher plus de cet objet aussi longtemps que la barrière est activée.\n<br><table><tbody><tr><th class=\"center\">Face</th><th class=\"center\">Charges</th><th>Effet</th></tr><tr><td class=\"center\">1</td><td class=\"center\">1</td><td>Les gaz, vents, et brumes ne peuvent traverser la barrière.</td></tr><tr><td class=\"center\">2</td><td class=\"center\">2</td><td>Les matières non vivantes ne peuvent pas passer au travers de la barrière. Les murs, sols, et plafonds peuvent passer au travers à la discrétion du MD.</td></tr><tr><td class=\"center\">3</td><td class=\"center\">3</td><td>Les matières vivantes ne peuvent pas passer au travers de la barrière.</td></tr><tr><td class=\"center\">4</td><td class=\"center\">4</td><td>Les effets des sorts ne peuvent pas passer au travers de la barrière.</td></tr><tr><td class=\"center\">5</td><td class=\"center\">5</td><td>Rien ne peut passer au travers de la barrière. Les murs, sols, et plafonds peuvent passer au travers à la discrétion du MD.</td></tr><tr><td class=\"center\">6</td><td class=\"center\">0</td><td>La barrière est désactivée.</td></tr></tbody></table>\n<br>Le cube perd des charges lorsque la barrière est ciblée par certains sorts ou entre en contact avec certains effets de sorts ou d'objets magiques, comme indiqué dans la table ci-dessous.\n<br><table><tbody><tr><th>Sorts ou Objets</th><th>Charges perdues</th></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=desintegration\">Désintégration</a></em></td><td class=\"center\">1d12</td></tr><tr><td><em>Cor de destruction</em></td><td class=\"center\">1d10</td></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=passe-muraille\">Passe-muraille</a></em></td><td class=\"center\">1d6</td></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=rayons-prismatiques\">Rayons prismatiques</a></em></td><td class=\"center\">1d20</td></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=mur-de-feu\">Mur de feu</a></em></td><td class=\"center\">1d4</td></tr></tbody></table></p>"
+      "description": "<p>Ce cube fait environ 2,50 centimètres d'arête. Chaque face possède une marque distincte sur laquelle on peut appuyer. Le cube débute en possédant 36 charges, et il récupère 1d20 charges dépensées chaque jour au lever du soleil.\n<br>Vous pouvez utiliser une action pour appuyer sur l'une des faces du cube, tout en dépensant le nombre de charges associé à la face en question comme indiqué sur la table Faces du Cube de Force. Chaque face à son propre effet. Si le cube ne possède plus suffisamment de charges, rien ne se produit. Sinon, une barrière de force invisible apparaît, formant un cube de 4,50 mètres d'arête. La barrière est centrée sur vous, se déplace avec vous, et reste en place pendant 1 minute, jusqu'à ce que vous utilisiez une action pour appuyer sur la sixième face du cube, ou jusqu'à ce que le cube épuise toutes ses charges. Vous pouvez changer l'effet de la barrière en appuyant sur une face différente du cube et en dépensant les charges nécessaires, la durée d'apparition de la barrière est alors réinitialisée.\n<br>Si votre mouvement implique que la barrière entre en contact avec un objet solide qui ne peut pas passer au travers du cube, vous ne pouvez pas vous approcher plus de cet objet aussi longtemps que la barrière est activée.\n<br><table><tbody><tr><th class=\"center\">Face</th><th class=\"center\">Charges</th><th>Effet</th></tr><tr><td class=\"center\">1</td><td class=\"center\">1</td><td>Les gaz, vents, et brumes ne peuvent traverser la barrière.</td></tr><tr><td class=\"center\">2</td><td class=\"center\">2</td><td>Les matières non vivantes ne peuvent pas passer au travers de la barrière. Les murs, sols, et plafonds peuvent passer au travers à la discrétion du MD.</td></tr><tr><td class=\"center\">3</td><td class=\"center\">3</td><td>Les matières vivantes ne peuvent pas passer au travers de la barrière.</td></tr><tr><td class=\"center\">4</td><td class=\"center\">4</td><td>Les effets des sorts ne peuvent pas passer au travers de la barrière.</td></tr><tr><td class=\"center\">5</td><td class=\"center\">5</td><td>Rien ne peut passer au travers de la barrière. Les murs, sols, et plafonds peuvent passer au travers à la discrétion du MD.</td></tr><tr><td class=\"center\">6</td><td class=\"center\">0</td><td>La barrière est désactivée.</td></tr></tbody></table>\n<br>Le cube perd des charges lorsque la barrière est ciblée par certains sorts ou entre en contact avec certains effets de sorts ou d'objets magiques, comme indiqué dans la table ci-dessous.\n<br><table><tbody><tr><th>Sorts ou Objets</th><th>Charges perdues</th></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=desintegration\">Désintégration</a></em></td><td class=\"center\">1d12</td></tr><tr><td><em>Cor de destruction</em></td><td class=\"center\">1d10</td></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=passe-muraille\">Passe-muraille</a></em></td><td class=\"center\">1d6</td></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=rayons-prismatiques\">Rayons prismatiques</a></em></td><td class=\"center\">1d20</td></tr><tr><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=mur-de-feu\">Mur de feu</a></em></td><td class=\"center\">1d4</td></tr></tbody></table></p>",
+      "activities": {
+        "utility": {
+          "condition": "Il doit y avoir suffisamment de charges pour la face pressée, sinon l'action est perdue."
+        }
+      }
     },
     "Cubic Gate": {
       "name": "Cube des plans",
@@ -716,7 +827,12 @@
     },
     "Decanter of Endless Water": {
       "name": "Carafe intarissable",
-      "description": "<p>Cette flasque bouchée fait de petits clapotis lorsqu'elle est secouée, comme si elle contenait de l'eau. La carafe pèse 1 kilo.\n<br>Vous pouvez utiliser une action pour enlever le bouchon et prononcer l'un des trois mots de commande, après quoi une certaine quantité d'eau douce ou d'eau salée (selon votre choix) se déverse de la flasque. L'eau cesse de s'écouler au début de votre prochain tour. Choisissez l'une des options suivantes :\n<br>• « Ruisseau » produit 4 litres d'eau.\n<br>• « Fontaine » produit 20 litres d'eau.\n<br>• « Geyser » produit 120 litres d'eau qui apparaissent en un violent jet de 9 mètres de long et 30 centimètres de diamètre. En utilisant une action bonus pendant que vous tenez la carafe, vous pouvez braquer le jet sur une créature que vous pouvez voir et se trouvant à 9 mètres maximum de vous. La cible doit réussir un jet de sauvegarde de Force DD 13 sous peine de subir 1d4 dégâts contondants et être jetée à terre. Au lieu d'une créature, vous pouvez cibler un objet qui n'est ni porté ni transporté et dont le poids ne dépasse pas les 100 kilos. L'objet est soit mis à terre, soit repoussé de vous sur 4,50 mètres.</p>"
+      "description": "<p>Cette flasque bouchée fait de petits clapotis lorsqu'elle est secouée, comme si elle contenait de l'eau. La carafe pèse 1 kilo.\n<br>Vous pouvez utiliser une action pour enlever le bouchon et prononcer l'un des trois mots de commande, après quoi une certaine quantité d'eau douce ou d'eau salée (selon votre choix) se déverse de la flasque. L'eau cesse de s'écouler au début de votre prochain tour. Choisissez l'une des options suivantes :\n<br>• « Ruisseau » produit 4 litres d'eau.\n<br>• « Fontaine » produit 20 litres d'eau.\n<br>• « Geyser » produit 120 litres d'eau qui apparaissent en un violent jet de 9 mètres de long et 30 centimètres de diamètre. En utilisant une action bonus pendant que vous tenez la carafe, vous pouvez braquer le jet sur une créature que vous pouvez voir et se trouvant à 9 mètres maximum de vous. La cible doit réussir un jet de sauvegarde de Force DD 13 sous peine de subir 1d4 dégâts contondants et être jetée à terre. Au lieu d'une créature, vous pouvez cibler un objet qui n'est ni porté ni transporté et dont le poids ne dépasse pas les 100 kilos. L'objet est soit mis à terre, soit repoussé de vous sur 4,50 mètres.</p>",
+      "activities": {
+        "save": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Deck of Illusions": {
       "name": "Tarot fantasmagorique",
@@ -756,7 +872,12 @@
     },
     "Dimensional Shackles": {
       "name": "Menottes dimensionnelles",
-      "description": "<p>Vous pouvez utiliser votre action pour mettre ses menottes à une créature incapable d'agir. Les menottes s'ajustent pour convenir à des créatures de taille P, M ou G. En plus de servir de menottes banales, les menottes empêchent la créature qu'elles attachent d'utiliser tout moyen de déplacement extradimensionnel, ce qui inclut la téléportation ou le voyage vers d'autres plans d'existence. Elles n'empêchent pas la créature de passer au travers d'un portail interdimensionnel.\n<br>Vous, et toutes les créatures que vous désignez lorsque vous utilisez les chaînes, pouvez utiliser une action pour les enlever. Une fois tous les 30 jours, une créature attachée peut effectuer un jet de Force (Athlétisme) DD 30. En cas de réussite au jet, la créature brise les menottes et se libère. Les menottes sont détruites.</p>"
+      "description": "<p>Vous pouvez utiliser votre action pour mettre ses menottes à une créature incapable d'agir. Les menottes s'ajustent pour convenir à des créatures de taille P, M ou G. En plus de servir de menottes banales, les menottes empêchent la créature qu'elles attachent d'utiliser tout moyen de déplacement extradimensionnel, ce qui inclut la téléportation ou le voyage vers d'autres plans d'existence. Elles n'empêchent pas la créature de passer au travers d'un portail interdimensionnel.\n<br>Vous, et toutes les créatures que vous désignez lorsque vous utilisez les chaînes, pouvez utiliser une action pour les enlever. Une fois tous les 30 jours, une créature attachée peut effectuer un jet de Force (Athlétisme) DD 30. En cas de réussite au jet, la créature brise les menottes et se libère. Les menottes sont détruites.</p>",
+      "activities": {
+        "save": {
+          "condition": "Un créature de taille P, M ou G qui doit être neutralisée."
+        }
+      }
     },
     "Diplomat's Pack": {
       "name": "Paquetage de diplomate",
@@ -904,7 +1025,12 @@
     },
     "Feather Token Whip": {
       "name": "Plume  : Fouet",
-      "description": "<p>Ce tout petit objet ressemble à une plume. Différents types de plume magique existent, chacun possédant son propre effet. Le MD choisit le type de la plume ou le détermine aléatoirement.\n<br><table><tbody><tr><th class=\"center\">d100</th><th>Plume magique</th></tr><tr><td class=\"center\">01-20</td><td>Ancre</td></tr><tr><td class=\"center\">21-35</td><td>Oiseau</td></tr><tr><td class=\"center\">36-50</td><td>Éventail</td></tr><tr><td class=\"center\">51-65</td><td>Bateau cygne</td></tr><tr><td class=\"center\">66-90</td><td>Arbre</td></tr><tr><td class=\"center\">91-00</td><td>Fouet</td></tr></tbody></table>\n<br><strong>Ancre</strong>. Vous pouvez utiliser une action pour toucher un navire ou un bateau avec la plume. Pour les 24 prochaines heures, le vaisseau ne peut pas être déplacé par quelque moyen que ce soit. Toucher une seconde fois le vaisseau avec la plume met un terme à l'effet. Lorsque l'effet prend fin, la plume disparaît.\n<br><strong>Oiseau</strong>. Vous pouvez utiliser une action pour lancer la plume à 1,50 mètre dans les airs. La plume disparaît et un énorme oiseau multicolore prend sa place. L'oiseau possède les statistiques d'un roc, mais il obéit à vos ordres simples et ne peut pas attaquer. Il peut transporter jusqu'à 250 kilogrammes tout en volant à sa vitesse de vol maximale (24 km/heure pour un maximum de 216 km/jour, avec une heure de repos toutes les 3 heures de vol), ou 500 kilogrammes en volant à la moitié de sa vitesse de vol. L'oiseau disparaît après avoir parcouru autant que sa distance maximale de vol dans une journée, ou s'il tombe à 0 point de vie. Vous pouvez renvoyer l'oiseau en utilisant une action.\n<br><strong>Éventail</strong>. Si vous êtes sur un navire ou un bateau, vous pouvez utiliser une action pour lancer la plume de Quaal à 3 mètres en l'air. La plume disparaît, et un éventail géant en train de battre apparaît à sa place. L'éventail volette et crée un vent suffisamment puissant pour gonfler les voiles d'un navire, augmentant sa vitesse de 7,5 km/heure pendant 8 heures. Vous pouvez renvoyer l'éventail en utilisant une action.\n<br><strong>Bateau cygne</strong>. Vous pouvez utiliser une action pour toucher avec la plume une masse d'eau large d'au moins 18 mètres de diamètre. La plume disparaît, et un bateau de 15 mètres de long et 6 mètres de large ressemblant à un cygne prend sa place. Le bateau est autopropulsé et se déplace sur l'eau à la vitesse de 9 km/heure. Tant que vous êtes sur le bateau, vous pouvez utiliser une action pour lui ordonner de se déplacer ou de tourner d'un angle maximal de 90 degrés. Le bateau peut transporter jusqu'à 32 créatures de taille M ou inférieure. Une créature de taille G compte pour 4 créatures de taille M, tandis qu'une créature de taille TG compte pour 9 créatures de taille M. Le bateau reste pendant 24 puis il disparaît. Vous pouvez renvoyer le bateau en utilisant une action.\n<br><strong>Arbre</strong>. Vous devez vous trouver en extérieur pour utiliser cette plume de Quaal. Vous pouvez utiliser une action pour toucher avec la plume un espace inoccupé sur le sol. La plume disparaît et à sa place, un chêne non magique apparaît. L'arbre fait 18 mètres de haut et possède un tronc de 1,50 mètre de diamètre, et ses branches supérieures recouvrent une surface de 6 mètres de rayon.\n<br><strong>Fouet</strong>. Vous pouvez utiliser une action pour lancer la plume sur un point se trouvant à 3 mètres de vous. La plume disparaît, et un fouet en lévitation apparaît à sa place. Vous pouvez alors utiliser une action bonus pour effectuer une attaque au corps à corps avec un sort contre une créature se trouvant à 3 mètres ou moins du fouet, avec un bonus à l'attaque de +9. Si le coup touche, la cible subit 1d6 + 5 dégâts de force.\n<br>En utilisant une action bonus pendant votre tour, vous pouvez déplacer le fouet sur 6 mètres maximum et répéter l'attaque contre une créature se trouvant à 3 mètres ou moins de lui. Le fouet disparaît au bout d'une heure, lorsque vous utilisez une action pour le renvoyer, ou lorsque vous êtes incapable d'agir ou que vous mourrez.</p>"
+      "description": "<p>Ce tout petit objet ressemble à une plume. Différents types de plume magique existent, chacun possédant son propre effet. Le MD choisit le type de la plume ou le détermine aléatoirement.\n<br><table><tbody><tr><th class=\"center\">d100</th><th>Plume magique</th></tr><tr><td class=\"center\">01-20</td><td>Ancre</td></tr><tr><td class=\"center\">21-35</td><td>Oiseau</td></tr><tr><td class=\"center\">36-50</td><td>Éventail</td></tr><tr><td class=\"center\">51-65</td><td>Bateau cygne</td></tr><tr><td class=\"center\">66-90</td><td>Arbre</td></tr><tr><td class=\"center\">91-00</td><td>Fouet</td></tr></tbody></table>\n<br><strong>Ancre</strong>. Vous pouvez utiliser une action pour toucher un navire ou un bateau avec la plume. Pour les 24 prochaines heures, le vaisseau ne peut pas être déplacé par quelque moyen que ce soit. Toucher une seconde fois le vaisseau avec la plume met un terme à l'effet. Lorsque l'effet prend fin, la plume disparaît.\n<br><strong>Oiseau</strong>. Vous pouvez utiliser une action pour lancer la plume à 1,50 mètre dans les airs. La plume disparaît et un énorme oiseau multicolore prend sa place. L'oiseau possède les statistiques d'un roc, mais il obéit à vos ordres simples et ne peut pas attaquer. Il peut transporter jusqu'à 250 kilogrammes tout en volant à sa vitesse de vol maximale (24 km/heure pour un maximum de 216 km/jour, avec une heure de repos toutes les 3 heures de vol), ou 500 kilogrammes en volant à la moitié de sa vitesse de vol. L'oiseau disparaît après avoir parcouru autant que sa distance maximale de vol dans une journée, ou s'il tombe à 0 point de vie. Vous pouvez renvoyer l'oiseau en utilisant une action.\n<br><strong>Éventail</strong>. Si vous êtes sur un navire ou un bateau, vous pouvez utiliser une action pour lancer la plume de Quaal à 3 mètres en l'air. La plume disparaît, et un éventail géant en train de battre apparaît à sa place. L'éventail volette et crée un vent suffisamment puissant pour gonfler les voiles d'un navire, augmentant sa vitesse de 7,5 km/heure pendant 8 heures. Vous pouvez renvoyer l'éventail en utilisant une action.\n<br><strong>Bateau cygne</strong>. Vous pouvez utiliser une action pour toucher avec la plume une masse d'eau large d'au moins 18 mètres de diamètre. La plume disparaît, et un bateau de 15 mètres de long et 6 mètres de large ressemblant à un cygne prend sa place. Le bateau est autopropulsé et se déplace sur l'eau à la vitesse de 9 km/heure. Tant que vous êtes sur le bateau, vous pouvez utiliser une action pour lui ordonner de se déplacer ou de tourner d'un angle maximal de 90 degrés. Le bateau peut transporter jusqu'à 32 créatures de taille M ou inférieure. Une créature de taille G compte pour 4 créatures de taille M, tandis qu'une créature de taille TG compte pour 9 créatures de taille M. Le bateau reste pendant 24 puis il disparaît. Vous pouvez renvoyer le bateau en utilisant une action.\n<br><strong>Arbre</strong>. Vous devez vous trouver en extérieur pour utiliser cette plume de Quaal. Vous pouvez utiliser une action pour toucher avec la plume un espace inoccupé sur le sol. La plume disparaît et à sa place, un chêne non magique apparaît. L'arbre fait 18 mètres de haut et possède un tronc de 1,50 mètre de diamètre, et ses branches supérieures recouvrent une surface de 6 mètres de rayon.\n<br><strong>Fouet</strong>. Vous pouvez utiliser une action pour lancer la plume sur un point se trouvant à 3 mètres de vous. La plume disparaît, et un fouet en lévitation apparaît à sa place. Vous pouvez alors utiliser une action bonus pour effectuer une attaque au corps à corps avec un sort contre une créature se trouvant à 3 mètres ou moins du fouet, avec un bonus à l'attaque de +9. Si le coup touche, la cible subit 1d6 + 5 dégâts de force.\n<br>En utilisant une action bonus pendant votre tour, vous pouvez déplacer le fouet sur 6 mètres maximum et répéter l'attaque contre une créature se trouvant à 3 mètres ou moins de lui. Le fouet disparaît au bout d'une heure, lorsque vous utilisez une action pour le renvoyer, ou lorsque vous êtes incapable d'agir ou que vous mourrez.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Une action bonus est utilisée pour contrôler le fouet."
+        }
+      }
     },
     "Feed": {
       "name": "Fourrage",
@@ -980,23 +1106,48 @@
     },
     "Flame Tongue Greatsword": {
       "name": "Épée à deux mains ardente",
-      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>"
+      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attaque (enflammée)"
+        }
+      }
     },
     "Flame Tongue Longsword": {
       "name": "Épée longue ardente",
-      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>"
+      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attaque (enflammée)"
+        }
+      }
     },
     "Flame Tongue Rapier": {
       "name": "Rapière ardente",
-      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>"
+      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attaque (enflammée)"
+        }
+      }
     },
     "Flame Tongue Scimitar": {
       "name": "Cimeterre ardent",
-      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>"
+      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attaque (enflammée)"
+        }
+      }
     },
     "Flame Tongue Shortsword": {
       "name": "Épée courte ardente",
-      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>"
+      "description": "<p>Vous pouvez utiliser une action bonus pour prononcer le mot de commande de l'épée, ce qui fait jaillir des flammes de la lame. Ces flammes génèrent une lumière vive dans un rayon de 12 mètres et une lumière faible sur 12 mètres supplémentaires. Tant que l'épée est en feu, elle inflige 2d6 dégâts de feu supplémentaires à toute cible qu'elle touche. Les flammes perdurent jusqu'à ce que vous utilisiez une action bonus pour prononcer le mot de commande de nouveau, ou jusqu'à ce que vous lâchiez l'épée ou la rengainiez.</p>",
+      "activities": {
+        "Attack (Flaming)": {
+          "name": "Attaque (enflammée)"
+        }
+      }
     },
     "Flask": {
       "name": "Flasque ou chope (50 cl)",
@@ -1004,7 +1155,12 @@
     },
     "Flask of Holy Water": {
       "name": "Eau bénite (flasque)",
-      "description": "<p>Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature, en considérant l'eau bénite comme une arme improvisée. Si la cible est un fiélon ou mort-vivant, elle reçoit 2d6 dégâts radiant. Un clerc ou un paladin peut créer de l'eau bénite lors d'un rituel spécial. Le rituel dure 1 heure, consomme pour 25 po de poudre d'argent, et nécessite que le lanceur dépense un emplacement de sort de niveau 1.</p>"
+      "description": "<p>Au prix d'une action, vous pouvez lancer le contenu de cette flasque sur une créature à 1,50 mètre ou moins de vous, ou jeter le flacon jusqu'à 6 mètres, la brisant à l'impact. Dans les deux cas, faire une attaque à distance contre une créature, en considérant l'eau bénite comme une arme improvisée. Si la cible est un fiélon ou mort-vivant, elle reçoit 2d6 dégâts radiant. Un clerc ou un paladin peut créer de l'eau bénite lors d'un rituel spécial. Le rituel dure 1 heure, consomme pour 25 po de poudre d'argent, et nécessite que le lanceur dépense un emplacement de sort de niveau 1.</p>",
+      "activities": {
+        "attack": {
+          "condition": "La cible doit être un fiélon ou un mort-vivant."
+        }
+      }
     },
     "Flute": {
       "name": "Flûte",
@@ -1044,11 +1200,21 @@
     },
     "Gem of Brightness": {
       "name": "Gemme d'illumination",
-      "description": "<p>Ce prisme possède 50 charges. Tant que vous le tenez, vous pouvez utiliser une action pour prononcer l'un des trois mots de commande et ainsi provoquer l'un des trois effets suivants :\n<br>• Premier mot de commande : la gemme se met à émettre une forte lueur dans un rayon de 9 mètres et une faible lueur dans un rayon supplémentaire de 9 mètres. Cet effet ne dépense pas de charge. Il perdure jusqu'à ce que vous utilisiez une action bonus pour répéter le mot de commande ou jusqu'à ce que vous utilisiez une autre fonction de la gemme.\n<br>• Second mot de commande : Ce mot dépense 1 charge. La gemme tire un puissant rayon de lumière sur une créature que vous pouvez voir et se trouvant dans un rayon de 18 mètres de vous. La créature doit réussir un jet de sauvegarde de Constitution DD 15 sous peine d'être aveuglée pendant 1 minute. La créature peut retenter son jet de sauvegarde à la fin de chacun de ses tours, mettant un terme à l'effet qui l'affecte en cas de réussite au jet.\n<br>• Troisième mot de commande : Ce mot dépense 5 charges. La gemme rayonne d'une lumière aveuglante dans un cône de 9 mètres dont elle est l'origine. Chaque créature présente dans le cône doit effectuer un jet de sauvegarde comme si elle était la cible d'un rayon lumineux créé par le second mot de commande.\n<br>Lorsque toutes les charges de la gemme sont dépensées, la gemme devient un joyau non magique d'une valeur de 50 po.</p>"
+      "description": "<p>Ce prisme possède 50 charges. Tant que vous le tenez, vous pouvez utiliser une action pour prononcer l'un des trois mots de commande et ainsi provoquer l'un des trois effets suivants :\n<br>• Premier mot de commande : la gemme se met à émettre une forte lueur dans un rayon de 9 mètres et une faible lueur dans un rayon supplémentaire de 9 mètres. Cet effet ne dépense pas de charge. Il perdure jusqu'à ce que vous utilisiez une action bonus pour répéter le mot de commande ou jusqu'à ce que vous utilisiez une autre fonction de la gemme.\n<br>• Second mot de commande : Ce mot dépense 1 charge. La gemme tire un puissant rayon de lumière sur une créature que vous pouvez voir et se trouvant dans un rayon de 18 mètres de vous. La créature doit réussir un jet de sauvegarde de Constitution DD 15 sous peine d'être aveuglée pendant 1 minute. La créature peut retenter son jet de sauvegarde à la fin de chacun de ses tours, mettant un terme à l'effet qui l'affecte en cas de réussite au jet.\n<br>• Troisième mot de commande : Ce mot dépense 5 charges. La gemme rayonne d'une lumière aveuglante dans un cône de 9 mètres dont elle est l'origine. Chaque créature présente dans le cône doit effectuer un jet de sauvegarde comme si elle était la cible d'un rayon lumineux créé par le second mot de commande.\n<br>Lorsque toutes les charges de la gemme sont dépensées, la gemme devient un joyau non magique d'une valeur de 50 po.</p>",
+      "activities": {
+        "save": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Gem of Seeing": {
       "name": "Gemme de vision",
-      "description": "<p>Cette gemme possède 3 charges. En utilisant une action, vous pouvez prononcer le mot de commande de la gemme et dépenser 1 charge. Pour les 10 minutes qui suivent, vous obtenez la vision véritable à 36 mètres lorsque vous regardez au travers de la gemme. La gemme récupère 1d3 charges dépensées chaque jour au lever du soleil.</p>"
+      "description": "<p>Cette gemme possède 3 charges. En utilisant une action, vous pouvez prononcer le mot de commande de la gemme et dépenser 1 charge. Pour les 10 minutes qui suivent, vous obtenez la vision véritable à 36 mètres lorsque vous regardez au travers de la gemme. La gemme récupère 1d3 charges dépensées chaque jour au lever du soleil.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Giant Slayer Battleaxe": {
       "name": "Hache d'armes Tueuse de géant",
@@ -1100,7 +1266,12 @@
     },
     "Glamoured Studded Leather": {
       "name": "Armure de cuir clouté enchantée",
-      "description": "<p>Lorsque vous portez cette armure, vous obtenez un bonus de +1 à la CA. Vous pouvez également utiliser une action bonus pour prononcer le mot de commande de l'armure et faire que celle-ci prenne l'apparence de vêtements ou d'un autre type d'armure. Vous décidez l'apparence, les couleurs et le style, mais le poids et le volume restent les mêmes. L'illusion dure jusqu'à ce que vous utilisiez cette propriété de nouveau, ou que vous ôtiez l'armure.</p>"
+      "description": "<p>Lorsque vous portez cette armure, vous obtenez un bonus de +1 à la CA. Vous pouvez également utiliser une action bonus pour prononcer le mot de commande de l'armure et faire que celle-ci prenne l'apparence de vêtements ou d'un autre type d'armure. Vous décidez l'apparence, les couleurs et le style, mais le poids et le volume restent les mêmes. L'illusion dure jusqu'à ce que vous utilisiez cette propriété de nouveau, ou que vous ôtiez l'armure.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Glass Bottle": {
       "name": "Bouteille en verre",
@@ -1176,11 +1347,27 @@
     },
     "Greatsword of Life Stealing": {
       "name": "Épée à deux mains voleuse de vie",
-      "description": "<p>Lorsque vous attaquez une créature avec cette arme magique et obtenez un 20 au jet d'attaque, la cible subit 10 dégâts nécrotiques supplémentaires, à condition qu'elle ne soit pas une créature artificielle ou un mort-vivant. Vous gagnez un nombre de points de vie temporaires égal aux dégâts supplémentaires infligés.</p>"
+      "description": "<p>Lorsque vous attaquez une créature avec cette arme magique et obtenez un 20 au jet d'attaque, la cible subit 10 dégâts nécrotiques supplémentaires, à condition qu'elle ne soit pas une créature artificielle ou un mort-vivant. Vous gagnez un nombre de points de vie temporaires égal aux dégâts supplémentaires infligés.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Doit obtenir un 20 et la cible ne peut pas être un mort-vivant."
+        },
+        "utility": {
+          "condition": "Doit obtenir un 20 et la cible ne peut pas être un mort-vivant."
+        }
+      }
     },
     "Greatsword of Sharpness": {
       "name": "Épée à deux mains acérée",
-      "description": "<p>Lorsque vous attaquez un objet avec cette épée magique et le touchez, les dés de dégâts de votre arme sont maximisés contre cette cible.\n<br>Lorsque vous attaquez une créature avec cette épée et obtenez un 20 naturel à votre jet d'attaque, la cible subit 14 dégâts tranchants supplémentaires. Puis lancez un autre d20. Si vous obtenez de nouveau un 20 naturel, vous amputez la cible de l'un de ses membres, l'effet d'une telle perte est déterminé par le MD. Si la créature ne possède aucun membre à sectionner, vous tranchez une portion de son corps à la place.\n<br>De plus, vous pouvez prononcer le mot de commande de la lame pour qu'elle émette une lumière vive dans un rayon de 3 mètres et une lumière faible dans un rayon supplémentaire de 3 mètres. Répétez le mot de commande ou rengainez l'épée pour éteindre la lumière.</p>"
+      "description": "<p>Lorsque vous attaquez un objet avec cette épée magique et le touchez, les dés de dégâts de votre arme sont maximisés contre cette cible.\n<br>Lorsque vous attaquez une créature avec cette épée et obtenez un 20 naturel à votre jet d'attaque, la cible subit 14 dégâts tranchants supplémentaires. Puis lancez un autre d20. Si vous obtenez de nouveau un 20 naturel, vous amputez la cible de l'un de ses membres, l'effet d'une telle perte est déterminé par le MD. Si la créature ne possède aucun membre à sectionner, vous tranchez une portion de son corps à la place.\n<br>De plus, vous pouvez prononcer le mot de commande de la lame pour qu'elle émette une lumière vive dans un rayon de 3 mètres et une lumière faible dans un rayon supplémentaire de 3 mètres. Répétez le mot de commande ou rengainez l'épée pour éteindre la lumière.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Mot de commande."
+        },
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Greatsword of Wounding": {
       "name": "Épée à deux mains mordante",
@@ -1228,7 +1415,20 @@
     },
     "Hammer of Thunderbolts": {
       "name": "Marteau de tonnerre",
-      "description": "<p>Vous obtenez un bonus de +1 à l'attaque et aux dégâts réalisés avec cette arme magique.\n<br><strong>Fléau des géants (nécessite un lien)</strong>. Vous devez porter un <em><a href=\"https://www.aidedd.org/dnd/om.php?vf=ceinturon-de-force-de-geant\">ceinturon de force de géant</a></em><a href=\"https://www.aidedd.org/dnd/om.php?vf=ceinturon-de-force-de-geant\"> (n'importe laquelle) et des <em></em></a><em><a href=\"https://www.aidedd.org/dnd/om.php?vf=gantelets-de-puissance-d-ogre\">gantelets de puissance d'ogre</a></em> pour vous lier avec cette arme. Le lien se termine si vous enlevez l'un ou l'autre de ces objets. Tant que vous êtes lié avec cette arme et que vous la portez, votre Force augmente de 4 et peut dépasser 20, mais pas 30. Lorsque vous faites un 20 naturel sur un jet d'attaque réalisée avec cette arme contre un géant, le géant doit réussir un jet de sauvegarde de Constitution DD 17 ou mourir.\n<br>Le marteau possède également 5 charges. Tant que vous êtes lié avec lui, vous pouvez dépenser une charge et réaliser une attaque à distance avec le marteau, en le lançant comme s'il avait la propriété Lancer avec une portée nominale de 6 mètres et une portée maximale de 18 mètres. Si l'attaque réussit, le marteau déclenche un coup de tonnerre audible à 90 mètres. La cible et toute autre créature dans un rayon de 9 mètres autour doivent réussir un jet de sauvegarde de Constitution DD 17 ou être étourdis jusqu'à la fin de votre prochain tour. Le marteau récupère 1d4 + 1 charges dépensées chaque jour au lever du soleil.</p>"
+      "description": "<p>Vous obtenez un bonus de +1 à l'attaque et aux dégâts réalisés avec cette arme magique.\n<br><strong>Fléau des géants (nécessite un lien)</strong>. Vous devez porter un <em><a href=\"https://www.aidedd.org/dnd/om.php?vf=ceinturon-de-force-de-geant\">ceinturon de force de géant</a></em><a href=\"https://www.aidedd.org/dnd/om.php?vf=ceinturon-de-force-de-geant\"> (n'importe laquelle) et des <em></em></a><em><a href=\"https://www.aidedd.org/dnd/om.php?vf=gantelets-de-puissance-d-ogre\">gantelets de puissance d'ogre</a></em> pour vous lier avec cette arme. Le lien se termine si vous enlevez l'un ou l'autre de ces objets. Tant que vous êtes lié avec cette arme et que vous la portez, votre Force augmente de 4 et peut dépasser 20, mais pas 30. Lorsque vous faites un 20 naturel sur un jet d'attaque réalisée avec cette arme contre un géant, le géant doit réussir un jet de sauvegarde de Constitution DD 17 ou mourir.\n<br>Le marteau possède également 5 charges. Tant que vous êtes lié avec lui, vous pouvez dépenser une charge et réaliser une attaque à distance avec le marteau, en le lançant comme s'il avait la propriété Lancer avec une portée nominale de 6 mètres et une portée maximale de 18 mètres. Si l'attaque réussit, le marteau déclenche un coup de tonnerre audible à 90 mètres. La cible et toute autre créature dans un rayon de 9 mètres autour doivent réussir un jet de sauvegarde de Constitution DD 17 ou être étourdis jusqu'à la fin de votre prochain tour. Le marteau récupère 1d4 + 1 charges dépensées chaque jour au lever du soleil.</p>",
+      "activities": {
+        "Giant's Bane (On Crit)": {
+          "name": "Fléau des géants (Sur Crit)",
+          "chatFlavor": "Un géant doit réussir ou mourir"
+        },
+        "Hurl Hammer": {
+          "name": "Marteau foudroyant"
+        },
+        "Thunderclap": {
+          "name": "Coup de tonnerre",
+          "chatFlavor": "Réussir ou être étourdi"
+        }
+      }
     },
     "Hand Crossbow": {
       "name": "Arbalète de poing",
@@ -1296,7 +1496,21 @@
     },
     "Helm of Brilliance": {
       "name": "Heaume scintillant",
-      "description": "<p>Ce heaume éclatant est serti de 1d10 diamants, 2d10 rubis, 3d10 opales de feu et 4d10 opales. Toute gemme prélevée du heaume tombe en poussière. Lorsque toutes les gemmes sont enlevées ou détruites, le heaume perd sa magie.\n<br>Tant que vous en êtes équipé vous bénéficiez des avantages suivants :\n<br>• Vous pouvez utiliser une action pour lancer l'un des sorts suivants (sauvegarde DD 18), en utilisant l'une des gemmes du heaume d'un type donné comme composante : <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=lumiere-du-jour\">lumière du jour</a></em> (opale), <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=boule-de-feu\">boule de feu</a></em> (opale de feu), <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=rayons-prismatiques\">rayons prismatiques</a></em> (diamant) ou <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=mur-de-feu\">mur de feu</a></em> (rubis). La gemme est détruite lorsque le sort est lancé et disparaît du casque.\n<br>• Tant qu'il possède au moins un diamant, le heaume émet une lumière faible dans un rayon de 9 mètres lorsqu'au moins un mort-vivant se trouve dans cette zone. Tout mort-vivant qui débute son tour dans la zone subit 1d6 dégâts radiants.\n<br>• Tant que le heaume possède au moins un rubis, vous avez la résistance aux dégâts de feu.\n<br>• Tant que le heaume possède au moins une opale de feu, vous pouvez utiliser une action et prononcer le mot de commande pour qu'une des armes que vous tenez s'embrase. Les flammes émettent une lumière vive dans un rayon de 3 mètres et une lumière faible dans un rayon supplémentaire de 3 mètres. Les flammes sont inoffensives pour vous et pour l'arme en question. Lorsque vous touchez lors d'une attaque avec l'arme enflammée, la cible subit 1d6 dégâts de feu supplémentaire. Les flammes restent actives jusqu'à ce que vous utilisiez votre action bonus pour répéter le mot de commande ou jusqu'à ce que vous lâchiez ou rangiez l'arme.\n<br>Si vous êtes équipé du casque, lancez un d20 lorsque vous subissez des dégâts de feu dus à un jet de sauvegarde échoué contre un sort. Sur un résultat de 1 au dé, le heaume émet des rayons de lumière de toutes les gemmes restantes. Chaque créature, autre que vous, se trouvant dans un rayon de 18 mètres du heaume doit réussir un jet de sauvegarde de Dextérité DD 17 sous peine d'être frappée par un rayon, subissant un nombre de dégâts radiants égal au nombre de gemmes encore présentes sur le casque. Le heaume et les gemmes sont alors détruits.</p>"
+      "description": "<p>Ce heaume éclatant est serti de 1d10 diamants, 2d10 rubis, 3d10 opales de feu et 4d10 opales. Toute gemme prélevée du heaume tombe en poussière. Lorsque toutes les gemmes sont enlevées ou détruites, le heaume perd sa magie.\n<br>Tant que vous en êtes équipé vous bénéficiez des avantages suivants :\n<br>• Vous pouvez utiliser une action pour lancer l'un des sorts suivants (sauvegarde DD 18), en utilisant l'une des gemmes du heaume d'un type donné comme composante : <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=lumiere-du-jour\">lumière du jour</a></em> (opale), <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=boule-de-feu\">boule de feu</a></em> (opale de feu), <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=rayons-prismatiques\">rayons prismatiques</a></em> (diamant) ou <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=mur-de-feu\">mur de feu</a></em> (rubis). La gemme est détruite lorsque le sort est lancé et disparaît du casque.\n<br>• Tant qu'il possède au moins un diamant, le heaume émet une lumière faible dans un rayon de 9 mètres lorsqu'au moins un mort-vivant se trouve dans cette zone. Tout mort-vivant qui débute son tour dans la zone subit 1d6 dégâts radiants.\n<br>• Tant que le heaume possède au moins un rubis, vous avez la résistance aux dégâts de feu.\n<br>• Tant que le heaume possède au moins une opale de feu, vous pouvez utiliser une action et prononcer le mot de commande pour qu'une des armes que vous tenez s'embrase. Les flammes émettent une lumière vive dans un rayon de 3 mètres et une lumière faible dans un rayon supplémentaire de 3 mètres. Les flammes sont inoffensives pour vous et pour l'arme en question. Lorsque vous touchez lors d'une attaque avec l'arme enflammée, la cible subit 1d6 dégâts de feu supplémentaire. Les flammes restent actives jusqu'à ce que vous utilisiez votre action bonus pour répéter le mot de commande ou jusqu'à ce que vous lâchiez ou rangiez l'arme.\n<br>Si vous êtes équipé du casque, lancez un d20 lorsque vous subissez des dégâts de feu dus à un jet de sauvegarde échoué contre un sort. Sur un résultat de 1 au dé, le heaume émet des rayons de lumière de toutes les gemmes restantes. Chaque créature, autre que vous, se trouvant dans un rayon de 18 mètres du heaume doit réussir un jet de sauvegarde de Dextérité DD 17 sous peine d'être frappée par un rayon, subissant un nombre de dégâts radiants égal au nombre de gemmes encore présentes sur le casque. Le heaume et les gemmes sont alors détruits.</p>",
+      "activities": {
+        "Daylight (opal)": {
+          "name": "Lumière du jour (opale)"
+        },
+        "Fireball (fire opal)": {
+          "name": "Boule de feu (opale de feu)"
+        },
+        "Prismatic Spray (diamond)": {
+          "name": "Embruns prismatiques (diamant)"
+        },
+        "Wall of Fire (opal)": {
+          "name": "Mur de feu (rubis)"
+        }
+      }
     },
     "Helm of Comprehending Languages": {
       "name": "Heaume de compréhension des langues",
@@ -1304,7 +1518,16 @@
     },
     "Helm of Telepathy": {
       "name": "Heaume de télépathie",
-      "description": "<p>Tant que vous êtes équipé de ce casque, vous pouvez l'utiliser, par une action, pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> (sauvegarde DD 13). Aussi longtemps que vous maintenez votre concentration sur le sort, vous pouvez utiliser une action bonus pour envoyer un message télépathique à une créature sur laquelle vous vous concentrez. Elle peut répondre, en utilisant une action bonus, tant que vous continuez de vous concentrer sur elle. Tant que vous êtes concentré sur une créature en utilisant <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em>, vous pouvez utiliser le casque, par une action, pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> (sauvegarde DD 13) sur cette créature. Une fois utilisée, la capacité de suggestion ne peut être réutilisée avant le prochain lever de soleil.</p>"
+      "description": "<p>Tant que vous êtes équipé de ce casque, vous pouvez l'utiliser, par une action, pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em> (sauvegarde DD 13). Aussi longtemps que vous maintenez votre concentration sur le sort, vous pouvez utiliser une action bonus pour envoyer un message télépathique à une créature sur laquelle vous vous concentrez. Elle peut répondre, en utilisant une action bonus, tant que vous continuez de vous concentrer sur elle. Tant que vous êtes concentré sur une créature en utilisant <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=detection-des-pensees\">détection des pensées</a></em>, vous pouvez utiliser le casque, par une action, pour lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=suggestion\">suggestion</a></em> (sauvegarde DD 13) sur cette créature. Une fois utilisée, la capacité de suggestion ne peut être réutilisée avant le prochain lever de soleil.</p>",
+      "activities": {
+        "HG9ikbJ7bHYwKcug": {
+          "condition": "En se concentrant sur une créature avec détection des pensées"
+        },
+        "Telepathic Message": {
+          "name": "Message télépathique",
+          "condition": "En se concentrant sur une créature avec détection des pensées"
+        }
+      }
     },
     "Helm of Teleportation": {
       "name": "Heaume de téléportation",
@@ -1312,7 +1535,12 @@
     },
     "Hempen Rope (50 ft.)": {
       "name": "Corde en chanvre (15 m)",
-      "description": "<p>Une corde, qu'elle soit faite de chanvre ou de soie, possède 2 pv et peut être cassée avec un jet de Force DD 17.</span></p>"
+      "description": "<p>Une corde, qu'elle soit faite de chanvre ou de soie, possède 2 pv et peut être cassée avec un jet de Force DD 17.</span></p>",
+      "activities": {
+        "Burst": {
+          "name": "Rupture"
+        }
+      }
     },
     "Herbalism Kit": {
       "name": "Kit d'herboriste",
@@ -1368,7 +1596,15 @@
     },
     "Horn of Blasting": {
       "name": "Cor de dévastation",
-      "description": "<p>Vous pouvez utiliser une action pour prononcer le mot de commande du cor puis souffler dedans. Le cor produit alors une explosion tonitruante dans un cône de 9 mètres et qui est audible à 180 mètres à la ronde. Chaque créature présente dans le cône doit effectuer un jet de sauvegarde de Constitution DD 15. En cas d'échec, une créature subit 5d6 dégâts de tonnerre et est assourdie pendant 1 minute. En cas de réussite au jet, une créature ne subit que la moitié des dégâts et n'est pas assourdie. Les créatures et les objets faits de verre ou de cristal ont un désavantage à leur jet de sauvegarde et subissent 10d6 dégâts de tonnerre au lieu de 5d6.\n<br>Chaque utilisation de la magie du cor a 20 % de risque d'entraîner sa propre explosion. L'explosion inflige 10d6 dégâts de feu à celui qui souffle dedans et détruit le cor.</p>"
+      "description": "<p>Vous pouvez utiliser une action pour prononcer le mot de commande du cor puis souffler dedans. Le cor produit alors une explosion tonitruante dans un cône de 9 mètres et qui est audible à 180 mètres à la ronde. Chaque créature présente dans le cône doit effectuer un jet de sauvegarde de Constitution DD 15. En cas d'échec, une créature subit 5d6 dégâts de tonnerre et est assourdie pendant 1 minute. En cas de réussite au jet, une créature ne subit que la moitié des dégâts et n'est pas assourdie. Les créatures et les objets faits de verre ou de cristal ont un désavantage à leur jet de sauvegarde et subissent 10d6 dégâts de tonnerre au lieu de 5d6.\n<br>Chaque utilisation de la magie du cor a 20 % de risque d'entraîner sa propre explosion. L'explosion inflige 10d6 dégâts de feu à celui qui souffle dedans et détruit le cor.</p>",
+      "activities": {
+        "save": {
+          "condition": "Mot de commande du cor puis à souffler dedans."
+        },
+        "utility": {
+          "condition": "Mot de commande du cor puis à souffler dedans."
+        }
+      }
     },
     "Horseshoes of Speed": {
       "name": "Fers de rapidité",
@@ -1400,7 +1636,12 @@
     },
     "Instant Fortress": {
       "name": "Forteresse instantanée",
-      "description": "<p>Vous pouvez utiliser une action pour poser sur le sol ce cube métallique de 2,50 centimètres d'arête et prononcer le mot de commande. Le cube grandit rapidement jusqu'à prendre la forme d'une forteresse qui reste en place jusqu'à ce que vous utilisiez une action pour prononcer le mot de commande qui l'annule (mot de commande qui ne fonctionne que lorsque la forteresse est vide).\n<br>La forteresse est une tour carrée de 6 mètres de côté et de 9 mètres de haut, qui possède des meurtrières sur chacune de ses faces et des créneaux à son sommet. Son intérieur est divisé en deux niveaux, reliés par une échelle qui court le long d'un mur. L'échelle se termine au niveau d'une trappe donnant sur le toit. Lorsqu'elle est activée, la tour possède une porte sur le mur qui vous fait face. La porte ne s'ouvre que sur votre demande, ce qui vous prend une action bonus. Elle est immunisée au sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=deblocage\">déblocage</a></em> ou à toute autre magie similaire, comme un carillon d'ouverture.\n<br>Chaque créature présente dans la zone où la forteresse apparaît doit effectuer un jet de sauvegarde de Dextérité DD 15, subissant 10d10 dégâts contondants en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\n<br>Dans les deux cas, la créature est repoussée dans un espace inoccupé en dehors, mais à côté, de la forteresse. Les objets dans la zone qui ne sont pas portés ni transportés subissent ces dégâts et sont repoussés automatiquement.\n<br>La tour est faite en adamantium, et sa magie l'empêche d'être renversée. Le toit, la porte, et les murs ont chacun 100 points de vie, une immunité aux dégâts des armes non magiques à l'exception des armes de siège, et la résistance à tous les autres types de dégâts. Seul un sort de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=souhait\">souhait</a></em> peut réparer la forteresse (cette utilisation du sort compte comme une imitation d'un sort de niveau 8 ou supérieur). Chaque sort de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=souhait\">souhait</a></em> lancé rend 50 points de vie à un mur, au toit, ou à la porte.</p>"
+      "description": "<p>Vous pouvez utiliser une action pour poser sur le sol ce cube métallique de 2,50 centimètres d'arête et prononcer le mot de commande. Le cube grandit rapidement jusqu'à prendre la forme d'une forteresse qui reste en place jusqu'à ce que vous utilisiez une action pour prononcer le mot de commande qui l'annule (mot de commande qui ne fonctionne que lorsque la forteresse est vide).\n<br>La forteresse est une tour carrée de 6 mètres de côté et de 9 mètres de haut, qui possède des meurtrières sur chacune de ses faces et des créneaux à son sommet. Son intérieur est divisé en deux niveaux, reliés par une échelle qui court le long d'un mur. L'échelle se termine au niveau d'une trappe donnant sur le toit. Lorsqu'elle est activée, la tour possède une porte sur le mur qui vous fait face. La porte ne s'ouvre que sur votre demande, ce qui vous prend une action bonus. Elle est immunisée au sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=deblocage\">déblocage</a></em> ou à toute autre magie similaire, comme un carillon d'ouverture.\n<br>Chaque créature présente dans la zone où la forteresse apparaît doit effectuer un jet de sauvegarde de Dextérité DD 15, subissant 10d10 dégâts contondants en cas d'échec, ou la moitié de ces dégâts en cas de réussite.\n<br>Dans les deux cas, la créature est repoussée dans un espace inoccupé en dehors, mais à côté, de la forteresse. Les objets dans la zone qui ne sont pas portés ni transportés subissent ces dégâts et sont repoussés automatiquement.\n<br>La tour est faite en adamantium, et sa magie l'empêche d'être renversée. Le toit, la porte, et les murs ont chacun 100 points de vie, une immunité aux dégâts des armes non magiques à l'exception des armes de siège, et la résistance à tous les autres types de dégâts. Seul un sort de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=souhait\">souhait</a></em> peut réparer la forteresse (cette utilisation du sort compte comme une imitation d'un sort de niveau 8 ou supérieur). Chaque sort de <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=souhait\">souhait</a></em> lancé rend 50 points de vie à un mur, au toit, ou à la porte.</p>",
+      "activities": {
+        "save": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Ioun Stone of Absorption": {
       "name": "Pierre de Ioun d'Absorption",
@@ -1460,7 +1701,12 @@
     },
     "Iron Bands of Binding": {
       "name": "Liens de fer",
-      "description": "<p>Cette sphère de fer rouillé mesure 7,50 centimètres de diamètre et pèse 500 grammes. Vous pouvez utiliser une action pour prononcer le mot de commande et lancer la sphère sur une créature de taille G ou inférieure que vous pouvez voir et située dans un rayon de 18 mètres autour de vous. Alors que la sphère progresse dans les airs, elle s'ouvre en un enchevêtrement de bandelettes métalliques.\n<br>Effectuez un jet d'attaque à distance avec un bonus à l'attaque égal à votre modificateur de Dextérité + votre bonus de maîtrise. Si vous touchez, la cible est entravée jusqu'à ce que vous utilisiez une action bonus pour répéter le mot de commande et ainsi la libérer. En faisant cela, ou en échouant votre jet d'attaque, les bandelettes se rétractent et reprennent une nouvelle fois l'aspect d'une sphère.\n<br>Une créature, dont celle qui est entravée, peut utiliser une action pour effectuer un jet de Force DD 20 pour briser les bandelettes métalliques. En cas de réussite, l'objet est détruit, et la créature entravée est libérée. Si le jet échoue, toute tentative future tentée par la même créature échouera automatiquement au cours des 24 prochaines heures. Une fois que les bandelettes sont utilisées, elles ne peuvent être réutilisées avant le prochain lever le soleil.</p>"
+      "description": "<p>Cette sphère de fer rouillé mesure 7,50 centimètres de diamètre et pèse 500 grammes. Vous pouvez utiliser une action pour prononcer le mot de commande et lancer la sphère sur une créature de taille G ou inférieure que vous pouvez voir et située dans un rayon de 18 mètres autour de vous. Alors que la sphère progresse dans les airs, elle s'ouvre en un enchevêtrement de bandelettes métalliques.\n<br>Effectuez un jet d'attaque à distance avec un bonus à l'attaque égal à votre modificateur de Dextérité + votre bonus de maîtrise. Si vous touchez, la cible est entravée jusqu'à ce que vous utilisiez une action bonus pour répéter le mot de commande et ainsi la libérer. En faisant cela, ou en échouant votre jet d'attaque, les bandelettes se rétractent et reprennent une nouvelle fois l'aspect d'une sphère.\n<br>Une créature, dont celle qui est entravée, peut utiliser une action pour effectuer un jet de Force DD 20 pour briser les bandelettes métalliques. En cas de réussite, l'objet est détruit, et la créature entravée est libérée. Si le jet échoue, toute tentative future tentée par la même créature échouera automatiquement au cours des 24 prochaines heures. Une fois que les bandelettes sont utilisées, elles ne peuvent être réutilisées avant le prochain lever le soleil.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Mot de commande. La créature ciblée doit être de taille TG ou inférieure."
+        }
+      }
     },
     "Iron Flask": {
       "name": "Flasque de fer",
@@ -1496,7 +1742,18 @@
     },
     "Javelin of Lightning": {
       "name": "Javeline de foudre",
-      "description": "<p>Cette javeline est une arme magique. Quand vous la lancez et prononcez son mot de commande, elle se transforme en un éclair formant une ligne de 1,50 mètre de large qui s'étend de vous jusqu'à une cible éloignée de 36 mètres au maximum. Chaque créature sur la ligne à l'exception de vous et de la cible subit 4d6 dégâts de foudre. Un jet de sauvegarde de Dextérité DD 13 réussit permet de réduire ces dégâts de moitié.\n<br>L'éclair se retransforme en javeline une fois qu'il atteint sa cible. Faites une attaque à distance contre la cible. Si vous la touchez, elle subit les dégâts de la javeline plus 4d6 dégâts de foudre. Ce pouvoir ne peut plus être utilisé jusqu'au prochain lever du soleil. Entre temps la javeline peut toujours être utilisée comme une arme magique.</p>"
+      "description": "<p>Cette javeline est une arme magique. Quand vous la lancez et prononcez son mot de commande, elle se transforme en un éclair formant une ligne de 1,50 mètre de large qui s'étend de vous jusqu'à une cible éloignée de 36 mètres au maximum. Chaque créature sur la ligne à l'exception de vous et de la cible subit 4d6 dégâts de foudre. Un jet de sauvegarde de Dextérité DD 13 réussit permet de réduire ces dégâts de moitié.\n<br>L'éclair se retransforme en javeline une fois qu'il atteint sa cible. Faites une attaque à distance contre la cible. Si vous la touchez, elle subit les dégâts de la javeline plus 4d6 dégâts de foudre. Ce pouvoir ne peut plus être utilisé jusqu'au prochain lever du soleil. Entre temps la javeline peut toujours être utilisée comme une arme magique.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Mot de commande."
+        },
+        "save": {
+          "condition": "Mot de commande."
+        },
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Jeweler's Tools": {
       "name": "Outils de bijoutier",
@@ -1628,11 +1885,27 @@
     },
     "Longsword of Life Stealing": {
       "name": "Épée longue voleuse de vie",
-      "description": "<p>Lorsque vous attaquez une créature avec cette arme magique et obtenez un 20 au jet d'attaque, la cible subit 10 dégâts nécrotiques supplémentaires, à condition qu'elle ne soit pas une créature artificielle ou un mort-vivant. Vous gagnez un nombre de points de vie temporaires égal aux dégâts supplémentaires infligés.</p>"
+      "description": "<p>Lorsque vous attaquez une créature avec cette arme magique et obtenez un 20 au jet d'attaque, la cible subit 10 dégâts nécrotiques supplémentaires, à condition qu'elle ne soit pas une créature artificielle ou un mort-vivant. Vous gagnez un nombre de points de vie temporaires égal aux dégâts supplémentaires infligés.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Doit obtenir un 20 et la cible ne peut pas être un mort-vivant."
+        },
+        "utility": {
+          "condition": "Doit obtenir un 20 et la cible ne peut pas être un mort-vivant."
+        }
+      }
     },
     "Longsword of Sharpness": {
       "name": "Épée longue acérée",
-      "description": "<p>Lorsque vous attaquez un objet avec cette épée magique et le touchez, les dés de dégâts de votre arme sont maximisés contre cette cible.\n<br>Lorsque vous attaquez une créature avec cette épée et obtenez un 20 naturel à votre jet d'attaque, la cible subit 14 dégâts tranchants supplémentaires. Puis lancez un autre d20. Si vous obtenez de nouveau un 20 naturel, vous amputez la cible de l'un de ses membres, l'effet d'une telle perte est déterminé par le MD. Si la créature ne possède aucun membre à sectionner, vous tranchez une portion de son corps à la place.\n<br>De plus, vous pouvez prononcer le mot de commande de la lame pour qu'elle émette une lumière vive dans un rayon de 3 mètres et une lumière faible dans un rayon supplémentaire de 3 mètres. Répétez le mot de commande ou rengainez l'épée pour éteindre la lumière.</p>"
+      "description": "<p>Lorsque vous attaquez un objet avec cette épée magique et le touchez, les dés de dégâts de votre arme sont maximisés contre cette cible.\n<br>Lorsque vous attaquez une créature avec cette épée et obtenez un 20 naturel à votre jet d'attaque, la cible subit 14 dégâts tranchants supplémentaires. Puis lancez un autre d20. Si vous obtenez de nouveau un 20 naturel, vous amputez la cible de l'un de ses membres, l'effet d'une telle perte est déterminé par le MD. Si la créature ne possède aucun membre à sectionner, vous tranchez une portion de son corps à la place.\n<br>De plus, vous pouvez prononcer le mot de commande de la lame pour qu'elle émette une lumière vive dans un rayon de 3 mètres et une lumière faible dans un rayon supplémentaire de 3 mètres. Répétez le mot de commande ou rengainez l'épée pour éteindre la lumière.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Mot de commande."
+        },
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Longsword of Wounding": {
       "name": "Épée longue mordante",
@@ -1700,7 +1973,15 @@
     },
     "Manacles": {
       "name": "Menottes",
-      "description": "<p>Ces menottes métalliques servent pour une créature de taille Petite ou Moyenne. Se libérer des menottes nécessite un jet de Dextérité DD 20 réussi. Briser les menottes nécessite un jet de Force DD 20 réussi. Chaque paire de menottes est livrée avec une clé. Sans la clé, une créature qui maîtrise les outils de voleur peut ouvrir les menottes en réussissant un jet de Dextérité DD 15. Les menottes ont 15 points de vie.</span></p>"
+      "description": "<p>Ces menottes métalliques servent pour une créature de taille Petite ou Moyenne. Se libérer des menottes nécessite un jet de Dextérité DD 20 réussi. Briser les menottes nécessite un jet de Force DD 20 réussi. Chaque paire de menottes est livrée avec une clé. Sans la clé, une créature qui maîtrise les outils de voleur peut ouvrir les menottes en réussissant un jet de Dextérité DD 15. Les menottes ont 15 points de vie.</span></p>",
+      "activities": {
+        "check": {
+          "condition": "La créature doit être de taille P ou M."
+        },
+        "save": {
+          "condition": "La créature doit être de taille P ou M."
+        }
+      }
     },
     "Mantle of Spell Resistance": {
       "name": "Manteau de résistance aux sorts",
@@ -1708,11 +1989,21 @@
     },
     "Manual of Bodily Health": {
       "name": "Manuel de vitalité",
-      "description": "<p>Ce livre contient des conseils de santé et d'alimentation, et ses mots sont chargés de magie. Si vous passez 48 heures sur une période de 6 jours ou moins à étudier le contenu du livre et pratiquez ses lignes directrices, votre Constitution augmente de 2, tout comme votre maximum pour cette caractéristique. Le manuel perd alors sa magie, mais la retrouvera dans un siècle.</p>"
+      "description": "<p>Ce livre contient des conseils de santé et d'alimentation, et ses mots sont chargés de magie. Si vous passez 48 heures sur une période de 6 jours ou moins à étudier le contenu du livre et pratiquez ses lignes directrices, votre Constitution augmente de 2, tout comme votre maximum pour cette caractéristique. Le manuel perd alors sa magie, mais la retrouvera dans un siècle.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Le livre doit être terminé en 6 jours ou moins."
+        }
+      }
     },
     "Manual of Gainful Exercise": {
       "name": "Manuel d’exercices physiques",
-      "description": "<p>Ce livre contient des exercices de remise en forme physique, et ses mots sont chargés de magie. Si vous passez 48 heures sur une période de 6 jours ou moins à étudier le contenu du livre et pratiquez ses lignes directrices, votre Force augmente de 2, tout comme votre maximum pour cette caractéristique. Le manuel perd alors sa magie, mais la retrouvera dans un siècle.</p>"
+      "description": "<p>Ce livre contient des exercices de remise en forme physique, et ses mots sont chargés de magie. Si vous passez 48 heures sur une période de 6 jours ou moins à étudier le contenu du livre et pratiquez ses lignes directrices, votre Force augmente de 2, tout comme votre maximum pour cette caractéristique. Le manuel perd alors sa magie, mais la retrouvera dans un siècle.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Le livre doit être terminé en 6 jours ou moins."
+        }
+      }
     },
     "Manual of Golems": {
       "name": "Manuel des golems",
@@ -1720,7 +2011,12 @@
     },
     "Manual of Quickness of Action": {
       "name": "Manuel de vivacité",
-      "description": "<p>Ce livre contient des exercices de coordination et d'équilibre, et ses mots sont chargés de magie. Si vous passez 48 heures sur une période de 6 jours ou moins à étudier le contenu du livre et pratiquez ses lignes directrices, votre Dextérité augmente de 2, tout comme votre maximum pour cette caractéristique. Le manuel perd alors sa magie, mais la retrouvera dans un siècle.</p>"
+      "description": "<p>Ce livre contient des exercices de coordination et d'équilibre, et ses mots sont chargés de magie. Si vous passez 48 heures sur une période de 6 jours ou moins à étudier le contenu du livre et pratiquez ses lignes directrices, votre Dextérité augmente de 2, tout comme votre maximum pour cette caractéristique. Le manuel perd alors sa magie, mais la retrouvera dans un siècle.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Le livre doit être terminé en 6 jours ou moins."
+        }
+      }
     },
     "Map Case": {
       "name": "Étui à cartes",
@@ -1776,7 +2072,12 @@
     },
     "Mirror of Life Trapping": {
       "name": "Miroir d'emprisonnement",
-      "description": "<p>Quand ce miroir de 1,20 mètre de haut est regardé indirectement, sa surface montre de pâles images de créatures. Le miroir pèse 25 kg et a une CA de 11, 10 points de vie et la vulnérabilité aux dégâts contondants. Il se brise en éclats et est détruit s'il tombe à 0 point de vie.\n<br>Si le miroir est accroché à une surface verticale et que vous êtes à 1,50 mètre ou moins de lui, vous pouvez utiliser une action pour prononcer son mot de commande et l'activer. Il reste actif tant que vous n'utilisez pas une autre action pour le désactiver de la même façon.\n<br>Toute créature autre que vous qui voit son reflet dans le miroir alors qu'il est actif et se situe à 6 mètres ou moins du miroir doit réussir un jet de sauvegarde de Charisme DD 15 ou être emprisonnée avec tout ce qu'elle porte dans une des douze cellules extradimensionnelles du miroir. Ce jet de sauvegarde se fait avec un avantage si la créature connaît la vraie nature du miroir. Les créatures artificielles réussissent automatiquement le jet de sauvegarde.\n<br>Une cellule extradimensionnelle est un espace infini rempli d'un épais brouillard réduisant la visibilité à 3 mètres. Les créatures emprisonnées dans le miroir ne vieillissent pas et n'ont pas besoin de boire, de manger ou de dormir. Il est possible de s'échapper de l'intérieur de ces cellules avec l'aide d'une magie permettant le voyage interplanaire, sinon toute créature y est coincée jusqu'à ce qu'on l'en libère.\n<br>Si le miroir piège quelqu'un alors que les douze cellules sont déjà occupées, il libère aléatoirement un des prisonniers pour faire de la place au nouvel arrivant. Une créature libérée apparaît dos à la glace dans l'espace inoccupé le plus proche du miroir. Toutes les créatures sont libérées si le miroir est brisé.\n<br>Tant que vous êtes à 1,50 mètre ou moins du miroir, vous pouvez utiliser une action pour prononcer le nom d'une créature emprisonnée ou le numéro d'une des cellules. La créature appelée ou la cellule choisie apparaît alors sous forme d'image à la surface du miroir. Vous pouvez alors communiquer normalement avec la créature. De la même façon vous pouvez utiliser une action pour prononcer un second mot de commande et libérer la créature piégée. Elle apparaît alors dos au miroir dans l'espace inoccupé le plus proche, avec toutes ses possessions.</p>"
+      "description": "<p>Quand ce miroir de 1,20 mètre de haut est regardé indirectement, sa surface montre de pâles images de créatures. Le miroir pèse 25 kg et a une CA de 11, 10 points de vie et la vulnérabilité aux dégâts contondants. Il se brise en éclats et est détruit s'il tombe à 0 point de vie.\n<br>Si le miroir est accroché à une surface verticale et que vous êtes à 1,50 mètre ou moins de lui, vous pouvez utiliser une action pour prononcer son mot de commande et l'activer. Il reste actif tant que vous n'utilisez pas une autre action pour le désactiver de la même façon.\n<br>Toute créature autre que vous qui voit son reflet dans le miroir alors qu'il est actif et se situe à 6 mètres ou moins du miroir doit réussir un jet de sauvegarde de Charisme DD 15 ou être emprisonnée avec tout ce qu'elle porte dans une des douze cellules extradimensionnelles du miroir. Ce jet de sauvegarde se fait avec un avantage si la créature connaît la vraie nature du miroir. Les créatures artificielles réussissent automatiquement le jet de sauvegarde.\n<br>Une cellule extradimensionnelle est un espace infini rempli d'un épais brouillard réduisant la visibilité à 3 mètres. Les créatures emprisonnées dans le miroir ne vieillissent pas et n'ont pas besoin de boire, de manger ou de dormir. Il est possible de s'échapper de l'intérieur de ces cellules avec l'aide d'une magie permettant le voyage interplanaire, sinon toute créature y est coincée jusqu'à ce qu'on l'en libère.\n<br>Si le miroir piège quelqu'un alors que les douze cellules sont déjà occupées, il libère aléatoirement un des prisonniers pour faire de la place au nouvel arrivant. Une créature libérée apparaît dos à la glace dans l'espace inoccupé le plus proche du miroir. Toutes les créatures sont libérées si le miroir est brisé.\n<br>Tant que vous êtes à 1,50 mètre ou moins du miroir, vous pouvez utiliser une action pour prononcer le nom d'une créature emprisonnée ou le numéro d'une des cellules. La créature appelée ou la cellule choisie apparaît alors sous forme d'image à la surface du miroir. Vous pouvez alors communiquer normalement avec la créature. De la même façon vous pouvez utiliser une action pour prononcer un second mot de commande et libérer la créature piégée. Elle apparaît alors dos au miroir dans l'espace inoccupé le plus proche, avec toutes ses possessions.</p>",
+      "activities": {
+        "save": {
+          "condition": "Mot de commande. La cible doit pouvoir voir son reflet."
+        }
+      }
     },
     "Mithral Breastplate": {
       "name": "Cuirasse de mithral",
@@ -1840,7 +2141,30 @@
     },
     "Necklace of Prayer Beads": {
       "name": "Chapelet mystique",
-      "description": "<p>Ce collier possède 1d4 + 2 perles magiques fabriquées à partir d'aigue-marine, de perle noire ou de topaze. Il comporte également de nombreuses perles non magiques fabriquées à partir de pierres telles que l'ambre, l'héliotrope, la citrine, le corail, le jade, la perle ou le quartz. Si une perle magique est retirée du collier, celle-ci perd sa magie.\n<br>Six types de perles magiques existent. Le MD décide le type de chaque perle du collier ou le détermine de façon aléatoire. Un collier peut avoir plus d'une perle de même type. Pour en utiliser une, vous devez porter le collier. Chaque perle contient un sort que vous pouvez lancer à partir d'elle par une action bonus (en utilisant le DD de sauvegarde de vos sorts si une sauvegarde est nécessaire). Une fois que le sort d'une perle magique est lancé, cette perle ne peut plus être utilisée à nouveau jusqu'au prochain lever du soleil.\n<br><table><tbody><tr><th class=\"center\">d20</th><th>Perle de ...</th><th>Sort</th></tr><tr><td class=\"center\">1–6</td><td>Bénédiction</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=benediction\">bénédiction</a></em></td></tr><tr><td class=\"center\">7–12</td><td>Soins</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=soins\">soins</a></em> (niveau 2) ou <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=restauration-partielle\">restauration partielle</a></em></td></tr><tr><td class=\"center\">13-16</td><td>Faveur</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=restauration-superieure\">restauration supérieure</a></em></td></tr><tr><td class=\"center\">17-18</td><td>Châtiment</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=chatiment-lumineux\">châtiment lumineux</a></em></td></tr><tr><td class=\"center\">19</td><td>Invocation</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=allie-planaire\">allié planaire</a></em></td></tr><tr><td class=\"center\">20</td><td>Vent</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=marche-sur-le-vent\">marche sur le vent</a></em></td></tr></tbody></table></p>"
+      "description": "<p>Ce collier possède 1d4 + 2 perles magiques fabriquées à partir d'aigue-marine, de perle noire ou de topaze. Il comporte également de nombreuses perles non magiques fabriquées à partir de pierres telles que l'ambre, l'héliotrope, la citrine, le corail, le jade, la perle ou le quartz. Si une perle magique est retirée du collier, celle-ci perd sa magie.\n<br>Six types de perles magiques existent. Le MD décide le type de chaque perle du collier ou le détermine de façon aléatoire. Un collier peut avoir plus d'une perle de même type. Pour en utiliser une, vous devez porter le collier. Chaque perle contient un sort que vous pouvez lancer à partir d'elle par une action bonus (en utilisant le DD de sauvegarde de vos sorts si une sauvegarde est nécessaire). Une fois que le sort d'une perle magique est lancé, cette perle ne peut plus être utilisée à nouveau jusqu'au prochain lever du soleil.\n<br><table><tbody><tr><th class=\"center\">d20</th><th>Perle de ...</th><th>Sort</th></tr><tr><td class=\"center\">1–6</td><td>Bénédiction</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=benediction\">bénédiction</a></em></td></tr><tr><td class=\"center\">7–12</td><td>Soins</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=soins\">soins</a></em> (niveau 2) ou <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=restauration-partielle\">restauration partielle</a></em></td></tr><tr><td class=\"center\">13-16</td><td>Faveur</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=restauration-superieure\">restauration supérieure</a></em></td></tr><tr><td class=\"center\">17-18</td><td>Châtiment</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=chatiment-lumineux\">châtiment lumineux</a></em></td></tr><tr><td class=\"center\">19</td><td>Invocation</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=allie-planaire\">allié planaire</a></em></td></tr><tr><td class=\"center\">20</td><td>Vent</td><td><em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=marche-sur-le-vent\">marche sur le vent</a></em></td></tr></tbody></table></p>",
+      "activities": {
+        "Bead of Blessing (bless)": {
+          "name": "Perle de Bénédiction (bénédiction)"
+        },
+        "Bead of Curing (cure wounds)": {
+          "name": "Perle de Guérison (soins)"
+        },
+        "Bead of Curing (lesser restoration)": {
+          "name": "Perle de Guérison (restauration partielle)"
+        },
+        "Bead of Favor (greater restoration)": {
+          "name": "Perle de Faveur (restauration suprême)"
+        },
+        "Bead of Smiting (branding smite)": {
+          "name": "Perle de Châtiment (châtiment révélateur)"
+        },
+        "Bead of Summons (planar ally)": {
+          "name": "Perle de Convocation (allié planaire)"
+        },
+        "Bead of Wind Walking (wind walk)": {
+          "name": "Perle de Marchevent (vent divin)"
+        }
+      }
     },
     "Net": {
       "name": "Filet",
@@ -1860,27 +2184,75 @@
     },
     "Nine Lives Stealer Greatsword": {
       "name": "Épée à deux mains Voleuse de vies",
-      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>"
+      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        },
+        "save": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        }
+      }
     },
     "Nine Lives Stealer Longsword": {
       "name": "Épée longue Voleuse de vies",
-      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>"
+      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        },
+        "save": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        }
+      }
     },
     "Nine Lives Stealer Rapier": {
       "name": "Rapière Voleuse de vies",
-      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>"
+      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        },
+        "save": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        }
+      }
     },
     "Nine Lives Stealer Scimitar": {
       "name": "Cimeterre Voleur de vies",
-      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>"
+      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        },
+        "save": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        }
+      }
     },
     "Nine Lives Stealer Shortsword": {
       "name": "Épée courte Voleuse de vies",
-      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>"
+      "description": "<p>Vous gagnez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.\n<br>L'épée possède 1d8 + 1 charges. Quand vous obtenez un coup critique contre une créature à qui il reste moins de 100 points de vies, celle-ci doit réussir un jet de sauvegarde de Constitution DD 15 ou être tuée instantanément, sa force vitale étant arrachée de son corps (les morts-vivants et les créatures artificielles sont immunisés). L'épée perd 1 charge si la créature est tuée. Elle perd cette propriété une fois toutes les charges épuisées.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        },
+        "save": {
+          "condition": "Coup critique sur une créature de 100 points de vie ou moins. Les artificiels et les morts-vivants sont immunisé."
+        }
+      }
     },
     "Oathbow": {
       "name": "Arc du serment",
-      "description": "<p>Quand vous encochez une flèche à la corde de cet arc, il murmure en elfique : « Prompte défaite à mes ennemis ». Lorsque vous faites une attaque à distance avec cet arc vous pouvez dire en tant que phrase de commande : « Prompte mort à ceux qui m'ont fait du tort ». La cible de votre attaque devient votre ennemi juré jusqu'à ce qu'il meure ou jusqu'à l'aube sept jours plus tard. Vous ne pouvez avoir qu'un seul ennemi juré à la fois. Quand votre ennemi juré meurt, vous pouvez en choisir un nouveau après la prochaine aube.\n<br>Lorsque vous effectuez une attaque à distance contre votre ennemi juré avec cette arme, vous avez un avantage au jet d'attaque. De plus, votre cible ne bénéficie d'aucun abri s'il n'est pas total, et vous ne souffrez pas de désavantage dû aux tirs à longue portée. Si l'attaque touche, votre ennemi juré subit 3d6 dégâts perforants supplémentaires.\n<br>Tant que votre ennemi juré est en vie, vous avez un désavantage aux jets d'attaque avec toutes les autres armes.</p>"
+      "description": "<p>Quand vous encochez une flèche à la corde de cet arc, il murmure en elfique : « Prompte défaite à mes ennemis ». Lorsque vous faites une attaque à distance avec cet arc vous pouvez dire en tant que phrase de commande : « Prompte mort à ceux qui m'ont fait du tort ». La cible de votre attaque devient votre ennemi juré jusqu'à ce qu'il meure ou jusqu'à l'aube sept jours plus tard. Vous ne pouvez avoir qu'un seul ennemi juré à la fois. Quand votre ennemi juré meurt, vous pouvez en choisir un nouveau après la prochaine aube.\n<br>Lorsque vous effectuez une attaque à distance contre votre ennemi juré avec cette arme, vous avez un avantage au jet d'attaque. De plus, votre cible ne bénéficie d'aucun abri s'il n'est pas total, et vous ne souffrez pas de désavantage dû aux tirs à longue portée. Si l'attaque touche, votre ennemi juré subit 3d6 dégâts perforants supplémentaires.\n<br>Tant que votre ennemi juré est en vie, vous avez un désavantage aux jets d'attaque avec toutes les autres armes.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Phrase de commande."
+        },
+        "utility": {
+          "condition": "Phrase de commande."
+        }
+      }
     },
     "Oil Flask": {
       "name": "Huile (flasque)",
@@ -1888,7 +2260,12 @@
     },
     "Oil of Etherealness": {
       "name": "Huile éthérée",
-      "description": "<p>Des perles de cette huile grise se forment à l'extérieur de son contenant et semblent s'évaporer rapidement. L'huile pour recouvrir une créature de taille M ou plus petite, ainsi que tout l'équipement qu'elle porte ou transporte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-delà de M). Appliquer l'huile prend 10 minutes. La créature affectée gagne alors les effets du sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=forme-etheree\">forme éthérée</a></em> pendant 1 heure.</p>"
+      "description": "<p>Des perles de cette huile grise se forment à l'extérieur de son contenant et semblent s'évaporer rapidement. L'huile pour recouvrir une créature de taille M ou plus petite, ainsi que tout l'équipement qu'elle porte ou transporte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-delà de M). Appliquer l'huile prend 10 minutes. La créature affectée gagne alors les effets du sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=forme-etheree\">forme éthérée</a></em> pendant 1 heure.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Créature de taille M ou inférieure. L'application prend 10 minutes."
+        }
+      }
     },
     "Oil of Sharpness": {
       "name": "Huile d'affûtage",
@@ -1948,7 +2325,12 @@
     },
     "Pearl of Power": {
       "name": "Perle de thaumaturgie",
-      "description": "<p>Tant que cette perle est sur vous, vous pouvez utiliser une action pour prononcer son mot de commande et récupérer un emplacement de sort dépensé. Si l'emplacement de sort était de niveau 4 ou supérieur, le nouvel emplacement est de niveau 3. Une fois que vous avez utilisé la perle, elle ne peut plus être utilisée de nouveau jusqu'au prochain lever du soleil.</p>"
+      "description": "<p>Tant que cette perle est sur vous, vous pouvez utiliser une action pour prononcer son mot de commande et récupérer un emplacement de sort dépensé. Si l'emplacement de sort était de niveau 4 ou supérieur, le nouvel emplacement est de niveau 3. Une fois que vous avez utilisé la perle, elle ne peut plus être utilisée de nouveau jusqu'au prochain lever du soleil.</p>",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Perfume": {
       "name": "Parfum (fiole)",
@@ -1988,11 +2370,24 @@
     },
     "Pipes of Haunting": {
       "name": "Flûte terrifiante",
-      "description": "<p>Vous devez avoir la maîtrise des instruments à vent pour pouvoir utiliser cette flûte. Elle a 3 charges. Par une action vous pouvez jouer de cette flûte et dépenser une charge pour produire un air envoûtant et mystérieux. Chaque créature dans les 6 mètres qui vous entend jouer doit réussir un jet de sauvegarde de Sagesse DD 15 ou être effrayée pendant 1 minute. Si vous le souhaitez, toutes les créatures à portée qui ne vous sont pas hostiles peuvent réussir automatiquement ce jet de sauvegarde. Une créature qui échoue peut retenter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet en cas de réussite. Une créature qui réussit le jet de sauvegarde devient immunisée contre cette flûte pour 24 heures. La flûte regagne 1d3 charges dépensées chaque jour à l'aube.</p>"
+      "description": "<p>Vous devez avoir la maîtrise des instruments à vent pour pouvoir utiliser cette flûte. Elle a 3 charges. Par une action vous pouvez jouer de cette flûte et dépenser une charge pour produire un air envoûtant et mystérieux. Chaque créature dans les 6 mètres qui vous entend jouer doit réussir un jet de sauvegarde de Sagesse DD 15 ou être effrayée pendant 1 minute. Si vous le souhaitez, toutes les créatures à portée qui ne vous sont pas hostiles peuvent réussir automatiquement ce jet de sauvegarde. Une créature qui échoue peut retenter le jet de sauvegarde à la fin de chacun de ses tours, mettant ainsi fin à l'effet en cas de réussite. Une créature qui réussit le jet de sauvegarde devient immunisée contre cette flûte pour 24 heures. La flûte regagne 1d3 charges dépensées chaque jour à l'aube.</p>",
+      "activities": {
+        "save": {
+          "condition": "Maîtrise des instruments à vent."
+        }
+      }
     },
     "Pipes of the Sewers": {
       "name": "Flûte des égouts",
-      "description": "<p>Vous devez avoir la maîtrise des instruments à vent pour utiliser cette flûte. Tant que vous êtes lié à cette flûte, les rats ordinaires et les rats géants sont indifférent à votre égard à moins que vous ne les attaquiez, les menaciez ou les blessiez.\n<br>La flûte possède 3 charges. Si vous utilisez une action pour jouer de la flûte, vous pouvez, en tant qu'action bonus, dépenser 1 à 3 charges pour appeler une nuée de rat par charges pour autant qu'il y ait suffisamment des rats dans un rayon de 800 mètres à la ronde. S'il n'y a pas assez de rats pour faire une nuée, la charge est perdue. La nuée se contente de suivre la musique par le chemin le plus court mais n'est pas sous votre contrôle. la flûte récupère 1d3 charges dépensées chaque jour à l'aube.\n<br>Quand une nuée de rat qui n'est pas sous le contrôle d'une autre créature se trouve à 6 mètres ou moins de vous alors que vous jouez de la flûte, vous pouvez faire un jet de Charisme contre la Sagesse de la nuée. Si vous échouez, la nuée se comporte normalement et ne peut plus être charmée par la flûte pendant 24 heures. Si vous remportez l'opposition, la nuée est subjuguée par la mélodie qui émane de la flûte et devient amicale envers vous et vos compagnons tant que vous jouez (ce qui vous coûte votre action chaque tour). Une nuée amicale obéit à vos ordres. Si vous ne lui en donnez aucun, elle se contente de se défendre sans entreprendre d'autres actions. Une nuée amicale qui commence son tour sans entendre la musique de la flûte se libère de votre contrôle, adopte son comportement normal et ne peut plus être charmé de la sorte avant 24 heures.</p>"
+      "description": "<p>Vous devez avoir la maîtrise des instruments à vent pour utiliser cette flûte. Tant que vous êtes lié à cette flûte, les rats ordinaires et les rats géants sont indifférent à votre égard à moins que vous ne les attaquiez, les menaciez ou les blessiez.\n<br>La flûte possède 3 charges. Si vous utilisez une action pour jouer de la flûte, vous pouvez, en tant qu'action bonus, dépenser 1 à 3 charges pour appeler une nuée de rat par charges pour autant qu'il y ait suffisamment des rats dans un rayon de 800 mètres à la ronde. S'il n'y a pas assez de rats pour faire une nuée, la charge est perdue. La nuée se contente de suivre la musique par le chemin le plus court mais n'est pas sous votre contrôle. la flûte récupère 1d3 charges dépensées chaque jour à l'aube.\n<br>Quand une nuée de rat qui n'est pas sous le contrôle d'une autre créature se trouve à 6 mètres ou moins de vous alors que vous jouez de la flûte, vous pouvez faire un jet de Charisme contre la Sagesse de la nuée. Si vous échouez, la nuée se comporte normalement et ne peut plus être charmée par la flûte pendant 24 heures. Si vous remportez l'opposition, la nuée est subjuguée par la mélodie qui émane de la flûte et devient amicale envers vous et vos compagnons tant que vous jouez (ce qui vous coûte votre action chaque tour). Une nuée amicale obéit à vos ordres. Si vous ne lui en donnez aucun, elle se contente de se défendre sans entreprendre d'autres actions. Une nuée amicale qui commence son tour sans entendre la musique de la flûte se libère de votre contrôle, adopte son comportement normal et ne peut plus être charmé de la sorte avant 24 heures.</p>",
+      "activities": {
+        "check": {
+          "condition": "Maîtrise des instruments à vent."
+        },
+        "save": {
+          "condition": "Maîtrise des instruments à vent."
+        }
+      }
     },
     "Pitcher": {
       "name": "Pichet",
@@ -2020,7 +2415,12 @@
     },
     "Plate Armor of Etherealness": {
       "name": "Harnois éthéré",
-      "description": "Tant que vous portez cette armure, vous pouvez prononcer son mot de commande par une action pour gagner l'effet du sort forme éthérée pendant 10 minutes ou jusqu'à ce que vous retiriez l'armure ou y mettiez fin volontairement en répétant le mot de commande. Ce pouvoir ne peut alors plus être utilisé avant la prochaine aube."
+      "description": "Tant que vous portez cette armure, vous pouvez prononcer son mot de commande par une action pour gagner l'effet du sort forme éthérée pendant 10 minutes ou jusqu'à ce que vous retiriez l'armure ou y mettiez fin volontairement en répétant le mot de commande. Ce pouvoir ne peut alors plus être utilisé avant la prochaine aube.",
+      "activities": {
+        "utility": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Plate Armor of Resistance": {
       "name": "Harnois de Résistance",
@@ -2052,7 +2452,12 @@
     },
     "Potion of Animal Friendship": {
       "name": "Potion d'amitié avec les animaux",
-      "description": "<p>Quand vous buvez cette potion, vous pouvez lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=amitie-avec-les-animaux\">amitié avec les animaux</a></em> (sauvegarde DD 13) pendant 1 heure à volonté. Agiter ce liquide boueux fait apparaître de petits morceaux : une écaille de poisson, une langue de colibri, une griffe de chat ou un poil d'écureuil.</p>"
+      "description": "<p>Quand vous buvez cette potion, vous pouvez lancer le sort <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=amitie-avec-les-animaux\">amitié avec les animaux</a></em> (sauvegarde DD 13) pendant 1 heure à volonté. Agiter ce liquide boueux fait apparaître de petits morceaux : une écaille de poisson, une langue de colibri, une griffe de chat ou un poil d'écureuil.</p>",
+      "activities": {
+        "save": {
+          "condition": "La bête doit avoir une Intelligence de 3 ou moins."
+        }
+      }
     },
     "Potion of Clairvoyance": {
       "name": "Potion de clairvoyance",
@@ -2236,7 +2641,15 @@
     },
     "Rapier of Life Stealing": {
       "name": "Rapière voleuse de vie",
-      "description": "<p>Lorsque vous attaquez une créature avec cette arme magique et obtenez un 20 au jet d'attaque, la cible subit 10 dégâts nécrotiques supplémentaires, à condition qu'elle ne soit pas une créature artificielle ou un mort-vivant. Vous gagnez un nombre de points de vie temporaires égal aux dégâts supplémentaires infligés.</p>"
+      "description": "<p>Lorsque vous attaquez une créature avec cette arme magique et obtenez un 20 au jet d'attaque, la cible subit 10 dégâts nécrotiques supplémentaires, à condition qu'elle ne soit pas une créature artificielle ou un mort-vivant. Vous gagnez un nombre de points de vie temporaires égal aux dégâts supplémentaires infligés.</p>",
+      "activities": {
+        "attack": {
+          "condition": "Doit obtenir un 20 et la cible ne peut pas être un mort-vivant."
+        },
+        "utility": {
+          "condition": "Doit obtenir un 20 et la cible ne peut pas être un mort-vivant."
+        }
+      }
     },
     "Rapier of Wounding": {
       "name": "Rapière mordante",
@@ -2252,7 +2665,12 @@
     },
     "Restorative Ointment": {
       "name": "Baume revigorant",
-      "description": "<p>Ce pot de verre, de 7,50 cm de diamètre, contient 1d4 + 1 doses d'un mélange épais qui sent vaguement l'aloès. Le pot et son contenu pèsent 500 g. Au prix d'une action, une dose de l'onguent peut être avalée ou appliquée sur la peau. La créature qui le reçoit récupère 2d8 + 2 points de vie, cesse d'être empoisonnée, et est guérie de toute maladie.</p>"
+      "description": "<p>Ce pot de verre, de 7,50 cm de diamètre, contient 1d4 + 1 doses d'un mélange épais qui sent vaguement l'aloès. Le pot et son contenu pèsent 500 g. Au prix d'une action, une dose de l'onguent peut être avalée ou appliquée sur la peau. La créature qui le reçoit récupère 2d8 + 2 points de vie, cesse d'être empoisonnée, et est guérie de toute maladie.</p>",
+      "activities": {
+        "heal": {
+          "condition": "Le baume doit être ingéré ou appliqué sur la peau."
+        }
+      }
     },
     "Riding Saddle": {
       "name": "Selle d'équitation",
@@ -2296,7 +2714,12 @@
     },
     "Ring of Djinni Summoning": {
       "name": "Anneau de convocation de djinn",
-      "description": "<p>Tant que vous êtes équipé de cet anneau, vous pouvez prononcer son mot de commande en utilisant une action pour invoquer un djinn particulier depuis le plan élémentaire de l'Air. Le djinn apparaît dans un espace inoccupé de votre choix dans un rayon de 36 mètres autour de vous. Il reste aussi longtemps que vous vous concentrez (comme lorsque vous vous concentrez sur un sort), pour une durée maximale de 1 heure, ou jusqu'à ce que ses points de vie tombent à 0. Puis il retourne dans son plan natif.\n<br>Tant qu'il est invoqué, le djinn a une attitude amicale envers vous et vos compagnons. Il obéit aux ordres que vous lui donnez, quelle que soit la langue utilisée. Si vous ne lui donnez aucun ordre, le djinn se défend lui-même contre les attaquants mais n'entreprend aucune autre action.\n<br>Après son départ, le djinn ne peut être réinvoqué pendant 24 heures, et l'anneau devient un simple anneau non magique si le djinn meurt.</p>"
+      "description": "<p>Tant que vous êtes équipé de cet anneau, vous pouvez prononcer son mot de commande en utilisant une action pour invoquer un djinn particulier depuis le plan élémentaire de l'Air. Le djinn apparaît dans un espace inoccupé de votre choix dans un rayon de 36 mètres autour de vous. Il reste aussi longtemps que vous vous concentrez (comme lorsque vous vous concentrez sur un sort), pour une durée maximale de 1 heure, ou jusqu'à ce que ses points de vie tombent à 0. Puis il retourne dans son plan natif.\n<br>Tant qu'il est invoqué, le djinn a une attitude amicale envers vous et vos compagnons. Il obéit aux ordres que vous lui donnez, quelle que soit la langue utilisée. Si vous ne lui donnez aucun ordre, le djinn se défend lui-même contre les attaquants mais n'entreprend aucune autre action.\n<br>Après son départ, le djinn ne peut être réinvoqué pendant 24 heures, et l'anneau devient un simple anneau non magique si le djinn meurt.</p>",
+      "activities": {
+        "summon": {
+          "condition": "Mot de commande."
+        }
+      }
     },
     "Ring of Earth Elemental Command": {
       "name": "Anneau de contrôle de la terre élémentaire",
@@ -2304,7 +2727,12 @@
     },
     "Ring of Evasion": {
       "name": "Anneau d'évasion",
-      "description": "<p>Cet anneau possède 3 charges, et regagne 1d3 charges dépensées chaque jour à l'aube. Lorsque vous échouez à un jet de sauvegarde de Dextérité alors que vous portez l'anneau, vous pouvez utiliser votre réaction pour dépenser 1 charge et ainsi réussir ce jet de sauvegarde.</p>"
+      "description": "<p>Cet anneau possède 3 charges, et regagne 1d3 charges dépensées chaque jour à l'aube. Lorsque vous échouez à un jet de sauvegarde de Dextérité alors que vous portez l'anneau, vous pouvez utiliser votre réaction pour dépenser 1 charge et ainsi réussir ce jet de sauvegarde.</p>",
+      "activities": {
+        "Evade": {
+          "name": "Esquive"
+        }
+      }
     },
     "Ring of Feather Falling": {
       "name": "Anneau de feuille morte",
@@ -2328,7 +2756,12 @@
     },
     "Ring of Invisibility": {
       "name": "Anneau d'invisibilité",
-      "description": "<p>Lorsque vous portez cet anneau, vous pouvez devenir invisible par une action. Tout ce que vous portez ou transportez devient invisible avec vous. Vous restez invisible jusqu'à ce que l'anneau soit retiré, jusqu'à ce que vous attaquiez ou lanciez un sort, ou jusqu'à ce que vous utilisiez une action bonus pour redevenir visible.</p>"
+      "description": "<p>Lorsque vous portez cet anneau, vous pouvez devenir invisible par une action. Tout ce que vous portez ou transportez devient invisible avec vous. Vous restez invisible jusqu'à ce que l'anneau soit retiré, jusqu'à ce que vous attaquiez ou lanciez un sort, ou jusqu'à ce que vous utilisiez une action bonus pour redevenir visible.</p>",
+      "activities": {
+        "Become Invisible": {
+          "name": "Devenir invisible"
+        }
+      }
     },
     "Ring of Jumping": {
       "name": "Anneau de saut",
@@ -2340,7 +2773,12 @@
     },
     "Ring of Mind Shielding": {
       "name": "Anneau de protection mentale",
-      "description": "<p>Tant que vous êtes équipé de cet anneau, vous êtes immunisé aux magies qui permettent à d'autres créatures de lire dans vos pensées, de déterminer si vous êtes en train de mentir, de connaître votre alignement ou de connaître votre type de créature. Les créatures ne peuvent communiquer avec vous par télépathie que si vous le leur permettez.\n<br>Vous pouvez utiliser une action pour rendre l'anneau invisible jusqu'à ce que vous utilisiez une autre action pour le rendre visible, jusqu'à ce que vous l'enleviez, ou jusqu'à ce que vous mourriez.\n<br>Si vous mourrez alors que vous portez l'anneau, votre âme pénètre à l'intérieur de l'anneau, à moins qu'une autre âme soit déjà à l'intérieur. Vous pouvez rester dans l'anneau ou bien partir pour l'au-delà. Aussi longtemps que votre âme se trouve dans l'anneau, vous pouvez communiquer par télépathie avec la créature qui s'en est équipée. Une personne qui s'est équipée de l'anneau ne peut empêcher cette communication télépathique.</p>"
+      "description": "<p>Tant que vous êtes équipé de cet anneau, vous êtes immunisé aux magies qui permettent à d'autres créatures de lire dans vos pensées, de déterminer si vous êtes en train de mentir, de connaître votre alignement ou de connaître votre type de créature. Les créatures ne peuvent communiquer avec vous par télépathie que si vous le leur permettez.\n<br>Vous pouvez utiliser une action pour rendre l'anneau invisible jusqu'à ce que vous utilisiez une autre action pour le rendre visible, jusqu'à ce que vous l'enleviez, ou jusqu'à ce que vous mourriez.\n<br>Si vous mourrez alors que vous portez l'anneau, votre âme pénètre à l'intérieur de l'anneau, à moins qu'une autre âme soit déjà à l'intérieur. Vous pouvez rester dans l'anneau ou bien partir pour l'au-delà. Aussi longtemps que votre âme se trouve dans l'anneau, vous pouvez communiquer par télépathie avec la créature qui s'en est équipée. Une personne qui s'est équipée de l'anneau ne peut empêcher cette communication télépathique.</p>",
+      "activities": {
+        "Conceal Ring": {
+          "name": "Dissimuler l'anneau"
+        }
+      }
     },
     "Ring of Necrotic Resistance": {
       "name": "Anneau de résistance nécrotique",
@@ -2364,11 +2802,21 @@
     },
     "Ring of Regeneration": {
       "name": "Anneau de régénération",
-      "description": "<p>Tant que vous êtes équipé de cet anneau, vous récupérez 1d6 points de vie toutes les 10 minutes, à condition qu'il vous reste au moins 1 point de vie. Si vous perdez un membre, l'anneau fait repousser la partie manquante, qui redevient alors fonctionnelle, en 1d6 + 1 jours, à condition que vous ayez au moins 1 point de vie pendant toute cette période.</p>"
+      "description": "<p>Tant que vous êtes équipé de cet anneau, vous récupérez 1d6 points de vie toutes les 10 minutes, à condition qu'il vous reste au moins 1 point de vie. Si vous perdez un membre, l'anneau fait repousser la partie manquante, qui redevient alors fonctionnelle, en 1d6 + 1 jours, à condition que vous ayez au moins 1 point de vie pendant toute cette période.</p>",
+      "activities": {
+        "heal": {
+          "condition": "Vous avez besoin d'au moins 1 point de vie."
+        }
+      }
     },
     "Ring of Shooting Stars": {
       "name": "Anneau de feu d'étoiles",
-      "description": "<p>Lorsque vous portez cette bague dans une zone de lumière faible ou de ténèbres, vous pouvez jeter <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=lumieres-dansantes\">lumières dansantes</a></em> et <em>lumière</em> depuis l'anneau à volonté. Lancer un de ces deux sorts depuis l'anneau nécessite une action.\n<br>L'anneau a 6 charges pour les propriétés suivantes. L'anneau regagne 1d6 charges dépensées chaque jour à l'aube.\n<br><strong>Lucioles</strong>. Vous pouvez dépenser 1 charge par une action pour lancer <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=lueurs-feeriques\">lueurs féeriques</a></em> depuis l'anneau.\n<br><strong>Boule de foudre</strong>. Vous pouvez dépenser 2 charges par une action pour créer de une à quatre sphères de foudre de 1 mètre de diamètre. Plus vous créez de sphères, moins elles seront puissantes individuellement.\n<br>Chaque sphère apparaît dans un espace inoccupé que vous pouvez voir dans un rayon de 36 mètres autour de vous. Les sphères persistent aussi longtemps que vous vous concentrez (comme pour se concentrer sur un sort), jusqu'à 1 minute. Chaque sphère émet en lumière faible dans un rayon de 9 mètres.\n<br>Par une action bonus, vous pouvez déplacer chaque sphère de 9 mètres, mais pas à plus de 36 mètres de vous. Quand une créature autre que vous est à 1,50 m ou moins d'une sphère, la sphère décharge de la foudre sur cette créature et disparaît. Cette créature doit alors faire un jet de sauvegarde de Dextérité DD 15. En cas d'échec, la créature subit des dégâts de foudre dont le montant dépend du nombre de sphères que vous avez créés.\n<br><table><tbody><tr><th>Sphères</th><th>Dégâts de foudre</th></tr><tr><td class=\"center\">4</td><td class=\"center\">2d4</td></tr><tr><td class=\"center\">3</td><td class=\"center\">2d6</td></tr><tr><td class=\"center\">2</td><td class=\"center\">5d4</td></tr><tr><td class=\"center\">1</td><td class=\"center\">4d12</td></tr></tbody></table>\n<br><strong>Feu d'étoiles</strong>. Vous pouvez dépenser de 1 à 3 charges par une action. Pour chaque charge dépensée, vous lancez un trait brillant de lumière depuis l'anneau vers un point que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chaque créature dans un cube de 4,50 mètres de côté depuis ce point est constellé d'étincelles et doit faire un jet de sauvegarde de Dextérité DD 15, subissant 5d4 dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p>"
+      "description": "<p>Lorsque vous portez cette bague dans une zone de lumière faible ou de ténèbres, vous pouvez jeter <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=lumieres-dansantes\">lumières dansantes</a></em> et <em>lumière</em> depuis l'anneau à volonté. Lancer un de ces deux sorts depuis l'anneau nécessite une action.\n<br>L'anneau a 6 charges pour les propriétés suivantes. L'anneau regagne 1d6 charges dépensées chaque jour à l'aube.\n<br><strong>Lucioles</strong>. Vous pouvez dépenser 1 charge par une action pour lancer <em><a href=\"https://www.aidedd.org/dnd/sorts.php?vf=lueurs-feeriques\">lueurs féeriques</a></em> depuis l'anneau.\n<br><strong>Boule de foudre</strong>. Vous pouvez dépenser 2 charges par une action pour créer de une à quatre sphères de foudre de 1 mètre de diamètre. Plus vous créez de sphères, moins elles seront puissantes individuellement.\n<br>Chaque sphère apparaît dans un espace inoccupé que vous pouvez voir dans un rayon de 36 mètres autour de vous. Les sphères persistent aussi longtemps que vous vous concentrez (comme pour se concentrer sur un sort), jusqu'à 1 minute. Chaque sphère émet en lumière faible dans un rayon de 9 mètres.\n<br>Par une action bonus, vous pouvez déplacer chaque sphère de 9 mètres, mais pas à plus de 36 mètres de vous. Quand une créature autre que vous est à 1,50 m ou moins d'une sphère, la sphère décharge de la foudre sur cette créature et disparaît. Cette créature doit alors faire un jet de sauvegarde de Dextérité DD 15. En cas d'échec, la créature subit des dégâts de foudre dont le montant dépend du nombre de sphères que vous avez créés.\n<br><table><tbody><tr><th>Sphères</th><th>Dégâts de foudre</th></tr><tr><td class=\"center\">4</td><td class=\"center\">2d4</td></tr><tr><td class=\"center\">3</td><td class=\"center\">2d6</td></tr><tr><td class=\"center\">2</td><td class=\"center\">5d4</td></tr><tr><td class=\"center\">1</td><td class=\"center\">4d12</td></tr></tbody></table>\n<br><strong>Feu d'étoiles</strong>. Vous pouvez dépenser de 1 à 3 charges par une action. Pour chaque charge dépensée, vous lancez un trait brillant de lumière depuis l'anneau vers un point que vous pouvez voir dans un rayon de 18 mètres autour de vous. Chaque créature dans un cube de 4,50 mètres de côté depuis ce point est constellé d'étincelles et doit faire un jet de sauvegarde de Dextérité DD 15, subissant 5d4 dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite.</p>",
+      "activities": {
+        "Shooting Star": {
+          "name": "Feu d'étoiles"
+        }
+      }
     },
     "Ring of Spell Storing": {
       "name": "Anneau de stockage de sort",
@@ -2412,7 +2860,12 @@
     },
     "Ring of the Ram": {
       "name": "Anneau du bélier",
-      "description": "<p>Cet anneau possède 3 charges, et il récupère 1d3 charges dépensées chaque jour au lever du soleil. Tant que vous êtes équipé de cet anneau, vous pouvez utiliser une action pour dépenser 1 à 3 de ses charges pour attaquer une créature que vous pouvez voir et se trouvant à 18 mètres maximum de vous. L'anneau fait apparaître la tête d'un bélier fantomatique et effectue son jet d'attaque avec un bonus de +7. Si le coup touche, pour chaque charge que vous avez dépensée, la cible subit 2d10 dégâts de force et est repoussée de vous sur 1,50 mètre.\n<br>Sinon, vous pouvez dépenser 1 à 3 des charges de l'anneau en utilisant une action pour tenter de briser un objet que vous pouvez voir, se trouvant à 18 mètres de vous maximum, et qui n'est ni porté ni transporté. L'anneau effectue un jet de Force avec un bonus de +5 pour chaque charge que vous avez dépensée.</p>"
+      "description": "<p>Cet anneau possède 3 charges, et il récupère 1d3 charges dépensées chaque jour au lever du soleil. Tant que vous êtes équipé de cet anneau, vous pouvez utiliser une action pour dépenser 1 à 3 de ses charges pour attaquer une créature que vous pouvez voir et se trouvant à 18 mètres maximum de vous. L'anneau fait apparaître la tête d'un bélier fantomatique et effectue son jet d'attaque avec un bonus de +7. Si le coup touche, pour chaque charge que vous avez dépensée, la cible subit 2d10 dégâts de force et est repoussée de vous sur 1,50 mètre.\n<br>Sinon, vous pouvez dépenser 1 à 3 des charges de l'anneau en utilisant une action pour tenter de briser un objet que vous pouvez voir, se trouvant à 18 mètres de vous maximum, et qui n'est ni porté ni transporté. L'anneau effectue un jet de Force avec un bonus de +5 pour chaque charge que vous avez dépensée.</p>",
+      "activities": {
+        "Break Object": {
+          "name": "Briser l'objet"
+        }
+      }
     },
     "Robe of Eyes": {
       "name": "Robe de vision totale",
