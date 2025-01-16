@@ -254,7 +254,12 @@
     "Relentless Endurance": {
       "name": "Endurance implacable",
       "description": "<p>Lorsque vous tombez à 0 point de vie, mais que vous n'êtes pas tué sur le coup, vous pouvez passer à 1 point de vie à la place. Vous devez terminer un repos long avant de pouvoir utiliser cette capacité de nouveau.</p>",
-      "requirements": "Demi-orc"
+      "requirements": "Demi-orc",
+      "activities": {
+        "heal": {
+          "condition": "Lorsque vous tombez à 0 point de vie"
+        }
+      }
     },
     "Rock Gnome": {
       "name": "Gnome des roches",
@@ -271,8 +276,13 @@
     },
     "Savage Attacks": {
       "name": "Attaques sauvages",
-      "description": "<p>Lorsque vous réalisez un coup critique lors d'une attaque au corps à corps avec une arme, vous pouvez jeter l'un des dés de dégâts de l'arme une deuxième fois et l'ajouter aux dégâts supplémentaires du coup critique.</p>\n<p><em><strong>Foundry Note:</strong>Activer cette option dans les traits spéciaux de la feuille de personnage.</em></p>",
-      "requirements": "Demi-orc"
+      "description": "<p>Quand vous obtenez un coup critique avec une attaque d'arme au corps à corps, vous pouvez lancer l'un des dés de dégâts de l'arme une fois de plus et en ajouter le résultat aux dégâts supplémentaires du coup critique.</p>",
+      "requirements": "Demi-orc",
+      "effects": {
+        "Savage Attacks": {
+          "name": "Sauvagerie"
+        }
+      }
     },
     "Stonecunning": {
       "name": "Connaissance de la pierre",
@@ -298,7 +308,12 @@
     "Tinker": {
       "name": "Bricoleur",
       "description": "Vous maîtrisez les outils de bricoleur. En utilisant ces outils, vous pouvez passer 1 heure et dépenser pour 10 po de matériaux pour construire un mécanisme de taille TP, de CA 5 et 1 pv. Le dispositif cesse de fonctionner après 24 heures (sauf si vous passez 1 heure à le réparer) ou si vous utilisez une action pour le démonter ; à ce moment, vous pouvez récupérer les matériaux que vous avez utilisés pour le créer. Vous pouvez avoir jusqu'à trois de ces dispositifs actifs à la fois. Lorsque vous créez un mécanisme, choisissez l'une des options suivantes :</p>\n<p><em><strong> - Allume feu.</strong></em> Le mécanisme produit une toute petite flamme qui peut être utilisée pour allumer une bougie ou une torche au prix d'une action.</p>\n<p><em><strong> - Boîte à musique.</strong></em> Lorsqu'on l'ouvre, la boîte reproduit une chanson (toujours la même) à un volume modéré jusqu'à la fin du morceau ou avant si la boîte est refermée.</p>\n<p><em><strong> - Jouet mécanique.</strong></em> Le jouet représente un animal ou une personne, comme une grenouille, une souris, un oiseau ou un soldat, sur des roulettes. Lorsqu'il est placé sur le sol, il se déplace de 1,50 mètre chaque tour dans une direction aléatoire et fait des bruits en fonction de la créature qu'il représente.",
-      "requirements": "Gnome des roches"
+      "requirements": "Gnome des roches",
+      "activities": {
+        "utility": {
+          "condition": "Dépenser 10 po de matériaux"
+        }
+      }
     },
     "Trance": {
       "name": "Trance",

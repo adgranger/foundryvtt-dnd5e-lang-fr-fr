@@ -48,7 +48,7 @@
   "DND5E.AbbreviationDC": "DD",
   "DND5E.AbbreviationKg": "kg",
   "DND5E.AbbreviationLR": "RL",
-  "DND5E.AbbreviationLevel": "Niv.",
+  "DND5E.AbbreviationLevel": "Niv",
   "DND5E.AbbreviationLbs": "Lbs",
   "DND5E.AbbreviationSR": "RC",
   "DND5E.Ability": "Caractéristique",
@@ -245,7 +245,7 @@
       }
     },
     "SPELLCONFIG": {
-      "FreeCasting": "",
+      "FreeCasting": "Incantation gratuite",
       "FIELDS": {
         "spell": {
           "label": "Détails du sort",
@@ -278,7 +278,8 @@
       }
     },
     "Config": {
-      "Details": "Détails de la progression"
+      "Details": "Détails de la progression",
+      "AnyLevel": "Tous"
     },
     "HitPoints": {
       "Action": {
@@ -342,6 +343,65 @@
         "LevelIncreased": "Faire monter de niveau le personnage"
       },
       "Steps": "Étape {current} sur {total}"
+    },
+    "ItemChoice": {
+      "Choose": "choisir {count}",
+      "Chosen": "Choisi : {current} sur {max}",
+      "Details": "Détails du choix",
+      "FIELDS": {
+        "allowDrops": {
+          "hint": "Permettre aux joueurs de déposer leurs propres choix dans cette progression.",
+          "label": "Autoriser les dépôts"
+        },
+        "choices": {
+          "hint": "Précisez combien de choix sont autorisés à chaque niveau.",
+          "label": "Choix",
+          "FIELDS": {
+            "count": {
+              "label": "Nombre"
+            },
+            "replacement": {
+              "label": "Autoriser le remplacement"
+            }
+          }
+        },
+        "pool": {
+          "label": "Options d'objet"
+        },
+        "restriction": {
+          "level": {
+            "Available": "Tous niveaux disponibles",
+            "label": "Niveau de sort",
+            "hint": "Autoriser uniquement les choix à partir de sorts de ce niveau."
+          },
+          "type": {
+            "label": "Type"
+          },
+          "subtype": {
+            "label": "Sous-type"
+          }
+        },
+        "type": {
+          "Any": "Tout",
+          "hint": "Restreindre les types d'objets pouvant être choisis.",
+          "label": "Type d'objet"
+        }
+      },
+      "Hint": "Présentez au joueur un choix d'objets (comme de l'équipement, des aptitudes ou des sorts) qu'il peut sélectionner pour son personnage à un ou plusieurs niveaux.",
+      "Replacement": {
+        "None": "Pas de remplacement",
+        "Title": "remplacer"
+      },
+      "Title": "Choisir des objets",
+      "Warning": {
+        "FeatureLevel": "Doit être au moins au niveau {level} pour prendre cette aptitudes.",
+        "InvalidType": "Seuls les objets de type {type} peuvent être sélectionnés pour ce choix.",
+        "NoOriginal": "Le choix précédemment sélectionné n'est plus disponible pour le remplacement.",
+        "PreviouslyChosen": "Cet objet a déjà été choisi à un niveau précédent.",
+        "SpellLevelAvailable": "Seuls les sorts de niveau {level} ou inférieur peuvent être choisis pour cette progression.",
+        "SpellLevelSpecific": "Seuls les sorts de niveau {level} peuvent être choisis pour cette progression."
+      },
+      "DropHint": "Déposez des objets ici pour les ajouter à la liste pouvant être sélectionnée avec cette progression."
     }
   },
   "DND5E.AdvancementChoices": "choix",
@@ -370,26 +430,6 @@
   "DND5E.AdvancementDeleteConfirmationTitle": "Confirmer la suppression",
   "DND5E.AdvancementFlowDropAreaHint": "Déposez un objet ici pour le choisir.",
   "DND5E.AdvancementHint": "Conseil",
-  "DND5E.AdvancementItemChoiceTitle": "Choisir les objets",
-  "DND5E.AdvancementItemChoiceHint": "Présenter au joueur un choix d'objets (équipement, aptitudes ou sorts) qu'il peut choisir pour son personnage à un ou plusieurs niveaux.",
-  "DND5E.AdvancementItemChoiceChoices": "Choix",
-  "DND5E.AdvancementItemChoiceChoose": "choisissez {count}",
-  "DND5E.AdvancementItemChoiceChosen": "Choisi : {current} sur {max}",
-  "DND5E.AdvancementItemChoiceFeatureLevelWarning": "Vous devez être au moins au niveau {niveau} pour bénéficier de cette aptitude.",
-  "DND5E.AdvancementItemChoiceLevelsHint": "Spécifiez le nombre de choix autorisés à chaque niveau.",
-  "DND5E.AdvancementItemChoiceNoOriginalError": "Le choix précédemment sélectionné n'est plus disponible pour le remplacement.",
-  "DND5E.AdvancementItemChoicePreviouslyChosenWarning": "Cet objet a déjà été choisi à un niveau précédent.",
-  "DND5E.AdvancementItemChoiceReplacement": "Permettre le remplacement",
-  "DND5E.AdvancementItemChoiceReplacementNone": "Aucun remplacement",
-  "DND5E.AdvancementItemChoiceReplacementTitle": "remplacer",
-  "DND5E.AdvancementItemChoiceSpellLevelAvailable": "Tout niveau disponible",
-  "DND5E.AdvancementItemChoiceSpellLevelAvailableWarning": "Seuls les sorts de niveau {level} ou moins peuvent être choisis pour cet avancement.",
-  "DND5E.AdvancementItemChoiceSpellLevelSpecificWarning": "Seuls les sorts de niveau {level} peuvent être choisis pour cet avancement.",
-  "DND5E.AdvancementItemChoiceSpellLevelHint": "Ne permet de choisir que des sorts de ce niveau.",
-  "DND5E.AdvancementItemChoiceType": "Type d'objet",
-  "DND5E.AdvancementItemChoiceTypeHint": "Restreindre les types d'objets pouvant être choisis.",
-  "DND5E.AdvancementItemChoiceTypeAny": "Tout",
-  "DND5E.AdvancementItemChoiceTypeWarning": "Seuls les objets de type {type} peuvent être sélectionnés pour ce choix.",
   "DND5E.AdvancementItemTypeInvalidWarning": "Les objets {type} ne peuvent pas être ajoutés avec ce type de progression.",
   "DND5E.AdvancementLevelHeader": "Niveau {level}",
   "DND5E.AdvancementLevelAnyHeader": "Tout niveau",
@@ -488,7 +528,7 @@
   "DND5E.ArmorClassFlat": "Base",
   "DND5E.ArmorClassUnarmored": "Défense sans armure",
   "DND5E.ArmorClassNatural": "Armure naturelle",
-  "DND5E.ArmorClassMage": "Armure de Mage",
+  "DND5E.ArmorClassMage": "Armure du mage",
   "DND5E.ArmorClassMotionless": "Classe d'armure si immobilisé",
   "DND5E.ArmorClassDraconic": "Résilience draconique",
   "DND5E.ArmorClassUnarmoredMonk": "Défense sans armure (Moine)",
@@ -860,7 +900,7 @@
     "Attribute": "Attribut à consommer (par exemple : currency.gp)",
     "Item": "UUID de la cible dans le compendium"
   },
-  "DND5E.ConsumeTarget": "",
+  "DND5E.ConsumeTarget": "Cible de consommation",
   "DND5E.ConsumeType": "Catégorie",
   "DND5E.ConsumeAmmunition": "Munition",
   "DND5E.ConsumeAttribute": "Capacité",
@@ -889,7 +929,7 @@
         "label": "Bonus magique"
       },
       "properties": {
-        "label": ""
+        "label": "Propriétés des consommables"
       },
       "uses": {
         "autoDestroy": {
@@ -964,19 +1004,19 @@
           "hint": "Utiliser cette activité consommera un emplacement pour ce sort ?"
         },
         "targets": {
-          "label": "",
-          "hint": "",
+          "label": "Cibles de consommation",
+          "hint": "Cibles potentielles de consommation lorsque cette activité est activée.",
           "FIELDS": {
             "type": {
               "label": "Type de consommation",
-              "hint": ""
+              "hint": "Type de cible de consommation."
             },
             "target": {
-              "label": "",
-              "hint": ""
+              "label": "Cible de consommation",
+              "hint": "Cible spécifique à consommer."
             },
             "value": {
-              "label": "",
+              "label": "Quantité consommée",
               "hint": "Entrez une valeur négative pour récupérer plutôt que consommer."
             },
             "scaling": {
@@ -1517,18 +1557,6 @@
   "DND5E.Equipped": "Équipé",
   "DND5E.Exhaustion": "Épuisement",
   "DND5E.ExhaustionLevel": "Niveau d'épuisement {n}",
-  "DND5E.ExperiencePoints": "Points d'expérience",
-  "DND5E.ExperiencePointsAbbr": "PX",
-  "DND5E.ExperiencePointsBoons": {
-    "one": "{number} Boon",
-    "other": ""
-  },
-  "DND5E.ExperiencePointsCurrent": "PX actuel",
-  "DND5E.ExperiencePointsFormat": "{value} PX",
-  "DND5E.ExperiencePointsLabel": "Progression vers le prochain niveau",
-  "DND5E.ExperiencePointsMax": "PX pour le niveau suivant",
-  "DND5E.ExperiencePointsMin": "PX minimum pour ce niveau",
-  "DND5E.ExperiencePointsValue": "Valeur d'XP",
   "DND5E.Expertise": "Expertise",
   "DND5E.Favorite": "Favori",
   "DND5E.FavoriteDrop": "Supprimer des favoris",
@@ -1570,7 +1598,8 @@
       "Blessing": "Bénédiction",
       "Charm": "Charme",
       "EpicBoon": "Faveur épique"
-    }
+    },
+    "SpeciesLegacy": "Aptitude de race"
   },
   "DND5E.Focus": {
     "Label": "Focaliseur d'Incantation",
@@ -1639,7 +1668,7 @@
   "DND5E.FLAGS": {
     "EnhancedDualWielding": {
       "Name": "Combat à deux armes amélioré",
-      "Hint": ""
+      "Hint": "Permet des attaques supplémentaires en action bonus avec n'importe quelle arme de mêlée sans la propriété À deux mains."
     }
   },
   "DND5E.FlagsInstructions": "Configurez les caractéristiques et traits du personnage qui ajustent le fonctionnement du système de la cinquième édition de D&D.",
@@ -1663,7 +1692,7 @@
   "DND5E.FlagsObservantHint": "Bonus de +5 à à la Sagesse (Perception) passive et l'Intelligence (Investigation) passive.",
   "DND5E.FlagsTavernBrawler": "Bagarreur de tavernes (Don)",
   "DND5E.FlagsTavernBrawlerHint": "Maîtrise des armes improvisées.",
-  "DND5E.FlagsReliableTalent": "Talent (Roublard)",
+  "DND5E.FlagsReliableTalent": "Savoir-faire",
   "DND5E.FlagsReliableTalentHint": "Un jet de 9 ou moins est traité comme un 10 pour les compétences maîtrisées.",
   "DND5E.FlagsRemarkableAthlete": "Athlète remarquable",
   "DND5E.FlagsRemarkableAthleteHint": "Ajoute la moitié de votre bonus de maîtrise à tous les jets de caractéristiques physiques non maîtrisées et aux jets d'initiative.",
@@ -1713,7 +1742,7 @@
         "label": "Soin",
         "bonus": {
           "label": "Bonus de soin",
-          "hint": ""
+          "hint": "Bonus ajouté au jet de soin."
         },
         "custom": {
           "label": "Formule de soin personnalisée",
@@ -1727,15 +1756,15 @@
           }
         },
         "denomination": {
-          "label": "",
-          "hint": ""
+          "label": "Dénomination des dés",
+          "hint": "Dénomination des dés à lancer."
         },
         "number": {
-          "label": "",
-          "hint": ""
+          "label": "Nombre de dés",
+          "hint": "Nombre de dés à lancer."
         },
         "scaling": {
-          "label": "",
+          "label": "Évolution des soins",
           "mode": {
             "label": "Mode d'évolution",
             "hint": "Méthode par laquelle l'accroissement de l'évolution est calculé."
@@ -1874,16 +1903,17 @@
       "TwoHanded": "À deux mains",
       "Versatile": "Polyvalent",
       "Verbal": "Verbale",
-      "WeightlessContents": "Contenu sans Poids"
+      "WeightlessContents": "Contenu sans Poids",
+      "Trait": "Trait passif"
     }
   },
-  "DND5E.ItemRechargeCheck": "",
+  "DND5E.ItemRechargeCheck": "Vérification de recharge {name} - {result}",
   "DND5E.ItemRechargeFailure": "Échec !",
   "DND5E.ItemRechargeSuccess": "Succès !",
   "DND5E.ItemRecoveryRoll": "{name} récupère {count} charges",
   "DND5E.ItemLossRoll": "{name} perd {count} charges",
   "DND5E.ItemRecoveryRollMax": "{name} récupère toutes les charges",
-  "DND5E.ItemRecoveryFormulaWarning": "",
+  "DND5E.ItemRecoveryFormulaWarning": "Impossible de récupérer les utilisations pour {name}. Formule de récupération invalide '{formula}' ({uuid}).",
   "DND5E.ItemRequiredStr": "Force requise",
   "DND5E.ItemSiegeProperties": "Propriétés de Siège",
   "DND5E.ItemSpeciesDetails": "Détails de l'espèce",
@@ -1896,7 +1926,7 @@
   "DND5E.ItemToolStatus": "Etat de l'outil",
   "DND5E.ItemToolType": "Catégorie d'outils",
   "DND5E.ItemToolUsage": "Utilisation de l'outil",
-  "DND5E.ItemVehicleProperties": "",
+  "DND5E.ItemVehicleProperties": "Propriétés des véhicules",
   "DND5E.ItemView": "Voir l'objet",
   "DND5E.ItemWeaponAttack": "Propriétés d'attaque de l'arme",
   "DND5E.ItemWeaponBase": "Arme de base",
@@ -2007,6 +2037,11 @@
         "level": {
           "label": "Niveau requis",
           "hint": "Niveau de personnage ou de classe requis pour sélectionner cette aptitude lors de la montée en niveau."
+        },
+        "label": "Prérequis",
+        "repeatable": {
+          "hint": "Cette aptitude peut être choisie plusieurs fois.",
+          "label": "Répétable"
         }
       }
     }
@@ -2032,11 +2067,11 @@
       "range": {
         "label": "Portée",
         "long": {
-          "label": "",
-          "hint": ""
+          "label": "Portée longue",
+          "hint": "Portée d'attaque éloignée de l'arme, si elle est présente sur l'arme."
         },
         "override": {
-          "label": "",
+          "label": "Portée remplacée",
           "hint": "Utilisez ces valeurs de portée au lieu de celles de l'objet lorsque vous utilisez cette activité."
         },
         "reach": {
@@ -2044,17 +2079,21 @@
         },
         "special": {
           "label": "Portée spéciale",
-          "hint": ""
+          "hint": "Description de tout détail particulier concernant la portée."
         },
         "units": {
           "label": "Unités de portée",
-          "hint": ""
+          "hint": "Unités utilisées pour mesurer la portée."
         },
         "value": {
-          "label": "",
-          "hint": ""
+          "label": "Valeur de la portée",
+          "hint": "Valeur de la portée dans les unités spécifiées, si applicable."
         }
       }
+    },
+    "Formatted": {
+      "Range": "portée {range}",
+      "Reach": "Allonge {reach}"
     }
   },
   "DND5E.Range": "Portée",
@@ -2129,13 +2168,13 @@
         },
         "parts": {
           "label": "Section de dégâts",
-          "hint": ""
+          "hint": "Section de dégâts individuelles à inclure dans le jet."
         }
       },
       "effects": {
         "onSave": {
-          "label": "",
-          "hint": ""
+          "label": "Toujours appliquer",
+          "hint": "Cet effet sera toujours appliqué, même si la cible réussit son jet de sauvegarde."
         }
       },
       "save": {
@@ -2174,8 +2213,8 @@
       "Reference": "Sort"
     },
     "RequiresConcentration": "Nécessite de la concentration",
-    "SaveDC": "",
-    "Values": ""
+    "SaveDC": "DD de sauvegarde",
+    "Values": "Valeurs des sorts"
   },
   "DND5E.Senses": "Sens",
   "DND5E.SensesConfig": "Configurer le(s) Sens",
@@ -2191,7 +2230,7 @@
   "DND5E.SheetClassCharacterLegacy": "Feuille de personnage Legacy 5e",
   "DND5E.SheetClassClassSummary": "Feuille de résumé des classes 5e par défaut",
   "DND5E.SheetClassContainer": "Feuille de conteneur 5e par défaut",
-  "DND5E.SheetClassContainerLegacy": "",
+  "DND5E.SheetClassContainerLegacy": "Fiche conteneur 3.x",
   "DND5E.SheetClassGroup": "Feuille de groupe 5e par défaut",
   "DND5E.SheetClassItem": "Feuille d'objet par défaut",
   "DND5E.SheetClassItemLegacy": "Ancienne feuille d'objet 5e",
@@ -2313,7 +2352,9 @@
     "Label": "Espèce",
     "Add": "Ajouter des espèces",
     "Features": "Aptitudes d'espèce",
-    "Name": ""
+    "Name": "Nom de l’espèce",
+    "FeaturesLegacy": "Traits de race",
+    "AddLegacy": "Ajouter une race"
   },
   "DND5E.Speed": "Vitesse",
   "DND5E.SpeedConditions": "Conditions de vitesse",
@@ -2363,7 +2404,7 @@
   "DND5E.SpellMaterialsConsumed": "Consommer les matériaux",
   "DND5E.SpellMaterialsCost": "Coût du matériel",
   "DND5E.SpellMaterialsDescription": "Description du matériel",
-  "DND5E.SpellMaterialsSupply": "",
+  "DND5E.SpellMaterialsSupply": "Réserve de matériaux",
   "DND5E.SpellName": "Nom du sort",
   "DND5E.SpellNone": "Aucun",
   "DND5E.SpellPrepAtWill": "À volonté",
@@ -2372,7 +2413,7 @@
   "DND5E.SpellPrepPrepared": "Préparé",
   "DND5E.SpellPrepAlways": "Toujours disponible",
   "DND5E.SpellPreparation": {
-    "Label": "",
+    "Label": "Préparation des sorts",
     "Formula": "Formule de préparation",
     "Mode": "Mode de préparation du sort"
   },
@@ -2493,6 +2534,10 @@
         "saves": {
           "label": "Lier les jets de sauvegarde",
           "hint": "Faire correspondre le DD des jets de sauvegarde sur les aptitudes de la créature invoquée à celles de l'invocateur."
+        },
+        "ability": {
+          "label": "Correspondre à la caractéristique",
+          "hint": "Caractéristique spécifique à utiliser pour correspondre aux attaques et aux DD de sauvegarde."
         }
       },
       "profiles": {
@@ -2504,7 +2549,7 @@
           "cr": {
             "label": "Facteur de puissance",
             "abbr": "FP",
-            "hint": ""
+            "hint": "FP maximum de la créature invoquée."
           },
           "level": {
             "label": "Niveau requis",
@@ -2525,12 +2570,12 @@
             "hint": "Liste des types de créatures à partir desquelles la créature invoquée peut être sélectionnée."
           },
           "uuid": {
-            "label": ""
+            "label": "Créature liée"
           }
         }
       },
       "summon": {
-        "label": "",
+        "label": "Détails de l’invocation",
         "identifier": {
           "label": "Identifiant de classe",
           "hint": "Identifiant utilisé pour déterminer si le niveau de personnage ou un niveau de classe spécifique doit être utilisé pour les limites du niveau de profil."
@@ -2555,7 +2600,7 @@
     "Action": {
       "Place": "Placer les invocations",
       "Summon": "Invocation",
-      "View": ""
+      "View": "Voir l’invocation"
     },
     "CreatureChanges": {
       "Label": "Altération de la créature",
@@ -2566,7 +2611,7 @@
       "Hint": "Altérations apportées aux objets de la créature invoquée."
     },
     "Profile": {
-      "Label": "",
+      "Label": "Profil des invocations",
       "Action": {
         "Create": "Créer un profil",
         "Delete": "Supprimer le profil"
@@ -2595,14 +2640,14 @@
       "target": {
         "label": "Ciblage",
         "affects": {
-          "label": "",
+          "label": "Cibles affectées",
           "choice": {
             "label": "Choisir les cibles",
             "hint": "Lors d'un ciblage de zone, l'utilisateur peut-il choisir qui est affecté ?"
           },
           "count": {
             "label": "Nombre de cibles",
-            "hint": ""
+            "hint": "Nombre de cibles individuelles pouvant être affectées."
           },
           "special": {
             "label": "Ciblage spécial",
@@ -2610,7 +2655,7 @@
           },
           "type": {
             "label": "Type de cible",
-            "hint": ""
+            "hint": "Type de cibles pouvant être affectées (ex. créatures, objets, espaces)."
           }
         },
         "override": {
@@ -2624,7 +2669,7 @@
         "template": {
           "label": "Zone d'effet",
           "contiguous": {
-            "label": "",
+            "label": "Zones contiguës",
             "hint": "Toutes les zones créées doivent-elles être reliées les unes aux autres ?"
           },
           "count": {
@@ -2644,8 +2689,8 @@
             "hint": "Type de zone d'effet ciblée."
           },
           "units": {
-            "label": "",
-            "hint": ""
+            "label": "Unités de zone",
+            "hint": "Unités utilisées pour mesurer les tailles des zones d’effet."
           },
           "width": {
             "label": "Largeur de la zone",
@@ -2662,22 +2707,48 @@
     },
     "Type": {
       "Cube": {
-        "Label": "Cube"
+        "Label": "Cube",
+        "Counted": {
+          "other": "{number} cubes",
+          "one": "{number} cube"
+        }
       },
       "Cylinder": {
-        "Label": "Cylindre"
+        "Label": "Cylindre",
+        "Counted": {
+          "one": "{number} cylindre",
+          "other": "{number} cylindres"
+        }
       },
       "Sphere": {
-        "Label": "Sphère"
+        "Label": "Sphère",
+        "Counted": {
+          "one": "{number} sphère",
+          "other": "{number} sphères"
+        }
       },
       "Space": {
-        "Label": "Espace"
+        "Label": "Espace",
+        "Counted": {
+          "any": "n’importe quels espaces",
+          "every": "chaque espace",
+          "one": "{number} espace",
+          "other": "{number} espaces"
+        }
       },
       "Cone": {
-        "Label": "Cône"
+        "Label": "Cône",
+        "Counted": {
+          "one": "{number} cône",
+          "other": "{number} cônes"
+        }
       },
       "Line": {
-        "Label": "Ligne"
+        "Label": "Ligne",
+        "Counted": {
+          "one": "{number} ligne",
+          "other": "{number} lignes"
+        }
       },
       "Emanation": {
         "Label": "Émanation",
@@ -2687,12 +2758,108 @@
         }
       },
       "Any": {
-        "Label": ""
+        "Label": "N’importe lequel"
+      },
+      "Ally": {
+        "Counted": {
+          "every": "tous les alliés",
+          "any": "n’importe quels alliés",
+          "one": "{number} allié",
+          "other": "{number} alliés"
+        },
+        "Label": "Allié"
+      },
+      "Circle": {
+        "Label": "Cercle",
+        "Counted": {
+          "one": "{number} cercle",
+          "other": "{number} cercles"
+        }
+      },
+      "Creature": {
+        "Label": "Créature",
+        "Counted": {
+          "any": "n’importe quelles créatures",
+          "every": "chaque créature",
+          "one": "{number} créature",
+          "other": "{number} créatures"
+        }
+      },
+      "Enemy": {
+        "Label": "Ennemi",
+        "Counted": {
+          "any": "n’importe quels ennemis",
+          "every": "chaque ennemi",
+          "one": "{number} ennemi",
+          "other": "{number} ennemis"
+        }
+      },
+      "CreatureOrObject": {
+        "Label": "Créature ou objet",
+        "Counted": {
+          "any": "n’importe quelles créatures ou objets",
+          "every": "chaque créature ou objet",
+          "one": "{number} créature ou objet",
+          "other": "{number} créatures ou objets"
+        }
+      },
+      "Object": {
+        "Label": "Objet",
+        "Counted": {
+          "any": "n’importe quels objets",
+          "every": "chaque objet",
+          "one": "{number} objet",
+          "other": "{number} objets"
+        }
+      },
+      "Radius": {
+        "Label": "Rayon",
+        "Counted": {
+          "one": "{number} rayon",
+          "other": "{number} rayons"
+        }
+      },
+      "Self": {
+        "Label": "Soi-même"
+      },
+      "Square": {
+        "Label": "Carré",
+        "Counted": {
+          "one": "{number} carré",
+          "other": "{number} carrés"
+        }
+      },
+      "Target": {
+        "Label": "Cible",
+        "Counted": {
+          "any": "n’importe quelles cibles",
+          "every": "chaque cible",
+          "one": "{number} cible",
+          "other": "{number} cibles"
+        }
+      },
+      "Wall": {
+        "Label": "Mur",
+        "Counted": {
+          "one": "{number} mur",
+          "other": "{number} murs"
+        }
+      },
+      "WillingCreature": {
+        "Label": "Créature consentante",
+        "Counted": {
+          "any": "n’importe quelles créatures consentantes",
+          "every": "chaque créature consentante",
+          "one": "{number} créature consentante",
+          "other": "{number} créatures consentantes"
+        }
       }
     },
     "Count": {
-      "Any": ""
-    }
+      "Any": "N’importe lequel",
+      "Every": "Tous"
+    },
+    "Formatted": "{count} {type}"
   },
   "DND5E.Target": "Cible",
   "DND5E.TargetPl": "Cibles",
@@ -2760,7 +2927,7 @@
   "DND5E.ToolPromptTitle": "Jet de {tool}",
   "DND5E.ToolThieves": "Outils de voleur",
   "DND5E.ToolVehicle": "Véhicule (terrestre ou maritime)",
-  "DND5E.TraitAll": "",
+  "DND5E.TraitAll": "Toutes les {category}",
   "DND5E.TraitArmorPlural.one": "Entraînement à l'armure",
   "DND5E.TraitArmorPlural.other": "Entraînements aux armures",
   "DND5E.TraitArmorProf": "Entraînements aux armures",
@@ -2842,26 +3009,26 @@
   "DND5E.USES": {
     "FIELDS": {
       "uses": {
-        "label": "",
+        "label": "Utilisations",
         "max": {
-          "label": "",
-          "hint": ""
+          "label": "Utilisations maximales",
+          "hint": "Formule pour déterminer le nombre maximal d'utilisations."
         },
         "recovery": {
-          "label": "",
-          "hint": "",
+          "label": "Récupération d'utilisations",
+          "hint": "Profils de récupération pour les utilisations de cette activité.",
           "FIELDS": {
             "period": {
               "label": "Période de récupération",
-              "hint": ""
+              "hint": "Moment où cette récupération se produira."
             },
             "type": {
-              "label": "",
-              "hint": ""
+              "label": "Type de récupération",
+              "hint": "Comment les utilisations sont récupérées."
             },
             "formula": {
               "label": "Formule de récupération",
-              "hint": ""
+              "hint": "Formule utilisée pour déterminer combien d'utilisations sont récupérées."
             }
           }
         },
@@ -3015,7 +3182,14 @@
       "NoActivityOnItem": "{item} sur {actor} n'a pas d'activité avec le nom {activity}.",
       "NoActor": "Aucun acteur sélectionné ou assigné n'a pu être trouvé pour exécuter ce jet.",
       "NoItemOnActor": "{actor} n'a pas d'objet portant le nom {item}."
-    }
+    },
+    "AttackLong": "{formula} pour toucher",
+    "AttackShort": "{formula}",
+    "PassiveLong": "score passif {check}",
+    "AttackExtended": "<em>{type}</em> : {parts}",
+    "DamageExtended": "<em>Touché :</em> {damage} dégâts",
+    "DamageDouble": "{first} plus {second}",
+    "PassiveShort": "passif {check}"
   },
   "EFFECT.DND5E": {
     "StatusBleeding": "Saignement",
@@ -3275,8 +3449,51 @@
     },
     "VISIBILITY": {
       "ITEMDESCRIPTIONS": {
-        "Name": "Masquer les descriptions des PNJ"
+        "Name": "Masquer les descriptions des PNJ",
+        "Hint": "Masque les descriptions des objets des PNJ pour les joueurs lorsqu'elles sont envoyées dans le tchat par le MJ. Ne masque que les descriptions des objets sans description de tchat définie."
+      },
+      "Hint": "Diverses options de configuration qui affectent la visibilité de certaines informations par les joueurs, que le MJ peut souhaiter garder secrètes.",
+      "CHALLENGE": {
+        "All": "Tout afficher",
+        "Hint": "Contrôle les DD des jets visibles par les joueurs et si les réussites/échecs sont mis en évidence.",
+        "Name": "Visibilité des oppositions",
+        "None": "Tout masquer",
+        "Player": "Afficher uniquement ceux des autres joueurs"
+      },
+      "ATTACK": {
+        "Hint": "Contrôle la visibilité des résultats des jets d'attaque dans les cartes de tchat pour les joueurs.",
+        "Name": "Visibilité des résultats d'attaque",
+        "All": "Afficher les résultats et les CA des cibles",
+        "HideAC": "Afficher uniquement les résultats",
+        "None": "Tout masquer"
+      },
+      "Label": "Configurer la visibilité",
+      "Name": "Visibilité"
+    },
+    "METRIC": {
+      "WeightUnits": {
+        "Hint": "Remplace toutes les références aux livres (lbs) par des kilogrammes (kgs) et met à jour les calculs d'encombrement pour utiliser les unités de poids métriques.",
+        "Name": "Utiliser les unités de poids métriques"
+      },
+      "LengthUnits": {
+        "Hint": "Utilise par défaut les mètres au lieu des pieds pour les déplacements et les sens.",
+        "Name": "Utiliser les unités de longueur métriques"
+      },
+      "VolumeUnits": {
+        "Name": "Utiliser les unités de volume métriques",
+        "Hint": "Utilise par défaut les litres au lieu des pieds cubes pour la capacité des conteneurs."
       }
+    },
+    "INITIATIVESCORE": {
+      "Name": "Score d'initiative",
+      "Hint": "Utiliser le score d'initiative d'une créature (10 + bonus) plutôt que de lancer un jet.",
+      "All": "Utiliser le score pour tout le monde",
+      "None": "Toujours effectuer un jet d'initiative",
+      "NPCs": "Utiliser le score pour les PNJ du MJ"
+    },
+    "LOYALTY": {
+      "Hint": "Activer le suivi facultatif de la Loyauté.",
+      "Name": "Score de Loyauté"
     }
   },
   "SHEETS.DND5E": {
@@ -3347,6 +3564,14 @@
           "max": {
             "label": "Max"
           }
+        },
+        "profit": {
+          "label": "Facteur de profit"
+        },
+        "creatures": {
+          "max": {
+            "label": "Aptitude de créatures"
+          }
         }
       },
       "disabled": {
@@ -3389,19 +3614,49 @@
     },
     "Orders": {
       "enlarge": {
-        "inf": "Agrandissement"
+        "inf": "Agrandissement",
+        "present": "Agrandissement"
       },
       "craft": {
-        "present": "",
-        "inf": ""
+        "present": "Fabrication",
+        "inf": "Fabriquer"
       },
       "change": {
-        "present": "",
-        "inf": ""
+        "present": "Changement",
+        "inf": "Changer"
       },
       "build": {
-        "inf": "",
-        "present": ""
+        "inf": "Construire",
+        "present": "Construction"
+      },
+      "Label": "Ordres",
+      "maintain": {
+        "present": "Maintenance",
+        "inf": "Maintenir"
+      },
+      "trade": {
+        "present": "Échange",
+        "inf": "Échanger"
+      },
+      "empower": {
+        "inf": "Renforcer",
+        "present": "Renforcement"
+      },
+      "recruit": {
+        "inf": "Recruter",
+        "present": "Recrutement"
+      },
+      "harvest": {
+        "inf": "Récolter",
+        "present": "Récolte"
+      },
+      "repair": {
+        "inf": "Réparer",
+        "present": "Réparation"
+      },
+      "research": {
+        "inf": "Rechercher",
+        "present": "Recherche"
       }
     },
     "Types": {
@@ -3435,7 +3690,10 @@
         "MeditationChamber": "Chambre de méditation",
         "Menagerie": "Ménagerie",
         "Pub": "Bar",
-        "Sanctum": "Sanctuaire"
+        "Sanctum": "Sanctuaire",
+        "ArcaneStudy": "Étude Arcanique",
+        "Guildhall": "Hall de Guilde",
+        "WarRoom": "Salle de Guerre"
       },
       "Basic": {
         "Kitchen": "Cuisine",
@@ -3461,8 +3719,8 @@
       }
     },
     "Order": {
-      "Issue": "",
-      "Execute": ""
+      "Issue": "Donner un ordre : {order}",
+      "Execute": "Exécuter l'ordre"
     },
     "Action": {
       "DeleteOccupant": "Supprimer l’occupant",
@@ -3509,11 +3767,22 @@
       "Stock": {
         "Buy": "Achat",
         "Sell": "Vente"
+      },
+      "Buy": {
+        "Supplement": "Acheter"
       }
     },
     "Use": {
       "Description": "A donné l'ordre <strong>{order}</strong> à leur {link} {facilityType}."
-    }
+    },
+    "Progress": "Progrès",
+    "Properties": "Propriétés",
+    "Sizes": {
+      "cramped": "Exigu",
+      "roomy": "Spacieux",
+      "vast": "Vaste"
+    },
+    "Squares": "{squares} cases"
   },
   "DND5E.Bastion": {
     "Confirm": "Avancer d'un tour de bastion ?",
@@ -3533,7 +3802,8 @@
       "Automatic": "Résoudre automatiquement",
       "Resolve": "Résoudre l'attaque",
       "NoActorWarning": "Aucun personnage sélectionné comme cible de l'attaque. Sélectionnez un token ou ouvrez leur fiche de personnage.",
-      "Formula": "Formule d'attaque"
+      "Formula": "Formule d'attaque",
+      "Title": "Attaque du bastion"
     },
     "Button": {
       "Hint": "Affiche un bouton pour avancer les tours de bastion dans l'interface principale du jeu.",
@@ -3594,39 +3864,246 @@
       "Halfling": "Halfelin",
       "Orc": "Orc",
       "ThievesCant": "Jargon des voleurs",
-      "Celestial": "Céleste"
+      "Celestial": "Céleste",
+      "Abyssal": "Abyssal",
+      "Aquan": "Aquatique",
+      "Aarakocra": "Aarakocra",
+      "CommonSign": "Langue des signes commune",
+      "DeepSpeech": "Profond",
+      "Draconic": "Draconique",
+      "Dwarvish": "Nain",
+      "Elvish": "Elfique",
+      "Gith": "Gith",
+      "Gnomish": "Gnome",
+      "Infernal": "Infernal",
+      "Ignan": "Igné",
+      "Auran": "Aérien",
+      "Common": "Commun",
+      "Primordial": "Primordial",
+      "Sylvan": "Sylvestre",
+      "Terran": "Terreux",
+      "Undercommon": "Commun des profondeurs"
     },
     "Communication": {
-      "Telepathy": "Télépathie"
+      "Telepathy": "Télépathie",
+      "Label": "Communication à distance"
+    },
+    "All": "Toutes les langues",
+    "Label": "Langue",
+    "Category": {
+      "Exotic": "Langues exotiques",
+      "Rare": "Langues rares",
+      "Standard": "Langues standard"
     }
   },
   "DND5E.LegendaryResistance": {
     "Action": {
       "Resist": "Résistance légendaire"
     },
-    "Label": "Résistance légendaire"
+    "Label": "Résistance légendaire",
+    "Max": "Nombre maximum de Résistances légendaires",
+    "Ordinal": {
+      "one": "{n}re Résistance légendaire",
+      "two": "{n}de Résistance légendaire",
+      "few": "{n}e Résistance légendaire",
+      "other": "{n}e Résistance légendaire"
+    },
+    "Remaining": "Résistances légendaires restantes",
+    "Resisted": "Résistance légendaire utilisée"
   },
   "DND5E.NPC": {
     "SECTIONS": {
       "Actions": "Actions",
       "BonusActions": "Actions bonus",
       "LegendaryActions": "Actions légendaires",
-      "Reactions": "Réactions"
+      "Reactions": "Réactions",
+      "Traits": "Traits"
+    },
+    "Label": "PNJ",
+    "Important": {
+      "Hint": "Les PNJ importants suivent les jets de sauvegarde contre la mort, les dés de vie et la loyauté (si activée). Tout PNJ ayant des niveaux de classe est considéré comme important, quel que soit ce paramètre.",
+      "Label": "PNJ important"
     }
   },
   "DND5E.RechargeShort": "Recharge après un repos court ou long",
   "DND5E.REST": {
     "Long": {
-      "Label": "Repos long"
+      "Label": "Repos long",
+      "Abbreviation": "RL",
+      "Hint": {
+        "Group": "Lors d’un repos long, les membres du groupe récupèrent des points de vie, des dés de vie, des ressources de classe, des charges d’objets à usage limité et des emplacements de sorts.",
+        "GroupLegacy": "Lors d’un repos long, les membres du groupe récupèrent des points de vie, la moitié de leurs dés de vie maximum, des ressources de classe, des charges d’objets à usage limité et des emplacements de sorts.",
+        "Normal": "Lors d’un repos long, vous récupérez des points de vie, des dés de vie, des ressources de classe, des charges d’objets à usage limité et des emplacements de sorts.",
+        "NormalLegacy": "Lors d’un repos long, vous récupérez des points de vie, la moitié de vos dés de vie maximum, des ressources de classe, des charges d’objets à usage limité et des emplacements de sorts."
+      },
+      "LabelShort": "Repos l.",
+      "Recovery": "Se récupère après un repos long",
+      "Result": {
+        "Full": "{name} fait un repos long et récupère {health} et {dice}.",
+        "HitDice": "{name} fait un repos long et récupère {dice}.",
+        "HitPoints": "{name} fait un repos long et récupère {health}.",
+        "Short": "{name} fait un repos long."
+      }
     },
     "Short": {
-      "Label": "Repos court"
+      "Label": "Repos court",
+      "Hint": {
+        "Group": "Lors d’un repos court, les membres du groupe peuvent dépenser des dés de vie et récupérer des usages d’objets.",
+        "Normal": "Lors d’un repos court, vous pouvez dépenser les dés de vie restants et récupérer des usages d’objets."
+      },
+      "Abbreviation": "RC",
+      "LabelShort": "Repos c.",
+      "Recovery": "Se récupère après un repos court",
+      "Result": {
+        "Full": "{name} fait un repos court, dépensant {dice} pour récupérer {health}.",
+        "Short": "{name} fait un repos court."
+      }
+    },
+    "HitDice": {
+      "AutoSpend": {
+        "Hint": "Dépense automatiquement les dés de vie jusqu'à épuisement ou récupération complète des points de vie.",
+        "Label": "Dépense automatique des DV"
+      },
+      "None": "Aucun dé de vie restant à lancer durant ce repos.",
+      "Select": "Sélectionnez les dés à lancer"
+    },
+    "Configuration": "Configuration du repos",
+    "Label": "Repos",
+    "NewDay": {
+      "Hint": "Récupère les capacités à usage limité qui se rechargent au crépuscule, à l’aube ou au début d’une nouvelle journée.",
+      "Label": "Nouvelle journée"
     }
   },
   "DND5E.UNITS": {
     "VOLUME": {
       "Liter": {
-        "Abbreviation": "L"
+        "Abbreviation": "L",
+        "Label": "Litres"
+      },
+      "CubicFoot": {
+        "Counted": {
+          "narrow": {
+            "other": "{number}pc³",
+            "one": "{number}pc³"
+          },
+          "short": {
+            "one": "{number} pi³",
+            "other": "{number} pi³"
+          },
+          "long": {
+            "one": "{number} pied cube",
+            "other": "{number} pieds cubes"
+          }
+        },
+        "Label": "Pieds cubes",
+        "Abbreviation": "pc³"
+      },
+      "Label": "Unités de volume"
+    },
+    "DISTANCE": {
+      "Meter": {
+        "Label": "Mètres",
+        "Abbreviation": "m"
+      },
+      "Mile": {
+        "Label": "Miles",
+        "Abbreviation": "mi"
+      },
+      "Label": "Unités de distance",
+      "Foot": {
+        "Label": "Pieds",
+        "Abbreviation": "pi"
+      },
+      "Kilometer": {
+        "Label": "Kilomètres",
+        "Abbreviation": "km"
+      }
+    },
+    "TIME": {
+      "Day": {
+        "Label": "Jour"
+      },
+      "Hour": {
+        "Label": "Heure"
+      },
+      "Minute": {
+        "Label": "Minute"
+      },
+      "Month": {
+        "Label": "Mois"
+      },
+      "Second": {
+        "Label": "Seconde"
+      },
+      "Round": {
+        "Counted": {
+          "one": "{number} round",
+          "other": "{number} rounds",
+          "narrow": "{number}r"
+        },
+        "Label": "Round"
+      },
+      "Turn": {
+        "Label": "Tour",
+        "Abbreviation": "t",
+        "Counted": {
+          "narrow": "{number}t",
+          "one": "{number} tour",
+          "other": "{number} tours"
+        }
+      },
+      "Week": {
+        "Label": "Semaine"
+      },
+      "Year": {
+        "Label": "Année"
+      }
+    },
+    "WEIGHT": {
+      "Label": "Unités de poids",
+      "Kilogram": {
+        "Label": "Kilogramme",
+        "Abbreviation": "kg"
+      },
+      "Megagram": {
+        "Label": "Tonnes",
+        "Abbreviation": "t",
+        "Counted": {
+          "narrow": {
+            "one": "{number}t",
+            "other": "{number}t"
+          },
+          "short": {
+            "one": "{number} t",
+            "other": "{number} t"
+          },
+          "long": {
+            "one": "{number} tonne",
+            "other": "{number} tonnes"
+          }
+        }
+      },
+      "Pound": {
+        "Label": "Livres",
+        "Abbreviation": "lb"
+      },
+      "Ton": {
+        "Label": "Tonnes",
+        "Abbreviation": "tn",
+        "Counted": {
+          "narrow": {
+            "one": "{number}tn",
+            "other": "{number}tn"
+          },
+          "short": {
+            "one": "{number} tn",
+            "other": "{number} tn"
+          },
+          "long": {
+            "one": "{number} tonne",
+            "other": "{number} tonnes"
+          }
+        }
       }
     }
   },
@@ -3700,6 +4177,15 @@
           "value": {
             "label": "Poids maximum"
           }
+        },
+        "volume": {
+          "label": "Capacité en volume",
+          "units": {
+            "label": "Unités de volume"
+          },
+          "value": {
+            "label": "Volume maximum"
+          }
         }
       },
       "properties": {
@@ -3717,12 +4203,173 @@
   "DND5E.CreatureTag": "{size} {type}, {alignment}",
   "DND5E.Habitat": {
     "Categories": {
-      "Any": ""
-    }
+      "Any": "N'importe lequel"
+    },
+    "Configuration": {
+      "Custom": "Personnalisé",
+      "Label": "Habitat",
+      "Legend": "Catégories",
+      "Subtype": "{type} sous-type",
+      "Title": "Configurer l'habitat"
+    },
+    "Subtype": "{type} ({subtype})"
   },
   "DND5E.Treasure": {
     "Categories": {
-      "Arcana": ""
+      "Arcana": "Arcanes",
+      "Any": "N’importe quel",
+      "Armaments": "Armements",
+      "Implements": "Instruments",
+      "Individual": "Individuel",
+      "None": "Aucun",
+      "Relics": "Reliques"
+    },
+    "Configuration": {
+      "Label": "Trésor",
+      "Title": "Configurer le trésor"
     }
-  }
+  },
+  "DND5E.ItemFacilityDetails": "Détails de l'installation",
+  "DND5E.ExperiencePoints": {
+    "Abbreviation": "PX",
+    "Boons": {
+      "one": "{number} Faveur",
+      "other": "{number} Faveurs"
+    },
+    "Current": "PX actuel",
+    "Format": "{value} PX",
+    "Progress": "Progrès vers le prochain niveau",
+    "StatBlock": {
+      "Standard": "PX {value}",
+      "Lair": "PX {value}, ou {lair} dans son antre"
+    },
+    "Value": "Valeur en PX",
+    "Label": "Points d’expérience"
+  },
+  "DND5E.FORWARD": {
+    "Title": "Avancer",
+    "FIELDS": {
+      "activity": {
+        "label": "Activité déclenchée"
+      }
+    },
+    "Warning": {
+      "NoActivity": "Une activité liée doit être configurée avant que l'activité Avancer puisse être utilisée."
+    }
+  },
+  "DND5E.FlagsAlertHintLegacy": "Fournit +5 à l'initiative.",
+  "DND5E.Gear": "Équipement",
+  "DND5E.LAIR": {
+    "Label": "Antre",
+    "Action": {
+      "Label": "Action d'antre",
+      "Initiative": "Compte d'initiative pour les actions d'antre",
+      "Uses": "Utilise les actions d'antre"
+    },
+    "HasLair": "A un antre",
+    "Inside": "Dans l'antre"
+  },
+  "DND5E.GlobalBonus": "Bonus Global",
+  "DND5E.FEATURE": {
+    "FIELDS": {
+      "properties": {
+        "label": "Propriétés des aptitudes"
+      },
+      "requirements": {
+        "label": "Prérequis"
+      },
+      "type": {
+        "label": "Type d'aptitude"
+      }
+    }
+  },
+  "DND5E.HITPOINTS": {
+    "Counted": {
+      "other": "{number} points de vie",
+      "one": "{number} point de vie"
+    }
+  },
+  "DND5E.HitPointsTempMaxHint": "Modification temporaire des PV maximum.",
+  "DND5E.HitPointsOverrideHint": "Remplace les points de vie calculés automatiquement, en ignorant les PV de la classe, les bonus et les modificateurs de caractéristiques.",
+  "DND5E.HITDICE": {
+    "Action": {
+      "Decrease": "Réduire",
+      "Increase": "Augmenter"
+    },
+    "Available": "{number} disponible(s)",
+    "Config": "Ajuster les dés de vie",
+    "Counted": {
+      "one": "{number} dé de vie",
+      "other": "{number} dés de vie"
+    }
+  },
+  "DND5E.Items": "Objets",
+  "DND5E.ItemSpeciesDetailsLegacy": "Détails de la race",
+  "DND5E.LegendaryAction": {
+    "Label": "Action légendaire",
+    "Max": "Nombre maximum d'Actions légendaires",
+    "Ordinal": {
+      "one": "{n}re Action légendaire",
+      "two": "{n}de Action légendaire",
+      "few": "{n}e Action légendaire",
+      "other": "{n}e Action légendaire"
+    },
+    "Remaining": "Actions légendaires restantes"
+  },
+  "DND5E.Loyalty": "Loyauté",
+  "DND5E.ProficiencyOther": "Autre",
+  "DND5E.RacialTraitsLegacy": "Traits raciaux",
+  "DND5E.NUMBER": {
+    "1": "un",
+    "2": "deux",
+    "3": "trois",
+    "4": "quatre",
+    "5": "cinq",
+    "6": "six",
+    "7": "sept",
+    "8": "huit",
+    "9": "neuf"
+  },
+  "DND5E.ProficiencyBonusAbbr": "BM",
+  "DND5E.RechargeLong": "Se recharge après un repos long",
+  "DND5E.ROLL": {
+    "Range": {
+      "Label": "Intervalle de jets",
+      "Maximum": "Jet maximum",
+      "Minimum": "Jet minimum"
+    },
+    "Section": "Jets de {label}",
+    "Status": "Statut"
+  },
+  "DND5E.SKILL": {
+    "SECTIONS": {
+      "Global": {
+        "Label": "Bonus globaux",
+        "Hint": "Ces bonus s’appliquent aux tests effectués avec n’importe quelle compétence."
+      },
+      "Details": "Détails de {label}",
+      "Bonuses": {
+        "Label": "Bonus de {label}",
+        "Hint": "Ces bonus s’appliquent aux scores passifs et aux tests effectués avec {label}."
+      }
+    }
+  },
+  "DND5E.TOOL": {
+    "SECTIONS": {
+      "Bonuses": {
+        "Label": "Bonus {label}",
+        "Hint": "Ces bonus s’appliquent aux tests effectués avec {label}."
+      },
+      "Global": {
+        "Label": "Bonus globaux",
+        "Hint": "Ces bonus s’appliquent aux tests effectués avec n’importe quel outil."
+      },
+      "Details": "Détails {label}"
+    }
+  },
+  "DND5E.TraitDMPlural.one": "Modification des dégâts",
+  "DND5E.TraitDMPlural.other": "Modifications des dégâts",
+  "DND5E.SavingThrowShort": "Sauvegarde",
+  "DND5E.SpellSlotTemporary": "Emplacement de sort temporaire",
+  "DND5E.Unit": "Unité"
 }
