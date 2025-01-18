@@ -128,9 +128,14 @@
           "description": "<p>You create one of the following magical effects within range:</p>\n<ul>\n<li>Your voice booms up to three times as loud as normal for 1 minute.</li>\n<li>You cause flames to flicker, brighten, dim, or change color for 1 minute.</li>\n<li>You cause harmless tremors in the ground for 1 minute.</li>\n<li>You create a sound that originates from a point of your choice within range.</li>\n<li>You cause an unlocked door or window to fly open or slam shut.</li>\n<li>You alter the appearance of your eyes for 1 minute.</li>\n</ul>\n<p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>"
         },
         "Bless": {
-          "name": "Bless",
+          "name": "Bénédiction",
           "description": "<p>You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll 1d4 and add the number rolled to the attack roll or saving throw.</p>\n<p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>",
-          "materials": "un peu d'eau bénite aspergée"
+          "materials": "un peu d'eau bénite aspergée",
+          "effects": {
+            "Bless": {
+              "name": "Bénédiction"
+            }
+          }
         },
         "Cure Wounds": {
           "name": "Cure Wounds",
@@ -151,9 +156,14 @@
           "materials": "une goutte d'eau pour en créer, quelques grains de sable pour en détruire"
         },
         "Bane": {
-          "name": "Bane",
+          "name": "Fléau",
           "description": "<p>Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.</p>\n<p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>",
-          "materials": "une goutte de sang"
+          "materials": "une goutte de sang",
+          "effects": {
+            "Bane": {
+              "name": "Fléau"
+            }
+          }
         },
         "Detect Evil and Good": {
           "name": "Detect Evil and Good",
@@ -267,7 +277,8 @@
           "requirements": "Drakéide blanc"
         }
       },
-      "alignment": "Loyal Bon"
+      "alignment": "Loyal Bon",
+      "description": "<p>Fidèle à sa divinité et aux coutumes de sa société, Akra ne se sent pas à sa place lorsqu'il part à l'aventure en terre étrangère. Mais il se sent obligé de faire tout ce qui est en son pouvoir pour apporter la paix dans la région.</p>"
     },
     "Aoth (Human Druid)": {
       "name": "Aoth (Druide Humain)",
@@ -465,7 +476,8 @@
         }
       },
       "armorProf": "(pas en métal)",
-      "alignment": "Neutre"
+      "alignment": "Neutre",
+      "description": "<p>Aoth a vécu si longtemps parmi les animaux qu'il a aujourd'hui du mal à parler le commun. Son habitat naturel étant en danger, il a décidé de rejoindre un groupe d'aventuriers pour rétablir l'équilibre sur ses terres.</p>"
     },
     "Beiro (Half-Elf Bard)": {
       "name": "Beiro (Barde Demi-Elfe)",
@@ -647,7 +659,8 @@
             "Skill Versatility": {
               "title": "Polyvalence"
             }
-          }
+          },
+          "subtype": "Elfe"
         },
         "Fey Ancestry": {
           "name": "Fey Ancestry",
@@ -656,7 +669,8 @@
         }
       },
       "alignment": "Chaotique Neutre",
-      "ci": "la magie ne peut pas vous endormir; avantagé aux jets de sauvegarde contre l'état charmé"
+      "ci": "la magie ne peut pas vous endormir; avantagé aux jets de sauvegarde contre l'état charmé",
+      "description": "<p>Beiro était un célèbre artiste dans sa taverne locale, lorsqu'un jour il n'eut plus d'histoires à raconter. Pour y remédier, il s'est mis à écrire ses propres histoires, afin de pouvoir un jour les raconter à nouveau dans sa taverne.</p>"
     },
     "Krusk (Half-Orc Paladin)": {
       "name": "Krusk (Paladin Demi-Orc)",
@@ -787,7 +801,8 @@
             "Menacing": {
               "title": "Menaçant"
             }
-          }
+          },
+          "subtype": "Orc"
         },
         "Relentless Endurance": {
           "name": "Relentless Endurance",
@@ -805,7 +820,8 @@
           "requirements": "Demi-orc"
         }
       },
-      "alignment": "Loyal Bon"
+      "alignment": "Loyal Bon",
+      "description": "<p>Parcourant le pays pour apporter la justice à tous, Krusk n'a qu'un seul but : la destruction du mal où qu'il se trouve.</p>"
     },
     "Merric (Halfling Barbarian)": {
       "name": "Merric (Barbare Halfelin)",
@@ -892,12 +908,22 @@
         "Rage": {
           "name": "Rage",
           "description": "<p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:</p>\n<ul>\n<li>\n<p>You have advantage on Strength checks and Strength saving throws.</p>\n</li>\n<li>\n<p>When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.</p>\n</li>\n<li>\n<p>You have resistance to bludgeoning, piercing, and slashing damage.</p>\n</li>\n</ul>\n<p>If you are able to cast spells, you can't cast them or concentrate on them while raging. </p>\n<p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. </p>\n<p>Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.</p>",
-          "requirements": "Barbare 1"
+          "requirements": "Barbare 1",
+          "effects": {
+            "Rage": {
+              "name": "Rage"
+            }
+          }
         },
         "Unarmored Defense (Barbarian)": {
           "name": "Unarmored Defense (Barbarian)",
           "description": "<p>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.</p>",
-          "requirements": "Barbare 1"
+          "requirements": "Barbare 1",
+          "effects": {
+            "Unarmored Defense": {
+              "name": "Défense sans armure"
+            }
+          }
         },
         "Lightfoot Halfling": {
           "name": "Lightfoot Halfling",
@@ -906,7 +932,8 @@
             "hv2bcANK5jEJZaAb": {
               "hint": "Les halfelins mesurent environ 90 cm pour un poids avoisinant les 20 kg. Vous êtes de taille P."
             }
-          }
+          },
+          "subtype": "Halfelin"
         },
         "Lucky": {
           "name": "Lucky",
@@ -930,7 +957,8 @@
         }
       },
       "ci": "avantagé contre l'état effrayé",
-      "alignment": "Chaotique Bon"
+      "alignment": "Chaotique Bon",
+      "description": "<p>Merric était autrefois une justicière, grâce à son sens inné de la justice de rue. Bien que sa petite taille puisse sembler insignifiante au combat, elle compense largement par ses violentes explosions de colère.</p>"
     },
     "Morthos (Tiefling Sorcerer)": {
       "name": "Morthos (Ensorceleur Tieffelin)",
@@ -1126,7 +1154,8 @@
           "description": "<p>You create one of the following magical effects within range:</p>\n<ul>\n<li>Your voice booms up to three times as loud as normal for 1 minute.</li>\n<li>You cause flames to flicker, brighten, dim, or change color for 1 minute.</li>\n<li>You cause harmless tremors in the ground for 1 minute.</li>\n<li>You create a sound that originates from a point of your choice within range.</li>\n<li>You cause an unlocked door or window to fly open or slam shut.</li>\n<li>You alter the appearance of your eyes for 1 minute.</li>\n</ul>\n<p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>"
         }
       },
-      "alignment": "Neutre Mauvais"
+      "alignment": "Neutre Mauvais",
+      "description": "<p>L'enquête de Morthos sur son ascendance draconique-infernale complexe l'a conduite à une vie académique, mais il est vite apparu que les imbéciles en charge lui cachaient de nombreux secrets.</p>"
     },
     "Perrin (Halfling Monk)": {
       "name": "Perrin (Moine Halfelin)",
@@ -1259,7 +1288,8 @@
             "hv2bcANK5jEJZaAb": {
               "hint": "Les halfelins mesurent environ 90 cm pour un poids avoisinant les 20 kg. Vous êtes de taille P."
             }
-          }
+          },
+          "subtype": "Halfelin"
         },
         "Lucky": {
           "name": "Lucky",
@@ -1283,7 +1313,8 @@
         }
       },
       "ci": "avantagé contre l'état effrayé",
-      "alignment": "Neutre"
+      "alignment": "Neutre",
+      "description": "<p>Élève dévoué du monastère local, Perrin a été chargé de ramener l'équilibre dans les terres environnantes.</p>"
     },
     "Quillathe (Elf Ranger)": {
       "name": "Quillathe (Rôdeur Elfe)",
@@ -1419,7 +1450,8 @@
         }
       },
       "ci": "sommeil magique; avantagé aux jets de sauvegarde contre l'état charmé",
-      "alignment": "Chaotique Neutre"
+      "alignment": "Chaotique Neutre",
+      "description": "<p>Quillathe a pour hobby de nettoyer les monstres de ses bois, mais une nouvelle force menace désormais ses terres et elle doit s'allier à des aventuriers pour la vaincre.</p>"
     },
     "Randal (Human Fighter)": {
       "name": "Randal (Guerrier Humain)",
@@ -1568,7 +1600,8 @@
           }
         }
       },
-      "alignment": "Neutre Bon"
+      "alignment": "Neutre Bon",
+      "description": "<p>Randal a gravi les échelons de la garde de sa ville natale, avant de se lasser de la vie urbaine et de partir à la recherche d'aventures.</p>"
     },
     "Riswynn (Dwarf Rogue)": {
       "name": "Riswynn (Roublard Nain)",
@@ -1711,7 +1744,8 @@
             "Dwarven Combat Training": {
               "title": "Entraînement martial nain"
             }
-          }
+          },
+          "subtype": "Nain"
         },
         "Dwarven Resilience": {
           "name": "Dwarven Resilience",
@@ -1724,7 +1758,8 @@
           "requirements": "Nain"
         }
       },
-      "alignment": "Neutre"
+      "alignment": "Neutre",
+      "description": "<p>Autrefois bureaucrate respectée des salles naines, Riswynn s'est essayée aux complots, a appris quelques ruses et s'est attiré les foudres de certains nobles. Elle cherche à se faire un nom et à retrouver son statut social.</p>"
     },
     "Sefris (Half-Elf Warlock)": {
       "name": "Sefris (Sorcier Demi-Elfe)",
@@ -1905,7 +1940,8 @@
             "Skill Versatility": {
               "title": "Polyvalence"
             }
-          }
+          },
+          "subtype": "Elfe"
         },
         "Fey Ancestry": {
           "name": "Fey Ancestry",
@@ -1914,7 +1950,8 @@
         }
       },
       "ci": "sommeil magique; avantagé aux jets de sauvegarde contre l'état charmé",
-      "alignment": "Chaotique Neutre"
+      "alignment": "Chaotique Neutre",
+      "description": "<p>Sefris a commencé par faire du vol à la tire lorsqu'il était enfant, puis il s'est mis à commettre de petits cambriolages et enfin des vols complexes, en utilisant le lien sombre qui l'unit à son fiélon pour l'aider dans ses exploits. Il travaille pour quiconque peut lui donner de l'argent.</p>"
     },
     "Zanna (Gnome Wizard)": {
       "name": "Zanna (Magicien Gnome)",
@@ -2090,7 +2127,8 @@
             "1qwH1s1GrEC8T8Qp": {
               "hint": "Les gnomes mesurent entre 90 cm et 1,20 m et pèsent environ 20 kg. Vous êtes de taille P."
             }
-          }
+          },
+          "subtype": "Gnome"
         },
         "Gnome Cunning": {
           "name": "Gnome Cunning",
@@ -2103,7 +2141,8 @@
           "requirements": "Gnome des roches"
         }
       },
-      "alignment": "Chaotique Bon"
+      "alignment": "Chaotique Bon",
+      "description": "<p>Toujours intéressée par le bricolage, Zanna est partie à l'aventure afin de trouver d'autres sorts pour son livre de sorts, et peut-être un jour en créer elle-même.</p>"
     }
   }
 }
