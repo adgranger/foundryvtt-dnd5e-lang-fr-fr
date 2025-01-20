@@ -212,7 +212,8 @@
         "other": "{points} points max par score"
       },
       "Feat": {
-        "Hint": "Déposez un don ici pour en choisir un au lieu d'une amélioration de score de caractéristique."
+        "Hint": "Déposez un don ici pour en choisir un au lieu d'une amélioration de score de caractéristique.",
+        "ASIName": "Don d'amélioration de caractéristique"
       },
       "FIELDS": {
         "cap": {
@@ -245,7 +246,12 @@
         "Level": "Vous devez être au moins au niveau {level} pour bénéficier de ce don.",
         "Type": "Seules les aptitudes de type \"don\" peuvent être sélectionnées."
       },
-      "Details": "Détails de l'amélioration"
+      "Details": "Détails de l'amélioration",
+      "Journal": {
+        "DescriptionLegacy": "<p>Lorsque vous atteignez le niveau {firstLevelOrdinal}, et de nouveau aux niveaux {otherLevelsOrdinal}, vous pouvez augmenter une caractéristique de votre choix de 2, ou augmenter deux caractéristiques de votre choix de 1. Comme d'habitude, vous ne pouvez pas augmenter une caractéristique au-delà de {maxAbilityScore} en utilisant cette aptitude.</p><p>En utilisant la règle optionnelle des dons, vous pouvez renoncer à cette amélioration pour choisir un don à la place.</p>",
+        "DescriptionModern": "<p>Vous obtenez le don d'amélioration de caractéristique ou un autre don de votre choix pour lequel vous remplissez les conditions. Vous obtenez à nouveau cette fonctionnalité aux niveaux {class} {otherLevels}.</p>",
+        "Name": "Amélioration de caractéristique"
+      }
     },
     "SPELLCONFIG": {
       "FreeCasting": "Incantation gratuite",
@@ -405,6 +411,140 @@
         "SpellLevelSpecific": "Seuls les sorts de niveau {level} peuvent être choisis pour cette progression."
       },
       "DropHint": "Déposez des objets ici pour les ajouter à la liste pouvant être sélectionnée avec cette progression."
+    },
+    "ScaleValue": {
+      "FIELDS": {
+        "distance": {
+          "units": {
+            "label": "Unités de distance"
+          }
+        },
+        "identifier": {
+          "label": "Identifiant"
+        },
+        "scale": {
+          "label": "Évolution"
+        },
+        "type": {
+          "label": "Type d'Évolution"
+        }
+      },
+      "Details": "Détails de l'Évolution",
+      "Hint": "Une valeur unique qui évolue à mesure qu'une classe monte de niveau et qui est disponible dans les formules de jet (comme le dé d'arts martiaux d'un moine).",
+      "Title": "Valeur d'évolution",
+      "Type": {
+        "CR": {
+          "FIELDS": {
+            "value": {
+              "label": "FP"
+            }
+          },
+          "Hint": "Utilisez ceci pour représenter le facteur de puissance des créatures pour des fonctionnalités comme Forme sauvage",
+          "Label": "Facteur de Puissance"
+        },
+        "Dice": {
+          "FIELDS": {
+            "faces": {
+              "label": "Faces"
+            },
+            "number": {
+              "label": "Nombre"
+            }
+          },
+          "Hint": "Utilisez ceci pour des valeurs de dés comme l'inspiration bardique, l'attaque sournoise ou les dés de supériorité.",
+          "Identifier": "Cette valeur d'évolution pour le niveau actuel sera disponible dans une formule en utilisant :<br><copyable-text>@scale.{class}.{identifier}</copyable-text> - formule complète (<code>4d6</code>)<br><copyable-text>@scale.{class}.{identifier}.die</copyable-text> - dé complet (<code>d6</code>)<br><copyable-text>@scale.{class}.{identifier}.number</copyable-text> - nombre de dés (<code>4</code>)<br><copyable-text>@scale.{class}.{identifier}.faces</copyable-text> - nombre de faces (<code>6</code>)",
+          "Label": "Dés"
+        },
+        "Distance": {
+          "Hint": "Utilisez ceci pour des valeurs numériques représentant une distance, comme la vitesse de déplacement sans armure ou le rayon de l'aura de protection.",
+          "Label": "Distance"
+        },
+        "Number": {
+          "Hint": "Utilisez ceci pour des valeurs purement numériques, comme le bonus de dégâts de rage ou le nombre d'utilisations par jour.",
+          "Label": "Numérique"
+        },
+        "String": {
+          "FIELDS": {
+            "value": {
+              "label": "Valeur"
+            }
+          },
+          "Hint": "Utilisez ceci si vous n'êtes pas sûr du type des valeurs d'évolution, ou si le type n'a pas d'importance.",
+          "Identifier": "Cette valeur d'évolution pour le niveau actuel sera disponible dans une formule en utilisant :<br><copyable-text>@scale.{class}.{identifier}</copyable-text>",
+          "Label": "Tout"
+        }
+      }
+    },
+    "Size": {
+      "DefaultHint": {
+        "Multiple": "Choisissez votre taille parmi {sizes}.",
+        "Single": "Votre taille est {size}."
+      },
+      "FIELDS": {
+        "sizes": {
+          "label": "Tailles"
+        }
+      },
+      "Hint": "Définir la taille d'un personnage.",
+      "Title": "Taille"
+    },
+    "Trait": {
+      "Action": {
+        "AddChoice": "Ajouter un choix",
+        "RemoveChoice": "Supprimer un choix"
+      },
+      "ChoicesRemaining": "Sélectionnez {count} {type} supplémentaires",
+      "Details": "Détails du trait",
+      "FIELDS": {
+        "allowReplacements": {
+          "hint": "Si un trait est déjà défini sur l'acteur, permettez au joueur de choisir un autre trait en remplacement.",
+          "label": "Autoriser les remplacements"
+        },
+        "choices": {
+          "hint": "Les traits suivants seront proposés en choix au joueur.",
+          "label": "Choix",
+          "FIELDS": {
+            "count": {
+              "label": "Nombre"
+            },
+            "pool": {
+              "label": "Traits"
+            }
+          }
+        },
+        "grants": {
+          "hint": "Les traits suivants seront accordés au personnage tant qu'il ne possède pas déjà ce trait.",
+          "label": "Garanti"
+        },
+        "mode": {
+          "label": "Mode"
+        }
+      },
+      "Hint": "Accordez à un personnage certains traits ou donnez-lui la possibilité de choisir des traits (comme des maîtrises, des compétences, des langues).",
+      "Mode": {
+        "Default": {
+          "Hint": "Acquérez un trait ou une maîtrise.",
+          "Label": "Par défaut"
+        },
+        "Expertise": {
+          "Hint": "Acquérez une expertise dans un trait que vous maîtrisez déjà.",
+          "Label": "Expertise"
+        },
+        "Force": {
+          "Hint": "Acquérez une expertise dans un trait, quel que soit votre niveau de maîtrise précédent.",
+          "Label": "Expertise forcée"
+        },
+        "Mastery": {
+          "Hint": "Acquérez la botte d'une arme que vous maîtrisez déjà.",
+          "Label": "Botte"
+        },
+        "Upgrade": {
+          "Hint": "Acquérez la maîtrise d'un trait à moins que vous ne l'ayez déjà, auquel cas vous gagnez une expertise.",
+          "Label": "Amélioration"
+        }
+      },
+      "TraitType": "Type de trait",
+      "Title": "Traits"
     }
   },
   "DND5E.AdvancementChoices": "choix",
@@ -1559,10 +1699,13 @@
       "Charm": "Charme",
       "EpicBoon": "Faveur épique"
     },
-    "SpeciesLegacy": "Aptitude de race"
+    "SpeciesLegacy": "Aptitude de race",
+    "Vehicle": {
+      "Label": "Aptitude du véhicule"
+    }
   },
   "DND5E.Focus": {
-    "Label": "Focaliseur d'Incantation",
+    "Label": "Focaliseur d'incantation",
     "Arcane": "Focaliseur arcanique",
     "Druidic": "Focaliseur druidique",
     "Holy": "Focaliseur sacrés"
@@ -3087,6 +3230,11 @@
       "mastery": {
         "label": "Botte",
         "hint": "Capacité d'arme spéciale débloquée pour les personnages qui ont une Botte d'arme ou une aptitude associée."
+      },
+      "armor": {
+        "value": {
+          "label": "Classe d'armure"
+        }
       }
     },
     "Mastery": {
@@ -3336,7 +3484,7 @@
     "Normal": "Normal (capacité de port maximale)",
     "Variant": "Variante (encombré & très encombré)"
   },
-  "SETTINGS.5eFeatsL": "Permettre aux joueurs de choisir un don plutôt que de prendre une amélioration de score de capacité lors de la progression de classe.",
+  "SETTINGS.5eFeatsL": "Permet aux joueurs de choisir un don plutôt que d'améliorer un score de caractéristique lors de la progression de classe en utilisant les règles Héritage.",
   "SETTINGS.5eFeatsN": "Autoriser les Dons",
   "SETTINGS.5eHonorL": "Permet d'utiliser la caractéristique facultatif Honneur. Nécessite le rechargement du monde.",
   "SETTINGS.5eHonorN": "Score d'Honneur",
@@ -4238,6 +4386,10 @@
       },
       "type": {
         "label": "Type d'aptitude"
+      },
+      "cover": {
+        "label": "Abri",
+        "hint": "Abri fournie à l'équipage par cette aptitude du véhicule."
       }
     }
   },
@@ -4329,5 +4481,47 @@
   "DND5E.TraitDMPlural.other": "Modifications des dégâts",
   "DND5E.SavingThrowShort": "Sauvegarde",
   "DND5E.SpellSlotTemporary": "Emplacement de sort temporaire",
-  "DND5E.Unit": "Unité"
+  "DND5E.Unit": "Unité",
+  "DND5E.ORDINAL": {
+    "one": "{number}er",
+    "two": "{number}e",
+    "few": "{number}e",
+    "other": "{number}e"
+  },
+  "DND5E.VEHICLE": {
+    "MOUNTABLE": {
+      "FIELDS": {
+        "crewed": {
+          "label": "Équipé"
+        },
+        "hp": {
+          "label": "Points de vie",
+          "dt": {
+            "label": "Seuil de dégâts"
+          },
+          "max": {
+            "label": "PV max"
+          },
+          "value": {
+            "label": "PV actuels"
+          },
+          "conditions": {
+            "label": "Conditions de santé"
+          }
+        },
+        "cover": {
+          "hint": "Abri fournie à l'équipage utilisant cet équipement.",
+          "label": "Abri"
+        },
+        "speed": {
+          "conditions": {
+            "label": "Conditions de vitesse"
+          },
+          "value": {
+            "label": "Vitesse"
+          }
+        }
+      }
+    }
+  }
 }
