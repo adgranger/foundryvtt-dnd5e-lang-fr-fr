@@ -30,7 +30,7 @@
   "TYPES.Item.featurePl": "Aptitudes",
   "TYPES.Item.loot": "Butin",
   "TYPES.Item.lootPl": "Butin",
-  "TYPES.Item.race": "Espèces",
+  "TYPES.Item.race": "Espèce",
   "TYPES.Item.racePl": "Espèces",
   "TYPES.Item.raceLegacy": "Race",
   "TYPES.Item.raceLegacyPl": "Races",
@@ -104,7 +104,7 @@
   "DND5E.ActionSave": "Jet de Sauvegarde",
   "DND5E.ActionSumm": "Invoquer",
   "DND5E.ActionUtil": "Utilitaire",
-  "DND5E.ActionWarningNoItem": "L'élément demandé {item} n'existe plus sur l'acteur {name}",
+  "DND5E.ActionWarningNoItem": "L'objet demandé {item} n'existe plus sur l'acteur {name}",
   "DND5E.ActionWarningNoToken": "Vous devez sélectionner un ou plusieurs tokens pour utiliser cette option.",
   "DND5E.ACTIVATION": {
     "FIELDS": {
@@ -195,13 +195,13 @@
       "UsageNotAllowed": "L'utilisation de cette activité n'est pas possible pour le moment."
     }
   },
-  "DND5E.ActorWarningInvalidItem": "les éléments de type {itemType} ne peuvent être ajoutés à un {actorType}.",
-  "DND5E.ActorWarningSingleton": "Seul un éléments de type {itemType} peut être ajouté à un {actorType}.",
+  "DND5E.ActorWarningInvalidItem": "les objets de type {itemType} ne peuvent être ajoutés à un {actorType}.",
+  "DND5E.ActorWarningSingleton": "Seul un objet de type {itemType} peut être ajouté à un {actorType}.",
   "DND5E.ActiveEffectOverrideWarning": "Cette valeur est modifiée par un effet actif et ne peut être modifiée. Désactivez l'effet pour le modifier.",
   "DND5E.Add": "Créer",
   "DND5E.AdditionalControls": "Contrôles supplémentaires",
   "DND5E.AdditionalSettings": "Paramètres supplémentaires",
-  "DND5E.AddEmbeddedItemPromptHint": "Voulez-vous ajouter ces éléments à votre feuille de personnage ?",
+  "DND5E.AddEmbeddedItemPromptHint": "Voulez-vous ajouter ces objets à votre feuille de personnage ?",
   "DND5E.Advanced": "Avancé",
   "DND5E.ADVANCEMENT": {
     "AbilityScoreImprovement": {
@@ -580,8 +580,8 @@
   "DND5E.AdvancementLevelDownConfirmationMessage": "Réduire le niveau de cette classe annulera également tous les choix de Progression faits pour elle. Ces changements seront supprimés de votre personnage tant que la case ci-dessous est cochée.",
   "DND5E.AdvancementLevelDownConfirmationTitle": "Confirmer la baisse de niveau",
   "DND5E.AdvancementMigrationConfirm": "Appliquer les migrations",
-  "DND5E.AdvancementMigrationHint": "Sélectionnez les avancements suivants qui seront ajoutés à {name}.",
-  "DND5E.AdvancementMigrationTitle": "Migrer l'avancement",
+  "DND5E.AdvancementMigrationHint": "Sélectionnez les progressions suivantes qui seront ajoutés à {name}.",
+  "DND5E.AdvancementMigrationTitle": "Migrer la progression",
   "DND5E.AdvancementModifyChoices": "Modifier les choix",
   "DND5E.AdvancementSaveButton": "Sauvegarder la progression",
   "DND5E.AdvancementSelectionCreateButton": "Créer la progression",
@@ -1644,6 +1644,12 @@
     "Warning": {
       "NotOnActor": "Les enchantements peuvent uniquement être ajoutés aux objets, pas directement aux acteurs.",
       "Override": "Cette valeur a été modifiée par un Enchantement et ne peut pas être éditée. Effacer l'enchantement de l'onglet Effets pour l'éditer."
+    },
+    "Period": {
+      "AtWill": "À Volonté",
+      "LongRest": "Repos long",
+      "Never": "Jamais",
+      "ShortRest": "Repos court"
     }
   },
   "DND5E.Environment": "Environnement",
@@ -3140,7 +3146,44 @@
         "Formula": "Formule personnalisée",
         "LoseAll": "Perdre toutes les utilisations",
         "RecoverAll": "Récupérer toutes les utilisations"
-      }
+      },
+      "Combat": "Combat",
+      "Period": {
+        "TurnEnd": {
+          "Label": "Round (fin du tour)",
+          "Abbreviation": "Début du tour"
+        },
+        "Dawn": {
+          "Label": "Aube"
+        },
+        "Day": {
+          "Label": "Jour"
+        },
+        "Dusk": {
+          "Label": "Crépuscule"
+        },
+        "Initiative": {
+          "Label": "Initiative"
+        },
+        "LongRest": {
+          "Label": "Repos long",
+          "Abbreviation": "RL"
+        },
+        "ShortRest": {
+          "Label": "Repos court",
+          "Abbreviation": "RC"
+        },
+        "Turn": {
+          "Label": "Tour"
+        },
+        "TurnStart": {
+          "Label": "Round (début du tour)",
+          "Abbreviation": "Fin du tour"
+        }
+      },
+      "Never": "Jamais",
+      "Special": "Special",
+      "Time": "Durée"
     }
   },
   "DND5E.UTILITY": {
@@ -3901,7 +3944,7 @@
     },
     "Button": {
       "Hint": "Affiche un bouton pour avancer les tours de bastion dans l'interface principale du jeu.",
-      "Label": "Afficher le bouton de tour de bastion"
+      "Label": "Bouton de tour de bastion"
     },
     "Configuration": {
       "Hint": "Diverses options de configuration pour le système de bastion tel que présenté dans le DMG 2024.",
@@ -3909,7 +3952,7 @@
       "Name": "Bastions"
     },
     "Duration": {
-      "Label": "Durée du tour du bastion (jours)"
+      "Label": "Durée du tour (jours)"
     },
     "Enabled": {
       "Label": "Activer la fonctionnalité Bastion",
@@ -3947,7 +3990,8 @@
   "DND5E.AbilityScoreMaxShort": "Maximum",
   "DND5E.AbilityScoreShort": "Score",
   "TYPES.ChatMessage": {
-    "turn": "Message de tour de combat"
+    "turn": "Message de tour de combat",
+    "rest": "Message de repos"
   },
   "DND5E.Language": {
     "Language": {
@@ -4064,7 +4108,7 @@
     "Configuration": "Configuration du repos",
     "Label": "Repos",
     "NewDay": {
-      "Hint": "Récupère les capacités à usage limité qui se rechargent au crépuscule, à l’aube ou au début d’une nouvelle journée.",
+      "Hint": "Récupère les aptitudes à usage limité qui se rechargent au crépuscule, à l’aube ou au début d’une nouvelle journée.",
       "Label": "Nouvelle journée"
     }
   },
@@ -4291,6 +4335,9 @@
     "TURN": {
       "Activities": "Activités",
       "NoCombatant": "Le combattant n'existe plus !"
+    },
+    "Deltas": {
+      "Recovery": "Récupération"
     }
   },
   "DND5E.CreatureTag": "{size} {type}, {alignment}",
@@ -4466,7 +4513,7 @@
   },
   "DND5E.TraitDMPlural.one": "Modification des dégâts",
   "DND5E.TraitDMPlural.other": "Modifications des dégâts",
-  "DND5E.SavingThrowShort": "Sauvegarde",
+  "DND5E.SavingThrowShort": "Sauv.",
   "DND5E.SpellSlotTemporary": "Emplacement de sort temporaire",
   "DND5E.Unit": "Unité",
   "DND5E.ORDINAL": {
@@ -4510,5 +4557,7 @@
         }
       }
     }
-  }
+  },
+  "DND5E.DeathSaveBonus": "Bonus aux Sauvegardes contre la mort",
+  "DND5E.DeathSaveConfigure": "Configurer les Sauvegardes contre la mort"
 }
