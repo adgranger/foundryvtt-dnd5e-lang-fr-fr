@@ -1,4 +1,4 @@
-import { Converters as babeleConverters } from "../babele/script/converters.js";
+import { FieldMapping } from "./FieldMapping.js";
 
 Hooks.once('init', () => {
 
@@ -24,7 +24,8 @@ Hooks.once('init', () => {
 		});
 
 		game.babele.registerConverters({
-			"items": babeleConverters.fromDefaultMapping("Item", "items"),
+			"items": Converters.items(),
+			"itemsMonster": Converters.itemsMonster(),
 			"range": Converters.imperialToMetric("range"),
 			"weight": Converters.imperialToMetric("weight"),
 			"target": Converters.imperialToMetric("target"),
@@ -305,6 +306,97 @@ export class Converters {
 		return foundry.utils.mergeObject(source, {
 			book: sources[source.book],
 			custom: sources[source.custom]
+		});
+	}
+
+	static items() {
+		return (data, translations) => Converters._items(data, translations);
+	}
+
+	static itemsMonster() {
+		return (data, translations) => Converters._items(data, translations, true);
+	}
+
+	static _items(data, translations, fromMonster = false) {
+		if (!translations) {
+            return data;
+        }
+
+		if (!Array.isArray(data)) {
+			return data;
+		}
+		data.forEach(item => {
+			switch(item.type){
+				case "loot":
+					Converters.translateFromConverters(item, translations, "dnd5e.tradegoods");
+					break;
+				case "consumable":
+				case "container":
+				case "weapon":
+				case "equipment":
+					Converters.translateFromConverters(item, translations, "dnd5e.items");
+					break;
+				case "spell":
+					Converters.translateFromConverters(item, translations, "dnd5e.spells");
+					break;
+				case "feat":
+					fromMonster ? Converters.translateFromConverters(item, translations, "dnd5e.monsterfeatures") : Converters.translateFromConverters(item, translations, "dnd5e.classfeatures");
+					break;
+				case "race":
+					Converters.translateFromConverters(item, translations, "dnd5e.races");
+					break;
+				case "class":
+					Converters.translateFromConverters(item, translations, "dnd5e.classes");
+					break;
+				case "subclass":
+					Converters.translateFromConverters(item, translations, "dnd5e.subclasses");
+					break;
+				case "background":
+					Converters.translateFromConverters(item, translations, "dnd5e.backgrounds");
+					break;
+				default:
+					console.warn(`Can't find translation for ${item.type}`);
+					console.log(`${item.type}`);
+					break;
+			}
+
+			const translation = translations[item._id] || translations[item.name];
+			if (!translation) {
+				console.warn(`Missing translation : ${item._id} ${item.name}`);
+				return item;
+			}
+
+			return foundry.utils.mergeObject(item, {
+				name: translation.name ?? item.name,
+				system: {
+				    description: { 
+						value: translation.description ?? item.system.description.value,
+						chat: translation.chat ?? item.system.description.chat
+					},
+					materials: { value: translation.materials ?? item.system.materials?.value },
+					activities: item.system.activities ? Converters._activities(item.system.activities, translation.activities) : item.system.activities
+				},
+				effects: item.effects.length > 0 ? Converters._effects(item.effects, translation.effects) : item.effects,
+				translated: true
+			});
+		});
+
+		return data;
+	}
+
+	static translateFromConverters(item, translations, packName) {
+		const itemsConverter = game.babele.translations.find((item) => item.collection === packName)?.mapping;		
+		if (!itemsConverter) {
+			return;
+		}
+		
+		const fields = Object.keys(itemsConverter).map(key => new FieldMapping(key, itemsConverter[key], item));
+		if (!fields){
+			return;
+		}
+
+		fields.forEach(field => {
+			field.translate(item, translations);
 		});
 	}
 
