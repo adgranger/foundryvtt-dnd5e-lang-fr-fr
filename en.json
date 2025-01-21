@@ -20,6 +20,7 @@
 "TYPES.ActiveEffect.enchantmentPl": "Enchantments",
 
 "TYPES.ChatMessage": {
+  "rest": "Rest Message",
   "turn": "Combat Turn Message"
 },
 
@@ -989,10 +990,12 @@
 "DND5E.ChatFlavor": "Chat Message Flavor",
 
 "DND5E.CHATMESSAGE": {
+  "Deltas": {
+    "Recovery": "Recovery"
+  },
   "TURN": {
     "Activities": "Activities",
-    "NoCombatant": "Combatant no longer exists!",
-    "Recovery": "Recovery"
+    "NoCombatant": "Combatant no longer exists!"
   }
 },
 
@@ -1626,6 +1629,8 @@
 "DND5E.Dawn": "Dawn",
 "DND5E.Day": "Day",
 "DND5E.DeathSave": "Death Saves",
+"DND5E.DeathSaveBonus": "Death Save Bonus",
+"DND5E.DeathSaveConfigure": "Configure Death Saves",
 "DND5E.DeathSaveCriticalSuccess": "{name} critically succeeded on a death saving throw and has regained 1 Hit Point!",
 "DND5E.DeathSaveHide": "Hide Death Saves",
 "DND5E.DeathSaveShow": "Show Death Saves",
@@ -1841,6 +1846,12 @@
     "Entry": "{item} on <em>{actor}</em>"
   },
   "Label": "Enchantment",
+  "Period": {
+    "AtWill": "At Will",
+    "LongRest": "Long Rest",
+    "Never": "Never",
+    "ShortRest": "Short Rest"
+  },
   "Warning": {
     "NotOnActor": "Enchantments can only be added to items, not directly to actors.",
     "Override": "This value is being modified by an Enchantment and cannot be edited. Disable the enchantment in the effects tab to edit it."
@@ -4054,20 +4065,8 @@
 "DND5E.UsesMax": "Maximum Uses",
 "DND5E.UsesPeriod": "Recovery Period",
 "DND5E.UsesPeriods": {
-  "AtWill": "At Will",
   "Charges": "Charges",
-  "ChargesAbbreviation": "Charges",
-  "Dawn": "Dawn",
-  "DawnAbbreviation": "Dawn",
-  "Day": "Day",
-  "DayAbbreviation": "Day",
-  "Dusk": "Dusk",
-  "DuskAbbreviation": "Dusk",
-  "Lr": "Long Rest",
-  "LrAbbreviation": "LR",
-  "Never": "Never",
-  "Sr": "Short Rest",
-  "SrAbbreviation": "SR"
+  "ChargesAbbreviation": "Charges"
 },
 
 "DND5E.USES": {
@@ -4107,10 +4106,47 @@
       "Create": "Create Recovery Profile",
       "Delete": "Delete Recovery Profile"
     },
+    "Combat": "Combat",
+    "Never": "Never",
+    "Period": {
+      "Dawn": {
+        "Label": "Dawn"
+      },
+      "Day": {
+        "Label": "Day"
+      },
+      "Dusk": {
+        "Label": "Dusk"
+      },
+      "Initiative": {
+        "Label": "Initiative"
+      },
+      "LongRest": {
+        "Label": "Long Rest",
+        "Abbreviation": "LR"
+      },
+      "ShortRest": {
+        "Label": "Short Rest",
+        "Abbreviation": "SR"
+      },
+      "Turn": {
+        "Label": "Turn"
+      },
+      "TurnEnd": {
+        "Label": "Round (end of turn)",
+        "Abbreviation": "Turn Start"
+      },
+      "TurnStart": {
+        "Label": "Round (start of turn)",
+        "Abbreviation": "Turn End"
+      }
+    },
     "Recharge": {
       "Label": "Recharge",
       "Range": "Recharge {range}"
     },
+    "Special": "Special",
+    "Time": "Time",
     "Type": {
       "Formula": "Custom Formula",
       "LoseAll": "Lose All Uses",
