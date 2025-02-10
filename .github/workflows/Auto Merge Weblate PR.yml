@@ -8,18 +8,21 @@ jobs:
   auto-merge:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        
       - name: Check PR author and title
         id: check_pr
         run: |
           if [ "${{ github.event.pull_request.user.login }}" == "fonderie-vtt-weblate" ] && \
              [ "${{ github.event.pull_request.title }}" == "Translations update from Fonderie VTT - Weblate" ]; then
-            echo "::set-output name=is_trusted::true"
+            echo "is_trusted=true" >> $GITHUB_ENV
           else
-            echo "::set-output name=is_trusted::false"
+            echo "is_trusted=false" >> $GITHUB_ENV
           fi
 
       - name: Merge PR
-        if: steps.check_pr.outputs.is_trusted == 'true'
+        if: env.is_trusted == 'true'
         run: |
           gh pr merge ${{ github.event.pull_request.number }} --auto --rebase
         env:
