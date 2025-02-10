@@ -30,4 +30,4 @@ jobs:
         run: |
           gh pr merge ${{ github.event.pull_request.number }} --auto --rebase
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
