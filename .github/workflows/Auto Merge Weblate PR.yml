@@ -21,6 +21,6 @@ jobs:
       - name: Merge PR
         if: steps.check_pr.outputs.is_trusted == 'true'
         run: |
-          gh pr merge ${{ github.event.pull_request.number }} --auto --merge
+          gh pr merge ${{ github.event.pull_request.number }} --auto --rebase --merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
