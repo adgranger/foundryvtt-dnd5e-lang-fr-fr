@@ -1,33 +1,31 @@
-name: Auto Merge Weblate PR
+name: Auto Merge Weblate PRs
 
 on:
   pull_request:
-    types: [opened, reopened]
-    
-permissions:  
-  pull-requests: write  
-  contents: write
+    types: [opened, synchronize, reopened]
 
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        
-      - name: Check PR author and title
+      - name: Vérifier si la PR vient de Weblate
         id: check_pr
         run: |
-          if [ "${{ github.event.pull_request.user.login }}" == "fonderie-vtt-weblate" ] && \
-             [ "${{ github.event.pull_request.title }}" == "Translations update from Fonderie VTT - Weblate" ]; then
-            echo "is_trusted=true" >> $GITHUB_ENV
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+          TITLE="${{ github.event.pull_request.title }}"
+          if [[ "$AUTHOR" == "fonderie-vtt-weblate" && "$TITLE" == "Translations update from Fonderie VTT - Weblate" ]]; then
+            echo "MERGE=true" >> $GITHUB_ENV
           else
-            echo "is_trusted=false" >> $GITHUB_ENV
+            echo "MERGE=false" >> $GITHUB_ENV
           fi
 
-      - name: Merge PR
-        if: env.is_trusted == 'true'
+      - name: Auto-merge la PR si elle correspond aux critères
+        if: env.MERGE == 'true'
         run: |
-          gh pr merge ${{ github.event.pull_request.number }} --auto --rebase
+          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
         env:
-          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
