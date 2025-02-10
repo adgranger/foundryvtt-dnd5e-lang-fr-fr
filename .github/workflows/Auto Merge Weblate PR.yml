@@ -24,8 +24,7 @@ jobs:
           fi
 
       - name: Auto-merge la PR si elle correspond aux critères
-        if: env.MERGE == 'true'
-        run: |
-          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
+        if: env.MERGE == 'true'        
+        uses: "pascalgn/automerge-action@v0.16.4"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
