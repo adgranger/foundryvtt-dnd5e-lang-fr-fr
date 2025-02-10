@@ -3,6 +3,10 @@ name: Auto Merge Weblate PR
 on:
   pull_request:
     types: [opened, reopened]
+    
+permissions:  
+  pull-requests: write  
+  contents: write
 
 jobs:
   auto-merge:
