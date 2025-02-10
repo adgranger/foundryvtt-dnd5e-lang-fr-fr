@@ -12,6 +12,15 @@ jobs:
       contents: write
 
     steps:
+    - name: Vérifier si le PAT_TOKEN est défini
+      run: |
+        if [[ -z "${{ secrets.PAT_TOKEN }}" ]]; then
+          echo "PAT_TOKEN est vide !"
+          exit 1
+        else
+          echo "PAT_TOKEN est bien défini."
+        fi
+        
       - name: Vérifier si la PR vient de Weblate
         id: check_pr
         run: |
