@@ -1,31 +1,5 @@
 {
   "label": "Items (SRD)",
-  "mapping": {
-    "sources": {
-      "path": "system.source",
-      "converter": "source"
-    },
-    "weight": {
-      "path": "system.weight",
-      "converter": "weight"
-    },
-    "rangeActivities": {
-      "path": "system.activities",
-      "converter": "rangeActivities"
-    },
-    "range": {
-      "path": "system.range",
-      "converter": "range"
-    },
-    "effects": {
-      "path": "effects",
-      "converter": "effects"
-    },
-    "activities": {
-      "path": "system.activities",
-      "converter": "activities"
-    }
-  },
   "folders": {
     "Ammunition": "Ammunition",
     "Armor": "Armor",
@@ -833,7 +807,12 @@
     },
     "Dagger of Venom": {
       "name": "Dagger of Venom",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p>\n<p>You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 poison damage and become poisoned for 1 minute. The dagger can't be used this way again until the next dawn.</p>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p>\n<p>You can use an action to cause thick, black poison to coat the blade. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 poison damage and become poisoned for 1 minute. The dagger can't be used this way again until the next dawn.</p>",
+      "activities": {
+        "Poison Blade": {
+          "name": "Poison Blade"
+        }
+      }
     },
     "Dancing Greatsword": {
       "name": "Dancing Greatsword",
@@ -939,23 +918,48 @@
     },
     "Dragon Slayer Greatsword": {
       "name": "Dragon Slayer Greatsword",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>",
+      "activities": {
+        "Damage vs Dragon": {
+          "name": "Damage vs Dragon"
+        }
+      }
     },
     "Dragon Slayer Longsword": {
       "name": "Dragon Slayer Longsword",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>",
+      "activities": {
+        "Damage vs Dragon": {
+          "name": "Damage vs Dragon"
+        }
+      }
     },
     "Dragon Slayer Rapier": {
       "name": "Dragon Slayer Rapier",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>",
+      "activities": {
+        "Damage vs Dragon": {
+          "name": "Damage vs Dragon"
+        }
+      }
     },
     "Dragon Slayer Scimitar": {
       "name": "Dragon Slayer Scimitar",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>",
+      "activities": {
+        "Damage vs Dragon": {
+          "name": "Damage vs Dragon"
+        }
+      }
     },
     "Dragon Slayer Shortsword": {
       "name": "Dragon Slayer Shortsword",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon.</p><p>When you hit a dragon with this weapon, the dragon takes an extra 3d6 damage of the weapon's type. For the purpose of this weapon, \"dragon\" refers to any creature with the dragon type, including dragon turtles and wyverns.</p>",
+      "activities": {
+        "Damage vs Dragon": {
+          "name": "Damage vs Dragon"
+        }
+      }
     },
     "Drum": {
       "name": "Drum",
@@ -987,7 +991,15 @@
     },
     "Dwarven Thrower": {
       "name": "Dwarven Thrower",
-      "description": "<p><em>(Requires attunement by a dwarf)</em></p><p>You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8 damage. Immediately after the attack, the weapon flies back to your hand.</p><section class=\"secret foundry-note\" id=\"secret-DdEcPocHwtm5CFcf\"><p><strong>Foundry Note</strong></p><p>To apply the additional damage to a giant, please use the Other Formula one more time.</p></section>"
+      "description": "<p><em>(Requires attunement by a dwarf)</em></p><p>You gain a +3 bonus to attack and damage rolls made with this magic weapon. It has the thrown property with a normal range of 20 feet and a long range of 60 feet. When you hit with a ranged attack using this weapon, it deals an extra 1d8 damage or, if the target is a giant, 2d8 damage. Immediately after the attack, the weapon flies back to your hand.</p>",
+      "activities": {
+        "Throw": {
+          "name": "Throw"
+        },
+        "Throw vs Giant": {
+          "name": "Throw vs Giant"
+        }
+      }
     },
     "Efficient Quiver": {
       "name": "Efficient Quiver",
@@ -1403,8 +1415,9 @@
         "attack": {
           "condition": "Must roll a 20 and the target cannot be undead."
         },
-        "utility": {
-          "condition": "Must roll a 20 and the target cannot be undead."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature and roll a 20 on the attack roll"
         }
       }
     },
@@ -1415,14 +1428,24 @@
         "attack": {
           "condition": "Command word."
         },
-        "utility": {
-          "condition": "Command word."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature with this weapon and roll a 20 on the attack roll"
         }
       }
     },
     "Greatsword of Wounding": {
       "name": "Greatsword of Wounding",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>",
+      "activities": {
+        "Wound Damage": {
+          "name": "Wound Damage",
+          "condition": "Start of a wounded creature's turn"
+        },
+        "Close Wound": {
+          "name": "Close Wound"
+        }
+      }
     },
     "Halberd": {
       "name": "Halberd",
@@ -1846,9 +1869,6 @@
         },
         "save": {
           "condition": "Command word."
-        },
-        "utility": {
-          "condition": "Command word."
         }
       }
     },
@@ -1987,8 +2007,9 @@
         "attack": {
           "condition": "Must roll a 20 and the target cannot be undead."
         },
-        "utility": {
-          "condition": "Must roll a 20 and the target cannot be undead."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature and roll a 20 on the attack roll"
         }
       }
     },
@@ -1999,14 +2020,24 @@
         "attack": {
           "condition": "Command word."
         },
-        "utility": {
-          "condition": "Command word."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature with this weapon and roll a 20 on the attack roll"
         }
       }
     },
     "Longsword of Wounding": {
       "name": "Longsword of Wounding",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>",
+      "activities": {
+        "Wound Damage": {
+          "name": "Wound Damage",
+          "condition": "Start of a wounded creature's turn"
+        },
+        "Close Wound": {
+          "name": "Close Wound"
+        }
+      }
     },
     "Luck Blade Greatsword": {
       "name": "Luck Blade Greatsword",
@@ -2054,11 +2085,28 @@
     },
     "Mace of Disruption": {
       "name": "Mace of Disruption",
-      "description": "<p>(<em>Requires attunement</em>)</p>\n<p>When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of you until the end of your next turn.</p>\n<p>While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.</p>"
+      "description": "<p>(<em>Requires attunement</em>)</p>\n<p>When you hit a fiend or an undead with this magic weapon, that creature takes an extra 2d6 radiant damage. If the target has 25 hit points or fewer after taking this damage, it must succeed on a DC 15 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of you until the end of your next turn.</p>\n<p>While you hold this weapon, it sheds bright light in a 20-foot radius and dim light for an additional 20 feet.</p>",
+      "activities": {
+        "Save vs Destruction": {
+          "name": "Save vs Destruction"
+        },
+        "Construct Damage": {
+          "name": "Construct Damage"
+        }
+      }
     },
     "Mace of Smiting": {
       "name": "Mace of Smiting",
-      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the mace to attack a construct.</p><p>When you roll a 20 on an attack roll made with this weapon, the target takes an extra 2d6 bludgeoning damage, or 4d6 bludgeoning damage if it's a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed.</p><section class=\"secret foundry-note\" id=\"secret-AY4O41uMKnbhqve5\"><p><strong>Foundry Note</strong></p><p>The bonus to attack and damage rolls has been set at the +1. In the instances of hitting a construct, please remember to +2 to both of these results. Additionally, on a hit of 20 against a construct, please use the Other Formula one more time.</p></section>"
+      "description": "<p>You gain a +1 bonus to attack and damage rolls made with this magic weapon. The bonus increases to +3 when you use the mace to attack a construct.</p><p>When you roll a 20 on an attack roll made with this weapon, the target takes an extra 2d6 bludgeoning damage, or 4d6 bludgeoning damage if it's a construct. If a construct has 25 hit points or fewer after taking this damage, it is destroyed.</p><section class=\"secret foundry-note\" id=\"secret-AY4O41uMKnbhqve5\"><p><strong>Foundry Note</strong></p><p>The bonus to attack and damage rolls has been set at the +1. In the instances of hitting a construct, please remember to +2 to both of these results. Additionally, on a hit of 20 against a construct, please use the Other Formula one more time.</p></section>",
+      "activities": {
+        "Attack vs Construct": {
+          "name": "Attack vs Construct"
+        },
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you roll a 20 on an attack roll made with this weapon"
+        }
+      }
     },
     "Mace of Terror": {
       "name": "Mace of Terror",
@@ -2286,7 +2334,8 @@
         "attack": {
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         },
-        "save": {
+        "Save vs Death": {
+          "name": "Save vs Death",
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         }
       }
@@ -2298,7 +2347,8 @@
         "attack": {
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         },
-        "save": {
+        "Save vs Death": {
+          "name": "Save vs Death",
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         }
       }
@@ -2310,7 +2360,8 @@
         "attack": {
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         },
-        "save": {
+        "Save vs Death": {
+          "name": "Save vs Death",
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         }
       }
@@ -2322,7 +2373,8 @@
         "attack": {
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         },
-        "save": {
+        "Save vs Death": {
+          "name": "Save vs Death",
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         }
       }
@@ -2334,7 +2386,8 @@
         "attack": {
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         },
-        "save": {
+        "Save vs Death": {
+          "name": "Save vs Death",
           "condition": "Critical hit on a creature of 100 hit points or less. Undead and constructs are immune."
         }
       }
@@ -2346,8 +2399,8 @@
         "attack": {
           "condition": "Command phrase."
         },
-        "utility": {
-          "condition": "Command phrase."
+        "Damage vs Sworn Enemy": {
+          "name": "Damage vs Sworn Enemy"
         }
       }
     },
@@ -2743,14 +2796,24 @@
         "attack": {
           "condition": "Must roll a 20 and the target cannot be undead."
         },
-        "utility": {
-          "condition": "Must roll a 20 and the target cannot be undead."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature and roll a 20 on the attack roll"
         }
       }
     },
     "Rapier of Wounding": {
       "name": "Rapier of Wounding",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>",
+      "activities": {
+        "Wound Damage": {
+          "name": "Wound Damage",
+          "condition": "Start of a wounded creature's turn"
+        },
+        "Close Wound": {
+          "name": "Close Wound"
+        }
+      }
     },
     "Rations": {
       "name": "Rations",
@@ -3195,8 +3258,9 @@
         "attack": {
           "condition": "Must roll a 20 and the target cannot be undead."
         },
-        "utility": {
-          "condition": "Must roll a 20 and the target cannot be undead."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature and roll a 20 on the attack roll"
         }
       }
     },
@@ -3207,8 +3271,9 @@
         "attack": {
           "condition": "Command word."
         },
-        "utility": {
-          "condition": "Command word."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature with this weapon and roll a 20 on the attack roll"
         }
       }
     },
@@ -3218,7 +3283,16 @@
     },
     "Scimitar of Wounding": {
       "name": "Scimitar of Wounding",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>",
+      "activities": {
+        "Wound Damage": {
+          "name": "Wound Damage",
+          "condition": "Start of a wounded creature's turn"
+        },
+        "Close Wound": {
+          "name": "Close Wound"
+        }
+      }
     },
     "Scroll Case": {
       "name": "Scroll Case",
@@ -3291,14 +3365,24 @@
         "attack": {
           "condition": "Must roll a 20 and the target cannot be undead."
         },
-        "utility": {
-          "condition": "Must roll a 20 and the target cannot be undead."
+        "Natural 20 Damage": {
+          "name": "Natural 20 Damage",
+          "condition": "When you attack a creature and roll a 20 on the attack roll"
         }
       }
     },
     "Shortsword of Wounding": {
       "name": "Shortsword of Wounding",
-      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>"
+      "description": "<p><em>(Requires attunement)</em></p>\n<p>Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.</p>\n<p>Once per turn, when you hit a creature with an attack using this magic weapon, you can wound the target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time you've wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</p>",
+      "activities": {
+        "Close Wound": {
+          "name": "Close Wound"
+        },
+        "Wound Damage": {
+          "name": "Wound Damage",
+          "condition": "Start of a wounded creature's turn"
+        }
+      }
     },
     "Shovel": {
       "name": "Shovel",
@@ -3796,6 +3880,10 @@
       "name": "Two-Person Tent",
       "description": "<p>A simple and portable canvas shelter, a tent sleeps two.</p>"
     },
+    "U5fRz04JWgNS1WvK": {
+      "name": "Hempen Rope (50 ft.)",
+      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>"
+    },
     "Unarmed Strike": {
       "name": "Unarmed Strike",
       "description": "<p>A  punch, kick, head-butt, or similar forceful blow (none of which count as weapons). On a hit, an unarmed strike deals bludgeoning damage equal to 1 + your Strength modifier. You are proficient with your unarmed strikes.</p>"
@@ -4177,6 +4265,14 @@
     "Yew Wand": {
       "name": "Yew Wand",
       "description": "<p>This wand or scepter has been carved from yew or another special wood and inscribed with powerful runes to invoke the power of nature by those who heed its call.</p>\n<p><strong>Spellcasting Focus</strong>. A druidic focus is a special item designed to channel the power of spells from the druid's spell list. A druid can use such an item as a spellcasting focus, using it in place of any material component which does not list a cost.</p>"
+    },
+    "bDZFQqLQE73cFB8c": {
+      "name": "Hempen Rope (50 ft.)",
+      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>"
+    },
+    "oRrNK2H2vcN4Kp74": {
+      "name": "Hempen Rope (50 ft.)",
+      "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>"
     }
   }
 }
