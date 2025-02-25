@@ -424,7 +424,10 @@ export class Converters {
 			if (translation) {
 				return foundry.utils.mergeObject(adv, {
 					title: translation.title ?? adv.title,
-					hint: translation.hint ?? adv.hint
+					hint: translation.hint ?? adv.hint,
+					configuration: {
+						identifier: adv.configuration.identifier?.length > 0 ? adv.configuration.identifier : adv.title?.slugify()
+					}
 				});
 			}
 			return adv;
