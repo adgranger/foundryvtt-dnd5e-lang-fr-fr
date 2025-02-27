@@ -19,7 +19,12 @@
         },
         "Hempen Rope (50 ft.)": {
           "name": "Corde en chanvre (15 m)",
-          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>",
+          "activities": {
+            "Burst": {
+              "name": "Rupture"
+            }
+          }
         },
         "Tinderbox": {
           "name": "Boîte à amadou",
@@ -91,6 +96,9 @@
           "advancement": {
             "Features": {
               "title": "Aptitudes"
+            },
+            "Divine Strike Damage": {
+              "title": "Dégâts d'Impact divin"
             }
           }
         },
@@ -140,7 +148,8 @@
           "materials": "une goutte de sang",
           "effects": {
             "Bane": {
-              "name": "Fléau"
+              "name": "Fléau",
+              "description": "<p>Lorsque la cible effectue un jet d’attaque ou un jet de sauvegarde avant la fin du sort, doit lancer un d4 qu’elle retranche au résultat du jet d’attaque ou de sauvegarde correspondant.</p>"
             }
           }
         },
@@ -181,7 +190,13 @@
         "Shield of Faith": {
           "name": "Bouclier de la foi",
           "description": "<p>Un champ scintillant apparaît autour d'une créature de votre choix à portée et lui octroie un bonus de +2 à la CA pour toute la durée.</p>",
-          "materials": "un petit parchemin sur lequel apparaît un extrait d'écritures saintes"
+          "materials": "un petit parchemin sur lequel apparaît un extrait d'écritures saintes",
+          "effects": {
+            "Shield of Faith": {
+              "name": "Bouclier de la foi",
+              "description": "<p>La cible bénéficie d'un bonus de +2 à la CA pour toute la durée.</p>"
+            }
+          }
         },
         "Priest": {
           "name": "Ecclésiastique",
@@ -208,6 +223,9 @@
             },
             "Cantrips Known": {
               "title": "Sorts mineurs connus"
+            },
+            "Divine Domain": {
+              "title": "Domaine divin"
             }
           }
         },
@@ -238,12 +256,23 @@
             "2f4dkpTYlhOgRgxu": {
               "hint": "Vous bénéficiez de la résistance au type de dégâts associé à votre ascendance draconique."
             }
-          }
+          },
+          "subtype": "Drakéide"
         },
         "Breath Weapon - White": {
           "name": "Souffle : Blanc",
           "description": "<p>Vous pouvez consacrer votre action à exhaler une vague d’énergie destructrice. Votre ascendance draconique détermine la taille, la forme et le type de dégâts de ce souffle.</p><p>Quand vous utilisez votre souffle, chaque créature dans la zone d'effet effectue un jet de sauvegarde dont le type est déterminé par votre ascendance draconique. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de froid en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
           "requirements": "Drakéide blanc"
+        },
+        "Spellcasting": {
+          "description": "<p>Porteur de puissance divine, vous pouvez lancer des sorts de clerc.</p><h5>Sorts mineurs</h5><p>Au niveau 1, vous connaissez deux sorts mineurs que vous choisissez dans la liste des sorts de clerc. Vous en apprenez d'autres que vous choisissez à plus haut niveau, comme le montre la colonne « Sorts mineurs connus » de la table « Le clerc ».</p><h5>Préparation et incantation des sorts</h5><p>La table « Le clerc » vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts de clerc du 1<sup>er</sup> niveau et plus. Pour lancer un tel sort, vous devez dépenser un emplacement d'un niveau au moins égal à celui du sort. Vous récupérez tous les emplacements dépensés en terminant un repos long.</p><p>Vous préparez la liste des sorts de clerc disponibles à l'incantation en les sélectionnant dans la liste des sorts de clerc. Ce faisant, choisissez autant de sorts de clerc que votre modificateur de Sagesse + votre niveau de clerc (minimum d'un sort). Ces sorts doivent tous être d'un niveau pour lequel vous disposez d'emplacements.</p><p>Si, par exemple, vous êtes clerc de niveau 3, vous disposez de quatre emplacements de sort du 1<sup>er</sup> niveau et de deux emplacements du 2<sup>e</sup> niveau. Avec une Sagesse de 16, vous pouvez préparer une liste contenant six sorts du 1<sup>er</sup> ou 2<sup>e</sup> niveau, selon la répartition de votre choix. Si vous préparez le sort du 1<sup>er</sup> niveau soins, vous pouvez le lancer en dépensant un emplacement du 1<sup>er</sup> ou du 2<sup>e</sup> niveau. Cette incantation ne retire pas le sort de votre liste de sorts préparés.</p><p>Vous pouvez modifier votre liste de sorts préparés lorsque vous terminez un repos long. Préparer une nouvelle liste de sorts de clerc demande du temps de prière et de méditation : au moins 1 minute par niveau de sort pour chaque sort de la liste.</p><h5>Caractéristique d'incantation</h5><p>La Sagesse est la caractéristique d'incantation de vos sorts de clerc. Vos sorts tirent leur puissance de votre piété. Vous recourez à la Sagesse chaque fois qu'un sort de clerc se réfère à votre caractéristique d'incantation. En outre, vous utilisez votre modificateur de Sagesse pour calculer le DD de sauvegarde des sorts de clerc que vous lancez, ainsi que lorsqu'un tel sort entraîne un jet d'attaque de votre part.</p><p><strong>DD de sauvegarde des sorts</strong> = 8 + votre bonus de maîtrise + votre modificateur de Sagesse</p><p><strong>Modificateur d'attaque des sorts</strong> = votre bonus de maîtrise + votre modificateur de Sagesse</p><h5>Incantation rituelle</h5><p>Vous pouvez lancer comme rituel un sort de clerc que vous avez préparé si ce sort porte la mention « rituel ».</p><h5>Focaliseur d'incantation</h5><p>Vous pouvez vous servir d'un symbole sacré (cf. « @UUID[Compendium.dnd5e.rules.JournalEntry.BYFd9hiJGo9L5aOM.JournalEntryPage.AjavRU4yPfI9hfaI]{Équipement} ») comme focaliseur d'incantation de vos sorts de clerc.</p>",
+          "name": "Sorts",
+          "requirements": "Clerc 1"
+        },
+        "Bonus Proficiency": {
+          "name": "Maîtrise supplémentaire",
+          "description": "<p>Lorsque vous optez pour ce domaine au niveau 1, vous recevez la maîtrise des armures lourdes.</p>",
+          "requirements": "Domaine de la Vie 1"
         }
       },
       "alignment": "Loyal Bon",
@@ -303,7 +332,12 @@
         },
         "Hempen Rope (50 ft.)": {
           "name": "Corde en chanvre (15 m)",
-          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>",
+          "activities": {
+            "Burst": {
+              "name": "Rupture"
+            }
+          }
         },
         "Waterskin": {
           "name": "Outre",
@@ -324,7 +358,23 @@
         "Shillelagh": {
           "name": "Crosse des druides",
           "description": "<p>Le bois d'un gourdin ou d'un bâton de combat que vous tenez s'imprègne du pouvoir de la nature. Pour toute la durée, vous pouvez recourir à votre caractéristique d'incantation plutôt qu'à la Force pour les jets d'attaque et de dégâts de vos attaques de corps à corps effectuées avec cette arme, dont le dé de dégâts passe à d8. Si elle ne l'était pas déjà, l'arme est désormais magique. Le sort prend fin si vous le relancez ou si vous lâchez l'arme.</p>",
-          "materials": "du gui, une feuille de trèfle et un gourdin ou un bâton de combat"
+          "materials": "du gui, une feuille de trèfle et un gourdin ou un bâton de combat",
+          "activities": {
+            "Imbue Weapon": {
+              "name": "Imprégner l'arme"
+            },
+            "Spellcasting Attack": {
+              "name": "Attaque de sort"
+            }
+          },
+          "effects": {
+            "Shillelagh": {
+              "name": "Crosse des druides",
+              "changes": {
+                "name": ", Crosse des druides"
+              }
+            }
+          }
         },
         "Animal Friendship": {
           "name": "Amitié avec les animaux",
@@ -333,7 +383,13 @@
         },
         "Charm Person": {
           "name": "Charme-personne",
-          "description": "<p>Vous tentez de charmer un humanoïde que vous voyez à portée. Il effectue un jet de sauvegarde de Sagesse, avec avantage si vous ou l'un de vos compagnons êtes en plein combat contre lui. Si elle rate le jet de sauvegarde, la créature est &Reference[charmed]{charmée} par vous jusqu'à la fin du sort ou jusqu'à ce que vous ou l'un de vos compagnons lui nuisiez directement. La créature charmée vous considère comme une relation de confiance. Lorsque le sort prend fin, la créature sait que vous l'avez charmée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>"
+          "description": "<p>Vous tentez de charmer un humanoïde que vous voyez à portée. Il effectue un jet de sauvegarde de Sagesse, avec avantage si vous ou l'un de vos compagnons êtes en plein combat contre lui. Si elle rate le jet de sauvegarde, la créature est &Reference[charmed]{charmée} par vous jusqu'à la fin du sort ou jusqu'à ce que vous ou l'un de vos compagnons lui nuisiez directement. La créature charmée vous considère comme une relation de confiance. Lorsque le sort prend fin, la créature sait que vous l'avez charmée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>",
+          "effects": {
+            "Charm Person": {
+              "name": "Charme-personne",
+              "description": "<p>La cible est charmée par le lanceur de sorts jusqu'à la fin du sort. La créature charmée considère le lanceur de sorts comme une relation de confiance. Lorsque le sort prend fin, la créature sait qu'elle a été charmée.</p>"
+            }
+          }
         },
         "Create or Destroy Water": {
           "name": "Création ou destruction d'eau",
@@ -355,7 +411,13 @@
         },
         "Entangle": {
           "name": "Enchevêtrement",
-          "description": "<p>Des herbes et plantes grimpantes émergent du sol dans un carré de 6 m de côté émanant d'un point à portée. Pour toute la durée, cette végétation transforme le sol de la zone en terrain difficile.</p><p>Une créature située dans la zone à l'incantation du sort doit réussir un jet de sauvegarde de Force pour ne pas être &Reference[Restrained]{entravée} par les plantes grimpantes jusqu'à la fin du sort. Une créature entravée par cet enchevêtrement peut consacrer son action à effectuer un test de Force contre votre DD de sauvegarde des sorts. En cas de réussite, elle se libère.</p><p>Lorsque le sort prend fin, les plantes invoquées se fanent.</p>"
+          "description": "<p>Des herbes et plantes grimpantes émergent du sol dans un carré de 6 m de côté émanant d'un point à portée. Pour toute la durée, cette végétation transforme le sol de la zone en terrain difficile.</p><p>Une créature située dans la zone à l'incantation du sort doit réussir un jet de sauvegarde de Force pour ne pas être &Reference[Restrained]{entravée} par les plantes grimpantes jusqu'à la fin du sort. Une créature entravée par cet enchevêtrement peut consacrer son action à effectuer un test de Force contre votre DD de sauvegarde des sorts. En cas de réussite, elle se libère.</p><p>Lorsque le sort prend fin, les plantes invoquées se fanent.</p>",
+          "effects": {
+            "Entangle": {
+              "name": "Enchevêtrement",
+              "description": "<p>Une créature située dans la zone est entravée par les plantes grimpantes jusqu'à la fin du sort. Une créature entravée par cet enchevêtrement peut consacrer son action à effectuer un test de Force contre votre DD de sauvegarde des sorts. En cas de succès, elle se libère.</p>"
+            }
+          }
         },
         "Faerie Fire": {
           "name": "Lueurs féeriques",
@@ -421,6 +483,12 @@
             },
             "GsMQJqy3R8DVF485": {
               "hint": "Armures légères, armures intermédiaires, boucliers (les druides ne portent ni armure ni bouclier faits de métal)"
+            },
+            "Wild Shape Uses": {
+              "title": "Utilisations de Forme sauvage"
+            },
+            "Druid Circle": {
+              "title": "Cercle druidique"
             }
           }
         },
@@ -437,6 +505,11 @@
               "hint": "Les humains affichent des mensurations très variées, leur taille allant du mètre cinquante à bien plus d'un mètre quatre-vingts. Où que vous vous situiez dans cet intervalle, vous êtes de taille M."
             }
           }
+        },
+        "Spellcasting": {
+          "name": "Sorts",
+          "description": "<p>Vos pouvoirs découlant de l'essence divine de la nature elle-même, les sorts que vous lancez vous permettent de façonner cette essence à votre gré.</p><h5>Sorts mineurs</h5><p>Au niveau 1, vous connaissez deux sorts mineurs que vous choisissez dans la liste des sorts de druide. Vous en apprenez d'autres que vous choisissez à plus haut niveau, comme le montre la colonne « Sorts mineurs connus » de la table « Le druide ».</p><h5>Préparation et incantation des sorts</h5><p>La table « Le druide » vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et plus. Pour lancer un tel sort de druide, vous devez dépenser un emplacement d'un niveau au moins égal à celui du sort. Vous récupérez tous les emplacements dépensés en terminant un repos long</p><p>Vous préparez la liste des sorts de druide disponibles à l'incantation en les sélectionnant dans la liste des sorts de druide. Ce faisant, choisissez autant de sorts de druide que votre modificateur de Sagesse + votre niveau de druide (minimum d'un sort). Ces sorts doivent tous être d'un niveau pour lequel vous disposez d'emplacements de sort.</p><p>Si, par exemple, vous êtes druide de niveau 3, vous disposez de quatre emplacements de sort du 1<sup>er</sup> niveau et de deux emplacements du 2<sup>e</sup> niveau. Avec une Sagesse de 16, vous pouvez préparer une liste contenant six sorts du 1<sup>er</sup> ou 2<sup>e</sup> niveau, selon la répartition de votre choix. Si vous préparez le sort du 1<sup>er</sup> niveau soins, vous pouvez le lancer en dépensant un emplacement de sort du 1<sup>er</sup> ou du 2<sup>e</sup> niveau. Cette incantation ne retire pas le sort de votre liste de sorts préparés.</p><p>Vous pouvez modifier votre liste de sorts préparés lorsque vous terminez un repos long. Préparer une nouvelle liste de sorts de druide demande du temps de prière et de méditation : au moins 1 minute par niveau de sort pour chaque sort de la liste.</p><h5>Caractéristique d'incantation</h5><p>La Sagesse est la caractéristique d'incantation de vos sorts de druide, cette magie provenant de votre dévotion et du lien étroit que vous entretenez avec la nature. Vous recourez à la Sagesse chaque fois qu'un sort se réfère à votre caractéristique d'incantation. En outre, vous utilisez votre modificateur de Sagesse pour calculer le DD de sauvegarde des sorts de druide que vous lancez, ainsi que lorsqu'un tel sort entraîne un jet d'attaque de votre part.</p><p><strong>DD de sauvegarde des sorts</strong> = 8 + votre bonus de maîtrise + votre modificateur de Sagesse</p><p><strong>Modificateur d'attaque des sorts</strong> = votre bonus de maîtrise + votre modificateur de Sagesse</p><h5>Incantation rituelle</h5><p>Vous pouvez lancer comme rituel un sort de druide que vous avez préparé si ce sort porte la mention « rituel ».</p><h5>Focaliseur d'incantation</h5><p>Vous pouvez vous servir d'un focaliseur druidique (cf. « @UUID[Compendium.dnd5e.rules.JournalEntry.BYFd9hiJGo9L5aOM.JournalEntryPage.AjavRU4yPfI9hfaI]{Équipement} ») comme focaliseur d'incantation de vos sorts de druide.</p>",
+          "requirements": "Druide 1"
         }
       },
       "armorProf": "(pas en métal)",
@@ -550,7 +623,13 @@
         },
         "Charm Person": {
           "name": "Charme-personne",
-          "description": "<p>Vous tentez de charmer un humanoïde que vous voyez à portée. Il effectue un jet de sauvegarde de Sagesse, avec avantage si vous ou l'un de vos compagnons êtes en plein combat contre lui. Si elle rate le jet de sauvegarde, la créature est &Reference[charmed]{charmée} par vous jusqu'à la fin du sort ou jusqu'à ce que vous ou l'un de vos compagnons lui nuisiez directement. La créature charmée vous considère comme une relation de confiance. Lorsque le sort prend fin, la créature sait que vous l'avez charmée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>"
+          "description": "<p>Vous tentez de charmer un humanoïde que vous voyez à portée. Il effectue un jet de sauvegarde de Sagesse, avec avantage si vous ou l'un de vos compagnons êtes en plein combat contre lui. Si elle rate le jet de sauvegarde, la créature est &Reference[charmed]{charmée} par vous jusqu'à la fin du sort ou jusqu'à ce que vous ou l'un de vos compagnons lui nuisiez directement. La créature charmée vous considère comme une relation de confiance. Lorsque le sort prend fin, la créature sait que vous l'avez charmée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>",
+          "effects": {
+            "Charm Person": {
+              "name": "Charme-personne",
+              "description": "<p>La cible est charmée par le lanceur de sorts jusqu'à la fin du sort. La créature charmée considère le lanceur de sorts comme une relation de confiance. Lorsque le sort prend fin, la créature sait qu'elle a été charmée.</p>"
+            }
+          }
         },
         "Disguise Self": {
           "name": "Déguisement",
@@ -600,6 +679,9 @@
             },
             "Expertise": {
               "title": "Expertise"
+            },
+            "Bard College": {
+              "title": "Collège bardique"
             }
           }
         },
@@ -625,6 +707,11 @@
           "name": "Ascendance féerique",
           "description": "<p>Vous êtes avantagé aux jets de sauvegarde contre l’état charmé et la magie ne peut pas vous endormir.</p>",
           "requirements": "Elfe, Demi-elfe"
+        },
+        "Spellcasting": {
+          "description": "<p>Vous avez appris à détisser et remodeler la trame de la réalité en harmonie avec vos désirs et vos mélodies. Vos sorts s'ajoutent à votre vaste répertoire : une magie que vous pouvez accorder à la situation.</p><h5>Sorts mineurs</h5><p>Vous connaissez deux sorts mineurs que vous choisissez dans la liste des sorts de barde. Vous en apprenez d'autres que vous choisissez à plus haut niveau, comme le montre la colonne « Sorts mineurs connus » de la table « Le barde ».</p><h5>Emplacements de sort</h5><p>La table « Le barde » vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et plus. Pour lancer un tel sort, vous devez dépenser un emplacement d'un niveau au moins égal à celui du sort. Vous récupérez tous les emplacements dépensés en terminant un repos long.</p><p>Si, par exemple, vous connaissez le sort du 1<sup>er</sup> niveau soins alors qu'il vous reste un emplacement de sort du 1<sup>er</sup> niveau et un autre du 2<sup>e</sup> niveau, vous pouvez le lancer en dépensant l'un ou l'autre de ces emplacements.</p><h5>Sorts connus du 1<sup>er</sup> niveau et plus</h5><p>Vous connaissez quatre sorts du 1<sup>er</sup> niveau, que vous choisissez dans la liste des sorts de barde.</p><p>La colonne « Sorts connus » de la table « Le barde » indique à quel rythme vous apprenez de nouveaux sorts de barde de votre choix. Chacun de ces sorts doit être d'un niveau pour lequel vous disposez d'emplacements, comme le montre la table. Lorsque vous atteignez par exemple le niveau 3 dans cette classe, vous pouvez apprendre un nouveau sort du 1<sup>er</sup> ou du 2<sup>e</sup> niveau.</p><p>Par ailleurs, lorsque vous gagnez un niveau dans cette classe, vous pouvez choisir l'un des sorts de barde que vous connaissez pour le remplacer par un autre sort de la liste des sorts de barde, qui doit lui aussi être d'un niveau pour lequel vous disposez d'emplacements.</p><h5>Caractéristique d'incantation</h5><p>Le Charisme est la caractéristique d'incantation de vos sorts de barde. La magie que vous maniez est issue de votre cœur et de votre âme, de tout ce que vous insufflez dans votre musique ou vos oraisons. Vous recourez au Charisme chaque fois qu'un sort se réfère à votre caractéristique d'incantation. En outre, vous utilisez votre modificateur de Charisme pour calculer le DD de sauvegarde des sorts de barde que vous lancez, ainsi que lorsqu'un tel sort entraîne un jet d'attaque de votre part.</p><p><strong>DD de sauvegarde des sorts</strong> = 8 + votre bonus de maîtrise + votre modificateur de Charisme</p><p><strong>Modificateur d'attaque des sorts</strong> = votre bonus de maîtrise + votre modificateur de Charisme</p><h5>Incantation rituelle</h5><p>Vous pouvez lancer comme rituel un sort de barde que vous connaissez si ce sort porte la mention « rituel ».</p><h5>Focaliseur d'incantation</h5><p>Vous pouvez vous servir d'un instrument de musique (cf. « @UUID[Compendium.dnd5e.rules.JournalEntry.BYFd9hiJGo9L5aOM.JournalEntryPage.AjavRU4yPfI9hfaI]{Équipement} ») comme focaliseur d'incantation de vos sorts de barde.</p>",
+          "name": "Sorts",
+          "requirements": "Barde 1"
         }
       },
       "alignment": "Chaotique Neutre",
@@ -666,7 +753,12 @@
         },
         "Hempen Rope (50 ft.)": {
           "name": "Corde en chanvre (15 m)",
-          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>",
+          "activities": {
+            "Burst": {
+              "name": "Rupture"
+            }
+          }
         },
         "Mess Kit": {
           "name": "Gamelle",
@@ -724,6 +816,12 @@
             "Divine Health": {
               "title": "Santé divine",
               "hint": "La magie divine qui vous parcourt vous immunise contre les maladies."
+            },
+            "Aura Radius": {
+              "title": "Rayon de l'Aura"
+            },
+            "Sacred Oath": {
+              "title": "Serment sacré"
             }
           }
         },
@@ -738,6 +836,10 @@
           "requirements": "Paladin 1",
           "activities": {
             "heal": {
+              "condition": "La cible ne peut pas être un mort-vivant ou un artificiel."
+            },
+            "Cure Disease and Poison": {
+              "name": "Guérison des maladies et des poisons",
               "condition": "La cible ne peut pas être un mort-vivant ou un artificiel."
             }
           }
@@ -767,8 +869,13 @@
         },
         "Savage Attacks": {
           "name": "Sauvagerie",
-          "description": "<p>Quand vous obtenez un coup critique avec une attaque d'arme au corps à corps, vous pouvez lancer l'un des dés de dégâts de l'arme une fois de plus et en ajouter le résultat aux dégâts supplémentaires du coup critique.</p><section class=\"secret foundry-note\" id=\"secret-FW95FLcIfLVA7oB6\"><p><strong>Note Foundry</strong></p><p>Activez cette aptitude dans la section Traits spéciaux de la feuille de personnage.</p></section>",
-          "requirements": "Demi-orc"
+          "description": "<p>Quand vous obtenez un coup critique avec une attaque d'arme au corps à corps, vous pouvez lancer l'un des dés de dégâts de l'arme une fois de plus et en ajouter le résultat aux dégâts supplémentaires du coup critique.</p>",
+          "requirements": "Demi-orc",
+          "effects": {
+            "Savage Attacks": {
+              "name": "Sauvagerie"
+            }
+          }
         }
       },
       "alignment": "Loyal Bon",
@@ -796,7 +903,12 @@
         },
         "Hempen Rope (50 ft.)": {
           "name": "Corde en chanvre (15 m)",
-          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>",
+          "activities": {
+            "Burst": {
+              "name": "Rupture"
+            }
+          }
         },
         "Rations": {
           "name": "Rations",
@@ -841,6 +953,9 @@
             },
             "Brutal Critical Dice": {
               "title": "Dés de Critique brutal"
+            },
+            "Primal Path": {
+              "title": "Voie primitive"
             }
           }
         },
@@ -933,7 +1048,12 @@
         },
         "Hempen Rope (50 ft.)": {
           "name": "Corde en chanvre (15 m)",
-          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>",
+          "activities": {
+            "Burst": {
+              "name": "Rupture"
+            }
+          }
         },
         "Bedroll": {
           "name": "Sac de couchage",
@@ -1040,6 +1160,9 @@
             },
             "Spells Known": {
               "title": "Sorts connus"
+            },
+            "Sorcerous Origin": {
+              "title": "Origine magique"
             }
           }
         },
@@ -1076,7 +1199,8 @@
             "Hellish Resistance": {
               "title": "Résistance infernale"
             }
-          }
+          },
+          "subtype": "Tieffelin"
         },
         "Hellish Resistance": {
           "name": "Résistance infernale",
@@ -1091,6 +1215,11 @@
         "Thaumaturgy": {
           "name": "Thaumaturgie",
           "description": "<p>Vous engendrez une manifestation surnaturelle mineure, à portée. Vous créez l'un des effets magiques suivants à portée :</p><ul><li>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute.</li><li>Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</li><li>Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</li><li>Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</li><li>Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</li><li>Vous altérez l'aspect de vos yeux pendant 1 minute.</li></ul><p>Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois des effets d'une minute, sachant que vous pouvez révoquer un tel effet au prix d'une action.</p>"
+        },
+        "Spellcasting": {
+          "name": "Sorts",
+          "description": "<p>Un événement de votre passé, ou de celui d'un parent ou ancêtre, a laissé une marque indélébile sur vous et vous permet de piocher dans la magie profane. C’est cette source de magie, quelle que soit son origine, qui alimente vos sorts.</p><h5>Sorts mineurs</h5><p>Au niveau 1, vous connaissez quatre sorts mineurs que vous choisissez dans la liste des sorts d'ensorceleur. Vous en apprenez d'autres que vous choisissez à plus haut niveau, comme le montre la colonne « Sorts mineurs connus » de la table « L'ensorceleur ».</p><h5>Emplacements de sort</h5><p>La table « L'ensorceleur » vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et plus. Pour lancer un tel sort d'ensorceleur, vous devez dépenser un emplacement d'un niveau au moins égal à celui du sort. Vous récupérez tous les emplacements dépensés en terminant un repos long.</p><p>Si, par exemple, vous connaissez le sort du 1<sup>er</sup> niveau mains brûlantes alors qu’il vous reste un emplacement de sort du 1<sup>er</sup> niveau et un autre du 2<sup>e</sup> niveau, vous pouvez le lancer en dépensant l'un ou l'autre de ces emplacements.</p><h5>Sorts connus du 1<sup>er</sup> niveau et plus</h5><p>Vous connaissez deux sorts du 1<sup>er</sup> niveau de votre choix tirés de la liste de sorts de l'ensorceleur</p><p>La colonne « Sorts connus » de la table « L'ensorceleur » indique à quel rythme vous apprenez de nouveaux sorts d'ensorceleur de votre choix. Ces sorts doivent tous être d'un niveau pour lequel vous disposez d'emplacements. Lorsque vous atteignez par exemple le niveau 3 dans cette classe, vous pouvez apprendre un nouveau sort du 1<sup>er</sup> ou du 2<sup>e</sup> niveau.</p><p>Par ailleurs, lorsque vous gagnez un niveau dans cette classe, vous pouvez choisir l'un des sorts d'ensorceleur que vous connaissez pour le remplacer par un autre sort de la liste des sorts d'ensorceleur, qui doit lui aussi être d'un niveau pour lequel vous disposez d'emplacements.</p><h5>Caractéristique d'incantation</h5><p>Le Charisme est votre caractéristique d'incantation pour vos sorts d'ensorceleur, la puissance de votre magie reposant sur votre capacité à projeter votre volonté sur le monde environnant. Vous recourez au Charisme chaque fois qu'un sort se réfère à votre caractéristique d'incantation. En outre, vous utilisez votre modificateur de Charisme pour calculer le DD de sauvegarde des sorts d'ensorceleur que vous lancez, ainsi que lorsqu'un tel sort entraîne un jet d'attaque de votre part.</p><p><strong>DD de sauvegarde des sorts</strong> = 8 + votre bonus de maîtrise + votre modificateur de Charisme</p><p><strong>Modificateur d'attaque des sorts</strong> = votre bonus de maîtrise + votre modificateur de Charisme</p><h5>Focaliseur d'incantation</h5><p>Vous pouvez vous servir d'un focaliseur arcanique comme focaliseur d'incantation de vos sorts d'ensorceleur.</p>",
+          "requirements": "Ensorceleur 1"
         }
       },
       "alignment": "Neutre Mauvais",
@@ -1166,7 +1295,12 @@
         },
         "Hempen Rope (50 ft.)": {
           "name": "Corde en chanvre (15 m)",
-          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+          "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>",
+          "activities": {
+            "Burst": {
+              "name": "Rupture"
+            }
+          }
         },
         "Priest": {
           "name": "Ecclésiastique",
@@ -1194,6 +1328,9 @@
             "Purity of Body": {
               "title": "Pureté physique",
               "hint": "La maîtrise du ki qui circule en vous est telle que vous devenez immunisé contre les maladies et les poisons."
+            },
+            "Monastic Tradition": {
+              "title": "Tradition monastique"
             }
           }
         },
@@ -1231,6 +1368,20 @@
           "name": "Discrétion naturelle",
           "description": "<p>Il vous suffit d'être derrière une créature dont la catégorie de taille est d'au moins un cran supérieure à la vôtre pour pouvoir tenter de vous cacher.</p>",
           "requirements": "Halfelin pied-léger"
+        },
+        "Unarmed Strike": {
+          "description": "<p>Un coup de poing, de pied ou de tête, ou autre frappe violente (rien de tout cela n'étant considéré comme une arme). Une attaque à mains nues qui touche inflige des dégâts contondants égaux à 1 + votre modificateur de Force. Vous avez la maîtrise de vos attaques à mains nues.</p>",
+          "name": "Frappe à mains nues"
+        },
+        "Unarmored Defense": {
+          "name": "Défense sans armure",
+          "description": "<p>Dès le niveau 1, tant que vous ne portez ni armure ni bouclier, votre CA est égale à 10 + votre modificateur de Dextérité + votre modificateur de Sagesse.</p>",
+          "requirements": "Moine 1",
+          "effects": {
+            "Unarmored Defense": {
+              "name": "Défense sans armure"
+            }
+          }
         }
       },
       "ci": "avantagé contre l'état effrayé",
@@ -1345,7 +1496,8 @@
             "Elf Weapon Training": {
               "title": "Entraînement martial elfique"
             }
-          }
+          },
+          "subtype": "Elfe"
         },
         "Fey Ancestry": {
           "name": "Ascendance féerique",
