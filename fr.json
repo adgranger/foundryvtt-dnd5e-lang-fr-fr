@@ -49,7 +49,7 @@
   "DND5E.AbbreviationKg": "kg",
   "DND5E.AbbreviationLR": "RL",
   "DND5E.AbbreviationLevel": "Niv",
-  "DND5E.AbbreviationLbs": "Lbs",
+  "DND5E.AbbreviationLbs": "lbs.",
   "DND5E.AbbreviationSR": "RC",
   "DND5E.Ability": "Caractéristique",
   "DND5E.Abilities": "Caractéristiques",
@@ -69,10 +69,10 @@
   "DND5E.AbilityHonAbbr": "hon",
   "DND5E.AbilitySan": "Santé mentale",
   "DND5E.AbilitySanAbbr": "san",
-  "DND5E.AbilityScore": "Score de caractéristique",
-  "DND5E.AbilityScorePl": "Scores de caractéristique",
-  "DND5E.AbilityScoreL": "Score de {ability}",
-  "DND5E.AbilityScoreMax": "Caractéristique au maximum",
+  "DND5E.AbilityScore": "Valeur de caractéristique",
+  "DND5E.AbilityScorePl": "Valeurs de caractéristique",
+  "DND5E.AbilityScoreL": "Valeur de {ability}",
+  "DND5E.AbilityScoreMax": "Valeur de caractéristique maximum",
   "DND5E.AbilityModifier": "Modificateur de caractéristique",
   "DND5E.AbilityPromptText": "Quel type de jet de {ability} ?",
   "DND5E.AbilityPromptTitle": "Jet de {ability}",
@@ -81,7 +81,7 @@
   "DND5E.AbilityUseCast": "Lancer le sort",
   "DND5E.AbilityUseUse": "Utiliser",
   "DND5E.AbilityUseConfig": "Configuration de l'utilisation",
-  "DND5E.AbilityBonuses": "Bonus de Caractéristique",
+  "DND5E.AbilityBonuses": "Bonus de caractéristique",
   "DND5E.AbilityConfigure": "Configurer {ability}",
   "DND5E.AbilityConfigureTitle": "Configurer les jets de sauvegarde et les jets de caractéristique de {ability}",
   "DND5E.AbilitySaveConfigure": "Jets de sauvegarde de {ability}",
@@ -93,15 +93,15 @@
   "DND5E.Action": "Action",
   "DND5E.ActionAbbr": "A",
   "DND5E.ActionPl": "Actions",
-  "DND5E.ActionAbil": "Jet de caractéristique",
+  "DND5E.ActionAbil": "Test de caractéristique",
   "DND5E.ActionEnch": "Enchantement",
-  "DND5E.ActionHeal": "Points de vie",
-  "DND5E.ActionMSAK": "Attaque au corps-à-corps avec un sort",
-  "DND5E.ActionMWAK": "Attaque au corps-à-corps avec une arme",
+  "DND5E.ActionHeal": "Soin",
+  "DND5E.ActionMSAK": "Attaque de sort au corps à corps",
+  "DND5E.ActionMWAK": "Attaque d'arme au corps à corps",
   "DND5E.ActionOther": "Autre",
-  "DND5E.ActionRSAK": "Attaque à distance avec un sort",
-  "DND5E.ActionRWAK": "Attaque à distance avec une arme",
-  "DND5E.ActionSave": "Jet de Sauvegarde",
+  "DND5E.ActionRSAK": "Attaque de sort à distance",
+  "DND5E.ActionRWAK": "Attaque d'arme à distance",
+  "DND5E.ActionSave": "Jet de sauvegarde",
   "DND5E.ActionSumm": "Invoquer",
   "DND5E.ActionUtil": "Utilitaire",
   "DND5E.ActionWarningNoItem": "L'objet demandé {item} n'existe plus sur l'acteur {name}",
@@ -202,7 +202,7 @@
       "UsageNotAllowed": "L'utilisation de cette activité n'est pas possible pour le moment."
     }
   },
-  "DND5E.ActorWarningInvalidItem": "les objets de type {itemType} ne peuvent être ajoutés à un {actorType}.",
+  "DND5E.ActorWarningInvalidItem": "Les objets de type {itemType} ne peuvent être ajoutés à un {actorType}.",
   "DND5E.ActorWarningSingleton": "Seul un objet de type {itemType} peut être ajouté à un {actorType}.",
   "DND5E.ActiveEffectOverrideWarning": "Cette valeur est modifiée par un effet actif et ne peut être modifiée. Désactivez l'effet pour le modifier.",
   "DND5E.Add": "Créer",
@@ -215,23 +215,23 @@
       "Title": "Amélioration de caractéristique",
       "Hint": "Permet au joueur d'augmenter une ou plusieurs caractéristiques ou de prendre un don facultatif.",
       "CapDisplay": {
-        "one": "{points} point max par score",
-        "other": "{points} points max par score"
+        "one": "{points} point max par valeur",
+        "other": "{points} points max par valeur"
       },
       "Feat": {
-        "Hint": "Déposez un don ici pour en choisir un au lieu d'une amélioration de score de caractéristique.",
+        "Hint": "Déposez un don ici pour en choisir un au lieu d'une amélioration de caractéristique.",
         "ASIName": "Don d'amélioration de caractéristique"
       },
       "FIELDS": {
         "cap": {
           "label": "Limite de point",
-          "hint": "Nombre maximum de points qu'un joueur peut assigner à un seul score."
+          "hint": "Nombre maximum de points qu'un joueur peut assigner à une seule valeur."
         },
         "locked": {
           "label": "Verrouillé",
           "hint": "La caractéristique ne peut pas être améliorée.",
-          "locked": "L'aptitude ne peut pas être améliorée.",
-          "unlocked": "L'aptitude peut être améliorée."
+          "locked": "La caractéristique ne peut pas être améliorée.",
+          "unlocked": "La caractéristique peut être améliorée."
         },
         "fixed": {
           "label": "Amélioration fixe",
@@ -239,12 +239,12 @@
         },
         "points": {
           "label": "Points",
-          "hint": "Nombre de points qui peuvent être assignés à n'importe quel score de caractéristique débloqué.",
+          "hint": "Nombre de points qui peuvent être assignés à n'importe quelle valeur de caractéristique débloquée.",
           "decrease": "Diminuer les points",
           "increase": "Augmenter les points"
         }
       },
-      "LockedHint": "Les scores ne peuvent pas être modifiés avec un don sélectionné.",
+      "LockedHint": "Les valeurs ne peuvent pas être modifiés avec un don sélectionné.",
       "PointsRemaining": {
         "one": "{points} Point restant",
         "other": "{points} Points restants"
@@ -255,8 +255,8 @@
       },
       "Details": "Détails de l'amélioration",
       "Journal": {
-        "DescriptionLegacy": "<p>Lorsque vous atteignez le niveau {firstLevelOrdinal}, et de nouveau aux niveaux {otherLevelsOrdinal}, vous pouvez augmenter une caractéristique de votre choix de 2, ou augmenter deux caractéristiques de votre choix de 1. Comme d'habitude, vous ne pouvez pas augmenter une caractéristique au-delà de {maxAbilityScore} en utilisant cette aptitude.</p><p>En utilisant la règle optionnelle des dons, vous pouvez renoncer à cette amélioration pour choisir un don à la place.</p>",
-        "DescriptionModern": "<p>Vous obtenez le don d'amélioration de caractéristique ou un autre don de votre choix pour lequel vous remplissez les conditions. Vous obtenez à nouveau cette fonctionnalité aux niveaux {class} {otherLevels}.</p>",
+        "DescriptionLegacy": "<p>Lorsque vous atteignez le niveau {firstLevelOrdinal} (puis à nouveau aux niveaux {otherLevelsOrdinal}), vous pouvez augmenter de 2 la valeur de caractéristique de votre choix, ou augmenter de 1 deux valeurs de caractéristique de votre choix. Conformément à la règle habituelle, cette aptitude ne vous permet pas de porter une valeur au-delà de {maxAbilityScore}.</p><p>En utilisant la règle optionnelle des dons, vous pouvez renoncer à cette amélioration pour choisir un don à la place.</p>",
+        "DescriptionModern": "<p>Vous obtenez le don Amélioration de caractéristique ou un autre don de votre choix pour lequel vous remplissez les conditions. Vous obtenez à nouveau cette fonctionnalité aux niveaux {class} {otherLevels}.</p>",
         "Name": "Amélioration de caractéristique"
       },
       "Action": {
@@ -312,7 +312,7 @@
       "Roll": "Lancer les points de vie de {class}",
       "Starting": "Points de vie au 1er niveau",
       "TakeAverage": "Prendre la moyenne",
-      "Title": "Points de Vie",
+      "Title": "Points de vie",
       "Warning": {
         "Empty": "Les points de vie doivent être lancés ou la valeur moyenne doit être prise.",
         "Invalid": "Les points de vie doivent être un nombre entier valide."
@@ -328,7 +328,7 @@
         },
         "optional": {
           "label": "Optionnel",
-          "hint": "Si l'ensemble de la progression est marqué comme optionnel, les joueurs peuvent se désinscrire de tout objets suivant, sinon tous les objets non optionnels sont accordés."
+          "hint": "Si l'ensemble de la progression est marqué comme optionnel, les joueurs peuvent renoncer à l'un des objets suivants, sinon tous les objets non optionnels sont accordés."
         }
       },
       "Title": "Attribuer des objets",
@@ -453,7 +453,7 @@
             }
           },
           "Hint": "Utilisez ceci pour représenter le facteur de puissance des créatures pour des fonctionnalités comme Forme sauvage",
-          "Label": "Facteur de Puissance"
+          "Label": "Facteur de puissance"
         },
         "Dice": {
           "FIELDS": {
@@ -642,14 +642,14 @@
     }
   },
   "DND5E.Armor": "Armures",
-  "DND5E.ArmorClass": "Classe d'Armure",
+  "DND5E.ArmorClass": "Classe d'armure",
   "DND5E.ArmorClassEquipment": "Armure équipée",
   "DND5E.ArmorClassFlat": "Base",
   "DND5E.ArmorClassUnarmored": "Défense sans armure",
   "DND5E.ArmorClassNatural": "Armure naturelle",
   "DND5E.ArmorClassMage": "Armure du mage",
   "DND5E.ArmorClassMotionless": "Classe d'armure si immobilisé",
-  "DND5E.ArmorClassDraconic": "Résilience draconique",
+  "DND5E.ArmorClassDraconic": "Résistance draconique",
   "DND5E.ArmorClassUnarmoredMonk": "Défense sans armure (Moine)",
   "DND5E.ArmorClassUnarmoredBarbarian": "Défense sans armure (Barbare)",
   "DND5E.ArmorClassUnarmoredBard": "Défense sans armure (Barde)",
@@ -719,7 +719,7 @@
       }
     },
     "Attack": {
-      "mwak": "Attaque au corps-à-corps",
+      "mwak": "Attaque de corps à corps",
       "rwak": "Attaque à distance"
     },
     "Classification": {
@@ -737,14 +737,14 @@
       "Ranged": "À distance"
     },
     "Type": {
-      "Melee": "Corps-à-corps",
+      "Melee": "Corps à corps",
       "Ranged": "À distance"
     },
     "Warning": {
       "NoQuantity": "Tentative d'attaque avec une arme ayant une quantité de zéro."
     },
     "Weapon": {
-      "Melee": "Arme de corps-à-corps",
+      "Melee": "Arme de corps à corps",
       "Ranged": "Arme à distance"
     },
     "Formatted": {
@@ -770,7 +770,7 @@
     },
     "Message": "{name} a reçu {award}.",
     "NoDestinations": "Aucune destination disponible",
-    "NoPrimaryParty": "Aucune Équipe principale définie, afficher les acteurs assignés aux joueurs à la place.",
+    "NoPrimaryParty": "Aucun groupe principal n'est défini, afficher les acteurs assignés aux joueurs à la place.",
     "NotGMError": "La commande /award n'est disponible que pour les MJs.",
     "UnrecognizedWarning": "Impossible d'analyser {commands}. La commande /award doit être utilisée avec des valeurs d'XP et de devises comme '/award 10gp 50xp'."
   },
@@ -851,11 +851,11 @@
       "primaryAbility": {
         "all": {
           "label": "Toutes nécessaires",
-          "hint": "Toutes les caractéristiques principales doivent respecter le minimum pour pouvoir se multi-classer."
+          "hint": "Toutes les caractéristiques principales doivent respecter le minimum pour pouvoir se multiclasser."
         },
         "value": {
           "label": "Caractéristique principale",
-          "hint": "Caractéristiques utilisées le plus par cette classe. Utilisé pour déterminer les restrictions de multi-classage."
+          "hint": "Caractéristiques utilisées le plus par cette classe. Utilisé pour déterminer les restrictions de multiclassage."
         }
       },
       "hd": {
@@ -873,10 +873,10 @@
   "DND5E.ClassAdd": "Ajouter une classe",
   "DND5E.ClassIdentifier": "Identifiant de classe",
   "DND5E.ClassIdentifierHint": "Les données de cette classe seront accessibles en utilisant <strong>@classes.{identifier}</strong> dans les formules de jet.",
-  "DND5E.ClassLevels": "Niveau de Classe",
+  "DND5E.ClassLevels": "Niveau de classe",
   "DND5E.ClassMakeOriginal": "Classe de départ",
   "DND5E.ClassMakeOriginalHint": "La première classe prise par le personnage est utilisée pour déterminer certains traits de classe lors du multiclassage.",
-  "DND5E.ClassName": "Nom de la Classe",
+  "DND5E.ClassName": "Nom de la classe",
   "DND5E.ClassOriginal": "Classe de départ",
   "DND5E.ClassSaves": "Jets de sauvegardes",
   "DND5E.Confirm": "Confirmer",
@@ -899,7 +899,7 @@
     },
     "Selection": {
       "Label": "Sélectionné : {summary}",
-      "Select": "Selectionner",
+      "Select": "Sélectionner",
       "Summary": {
         "Max": "<span class=\"value\">{value}</span> jusqu'à {max}",
         "Min": "<span class=\"value\">{value}</span> d'au moins {min}",
@@ -986,7 +986,7 @@
   "DND5E.ConcentrationDuration": "Concentration, jusqu'à {duration}",
   "DND5E.ConcentratingOn": "Vous vous concentrez sur les effets du {type} '{name}'.",
   "DND5E.ConcentratingEndChoice": "Vous vous concentrez sur les effets de plusieurs sources. Choisissez l'effet auquel vous souhaitez mettre fin.",
-  "DND5E.ConcentratingMissingItem": "L'effet qui requiert une Concentration et à remplacer n'existe pas.",
+  "DND5E.ConcentratingMissingItem": "L'effet qui requiert une concentration et à remplacer n'existe pas.",
   "DND5E.ConcentratingLimited": "Vous ne pouvez pas commencer à vous concentrer sur un effet supplémentaire.",
   "DND5E.ConcentrationLimit": "Limite de concentration",
   "DND5E.ConcentratingEnd": "Fin de la concentration",
@@ -1231,7 +1231,7 @@
   "DND5E.Copied": "{value} copié",
   "DND5E.Cover": "Abri",
   "DND5E.CoverHalf": "Partiel",
-  "DND5E.CoverThreeQuarters": "Important",
+  "DND5E.CoverThreeQuarters": "Supérieur",
   "DND5E.CoverTotal": "Total",
   "DND5E.Cost": "Coût",
   "DND5E.CostGP": "Coût (PO)",
@@ -1277,11 +1277,11 @@
   "DND5E.PowerfulCritical": "Critique puissant",
   "DND5E.CRLabel": "FP {cr}",
   "DND5E.Currency": "Monnaie",
-  "DND5E.CurrencyAbbrCP": "PC",
-  "DND5E.CurrencyAbbrEP": "PE",
-  "DND5E.CurrencyAbbrGP": "PO",
-  "DND5E.CurrencyAbbrPP": "PP",
-  "DND5E.CurrencyAbbrSP": "PA",
+  "DND5E.CurrencyAbbrCP": "pc",
+  "DND5E.CurrencyAbbrEP": "pe",
+  "DND5E.CurrencyAbbrGP": "po",
+  "DND5E.CurrencyAbbrPP": "pp",
+  "DND5E.CurrencyAbbrSP": "pa",
   "DND5E.CurrencyCP": "Cuivre",
   "DND5E.CurrencyEP": "Électrum",
   "DND5E.CurrencyGP": "Or",
@@ -1383,8 +1383,8 @@
       "Half": "Un niveau sur deux",
       "None": "Pas d'évolution",
       "Whole": "Chaque niveau",
-      "HalfCantrip": "Évolution des tours de magie (moitié)",
-      "WholeCantrip": "Évolution des tours de magie"
+      "HalfCantrip": "Évolution des sorts mineurs (moitié)",
+      "WholeCantrip": "Évolution des sorts mineurs"
     }
   },
   "DND5E.DamImm": "Immunités aux dégâts",
@@ -1404,7 +1404,7 @@
     "Downgrading": "Rétrogradation de {source} à Résistance",
     "Ignoring": "Ignorer {source}"
   },
-  "DND5E.DamageBludgeoning": "Contondant",
+  "DND5E.DamageBludgeoning": "Contondants",
   "DND5E.DamageCold": "Froid",
   "DND5E.DamageFire": "Feu",
   "DND5E.DamageForce": "Force",
@@ -1414,18 +1414,18 @@
     "Hint": "Formules pour les montants qui seront ajoutés aux dégâts de type appliqués à cet acteur. Les valeurs négatives réduiront les dégâts subis.",
     "BypassHint": "Ces propriétés d'arme contourneront la modification des dégâts pour les dégâts physiques."
   },
-  "DND5E.DamageNecrotic": "Nécrotique",
-  "DND5E.DamagePiercing": "Perforant",
+  "DND5E.DamageNecrotic": "Nécrotiques",
+  "DND5E.DamagePiercing": "Perforants",
   "DND5E.DamagePhysical": "Physique Non-Magique",
   "DND5E.DamagePhysicalBypass": "Contournements dégâts physiques",
   "DND5E.DamagePhysicalBypassHint": "Les propriétés de ces armes permettent de contourner la résistance aux dégâts pour les dégâts physiques.",
   "DND5E.DamagePhysicalBypasses": "{damageTypes} des attaques qui ne sont pas {bypassTypes}",
   "DND5E.DamagePhysicalBypassesShort": "Contourné par les sources de type {type}",
   "DND5E.DamagePoison": "Poison",
-  "DND5E.DamagePsychic": "Psychique",
-  "DND5E.DamageRadiant": "Radiant",
+  "DND5E.DamagePsychic": "Psychiques",
+  "DND5E.DamageRadiant": "Radiants",
   "DND5E.DamageRoll": "Jet de dégâts",
-  "DND5E.DamageSlashing": "Tranchant",
+  "DND5E.DamageSlashing": "Tranchants",
   "DND5E.DamageThreshold": "Seuil de dégâts",
   "DND5E.DamageThunder": "Tonnerre",
   "DND5E.DamageType": "Type de dégâts",
@@ -1611,7 +1611,7 @@
         "type": {
           "label": "Type d'objet",
           "hint": "Type d'objet auquel cet enchantement peut être appliqué.",
-          "Any": "N'importe quel type enchantable"
+          "Any": "Tout type d'enchantement"
         }
       }
     },
@@ -1641,7 +1641,7 @@
     "Action": {
       "Apply": "Appliquer l'enchantement",
       "Disable": "Désactiver l'enchantement",
-      "Edit": "Modifier l’enchantement",
+      "Edit": "Modifier l'enchantement",
       "Enable": "Activer l'enchantement",
       "Remove": "Retirer l'enchantement"
     },
@@ -1713,10 +1713,10 @@
       "Maneuver": "Manœuvre",
       "Metamagic": "Option de métamagie",
       "Multiattack": "Attaque multiple",
-      "PactBoon": "Faveur de pacte",
+      "PactBoon": "Pacte",
       "PsionicPower": "Pouvoir psionique",
       "Rune": "Rune",
-      "SuperiorHuntersDefense": "Défense supérieure du chasseur"
+      "SuperiorHuntersDefense": "Défense de chasseur supérieure"
     },
     "Feat": {
       "Label": "Don",
@@ -1819,10 +1819,10 @@
   "DND5E.FlagsElvenAccuracyHint": "Permet de relancer un dé sur un jet de Dex, Int, Sag ou Cha avec avantage.",
   "DND5E.FlagsHalflingLucky": "Chance halfeline",
   "DND5E.FlagsHalflingLuckyHint": "Permet de relancer les 1 sur les jets d'attaque, de caractéristique et de sauvegarde.",
-  "DND5E.FlagsInitiativeAdv": "Avantage à l'initative",
+  "DND5E.FlagsInitiativeAdv": "Avantage à l'initiative",
   "DND5E.FlagsInitiativeAdvHint": "Obtenu par un don ou un objet magique.",
   "DND5E.FlagsAlert": "Vigilant (Don)",
-  "DND5E.FlagsAlertHint": "Maîtrise des jets d’initiative.",
+  "DND5E.FlagsAlertHint": "Maîtrise des jets d'initiative.",
   "DND5E.FlagsJOAT": "Touche-à-tout",
   "DND5E.FlagsJOATHint": "Ajoute la moitié de votre bonus de maîtrise à tout jet de caractéristique sans bonus de maîtrise.",
   "DND5E.FlagsObservant": "Observateur (Don)",
@@ -1837,8 +1837,8 @@
   "DND5E.FlagsWeaponCritThresholdHint": "Permet d'étendre la plage de coup critique ; par exemple, Critique amélioré ou supérieur.",
   "DND5E.FlagsSpellCritThreshold": "Plage de critique des sorts",
   "DND5E.FlagsSpellCritThresholdHint": "Permet d'étendre la plage de coup critique pour les sorts d'attaque.",
-  "DND5E.FlagsMeleeCriticalDice": "Dé de dégâts pour les coups critiques au corps-à-corps",
-  "DND5E.FlagsMeleeCriticalDiceHint": "Un certain nombre de dés de dégâts supplémentaires ont été ajoutés aux coups critiques des armes de corps-à-corps.",
+  "DND5E.FlagsMeleeCriticalDice": "Dé de dégâts pour les coups critiques de corps à corps",
+  "DND5E.FlagsMeleeCriticalDiceHint": "Un certain nombre de dés de dégâts supplémentaires ont été ajoutés aux coups critiques des armes de corps à corps.",
   "DND5E.Flat": "Fixe",
   "DND5E.Formula": "Formule",
   "DND5E.FormulaMalformedError": "Problème de préparation de la formule {property} dans {name}.",
@@ -1942,7 +1942,7 @@
   "DND5E.HPFormula": "Calcul Pts de Vie",
   "DND5E.HPFormulaError": "La formule de points de vie fournie n'a pas pu être évaluée.",
   "DND5E.HPFormulaRollMessage": "Formule de calcul des points de vie",
-  "DND5E.HitDie": "Dé de Vie",
+  "DND5E.HitDie": "Dé de vie",
   "DND5E.HitDice": "Dés de vie",
   "DND5E.HitDiceConfig": "Ajuster les dés de vie",
   "DND5E.HitDiceConfigHint": "Ajuster les niveaux des dés de vie pour chaque classe.",
@@ -2016,7 +2016,7 @@
       "Physical": "Physique"
     },
     "Property": {
-      "Adamantine": "Adamantine",
+      "Adamantine": "Adamantium",
       "Ammunition": "Munitions",
       "Concentration": "Concentration",
       "Finesse": "Finesse",
@@ -2059,7 +2059,7 @@
   "DND5E.ItemToolDetails": "Détails de l'outil",
   "DND5E.ItemToolProficiency": "Maîtrise des outils",
   "DND5E.ItemToolProperties": "Propriétés de l'outil",
-  "DND5E.ItemToolStatus": "Etat de l'outil",
+  "DND5E.ItemToolStatus": "État de l'outil",
   "DND5E.ItemToolType": "Catégorie d'outils",
   "DND5E.ItemToolUsage": "Utilisation de l'outil",
   "DND5E.ItemVehicleProperties": "Propriétés des véhicules",
@@ -2112,9 +2112,9 @@
   "DND5E.Multiple": "Multiple",
   "DND5E.Multiplier": "Multiplicateur",
   "DND5E.MythicActionLabel": "Action mythique",
-  "DND5E.Name": "Nom du Personnage",
+  "DND5E.Name": "Nom du personnage",
   "DND5E.NameUnidentified": "Nom non identifié",
-  "DND5E.NoCharges": "Aucune Charge",
+  "DND5E.NoCharges": "Aucune charge",
   "DND5E.None": "Aucun",
   "DND5E.NoneActionLabel": "Aucune",
   "DND5E.Normal": "Normal",
@@ -2127,7 +2127,7 @@
   "DND5E.PassivePerception": "Perception passive",
   "DND5E.Period": "Période",
   "DND5E.PersonalityTraits": "Traits de personnalité",
-  "DND5E.Polymorph": "Polymorphe",
+  "DND5E.Polymorph": "Métamorphose",
   "DND5E.PolymorphAcceptSettings": "Paramètres personnalisés",
   "DND5E.PolymorphAddTemp": "Ajoutez les PV de la cible comme PV temporaire",
   "DND5E.PolymorphCustomTransformation": "Transformation personnalisée",
@@ -2142,10 +2142,10 @@
   "DND5E.PolymorphKeepFeatureAE": "Conserver les effets qui proviennent de vos aptitudes ?",
   "DND5E.PolymorphKeepHP": "Garder les Points de vie et les Dés de vie",
   "DND5E.PolymorphKeepItems": "Conserver l'équipement",
-  "DND5E.PolymorphKeepMental": "Conserver les caractéristiques mentales (INT, SAG, CHA)",
+  "DND5E.PolymorphKeepMental": "Conserver les caractéristiques mentales (Int, Sag, Cha)",
   "DND5E.PolymorphKeepOriginAE": "Conserver les effets de l'acteur (les effets non liés à des aptitudes, des objets, des sorts)",
   "DND5E.PolymorphKeepOtherOriginAE": "Conserver les effets qui proviennent d'un autre acteur ?",
-  "DND5E.PolymorphKeepPhysical": "Conserver les caractéristiques physiques (FOR, DEX, CON)",
+  "DND5E.PolymorphKeepPhysical": "Conserver les caractéristiques physiques (For, Dex, Con)",
   "DND5E.PolymorphKeepSaves": "Conserver les jets de sauvegardes",
   "DND5E.PolymorphKeepSelf": "Conserver l'identité (change l'apparence et la taille comme 'Déguisement')",
   "DND5E.PolymorphKeepSkills": "Conserver les compétences",
@@ -2269,7 +2269,7 @@
     "Tooltip": "Info-bulle",
     "Type": {
       "Label": "Type de règle",
-      "Condition": "Condition",
+      "Condition": "État",
       "Rule": "Règle"
     }
   },
@@ -2442,7 +2442,7 @@
   "DND5E.SkillModifierHint": "Modificateur de {skill}",
   "DND5E.SkillPassiveHint": "{skill} passif",
   "DND5E.SkillPassiveSpecificHint": "Passif {ability} ({skill})",
-  "DND5E.SkillPassiveScore": "Score passif de {skill}",
+  "DND5E.SkillPassiveScore": "Valeur passive de {skill}",
   "DND5E.SkillPassives": "Compétences passives",
   "DND5E.Skin": "Peau",
   "DND5E.Skip": "Passer",
@@ -3081,13 +3081,13 @@
   "DND5E.ToolBonuses": "Bonus pour les outils",
   "DND5E.ToolCheck": "Jet avec un outil",
   "DND5E.ToolConfigure": "Configurer la maîtrise des outils",
-  "DND5E.ToolDisguiseKit": "Kit de déguisement",
-  "DND5E.ToolForgeryKit": "Kit de contrefaçon",
+  "DND5E.ToolDisguiseKit": "Accessoires de déguisement",
+  "DND5E.ToolForgeryKit": "Matériel de contrefaçon",
   "DND5E.ToolGamingSet": "Jeux de hasard",
-  "DND5E.ToolHerbalismKit": "Kit d'herboriste",
+  "DND5E.ToolHerbalismKit": "Matériel d'herboriste",
   "DND5E.ToolMusicalInstrument": "Instrument de musique",
-  "DND5E.ToolNavigators": "Outils de navigation",
-  "DND5E.ToolPoisonersKit": "Kit d'empoisonneur",
+  "DND5E.ToolNavigators": "Instruments de navigateur",
+  "DND5E.ToolPoisonersKit": "Matériel d'empoisonneur",
   "DND5E.ToolPromptTitle": "Jet de {tool}",
   "DND5E.ToolThieves": "Outils de voleur",
   "DND5E.ToolVehicle": "Véhicule (terrestre ou maritime)",
@@ -3103,8 +3103,8 @@
   "DND5E.TraitConfig": "Configurer {trait}",
   "DND5E.TraitConfigChooseAnyCounted": "{count} parmis {type}",
   "DND5E.TraitConfigChooseAnyUncounted": "n'importe quel(le) {type}",
-  "DND5E.TraitConfigChooseList": "{count} parmis {list}",
-  "DND5E.TraitConfigChooseOther": "{count} autre(s) parmis {type}",
+  "DND5E.TraitConfigChooseList": "{count} parmi {list}",
+  "DND5E.TraitConfigChooseOther": "{count} autre(s) parmi {type}",
   "DND5E.TraitConfigChooseWrapper": "Choisir {choices}",
   "DND5E.TraitDIPlural.one": "Immunité aux dégâts",
   "DND5E.TraitDIPlural.other": "Immunités aux dégâts",
@@ -4068,7 +4068,7 @@
   "DND5E.ArmorValue": "Valeur d'armure",
   "DND5E.ABILITY": {
     "SECTIONS": {
-      "Score": "Score de {ability}",
+      "Score": "Valeur de {ability}",
       "Bonuses": {
         "Hint": "Ces bonus s'appliquent aux tests et aux jets de sauvegarde effectués avec {ability}.",
         "Label": "Bonus de {ability}"
@@ -4083,7 +4083,7 @@
     }
   },
   "DND5E.AbilityScoreMaxShort": "Maximum",
-  "DND5E.AbilityScoreShort": "Score",
+  "DND5E.AbilityScoreShort": "Valeur",
   "TYPES.ChatMessage": {
     "turn": "Message de tour de combat",
     "rest": "Message de repos"
@@ -4091,12 +4091,12 @@
   "DND5E.Language": {
     "Language": {
       "Druidic": "Druidique",
-      "Giant": "Géant",
+      "Giant": "Gigant",
       "Gnoll": "Gnoll",
       "Goblin": "Gobelin",
       "Halfling": "Halfelin",
       "Orc": "Orc",
-      "ThievesCant": "Jargon des voleurs",
+      "ThievesCant": "Argot des voleurs",
       "Celestial": "Céleste",
       "Abyssal": "Abyssal",
       "Aquan": "Aquatique",
@@ -4495,7 +4495,7 @@
       "Lair": "PX {value}, ou {lair} dans son antre"
     },
     "Value": "Valeur en PX",
-    "Label": "Points d’expérience"
+    "Label": "Points d'expérience"
   },
   "DND5E.FORWARD": {
     "Title": "Avancer",
@@ -4608,7 +4608,7 @@
       "Details": "Détails de {label}",
       "Bonuses": {
         "Label": "Bonus de {label}",
-        "Hint": "Ces bonus s’appliquent aux scores passifs et aux tests effectués avec {label}."
+        "Hint": "Ces bonus s'appliquent aux valeurs passifs et aux tests effectués avec {label}."
       }
     }
   },
@@ -4709,7 +4709,7 @@
           }
         },
         "mwak": {
-          "label": "Bonus aux armes de mêlée",
+          "label": "Bonus des armes de corps à corps",
           "attack": {
             "label": "Attaque d'armes de corps à corps"
           },
