@@ -552,7 +552,13 @@
     },
     "Legendary Resistance": {
       "name": "Legendary Resistance",
-      "description": "<p>If the [[lookup @details.type.config.label lowercase]] fails a saving throw, it can choose to succeed instead.</p>"
+      "description": "<p>If the [[lookup @details.type.config.label lowercase]] fails a saving throw, it can choose to succeed instead.</p>",
+      "activities": {
+        "Expend Use": {
+          "name": "Expend Use",
+          "condition": "fails a saving throw"
+        }
+      }
     },
     "Light Sensitivity": {
       "name": "Light Sensitivity",
