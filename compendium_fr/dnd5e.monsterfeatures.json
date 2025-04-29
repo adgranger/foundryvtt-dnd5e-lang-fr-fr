@@ -551,7 +551,13 @@
     },
     "Legendary Resistance": {
       "name": "Résistance légendaire",
-      "description": "<p>Si le [[lookup @details.type.config.label lowercase]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+      "description": "<p>Si le [[lookup @details.type.config.label lowercase]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+      "activities": {
+        "Expend Use": {
+          "name": "Dépenser utilisation",
+          "condition": "échoue à un jet de sauvegarde"
+        }
+      }
     },
     "Light Sensitivity": {
       "name": "Sensibilité à la lumière",
