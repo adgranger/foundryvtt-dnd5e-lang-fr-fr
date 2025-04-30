@@ -95,7 +95,13 @@
     },
     "Amulet of Health": {
       "name": "Amulette de santé",
-      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Votre valeur de Constitution est de 19 tant que vous portez cette amulette. Elle est sans effet sur vous si votre Constitution est déjà supérieure ou égale à 19.</p>"
+      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Votre valeur de Constitution est de 19 tant que vous portez cette amulette. Elle est sans effet sur vous si votre Constitution est déjà supérieure ou égale à 19.</p>",
+      "effects": {
+        "Amulet of Health": {
+          "name": "Amulette de santé",
+          "description": "<p>Votre valeur de Constitution est de 19 tant que vous portez cette amulette. Elle est sans effet sur vous si votre Constitution est déjà supérieure ou égale à 19.</p>"
+        }
+      }
     },
     "Amulet of Proof against Detection and Location": {
       "name": "Amulette d'antidétection",
@@ -263,7 +269,12 @@
     },
     "Belt of Dwarvenkind": {
       "name": "Ceinturon des nains",
-      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Tant que vous portez ce ceinturon, vous recevez les bénéfices suivants :</p><ul><li>Votre valeur de Constitution augmente de 2, jusqu'à un maximum de 20.</li><li>Vous êtes avantagé aux tests de Charisme (Persuasion) effectués dans le cadre d'interactions avec des nains.</li></ul><p>En outre et tant que vous êtes harmonisé avec le ceinturon, vous avez 50 % de chances chaque jour à l'aube de voir pousser une barbe fournie si votre physiologie vous le permet, ou de voir votre barbe épaissir de façon notable si vous en arboriez déjà une.</p><p>Si vous n'êtes pas nain, vous recevez les bénéfices suivants tant que vous portez ce ceinturon :</p><ul><li>Vous êtes avantagé aux jets de sauvegarde contre le poison et bénéficiez de la résistance aux dégâts de poison.</li><li>Vous bénéficiez de la vision dans le noir sur 18 m.</li><li>Vous parlez, lisez et écrivez le nain.</li></ul>"
+      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Tant que vous portez ce ceinturon, vous recevez les bénéfices suivants :</p><ul><li>Votre valeur de Constitution augmente de 2, jusqu'à un maximum de 20.</li><li>Vous êtes avantagé aux tests de Charisme (Persuasion) effectués dans le cadre d'interactions avec des nains.</li></ul><p>En outre et tant que vous êtes harmonisé avec le ceinturon, vous avez 50 % de chances chaque jour à l'aube de voir pousser une barbe fournie si votre physiologie vous le permet, ou de voir votre barbe épaissir de façon notable si vous en arboriez déjà une.</p><p>Si vous n'êtes pas nain, vous recevez les bénéfices suivants tant que vous portez ce ceinturon :</p><ul><li>Vous êtes avantagé aux jets de sauvegarde contre le poison et bénéficiez de la résistance aux dégâts de poison.</li><li>Vous bénéficiez de la vision dans le noir sur 18 m.</li><li>Vous parlez, lisez et écrivez le nain.</li></ul>",
+      "effects": {
+        "Belt of Dwarvenkind": {
+          "name": "Ceinturon des nains"
+        }
+      }
     },
     "Belt of Fire Giant Strength": {
       "name": "Ceinturon de force de géant du feu",
@@ -294,7 +305,12 @@
     },
     "Belt of Stone Giant Strength": {
       "name": "Ceinturon de force de géant des pierres",
-      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Tant que vous portez ce ceinturon, votre valeur de Force passe à 23. Si votre Force est déjà supérieure ou égale à la valeur octroyée par le ceinturon, l'objet n'a aucun effet sur vous.</p><p>Le ceinturon de force de géant des pierres et le ceinturon de force de géant du givre ont un aspect différent, mais produisent le même effet.</p>"
+      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Tant que vous portez ce ceinturon, votre valeur de Force passe à 23. Si votre Force est déjà supérieure ou égale à la valeur octroyée par le ceinturon, l'objet n'a aucun effet sur vous.</p><p>Le ceinturon de force de géant des pierres et le ceinturon de force de géant du givre ont un aspect différent, mais produisent le même effet.</p>",
+      "effects": {
+        "Belt of Stone Giant Strength": {
+          "name": "Ceinturon de force de géant des pierres"
+        }
+      }
     },
     "Belt of Storm Giant Strength": {
       "name": "Ceinturon de force de géant des tempêtes",
@@ -2118,7 +2134,18 @@
     },
     "Manacles": {
       "name": "Menottes",
-      "description": "<p>Ces entraves métalliques peuvent être utilisées sur une créature de taille P ou M. Se libérer de menottes nécessite de réussir un test de Dextérité DD 20. Pour les briser, il faut réussir un test de Force DD 20. Chaque paire de menottes est fournie avec une clef. Sans cette clef, une créature ayant la maîtrise des outils de voleur peut crocheter la serrure des menottes en réussissant un test de Dextérité DD 15. Les menottes ont 15 points de vie.</p>"
+      "description": "<p>Ces entraves métalliques peuvent être utilisées sur une créature de taille P ou M. Se libérer de menottes nécessite de réussir un test de [[/check activity=dnd5eactivity000]]. Pour les briser, il faut réussir un test de [[/check activity=9DosjAvEYAW0LLK8]]. Chaque paire de menottes est fournie avec une clef. Sans cette clef, une créature ayant la maîtrise des outils de voleur peut crocheter la serrure des menottes en réussissant un test de [[/check activity=9IBcoj8ChH1OiDT8]]{Dextérité DD 15}. Les menottes ont 15 points de vie.</p>",
+      "activities": {
+        "Attempt to Break": {
+          "name": "Tentative de briser"
+        },
+        "Attempt to Pick": {
+          "name": "Tentative de crocheter"
+        },
+        "Attempt Escape": {
+          "name": "Tentative de libérer"
+        }
+      }
     },
     "Mantle of Spell Resistance": {
       "name": "Manteau de résistance aux sorts",
@@ -2683,7 +2710,7 @@
     },
     "Potion of Poison": {
       "name": "Potion toxique",
-      "description": "<p>Cette décoction a l'apparence, l'odeur et le goût d'une potion de guérison ou d'une autre potion bénéfique. Il s'agit toutefois d'un poison masqué par quelque illusion magique. Le sort identification révèle sa vraie nature.</p><p>Si vous la buvez, vous subissez 3d6 dégâts de poison et devez réussir un jet de sauvegarde de Constitution DD 13 sous peine d'être empoisonné. Au début de chacun de vos tours tant que vous êtes ainsi empoisonné, vous subissez 3d6 dégâts de poison. À la fin de chacun de vos tours, vous pouvez réitérer ce jet de sauvegarde. En cas de réussite, les dégâts de poison que vous subissez lors de vos tours suivants diminuent de 1d6. Le poison prend fin lorsque les dégâts tombent à 0.</p><section class=\"secret foundry-note\" id=\"secret-lK9L9LydgGgQJzNL\"><p><strong>Note Foundry</strong></p><p>Pour appliquer la réduction des dégâts résultant d'une sauvegarde de Constitution réussie, utilisez la formule Autre (fixée à 1d6).</p></section>"
+      "description": "<p>Cette décoction a l'apparence, l'odeur et le goût d'une potion de guérison ou d'une autre potion bénéfique. Il s'agit toutefois d'un poison masqué par quelque illusion magique. Le sort identification révèle sa vraie nature.</p><p>Si vous la buvez, vous subissez [[/damage]]{3d6 dégâts de poison} et devez réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonné}. Au début de chacun de vos tours tant que vous êtes ainsi empoisonné, vous subissez [[/damage]]{3d6 dégâts de poison}. À la fin de chacun de vos tours, vous pouvez réitérer ce jet de sauvegarde. En cas de réussite, les dégâts de poison que vous subissez lors de vos tours suivants diminuent de 1d6. Le poison prend fin lorsque les dégâts tombent à 0.</p><section class=\"secret\" id=\"secret-zrLCcwvOwukVWTvT\"><p>Pour plus de commodité, vous pouvez utiliser les enrichisseurs ([[/damage 2d6 poison]] ou [[/damage 1d6 poison]]) pour effectuer le jet de dégâts pour la réduction des dégâts.</p></section>"
     },
     "Potion of Poison Resistance": {
       "name": "Potion de résistance au poison",
@@ -3783,7 +3810,12 @@
     },
     "Talisman of the Sphere": {
       "name": "Talisman de la sphère",
-      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Lorsque vous effectuez un test d'Intelligence (Arcanes) pour prendre le contrôle d'une sphère d'annihilation en brandissant ce talisman, votre bonus de maîtrise est doublé pour ce test. En outre, lorsque vous commencez votre tour en contrôlant une sphère d'annihilation, vous pouvez consacrer une action à la faire léviter sur 3 m auxquels s'ajoute, en mètres, le triple de votre modificateur d'Intelligence.</p>"
+      "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>Lorsque vous effectuez un test d'Intelligence (Arcanes) pour prendre le contrôle d'une sphère d'annihilation en brandissant ce talisman, votre bonus de maîtrise est doublé pour ce test. En outre, lorsque vous commencez votre tour en contrôlant une sphère d'annihilation, vous pouvez consacrer une action à la faire léviter sur 3 m auxquels s'ajoute, en mètres, le triple de votre modificateur d'Intelligence.</p><p>[[10 + 10 * @abilities.int.mod]]{Distance totale } mètres</p>",
+      "activities": {
+        "Control Check": {
+          "name": "Test de contrôle"
+        }
+      }
     },
     "Tankard": {
       "name": "Chope",
