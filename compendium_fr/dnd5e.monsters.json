@@ -41,16 +41,16 @@
         },
         "Tail Swipe": {
           "name": "Balayage caudal",
-          "description": "<p>L’[[lookup @name]] effectue une attaque de Queue.</p>",
+          "description": "<p>L'aboleth effectue une attaque de [[/item .FwOZEwx7MPDq8Igu]]{Queue}.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Balayage caudal.</p>"
         },
         "Psychic Drain": {
           "name": "Succion psychique",
-          "description": "<p>Une créature &Reference[charmed] par l’[[lookup @name]] subit <strong><em>[[/damage 3d6 psychic average]]</em></strong>, et l’[[lookup @name]] récupère autant de points de vie que la créature subit de dégâts.</p>"
+          "description": "<p>Une créature &Reference[charmed]{charmée} par l’aboleth subit 10 ([[/damage]]{3d6}) dégâts psychiques, et l'aboleth récupère autant de points de vie que la créature subit de dégâts.</p>"
         },
         "Mucous Cloud": {
           "name": "Nuage muqueux",
-          "description": "<p>Tant qu’il est sous l’eau, l’[[lookup @name]] est entouré d’un mucus réactif. Une créature qui touche physiquement l’[[lookup @name]] ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un [[/save con 14 format=long]] . En cas d’échec, la créature est malade pendant 1d4 heures.</p><p>La créature malade ne peut respirer que sous l’eau.</p>",
+          "description": "<p>Tant qu'il est sous l'eau, l'aboleth est entouré d'un mucus réactif. Une créature qui touche physiquement l'aboleth ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature est malade pendant [[/r 1d4]] heures. La créature malade ne peut respirer que sous l'eau.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Nuage muqueux.</p>"
         },
         "Probing Telepathy": {
@@ -64,7 +64,7 @@
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+9 pour toucher</strong>, allonge <strong>3 m,</strong> une cible. Touché : <strong><em>[[/damage 3d6 + 5 bludgeoning average]]</em></strong>.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{3d6 + 5}) dégâts contondants.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Queue.</p>"
         },
         "Amphibious": {
@@ -73,11 +73,11 @@
         },
         "Multiattack": {
           "name": "Attaques multiples",
-          "description": "<p>L’[[lookup @name]] effectue trois attaques de Tentacule.</p>"
+          "description": "<p>L'aboleth effectue trois attaques de [[/item .sgauK8Lyt8qxsxOH]]{Tentacule}.</p>"
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>L'[[lookup @name]] utilise Actions légendaires.</p>"
         }
       },
@@ -177,7 +177,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Tail Attack": {
@@ -225,7 +225,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Legendary Resistance": {
@@ -286,7 +286,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Legendary Resistance": {
@@ -384,7 +384,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -453,7 +453,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -530,7 +530,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -595,7 +595,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -656,7 +656,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -785,7 +785,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Legendary Resistance": {
@@ -883,7 +883,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -922,7 +922,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -1013,7 +1013,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -1088,7 +1088,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Tail Attack": {
@@ -1114,7 +1114,7 @@
       "items": {
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Legendary Resistance": {
@@ -1230,7 +1230,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -1297,7 +1297,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -1356,7 +1356,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Tail Attack": {
@@ -1483,7 +1483,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Legendary Resistance": {
@@ -5341,12 +5341,12 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+2 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature. Touché : <strong><em>[[/damage 5d6 piercing average]]</em></strong>. Si la cible est de taille M ou inférieure, elle doit réussir un [[/save str 10 format=long]]  sous peine d’être jetée &Reference[prone]. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du [[lookup @name]].</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 17 ([[/damage]]{5d6}) dégâts perforants. Si la cible est de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du babélien.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsures.</p>"
         },
         "Blinding Spittle": {
           "name": "Crachat aveuglant",
-          "description": "<p>Le [[lookup @name]] expectore un amas chimique en un point qu’il voit dans un rayon de 4,50 m. L’amas explose à l’impact dans un éclat de lumière aveuglante. Chaque créature située dans un rayon de 1,50 m de l’éclat doit réussir un [[/save dex 13 format=long]]  sous peine d’être &Reference[blinded] jusqu’à la fin du tour suivant du [[lookup @name]].</p>",
+          "description": "<p>Le babélien expectore un amas chimique en un point qu'il voit dans un rayon de 4,50 m. L'amas explose à l'impact dans un éclat de lumière aveuglante. Chaque créature située dans un rayon de 1,50 m de l'éclat doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} jusqu'à la fin du tour suivant du babélien.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Crachat aveuglant.</p>"
         }
       },
@@ -5500,7 +5500,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si la [[lookup @name]] se déplace d’au moins 6 m en ligne droite vers une cible qu’elle touche ensuite avec une attaque de Coup de bélier au même tour, elle lui inflige <strong><em>[[/damage 1d4 bludgeoning average]]</em></strong> supplémentaires. Si la cible est une créature, elle doit réussir un [[/save str 10 format=long]]  sous peine d’être jetée &Reference[prone].</p>",
+          "description": "<p>Si la chèvre se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de Coup de bélier au même tour, elle lui inflige 2 ([[/damage]]{1d4}) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>La [[lookup @name]] utilise Charge.</p>"
         },
         "Sure-Footed": {
@@ -5637,7 +5637,7 @@
       "items": {
         "Poison Breath": {
           "name": "Souffle empoisonné",
-          "description": "<p>Le [[lookup @name]] crache des vapeurs toxiques sous forme d’un cône de 4,50 m. Chaque créature prise dans la zone effectue un [[/save con 11 format=long]]  et subit <strong><em>[[/damage 6d6 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache des vapeurs toxiques sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 21 ([[/damage]]{6d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
         },
         "Bite": {
@@ -5816,12 +5816,12 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+8 pour toucher</strong>, allonge <strong>3 m,</strong> une créature. Touché : <strong><em>[[/damage 1d8 + 4 piercing average]]</em></strong>, et la cible effectue un [[/save con 15 format=long]]  et subit <strong><em>[[/damage 10d8 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 8 ([[/damage]]{1d8 + 4}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 45 ([[/damage activity=dnd5eactivity100]]{10d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Spit Poison": {
           "name": "Crachat empoisonné",
-          "description": "<p><em>Attaque d’arme à distance :</em> <strong>+8 pour toucher</strong>, portée <strong>4,50/9 m,</strong> une créature. Touché : La cible effectue un [[/save con 15 format=long]]  et subit <strong><em>[[/damage 10d8 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 4,50/9 m, une créature. <em>Touché :</em> La cible effectue un jet de sauvegarde de [[/save]] et subit 45 ([[/damage]]{10d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Crachat empoisonné.</p>"
         },
         "Mending": {
@@ -6250,7 +6250,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature. Touché : 1 dégât perforant, et la cible doit réussir un [[/save con 10 format=long]]  sous peine d’être &Reference[poisoned] pendant 1 minute. Si le jet de sauvegarde échoue d’au moins 5, l’empoisonnement dure en fait 5 (1d10) minutes et la cible est &Reference[unconscious] tant qu’elle est empoisonnée de cette manière.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Si le jet de sauvegarde échoue d'au moins 5, l'empoisonnement dure en fait 5 ([[/r 1d10]]) minutes et la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
         },
         "Telepathic Bond": {
@@ -6478,7 +6478,7 @@
         },
         "Sting": {
           "name": "Dard (Morsure sous forme de bête)",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 + 3 piercing average]]</em></strong> et la cible effectue un [[/save con 11 format=long]]  sous peine de subir <strong><em>[[/damage 3d6 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d4 + 3}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Dard (Morsure sous forme de bête).</p>"
         },
         "Invisibility": {
@@ -6488,7 +6488,7 @@
         },
         "Bite (beast form only)": {
           "name": "Morsure (forme de bête uniquement)",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 + 3 piercing average]]</em></strong> et la cible effectue un [[/save con 11 format=long]]  sous peine de subir <strong><em>[[/damage 3d6 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d4 + 3}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de bête uniquement).</p>"
         }
       },
@@ -6558,7 +6558,7 @@
         },
         "Poison Breath": {
           "name": "Souffle empoisonné",
-          "description": "<p>Le golem crache des vapeurs toxiques sous forme d’un cône de 4,50 m. Chaque créature prise dans la zone effectue un [[/save con 19 format=long]]  et subit <strong><em>[[/damage 10d8 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le golem crache des vapeurs toxiques sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 45 ([[/damage]]{10d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
         }
       },
@@ -7388,7 +7388,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+3 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d6 + 1 piercing average]]</em></strong>. Si la cible est une créature, elle doit réussir un [[/save str 11 format=long]]  sous peine d’être jetée &Reference[prone].</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         }
       },
@@ -7649,7 +7649,7 @@
         },
         "Rotting Fist": {
           "name": "Poing putréfié",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+9 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 3d6 + 4 bludgeoning average]]</em></strong> plus <strong><em>[[/damage 6d6 necrotic average]]</em></strong>. Si la cible est une créature, elle doit réussir un [[/save con 16 format=long]]  sous peine d’être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu’à ce qu’on l’élimine par le sort délivrance des malédictions ou une magie équivalente.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 14 ([[/damage]]{3d6 + 4}) dégâts contondants plus 21 ([[/damage]]{6d6}) dégâts nécrotiques. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 ([[/r 3d6]]) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort délivrance des malédictions ou une magie équivalente.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Poing putréfié.</p>"
         },
         "Dreadful Glare": {
@@ -8091,7 +8091,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+6 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 2d8 + 3 piercing average]]</em></strong>. Si la cible est une créature, elle doit réussir un [[/save con 15 format=long]]  contre la maladie, sous peine d’être &Reference[poisoned] jusqu’à ce qu’elle en guérisse. Toutes les 24 heures après cela, la cible doit réitérer le jet de sauvegarde, son maximum de points de vie se réduisant de 5 (1d10) en cas d’échec. La cible guérit de la maladie en cas de sauvegarde réussie. La cible meurt si la maladie réduit son maximum de points de vie à 0. Cette réduction du maximum de points de vie persiste jusqu’à ce que la cible guérisse de la maladie.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d8 + 3}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] contre la maladie, sous peine d'être &Reference[poisoned apply=false]{empoisonnée} jusqu'à ce qu'elle en guérisse. Toutes les 24 heures après cela, la cible doit réitérer le jet de sauvegarde, son maximum de points de vie se réduisant de 5 ([[/r 1d10]]) en cas d'échec. La cible guérit de la maladie en cas de sauvegarde réussie. La cible meurt si la maladie réduit son maximum de points de vie à 0. Cette réduction du maximum de points de vie persiste jusqu'à ce que la cible guérisse de la maladie.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
         },
         "Tentacle": {
@@ -8101,7 +8101,7 @@
         },
         "Tentacle Slam": {
           "name": "Coup de tentacule",
-          "description": "<p>L’[[lookup @name]] frappe la ou les créatures qu’il agrippe, l’une contre l’autre ou contre une surface solide. Chaque créature doit réussir un [[/save con 14 format=long]]  sous peine de subir <strong><em>[[/damage 2d6 + 3 bludgeoning average]]</em></strong> et d’être &Reference[stunned] jusqu’à la fin du tour suivant de l’[[lookup @name]]. En cas de sauvegarde réussie, la cible subit la moitié des dégâts contondants et n’est pas étourdie.</p>",
+          "description": "<p>L'otyugh frappe la ou les créatures qu'il agrippe, l'une contre l'autre ou contre une surface solide. Chaque créature doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage]]{2d6 + 3}) dégâts contondants et d'être &Reference[stunned apply=false]{étourdie} jusqu'à la fin du tour suivant de l'otyugh. En cas de sauvegarde réussie, la cible subit la moitié des dégâts contondants et n'est pas étourdie.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Coup de tentacule.</p>"
         },
         "Multiattack": {
@@ -8219,7 +8219,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature. Touché : <strong><em>[[/damage 1d10 + 2 piercing average]]</em></strong> et la cible effectue un [[/save con 11 format=long]]  sous peine de subir <strong><em>[[/damage 4d8 poison average]]</em></strong> supplémentaires en cas d’échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l’état &Reference[poisoned] pendant 1 heure, même après avoir récupéré des points de vie, et l’état &Reference[paralyzed] tant qu’elle est empoisonnée de cette manière.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d10 +2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 18 ([[/damage activity=dnd5eactivity100]]{4d8}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
         }
       },
@@ -8253,7 +8253,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+14 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 4d6 + 8 piercing average]]</em></strong>. La cible doit réussir un [[/save con 21 format=long]]  sous peine d’être &Reference[poisoned]. Ainsi empoisonnée, elle ne peut pas récupérer de points de vie et subit <strong><em>[[/damage 6d6 poison average]]</em></strong> au début de chacun de ses tours. La cible empoisonnée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l’effet sur elle- même en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 22 ([[/damage]]{4d6 + 8}) dégâts perforants. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. Ainsi empoisonnée, elle ne peut pas récupérer de points de vie et subit 21 ([[/damage activity=dnd5eactivity100]]{6d6}) dégâts de poison au début de chacun de ses tours. La cible empoisonnée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Claw": {
@@ -8535,7 +8535,7 @@
         },
         "Sting": {
           "name": "Dard",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature. Touché : <strong><em>[[/damage 1d4 + 2 piercing average]]</em></strong>, et la cible doit réussir un [[/save con 11 format=long]]  sous peine d’être &Reference[poisoned] pendant 1 heure. Si le jet de sauvegarde est raté d’au moins 5, la cible tombe &Reference[unconscious] pendant la même durée, mais se réveille si elle subit des dégâts dans l’intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde est raté d'au moins 5, la cible tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>"
         }
       },
@@ -8579,7 +8579,7 @@
         },
         "Claw (Bite in Beast Form)": {
           "name": "Griffes (Morsure sous forme de bête)",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d4 + 3 piercing average]]</em></strong>, et la cible doit réussir un [[/save con 10 format=long]]  sous peine de subir <strong><em>[[/damage 2d4 poison average]]</em></strong> et d’être &Reference[poisoned] pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l’effet sur elle-même en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d4 + 3}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 5 ([[/damage activity=dnd5eactivity100]]{2d4}) dégâts de poison et d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Griffes (Morsure sous forme de bête).</p>"
         },
         "Shapechanger": {
@@ -8753,7 +8753,7 @@
         },
         "Fire Breath": {
           "name": "Souffle de feu",
-          "description": "<p>Le [[lookup @name]] crache des flammes sous forme d’un cône de 4,50 m. Chaque créature prise dans la zone effectue un [[/save dex 13 format=long]]  et subit <strong><em>[[/damage 7d6 fire average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage]]{7d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
         }
       },
@@ -8809,7 +8809,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si le [[lookup @name]] se déplace d’au moins 6 m en ligne droite vers une cible qu’il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige <strong><em>[[/damage 2d8 bludgeoning average]]</em></strong> supplémentaires. Si la cible est une créature, elle doit réussir un [[/save str 15 format=long]]  sous peine d’être jetée &Reference[prone].</p>",
+          "description": "<p>Si le rhinocéros se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige 9 ([[/damage]]{2d8}) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
         },
         "Gore": {
@@ -9355,12 +9355,12 @@
         },
         "Slaying Longbow": {
           "name": "Arc long tueur",
-          "description": "<p><em>Attaque d’arme à distance :</em> <strong>+13 pour toucher</strong>, portée <strong>45/180 m,</strong> une cible. Touché :</p><p><strong><em>[[/damage 2d8 + 6 piercing average]]</em></strong> plus <strong><em>[[/damage 6d8 radiant average]]</em></strong>. Si la cible est une créature dotée de 100 points de vie ou moins, elle doit réussir un [[/save con 15 format=long]]  sous peine de mourir.</p>",
+          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 45/180 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts perforants plus 27 ([[/damage]]{6d8}) dégâts radiants. Si la cible est une créature dotée de 100 points de vie ou moins, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de mourir.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Arc long tueur.</p>"
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Teleport": {
@@ -9451,7 +9451,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature. Touché : 1 dégât perforant et la cible doit réussir un [[/save con 9 format=long]]  sous peine de subir <strong><em>[[/damage 1d4 poison average]]</em></strong>.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 2 ([[/damage activity=dnd5eactivity100]]{1d4}) dégâts de poison.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
         },
         "Web Sense": {
@@ -9824,7 +9824,7 @@
         },
         "Draining Kiss": {
           "name": "Baiser dévitalisant",
-          "description": "<p>Le fiélon échange un baiser avec une créature &Reference[charmed] par lui ou consentante. La cible effectue un [[/save con 15 format=long]]  contre cette magie et subit <strong><em>[[/damage 5d10 + 5 psychic average]]</em></strong> en cas d’échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d’un montant égal aux dégâts subis. Cette réduction persiste jusqu’à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
+          "description": "<p>Le fiélon échange un baiser avec une créature charmée par lui ou consentante. La cible effectue un jet de sauvegarde de [[/save]] contre cette magie et subit 32 ([[/damage]]{5d10 + 5}) dégâts psychiques en cas d'échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
           "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>"
         },
         "Etherealness": {
@@ -9931,7 +9931,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+6 pour toucher</strong>, allonge <strong>0 m,</strong> une créature dans l’espace de la nuée. Touché : <strong><em>[[/damage 2d6 piercing average]]</em></strong>, ou <strong><em>[[/damage 1d6 piercing average]]</em></strong> si la nuée est à la moitié de son maximum de points de vie ou moins. La cible effectue un [[/save con 10 format=long]]  et subit <strong><em>[[/damage 4d6 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la nuée. <em>Touché :</em> 7 ([[/damage]]{2d6}) dégâts perforants, ou 3 ([[/damage 1d6 piercing]]{1d6}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins. La cible effectue un jet de sauvegarde de [[/save]] et subit 14 ([[/damage activity=dnd5eactivity100]]{4d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10339,7 +10339,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si la [[lookup @name]] se déplace d’au moins 6 m en ligne droite vers une cible qu’elle touche ensuite avec une attaque de Corne au même tour, elle lui inflige <strong><em>[[/damage 2d8 piercing average]]</em></strong> supplémentaires. Si la cible est une créature, elle doit réussir un [[/save str 15 format=long]]  sous peine d’être jetée &Reference[prone].</p>",
+          "description": "<p>Si la licorne se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de Corne au même tour, elle lui inflige 9 ([[/damage]]{2d8}) dégâts perforants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>La [[lookup @name]] utilise Charge.</p>"
         },
         "Innate Spellcasting": {
@@ -10378,7 +10378,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Shimmering Shield": {
@@ -10890,7 +10890,7 @@
         },
         "Bite (Tiger or Hybrid Form Only)": {
           "name": "Morsure (forme de tigre ou hybride uniquement)",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 1d10 + 3 piercing average]]</em></strong>. Si la cible est humanoïde, elle doit réussir un [[/save con 13 format=long]]  sous peine de subir la malédiction de la lycanthropie ([[lookup @name]]).</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 8 ([[/damage]]{1d10 + 3}) dégâts perforants. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (tigre-garou).</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de tigre ou hybride uniquement).</p>"
         },
         "Claw (Tiger or Hybrid Form Only)": {
@@ -10963,7 +10963,7 @@
         },
         "Cold Breath": {
           "name": "Souffle glacial",
-          "description": "<p>Le [[lookup @name]] exhale un cône de 4,50 m de brume glaciale. Chaque créature prise dans la zone effectue un [[/save con 12 format=long]]  et subit <strong><em>[[/damage 5d8 cold average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon exhale un cône de 4,50 m de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 22 ([[/damage]]{5d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
         }
       },
@@ -11065,7 +11065,7 @@
         },
         "Cold Breath": {
           "name": "Souffle glacial",
-          "description": "<p>Le loup exhale une bouffée d’air glacial, sous forme d’un cône de 4,50 m. Chaque créature prise dans la zone effectue un [[/save dex 12 format=long]]  et subit <strong><em>[[/damage 4d8 cold average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le loup exhale une bouffée d'air glacial, sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 18 ([[/damage]]{4d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
         }
       },
@@ -11087,7 +11087,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+4 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 2d4 + 2 piercing average]]</em></strong>. Si la cible est une créature, elle doit réussir un [[/save str 11 format=long]]  sous peine d’être jetée &Reference[prone].</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{2d4 + 2}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         }
       },
@@ -11104,7 +11104,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+5 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 2d6 + 3 piercing average]]</em></strong>. Si la cible est une créature, elle doit réussir un [[/save str 13 format=long]]  sous peine d’être jetée &Reference[prone].</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         }
       },
@@ -11207,7 +11207,7 @@
       "items": {
         "Acid Breath": {
           "name": "Souffle d’acide",
-          "description": "<p>Le [[lookup @name]] crache de l’acide sous forme d’une ligne de 9 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un [[/save dex 14 format=long]]  et subit <strong><em>[[/damage 11d8 acid average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache de l'acide sous forme d'une ligne de 9 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 49 ([[/damage]]{11d8}) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>"
         },
         "Amphibious": {
@@ -11248,7 +11248,7 @@
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
-          "description": "<p>Le [[lookup @name]] crache de la foudre sous forme d’une ligne de 18 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un [[/save dex 16 format=long]]  et subit <strong><em>[[/damage 10d10 lightning average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 18 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 55 ([[/damage]]{10d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
         },
         "Multiattack": {
@@ -11431,7 +11431,7 @@
         },
         "Poison Breath": {
           "name": "Souffle empoisonné",
-          "description": "<p>Le [[lookup @name]] crache des vapeurs toxiques sous forme d’un cône de 9 m. Chaque créature prise dans la zone effectue un [[/save con 14 format=long]]  et subit <strong><em>[[/damage 12d6 poison average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache des vapeurs toxiques sous forme d'un cône de 9 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 42 ([[/damage]]{12d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
         }
       },
@@ -11459,7 +11459,7 @@
         },
         "Fire Breath": {
           "name": "Souffle de feu",
-          "description": "<p>Le [[lookup @name]] crache des flammes sous forme d’un cône de 9 m. Chaque créature prise dans la zone effectue un [[/save dex 17 format=long]]  et subit <strong><em>[[/damage 16d6 fire average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache des flammes sous forme d'un cône de 9 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 56 ([[/damage]]{16d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
         },
         "Multiattack": {
