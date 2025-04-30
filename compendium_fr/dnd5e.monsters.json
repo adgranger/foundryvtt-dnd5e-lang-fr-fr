@@ -24,7 +24,7 @@
       "items": {
         "Enslave": {
           "name": "Asservissement",
-          "description": "<p>L’[[lookup @name]] cible une créature qu’il voit dans un rayon de 9 m. La cible doit réussir un [[/save wis 14 format=long]]  sous peine d’être &Reference[charmed] magiquement par l’[[lookup @name]] jusqu’à ce que ce dernier meure ou qu’il se trouve sur un plan d’existence différent de celui de la cible. La créature charmée est sous le contrôle de l’[[lookup @name]] et ne peut jouer de réaction. L’[[lookup @name]] et sa cible peuvent communiquer par télépathie quelle que soit la distance qui les sépare.</p><p>Chaque fois que la cible charmée subit des dégâts, elle peut réitérer le jet de sauvegarde. En cas de réussite, l’effet prend fin. Une fois par tranche de 24 heures, la cible peut aussi réitérer le JS quand elle est éloignée de plus de 1,5 km de l’[[lookup @name]].</p>",
+          "description": "<p>L'aboleth cible une créature qu'il voit dans un rayon de 9 m. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[charmed]{charmée} magiquement par l'aboleth jusqu'à ce que ce dernier meure ou qu'il se trouve sur un plan d'existence différent de celui de la cible. La créature charmée est sous le contrôle de l'aboleth et ne peut jouer de réaction. L'aboleth et sa cible peuvent communiquer par télépathie quelle que soit la distance qui les sépare.</p><p>Chaque fois que la cible charmée subit des dégâts, elle peut réitérer le jet de sauvegarde. En cas de réussite, l'effet prend fin. Une fois par tranche de 24 heures, la cible peut aussi réitérer le JS quand elle est éloignée de plus de 1,5 km de l'aboleth.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Asservissement.</p>"
         },
         "Detect": {
@@ -59,7 +59,7 @@
         },
         "Tentacle": {
           "name": "Tentacule",
-          "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+9 pour toucher</strong>, allonge <strong>3 m,</strong> une cible. Touché : <strong><em>[[/damage 2d6 + 5 bludgeoning average]]</em></strong>. Si la cible est une créature, elle doit réussir un [[/save con 14 format=long]]  sous peine d’être malade. Cette maladie est sans effet pendant 1 minute et toute magie capable de soigner les maladies l’élimine. Au bout de 1 minute, la peau de la créature malade devient translucide et visqueuse, la créature ne peut pas regagner de points de vie quand elle n’est pas sous l’eau et seuls le sort guérison ou les sorts du 6e niveau ou plus qui soignent les maladies peuvent éliminer cette affection. Lorsque la créature n’est pas immergée dans l’eau, elle subit <strong><em>[[/damage 1d12 acid average]]</em></strong> toutes les 10 minutes, à moins d’hydrater abondamment sa peau dans l’intervalle.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d6 + 5}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être malade. Cette maladie est sans effet pendant 1 minute et toute magie capable de soigner les maladies l'élimine. Au bout de 1 minute, la peau de la créature malade devient translucide et visqueuse, la créature ne peut pas regagner de points de vie quand elle n'est pas sous l'eau et seuls le sort guérison ou les sorts du 6<sup>e</sup> niveau ou plus qui soignent les maladies peuvent éliminer cette affection. Lorsque la créature n'est pas immergée dans l'eau, elle subit 6 ([[/damage activity=dnd5eactivity100]]{1d12}) dégâts d'acide toutes les 10 minutes, à moins d'hydrater abondamment sa peau dans l'intervalle.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Tentacule.</p>"
         },
         "Tail": {
@@ -315,7 +315,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle soporifique]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
+          }
         }
       },
       "alignment": "Chaotique Bon",
@@ -364,7 +372,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de foudre]]</p><p>[[/item Souffle répulsif]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Lightning Breath": {
+              "name": "Souffle de foudre"
+            },
+            "Repulsion Breath": {
+              "name": "Souffle répulsif"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -425,7 +441,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle d’acide]]</p><p>[[/item Souffle engourdissant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Acid Breath": {
+              "name": "Souffle d'acide"
+            },
+            "Slowing Breath": {
+              "name": "Souffle engourdissant"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -490,7 +514,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle affaiblissant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Weakening Breath": {
+              "name": "Souffle affaiblissant"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -681,7 +713,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle glacial]]</p><p>[[/item Souffle paralysant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Cold Breath": {
+              "name": "Souffle glacial"
+            },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -957,7 +997,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle soporifique]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -1024,7 +1072,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de foudre]]</p><p>[[/item Souffle répulsif]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Lightning Breath": {
+              "name": "Souffle de foudre"
+            },
+            "Repulsion Breath": {
+              "name": "Souffle répulsif"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -1109,7 +1165,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle d’acide]]</p><p>[[/item Souffle engourdissant]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Acid Breath": {
+              "name": "Souffle d'acide"
+            },
+            "Slowing Breath": {
+              "name": "Souffle engourdissant"
+            }
+          }
         }
       },
       "alignment": "Chaotique Bon",
@@ -1154,7 +1218,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle affaiblissant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Weakening Breath": {
+              "name": "Souffle affaiblissant"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1339,7 +1411,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle glacial]]</p><p>[[/item Souffle paralysant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Cold Breath": {
+              "name": "Souffle glacial"
+            },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -2280,7 +2360,12 @@
         },
         "Reckless": {
           "name": "Téméraire",
-          "description": "<p>Au début de son tour, le [[lookup @name]] peut s’octroyer l<strong>’avantage</strong> à tous ses jets d’attaque d’arme de corps à corps du tour, auquel cas tous les jets d’attaque contre lui sont<strong> avantagé</strong>s jusqu’au début de son tour suivant.</p><p></p>"
+          "description": "<p>Au début de son tour, le [[lookup @name]] peut s’octroyer l<strong>’avantage</strong> à tous ses jets d’attaque d’arme de corps à corps du tour, auquel cas tous les jets d’attaque contre lui sont<strong> avantagé</strong>s jusqu’au début de son tour suivant.</p><p></p>",
+          "effects": {
+            "Reckless": {
+              "name": "Téméraire"
+            }
+          }
         },
         "Greataxe": {
           "name": "Hache à deux mains",
@@ -2503,7 +2588,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle soporifique]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
+          }
         }
       },
       "alignment": "Chaotique Bon"
@@ -2524,7 +2617,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de foudre]]</p><p>[[/item Souffle répulsif]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Lightning Breath": {
+              "name": "Souffle de foudre"
+            },
+            "Repulsion Breath": {
+              "name": "Souffle répulsif"
+            }
+          }
         }
       },
       "alignment": "Loyal Bon"
@@ -2994,7 +3095,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle d’acide]]</p><p>[[/item Souffle engourdissant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Acid Breath": {
+              "name": "Souffle d'acide"
+            },
+            "Slowing Breath": {
+              "name": "Souffle engourdissant"
+            }
+          }
         }
       },
       "alignment": "Chaotique Bon"
@@ -3006,12 +3115,22 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+8 pour toucher</strong>, allonge <strong>1,50 m,</strong> une créature. Touché : <strong><em>[[/damage 1d6 + 5 piercing average]]</em></strong>, et la cible doit réussir un [[/save con 13 format=long]]  sous peine d’être &Reference[poisoned] pendant 24 heures. Jusqu’à la fin de l’empoisonnement, la cible est &Reference[unconscious].</p><p>Une autre créature peut consacrer une action à réveiller la cible énergiquement.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>",
+          "effects": {
+            "Poisoned": {
+              "name": "Empoisonné"
+            }
+          }
         },
         "Constrict": {
           "name": "Constriction",
           "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+6 pour toucher</strong>, allonge <strong>3 m,</strong> une créature de taille M ou inférieure. Touché : <strong><em>[[/damage 2d6 + 3 bludgeoning average]]</em></strong> et la cible est agrippée (évasion DD 15). Tant que la cible est agrippée, elle est &Reference[restrained] et la constriction ne peut pas s’appliquer à une autre cible.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Constriction.</p>"
+          "chat": "<p>[[lookup @name]] attaque avec Constriction.</p>",
+          "effects": {
+            "Restrained": {
+              "name": "Entravé"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -3735,7 +3854,20 @@
         "Quarterstaff": {
           "name": "Bâton de combat",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> +2 pour toucher (+4 avec crosse des druides), allonge 1,50 m, une cible. <em>Touché :</em> 3 (1d6) dégâts contondants, ou 4 (1d8) dégâts contondants si utilisé à deux mains, ou 6 (1d8 + 2) dégâts contondants avec crosse des druides.</p>",
-          "chat": "<p>Le druide attaque avec son Bâton de combat.</p>"
+          "chat": "<p>Le druide attaque avec son Bâton de combat.</p>",
+          "activities": {
+            "Spellcasting Attack": {
+              "name": "Attaque de sort"
+            }
+          },
+          "effects": {
+            "Shillelagh": {
+              "name": "Crosse des druides",
+              "changes": {
+                "name": ", Crosse des druides"
+              }
+            }
+          }
         },
         "Druidcraft": {
           "name": "Druidisme",
@@ -3770,7 +3902,23 @@
         "Shillelagh": {
           "name": "Crosse des druides",
           "description": "<p>Le bois d’un gourdin ou d’un bâton de combat que vous tenez s’imprègne du pouvoir de la nature. Pour toute la durée, vous pouvez recourir à votre caractéristique d’incantation plutôt qu’à la Force pour les jets d’attaque et de dégâts de vos attaques de corps à corps effectuées avec cette arme, dont le dé de dégâts passe à d8. Si elle ne l’était pas déjà, l’arme est désormais magique. Le sort prend fin si vous le relancez ou si vous lâchez l’arme.</p>",
-          "materials": "du gui, une feuille de trèfle et un gourdin ou un bâton de combat"
+          "materials": "du gui, une feuille de trèfle et un gourdin ou un bâton de combat",
+          "activities": {
+            "Imbue Weapon": {
+              "name": "Imprégner l'arme"
+            },
+            "Spellcasting Attack": {
+              "name": "Attaque de sort"
+            }
+          },
+          "effects": {
+            "Shillelagh": {
+              "name": "Crosse des druides",
+              "changes": {
+                "name": ", Crosse des druides"
+              }
+            }
+          }
         },
         "Barkskin": {
           "name": "Peau d’écorce",
@@ -5294,7 +5442,12 @@
         "Shield Bash": {
           "name": "Coup de bouclier",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> +7 pour toucher, allonge 1,50 m, une créature. <em>Touché :</em> 9 (2d4 + 4) dégâts contondants. Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de Force DD 15 sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Coup de bouclier.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Coup de bouclier.</p>",
+          "effects": {
+            "Prone": {
+              "name": "À terre"
+            }
+          }
         },
         "Parry": {
           "name": "Parade",
@@ -5411,7 +5564,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle affaiblissant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Weakening Breath": {
+              "name": "Souffle affaiblissant"
+            }
+          }
         }
       },
       "alignment": "Loyal Bon"
@@ -9121,7 +9282,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle glacial]]</p><p>[[/item Souffle paralysant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Cold Breath": {
+              "name": "Souffle glacial"
+            },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          }
         }
       },
       "alignment": "Loyal Bon"
@@ -9206,7 +9375,12 @@
         "Blinding Gaze": {
           "name": "Regard aveuglant",
           "description": "<p>Le solar cible une créature qu'il voit dans un rayon de 9 m. Si la cible le voit, elle doit réussir un jet de sauvegarde de Constitution DD 15 sous peine d'être &Reference[blinded]{aveuglée} jusqu'à ce qu'une magie telle que le sort restauration partielle dissipe la cécité.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Regard aveuglant.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Regard aveuglant.</p>",
+          "effects": {
+            "Blinded": {
+              "name": "Aveuglé"
+            }
+          }
         },
         "Detect Evil and Good": {
           "name": "Détection du mal et du bien",
@@ -9542,6 +9716,11 @@
           "name": "Coup",
           "description": "<p><em>Attaque d’arme au corps à corps :</em> <strong>+10 pour toucher</strong>, allonge <strong>1,50 m,</strong> une cible. Touché : <strong><em>[[/damage 3d8 + 6 bludgeoning average]]</em></strong>.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Coup.</p>"
+        },
+        "Slow": {
+          "name": "Lenteur",
+          "description": "<p>Le golem cible une ou plusieurs créatures qu'il voit dans un rayon de 3 m. Chaque cible effectue un jet de sauvegarde de [[/save]] contre sa magie. En cas d'échec, la cible ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, elle n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant 1 minute. Une cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "chat": "<p>Le golem cible une ou plusieurs créatures qu'il voit dans un rayon de 3 m. Chaque cible effectue un jet de sauvegarde de <strong>Sagesse</strong> contre sa magie. Une cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
         }
       },
       "languages": "comprend les langues de son créateur, mais ne parle pas",
@@ -9636,7 +9815,12 @@
         "Charm": {
           "name": "Charme",
           "description": "<p>Un humanoïde que le fiélon voit dans un rayon de 9 m doit réussir un jet de sauvegarde de Sagesse DD 15 sous peine d'être &Reference[charmed]{charmé} magiquement pendant 1 jour. La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon. Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l’effet en cas de réussite. Si la cible réussit son JS contre l’effet ou si celui-ci prend fin, elle devient immunisée contre le Charme de ce fiélon pendant 24 heures.</p><p>Le fiélon ne peut pas avoir plus d'une cible ainsi charmée à la fois. S'il en charme une autre, l'effet prend fin sur la précédente cible.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Charme.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Charme.</p>",
+          "effects": {
+            "Charmed": {
+              "name": "Charmé"
+            }
+          }
         },
         "Draining Kiss": {
           "name": "Baiser dévitalisant",
@@ -9644,7 +9828,12 @@
           "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>"
         },
         "Etherealness": {
-          "name": "Forme éthérée"
+          "name": "Forme éthérée",
+          "effects": {
+            "Etherealness": {
+              "name": "Forme éthérée"
+            }
+          }
         }
       },
       "subtype": "Métamorphe",
@@ -10688,7 +10877,12 @@
         "Pounce (Tiger or Hybrid Form Only)": {
           "name": "Bond agressif (forme de tigre ou hybride uniquement)",
           "description": "<p>Si le tigre-garou se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Griffe au même tour, la cible doit réussir un jet de sauvegarde de Force DD 14 sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le tigre-garou peut effectuer contre elle une attaque de Morsure par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Bond agressif (forme de tigre ou hybride uniquement).</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Bond agressif (forme de tigre ou hybride uniquement).</p>",
+          "effects": {
+            "Prone": {
+              "name": "À terre"
+            }
+          }
         },
         "Multiattack (Humanoid or Hybrid Form Only)": {
           "name": "Attaques multiples (forme humanoïde ou hybride uniquement)",
@@ -11077,7 +11271,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle soporifique]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
+          }
         },
         "Claw": {
           "name": "Griffe",
@@ -11108,7 +11310,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de foudre]]</p><p>[[/item Souffle répulsif]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Lightning Breath": {
+              "name": "Souffle de foudre"
+            },
+            "Repulsion Breath": {
+              "name": "Souffle répulsif"
+            }
+          }
         },
         "Claw": {
           "name": "Griffe",
@@ -11140,7 +11350,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle d’acide]]</p><p>[[/item Souffle engourdissant]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Acid Breath": {
+              "name": "Souffle d'acide"
+            },
+            "Slowing Breath": {
+              "name": "Souffle engourdissant"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11166,7 +11384,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle de feu]]</p><p>[[/item Souffle affaiblissant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Fire Breath": {
+              "name": "Souffle de feu"
+            },
+            "Weakening Breath": {
+              "name": "Souffle affaiblissant"
+            }
+          }
         },
         "Claw": {
           "name": "Griffe",
@@ -11256,7 +11482,15 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name]] recourt à l’un des souffles suivants :</p><p>[[/item Souffle glacial]]</p><p>[[/item Souffle paralysant]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>"
+          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "activities": {
+            "Cold Breath": {
+              "name": "Souffle glacial"
+            },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          }
         },
         "Claw": {
           "name": "Griffe",
