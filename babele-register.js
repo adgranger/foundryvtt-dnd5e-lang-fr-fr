@@ -31,6 +31,7 @@ Hooks.once('init', () => {
 			"senses": Converters.imperialToMetric("senses"),
 			"movement": Converters.imperialToMetric("movement"),
 			"sightRange": Converters.imperialToMetric("sightRange"),
+			"communication": Converters.imperialToMetric("communication"),
 			"rangeActivities": Converters.imperialToMetric("rangeActivities"),
 			"distanceAdvancement": Converters.imperialToMetric("distanceAdvancement"),
 			"pages": Converters.pages(),
@@ -97,6 +98,7 @@ export class Converters {
 				case "senses": return Converters.senses(value);
 				case "movement": return Converters.movement(value);
 				case "sightRange": return Converters.footsToMeters(value);
+				case "communication": return Converters.communication(value);
 				case "rangeActivities": return Converters.rangeActivities(value);
 				case "distanceAdvancement": return Converters.distanceAdvancement(value);
 				default:
@@ -211,6 +213,18 @@ export class Converters {
 						});
 					});
 				}
+			}
+		});
+	}
+
+	static communication(communication) {
+		Object.keys(communication).forEach(key => {
+			const conversion = Converters.conversionInfo[communication[key].units];
+			if (conversion) {
+				foundry.utils.mergeObject(communication[key], {
+					"value": conversion.converter(communication[key].value),
+					"units": conversion.units
+				});
 			}
 		});
 	}
@@ -436,5 +450,6 @@ export class Converters {
 }
 
 export var sources = {
-	"SRD 5.1": "DRS 5.1"
+	"SRD 5.1": "DRS 5.1",
+	"SRD 5.2": "DRS 5.2"
 };
