@@ -1655,7 +1655,7 @@
       "items": {
         "Antimagic Susceptibility": {
           "name": "Vulnérabilité à l’antimagie",
-          "description": "<p>L’armure est &Reference[incapacitated] tant qu’elle se trouve dans un champ antimagie. Si elle est ciblée par dissipation de la magie, l’armure doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l’incantateur sous peine de tomber &Reference[unconscious] pendant 1 minute.</p>",
+          "description": "<p>L'armure est &Reference[incapacitated]{neutralisée} tant qu'elle se trouve dans un <em>champ antimagie</em>. Si elle est ciblée par <em>dissipation de la magie</em>, l'armure doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &Reference[unconscious]{inconsciente} pendant 1 minute.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Vulnérabilité à l’antimagie.</p>"
         },
         "False Appearance": {
@@ -1938,7 +1938,8 @@
             "damage": {
               "condition": "une fois par tour"
             }
-          }
+          },
+          "description": "<p>Une fois par tour, l'assassin inflige 14 (4d6) dégâts supplémentaires lorsqu'il touche une cible avec une attaque d'arme alors qu'il avait l'avantage au jet d'attaque, ou lorsque sa cible se trouve dans un rayon de 1,50 m d'un allié non neutralisé de l'assassin et qu'il n'était lui-même pas désavantagé au jet d'attaque.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -2360,10 +2361,11 @@
         },
         "Reckless": {
           "name": "Téméraire",
-          "description": "<p>Au début de son tour, le [[lookup @name]] peut s’octroyer l<strong>’avantage</strong> à tous ses jets d’attaque d’arme de corps à corps du tour, auquel cas tous les jets d’attaque contre lui sont<strong> avantagé</strong>s jusqu’au début de son tour suivant.</p><p></p>",
+          "description": "<p>Au début de son tour, le berserker peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>",
           "effects": {
             "Reckless": {
-              "name": "Téméraire"
+              "name": "Téméraire",
+              "description": "<p>Les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>"
             }
           }
         },
@@ -2875,7 +2877,7 @@
         },
         "Sense Magic": {
           "name": "Perception de la magie",
-          "description": "<p>Le [[lookup @name]] perçoit la magie dans un rayon de 36 m, à volonté. Ce trait fonctionne pour le reste comme le sort détection de la magie, même s’il n’est pas lui-même magique.</p>"
+          "description": "<p>Le cthuul perçoit la magie dans un rayon de 36 m, à volonté. Ce trait fonctionne pour le reste comme le sort détection de la magie, même s'il n'est pas lui-même magique.</p>"
         }
       },
       "languages": "comprend le profond, mais ne parle pas",
@@ -2893,16 +2895,16 @@
         },
         "Haste": {
           "name": "Hâte",
-          "description": "<p>Jusqu’à la fin de son tour suivant, le golem reçoit magiquement un bonus de +2 en CA, est<strong> avantagé</strong> aux jets de sauvegarde de Dextérité et peut effectuer son attaque de Coup par une action bonus.</p>",
+          "description": "<p>Jusqu'à la fin de son tour suivant, le golem reçoit magiquement un bonus de +2 en CA, est avantagé aux jets de sauvegarde de Dextérité et peut effectuer son attaque de Coup par une action bonus.</p>",
           "chat": "<p>[[lookup @name]] utilise Hâte.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le golem est<strong> avantagé</strong> aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le golem est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Berserk": {
           "name": "Folie furieuse",
-          "description": "<p>Chaque fois que le golem commence son tour avec 60 points de vie ou moins, lancez un d6. Sur un résultat de 6, il devient fou. À chacun de ses tours tant qu’il est dans cet état, le golem attaque la créature la plus proche qu’il voit. Si aucune créature n’est assez proche pour qu’il puisse se déplacer et l’attaquer, le golem s’en prend à un objet, de préférence plus petit que lui. Une fois le golem fou furieux, il continue d’agir ainsi jusqu’à ce qu’il soit détruit ou qu’il ait récupéré tous ses points de vie.</p>",
+          "description": "<p>Chaque fois que le golem commence son tour avec 60 points de vie ou moins, lancez un [[/r d6]]. Sur un résultat de 6, il devient fou. À chacun de ses tours tant qu'il est dans cet état, le golem attaque la créature la plus proche qu'il voit. Si aucune créature n'est assez proche pour qu'il puisse se déplacer et l'attaquer, le golem s'en prend à un objet, de préférence plus petit que lui. Une fois le golem fou furieux, il continue d'agir ainsi jusqu'à ce qu'il soit détruit ou qu'il ait récupéré tous ses points de vie.</p>",
           "chat": "<p>[[lookup @name]] utilise Folie furieuse.</p>"
         },
         "Immutable Form": {
@@ -2915,7 +2917,7 @@
         },
         "Acid Absorption": {
           "name": "Absorption de l’acide",
-          "description": "<p>Chaque fois que le golem est soumis à des dégâts d’acide, il ne subit aucun dégât et récupère en fait autant de points de vie que la moitié des dégâts d’acide ainsi évités.</p>"
+          "description": "<p>Chaque fois que le golem est soumis à des dégâts d'acide, il ne subit aucun dégât et récupère en fait autant de points de vie que la moitié des dégâts d'acide ainsi évités.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -2944,7 +2946,7 @@
         },
         "Light Sensitivity": {
           "name": "Sensibilité à la lumière",
-          "description": "<p>Quand le [[lookup @name]] est exposé à une lumière vive, il est<strong> désavantagé</strong> aux jets d’attaque ainsi qu’aux tests de Sagesse (Perception) basés sur la vue.</p>"
+          "description": "<p>Quand le manteleur est exposé à une lumière vive, il est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -3118,7 +3120,8 @@
           "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>",
           "effects": {
             "Poisoned": {
-              "name": "Empoisonné"
+              "name": "Empoisonné",
+              "description": "<p>Jusqu'à la fin de l'empoisonnement, la cible est inconsciente. Une autre créature peut consacrer une action à réveiller la cible énergiquement.</p>"
             }
           }
         },
@@ -3128,7 +3131,13 @@
           "chat": "<p>[[lookup @name]] attaque avec Constriction.</p>",
           "effects": {
             "Restrained": {
-              "name": "Entravé"
+              "name": "Entravé",
+              "description": "<p>Tant que la cible est agrippée, elle est entravée.</p>"
+            }
+          },
+          "activities": {
+            "Escape Check": {
+              "name": "Test d'évasion"
             }
           }
         },
@@ -3467,7 +3476,7 @@
       "items": {
         "Angelic Weapons": {
           "name": "Armes angéliques",
-          "description": "<p>Les attaques d’arme du [[lookup @name]] sont magiques. Lorsque le [[lookup @name]] touche sa cible avec une arme, celle-ci inflige 4d8 dégâts radiants supplémentaires (inclus dans l’attaque).</p>",
+          "description": "<p>Les attaques d'arme du déva sont magiques. Lorsque le déva touche sa cible avec une arme, celle-ci inflige 4d8 dégâts radiants supplémentaires (inclus dans l'attaque).</p>",
           "chat": "<p>Le [[lookup @name]] utilise Armes angéliques.</p>"
         },
         "Change Shape": {
@@ -3476,7 +3485,7 @@
         },
         "Healing Touch": {
           "name": "Contact curatif",
-          "description": "<p>Le [[lookup @name]] touche physiquement une autre créature. La cible récupère magiquement 20 (4d8 + 2) points de vie et elle est libérée des maux suivants : cécité, maladies, malédictions, poisons et surdité.</p>"
+          "description": "<p>Le déva touche physiquement une autre créature. La cible récupère magiquement 20 ([[/heal]]{4d8 + 2}) points de vie et elle est libérée des maux suivants : cécité, maladies, malédictions, poisons et surdité.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -3484,7 +3493,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le déva est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -4334,7 +4343,12 @@
         "Web": {
           "name": "Toile d’araignée",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/18 m, une créature de taille G ou inférieure. <em>Touché :</em> La créature est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la créature entravée peut effectuer un test de [[/check]] et se libère de la toile en cas de réussite. Cet effet prend également fin si la toile est détruite. La toile est dotée d'une CA de 10, de 5 points de vie, de l'immunité contre les dégâts contondants, psychiques et de poison, et de la vulnérabilité aux dégâts de feu.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>",
+          "activities": {
+            "Escape Web": {
+              "name": "Se libérer de la toile"
+            }
+          }
         }
       },
       "alignment": "Neutre Mauvaise",
@@ -4437,7 +4451,7 @@
         },
         "Aversion of Fire": {
           "name": "Aversion du feu",
-          "description": "<p>Si le golem subit des dégâts de feu, il est<strong> désavantagé</strong> aux jets d’attaque et tests de caractéristique jusqu’à la fin de son tour suivant.</p>",
+          "description": "<p>Si le golem subit des dégâts de feu, il est désavantagé aux jets d'attaque et tests de caractéristique jusqu'à la fin de son tour suivant.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Aversion du feu.</p>"
         },
         "Immutable Form": {
@@ -4450,7 +4464,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le golem est<strong> avantagé</strong> aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le golem est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -4493,7 +4507,7 @@
       "items": {
         "Antimagic Susceptibility": {
           "name": "Vulnérabilité à l’antimagie",
-          "description": "<p>L’épée est &Reference[incapacitated] tant qu’elle se trouve dans un champ antimagie. Si elle est ciblée par dissipation de la magie, l’épée doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l’incantateur sous peine de tomber &Reference[unconscious] pendant 1 minute.</p>",
+          "description": "<p>L'épée est &Reference[incapacitated]{neutralisée} tant qu'elle se trouve dans un <em>champ antimagie</em>. Si elle est ciblée par <em>dissipation de la magie</em>, l'épée doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &Reference[unconscious]{inconsciente} pendant 1 minute.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Vulnérabilité à l’antimagie.</p>"
         },
         "False Appearance": {
@@ -5447,12 +5461,22 @@
             "Prone": {
               "name": "À terre"
             }
+          },
+          "activities": {
+            "save": {
+              "condition": "Au touché"
+            }
           }
         },
         "Parry": {
           "name": "Parade",
-          "description": "<p>Le [[lookup @name]] ajoute 3 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l’assaillant et manier une arme de corps à corps.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Parade.</p>"
+          "description": "<p>Le gladiateur ajoute 3 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
+          "chat": "<p>Le [[lookup @name]] utilise Parade.</p>",
+          "activities": {
+            "utility": {
+              "condition": "lorsqu'une attaque de corps à corps censée toucher cette créature"
+            }
+          }
         }
       },
       "languages": "une au choix (généralement le commun)",
@@ -6536,7 +6560,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le golem est<strong> avantagé</strong> aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le golem est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -6750,7 +6774,7 @@
         }
       },
       "subtype": "Titan",
-      "languages": "comprend l'abyssal, le céleste, l'infernal et le primordial, mais ne parle pas; télépathie 36 m",
+      "languages": "comprend l'abyssal, le céleste, l'infernal et le primordial, mais ne parle pas",
       "alignment": "Chaotique Mauvaise",
       "habitat": "Sous-marin"
     },
