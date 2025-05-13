@@ -144,7 +144,9 @@
         "Counted": {
           "other": "{number} actions légendaires",
           "one": "{number} action légendaire"
-        }
+        },
+        "Label": "Action légendaire",
+        "Header": "Actions légendaires"
       },
       "TurnEnd": {
         "Label": "Fin du tour"
@@ -157,6 +159,42 @@
       },
       "ShortRest": {
         "Label": "Fin d'un repos court"
+      },
+      "Action": {
+        "Label": "Action",
+        "Header": "Actions"
+      },
+      "BonusAction": {
+        "Header": "Actions bonus",
+        "Label": "Action bonus"
+      },
+      "Crew": {
+        "Header": "Actions d'équipage",
+        "Label": "Action d'équipage"
+      },
+      "Day": {
+        "Label": "Jour",
+        "Header": "Jours"
+      },
+      "Hour": {
+        "Header": "Heures",
+        "Label": "Heure"
+      },
+      "Minute": {
+        "Header": "Minutes",
+        "Label": "Minute"
+      },
+      "Mythic": {
+        "Header": "Actions mythiques",
+        "Label": "Action mythique"
+      },
+      "Lair": {
+        "Header": "Actions d’antre",
+        "Label": "Action d'antre"
+      },
+      "Reaction": {
+        "Header": "Réactions",
+        "Label": "Réaction"
       }
     },
     "Warning": {
@@ -1537,60 +1575,6 @@
   "DND5E.ENCHANT": {
     "Title": "Enchantement",
     "FIELDS": {
-      "effects": {
-        "FIELDS": {
-          "level": {
-            "label": "Niveau requis",
-            "hint": "Plage de niveaux requis pour utiliser cet enchantement.",
-            "max": {
-              "label": "Niveau maximum"
-            },
-            "min": {
-              "label": "Niveau minimum"
-            }
-          },
-          "riders": {
-            "label": "Attaché",
-            "activity": {
-              "label": "Activités supplémentaires",
-              "hint": "Ces activités supplémentaires seront ajoutées à l'objet enchanté lorsque cet enchantement sera appliqué, et retirées lorsque l'enchantement sera supprimé."
-            },
-            "effect": {
-              "label": "Effets supplémentaires",
-              "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement sera appliqué, et retirés lorsque l'enchantement sera supprimé."
-            },
-            "item": {
-              "label": "Objets supplémentaires",
-              "hint": "Ces objets supplémentaires seront ajoutés à la créature quand l'un de ses objets est enchanté, et sera retiré si l'enchantement est déjà enlevé."
-            }
-          }
-        },
-        "level": {
-          "label": "Niveau requis",
-          "hint": "Plage de niveaux requis pour utiliser cet enchantement.",
-          "max": {
-            "label": "Niveau maximum"
-          },
-          "min": {
-            "label": "Niveau minimum"
-          }
-        },
-        "riders": {
-          "label": "Attaché",
-          "effect": {
-            "label": "Effets supplémentaires",
-            "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement sera appliqué, et retirés lorsque l'enchantement sera supprimé."
-          },
-          "item": {
-            "label": "Objets supplémentaires",
-            "hint": "Ces objets supplémentaires seront ajoutés à la créature quand l'un de ses objets est enchanté, et sera retiré si l'enchantement est déjà enlevé."
-          },
-          "activity": {
-            "label": "Activités supplémentaires",
-            "hint": "Ces activités supplémentaires seront ajoutées à l'objet enchanté lorsque cet enchantement sera appliqué, et retirées lorsque l'enchantement sera supprimé."
-          }
-        }
-      },
       "enchant": {
         "label": "Configuration de l'enchantement",
         "identifier": {
@@ -1617,6 +1601,33 @@
           "label": "Type d'objet",
           "hint": "Type d'objet auquel cet enchantement peut être appliqué.",
           "Any": "Tout type d'enchantement"
+        }
+      },
+      "effects.element": {
+        "level": {
+          "max": {
+            "label": "Niveau maximum"
+          },
+          "min": {
+            "label": "Niveau minimum"
+          },
+          "label": "Limite de niveau",
+          "hint": "Niveaux requis pour utiliser cet enchantement."
+        },
+        "riders": {
+          "label": "Lié",
+          "activity": {
+            "label": "Activités supplémentaires",
+            "hint": "Ces activités supplémentaires seront ajoutées à l'objet enchanté lorsque cet enchantement est appliqué, et supprimées lorsque l'enchantement est supprimé."
+          },
+          "effect": {
+            "label": "Effets supplémentaires",
+            "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement est appliqué, et supprimés lorsque l'enchantement est supprimé."
+          },
+          "item": {
+            "label": "Objets supplémentaires",
+            "hint": "Ces objets supplémentaires seront ajoutés à la créature lorsqu'un de ses objets est enchanté, et seront supprimés si l'enchantement est retiré."
+          }
         }
       }
     },
@@ -2015,39 +2026,6 @@
   "DND5E.ItemLootType": "Type de butin",
   "DND5E.ItemName": "Nom de l'Item",
   "DND5E.ItemNew": "Ajout {type}",
-  "DND5E.Item": {
-    "Category": {
-      "Label": "Catégorie",
-      "Physical": "Physique"
-    },
-    "Property": {
-      "Adamantine": "Adamantium",
-      "Ammunition": "Munitions",
-      "Concentration": "Concentration",
-      "Finesse": "Finesse",
-      "Firearm": "Arme à feu",
-      "Focus": "Focaliseur",
-      "Heavy": "Lourde",
-      "Light": "Légère",
-      "Loading": "Chargement",
-      "Material": "Matériel",
-      "Magical": "Magique",
-      "Reach": "Portée",
-      "Reload": "Rechargement",
-      "Returning": "Retour",
-      "Ritual": "Rituel",
-      "Silvered": "Argenté",
-      "Somatic": "Somatique",
-      "Special": "Spécial",
-      "StealthDisadvantage": "Désavantage de Discrétion",
-      "Thrown": "Lancer",
-      "TwoHanded": "À deux mains",
-      "Versatile": "Polyvalent",
-      "Verbal": "Verbale",
-      "WeightlessContents": "Contenu sans Poids",
-      "Trait": "Trait passif"
-    }
-  },
   "DND5E.ItemRechargeCheck": "Vérification de recharge {name} - {result}",
   "DND5E.ItemRechargeFailure": "Échec !",
   "DND5E.ItemRechargeSuccess": "Succès !",
@@ -2622,7 +2600,7 @@
         "hint": "La créature et le token invoqués prendront cette taille. Si plusieurs tailles sont sélectionnées, le joueur pourra choisir l'une d'entre elles lors de l'invocation."
       },
       "creatureTypes": {
-        "label": "Type de la créature",
+        "label": "Types de créature",
         "hint": "La créature invoquée sera transformée en ce type. Si plusieurs types sont sélectionnés, le joueur pourra choisir l'un d'entre eux lors de l'invocation."
       },
       "match": {
@@ -2645,18 +2623,15 @@
       },
       "profiles": {
         "label": "Profils d'invocation",
-        "FIELDS": {
-          "count": {
-            "label": "Nombre"
-          },
+        "element": {
           "cr": {
             "label": "Facteur de puissance",
             "abbr": "FP",
             "hint": "FP maximum de la créature invoquée."
           },
           "level": {
-            "label": "Niveau requis",
-            "hint": "Plage de niveaux requis pour utiliser ce profil.",
+            "label": "Limite de niveau",
+            "hint": "Niveaux requis pour utiliser ce profil.",
             "max": {
               "label": "Niveau maximum"
             },
@@ -2666,44 +2641,18 @@
           },
           "name": {
             "label": "Nom affiché",
-            "hint": "Nom du profil affiché dans la boîte de dialogue d'utilisation."
+            "hint": "Nom du profil affiché dans la boîte de dialogue."
           },
           "types": {
             "label": "Types de créature",
-            "hint": "Liste des types de créatures à partir desquelles la créature invoquée peut être sélectionnée."
+            "hint": "Liste des types de créature à partir desquels la créature invoquée peut être sélectionnée."
           },
           "uuid": {
             "label": "Créature liée"
+          },
+          "count": {
+            "label": "Nombre"
           }
-        },
-        "count": {
-          "label": "Nombre"
-        },
-        "cr": {
-          "label": "Facteur de puissance",
-          "abbr": "FP",
-          "hint": "FP maximum de la créature invoquée."
-        },
-        "level": {
-          "hint": "Plage de niveaux requis pour utiliser ce profil.",
-          "max": {
-            "label": "Niveau maximum"
-          },
-          "min": {
-            "label": "Niveau minimum"
-          },
-          "label": "Niveau requis"
-        },
-        "name": {
-          "label": "Nom affiché",
-          "hint": "Nom du profil affiché dans la boîte de dialogue d'utilisation."
-        },
-        "types": {
-          "label": "Types de créature",
-          "hint": "Liste des types de créatures à partir desquelles la créature invoquée peut être sélectionnée."
-        },
-        "uuid": {
-          "label": "Créature liée"
         }
       },
       "summon": {
@@ -2755,7 +2704,6 @@
     },
     "Warning": {
       "CreateActor": "Vous devez avoir le droit 'Créer de nouveaux acteurs' pour invoquer directement depuis un compendium.",
-      "CRV11": "L'invocation basée sur le facteur de puissance des créatures ne fonctionne qu'avec Foundry V12 ou une version ultérieure.",
       "NoActor": "Impossible de trouver l'acteur avec l'UUID '{uuid}' à invoquer.",
       "NoOwnership": "Vous devez être propriétaire de '{actor}' pour l'invoquer.",
       "NoProfile": "Impossible de trouver le profil d'invocation {profileId} sur '{item}'.",
@@ -3298,7 +3246,7 @@
       "Flavor": "Botte",
       "Cleave": "Enchaînement",
       "Graze": "Écorchure",
-      "Nick": "Coupe double",
+      "Nick": "Coup double",
       "Push": "Poussée",
       "Sap": "Sape",
       "Slow": "Ralentissement",
@@ -4744,10 +4692,16 @@
   "DND5E.TRANSFORM": {
     "FIELDS": {
       "profiles": {
-        "FIELDS": {
+        "label": "Profils de transformation",
+        "element": {
+          "cr": {
+            "abbr": "FP",
+            "label": "Facteur de puissance",
+            "hint": "FP maximum de la créature source."
+          },
           "level": {
             "label": "Limite de niveau",
-            "hint": "Plage de niveaux requis pour utiliser ce profil.",
+            "hint": "Niveaux requis pour utiliser ce profil.",
             "max": {
               "label": "Niveau maximum"
             },
@@ -4755,59 +4709,22 @@
               "label": "Niveau minimum"
             }
           },
-          "name": {
-            "label": "Nom affiché",
-            "hint": "Nom du profil affiché dans la boîte de dialogue."
-          },
-          "cr": {
-            "label": "Facteur de puissance",
-            "abbr": "FP",
-            "hint": "FP maximum de la créature source."
-          },
           "movement": {
-            "hint": "Types de déplacement non autorisés pour les créatures sources.",
-            "label": "Types de déplacement restreints"
+            "label": "Types de mouvement restreints",
+            "hint": "Types de mouvement qui ne sont pas autorisés sur les créatures sources."
+          },
+          "name": {
+            "hint": "Nom du profil affiché dans la boîte de dialogue.",
+            "label": "Nom affiché"
           },
           "sizes": {
-            "hint": "Liste des tailles de créature parmi lesquelles la créature source peut être sélectionnée.",
-            "label": "Tailles de créature"
+            "label": "Tailles de la créature",
+            "hint": "Liste des tailles de créature à partir desquelles la créature source peut être sélectionnée."
           },
           "types": {
-            "hint": "Liste des types de créature parmi lesquels la créature source peut être sélectionnée.",
+            "hint": "Liste des types de créature à partir desquels la créature source peut être sélectionnée.",
             "label": "Types de créature"
           }
-        },
-        "cr": {
-          "label": "Facteur de puissance",
-          "abbr": "FP",
-          "hint": "FP maximum de la créature source."
-        },
-        "label": "Profils de transformation",
-        "level": {
-          "label": "Limite de niveau",
-          "hint": "Plage de niveaux requis pour utiliser ce profil.",
-          "max": {
-            "label": "Niveau maximum"
-          },
-          "min": {
-            "label": "Niveau minimum"
-          }
-        },
-        "movement": {
-          "hint": "Types de déplacement non autorisés pour les créatures sources.",
-          "label": "Types de déplacement restreints"
-        },
-        "name": {
-          "hint": "Nom du profil affiché dans la boîte de dialogue.",
-          "label": "Nom affiché"
-        },
-        "sizes": {
-          "hint": "Liste des tailles de créature parmi lesquelles la créature source peut être sélectionnée.",
-          "label": "Tailles de créature"
-        },
-        "types": {
-          "hint": "Liste des types de créature parmi lesquels la créature source peut être sélectionnée.",
-          "label": "Types de créature"
         }
       },
       "transform": {
@@ -4990,5 +4907,47 @@
     }
   },
   "SOURCE.BOOK.SRD51": "Document de Référence Système 5.1",
-  "SOURCE.BOOK.FreeRules": "Free Rules"
+  "SOURCE.BOOK.FreeRules": "Free Rules",
+  "DND5E.ITEM": {
+    "Category": {
+      "Physical": "Physique",
+      "Label": "Catégorie"
+    },
+    "Property": {
+      "Adamantine": "Adamantium",
+      "Ammunition": "Munition",
+      "Concentration": "Concentration",
+      "Finesse": "Finesse",
+      "Firearm": "Arme à feu",
+      "Focus": "Focaliseur",
+      "Heavy": "Lourde",
+      "Magical": "Magique",
+      "Reach": "Allonge",
+      "Ritual": "Rituel",
+      "Somatic": "Somatique",
+      "Light": "Légère",
+      "Loading": "Chargement",
+      "Material": "Matérielle",
+      "Returning": "Retour",
+      "Silvered": "Argenté",
+      "Reload": "Rechargement",
+      "Thrown": "Lancer",
+      "TwoHanded": "À deux mains",
+      "Versatile": "Polyvalent",
+      "Verbal": "Verbale",
+      "Trait": "Trait passif",
+      "WeightlessContents": "Contenu sans poids",
+      "Special": "Spécial",
+      "StealthDisadvantage": "Désavantage de Discrétion"
+    },
+    "SECTIONS": {
+      "Activities": "Activités",
+      "Advancement": "Progression",
+      "Contents": "Contenu",
+      "Details": "Détails",
+      "Effects": "Effets",
+      "Description": "Description"
+    }
+  },
+  "DND5E.Remaining": "Restant"
 }
