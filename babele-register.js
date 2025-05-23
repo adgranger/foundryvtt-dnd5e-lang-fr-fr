@@ -4,19 +4,6 @@ Hooks.once('init', () => {
 
 	if (typeof Babele !== 'undefined') {
 
-		game.settings.register("dnd5e_fr-FR", "convert", {
-			name: "Conversions automatiques",
-			hint: "Applique le système métrique à toutes les mesures, distances",
-			scope: "world",
-			type: Boolean,
-			default: true,
-			config: true,
-			onChange: convert => {
-				setEncumbranceData();
-				fixExhaustion();
-			}
-		});
-
 		game.babele.register({
 			module: 'dnd5e_fr-FR',
 			lang: 'fr',
@@ -29,6 +16,7 @@ Hooks.once('init', () => {
 			"weight": Converters.imperialToMetric("weight"),
 			"target": Converters.imperialToMetric("target"),
 			"senses": Converters.imperialToMetric("senses"),
+			"volume": Converters.imperialToMetric("volume"),
 			"movement": Converters.imperialToMetric("movement"),
 			"sightRange": Converters.imperialToMetric("sightRange"),
 			"communication": Converters.imperialToMetric("communication"),
@@ -44,41 +32,28 @@ Hooks.once('init', () => {
 });
 
 Hooks.once('ready', () => {
-	setEncumbranceData();
 	fixExhaustion();
 });
 
-Hooks.on('createScene', (scene) => {
-	if (convertEnabled()) {
-		scene.update({ "grid.units": "m", "grid.distance": 1.5 });
-	}
-});
-
-function convertEnabled() {
-	return game.settings.get("dnd5e_fr-FR", "convert");
-}
-
-function setEncumbranceData() {
-	let convert = convertEnabled();
-	game.settings.set("dnd5e", "metricWeightUnits", convert);
-
-	if (convert) {
-		CONFIG.DND5E.movementUnits = {
-			m: CONFIG.DND5E.movementUnits.m,
-			km: CONFIG.DND5E.movementUnits.km,
-			ft: CONFIG.DND5E.movementUnits.ft,
-			mi: CONFIG.DND5E.movementUnits.mi
-		};
-	}
-}
-
 function fixExhaustion() {
 	// Fix system bug (2024 rules)
-	if (convertEnabled()) {
+	if (convertMetricLength()) {
 		CONFIG.DND5E.conditionTypes.exhaustion.reduction = foundry.utils.mergeObject(
 			CONFIG.DND5E.conditionTypes.exhaustion.reduction, { speed: 1.5 }
 		);
 	}
+}
+
+function convertMetricLength() {
+	return game.settings.get("dnd5e", "metricLengthUnits");
+}
+
+function convertMetricWeight() {
+	return game.settings.get("dnd5e", "metricWeightUnits");
+}
+
+function convertMetricVolume() {
+	return game.settings.get("dnd5e", "metricVolumeUnits");
 }
 
 /**
@@ -89,13 +64,12 @@ export class Converters {
 
 	static imperialToMetric(type) {
 		return (value) => {
-			if (!convertEnabled()) return value;
-
 			switch (type) {
 				case "range": return Converters.range(value);
 				case "weight": return Converters.weight(value);
 				case "target": return Converters.target(value);
 				case "senses": return Converters.senses(value);
+				case "volume": return Converters.volume(value);
 				case "movement": return Converters.movement(value);
 				case "sightRange": return Converters.footsToMeters(value);
 				case "communication": return Converters.communication(value);
@@ -134,8 +108,6 @@ export class Converters {
 	}
 
 	static weight(weight) {
-		if (weight.units === "kg") return weight;
-
 		return foundry.utils.mergeObject(weight, {
 			"value": Converters.lbToKg(weight.value),
 			"units": "kg"
@@ -169,6 +141,13 @@ export class Converters {
 			"tremorsense": conversion.converter(senses.tremorsense),
 			"truesight": conversion.converter(senses.truesight),
 			"units": conversion.units
+		});
+	}
+
+	static volume(volume) {
+		return foundry.utils.mergeObject(volume, {
+			"value": Converters.pcToL(volume.value),
+			"units": "liter"
 		});
 	}
 
@@ -230,15 +209,21 @@ export class Converters {
 	}
 
 	static footsToMeters(ft) {
-		if (!ft || isNaN(parseInt(ft))) return ft;
+		if (!convertMetricLength() || !ft || isNaN(parseInt(ft))) return ft;
 
 		return Converters.round(parseInt(ft) * 0.3);
 	}
 
 	static milesToMeters(mi) {
-		if (!mi || isNaN(parseInt(mi))) return mi;
+		if (!convertMetricLength() || !mi || isNaN(parseInt(mi))) return mi;
 
 		return Converters.round(parseInt(mi) * 1.5);
+	}
+
+	static pcToL(pc) {
+		if (!convertMetricVolume() || !pc) return pc;
+
+		return Converters.round(parseInt(pc) * 28.317);
 	}
 
 	static round(num) {
@@ -246,7 +231,7 @@ export class Converters {
 	}
 
 	static lbToKg(lb) {
-		if (!lb) return lb;
+		if (!convertMetricWeight() || !lb) return lb;
 
 		return parseInt(lb) / 2;
 	}
