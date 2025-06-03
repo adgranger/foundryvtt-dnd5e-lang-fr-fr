@@ -23,7 +23,6 @@ Hooks.once('init', () => {
 			"rangeActivities": Converters.imperialToMetric("rangeActivities"),
 			"distanceAdvancement": Converters.imperialToMetric("distanceAdvancement"),
 			"pages": Converters.pages(),
-			"source": Converters.source(),
 			"effects": Converters.effects(),
 			"activities": Converters.activities(),
 			"advancement": Converters.advancement()
@@ -165,7 +164,7 @@ export class Converters {
 
 	static rangeActivities(activities) {
 		Object.keys(activities).forEach(key => {
-			Converters.range(activities[key].range);
+			if (activities[key].range) Converters.range(activities[key].range);
 
 			const conversion = Converters.conversionInfo[activities[key].target?.template?.units];
 			if (conversion) {
@@ -296,17 +295,6 @@ export class Converters {
 		return unlinkedSpells;
 	}
 
-	static source() {
-		return (source) => Converters._source(source);
-	}
-
-	static _source(source) {
-		return foundry.utils.mergeObject(source, {
-			book: sources[source.book],
-			custom: sources[source.custom]
-		});
-	}
-
 	static effects() {
 		return (data, translations) => Converters._effects(data, translations);
 	}
@@ -433,8 +421,3 @@ export class Converters {
 		});
 	}
 }
-
-export var sources = {
-	"SRD 5.1": "DRS 5.1",
-	"SRD 5.2": "DRS 5.2"
-};
