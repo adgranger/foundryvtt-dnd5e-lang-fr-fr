@@ -181,7 +181,7 @@ export class Converters {
 	static distanceAdvancement(advancements) {
 		advancements.forEach(adv => {
 			if (adv.type === "ScaleValue" && adv.configuration.type === "distance") {
-				const conversion = Converters.conversionInfo[adv.configuration.distance.units];
+	            const conversion = Converters.conversionInfo[adv.configuration.distance.units || "ft"];
 				if (conversion) {
 					foundry.utils.mergeObject(adv.configuration.distance, { "units": conversion.units });
 
