@@ -81,16 +81,18 @@ export class Converters {
 		};
 	}
 
-	static conversionInfo = {
-		"ft": {
-			converter: Converters.footsToMeters,
-			units: "m"
-		},
-		"mi": {
-			converter: Converters.milesToMeters,
-			units: "km"
-		}
-	};
+	static get conversionInfo() {
+		return {
+			"ft": {
+				converter: Converters.footsToMeters,
+				units: convertMetricLength() ? "m" : "ft"
+			},
+			"mi": {
+				converter: Converters.milesToMeters,
+				units: convertMetricLength() ? "km" : "mi"
+			}
+		};
+	}
 
 	static range(range) {
 		const conversion = Converters.conversionInfo[range.units];
