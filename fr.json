@@ -278,6 +278,14 @@
           "hint": "Nombre de points qui peuvent être assignés à n'importe quelle valeur de caractéristique débloquée.",
           "decrease": "Diminuer les points",
           "increase": "Augmenter les points"
+        },
+        "max": {
+          "hint": "Augmenter la valeur maximale autorisée pour l'acteur.",
+          "label": "Maximum"
+        },
+        "recommendation": {
+          "hint": "Faveur épique recommandée par cette classe.",
+          "label": "Recommandation"
         }
       },
       "LockedHint": "Les valeurs ne peuvent pas être modifiés avec un don sélectionné.",
@@ -292,11 +300,13 @@
       "Journal": {
         "DescriptionLegacy": "<p>Lorsque vous atteignez le niveau {firstLevelOrdinal} (puis à nouveau aux niveaux {otherLevelsOrdinal}), vous pouvez augmenter de 2 la valeur de caractéristique de votre choix, ou augmenter de 1 deux valeurs de caractéristique de votre choix. Conformément à la règle habituelle, cette aptitude ne vous permet pas de porter une valeur au-delà de {maxAbilityScore}.</p><p>En utilisant la règle optionnelle des dons, vous pouvez renoncer à cette amélioration pour choisir un don à la place.</p>",
         "DescriptionModern": "<p>Vous recevez le don Amélioration de caractéristique ou un autre don de votre choix pour lequel vous remplissez les conditions. Vous recevez de nouveau cette aptitude aux niveaux de {class} {otherLevels}.</p>",
-        "Name": "Amélioration de caractéristique"
+        "Name": "Amélioration de caractéristique",
+        "DescriptionEpic": "<p>Vous recevez un don de Faveur épique ou un autre don de votre choix pour lequel vous remplissez les conditions. {recommendation} est recommandé.</p>"
       },
       "Action": {
         "Select": "Sélectionner un don"
-      }
+      },
+      "TitleEpic": "Faveur épique"
     },
     "SPELLCONFIG": {
       "FreeCasting": "Incantation gratuite",
@@ -317,6 +327,12 @@
               "label": "Nécessite un emplacement",
               "hint": "Nécessite un emplacement de sort à utiliser lorsque vous utilisez les utilisations limitées. Si non coché, les utilisations seront des utilisations supplémentaires gratuites qui ne consomment pas d'emplacement."
             }
+          },
+          "method": {
+            "label": "Méthode d'incantation"
+          },
+          "prepared": {
+            "label": "Préparation"
           }
         }
       }
@@ -433,6 +449,10 @@
           },
           "subtype": {
             "label": "Sous-type"
+          },
+          "list": {
+            "hint": "Seuls les sorts figurant dans ces listes sont autorisés.",
+            "label": "Listes de sorts"
           }
         },
         "type": {
@@ -451,9 +471,15 @@
         "InvalidType": "Seuls les objets de type {type} peuvent être sélectionnés pour ce choix.",
         "NoOriginal": "Le choix précédemment sélectionné n'est plus disponible pour le remplacement.",
         "SpellLevelAvailable": "Seuls les sorts de niveau {level} ou inférieur peuvent être choisis pour cette progression.",
-        "SpellLevelSpecific": "Seuls les sorts de niveau {level} peuvent être choisis pour cette progression."
+        "SpellLevelSpecific": "Seuls les sorts de niveau {level} peuvent être choisis pour cette progression.",
+        "MaxSelected": "Aucun autre objet ne peut être sélectionné. Décochez les objets avant d'en sélectionner d'autres.",
+        "SpellList": "Seuls les sorts disponibles dans la liste des sorts {lists} peuvent être choisis pour cette Progression."
       },
-      "DropHint": "Déposez des objets ici pour les ajouter à la liste pouvant être sélectionnée avec cette progression."
+      "DropHint": "Déposez des objets ici pour les ajouter à la liste pouvant être sélectionnée avec cette progression.",
+      "Action": {
+        "SelectGeneric": "Sélectionner un objet",
+        "SelectSpecific": "Sélectionner {type}"
+      }
     },
     "ScaleValue": {
       "FIELDS": {
@@ -606,6 +632,12 @@
       "Hint": "Sélectionnez les Progressions suivantes qui seront ajoutées à {name}.",
       "Selection": "Sélection de Progression",
       "Title": "Migrer la Progression"
+    },
+    "Defaults": {
+      "BackgroundFeat": "Don d'historique",
+      "BackgroundFeature": "Aptitude d'historique",
+      "BackgroundProficiencies": "Maîtrises d'historique",
+      "ChooseLanguages": "Choix des langues"
     }
   },
   "DND5E.AdvancementChoices": "choix",
@@ -902,6 +934,9 @@
         "spent": {
           "label": "Dés de vie utilisés"
         }
+      },
+      "properties": {
+        "label": "Propriétés de classe"
       }
     }
   },
@@ -930,7 +965,8 @@
       "Label": "Filtres",
       "HasDarkvision": "Possède une Vision dans le noir",
       "HasSpellcasting": "Possède la capacité de lancer des sorts",
-      "SearchResults": "Résultats de la recherche"
+      "SearchResults": "Résultats de la recherche",
+      "Grouped": "{type} ({group})"
     },
     "Selection": {
       "Label": "Sélectionné : {summary}",
@@ -1572,6 +1608,10 @@
         "identifier": {
           "label": "Identifiant de classe",
           "hint": "Identifiant utilisé pour déterminer si c'est le niveau du personnage ou un niveau de classe spécifique qui doit être utilisé pour les limites de niveau de l'enchantement."
+        },
+        "self": {
+          "label": "Enchanter automatiquement soi-même",
+          "hint": "Appliquez automatiquement l'enchantement sélectionné à l'objet contenant cette activité lorsqu'il est utilisé, et supprimez-le lorsque l'activité est à nouveau utilisée."
         }
       },
       "restrictions": {
@@ -1579,7 +1619,7 @@
         "hint": "Restrictions sur le type d’objet auquel cet enchantement peut être appliqué.",
         "allowMagical": {
           "label": "Permettre les objets magiques",
-          "hint": "Permettre aux objets déjà magiques d'être enchantés."
+          "hint": "Permettre d'enchanter des objets physiques qui sont déjà magiques."
         },
         "categories": {
           "label": "Catégories valides",
@@ -1635,7 +1675,8 @@
         "Create": "Créer un enchantement",
         "Delete": "Supprimer l'enchantement"
       },
-      "Empty": "Aucun enchantement associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un enchantement existant dans la liste déroulante."
+      "Empty": "Aucun enchantement associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un enchantement existant dans la liste déroulante.",
+      "Active": "{name} (actif)"
     },
     "Warning": {
       "ConcentrationEnded": "Impossible d'appliquer cet enchantement car la concentration est terminée.",
@@ -1874,6 +1915,26 @@
     "Vehicle": {
       "one": "Véhicule",
       "other": "Véhicules"
+    },
+    "Action": {
+      "Remove": "Retirer le membre",
+      "View": "Voir les membres",
+      "ChangePace": "Changer d'allure"
+    },
+    "Config": {
+      "Art": {
+        "Label": "Illustration des membres",
+        "portraits": "Portraits",
+        "tokens": "Tokens"
+      },
+      "Legend": "Options de la feuille de groupe"
+    },
+    "Distribute": {
+      "noxp": "Distribuer la monnaie mise en commun",
+      "xp": "Distribuer les PX et la monnaie mis en commun"
+    },
+    "Warning": {
+      "PhysicalItemOnly": "Seuls les objets physiques sont supportés."
     }
   },
   "DND5E.Hair": "Cheveux",
@@ -2114,8 +2175,18 @@
         "repeatable": {
           "hint": "Cette aptitude peut être choisie plusieurs fois.",
           "label": "Répétable"
+        },
+        "items": {
+          "hint": "Identifiants des objets que le personnage doit posséder avant de pouvoir sélectionner cet objet.",
+          "label": "Objets requis"
         }
       }
+    },
+    "Warning": {
+      "InvalidLevel": "doit être au moins de niveau {level}",
+      "Message": "{actor} {requirements} afin de prendre cela {type}.",
+      "MissingItem": "doit avoir déjà pris {items}",
+      "NotRepeatable": "n'a pas dû prendre cela auparavant"
     }
   },
   "DND5E.Price": "Prix",
@@ -2468,7 +2539,8 @@
   "DND5E.SpellPrepAlways": "Toujours préparé",
   "DND5E.SpellPreparation": {
     "Label": "Préparation des sorts",
-    "Formula": "Formule de préparation"
+    "Formula": "Formule de préparation",
+    "Method": "Méthode d'incantation"
   },
   "DND5E.SpellSourceClass": "Classe source",
   "DND5E.SpellPrepared": "Préparé",
@@ -3144,11 +3216,11 @@
         },
         "prompt": {
           "label": "Invite de jet",
-          "hint": "La boîte de dialogue de configuration du jet doit-elle s'afficher lors du jet de dés ?"
+          "hint": "Afficher la boîte de dialogue de configuration du jet lors d'un lancer de dé."
         },
         "visible": {
           "label": "Visible pour tous",
-          "hint": "Le bouton de jet doit-il être visible par tous les joueurs ?"
+          "hint": "Afficher le bouton de lancer dans le tchat pour tous les joueurs."
         }
       }
     }
@@ -3269,7 +3341,8 @@
     "AttackExtended": "<em>{type}</em> : {parts}",
     "DamageExtended": "<em>Touché :</em> {damage} dégâts",
     "DamageDouble": "{first} plus {second}",
-    "PassiveShort": "passif {check}"
+    "PassiveShort": "passif {check}",
+    "CheckUsing": "{check} utilisant {tool}"
   },
   "EFFECT.DND5E": {
     "StatusBleeding": "Saignement",
@@ -3457,7 +3530,8 @@
       "Hint": "Réduire automatiquement les sections de dégâts, de touches et d'effets qui apparaissent dans les cartes de tchat.",
       "Always": "Tout réduire",
       "Older": "Réduire les sections plus anciennes",
-      "Never": "Tout développer"
+      "Never": "Réduire après utilisation",
+      "Manual": "Jamais réduire"
     },
     "DEFAULTSKILLS": {
       "Name": "Compétences par défaut",
@@ -3615,6 +3689,16 @@
       "AllowTransformation": {
         "Hint": "Autoriser les joueurs à transformer leurs propres acteurs. Les joueurs doivent également avoir la permission principale 'Créer un Acteur' pour que cela fonctionne.",
         "Name": "Autoriser la transformation"
+      },
+      "AllowRests": {
+        "Hint": "Permet aux joueurs de se reposer directement depuis la feuille de leur personnage. Lorsque cette option est désactivée, les joueurs ne peuvent se reposer que lorsque le MJ en fait la demande depuis la feuille de groupe.",
+        "Name": "Autoriser les repos individuels"
+      }
+    },
+    "AUTOMATION": {
+      "Movement": {
+        "Name": "Désactiver l'automatisation des mouvements",
+        "Hint": "Ne pas appliquer de pénalités de mouvement sur terrain difficile et ne pas empêcher les créatures de se déplacer les unes à travers les autres, conformément à la version des règles."
       }
     }
   },
@@ -3973,14 +4057,17 @@
       }
     },
     "Configure": {
-      "Title": "Configurer {ability}"
+      "Title": "Configurer {ability}",
+      "CheckLabel": "{ability} - Test",
+      "SaveLabel": "{ability} - Sauvegarde"
     }
   },
   "DND5E.AbilityScoreMaxShort": "Maximum",
   "DND5E.AbilityScoreShort": "Valeur",
   "TYPES.ChatMessage": {
     "turn": "Message de tour de combat",
-    "rest": "Message de repos"
+    "rest": "Message de repos",
+    "request": "Demande de message"
   },
   "DND5E.Language": {
     "Language": {
@@ -4036,7 +4123,9 @@
       "other": "{n}e Résistance légendaire"
     },
     "Remaining": "Résistances légendaires restantes",
-    "Resisted": "Résistance légendaire utilisée"
+    "Resisted": "Résistance légendaire utilisée",
+    "LabelPl": "Résistances légendaires",
+    "Spent": "Résistances légendaires dépensées"
   },
   "DND5E.NPC": {
     "SECTIONS": {
@@ -4103,6 +4192,23 @@
     "NewDay": {
       "Hint": "Récupère les aptitudes à usage limité qui se rechargent au crépuscule, à l’aube ou au début d’une nouvelle journée.",
       "Label": "Nouvelle journée"
+    },
+    "RecoverTempHP": {
+      "Label": "Retirer les pv temporaires"
+    },
+    "RecoverTempMaxHP": {
+      "Hint": "Retirer tout ajustement apporté aux points de vie maximums d'un personnage.",
+      "Label": "Récupérer le maximum de pv"
+    },
+    "Request": {
+      "AutoRest": {
+        "Hint": "Effectuer automatiquement le repos pour les acteurs sélectionnés, plutôt que d'envoyer une demande de repos aux joueurs.",
+        "Label": "Repos automatique"
+      },
+      "Label": "Demande de repos"
+    },
+    "Warning": {
+      "OnlyByRequest": "Les repos ne peuvent être effectuées qu'à la demande du MJ."
     }
   },
   "DND5E.UNITS": {
@@ -4331,7 +4437,14 @@
     "Deltas": {
       "Recovery": "Récupération"
     },
-    "Activities": "Activités"
+    "Activities": "Activités",
+    "REQUEST": {
+      "Action": {
+        "Handle": "Gérer la demande"
+      },
+      "Complete": "Demande satisfaite",
+      "PartyMembers": "Membres du groupe"
+    }
   },
   "DND5E.CreatureTag": "{size} {type}, {alignment}",
   "DND5E.Habitat": {
@@ -4389,7 +4502,8 @@
       "Lair": "PX {value}, ou {lair} dans son antre"
     },
     "Value": "Valeur en PX",
-    "Label": "Points d'expérience"
+    "Label": "Points d'expérience",
+    "Pool": "Réserve PX"
   },
   "DND5E.FORWARD": {
     "Title": "Transférer",
@@ -4436,6 +4550,9 @@
     "Counted": {
       "other": "{number} points de vie",
       "one": "{number} point de vie"
+    },
+    "DT": {
+      "Abbr": "SD"
     }
   },
   "DND5E.HitPointsTempMaxHint": "Modification temporaire des PV maximum.",
@@ -4450,7 +4567,8 @@
     "Counted": {
       "one": "{number} dé de vie",
       "other": "{number} dés de vie"
-    }
+    },
+    "Abbreviation": "DV"
   },
   "DND5E.Items": "Objets",
   "DND5E.ItemSpeciesDetailsLegacy": "Détails de la race",
@@ -4464,9 +4582,11 @@
       "other": "{n}e Action légendaire"
     },
     "Remaining": "Actions légendaires restantes",
-    "Description": "Utilisations des actions légendaires : {uses}.",
+    "Description": "Utilisations des actions légendaires : {uses}. Immédiatement après le tour d'une autre créature, le {name} peut dépenser un point d'utilisation pour effectuer l'une des actions suivantes. Le {name} récupère tous les points d'utilisation dépensés au début de chacun de ses tours.",
     "DescriptionLegacy": "Le {name} peut entreprendre {usesNamed}, à choisir parmi les options ci-après. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d'une autre créature. Le {name} récupère les actions légendaires dépensées au début de son tour.",
-    "LairUses": "{normal} ({lair} dans l'antre)"
+    "LairUses": "{normal} ({lair} dans l'antre)",
+    "LabelPl": "Actions légendaires",
+    "Spent": "Actions légendaires dépensées"
   },
   "DND5E.Loyalty": "Dévouement",
   "DND5E.ProficiencyOther": "Autre",
@@ -4574,7 +4694,8 @@
         "label": "États",
         "hint": "Lorsqu'elle est affectée par cet effet actif, la cible est traitée comme ayant ces états supplémentaires."
       }
-    }
+    },
+    "AttributeKeyTooltip": "Pour obtenir la liste des clés courantes, consultez <a href=\"{url}\">le wiki</a>."
   },
   "DND5E.BONUSES": {
     "FIELDS": {
@@ -4694,6 +4815,9 @@
           "types": {
             "hint": "Liste des types de créature à partir desquels la créature source peut être sélectionnée.",
             "label": "Types de créature"
+          },
+          "uuid": {
+            "label": "Acteur lié"
           }
         }
       },
@@ -4710,7 +4834,8 @@
         "mode": {
           "label": "Mode",
           "hint": "Définit comment les créatures sources de la transformation sont sélectionnées.",
-          "Direct": "Lien direct"
+          "Direct": "Par lien direct",
+          "CR": "Par facteur de puissance"
         },
         "preset": {
           "label": "Préréglage"
@@ -4760,6 +4885,15 @@
         },
         "Vision": {
           "Label": "Vision"
+        },
+        "Languages": {
+          "Label": "Langues"
+        },
+        "GearProficiency": {
+          "Label": "Maîtrise de l'équipement"
+        },
+        "Resistances": {
+          "Label": "Résistance aux dégâts"
         }
       },
       "Effects": {
@@ -4812,6 +4946,14 @@
         },
         "transformTokens": {
           "label": "Transformer les tokens"
+        },
+        "minimumAC": {
+          "hint": "Formule définissant la classe d'armure de la créature transformée, si la CA de l'acteur n'est pas déjà supérieure.",
+          "label": "Classe d'armure minimum"
+        },
+        "spellLists": {
+          "hint": "Les sorts figurant sur ces listes de sorts seront conservés si l'acteur possède un objet correspondant.",
+          "label": "Listes des sorts conservés"
         }
       },
       "Merge": {
@@ -4850,7 +4992,8 @@
       },
       "ChallengeRatingLabel": "Facteur de puissance de {cr} ou inférieur",
       "Empty": "Cliquez sur le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour créer un profil.",
-      "Label": "Profil de transformation"
+      "Label": "Profil de transformation",
+      "DropHint": "Déposer la créature ici"
     },
     "SECTIONS": {
       "Profiles": "Profils",
@@ -4906,7 +5049,8 @@
       "Trait": "Trait passif",
       "WeightlessContents": "Contenu sans poids",
       "Special": "Spécial",
-      "StealthDisadvantage": "Désavantage de Discrétion"
+      "StealthDisadvantage": "Désavantage de Discrétion",
+      "Sidekick": "Comparses"
     },
     "SECTIONS": {
       "Activities": "Activités",
@@ -4917,5 +5061,228 @@
       "Description": "Description"
     }
   },
-  "DND5E.Remaining": "Restant"
+  "DND5E.Remaining": "Restant",
+  "TYPES.RegionBehavior": {
+    "dnd5e.difficultTerrain": "Terrain difficile",
+    "dnd5e.rotateArea": "Zone de rotation"
+  },
+  "DND5E.Challenge": "Facteur de puissance",
+  "DND5E.ENCOUNTER": {
+    "Tab": {
+      "Loot": "Butin",
+      "Description": "Description",
+      "Members": "Membres"
+    },
+    "Action": {
+      "Award": "Récompense PX et monnaie"
+    },
+    "Difficulty": {
+      "high": "Difficulté élevée",
+      "low": "Difficulté faible",
+      "moderate": "Difficulté modérée"
+    },
+    "DropCreature": "Déposer une créature"
+  },
+  "DND5E.FlagsHalflingNimbleness": "Agilité halfeline",
+  "DND5E.SPELLCASTING": {
+    "METHODS": {
+      "Innate": {
+        "label": "Sorts innés"
+      },
+      "Spell": {
+        "label": "Sorts",
+        "Full": {
+          "label": "Lanceur complet ('full caster' : magicien,druide,clerc,barde,ensorceleur.)"
+        },
+        "Half": {
+          "label": "1/2 lanceur ('Half Caster' : paladin, rôdeur)"
+        },
+        "Third": {
+          "label": "1/3 lanceur ('Third Caster' : Chevalier Occulte, Arnaqueur Arcanique)"
+        },
+        "Artificer": {
+          "label": "Artificier"
+        }
+      },
+      "Pact": {
+        "label": "Magie de pacte",
+        "Full": {
+          "label": "Magie de pacte"
+        },
+        "abbr": "Pacte"
+      },
+      "AtWill": {
+        "label": "À volonté"
+      },
+      "Ritual": {
+        "label": "Rituel uniquement"
+      }
+    },
+    "SLOTS": {
+      "spell0": "Sorts mineurs",
+      "spell1": "1er niveau",
+      "spell2": "2e niveau",
+      "spell3": "3e niveau",
+      "spell4": "4e niveau",
+      "spell5": "5e niveau",
+      "spell6": "6e niveau",
+      "spell7": "7e niveau",
+      "spell8": "8e niveau",
+      "spell9": "9e niveau"
+    },
+    "STATES": {
+      "Unprepared": "Non préparé",
+      "Prepared": "Préparé",
+      "AlwaysPrepared": "Toujours préparé"
+    },
+    "Unlabeled": "Incantation sans nom"
+  },
+  "DND5E.Travel": {
+    "Label": "Allure de voyage",
+    "Pace": {
+      "Slow": "Lente",
+      "Fast": "Rapide",
+      "Normal": "Normale"
+    }
+  },
+  "TYPES.Actor.encounter": "Rencontre",
+  "TYPES.Actor.encounterPl": "Rencontres",
+  "DND5E.ACTOR": {
+    "Warning": {
+      "CreateActor": "Vous devez avoir le droit 'Créer de nouveaux acteurs' pour invoquer directement depuis un compendium.",
+      "InvalidItem": "Les objets de type {itemType} ne peuvent être ajoutés à un {actorType}.",
+      "NoActor": "Impossible de trouver l'acteur avec l'UUID '{uuid}' à invoquer.",
+      "Singleton": "Seul un objet de type {itemType} peut être ajouté à un {actorType}."
+    }
+  },
+  "DND5E.FlagsHalflingNimblenessHint": "Le déplacement à travers les créatures plus grandes n'est pas bloqué.",
+  "DND5E.FlagsToolExpertise": "Expertise de l'outillage",
+  "DND5E.FlagsToolExpertiseHint": "Double votre bonus de maîtrise pour tout test de caractéristique que vous effectuez en utilisant votre maîtrise d'un outil.",
+  "DND5E.LevelAvg": "Niveau moyen",
+  "DND5E.Method": "Méthode",
+  "DND5E.Preparation": "Préparation",
+  "DND5E.REGIONBEHAVIORS": {
+    "DIFFICULTTERRAIN": {
+      "FIELDS": {
+        "ignoredDispositions": {
+          "hint": "Les tokens ayant ces dispositions ne seront pas affectés par ce terrain difficile.",
+          "label": "Dispositions ignorées"
+        },
+        "magical": {
+          "hint": "Ce Terrain difficile est créé par un effet magique.",
+          "label": "Magique"
+        },
+        "types": {
+          "hint": "Types qui décrivent le mieux l'origine de ce Terrain difficile, le cas échéant.",
+          "label": "Types"
+        }
+      },
+      "Type": {
+        "All": "Tous les types",
+        "Ice": "Verglas",
+        "Magical": "Magique",
+        "Nonmagical": "Non magique",
+        "Plants": "Plantes ou taillis",
+        "Rocks": "Éboulis ou rochers",
+        "Liquid": "Liquide peu profond",
+        "Slope": "Pente raide",
+        "Snow": "Neige profonde"
+      }
+    },
+    "ROTATEAREA": {
+      "Action": {
+        "AddPosition": "Ajouter une position",
+        "DeletePosition": "Supprimer une position",
+        "RotateToPosition": "Faire pivoter vers la position"
+      },
+      "DirectionMode": {
+        "Clockwise": "Sens des aiguilles d'une montre",
+        "CounterClockwise": "Sens inverse des aiguilles d'une montre",
+        "Longest": "Chemin le plus long",
+        "Shortest": "Chemin le plus court"
+      },
+      "FIELDS": {
+        "directionMode": {
+          "label": "Mode de direction",
+          "hint": "Détermine comment la direction de la rotation est choisie lors du passage à la position suivante."
+        },
+        "lights": {
+          "ids": {
+            "label": "Lumières"
+          }
+        },
+        "positions": {
+          "label": "Positions",
+          "element": {
+            "angle": {
+              "label": "Angle"
+            }
+          }
+        },
+        "regions": {
+          "ids": {
+            "label": "Régions"
+          }
+        },
+        "sounds": {
+          "ids": {
+            "label": "Sons d'ambiance"
+          }
+        },
+        "tiles": {
+          "ids": {
+            "label": "Tuiles"
+          }
+        },
+        "time": {
+          "mode": {
+            "label": "Mode de vitesse",
+            "hint": "Comment la vitesse de rotation est déterminée à partir du temps de rotation, soit la même quelle que soit la distance parcourue (fixe), soit en fonction de la distance parcourue (variable)."
+          },
+          "value": {
+            "label": "Temps de rotation",
+            "hint": "Le temps en millisecondes pour faire pivoter vers la position suivante (en mode fixe) ou pour pivoter de 90° (en mode variable)."
+          }
+        },
+        "walls": {
+          "ids": {
+            "label": "Murs"
+          },
+          "link": {
+            "label": "Lier les murs",
+            "hint": "Faites pivoter tous les segments de mur attachés à ceux spécifiés."
+          }
+        }
+      },
+      "SpeedMode": {
+        "Fixed": "Fixe (temps de rotation total)",
+        "Variable": "Variable (temps nécessaire pour effectuer une rotation de 90˚)"
+      },
+      "Warning": {
+        "RecursiveRegion": "Impossible de faire pivoter la même région qui contient le comportement."
+      }
+    }
+  },
+  "DND5E.MovementIgnoredDifficultTerrain": "Terrain difficile ignoré",
+  "DND5E.SheetClass": {
+    "Character": "Feuille de personnage 5e par défaut",
+    "ClassSummary": "Feuille de résumé des classes 5e par défaut",
+    "Container": "Feuille de conteneur 5e par défaut",
+    "DifficultTerrain": "Feuille de Terrain difficile 5e par défaut",
+    "Encounter": "Feuille de rencontre 5e par défaut",
+    "Group": "Feuille de groupe 5e par défaut",
+    "Item": "Feuille d'objet 5e par défaut",
+    "JournalEntry": "Feuille de journal 5e par défaut",
+    "JournalEntryLegacy": "Feuille de journal 5e historique",
+    "MapLocation": "Feuille de carte 5e par défaut",
+    "NPC": "Feuille de PNJ 5e par défaut",
+    "RotateArea": "Feuille de zone de rotation 5e par défaut",
+    "Rule": "Feuille de règles 5e par défaut",
+    "SpellList": "Feuille de liste de sorts 5e par défaut",
+    "Token": "Feuille de token 5e par défaut",
+    "Vehicle": "Feuille de véhicule 5e par défaut"
+  },
+  "DND5E.SkillRoll": "Test de {ability} ({skill})",
+  "DND5E.SpellLevelSpell": "{level} ({n} Emplacements)",
+  "DND5E.Summary": "Résumé"
 }
