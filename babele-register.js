@@ -111,7 +111,7 @@ export class Converters {
 	static weight(weight) {
 		return foundry.utils.mergeObject(weight, {
 			"value": Converters.lbToKg(weight.value),
-			"units": "kg"
+			"units": convertMetricWeight() ? "kg" : weight.units
 		});
 	}
 
@@ -148,7 +148,7 @@ export class Converters {
 	static volume(volume) {
 		return foundry.utils.mergeObject(volume, {
 			"value": Converters.pcToL(volume.value),
-			"units": "liter"
+			"units": convertMetricVolume() ? "liter" : volume.units
 		});
 	}
 
