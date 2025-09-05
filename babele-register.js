@@ -96,16 +96,13 @@ export class Converters {
 
 	static range(range) {
 		const conversion = Converters.conversionInfo[range.units];
-		if (conversion) {
-			return foundry.utils.mergeObject(range, {
-				"value": conversion.converter(range.value),
-				"long": conversion.converter(range.long),
-				"reach": conversion.converter(range.reach),
-				"units": conversion.units
-			});
-		}
-
-		return range;
+		if (!conversion) return range;
+		return foundry.utils.mergeObject(range, {
+			"value": conversion.converter(range.value),
+			"long": conversion.converter(range.long),
+			"reach": conversion.converter(range.reach),
+			"units": conversion.units
+		});
 	}
 
 	static weight(weight) {
@@ -117,25 +114,23 @@ export class Converters {
 
 	static target(target) {
 		const conversion = Converters.conversionInfo[target.template.units];
-		if (conversion) {
-			return foundry.utils.mergeObject(target, {
-				template: {
-					"size": conversion.converter(target.template.size),
-					"height": conversion.converter(target.template.height),
-					"width": conversion.converter(target.template.width),
-					"units": conversion.units
-				},
-				affects: {
-					"count": conversion.converter(target.affects.count)
-				}
-			});
-		}
-
-		return target;
+		if (!conversion) return target;
+		return foundry.utils.mergeObject(target, {
+			template: {
+				"size": conversion.converter(target.template.size),
+				"height": conversion.converter(target.template.height),
+				"width": conversion.converter(target.template.width),
+				"units": conversion.units
+			},
+			affects: {
+				"count": conversion.converter(target.affects.count)
+			}
+		});
 	}
 
 	static senses(senses) {
 		const conversion = Converters.conversionInfo[senses.units ?? "ft"];
+		if (!conversion) return senses;
 		return foundry.utils.mergeObject(senses, {
 			"darkvision": conversion.converter(senses.darkvision),
 			"blindsight": conversion.converter(senses.blindsight),
@@ -154,6 +149,7 @@ export class Converters {
 
 	static movement(movement) {
 		const conversion = Converters.conversionInfo[movement.units ?? "ft"];
+		if (!conversion) return movement;
 		return foundry.utils.mergeObject(movement, {
 			"burrow": conversion.converter(movement.burrow),
 			"climb": conversion.converter(movement.climb),
@@ -377,6 +373,9 @@ export class Converters {
 					name: translation.name ?? activity.name,
 					activation: { condition: translation.condition ?? activity.activation?.condition },
 					description: { chatFlavor: translation.chatFlavor ?? activity.description?.chatFlavor },
+					duration: { special: translation.duration ?? activity.duration?.special },
+					range: { special: translation.range ?? activity.range?.special },
+					target: { affects: { special: translation.target ?? activity.target?.affects?.special } },
 					profiles: activity.profiles ? Converters.summonProfiles(activity.profiles, translation.profiles) : activity.profiles
 				});
 			}
