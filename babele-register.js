@@ -1,4 +1,5 @@
 import { Converters as babeleConverters } from "../babele/script/converters.js";
+import { registerCustomEnrichersFr } from "./enrichers-fr.mjs";
 
 Hooks.once('init', () => {
 
@@ -25,12 +26,14 @@ Hooks.once('init', () => {
 			"pages": Converters.pages(),
 			"effects": Converters.effects(),
 			"activities": Converters.activities(),
-			"advancement": Converters.advancement()
+			"advancement": Converters.advancement(),
+			"planarSubtype": Converters.planarSubtype()
 		});
 	}
 });
 
 Hooks.once('ready', () => {
+	registerCustomEnrichersFr();
 	fixExhaustion();
 });
 
@@ -336,8 +339,24 @@ export class Converters {
 		];
 
 		changes.forEach(change => {
-			if (change.mode != 1 && movementSensesType.includes(change.key)) {
-				change.value = Converters.footsToMeters(change.value);
+			if (change.mode != 1) {
+				if (movementSensesType.includes(change.key)) {
+					change.value = Converters.footsToMeters(change.value);
+				}
+				if (["system.range.value", "system.range.long"].includes(change.key)) {
+					if (parseInt(change.value)) {
+						change.value = Converters.footsToMeters(change.value);
+					} else {
+						const match = change.value.match(/^(.+?)\s*(\d+)(?:\s+(.*))?$/);
+						if (match) {
+							let [_, begin, numberStr, end] = match;
+							begin ??= "";
+							const convertedNumber = Converters.footsToMeters(numberStr);
+							end ??= "";
+							change.value = `${begin} ${convertedNumber} ${end}`;
+						}
+					}
+				}
 			}
 			return change;
 		});
@@ -419,6 +438,18 @@ export class Converters {
 				});
 			}
 			return adv;
+		});
+	}
+
+	static planarSubtype() {
+		return (habitat, translation) => Converters._planarSubtype(habitat, translation);
+	}
+
+	static _planarSubtype(habitat, translation) {
+		if (!translation) return habitat;
+		return habitat.map(hab => {
+			if (hab.subtype) return foundry.utils.mergeObject(hab, { subtype: translation ?? hab.subtype });
+			return hab;
 		});
 	}
 }
