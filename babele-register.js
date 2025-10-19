@@ -341,7 +341,11 @@ export class Converters {
 		changes.forEach(change => {
 			if (change.mode != 1) {
 				if (movementSensesType.includes(change.key)) {
-					change.value = Converters.footsToMeters(change.value);
+					if (change.value.startsWith("+") || change.value.startsWith("-")) {
+						change.value = `${change.value[0]}${Converters.footsToMeters(change.value.substring(1))}`;
+					} else {
+						change.value = Converters.footsToMeters(change.value);
+					}
 				}
 				if (["system.range.value", "system.range.long"].includes(change.key)) {
 					if (parseInt(change.value)) {
