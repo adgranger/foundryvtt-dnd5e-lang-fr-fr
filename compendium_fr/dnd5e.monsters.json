@@ -1862,7 +1862,8 @@
         },
         "Counterspell": {
           "name": "Contresort",
-          "description": "<p>Vous tentez d’interrompre une créature en pleine incantation. Si la créature lance un sort du 3e niveau ou inférieur, son sort échoue, sans le moindre effet. Si elle lance un sort du 4e niveau ou supérieur, effectuez un test de caractéristique d’incantation. Le DD est égal à 10 + le niveau du sort. En cas de réussite, le sort de la créature échoue, sans le moindre effet.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 4e niveau ou supérieur, le sort interrompu est automatiquement sans effet si son niveau est inférieur ou égal à celui de l’emplacement de sort que vous utilisez.</p>"
+          "description": "<p>Vous tentez d’interrompre une créature en pleine incantation. Si la créature lance un sort du 3e niveau ou inférieur, son sort échoue, sans le moindre effet. Si elle lance un sort du 4e niveau ou supérieur, effectuez un test de caractéristique d’incantation. Le DD est égal à 10 + le niveau du sort. En cas de réussite, le sort de la créature échoue, sans le moindre effet.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 4e niveau ou supérieur, le sort interrompu est automatiquement sans effet si son niveau est inférieur ou égal à celui de l’emplacement de sort que vous utilisez.</p>",
+          "condition": "que vous jouez lorsque vous voyez une créature dans un rayon de 18 m lancer un sort"
         },
         "Fly": {
           "name": "Vol",
@@ -3081,7 +3082,8 @@
         "Feather Fall": {
           "name": "Feuille morte",
           "description": "<p>Choisissez jusqu’à cinq créatures qui chutent à portée. La vitesse de chute de chacune passe à 18 m par round jusqu’à la fin du sort. Si la créature atterrit avant la fin du sort, elle ne subit aucun dégât de chute et termine sur ses pieds, et le sort prend fin en ce qui la concerne.</p>",
-          "materials": "une petite plume ou un peu de duvet"
+          "materials": "une petite plume ou un peu de duvet",
+          "condition": "que vous jouez quand vous-même ou une créature dans un rayon de 18 m chutez"
         },
         "Fly": {
           "name": "Vol",
@@ -3278,7 +3280,8 @@
             "Shield": {
               "name": "Bouclier"
             }
-          }
+          },
+          "condition": "Que vous jouez lorsque vous êtes touché par une attaque ou ciblé par le sort projectile magique"
         },
         "Dream": {
           "name": "Songe",
@@ -3661,7 +3664,8 @@
         "Conjure Air Elemental": {
           "name": "Invocation d’élémentaire de l’air",
           "description": "<p>Vous faites appel à un serviteur élémentaire. Choisissez une zone d’air, de terre, de feu ou d’eau à portée, qui remplit l’équivalent d’un cube de 3 m d’arête. Un élémentaire d’un facteur de puissance de 5 ou moins, adapté à la zone retenue, se présente dans un espace inoccupé à 3 m ou moins de la zone. Ainsi un élémentaire du feu pourra-t-il émerger d’un feu de camp et un élémentaire de la terre du sol. L’élémentaire disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>L’élémentaire est amical envers vous et vos compagnons pour toute la durée. Jouez l’initiative pour l’élémentaire, qui jouera donc ses propres tours. Il obéit à vos instructions verbales (pas d’action requise de votre part). Si vous ne lui ordonnez rien, il se défend contre les créatures hostiles, mais n’entreprend par ailleurs pas d’action.</p><p>Si votre concentration est rompue, l’élémentaire ne disparaît pas. En revanche, vous en perdez le contrôle, il devient hostile envers vous et vos compagnons, et susceptible de vous attaquer.</p><p>Vous ne pouvez révoquer un élémentaire que vous ne contrôlez plus, qui disparaît 1 heure après avoir été convoqué.</p><p>Le MJ dispose du profil de l’élémentaire.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 6e niveau ou supérieur, le facteur de puissance de l’élémentaire augmente de 1 par niveau d’emplacement au-delà du 5e.</p>",
-          "materials": "de l'encens brûlé pour l'air, de la glaise pour la terre, du soufre et du phosphore pour le feu, de l'eau et du sable pour l'eau"
+          "materials": "de l'encens brûlé pour l'air, de la glaise pour la terre, du soufre et du phosphore pour le feu, de l'eau et du sable pour l'eau",
+          "condition": "une zone d'air, de terre, de feu ou d'eau à portée, qui remplit l'équivalent d'un cube de 3 m d'arête"
         },
         "Detect Evil and Good": {
           "name": "Détection du mal et du bien",
@@ -4269,7 +4273,8 @@
         },
         "Conjure Elemental (fire elemental only)": {
           "name": "Invocation d’élémentaire du feu",
-          "description": "<p>Vous faites appel à un serviteur élémentaire. Choisissez une zone d’air, de terre, de feu ou d’eau à portée, qui remplit l’équivalent d’un cube de 3 m d’arête. Un élémentaire d’un facteur de puissance de 5 ou moins, adapté à la zone retenue, se présente dans un espace inoccupé à 3 m ou moins de la zone. Ainsi un élémentaire du feu pourra-t-il émerger d’un feu de camp et un élémentaire de la terre du sol. L’élémentaire disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>L’élémentaire est amical envers vous et vos compagnons pour toute la durée. Jouez l’initiative pour l’élémentaire, qui jouera donc ses propres tours. Il obéit à vos instructions verbales (pas d’action requise de votre part). Si vous ne lui ordonnez rien, il se défend contre les créatures hostiles, mais n’entreprend par ailleurs pas d’action.</p><p>Si votre concentration est rompue, l’élémentaire ne disparaît pas. En revanche, vous en perdez le contrôle, il devient hostile envers vous et vos compagnons, et susceptible de vous attaquer.</p><p>Vous ne pouvez révoquer un élémentaire que vous ne contrôlez plus, qui disparaît 1 heure après avoir été convoqué.</p><p>Le MJ dispose du profil de l’élémentaire.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 6e niveau ou supérieur, le facteur de puissance de l’élémentaire augmente de 1 par niveau d’emplacement au-delà du 5e.</p>"
+          "description": "<p>Vous faites appel à un serviteur élémentaire. Choisissez une zone d’air, de terre, de feu ou d’eau à portée, qui remplit l’équivalent d’un cube de 3 m d’arête. Un élémentaire d’un facteur de puissance de 5 ou moins, adapté à la zone retenue, se présente dans un espace inoccupé à 3 m ou moins de la zone. Ainsi un élémentaire du feu pourra-t-il émerger d’un feu de camp et un élémentaire de la terre du sol. L’élémentaire disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>L’élémentaire est amical envers vous et vos compagnons pour toute la durée. Jouez l’initiative pour l’élémentaire, qui jouera donc ses propres tours. Il obéit à vos instructions verbales (pas d’action requise de votre part). Si vous ne lui ordonnez rien, il se défend contre les créatures hostiles, mais n’entreprend par ailleurs pas d’action.</p><p>Si votre concentration est rompue, l’élémentaire ne disparaît pas. En revanche, vous en perdez le contrôle, il devient hostile envers vous et vos compagnons, et susceptible de vous attaquer.</p><p>Vous ne pouvez révoquer un élémentaire que vous ne contrôlez plus, qui disparaît 1 heure après avoir été convoqué.</p><p>Le MJ dispose du profil de l’élémentaire.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 6e niveau ou supérieur, le facteur de puissance de l’élémentaire augmente de 1 par niveau d’emplacement au-delà du 5e.</p>",
+          "condition": "une zone d'air, de terre, de feu ou d'eau à portée, qui remplit l'équivalent d'un cube de 3 m d'arête"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -6177,7 +6182,8 @@
             "Shield": {
               "name": "Bouclier"
             }
-          }
+          },
+          "condition": "Que vous jouez lorsque vous êtes touché par une attaque ou ciblé par le sort projectile magique"
         },
         "Dispel Magic": {
           "name": "Dissipation de la magie",
@@ -7140,7 +7146,8 @@
             "Shield": {
               "name": "Bouclier"
             }
-          }
+          },
+          "condition": "Que vous jouez lorsque vous êtes touché par une attaque ou ciblé par le sort projectile magique"
         },
         "Thunderwave": {
           "name": "Vague tonnante",
@@ -7172,7 +7179,8 @@
         },
         "Counterspell": {
           "name": "Contresort",
-          "description": "<p>Vous tentez d’interrompre une créature en pleine incantation. Si la créature lance un sort du 3e niveau ou inférieur, son sort échoue, sans le moindre effet. Si elle lance un sort du 4e niveau ou supérieur, effectuez un test de caractéristique d’incantation. Le DD est égal à 10 + le niveau du sort. En cas de réussite, le sort de la créature échoue, sans le moindre effet.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 4e niveau ou supérieur, le sort interrompu est automatiquement sans effet si son niveau est inférieur ou égal à celui de l’emplacement de sort que vous utilisez.</p>"
+          "description": "<p>Vous tentez d’interrompre une créature en pleine incantation. Si la créature lance un sort du 3e niveau ou inférieur, son sort échoue, sans le moindre effet. Si elle lance un sort du 4e niveau ou supérieur, effectuez un test de caractéristique d’incantation. Le DD est égal à 10 + le niveau du sort. En cas de réussite, le sort de la créature échoue, sans le moindre effet.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 4e niveau ou supérieur, le sort interrompu est automatiquement sans effet si son niveau est inférieur ou égal à celui de l’emplacement de sort que vous utilisez.</p>",
+          "condition": "que vous jouez lorsque vous voyez une créature dans un rayon de 18 m lancer un sort"
         },
         "Dispel Magic": {
           "name": "Dissipation de la magie",
@@ -7387,7 +7395,8 @@
             "Shield": {
               "name": "Bouclier"
             }
-          }
+          },
+          "condition": "Que vous jouez lorsque vous êtes touché par une attaque ou ciblé par le sort projectile magique"
         },
         "Misty Step": {
           "name": "Foulée brumeuse",
@@ -7400,7 +7409,8 @@
         },
         "Counterspell": {
           "name": "Contresort",
-          "description": "<p>Vous tentez d’interrompre une créature en pleine incantation. Si la créature lance un sort du 3e niveau ou inférieur, son sort échoue, sans le moindre effet. Si elle lance un sort du 4e niveau ou supérieur, effectuez un test de caractéristique d’incantation. Le DD est égal à 10 + le niveau du sort. En cas de réussite, le sort de la créature échoue, sans le moindre effet.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 4e niveau ou supérieur, le sort interrompu est automatiquement sans effet si son niveau est inférieur ou égal à celui de l’emplacement de sort que vous utilisez.</p>"
+          "description": "<p>Vous tentez d’interrompre une créature en pleine incantation. Si la créature lance un sort du 3e niveau ou inférieur, son sort échoue, sans le moindre effet. Si elle lance un sort du 4e niveau ou supérieur, effectuez un test de caractéristique d’incantation. Le DD est égal à 10 + le niveau du sort. En cas de réussite, le sort de la créature échoue, sans le moindre effet.</p><p><strong>À plus haut niveau</strong>. Lorsque vous lancez ce sort par un emplacement du 4e niveau ou supérieur, le sort interrompu est automatiquement sans effet si son niveau est inférieur ou égal à celui de l’emplacement de sort que vous utilisez.</p>",
+          "condition": "que vous jouez lorsque vous voyez une créature dans un rayon de 18 m lancer un sort"
         },
         "Fireball": {
           "name": "Boule de feu",
@@ -10089,7 +10099,8 @@
         "Feather Fall": {
           "name": "Feuille morte",
           "description": "<p>Choisissez jusqu’à cinq créatures qui chutent à portée. La vitesse de chute de chacune passe à 18 m par round jusqu’à la fin du sort. Si la créature atterrit avant la fin du sort, elle ne subit aucun dégât de chute et termine sur ses pieds, et le sort prend fin en ce qui la concerne.</p>",
-          "materials": "une petite plume ou un peu de duvet"
+          "materials": "une petite plume ou un peu de duvet",
+          "condition": "que vous jouez quand vous-même ou une créature dans un rayon de 18 m chutez"
         },
         "Levitate": {
           "name": "Lévitation",
@@ -10143,13 +10154,23 @@
               "name": "Charmé",
               "description": "<p>La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon.</p><p>Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l'effet en cas de réussite. Si la cible réussit son JS contre l'effet ou si celui-ci prend fin, elle devient immunisée contre le Charme de ce fiélon pendant 24 heures.</p>"
             }
+          },
+          "activities": {
+            "save": {
+              "target": "Humanoïde"
+            }
           }
         },
         "Draining Kiss": {
           "name": "Baiser dévitalisant",
           "description": "<p>Le fiélon échange un baiser avec une créature charmée par lui ou consentante. La cible effectue un jet de sauvegarde de [[/save]] contre cette magie et subit 32 ([[/damage]]{5d10 + 5}) dégâts psychiques en cas d'échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
           "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>",
-          "requirements": "Cible une créature charmée ou consentante"
+          "requirements": "Cible une créature charmée ou consentante",
+          "activities": {
+            "save": {
+              "target": "créature charmée ou consentante"
+            }
+          }
         },
         "Etherealness": {
           "name": "Forme éthérée",
@@ -10823,7 +10844,12 @@
         "Bite (Bat or Vampire Form Only)": {
           "name": "Morsure (forme de chauve-souris ou de vampire uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature consentante ou une créature agrippée par le vampire, &Reference[incapacitated]{neutralisée} ou &Reference[restrained]{entravée}. <em>Touché :</em> 7 ([[/damage]]{1d6 + 4}) dégâts perforants plus 10 ([[/damage]]{3d6}) dégâts nécrotiques. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis et le vampire récupère autant de points de vie que ce même montant. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0. Un humanoïde ainsi tué, puis enterré, se relève la nuit suivante comme vampirien sous le contrôle du vampire.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de chauve-souris ou de vampire uniquement).</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de chauve-souris ou de vampire uniquement).</p>",
+          "activities": {
+            "attack": {
+              "target": "une créature consentante ou une créature agrippée par le vampire, neutralisée ou entravée"
+            }
+          }
         },
         "Charm": {
           "name": "Charme",

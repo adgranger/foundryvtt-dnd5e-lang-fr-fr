@@ -775,7 +775,8 @@
       "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>La boule de cristal classique, objet très rare, mesure environ quinze centimètres de diamètre. Tant que vous la touchez, vous pouvez lancer le sort @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{scrutation} (DD de sauvegarde 17) par son biais.</p><p>Vous pouvez consacrer une action à lancer le sort @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{détection des pensées} (DD de sauvegarde 17) lors d'une scrutation avec cette boule de cristal en ciblant les créatures que vous voyez dans un rayon de 9 m du capteur du sort. Vous n'avez pas besoin de vous concentrer sur cette détection des pensées pour la maintenir pendant toute sa durée, mais elle s'achève si la scrutation se termine.</p>",
       "activities": {
         "fRkGCqgiCHP528xk": {
-          "condition": "Lors d'une scrutation avec cette boule de cristal"
+          "condition": "Lors d'une scrutation avec cette boule de cristal",
+          "duration": "Tant que le sort scrutation est actif"
         }
       }
     },
@@ -784,7 +785,8 @@
       "description": "<p><em>Objet merveilleux (harmonisation requise)</em></p><p>La boule de cristal classique, objet très rare, mesure environ quinze centimètres de diamètre. Tant que vous la touchez, vous pouvez lancer le sort @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{scrutation} (DD de sauvegarde 17) par son biais.</p><p>Lors d'une scrutation avec cette boule de cristal, vous pouvez communiquer par télépathie avec les créatures que vous voyez dans un rayon de 9 m du capteur du sort. Vous pouvez consacrer une action à lancer le sort @UUID[Compendium.dnd5e.spells.Item.zMAWdyc8UVb37BK4]{suggestion} (DD de sauvegarde 17) via le capteur sur l'une de ces créatures. Vous n'avez pas besoin de vous concentrer sur cette suggestion pour la maintenir pendant toute sa durée, mais elle s'achève si la scrutation se termine. Une fois utilisé, le pouvoir suggestion de cette boule de cristal ne peut plus resservir jusqu'à l'aube suivante.</p>",
       "activities": {
         "5OrwGscvIsTh4piO": {
-          "condition": "Lors d'une scrutation avec cette boule de cristal"
+          "condition": "Lors d'une scrutation avec cette boule de cristal",
+          "duration": "Tant que le sort scrutation est actif"
         }
       }
     },
@@ -1297,35 +1299,75 @@
     },
     "Giant Slayer Battleaxe": {
       "name": "Hache d'armes tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Greataxe": {
       "name": "Hache à deux mains tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Greatsword": {
       "name": "Épée à deux mains tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Handaxe": {
       "name": "Hachette tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Longsword": {
       "name": "Épée longue tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Rapier": {
       "name": "Rapière tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Scimitar": {
       "name": "Cimeterre tueur de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Giant Slayer Shortsword": {
       "name": "Épée courte tueuse de géants",
-      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>"
+      "description": "<p>Vous recevez un bonus de +1 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Quand vous touchez un géant avec elle, il subit 2d6 dégâts supplémentaires du type de l'arme et doit réussir un jet de sauvegarde de Force DD 15 sous peine de se retrouver à terre. Pour ce qui est de cette arme, le terme « géant » se réfère à toute créature dont le type est géant, ce qui comprend les ettins et les trolls.</p>",
+      "activities": {
+        "save": {
+          "target": "Géant"
+        }
+      }
     },
     "Glaive": {
       "name": "Coutille",
@@ -1433,7 +1475,8 @@
         },
         "Natural 20 Damage": {
           "name": "Dégâts 20 naturel",
-          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque"
+          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque",
+          "target": "Ni artificiel ni mort-vivant"
         }
       }
     },
@@ -1664,23 +1707,48 @@
     },
     "Holy Avenger Greatsword": {
       "name": "Épée à deux mains vengeresse sacrée",
-      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>"
+      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>",
+      "activities": {
+        "damage": {
+          "target": "Fiélon ou mort-vivant"
+        }
+      }
     },
     "Holy Avenger Longsword": {
       "name": "Épée longue vengeresse sacrée",
-      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>"
+      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>",
+      "activities": {
+        "damage": {
+          "target": "Fiélon ou mort-vivant"
+        }
+      }
     },
     "Holy Avenger Rapier": {
       "name": "Rapière vengeresse sacrée",
-      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>"
+      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>",
+      "activities": {
+        "damage": {
+          "target": "Fiélon ou mort-vivant"
+        }
+      }
     },
     "Holy Avenger Scimitar": {
       "name": "Cimeterre vengeur sacré",
-      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>"
+      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>",
+      "activities": {
+        "damage": {
+          "target": "Fiélon ou mort-vivant"
+        }
+      }
     },
     "Holy Avenger Shortsword": {
       "name": "Épée courte vengeresse sacrée",
-      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>"
+      "description": "<p><em>(Harmonisation requise avec un paladin)</em></p><p>Vous recevez un bonus de +3 aux jets d'attaque et de dégâts effectués avec cette arme magique. Quand vous touchez un fiélon ou un mort-vivant avec elle, cette créature subit 2d10 dégâts radiants supplémentaires.</p><p>Tant que vous tenez l'épée dégainée, elle crée une aura dans un rayon de 3 m. Vous-même et toutes les créatures de l'aura qui vous sont amicales êtes avantagés aux jets de sauvegarde contre les sorts et autres effets magiques. Si vous disposez de 17 niveaux ou plus dans la classe de paladin, le rayon de cette aura est de 9 m.</p>",
+      "activities": {
+        "damage": {
+          "target": "Fiélon ou mort-vivant"
+        }
+      }
     },
     "Hooded Lantern": {
       "name": "Lanterne à capote",
@@ -2025,7 +2093,8 @@
         },
         "Natural 20 Damage": {
           "name": "Dégâts 20 naturel",
-          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque"
+          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque",
+          "target": "Ni artificiel ni mort-vivant"
         }
       }
     },
@@ -2817,7 +2886,8 @@
         },
         "Natural 20 Damage": {
           "name": "Dégâts 20 naturel",
-          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque"
+          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque",
+          "target": "Ni artificiel ni mort-vivant"
         }
       }
     },
@@ -2886,7 +2956,12 @@
     },
     "Ring of Air Elemental Command": {
       "name": "Anneau de maîtrise élémentaire de l'air",
-      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire de l'Air.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.banHjKDMCegbUwYE]{élémentaires de l'air}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire de l'air</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire de l'air. En outre, si vous tombez, vous descendez de 18 m par round sans subir de dégâts de chute. Vous parlez et comprenez l'aérien.</p><p>Si vous contribuez à tuer un élémentaire de l'air alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous bénéficiez de la résistance aux dégâts de foudre.</li><li>Vous êtes doté d'une vitesse de vol égale à votre vitesse au sol et disposez du vol stationnaire.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.FSMy6VAjDnXY9vWz]{bourrasque} (2 charges), @UUID[Compendium.dnd5e.spells.Item.QbTxN5dWIbYZ4jLU]{chaîne d'éclairs} (3 charges) et @UUID[Compendium.dnd5e.spells.Item.ew6GA8dJy2spQmFW]{mur de vent} (1 charge).</li></ul>"
+      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire de l'Air.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.banHjKDMCegbUwYE]{élémentaires de l'air}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire de l'air</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire de l'air. En outre, si vous tombez, vous descendez de 18 m par round sans subir de dégâts de chute. Vous parlez et comprenez l'aérien.</p><p>Si vous contribuez à tuer un élémentaire de l'air alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous bénéficiez de la résistance aux dégâts de foudre.</li><li>Vous êtes doté d'une vitesse de vol égale à votre vitesse au sol et disposez du vol stationnaire.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.FSMy6VAjDnXY9vWz]{bourrasque} (2 charges), @UUID[Compendium.dnd5e.spells.Item.QbTxN5dWIbYZ4jLU]{chaîne d'éclairs} (3 charges) et @UUID[Compendium.dnd5e.spells.Item.ew6GA8dJy2spQmFW]{mur de vent} (1 charge).</li></ul>",
+      "activities": {
+        "bHxilWVcS6pXWF14": {
+          "target": "Uniquement sur les élémentaires de l'air"
+        }
+      }
     },
     "Ring of Animal Influence": {
       "name": "Anneau d'influence animale",
@@ -2912,7 +2987,12 @@
     },
     "Ring of Earth Elemental Command": {
       "name": "Anneau de maîtrise élémentaire de la terre",
-      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire de la Terre.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.sApYLZj9PTZ40wJr]{élémentaires de la terre}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire de la terre.</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire de la terre. En outre, vos déplacements en terrain difficile composé d'éboulis, de rochers ou de terre s'effectuent comme en terrain normal. Vous parlez et comprenez le terreux.</p><p>Si vous contribuez à tuer un élémentaire de la terre alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous bénéficiez de la résistance aux dégâts d'acide.</li><li>Vous pouvez vous déplacer à travers la terre et la roche compacte comme s'il s’agissait d'un terrain difficile. Si vous y terminez votre tour, vous êtes renvoyé dans l'espace inoccupé le plus proche parmi ceux que vous venez de quitter.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.QvGcdRUSNRKEQJlK]{façonnage de la pierre} (2 charges), @UUID[Compendium.dnd5e.spells.Item.NmoRmM1mhuM3pqnY]{mur de pierre} (3 charges) et @UUID[Compendium.dnd5e.spells.Item.ReMbjfeOKoSj3O79]{peau de pierre} (3 charges).</li></ul>"
+      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire de la Terre.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.sApYLZj9PTZ40wJr]{élémentaires de la terre}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire de la terre.</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire de la terre. En outre, vos déplacements en terrain difficile composé d'éboulis, de rochers ou de terre s'effectuent comme en terrain normal. Vous parlez et comprenez le terreux.</p><p>Si vous contribuez à tuer un élémentaire de la terre alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous bénéficiez de la résistance aux dégâts d'acide.</li><li>Vous pouvez vous déplacer à travers la terre et la roche compacte comme s'il s’agissait d'un terrain difficile. Si vous y terminez votre tour, vous êtes renvoyé dans l'espace inoccupé le plus proche parmi ceux que vous venez de quitter.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.QvGcdRUSNRKEQJlK]{façonnage de la pierre} (2 charges), @UUID[Compendium.dnd5e.spells.Item.NmoRmM1mhuM3pqnY]{mur de pierre} (3 charges) et @UUID[Compendium.dnd5e.spells.Item.ReMbjfeOKoSj3O79]{peau de pierre} (3 charges).</li></ul>",
+      "activities": {
+        "2BmS0duA6cOAkzUW": {
+          "target": "Uniquement sur les élémentaires de la terre"
+        }
+      }
     },
     "Ring of Evasion": {
       "name": "Anneau d'esquive totale",
@@ -2929,7 +3009,12 @@
     },
     "Ring of Fire Elemental Command": {
       "name": "Anneau de maîtrise élémentaire du feu",
-      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire du Feu.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.8SMQl75HLjhuSeau]{élémentaires du feu}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire du feu.</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire du feu. En outre, vous bénéficiez de la résistance aux dégâts de feu. Vous parlez et comprenez l'igné.</p><p>Si vous contribuez à tuer un élémentaire du feu alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous êtes immunisé contre les dégâts de feu.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{boule de feu} (2 charges), @UUID[Compendium.dnd5e.spells.Item.5SuJewoa1CRWaj1F]{mains brûlantes} (1 charge) et @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{mur de feu} (3 charges).</li></ul>"
+      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire du Feu.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.8SMQl75HLjhuSeau]{élémentaires du feu}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire du feu.</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire du feu. En outre, vous bénéficiez de la résistance aux dégâts de feu. Vous parlez et comprenez l'igné.</p><p>Si vous contribuez à tuer un élémentaire du feu alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous êtes immunisé contre les dégâts de feu.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{boule de feu} (2 charges), @UUID[Compendium.dnd5e.spells.Item.5SuJewoa1CRWaj1F]{mains brûlantes} (1 charge) et @UUID[Compendium.dnd5e.spells.Item.X3DrXgxjwI2dvkD6]{mur de feu} (3 charges).</li></ul>",
+      "activities": {
+        "dxaE4B2S9PJ692hU": {
+          "target": "Uniquement sur les élémentaires du feu"
+        }
+      }
     },
     "Ring of Fire Resistance": {
       "name": "Anneau de résistance au feu",
@@ -3071,7 +3156,12 @@
     },
     "Ring of Telekinesis": {
       "name": "Anneau de télékinésie",
-      "description": "<p><em>(Harmonisation requise)</em></p><p>Tant que vous portez cet anneau, vous pouvez lancer à volonté le sort @UUID[Compendium.dnd5e.spells.Item.HQfd7jJyULIoGxrZ]{télékinésie}, mais vous ne pouvez cibler que des objets qui ne sont portés par personne.</p>"
+      "description": "<p><em>(Harmonisation requise)</em></p><p>Tant que vous portez cet anneau, vous pouvez lancer à volonté le sort @UUID[Compendium.dnd5e.spells.Item.HQfd7jJyULIoGxrZ]{télékinésie}, mais vous ne pouvez cibler que des objets qui ne sont portés par personne.</p>",
+      "activities": {
+        "yhJYyZZLiK862s7T": {
+          "target": "Qui ne sont portés par personne"
+        }
+      }
     },
     "Ring of Three Wishes": {
       "name": "Anneau de triple souhait",
@@ -3097,7 +3187,12 @@
     },
     "Ring of Water Elemental Command": {
       "name": "Anneau de maîtrise élémentaire de l'eau",
-      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire de l'Eau.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.namJz755U1EhvEJa]{élémentaires de l'eau}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire de l'eau.</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire de l'eau. En outre, vous tenez debout sur les surfaces liquides et pouvez les traverser comme s'il s'agissait de terre ferme. Vous parlez et comprenez l'aquatique.</p><p>Si vous contribuez à tuer un élémentaire de l'eau alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous pouvez respirer sous l'eau et recevez une vitesse de nage égale à votre vitesse au sol.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.7fFHlBk3UNX8gPKL]{contrôle de l'eau} (3 charges), @UUID[Compendium.dnd5e.spells.Item.a3XtAO5n2GrqiAh5]{création ou destruction d'eau} (1 charge), @UUID[Compendium.dnd5e.spells.Item.fzZnVKLmBMo2f5up]{mur de glace} (3 charges) et @UUID[Compendium.dnd5e.spells.Item.WN2LWEljYU6QqnRH]{tempête de grêle} (2 charges).</li></ul>"
+      "description": "<p><em>(Harmonisation requise)</em></p><p>Cet anneau est lié au Plan Élémentaire de l'Eau.</p><p>Tant que vous portez cet anneau, vous êtes avantagé aux jets d'attaque contre les @UUID[Compendium.dnd5e.monsters.Actor.namJz755U1EhvEJa]{élémentaires de l'eau}, qui sont désavantagés à leurs jets d'attaque contre vous. En outre, vous avez accès aux propriétés du plan d'existence lié.</p><p>L'anneau dispose de 5 charges. Il récupère quotidiennement 1d4 + 1 charges dépensées, à l'aube. Le DD de sauvegarde des sorts lancés par l'anneau est de 17.</p><p><em><strong>Anneau de maîtrise élémentaire de l'eau.</strong></em> Vous pouvez dépenser 2 des charges de l'anneau pour lancer le sort @UUID[Compendium.dnd5e.spells.Item.eEpy1ONlXumKS1mp]{domination de monstre} sur un élémentaire de l'eau. En outre, vous tenez debout sur les surfaces liquides et pouvez les traverser comme s'il s'agissait de terre ferme. Vous parlez et comprenez l'aquatique.</p><p>Si vous contribuez à tuer un élémentaire de l'eau alors que vous êtes harmonisé avec cet anneau, vous recevez enfin les propriétés supplémentaires suivantes :</p><ul><li>Vous pouvez respirer sous l'eau et recevez une vitesse de nage égale à votre vitesse au sol.</li><li>Vous pouvez lancer les sorts suivants par l'anneau, en dépensant le nombre de charges indiqué : @UUID[Compendium.dnd5e.spells.Item.7fFHlBk3UNX8gPKL]{contrôle de l'eau} (3 charges), @UUID[Compendium.dnd5e.spells.Item.a3XtAO5n2GrqiAh5]{création ou destruction d'eau} (1 charge), @UUID[Compendium.dnd5e.spells.Item.fzZnVKLmBMo2f5up]{mur de glace} (3 charges) et @UUID[Compendium.dnd5e.spells.Item.WN2LWEljYU6QqnRH]{tempête de grêle} (2 charges).</li></ul>",
+      "activities": {
+        "UXQJwXpxp8Jg9y5Y": {
+          "target": "Uniquement sur les élémentaires de l'eau"
+        }
+      }
     },
     "Ring of Water Walking": {
       "name": "Anneau de marche sur l'eau",
@@ -3279,7 +3374,8 @@
         },
         "Natural 20 Damage": {
           "name": "Dégâts 20 naturel",
-          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque"
+          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque",
+          "target": "Ni artificiel ni mort-vivant"
         }
       }
     },
@@ -3386,7 +3482,8 @@
         },
         "Natural 20 Damage": {
           "name": "Dégâts 20 naturel",
-          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque"
+          "condition": "Lorsque vous attaquez une créature et obtenez un 20 au jet d'attaque",
+          "target": "Ni artificiel ni mort-vivant"
         }
       }
     },
