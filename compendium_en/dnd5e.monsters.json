@@ -1865,7 +1865,8 @@
         },
         "Counterspell": {
           "name": "Counterspell",
-          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>"
+          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>",
+          "condition": "which you take when you see a creature within 60 feet of you casting a spell"
         },
         "Fly": {
           "name": "Fly",
@@ -3084,7 +3085,8 @@
         "Feather Fall": {
           "name": "Feather Fall",
           "description": "<p>Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.</p>",
-          "materials": "A small feather or piece of down"
+          "materials": "A small feather or piece of down",
+          "condition": "which you take when you or a creature within 60 feet of you falls"
         },
         "Fly": {
           "name": "Fly",
@@ -3277,6 +3279,7 @@
         "Shield": {
           "name": "Shield",
           "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>",
+          "condition": "Which you take when you are hit by an attack or targeted by the magic missile spell",
           "effects": {
             "Shield": {
               "name": "Shield"
@@ -3664,7 +3667,8 @@
         "Conjure Air Elemental": {
           "name": "Conjure Air Elemental",
           "description": "<p>You call forth an air elemental servant. Choose an area of air that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.</p>\n<p>The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.</p>\n<p>If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.</p>\n<p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.</p>",
-          "materials": "Burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water."
+          "materials": "Burning incense for air, soft clay for earth, sulfur and phosphorus for fire, or water and sand for water.",
+          "condition": "an area of air, earth, fire, or water that fills a 10-foot cube within range"
         },
         "Detect Evil and Good": {
           "name": "Detect Evil and Good",
@@ -4272,7 +4276,8 @@
         },
         "Conjure Elemental (fire elemental only)": {
           "name": "Conjure Elemental (fire elemental only)",
-          "description": "<p>You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.</p><p>The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.</p><p>If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.</p>"
+          "description": "<p>You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.</p><p>The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.</p><p>If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.</p>",
+          "condition": "an area of air, earth, fire, or water that fills a 10-foot cube within range"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -6177,6 +6182,7 @@
         "Shield": {
           "name": "Shield",
           "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>",
+          "condition": "Which you take when you are hit by an attack or targeted by the magic missile spell",
           "effects": {
             "Shield": {
               "name": "Shield"
@@ -7144,6 +7150,7 @@
         "Shield": {
           "name": "Shield",
           "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>",
+          "condition": "Which you take when you are hit by an attack or targeted by the magic missile spell",
           "effects": {
             "Shield": {
               "name": "Shield"
@@ -7180,7 +7187,8 @@
         },
         "Counterspell": {
           "name": "Counterspell",
-          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>"
+          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>",
+          "condition": "which you take when you see a creature within 60 feet of you casting a spell"
         },
         "Dispel Magic": {
           "name": "Dispel Magic",
@@ -7383,6 +7391,7 @@
         "Shield": {
           "name": "Shield",
           "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>",
+          "condition": "Which you take when you are hit by an attack or targeted by the magic missile spell",
           "effects": {
             "Shield": {
               "name": "Shield"
@@ -7400,7 +7409,8 @@
         },
         "Counterspell": {
           "name": "Counterspell",
-          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>"
+          "description": "<p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p>",
+          "condition": "which you take when you see a creature within 60 feet of you casting a spell"
         },
         "Fireball": {
           "name": "Fireball",
@@ -10092,7 +10102,8 @@
         "Feather Fall": {
           "name": "Feather Fall",
           "description": "<p>Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.</p>",
-          "materials": "A small feather or piece of down"
+          "materials": "A small feather or piece of down",
+          "condition": "which you take when you or a creature within 60 feet of you falls"
         },
         "Levitate": {
           "name": "Levitate",
@@ -10141,6 +10152,11 @@
           "name": "Charm",
           "description": "<p>One humanoid the fiend can see within 30 feet of it must make a [[/save]] saving throw or be magically charmed for 1 day. The charmed target obeys the fiend's verbal or telepathic commands.</p><p>If the target suffers any harm or receives a suicidal command, it can repeat the saving throw, ending the effect on a success. If the target successfully saves against the effect, or if the effect on it ends, the target is immune to this fiend's Charm for the next 24 hours.The fiend can have only one target charmed at a time. If it charms another, the effect on the previous target ends.</p>",
           "chat": "<p>One humanoid the fiend can see within 30 feet of it must make a <strong>Wisdom</strong> saving throw.</p>",
+          "activities": {
+            "save": {
+              "target": "Humanoid"
+            }
+          },
           "effects": {
             "Charmed": {
               "name": "Charmed",
@@ -10152,7 +10168,12 @@
           "name": "Draining Kiss",
           "description": "<p>The fiend kisses a creature charmed by it or a willing creature. The target must make a [[/save]] saving throw against this magic, taking [[/damage]] damage on a failed save, or half as much damage on a successful one.</p><p>The target's hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>",
           "requirements": "Targets a charmed or willing creature",
-          "chat": "<p>The target must make a <strong>Constitution</strong> saving throw against this magic.</p>"
+          "chat": "<p>The target must make a <strong>Constitution</strong> saving throw against this magic.</p>",
+          "activities": {
+            "save": {
+              "target": "charmed or willing creature"
+            }
+          }
         },
         "Etherealness": {
           "name": "Etherealness",
@@ -10828,7 +10849,12 @@
         "Bite (Bat or Vampire Form Only)": {
           "name": "Bite (Bat or Vampire Form Only)",
           "description": "<p><em>Melee Weapon Attack: </em>[[/attack]], reach 5 ft., one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. [[/damage extended]].</p><p>The target's hit point maximum is reduced by an amount equal to the <em>necrotic damage</em> taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0. A humanoid slain in this way and then buried in the ground rises the following night as a vampire spawn under the vampire's control.</p>",
-          "chat": "<p>The Vampire attacks with its Bite.</p>"
+          "chat": "<p>The Vampire attacks with its Bite.</p>",
+          "activities": {
+            "attack": {
+              "target": "one willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained"
+            }
+          }
         },
         "Charm": {
           "name": "Charm",
