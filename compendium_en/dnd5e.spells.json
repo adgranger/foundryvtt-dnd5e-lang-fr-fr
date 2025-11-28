@@ -153,11 +153,55 @@
     },
     "Beacon of Hope": {
       "name": "Beacon of Hope",
-      "description": "<p>This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.</p>"
+      "description": "<p>This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.</p>",
+      "effects": {
+        "Hopeful": {
+          "name": "Hopeful",
+          "description": "<p>The target has Advantage on Wisdom saving throws and Death Saving Throws and regains the maximum number of Hit Points possible from any healing.</p>"
+        }
+      }
     },
     "Bestow Curse": {
       "name": "Bestow Curse",
-      "description": "<p>You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:</p>\n<ul>\n<li>Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.</li>\n<li>While cursed, the target has disadvantage on attack rolls against you.</li>\n<li>While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.</li>\n<li>While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.</li>\n</ul>\n<p>A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.</p><p><strong>At Higher Levels.</strong> If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.</p>"
+      "description": "<p>You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:</p>\n<ul>\n<li>Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.</li>\n<li>While cursed, the target has disadvantage on attack rolls against you.</li>\n<li>While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.</li>\n<li>While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.</li>\n</ul>\n<p>A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.</p><p><strong>At Higher Levels.</strong> If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.</p>",
+      "effects": {
+        "Cursed Charisma": {
+          "name": "Cursed Charisma",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Constitution": {
+          "name": "Cursed Constitution",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Dexterity": {
+          "name": "Cursed Dexterity",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Intelligence": {
+          "name": "Cursed Intelligence",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Strength": {
+          "name": "Cursed Strength",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Wisdom": {
+          "name": "Cursed Wisdom",
+          "description": "<p>The target has Disadvantage on ability checks and saving throws made with the chosen ability.</p>"
+        },
+        "Cursed Attacks": {
+          "name": "Cursed Attacks",
+          "description": "<p>The target has Disadvantage on attack rolls against you.</p>"
+        },
+        "Cursed Actions": {
+          "name": "Cursed Actions",
+          "description": "<p>In combat, the target must succeed on a [[/save ability=wis dc=@attributes.spell.dc format=long]] at the start of each of its turns or be forced to take the &Reference[Dodge] action on that turn.</p>"
+        },
+        "Cursed Resilience": {
+          "name": "Cursed Resilience",
+          "description": "<p>If you deal damage to the target with an attack roll or a spell, the target takes an extra [[/damage 1d8 type=necrotic]] damage.</p>"
+        }
+      }
     },
     "Black Tentacles": {
       "name": "Black Tentacles",
@@ -1575,7 +1619,12 @@
     "Spider Climb": {
       "name": "Spider Climb",
       "description": "<p>Until the spell ends, one willing creature you touch gains the ability to move up, down, and across vertical surfaces and upside down along ceilings, while leaving its hands free. The target also gains a climbing speed equal to its walking speed.</p>",
-      "materials": "A drop of bitumen and a spider"
+      "materials": "A drop of bitumen and a spider",
+      "effects": {
+        "Spider Climb": {
+          "name": "Spider Climb"
+        }
+      }
     },
     "Spike Growth": {
       "name": "Spike Growth",
