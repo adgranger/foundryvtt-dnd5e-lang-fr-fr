@@ -170,7 +170,11 @@
       },
       "Crew": {
         "Header": "Actions d'équipage",
-        "Label": "Action d'équipage"
+        "Label": "Action d'équipage",
+        "Counted": {
+          "one": "{number} action d'équipage",
+          "other": "{number} actions d'équipage"
+        }
       },
       "Day": {
         "Label": "Jour",
@@ -186,7 +190,11 @@
       },
       "Mythic": {
         "Header": "Actions mythiques",
-        "Label": "Action mythique"
+        "Label": "Action mythique",
+        "Counted": {
+          "one": "{number} action mythique",
+          "other": "{number} actions mythiques"
+        }
       },
       "Lair": {
         "Header": "Actions d’antre",
@@ -205,7 +213,8 @@
   "DND5E.ACTIVITY": {
     "Action": {
       "Create": "Créer l'activité",
-      "Delete": "Supprimer l'activité"
+      "Delete": "Supprimer l'activité",
+      "Edit": "Modifier l'activité"
     },
     "Title": {
       "one": "Activité",
@@ -220,13 +229,54 @@
         }
       },
       "effects": {
-        "label": "Effets appliqués"
+        "label": "Effets appliqués",
+        "element": {
+          "level": {
+            "label": "Limite de niveau",
+            "hint": "Plage de niveaux requis pour appliquer cet effet.",
+            "max": {
+              "label": "Niveau maximum"
+            },
+            "min": {
+              "label": "Niveau minimum"
+            }
+          }
+        }
       },
       "img": {
         "label": "Icône"
       },
       "name": {
         "label": "Nom"
+      },
+      "visibility": {
+        "identifier": {
+          "hint": "Identifiant de la classe à laquelle s'appliquent les limites de niveau. Si ce champ est laissé vide, le niveau du personnage est utilisé.",
+          "label": "Identifiant de classe"
+        },
+        "label": "Visibilité",
+        "level": {
+          "hint": "Niveaux requis pour utiliser cette activité.",
+          "label": "Limite de niveau",
+          "max": {
+            "label": "Niveau maximum"
+          },
+          "min": {
+            "label": "Niveau minimum"
+          }
+        },
+        "requireAttunement": {
+          "hint": "L'activité ne sera pas utilisable si l'objet nécessite une harmonisation et n'est pas harmonisé.",
+          "label": "Harmonisation requise"
+        },
+        "requireIdentification": {
+          "hint": "L'activité ne sera pas utilisable si l'objet n'est pas identifié.",
+          "label": "Identification requise"
+        },
+        "requireMagic": {
+          "hint": "L'activité ne sera pas utilisable si la magie n'est pas disponible.",
+          "label": "Magie requise"
+        }
       }
     },
     "SECTIONS": {
@@ -301,7 +351,8 @@
         "DescriptionLegacy": "<p>Lorsque vous atteignez le niveau {firstLevelOrdinal} (puis à nouveau aux niveaux {otherLevelsOrdinal}), vous pouvez augmenter de 2 la valeur de caractéristique de votre choix, ou augmenter de 1 deux valeurs de caractéristique de votre choix. Conformément à la règle habituelle, cette aptitude ne vous permet pas de porter une valeur au-delà de {maxAbilityScore}.</p><p>En utilisant la règle optionnelle des dons, vous pouvez renoncer à cette amélioration pour choisir un don à la place.</p>",
         "DescriptionModern": "<p>Vous recevez le don Amélioration de caractéristique ou un autre don de votre choix pour lequel vous remplissez les conditions. Vous recevez de nouveau cette aptitude aux niveaux de {class} {otherLevels}.</p>",
         "Name": "Amélioration de caractéristique",
-        "DescriptionEpic": "<p>Vous recevez un don de Faveur épique ou un autre don de votre choix pour lequel vous remplissez les conditions. {recommendation} est recommandé.</p>"
+        "DescriptionEpic": "<p>Vous recevez un don de Faveur épique ou un autre don de votre choix pour lequel vous remplissez les conditions.</p>",
+        "DescriptionEpicRecommendation": "<p>Vous recevez un don de Faveur épique ou un autre don de votre choix pour lequel vous remplissez les conditions. {recommendation} est recommandé.</p>"
       },
       "Action": {
         "Select": "Sélectionner un don"
@@ -817,7 +868,8 @@
     "Formatted": {
       "2024": "{type}",
       "2014": "Attaque {classification} {type}"
-    }
+    },
+    "Hint": "Effectuer un jet d'attaque et lancer les dégâts."
   },
   "DND5E.Attack": "Attaque",
   "DND5E.AttackPl": "Attaques",
@@ -904,7 +956,8 @@
         }
       }
     },
-    "ThisTool": "Cet outil"
+    "ThisTool": "Cet outil",
+    "Hint": "Demander un test de caractéristique éventuellement assisté par une compétence ou un outil."
   },
   "DND5E.CheckBonus": "Jets bonus",
   "DND5E.CLASS": {
@@ -1147,6 +1200,9 @@
       },
       "Wand": {
         "Label": "Baguette"
+      },
+      "Wondrous": {
+        "Label": "Objet merveilleux"
       }
     }
   },
@@ -1219,7 +1275,8 @@
       "SlotLevel": "Niveau d'emplacement de sort"
     },
     "Target": {
-      "ThisItem": "Cet objet"
+      "ThisItem": "Cet objet",
+      "UnknownItem": "un objet inconnu"
     },
     "Type": {
       "ActivityUses": {
@@ -1236,7 +1293,8 @@
         "PromptIncrease": "Récupérer la caractéristique ?",
         "PromptHintDecrease": "Diminuer <code>{attribute}</code> de <strong>{cost}</strong> (actuellement {current}).",
         "PromptHintIncrease": "Augmenter <code>{attribute}</code> de <strong>{cost}</strong> (actuellement {current}).",
-        "Warning": "Quantité de {attribute}"
+        "Warning": "Quantité de {attribute}",
+        "NonEmbeddedHint": "Chemin d'accès à l'attribut à consommer (par exemple, attributes.exhaustion, spells.pact.value)."
       },
       "HitDice": {
         "Label": "Dé de vie",
@@ -1256,7 +1314,8 @@
         "PromptIncrease": "Récupérer l'utilisation de l'objet ?",
         "PromptHintDecrease": "Dépenser <strong>{cost}</strong> {use} de {item} ({available} {availableUse} disponible(s)).",
         "PromptHintIncrease": "Récupérer <strong>{cost}</strong> {use} de {item}.",
-        "Warning": "utilisations sur {name}"
+        "Warning": "utilisations sur {name}",
+        "NonEmbeddedHint": "Identifiant ou UUID de l'objet dans le compendium qui sera automatiquement lié à l'objet correspondant sur la feuille."
       },
       "Material": {
         "Label": "Matériau",
@@ -1264,7 +1323,8 @@
         "PromptIncrease": "Récupérer le matériau ?",
         "PromptHintDecrease": "Réduire la quantité de {item} de <strong>{cost}</strong> ({quantity} restant(e)(s)).",
         "PromptHintIncrease": "Augmenter la quantité de {item} par <strong>{cost}</strong>.",
-        "Warning": "de {name}"
+        "Warning": "de {name}",
+        "NonEmbeddedHint": "Identifiant ou UUID de l'objet dans le compendium qui sera automatiquement lié à l'objet correspondant sur la feuille."
       },
       "SpellSlot": {
         "one": "{level} emplacement",
@@ -1456,7 +1516,8 @@
       "Whole": "Chaque niveau",
       "HalfCantrip": "Évolution des sorts mineurs (moitié)",
       "WholeCantrip": "Évolution des sorts mineurs"
-    }
+    },
+    "Hint": "Dégâts infligés à une créature sans attaque ni sauvegarde."
   },
   "DND5E.DamImm": "Immunités (dégâts)",
   "DND5E.DamMod": "Modifications des dégâts",
@@ -1470,7 +1531,8 @@
       "Modification": "Modification {type}",
       "Immunity": "Immunité {type}",
       "Resistance": "Résistance {type}",
-      "Vulnerability": "Vulnérabilité {type}"
+      "Vulnerability": "Vulnérabilité {type}",
+      "Threshold": "Seuil de dégâts"
     },
     "Downgrading": "Rétrogradation de {source} à Résistance",
     "Ignoring": "Ignorer {source}"
@@ -1683,8 +1745,10 @@
       "MissingProperty": "L'objet doit avoir l'une de ces propriétés pour être enchanté : {validProperties}.",
       "NoMagicalItems": "Les objets qui sont déjà magiques ne peuvent pas être enchantés.",
       "NoSubtype": "Seuls les objets {allowedType} peuvent être enchantés par cet enchantement, mais cet objet n'a pas de sous-type.",
-      "WrongType": "Les objets {incorrectType} ne peuvent pas être enchantés par cet enchantement, seuls les objets {allowedType} sont autorisés."
-    }
+      "WrongType": "Les objets {incorrectType} ne peuvent pas être enchantés par cet enchantement, seuls les objets {allowedType} sont autorisés.",
+      "NoTargetActor": "Pour enchanter à partir d'un compendium, il faut disposer d'un personnage assigné ou d'un token sélectionné."
+    },
+    "Hint": "Appliquer un enchantement à un objet afin de modifier ses statistiques ou ses fonctionnalités."
   },
   "DND5E.ENCHANTMENT": {
     "Action": {
@@ -4332,7 +4396,8 @@
     "Enchantment": {
       "Name": "Modifications de Sort"
     },
-    "Title": "Incanter"
+    "Title": "Incanter",
+    "Hint": "Incanter un sort à travers un objet."
   },
   "TYPES.Item.facility": "Extension",
   "TYPES.Item.facilityPl": "Extensions",
@@ -4373,7 +4438,9 @@
       "NoCombatant": "Le combattant n'existe plus !"
     },
     "Deltas": {
-      "Recovery": "Récupération"
+      "Recovery": "Récupération",
+      "Created": "Objet créé",
+      "Deleted": "Objet supprimé"
     },
     "Activities": "Activités",
     "REQUEST": {
@@ -4614,6 +4681,13 @@
           "value": {
             "label": "Vitesse"
           }
+        }
+      }
+    },
+    "FIELDS": {
+      "attributes": {
+        "actions": {
+          "label": "Actions"
         }
       }
     }
@@ -5006,7 +5080,8 @@
       "Members": "Membres"
     },
     "Action": {
-      "Award": "Récompense PX et monnaie"
+      "Award": "Récompense PX et monnaie",
+      "AddCreature": "Ajouter une créature"
     },
     "Difficulty": {
       "high": "Difficulté élevée",
@@ -5206,5 +5281,45 @@
   },
   "DND5E.SkillRoll": "Test de {ability} ({skill})",
   "DND5E.SpellLevelSpell": "{level} ({n} Emplacements)",
-  "DND5E.Summary": "Résumé"
+  "DND5E.Summary": "Résumé",
+  "DND5E.MOVEMENT": {
+    "Type": {
+      "Burrow": "Fouissement",
+      "Climb": "Escalade",
+      "Fly": "Vol",
+      "Speed": "Vitesse",
+      "Swim": "Nage"
+    }
+  },
+  "DND5E.TRAVEL": {
+    "Label": "Allure de voyage",
+    "Pace": {
+      "Slow": "Lente",
+      "Fast": "Rapide",
+      "Normal": "Normale"
+    },
+    "Type": {
+      "Water": "Eau",
+      "Air": "Air",
+      "Land": "Terre"
+    },
+    "FIELDS": {
+      "pace": {
+        "label": "Allure"
+      },
+      "time": {
+        "hint": "Nombre d'heures parcourues par jour utilisé pour convertir la vitesse de voyage en allure.",
+        "label": "Heures par jour"
+      }
+    },
+    "Per": {
+      "Day": "Par jour",
+      "Hour": "Par heure"
+    },
+    "Slowed": {
+      "Group": "L'allure du groupe est lente car la Vitesse d'au moins un compagnon est réduite de moitié ou plus.",
+      "Member": "Ce compagnon ralentit le reste du groupe."
+    },
+    "Speed": "Vitesse de voyage"
+  }
 }
