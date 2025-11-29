@@ -1,92 +1,95 @@
 {
-    "Actor": {
-        "alignment": "system.details.alignment",
-        "subtype": "system.details.type.subtype",
-        "languages": "system.traits.languages.custom",
-        "specialSenses": "system.attributes.senses.special",
-        "dr": "system.traits.dr.custom",
-        "dv": "system.traits.dv.custom",
-        "ci": "system.traits.ci.custom",
-        "armorProf": "system.traits.armorProf.custom",
-        "tokenName": "prototypeToken.name",
-        "habitat": "system.details.habitat.custom",
-        "senses": {
-            "path": "system.attributes.senses",
-            "converter": "senses"
-        },
-        "movement": {
-            "path": "system.attributes.movement",
-            "converter": "movement"
-        },
-        "token": {
-            "path": "prototypeToken.sight.range",
-            "converter": "sightRange"
-        },
-        "items": {
-            "converter": "items",
-            "path": "items"
-        },
-        "effects": {
-            "path": "effects",
-            "converter": "effects"
-        },
-        "communication": {
-            "path": "system.traits.languages.communication",
-            "converter": "communication"
-        }
+  "Actor": {
+    "ci": "system.traits.ci.custom",
+    "armorProf": "system.traits.armorProf.custom",
+    "habitat": "system.details.habitat.custom",
+    "subtype": "system.details.type.subtype",
+    "languages": "system.traits.languages.custom",
+    "specialSenses": "system.attributes.senses.special",
+    "dr": "system.traits.dr.custom",
+    "dv": "system.traits.dv.custom",
+    "alignment": {
+      "path": "system.details.alignment",
+      "converter": "alignment"
     },
-    "Item": {
-        "subtype": "system.type.subtype",
-        "requirements": "system.requirements",
-        "materials": "system.materials.value",
-        "chat": "system.description.chat",
-        "movement": {
-            "path": "system.movement",
-            "converter": "movement"
-        },
-        "senses": {
-            "path": "system.senses",
-            "converter": "senses"
-        },
-        "advancement": {
-            "path": "system.advancement",
-            "converter": "advancement"
-        },
-        "distanceAdvancement": {
-            "path": "system.advancement",
-            "converter": "distanceAdvancement"
-        },
-        "rangeActivities": {
-            "path": "system.activities",
-            "converter": "rangeActivities"
-        },
-        "effects": {
-            "path": "effects",
-            "converter": "effects"
-        },
-        "activities": {
-            "path": "system.activities",
-            "converter": "activities"
-        },
-        "weight": {
-            "path": "system.weight",
-            "converter": "weight"
-        },
-        "range": {
-            "path": "system.range",
-            "converter": "range"
-        },
-        "target": {
-            "path": "system.target",
-            "converter": "target"
-        },
-        "volume": {
-            "path": "system.capacity.volume",
-            "converter": "volume"
-        },
-        "capacityWeight": {
-            "path": "system.capacity.weight",
-            "converter": "weight"
-        }
+    "token": {
+      "path": "prototypeToken.sight.range",
+      "converter": "sightRange"
+    },
+    "movement": {
+      "path": "system.attributes.movement",
+      "converter": "movement"
+    },
+    "items": {
+      "path": "items",
+      "converter": "items"
+    },
+    "senses": {
+      "path": "system.attributes.senses",
+      "converter": "senses"
+    },
+    "communication": {
+      "path": "system.traits.languages.communication",
+      "converter": "communication"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    },
+    "tokenLight": {
+      "path": "prototypeToken.light",
+      "converter": "tokenLight"
     }
+  },
+  "Item": {
+    "subtype": "system.type.subtype",
+    "requirements": "system.requirements",
+    "materials": "system.materials.value",
+    "condition": "system.activation.condition",
+    "chat": "system.description.chat",
+    "movement": {
+      "path": "system.movement",
+      "converter": "movement"
+    },
+    "advancement": {
+      "path": "system.advancement",
+      "converter": "advancement"
+    },
+    "distanceAdvancement": {
+      "path": "system.advancement",
+      "converter": "distanceAdvancement"
+    },
+    "effects": {
+      "path": "effects",
+      "converter": "effects"
+    },
+    "weight": {
+      "path": "system.weight",
+      "converter": "weight"
+    },
+    "rangeActivities": {
+      "path": "system.activities",
+      "converter": "rangeActivities"
+    },
+    "range": {
+      "path": "system.range",
+      "converter": "range"
+    },
+    "capacityWeight": {
+      "path": "system.capacity.weight",
+      "converter": "weight"
+    },
+    "activities": {
+      "path": "system.activities",
+      "converter": "activities"
+    },
+    "senses": {
+      "path": "system.senses",
+      "converter": "senses"
+    },
+    "target": {
+      "path": "system.target",
+      "converter": "target"
+    }
+  }
 }

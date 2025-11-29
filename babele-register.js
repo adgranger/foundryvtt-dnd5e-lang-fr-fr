@@ -1,5 +1,6 @@
 import { Converters as babeleConverters } from "../babele/script/converters.js";
 import { registerCustomEnrichersFr } from "./enrichers-fr.mjs";
+import NPCDataFr from "./npc-embedded-fr.mjs";
 
 Hooks.once('init', () => {
 
@@ -13,18 +14,23 @@ Hooks.once('init', () => {
 
 		game.babele.registerConverters({
 			"items": babeleConverters.fromDefaultMapping("Item", "items"),
+			"grid": Converters.imperialToMetric("grid"),
 			"range": Converters.imperialToMetric("range"),
 			"weight": Converters.imperialToMetric("weight"),
 			"target": Converters.imperialToMetric("target"),
 			"senses": Converters.imperialToMetric("senses"),
 			"volume": Converters.imperialToMetric("volume"),
+			"travel": Converters.imperialToMetric("travel"),
 			"movement": Converters.imperialToMetric("movement"),
+			"tokenLight": Converters.imperialToMetric("tokenLight"),
 			"sightRange": Converters.imperialToMetric("sightRange"),
 			"communication": Converters.imperialToMetric("communication"),
 			"rangeActivities": Converters.imperialToMetric("rangeActivities"),
 			"distanceAdvancement": Converters.imperialToMetric("distanceAdvancement"),
 			"pages": Converters.pages(),
+			"tokens": Converters.tokens(),
 			"effects": Converters.effects(),
+			"alignment": Converters.alignment(),
 			"activities": Converters.activities(),
 			"advancement": Converters.advancement(),
 			"planarSubtype": Converters.planarSubtype()
@@ -35,6 +41,7 @@ Hooks.once('init', () => {
 Hooks.once('ready', () => {
 	registerCustomEnrichersFr();
 	fixExhaustion();
+	CONFIG.Actor.dataModels.npc = NPCDataFr;
 });
 
 function fixExhaustion() {
@@ -67,12 +74,15 @@ export class Converters {
 	static imperialToMetric(type) {
 		return (value) => {
 			switch (type) {
+				case "grid": return Converters.grid(value);
 				case "range": return Converters.range(value);
 				case "weight": return Converters.weight(value);
 				case "target": return Converters.target(value);
 				case "senses": return Converters.senses(value);
 				case "volume": return Converters.volume(value);
+				case "travel": return Converters.travel(value);
 				case "movement": return Converters.movement(value);
+				case "tokenLight": return Converters.tokenLight(value);
 				case "sightRange": return Converters.footsToMeters(value);
 				case "communication": return Converters.communication(value);
 				case "rangeActivities": return Converters.rangeActivities(value);
@@ -93,8 +103,21 @@ export class Converters {
 			"mi": {
 				converter: Converters.milesToMeters,
 				units: convertMetricLength() ? "km" : "mi"
+			},
+			"mph": {
+				converter: Converters.milesToMeters,
+				units: convertMetricLength() ? "kph" : "mph"
 			}
 		};
+	}
+
+	static grid(grid) {
+		const conversion = Converters.conversionInfo[grid.units];
+		if (!conversion) return grid;
+		return foundry.utils.mergeObject(grid, {
+			"distance": conversion.converter(grid.distance),
+			"units": conversion.units
+		});
 	}
 
 	static range(range) {
@@ -150,6 +173,24 @@ export class Converters {
 		});
 	}
 
+	static travel(travel) {
+		const conversion = Converters.conversionInfo[travel.units];
+		if (!conversion) return travel;
+		return foundry.utils.mergeObject(travel, {
+			"paces": {
+				"air": conversion.converter(travel.paces?.air),
+				"land": conversion.converter(travel.paces?.land),
+				"water": conversion.converter(travel.paces?.water)
+			},
+			"speeds": {
+				"air": conversion.converter(travel.speeds?.air),
+				"land": conversion.converter(travel.speeds?.land),
+				"water": conversion.converter(travel.speeds?.water)
+			},
+			"units": conversion.units
+		});
+	}
+
 	static movement(movement) {
 		const conversion = Converters.conversionInfo[movement.units ?? "ft"];
 		if (!conversion) return movement;
@@ -196,6 +237,13 @@ export class Converters {
 		});
 	}
 
+	static tokenLight(light) {
+		return foundry.utils.mergeObject(light, {
+			"bright": Converters.footsToMeters(light.bright),
+			"dim": Converters.footsToMeters(light.dim)
+		});
+	}
+
 	static communication(communication) {
 		Object.keys(communication).forEach(key => {
 			const conversion = Converters.conversionInfo[communication[key].units];
@@ -238,11 +286,11 @@ export class Converters {
 
 	// Override babele pages converters
 	static pages() {
-		return (pages, translations) => Converters._pages(pages, translations);
+		return (pages, translations, data) => Converters._pages(pages, translations, data);
 	}
 
-	static _pages(pages, translations) {
-		return pages.map(data => {
+	static _pages(pages, translations, data) {
+		pages.map(data => {
 			if (!translations) {
 				return data;
 			}
@@ -278,6 +326,8 @@ export class Converters {
 				translated: true,
 			});
 		});
+
+		return Converters.sortPages(pages, journalPagesToSort[data._id]);
 	}
 
 	static unlinkedSpells(unlinkedSpells, translations) {
@@ -295,6 +345,120 @@ export class Converters {
 
 		return unlinkedSpells;
 	}
+
+	static sortPages(pages, journal) {
+		if (!journal) return pages;
+
+		const normalizeName = name =>
+			name
+				.toLowerCase()
+				.replace(/^(l')/i, "")
+				.replace(/^(la|les|le|une|un|des)\s+/i, "")
+				.replace(/\b(d'|de la|de l'|des|de|du)\b\s*/gi, "")
+				.trim();
+
+		if (journal.length || Object.keys(journal).length) {
+			if (Array.isArray(journal)) {
+				const sortedPages = journal.map(id => pages.find(p => p._id === id)).filter(Boolean);
+				const remainingPages = pages.filter(p => !journal.includes(p._id));
+				pages = [...sortedPages, ...remainingPages];
+			} else {
+				const firstPagesIds = Array.isArray(journal.firstPages) ? journal.firstPages : [];
+				const firstPages = firstPagesIds.map(id => pages.find(p => p._id === id)).filter(Boolean);
+
+				if (journal.conserveOriginalSort) {
+					pages.sort((a, b) => a.sort - b.sort);
+				} else {
+					pages = pages
+						.filter(p => !firstPagesIds.includes(p._id))
+						.sort((a, b) => {
+							const nameA = journal.includeArticle ? a.name : normalizeName(a.name);
+							const nameB = journal.includeArticle ? b.name : normalizeName(b.name);
+							return nameA.localeCompare(nameB);
+						});;
+				}
+
+				let otherPages = [];
+				if (journal.pagesGroups?.length) {
+					let workingPages = [...pages];
+					for (const group of journal.pagesGroups) {
+						const parentIndex = workingPages.findIndex(p => p._id === group.parent);
+						if (parentIndex === -1 || !group.associatePages?.length) continue;
+
+						let groupIds = [...group.associatePages];
+
+						if (group.isRange && group.associatePages.length === 2) {
+							const [startId, endId] = group.associatePages;
+							const startIndex = workingPages.findIndex(p => p._id === startId);
+							const endIndex = workingPages.findIndex(p => p._id === endId);
+							if (startIndex !== -1 && endIndex !== -1) {
+								const [from, to] = startIndex <= endIndex ? [startIndex, endIndex] : [endIndex, startIndex];
+								groupIds = workingPages.slice(from, to + 1).map(p => p._id);
+							}
+						}
+
+						const before = workingPages
+							.slice(0, parentIndex + 1)
+							.filter(p => !firstPagesIds.includes(p._id) && !groupIds.includes(p._id));
+
+						const sortedGroup = groupIds.map(id => workingPages.find(p => p._id === id)).filter(Boolean);
+
+						if (group.isRange) {
+							sortedGroup.sort((a, b) => {
+								const nameA = group.includeArticle ? a.name : normalizeName(a.name);
+								const nameB = group.includeArticle ? b.name : normalizeName(b.name);
+								return nameA.localeCompare(nameB);
+							});
+						}
+
+						const after = workingPages
+							.slice(parentIndex + 1)
+							.filter(p => !firstPagesIds.includes(p._id) && !groupIds.includes(p._id));
+
+						workingPages = [...before, ...sortedGroup, ...after];
+					}
+					otherPages = workingPages;
+				} else {
+					otherPages = pages;
+				}
+
+				pages = [...firstPages, ...otherPages];
+			}
+		} else {
+			pages.sort((a, b) => normalizeName(a.name).localeCompare(normalizeName(b.name)));
+		}
+
+		return pages.forEach((page, index) => page.sort = (index + 1) * 1000);
+	}
+
+	static tokens() {
+        return (tokens, translations, data, tc) => Converters._tokens(tokens, translations, data, tc);
+    }
+
+    static _tokens(tokens, translations, data, tc) {
+        tokens.map(token => {
+            return foundry.utils.mergeObject(token, {
+                light: Converters.tokenLight(token.light),
+                sight: { range: Converters.footsToMeters(token.sight.range) }
+            });
+        });
+
+        if (!translations) return tokens;
+
+        return tokens.map(token => {
+            const translation = translations[token._id] || translations[token.name];
+            if (!translation) return token;
+
+            const delta = token.delta;
+            const actorConverter = babeleConverters.fromDefaultMapping("Actor", "actors");
+            const deltaTranslated = delta ? actorConverter([delta], { [delta._id]: translation }, data, tc)[0] : delta;
+            if (!deltaTranslated.name) deltaTranslated.name = translation.name ?? delta.name;
+            return foundry.utils.mergeObject(token, {
+                name: translation.name ?? token.name,
+                delta: deltaTranslated
+            });
+        });
+    }
 
 	static effects() {
 		return (data, translations) => Converters._effects(data, translations);
@@ -380,6 +544,48 @@ export class Converters {
 		return changes;
 	}
 
+	static alignment() {
+		return (alignment, translation, data) => Converters._alignment(alignment, translation, data);
+	}
+
+	static _alignment(alignment, translation, data) {
+		if (translation) return translation;
+
+		const alignments = {
+			good: { f: "Bonne", m: "Bon" },
+			evil: { f: "Mauvaise", m: "Mauvais" },
+			neutral: { f: "Neutre", m: "Neutre" },
+			lawful: { f: "Loyale", m: "Loyal" },
+			chaotic: { f: "Chaotique", m: "Chaotique" },
+			unaligned: { f: "non alignée", m: "non aligné" }
+		};
+
+		const monsterTypes = {
+			aberration: "f", beast: "f", celestial: "m", construct: "m",
+			dragon: "m", elemental: "m", fey: "f", fiend: "m",
+			giant: "m", humanoid: "m", monstrosity: "f", ooze: "f",
+			plant: "f", undead: "m"
+		};
+
+		const type = data?.system?.details?.type?.value?.toLowerCase();
+		const gender = monsterTypes[type] ?? "m";
+
+		if (!alignment || typeof alignment !== "string") return alignment;
+
+		const translated = alignment
+			.split(" ")
+			.map(part => {
+				const key = part.toLowerCase();
+				if (key === "typically") return "généralement";
+				const entry = alignments[key];
+				return entry?.[gender] ?? null;
+			})
+			.filter(Boolean)
+			.join(" ");
+
+		return translated || alignment;
+	}
+
 	static activities() {
 		return (activities, translations) => Converters._activities(activities, translations);
 	}
@@ -457,3 +663,24 @@ export class Converters {
 		});
 	}
 }
+
+export var journalPagesToSort = {
+	//SRD 5.1
+	//Chapter 3: Classes
+	"gqecphEUnz4ktrQ9": {
+		firstPages: ["8jxEuy0PV2HNySQC"]
+	},
+	//Chapter 10: Spellcasting
+	"QvPDSUsAiEn3hD8s": {
+		firstPages: ["FX9TS9vmt4dyOoqJ", "evx9TWix4wYU51a5", "wre9ECSVuEyJBYhr"]
+	},
+	//Appendix A: Conditions
+	"w7eitkpD7QQTB6j0": {
+		firstPages: ["ZOCWbO9IYvBf9WyR"]
+	},
+	//Appendix D: Senses and Speeds
+	"eVtpEGXjA2tamEIJ": [
+		"8AIlZ95v54mL531X", "I6ABWHBYwGl55dLY", "0RBamBThjzeAdMSt", "8iC24otVX4n1yrYw",
+		"eW0LypO5xZZdq4I9", "I13SYX1zaCLYmaYF", "EQWAcrLYsd96MzJH", "X2CTP455Zpr7Shs9"
+	]
+};
