@@ -1656,7 +1656,11 @@
       "Dissociate": "Dissocier l'effet"
     },
     "Empty": "Aucun effet associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un effet existant dans la liste déroulante.",
-    "Label": "Effets disponibles"
+    "Label": "Effets disponibles",
+    "RIDER": {
+      "Activity": "Activité additionnelle d'enchantement",
+      "Effect": "Effet additionnelle d'enchantement"
+    }
   },
   "DND5E.EffectsApplyTokens": "Appliquer aux tokens sélectionnés",
   "DND5E.EffectApplyWarningConcentration": "L'application d'un effet qui est en cours de concentration par un autre personnage nécessite la permission du MJ.",
@@ -1829,7 +1833,8 @@
       "PactBoon": "Pacte",
       "PsionicPower": "Pouvoir psionique",
       "Rune": "Rune",
-      "SuperiorHuntersDefense": "Défense de chasseur supérieure"
+      "SuperiorHuntersDefense": "Défense de chasseur supérieure",
+      "ArtificerPlan": "Plan d'artificier"
     },
     "Feat": {
       "Label": "Don",
@@ -1979,7 +1984,13 @@
     "Action": {
       "Remove": "Retirer le membre",
       "View": "Voir les membres",
-      "ChangePace": "Changer d'allure"
+      "ChangePace": "Changer d'allure",
+      "Inventory": {
+        "Group": "Afficher l'inventaire du groupe",
+        "Vehicle": "Afficher l'inventaire du véhicule"
+      },
+      "SetPrimaryVehicle": "Définir le véhicule principal",
+      "UnsetPrimaryVehicle": "Véhicule principal non défini"
     },
     "Config": {
       "Art": {
@@ -1994,7 +2005,17 @@
       "xp": "Distribuer les PX et la monnaie mis en commun"
     },
     "Warning": {
-      "PhysicalItemOnly": "Seuls les objets physiques sont supportés."
+      "PhysicalItemOnly": "Seuls les objets physiques sont supportés.",
+      "PlaceMembers": "Erreur lors du placement des tokens dans la scène."
+    },
+    "Vehicle": {
+      "Count": {
+        "one": "Véhicule",
+        "other": "Véhicules"
+      },
+      "Primary": {
+        "label": "Véhicule principal"
+      }
     }
   },
   "DND5E.Hair": "Cheveux",
@@ -2047,7 +2068,8 @@
           "hint": "Type de soins appliqués -choix multiple possible - à sélectionner par l'utilisateur."
         }
       }
-    }
+    },
+    "Hint": "Soigner une créature"
   },
   "DND5E.Healing": "Points de vie",
   "DND5E.HealingRoll": "Jet de soin",
@@ -2388,7 +2410,8 @@
         }
       }
     },
-    "OnSave": "JdS réussi"
+    "OnSave": "JdS réussi",
+    "Hint": "Demander un jet de sauvegarde avec l'option de lancer les dégâts."
   },
   "DND5E.SaveBonus": "Jets de sauvegarde",
   "DND5E.SaveGlobalBonusHint": "Ce bonus s'applique à tous les jets de sauvegarde effectués par cet acteur.",
@@ -2531,7 +2554,7 @@
     "AddLegacy": "Ajouter une race"
   },
   "DND5E.Speed": "Vitesse",
-  "DND5E.SpeedSpecial": "Mouvement spécial",
+  "DND5E.SpeedSpecial": "Déplacement spécial",
   "DND5E.SpellAbility": "Caractéristique d'incantation",
   "DND5E.SpellAbilitySet": "Définir comme caractéristique principale d'Incantation",
   "DND5E.SpellAdd": "Ajouter un sort",
@@ -2648,7 +2671,10 @@
     "Wealth": {
       "Label": "Richesse de départ",
       "Hint": "Formule en PO qui peut être utilisée à la place de l'équipement de départ."
-    }
+    },
+    "ChooseList": "<em>Choisissez {prefixes} :</em> {choices}",
+    "Currency": "Monnaie",
+    "Prefixes": "abcdefghijklmnopqrstuvwxyz"
   },
   "DND5E.SubclassAdd": "Ajouter une sous-classe",
   "DND5E.SubclassIdentifierHint": "Cet identifiant doit correspondre à l'identifiant de la classe parente afin de s'assurer qu'ils sont correctement liés.",
@@ -2710,6 +2736,10 @@
         "ability": {
           "label": "Correspondre à la caractéristique",
           "hint": "Caractéristique spécifique à utiliser pour correspondre aux attaques et aux DD de sauvegarde."
+        },
+        "disposition": {
+          "label": "Lier la disposition",
+          "hint": "Faire correspondre la disposition de la créature invoquée à celle de l'invocateur."
         }
       },
       "profiles": {
@@ -2797,7 +2827,8 @@
       "NoOwnership": "Vous devez être propriétaire de '{actor}' pour l'invoquer.",
       "NoProfile": "Impossible de trouver le profil d'invocation {profileId} sur '{item}'.",
       "Wildcard": "Vous devez avoir le droit 'Utiliser le navigateur de fichiers' pour invoquer des créatures avec des illustrations génériques."
-    }
+    },
+    "Hint": "Invoquer une nouvelle créature sur la scène."
   },
   "DND5E.Summoning": {
     "Label": "Invocation"
@@ -3253,7 +3284,8 @@
           "hint": "Afficher le bouton de lancer dans le tchat pour tous les joueurs."
         }
       }
-    }
+    },
+    "Hint": "Effectuer un jet arbitraire ou indiquer qu'une autre action a été effectuée qui n'est pas représentée par d'autres types d'activité."
   },
   "DND5E.Value": "Valeur",
   "DND5E.Vehicle": "Véhicule",
@@ -3344,7 +3376,8 @@
     "DamageExtended": "<em>Touché :</em> {damage}",
     "DamageDouble": "{first} plus {second}",
     "PassiveShort": "passif {check}",
-    "CheckUsing": "{check} utilisant {tool}"
+    "CheckUsing": "{check} utilisant {tool}",
+    "ItemActivity": "{item} ({activity})"
   },
   "EFFECT.DND5E": {
     "StatusBleeding": "Saignement",
@@ -3699,8 +3732,11 @@
     },
     "AUTOMATION": {
       "Movement": {
-        "Name": "Désactiver l'automatisation des mouvements",
-        "Hint": "Ne pas appliquer de pénalités de mouvement sur terrain difficile et ne pas empêcher les créatures de se déplacer les unes à travers les autres, conformément à la version des règles."
+        "Name": "Automatisation des déplacements",
+        "Hint": "Configurer le niveau d'automatisation des déplacements utilisé par le système : automatisation complète, y compris le blocage des tokens, automatisation partielle uniquement sur les terrains difficiles, ou désactivation totale.",
+        "Full": "Complète",
+        "NoBlocking": "Partielle",
+        "None": "Aucune"
       }
     }
   },
@@ -4127,7 +4163,8 @@
     "Remaining": "Résistances légendaires restantes",
     "Resisted": "Résistance légendaire utilisée",
     "LabelPl": "Résistances légendaires",
-    "Spent": "Résistances légendaires dépensées"
+    "Spent": "Résistances légendaires dépensées",
+    "LairUses": "{normal}/jour, ou {lair}/jour dans son antre"
   },
   "DND5E.NPC": {
     "SECTIONS": {
@@ -4135,7 +4172,8 @@
       "BonusActions": "Actions Bonus",
       "LegendaryActions": "Actions Légendaires",
       "Reactions": "Réactions",
-      "Traits": "Traits"
+      "Traits": "Traits",
+      "MythicActions": "Actions mythiques"
     },
     "Label": "PNJ",
     "FIELDS": {
@@ -4144,7 +4182,22 @@
           "hint": "Les PNJ importants suivent les jets de sauvegarde contre la mort, les dés de vie et le dévouement (si activée). Tout PNJ avec des niveaux de classe est considéré comme important indépendamment de ce paramètre.",
           "label": "PNJ important"
         }
+      },
+      "attributes": {
+        "price": {
+          "denomination": {
+            "label": "Dénomination"
+          },
+          "hint": "Le tarif journalier de location ou le prix d'achat du bétail.",
+          "label": "Coût",
+          "value": {
+            "label": "Quantité"
+          }
+        }
       }
+    },
+    "ActionCostCounted": {
+      "other": "coûte {number} actions"
     }
   },
   "DND5E.RechargeShort": "recharge après un Repos court ou long",
@@ -4248,7 +4301,7 @@
         "Label": "Miles",
         "Abbreviation": "mi"
       },
-      "Label": "Unités de distance",
+      "Label": "Unité de distance",
       "Foot": {
         "Label": "Pieds",
         "Abbreviation": "pi"
@@ -4343,6 +4396,19 @@
             "other": "{number} tonnes"
           }
         }
+      }
+    },
+    "TRAVEL": {
+      "Kilometer": {
+        "AbbreviationHour": "km/h",
+        "AbbreviationDay": "km/j",
+        "Label": "Kilomètres"
+      },
+      "Label": "Unité de voyage",
+      "Mile": {
+        "AbbreviationDay": "mi/d",
+        "AbbreviationHour": "mph",
+        "Label": "Miles"
       }
     }
   },
@@ -4519,7 +4585,8 @@
     },
     "Warning": {
       "NoActivity": "Une activité liée doit être configurée avant que l'activité Avancer puisse être utilisée."
-    }
+    },
+    "Hint": "Déclencher une autre activité sur cet objet avec des détails de consommation et de mise à l'échelle différents."
   },
   "DND5E.FlagsAlertHintLegacy": "Fournit +5 à l'initiative.",
   "DND5E.Gear": "Équipement",
@@ -4555,6 +4622,12 @@
     "Counted": {
       "other": "{number} points de vie",
       "one": "{number} point de vie"
+    },
+    "DT": {
+      "abbr": "SD"
+    },
+    "Other": {
+      "label": "Autres options"
     }
   },
   "DND5E.HitPointsTempMaxHint": "Modification temporaire des PV maximum.",
@@ -4681,14 +4754,136 @@
           "value": {
             "label": "Vitesse"
           }
+        },
+        "crew": {
+          "label": "Équipage"
         }
       }
     },
     "FIELDS": {
       "attributes": {
         "actions": {
-          "label": "Actions"
+          "label": "Actions",
+          "max": {
+            "hint": "Actions entreprises avec un équipage complet",
+            "label": "Actions maximales"
+          },
+          "spent": {
+            "label": "Actions dépensées"
+          },
+          "stations": {
+            "label": "Stations d'action"
+          },
+          "thresholds": {
+            "full": {
+              "label": "Équipage complet"
+            },
+            "mid": {
+              "label": "Équipage partiel"
+            },
+            "min": {
+              "label": "Équipage minimum"
+            },
+            "label": "Seuils"
+          }
+        },
+        "capacity": {
+          "cargo": {
+            "value": {
+              "label": "Cargaison"
+            }
+          },
+          "label": "Capacité"
         }
+      },
+      "crew": {
+        "max": {
+          "label": "Équipage"
+        }
+      },
+      "passengers": {
+        "max": {
+          "label": "Passagers"
+        }
+      },
+      "traits": {
+        "beam": {
+          "value": {
+            "label": "Poutre"
+          }
+        },
+        "keel": {
+          "value": {
+            "label": "Quille"
+          }
+        }
+      }
+    },
+    "Action": {
+      "Create": {
+        "Equipment": "Créer un équipement",
+        "Feature": "Créer une aptitude",
+        "Weapon": "Créer une arme"
+      },
+      "Crew": {
+        "Decrease": "Réduire",
+        "Increase": "Augmenter"
+      },
+      "Drop": {
+        "Animal": "Déposer un animal de trait",
+        "Crew": "Déposer un équipage",
+        "Passengers": "Déposer des passagers"
+      },
+      "Uncrew": "Désaffecter"
+    },
+    "Actions": {
+      "Ordinal": {
+        "one": "{n}ère action",
+        "two": "{n}ème action",
+        "few": "{n}ème action",
+        "other": "{n}ème action"
+      }
+    },
+    "Activation": {
+      "Crew": {
+        "label": "Action d'équipage"
+      }
+    },
+    "Crew": {
+      "Assigned": "Assigné",
+      "Label": "Équipage",
+      "Passengers": "Passagers",
+      "Unassigned": "Non assignée"
+    },
+    "Mishap": {
+      "label": "Accident",
+      "Threshold": {
+        "abbr": "SA",
+        "label": "Seuil d'accident"
+      }
+    },
+    "Option": {
+      "Abilities": "Afficher les caractéristiques",
+      "Initiative": "Afficher l'Initiative",
+      "Quality": "Afficher la qualité"
+    },
+    "Tabs": {
+      "Cargo": "Cargaison",
+      "CrewPassengers": "Équipage et passagers"
+    },
+    "Type": {
+      "Air": {
+        "label": "Véhicule aérien"
+      },
+      "label": "Type de véhicule",
+      "Land": {
+        "label": "Véhicule terrestre"
+      },
+      "Space": {
+        "label": "Véhicule spatial"
+      },
+      "Water": {
+        "label": "Véhicule aquatique"
       }
     }
   },
@@ -4900,6 +5095,9 @@
         },
         "Resistances": {
           "Label": "Résistance aux dégâts"
+        },
+        "TempHP": {
+          "Label": "Pv temp"
         }
       },
       "Effects": {
@@ -5013,7 +5211,8 @@
       "NoPermission": "La permission de transformation n'a pas été accordée aux joueurs.",
       "OriginalActor": "Aucun acteur original trouvé avec l'ID '{reference}'.",
       "SourceActor": "Aucun acteur trouvé pour la transformation."
-    }
+    },
+    "Hint": "Modifier un acteur en utilisant les statistiques d'un autre."
   },
   "SOURCE.BOOK.SRD52": "Document de Référence Système 5.2",
   "DND5E.JOURNALENTRY": {
@@ -5184,7 +5383,10 @@
         "Rocks": "Éboulis ou rochers",
         "Liquid": "Liquide peu profond",
         "Slope": "Pente raide",
-        "Snow": "Neige profonde"
+        "Snow": "Neige profonde",
+        "Mud": "Boue épaisse",
+        "Sand": "Sable mouvant",
+        "Webs": "Toiles d'araignée collantes"
       }
     },
     "ROTATEAREA": {
@@ -5288,8 +5490,31 @@
       "Climb": "Escalade",
       "Fly": "Vol",
       "Speed": "Vitesse",
-      "Swim": "Nage"
-    }
+      "Swim": "Nage",
+      "Walk": "Marche"
+    },
+    "Action": {
+      "Configure": "Configurer la vitesse de déplacement"
+    },
+    "FIELDS": {
+      "bonus": {
+        "label": "Bonus de déplacement"
+      },
+      "ignoredDifficultTerrain": {
+        "label": "Terrain difficile ignoré"
+      },
+      "special": {
+        "label": "Déplacement spécial"
+      },
+      "speeds": {
+        "label": "Vitesses de déplacement"
+      },
+      "units": {
+        "label": "Unité"
+      }
+    },
+    "Hover": "Vol stationnaire",
+    "Speed": "Vitesse de combat"
   },
   "DND5E.TRAVEL": {
     "Label": "Allure de voyage",
@@ -5321,5 +5546,230 @@
       "Member": "Ce compagnon ralentit le reste du groupe."
     },
     "Speed": "Vitesse de voyage"
+  },
+  "DND5E.Loot.Trade": "Marchandise",
+  "DND5E.Quality": "Qualité",
+  "DND5E.SkillTitle": "{ability} ({skill})",
+  "DND5E.SpellAttackBonus": "Bonus d'attaque de sort",
+  "DND5E.CALENDAR": {
+    "Action": {
+      "AdvanceTime": "Avancer de {amount}",
+      "OpenCharacterSheet": "Ouvrir la fiche de personnage",
+      "OpenPartySheet": "Ouvrir la fiche du groupe",
+      "ReverseTime": "Reculer de {amount}",
+      "SetDate": "Définir la date"
+    },
+    "Component": {
+      "Day": "Jour",
+      "Month": "Mois",
+      "Year": "Année"
+    },
+    "Configuration": {
+      "DisabledMessage": "Le MD doit activer l'interface du calendrier avant que les joueurs puissent l'utiliser.",
+      "Hint": "Contrôle l'affichage du HUD du calendrier et son fonctionnement.",
+      "Label": "Configurer le calendrier",
+      "Name": "Calendrier",
+      "Preferences": "Préférences du calendrier",
+      "UnavailableMessage": "L'interface du calendrier par défaut n'est pas disponible car elle a été désactivée par un module."
+    },
+    "FIELDS": {
+      "calendar": {
+        "hint": "Ce calendrier sera utilisé pour suivre le temps passé dans le jeu.",
+        "label": "Calendrier"
+      },
+      "enabled": {
+        "hint": "Autoriser tous les utilisateurs à consulter et personnaliser l'interface utilisateur du calendrier.",
+        "label": "Activé"
+      },
+      "formatters": {
+        "date": {
+          "label": "Format de date"
+        },
+        "time": {
+          "label": "Format de l'heure"
+        }
+      },
+      "visible": {
+        "label": "Afficher le HUD du calendrier"
+      }
+    },
+    "Formatters": {
+      "Date": "Formats de date",
+      "ApproximateDate": {
+        "EarlySeason": "Début de {season}",
+        "Label": "Date approximative",
+        "LateSeason": "Fin de {season}",
+        "MidSeason": "Mi‑{season}"
+      },
+      "ApproximateTime": {
+        "Afternoon": "Après-midi",
+        "Dawn": "Aube",
+        "Dusk": "Crépuscule",
+        "Evening": "Soir",
+        "Label": "Heure approximative",
+        "Midnight": "Minuit",
+        "Morning": "Matin",
+        "Night": "Nuit",
+        "Noon": "Midi",
+        "Sunrise": "Lever du soleil",
+        "Sunset": "Coucher du soleil"
+      },
+      "HoursMinutes": {
+        "Format": "{H}:{M}",
+        "Label": "Heures et minutes"
+      },
+      "HoursMinutesSeconds": {
+        "Format": "{H}:{M}:{S}",
+        "Label": "Heures, minutes et secondes"
+      },
+      "MonthDay": {
+        "Format": "{D} {B}",
+        "Label": "Jour et mois"
+      },
+      "MonthDayYear": {
+        "Format": "{D} {B} {y}",
+        "Label": "Jour, mois et année"
+      },
+      "Time": "Formats de l'heure"
+    },
+    "Gregorian": "Calendrier grégorien",
+    "Greyhawk": {
+      "Day": {
+        "Starday": "Astredi",
+        "Sunday": "Solardi",
+        "Moonday": "Lunedi",
+        "Godsday": "Déidi",
+        "Waterday": "Aquedi",
+        "Earthday": "Terredi",
+        "Freeday": "Libredi"
+      },
+      "Festival": {
+        "Needfest": "Froidenoce",
+        "Growfest": "Regain",
+        "Richfest": "Chaudenoce",
+        "Brewfest": "Brassine"
+      },
+      "Formatters": {
+        "MonthDay": "{d} {B}",
+        "MonthDayYear": "{d} {B} {y}"
+      },
+      "Month": {
+        "Fireseek": "Douxfoyer",
+        "Readying": "Semailles",
+        "Coldeven": "Froidure",
+        "Planting": "Plantain",
+        "Flocktime": "Migreplume",
+        "Wealsun": "Cœurazur",
+        "Reaping": "Moissonnier",
+        "Godmonth": "Moisbéni",
+        "Harvester": "Vendangier",
+        "Patchwall": "Soufflebise",
+        "Readyreat": "Porteclose",
+        "Sunsebb": "Longuenuit"
+      },
+      "Name": "Calendrier de Greyhawk",
+      "Season": {
+        "Spring": "Printemps",
+        "Summer": "Été",
+        "Fall": "Automne",
+        "Winter": "Hiver"
+      }
+    },
+    "Harptos": {
+      "Day": {
+        "One": "premier jour",
+        "Two": "deuxième jour",
+        "Three": "troisième jour",
+        "Four": "quatrième jour",
+        "Five": "cinquième jour",
+        "Six": "sixième jour",
+        "Seven": "septième jour",
+        "Eight": "huitième jour",
+        "Nine": "neuvième jour",
+        "Ten": "dixième jour"
+      },
+      "Festival": {
+        "Midwinter": "Plein-hiver",
+        "Greengrass": "Herbeverte",
+        "Midsummer": "Mi-été",
+        "Shieldmeet": "Rencontre-des-boucliers",
+        "Highharvestide": "Grandes Moissons",
+        "FeastOfTheMoon": "Fête de la lune"
+      },
+      "Formatters": {
+        "DayMonth": "{d} {B}",
+        "DayMonthYear": "{d} {B} {y} CV",
+        "FestivalDayYear": "{day} {Y} CV"
+      },
+      "Month": {
+        "Hammer": "Martel",
+        "HammerCommon": "Cœur d'hiver",
+        "Alturiak": "Alturiak",
+        "AlturiakCommon": "Griffe de l'hiver",
+        "Ches": "Ches",
+        "ChesCommon": "Griffe du couchant",
+        "Tarsakh": "Tarsakh",
+        "TarsakhCommon": "Griffe des tempêtes",
+        "Mirtul": "Mirtul",
+        "MirtulCommon": "Fonte",
+        "Kythorn": "Kythorn",
+        "KythornCommon": "Temps des fleurs",
+        "Flamerule": "Flammerige",
+        "FlameruleCommon": "Marée estivale",
+        "Eleasis": "Élésias",
+        "EleasisCommon": "Haut-Soleil",
+        "Eleint": "Éleinte",
+        "EleintCommon": "Flétrissure",
+        "Marpenoth": "Marpenoth",
+        "MarpenothCommon": "Chute-des-Feuilles",
+        "Uktar": "Uktar",
+        "UktarCommon": "Pourrissement",
+        "Nightal": "Nuiteuse",
+        "NightalCommon": "Crépuscule"
+      },
+      "Name": "Calendrier d'Harptos (Royaumes Oubliés)",
+      "Season": {
+        "Spring": "Printemps",
+        "Summer": "Été",
+        "Fall": "Automne",
+        "Winter": "Hiver"
+      }
+    },
+    "Khorvaire": {
+      "Day": {
+        "Sul": "Sul",
+        "Mol": "Mol",
+        "Zol": "Zol",
+        "Wir": "Wir",
+        "Zor": "Zor",
+        "Far": "Far",
+        "Sar": "Sar"
+      },
+      "Formatters": {
+        "DayMonth": "{d} {B}",
+        "DayMonthYear": "{d} {B} {y} AG"
+      },
+      "Month": {
+        "Zarantyr": "Zarantyr",
+        "Olarune": "Olarune",
+        "Therendor": "Therendor",
+        "Eyre": "Eyre",
+        "Dravago": "Dravago",
+        "Nymm": "Nymm",
+        "Lharvion": "Lharvion",
+        "Barrakas": "Barrakas",
+        "Rhaan": "Rhaan",
+        "Sypheros": "Sypheros",
+        "Aryth": "Aryth",
+        "Vult": "Vult"
+      },
+      "Name": "Calendrier de Khorvaire (Éberron)",
+      "Season": {
+        "Spring": "Printemps",
+        "Summer": "Été",
+        "Autumn": "Automne",
+        "Winter": "Hiver"
+      }
+    }
   }
 }
