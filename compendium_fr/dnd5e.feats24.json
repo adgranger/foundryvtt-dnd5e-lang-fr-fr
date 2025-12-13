@@ -1,0 +1,142 @@
+{
+    "label": "Dons",
+    "folders": {
+        "Epic Boon Feats": "Dons de faveur épique",
+        "Fighting Style Feats": "Dons de Style de combat",
+        "General Feats": "Dons généraux",
+        "Origin Feats": "Dons d'origines"
+    },
+    "entries": {
+        "Ability Score Improvement": {
+            "name": "Amélioration de caractéristique",
+            "description": "<p><em>Don général (prérequis : niveau 4 ou supérieur)</em></p><p>Augmentez de 2 la valeur de caractéristique de votre choix, ou augmentez de 1 deux valeurs de caractéristique de votre choix. Ce don ne peut pas porter une valeur de caractéristique au-delà de 20.</p><p><strong>Répétable.</strong> Vous pouvez sélectionner ce don plus d'une fois.</p>"
+        },
+        "Alert": {
+            "name": "Vigilant",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Maîtrise de l'Initiative.</strong> Lorsque vous jouez l'Initiative, ajoutez votre bonus de maîtrise au jet.</p><p><strong>Échange d'Initiative.</strong> Aussitôt après avoir joué l'Initiative, vous pouvez échanger votre Initiative avec celle d'un allié volontaire pour le combat à venir. Un tel échange est impossible si vous-même ou l'allié désigné subissez l'état Neutralisé.</p><section id=\"secret-yzfXk3D5M1jv9ixH\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut automatiquement le bonus d'Initiative.</p></section>",
+            "effects": {
+                "Alert": {
+                    "name": "Vigilant"
+                }
+            }
+        },
+        "Archery": {
+            "name": "Archerie",
+            "description": "<p><em>(prérequis : aptitude Style de combat)</em></p><p>Vous recevez un bonus de +2 aux jets d'attaque effectués avec des armes à distance.</p><section id=\"secret-n13Z6zR2u0CiIA7D\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui ajoute le bonus aux jets d'attaque avec des armes à distance.</p></section>",
+            "effects": {
+                "Archery Style": {
+                    "name": "Style de combat : Archerie"
+                }
+            }
+        },
+        "Boon of Combat Prowess": {
+            "name": "Faveur de prouesse martiale",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Visée infaillible.</strong> Lorsque vous ratez un jet d'attaque, vous pouvez décider que cette attaque touche. Une fois ce bénéfice utilisé, vous ne pouvez plus y recourir jusqu'au début de votre tour suivant.</p>"
+        },
+        "Boon of Dimensional Travel": {
+            "name": "Faveur de déplacement dimensionnel",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Entrechats dimensionnels.</strong> Aussitôt après avoir effectué l'action Attaque ou Magie, vous pouvez vous téléporter d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+            "activities": {
+                "Teleport": {
+                    "name": "Téléportation",
+                    "condition": "Aussitôt après avoir effectué l'action Attaque ou Magie",
+                    "target": "Espace inoccupé"
+                }
+            }
+        },
+        "Boon of Fate": {
+            "name": "Faveur du destin",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Destin aiguillé.</strong> Lorsque vous-même ou une autre créature dans un rayon de 18 m réussissez ou ratez un Test d20, vous pouvez lancer 2d4 et appliquer le total obtenu comme bonus ou malus au résultat du d20. Une fois ce bénéfice utilisé, vous devez jouer l'Initiative ou terminer un Repos court ou long pour pouvoir y recourir de nouveau.</p>",
+            "activities": {
+                "Improve Fate": {
+                    "name": "Destin aiguillé",
+                    "roll": "Bonus/malus",
+                    "condition": "Lorsque vous-même ou une autre créature dans un rayon de 18 m réussissez ou ratez un Test d20"
+                }
+            }
+        },
+        "Boon of Irresistible Offense": {
+            "name": "Faveur d'attaque irrésistible",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur de Force ou de Dextérité augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Défenses surmontées.</strong> Les dégâts contondants, perforants et tranchants que vous infligez ne sont pas affectés par la Résistance.</p><p><strong>Frappe écrasante.</strong> Lorsque vous obtenez un 20 au d20 d'un jet d'attaque, vous pouvez infliger des dégâts supplémentaires à la cible à hauteur de la valeur de caractéristique augmentée par ce don. Ces dégâts supplémentaires sont du même type que celui de l'attaque.</p><section id=\"secret-B9D2nT6vBjWr9JMV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les effets de cette aptitude ne sont pas automatisés. Les dégâts supplémentaires peuvent être ajoutés dans le champ Bonus situationnel de la boîte de dialogue du jet de dégâts.</p></section>"
+        },
+        "Boon of Spell Recall": {
+            "name": "Faveur de mémoire magique",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur d'Intelligence, de Sagesse ou de Charisme augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Incantation gratuite.</strong> Chaque fois que vous lancez un sort avec un emplacement de sort du 1<sup>er</sup> au 4<sup>e</sup> niveau, lancez [[/r 1d4]]. Si le chiffre obtenu est égal au niveau de l'emplacement, celui-ci n'est pas dépensé.</p><section class=\"secret\" id=\"secret-KMAFFZCOzi6Cuemh\"><p><strong>Note Foundry</strong></p><p>Si le nombre est identique, décochez l'option Consommation lors de l'utilisation du sort.</p></section>",
+            "activities": {
+                "Free Cast Roll": {
+                    "name": "Incantation gratuite",
+                    "roll": "Jet",
+                    "condition": "Chaque fois que vous lancez un sort avec un emplacement de sort du 1er au 4e niveau"
+                }
+            }
+        },
+        "Boon of Truesight": {
+            "name": "Faveur de vision lucide",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Vision lucide.</strong> Vous disposez de la Vision lucide sur 18 m.</p><section id=\"secret-MmPASAH8hA8METnP\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui vous confère une vision lucide d'une portée de 18 m.</p></section>",
+            "effects": {
+                "Boon of Truesight": {
+                    "name": "Faveur de vision lucide"
+                }
+            }
+        },
+        "Boon of the Night Spirit": {
+            "name": "Faveur de l'esprit nocturne",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Une valeur de caractéristique de votre choix augmente de 1, jusqu'à un maximum de 30.</p><p><strong>Fusion avec l'ombre.</strong> Tant que vous êtes dans une zone de Lumière faible ou de Ténèbres, vous pouvez vous octroyer l'état &Reference[Invisible] par une action Bonus. Cet état prend fin aussitôt après que vous avez entrepris une action, une action Bonus ou joué votre Réaction.</p><p><strong>Forme ombreuse.</strong> Tant que vous êtes dans une zone de Lumière faible ou de Ténèbres, vous avez la Résistance à tous les dégâts hormis les dégâts psychiques et radiants.</p><section id=\"secret-fpWHPSTNYUeGtg0w\" class=\"secret\"> <p><strong>Note Foundry</strong></p><p>L'effet actif <strong>Faveur de l'esprit nocturne</strong> de cette aptitude inclut les résistances mais doit être activé/désactivé dans l'onglet Effets de votre feuille.</p><p>L'activité <strong>Fusion avec l'ombre</strong> inclut un effet actif qui applique la condition Invisible.</p></section>",
+            "activities": {
+                "Merge with the Shadows": {
+                    "name": "Fusion avec l'ombre"
+                }
+            },
+            "effects": {
+                "Boon of the Night Spirit": {
+                    "name": "Faveur de l'esprit nocturne"
+                },
+                "Merged with Shadows": {
+                    "name": "Fusionné avec l'ombre"
+                }
+            }
+        },
+        "Defense": {
+            "name": "Défense",
+            "description": "<p><em>(prérequis : aptitude Style de combat)</em></p><p>Tant que vous portez une armure légère, intermédiaire ou lourde, vous recevez un bonus de +1 à la classe d'armure.</p><section id=\"secret-y8skH0HHunT4I5NR\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui confère le bonus de classe d'armure. Désactivez-le lorsque vous ne portez pas d'armure.</p></section>",
+            "effects": {
+                "Defense": {
+                    "name": "Défense"
+                }
+            }
+        },
+        "Grappler": {
+            "name": "Empoigneur",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur de Force ou de Dextérité augmente de 1, jusqu'à un maximum de 20.</p><p><strong>Frappe et empoignade.</strong> Lorsque vous touchez une créature avec une attaque à mains nues dans le cadre de l'action Attaque à votre tour, vous pouvez recourir simultanément aux options Dégâts et Lutte. Vous ne pouvez recourir à ce bénéfice qu'une seule fois par tour.</p><p><strong>Attaque avec Avantage.</strong> Vous avez l'Avantage aux jets d'attaque contre une créature à laquelle vous imposez l'état Agrippé.</p><p><strong>Lutteur rapide.</strong> Il ne vous en coûte aucun déplacement supplémentaire lorsque vous déplacez une créature à laquelle vous imposez l'état Agrippé, à condition que cette créature soit de votre taille ou d'une catégorie inférieure.</p><section class=\"secret\" id=\"secret-LAjjGo55LPacAy8v\"><p><strong>Note Foundry</strong></p><p>L'Avantage n'est pas automatisé.</p></section>",
+            "requirements": "Force ou Dextérité 13 ou plus"
+        },
+        "Great Weapon Fighting": {
+            "name": "Armes à deux mains",
+            "description": "<p><em>(prérequis : aptitude Style de combat)</em></p><p>Lorsque vous lancez les dégâts d'une attaque effectuée avec une arme de corps à corps tenue à deux mains, vous pouvez considérer tous les 1 et 2 obtenus aux dés de dégâts comme des 3. Pour que vous puissiez recevoir ce bénéfice, l'arme doit afficher la propriété Deux mains ou Polyvalente.</p><section id=\"secret-jkbP75uR9eNGIRN0\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette effet n'est pas automatisé.</p></section>"
+        },
+        "Magic Initiate": {
+            "name": "Initié à la magie",
+            "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Deux sorts mineurs.</strong> Vous apprenez deux sorts mineurs de votre choix issus de la liste de sorts du @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{Clerc}, du @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]{Druide} ou du @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz]{Magicien}. L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts de ce don (décidez laquelle à l'acquisition du don).</p><p><strong>Sort du 1<sup>er</sup> niveau.</strong> Choisissez un sort du 1<sup>er</sup> niveau dans la même liste que celle que vous avez choisie pour les sorts mineurs de ce don. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez aussi lancer ce même sort avec vos éventuels emplacements de sort.</p><p><strong>Changement de sort.</strong> Chaque fois que vous gagnez un niveau, vous pouvez remplacer l'un des sorts que vous avez choisis dans le cadre de ce don par un autre sort du même niveau figurant dans la liste de sorts choisie.</p><p><strong>Répétable.</strong> Vous pouvez sélectionner ce don plus d'une fois, mais vous devez choisir une liste de sorts différente à chaque fois.</p>",
+            "advancement": {
+                "Two Cantrips": {
+                    "title": "Deux sorts mineurs"
+                },
+                "Level 1 Spell": {
+                    "title": "Sort du 1er niveau"
+                }
+            }
+        },
+        "Savage Attacker": {
+            "name": "Sauvagerie martiale",
+            "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+        },
+        "Skilled": {
+            "name": "Doué",
+            "description": "<p>Vous recevez la maîtrise d'une combinaison au choix de trois compétences ou outils.</p><p><strong>Répétable.</strong> Vous pouvez sélectionner ce don plus d'une fois.</p>"
+        },
+        "Two-Weapon Fighting": {
+            "name": "Combat à deux armes",
+            "description": "<p><em>(prérequis : aptitude Style de combat)</em></p><p>Lorsque vous effectuez une attaque supplémentaire résultant de l'emploi d'une arme avec la propriété Légère, vous pouvez ajouter votre modificateur de caractéristique aux dégâts de cette attaque si vous ne l'ajoutiez pas déjà.</p><section class=\"secret\" id=\"secret-hYptyfGCa0gLDQRT\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'est pas automatisée. Vous pouvez ajouter votre modificateur dans le champ Bonus situationnel du jet de dégâts.</p></section>"
+        }
+    }
+}

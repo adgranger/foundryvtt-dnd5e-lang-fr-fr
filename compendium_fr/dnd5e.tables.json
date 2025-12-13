@@ -102,16 +102,76 @@
     "Armor of Resistance": {
       "name": "Armure de résistance",
       "results": {
-        "1-1": "Acide",
-        "2-2": "Froid",
-        "4-4": "Force",
-        "5-5": "Foudre",
-        "6-6": "Nécrotiques",
-        "7-7": "Poison",
-        "8-8": "Psychiques",
-        "9-9": "Radiants",
-        "10-10": "Tonnerre",
-        "3-3": "Feu"
+        "1-1": {
+          "description": "Acide",
+          "range": {
+            "0": 1,
+            "1": 1
+          }
+        },
+        "2-2": {
+          "description": "Froid",
+          "range": {
+            "0": 5,
+            "1": 5
+          }
+        },
+        "3-3": {
+          "description": "Feu",
+          "range": {
+            "0": 2,
+            "1": 2
+          }
+        },
+        "4-4": {
+          "description": "Force",
+          "range": {
+            "0": 3,
+            "1": 3
+          }
+        },
+        "5-5": {
+          "description": "Foudre",
+          "range": {
+            "0": 4,
+            "1": 4
+          }
+        },
+        "6-6": {
+          "description": "Nécrotiques",
+          "range": {
+            "0": 6,
+            "1": 6
+          }
+        },
+        "7-7": {
+          "description": "Poison",
+          "range": {
+            "0": 7,
+            "1": 7
+          }
+        },
+        "8-8": {
+          "description": "Psychiques",
+          "range": {
+            "0": 8,
+            "1": 8
+          }
+        },
+        "9-9": {
+          "description": "Radiants",
+          "range": {
+            "0": 9,
+            "1": 9
+          }
+        },
+        "10-10": {
+          "description": "Tonnerre",
+          "range": {
+            "0": 10,
+            "1": 10
+          }
+        }
       }
     },
     "Bag of Beans": {
@@ -174,53 +234,417 @@
     "Iron Flask": {
       "name": "Flasque de fer",
       "results": {
-        "1-50": "Vide",
-        "51-54": "Démon (type 1)",
-        "55-58": "Démon (type 2)",
-        "59-62": "Démon (type 3)",
-        "63-64": "Démon (type 4)",
-        "65-65": "Démon (type 5)",
-        "66-66": "Démon (type 6)",
-        "68-69": "Diable (supérieur)",
-        "70-73": "Diable (inférieur)",
-        "78-83": "Élémentaire (tout type)"
+        "1-50": {
+          "description": "Vide",
+          "range": {
+            "0": 1,
+            "1": 50
+          }
+        },
+        "51-54": {
+          "description": "Démon (type 1)",
+          "range": {
+            "0": 51,
+            "1": 54
+          }
+        },
+        "55-58": {
+          "description": "Démon (type 2)",
+          "range": {
+            "0": 55,
+            "1": 58
+          }
+        },
+        "59-62": {
+          "description": "Démon (type 3)",
+          "range": {
+            "0": 59,
+            "1": 62
+          }
+        },
+        "63-64": {
+          "description": "Démon (type 4)",
+          "range": {
+            "0": 63,
+            "1": 64
+          }
+        },
+        "65-65": {
+          "description": "Démon (type 5)",
+          "range": {
+            "0": 65,
+            "1": 65
+          }
+        },
+        "66-66": {
+          "description": "Démon (type 6)",
+          "range": {
+            "0": 66,
+            "1": 66
+          }
+        },
+        "67-67": {
+          "range": {
+            "0": 67,
+            "1": 67
+          }
+        },
+        "68-69": {
+          "description": "Diable (supérieur)",
+          "range": {
+            "0": 72,
+            "1": 73
+          }
+        },
+        "70-73": {
+          "description": "Diable (inférieur)",
+          "range": {
+            "0": 68,
+            "1": 71
+          }
+        },
+        "74-75": {
+          "range": {
+            "0": 74,
+            "1": 75
+          }
+        },
+        "76-77": {
+          "range": {
+            "0": 76,
+            "1": 77
+          }
+        },
+        "78-83": {
+          "description": "Élémentaire (tout type)",
+          "range": {
+            "0": 78,
+            "1": 83
+          }
+        },
+        "84-86": {
+          "range": {
+            "0": 97,
+            "1": 99
+          }
+        },
+        "87-90": {
+          "range": {
+            "0": 84,
+            "1": 87
+          }
+        },
+        "91-91": {
+          "range": {
+            "0": 88,
+            "1": 88
+          }
+        },
+        "92-95": {
+          "range": {
+            "0": 89,
+            "1": 92
+          }
+        },
+        "96-96": {
+          "range": {
+            "0": 93,
+            "1": 93
+          }
+        },
+        "97-99": {
+          "range": {
+            "0": 94,
+            "1": 96
+          }
+        },
+        "100-100": {
+          "range": {
+            "0": 100,
+            "1": 100
+          }
+        }
       }
     },
     "Necklace of Prayer Beads": {
       "name": "Chapelet mystique",
       "results": {
-        "1-6": "Perle de bénédiction",
-        "7-12": "Perle de guérison",
-        "13-16": "Perle de faveur",
-        "17-18": "Perle de châtiment",
-        "19-19": "Perle de convocation",
-        "20-20": "Perle de marchevent"
+        "1-6": {
+          "description": "Perle de bénédiction",
+          "range": {
+            "0": 1,
+            "1": 6
+          }
+        },
+        "7-12": {
+          "description": "Perle de guérison",
+          "range": {
+            "0": 14,
+            "1": 19
+          }
+        },
+        "13-16": {
+          "description": "Perle de faveur",
+          "range": {
+            "0": 10,
+            "1": 13
+          }
+        },
+        "17-18": {
+          "description": "Perle de châtiment",
+          "range": {
+            "0": 7,
+            "1": 8
+          }
+        },
+        "19-19": {
+          "description": "Perle de convocation",
+          "range": {
+            "0": 9,
+            "1": 9
+          }
+        },
+        "20-20": {
+          "description": "Perle de marchevent",
+          "range": {
+            "0": 20,
+            "1": 20
+          }
+        }
       }
     },
     "Potion of Resistance": {
-      "name": "Potion de résistance"
+      "name": "Potion de résistance",
+      "results": {
+        "1-1": {
+          "range": {
+            "0": 1,
+            "1": 1
+          }
+        },
+        "2-2": {
+          "range": {
+            "0": 5,
+            "1": 5
+          }
+        },
+        "3-3": {
+          "range": {
+            "0": 2,
+            "1": 2
+          }
+        },
+        "4-4": {
+          "range": {
+            "0": 3,
+            "1": 3
+          }
+        },
+        "5-5": {
+          "range": {
+            "0": 4,
+            "1": 4
+          }
+        },
+        "6-6": {
+          "range": {
+            "0": 6,
+            "1": 6
+          }
+        },
+        "7-7": {
+          "range": {
+            "0": 7,
+            "1": 7
+          }
+        },
+        "8-8": {
+          "range": {
+            "0": 8,
+            "1": 8
+          }
+        },
+        "9-9": {
+          "range": {
+            "0": 9,
+            "1": 9
+          }
+        },
+        "10-10": {
+          "range": {
+            "0": 10,
+            "1": 10
+          }
+        }
+      }
     },
     "Reincarnate": {
       "results": {
-        "97-100": "Tieffelin",
-        "1-4": "Drakéide",
-        "5-13": "Nain des collines",
-        "14-21": "Nain des montagnes",
-        "22-25": "Elfe noir",
-        "26-34": "Haut-elfe",
-        "35-42": "Elfe sylvestre",
-        "43-46": "Gnome des forêts",
-        "47-52": "Gnome des roches",
-        "53-56": "Demi-elfe",
-        "57-60": "Demi-orc",
-        "61-68": "Halfelin pied-léger",
-        "69-76": "Halfelin robuste",
-        "77-96": "Humain"
+        "1-4": {
+          "description": "Drakéide",
+          "range": {
+            "0": 9,
+            "1": 12
+          }
+        },
+        "5-13": {
+          "description": "Nain des collines",
+          "range": {
+            "0": 80,
+            "1": 88
+          }
+        },
+        "14-21": {
+          "description": "Nain des montagnes",
+          "range": {
+            "0": 89,
+            "1": 96
+          }
+        },
+        "22-25": {
+          "description": "Elfe noir",
+          "range": {
+            "0": 13,
+            "1": 16
+          }
+        },
+        "26-34": {
+          "description": "Haut-elfe",
+          "range": {
+            "0": 51,
+            "1": 59
+          }
+        },
+        "35-42": {
+          "description": "Elfe sylvestre",
+          "range": {
+            "0": 17,
+            "1": 24
+          }
+        },
+        "43-46": {
+          "description": "Gnome des forêts",
+          "range": {
+            "0": 25,
+            "1": 28
+          }
+        },
+        "47-52": {
+          "description": "Gnome des roches",
+          "range": {
+            "0": 29,
+            "1": 34
+          }
+        },
+        "53-56": {
+          "description": "Demi-elfe",
+          "range": {
+            "0": 1,
+            "1": 4
+          }
+        },
+        "57-60": {
+          "description": "Demi-orc",
+          "range": {
+            "0": 5,
+            "1": 8
+          }
+        },
+        "61-68": {
+          "description": "Halfelin pied-léger",
+          "range": {
+            "0": 35,
+            "1": 42
+          }
+        },
+        "69-76": {
+          "description": "Halfelin robuste",
+          "range": {
+            "0": 43,
+            "1": 50
+          }
+        },
+        "77-96": {
+          "description": "Humain",
+          "range": {
+            "0": 60,
+            "1": 79
+          }
+        },
+        "97-100": {
+          "description": "Tieffelin",
+          "range": {
+            "0": 97,
+            "1": 100
+          }
+        }
       },
       "name": "Réincarnation"
     },
     "Ring of Resistance": {
-      "name": "Anneau de résistance"
+      "name": "Anneau de résistance",
+      "results": {
+        "1-1": {
+          "range": {
+            "0": 1,
+            "1": 1
+          }
+        },
+        "2-2": {
+          "range": {
+            "0": 5,
+            "1": 5
+          }
+        },
+        "3-3": {
+          "range": {
+            "0": 2,
+            "1": 2
+          }
+        },
+        "4-4": {
+          "range": {
+            "0": 3,
+            "1": 3
+          }
+        },
+        "5-5": {
+          "range": {
+            "0": 4,
+            "1": 4
+          }
+        },
+        "6-6": {
+          "range": {
+            "0": 6,
+            "1": 6
+          }
+        },
+        "7-7": {
+          "range": {
+            "0": 7,
+            "1": 7
+          }
+        },
+        "8-8": {
+          "range": {
+            "0": 8,
+            "1": 8
+          }
+        },
+        "9-9": {
+          "range": {
+            "0": 9,
+            "1": 9
+          }
+        },
+        "10-10": {
+          "range": {
+            "0": 10,
+            "1": 10
+          }
+        }
+      }
     },
     "Robe of Useful Items": {
       "results": {
@@ -309,7 +733,45 @@
     },
     "Feather Token": {
       "name": "Plume magique",
-      "description": "Cet objet ressemble à une plume minuscule. Il existe divers types de plume magique, chacun avec un effet à usage unique différent."
+      "description": "Cet objet ressemble à une plume minuscule. Il existe divers types de plume magique, chacun avec un effet à usage unique différent.",
+      "results": {
+        "1-20": {
+          "range": {
+            "0": 1,
+            "1": 20
+          }
+        },
+        "91-100": {
+          "range": {
+            "0": 76,
+            "1": 85
+          }
+        },
+        "21-35": {
+          "range": {
+            "0": 86,
+            "1": 100
+          }
+        },
+        "36-50": {
+          "range": {
+            "0": 61,
+            "1": 75
+          }
+        },
+        "51-65": {
+          "range": {
+            "0": 46,
+            "1": 60
+          }
+        },
+        "66-90": {
+          "range": {
+            "0": 21,
+            "1": 45
+          }
+        }
+      }
     },
     "Manual of Golems": {
       "name": "Manuel des golems"
