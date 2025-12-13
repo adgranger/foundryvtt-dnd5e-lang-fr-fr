@@ -8,6 +8,8 @@
     "specialSenses": "system.attributes.senses.special",
     "dr": "system.traits.dr.custom",
     "dv": "system.traits.dv.custom",
+    "customType": "system.details.type.custom",
+    "dimensions": "system.traits.dimensions",
     "alignment": {
       "path": "system.details.alignment",
       "converter": "alignment"
@@ -39,6 +41,18 @@
     "tokenLight": {
       "path": "prototypeToken.light",
       "converter": "tokenLight"
+    },
+    "capacityCargo": {
+      "path": "system.attributes.capacity.cargo",
+      "converter": "weight"
+    },
+    "travel": {
+      "path": "system.attributes.travel",
+      "converter": "travel"
+    },
+    "planarSubtype": {
+      "path": "system.details.habitat.value",
+      "converter": "planarSubtype"
     }
   },
   "Item": {
@@ -47,6 +61,10 @@
     "materials": "system.materials.value",
     "condition": "system.activation.condition",
     "chat": "system.description.chat",
+    "specialTarget": "system.target.affects.special",
+    "specialRange": "system.range.special",
+    "uname": "system.unidentified.name",
+    "udescription": "system.unidentified.description",
     "movement": {
       "path": "system.movement",
       "converter": "movement"
@@ -91,5 +109,8 @@
       "path": "system.target",
       "converter": "target"
     }
+  },
+  "JournalEntry": {
+    "flagsTitle": "flags.dnd5e.title"
   }
 }
