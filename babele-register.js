@@ -40,18 +40,8 @@ Hooks.once('init', () => {
 
 Hooks.once('ready', () => {
 	registerCustomEnrichersFr();
-	fixExhaustion();
 	CONFIG.Actor.dataModels.npc = NPCDataFr;
 });
-
-function fixExhaustion() {
-	// Fix system bug (2024 rules)
-	if (convertMetricLength()) {
-		CONFIG.DND5E.conditionTypes.exhaustion.reduction = foundry.utils.mergeObject(
-			CONFIG.DND5E.conditionTypes.exhaustion.reduction, { speed: 1.5 }
-		);
-	}
-}
 
 function convertMetricLength() {
 	return game.settings.get("dnd5e", "metricLengthUnits");
