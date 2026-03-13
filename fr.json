@@ -412,7 +412,11 @@
         "Empty": "Les points de vie doivent être lancés ou la valeur moyenne doit être prise.",
         "Invalid": "Les points de vie doivent être un nombre entier valide."
       },
-      "Hint": "Suivre les points de vie du joueur pour chaque niveau dans la classe."
+      "Hint": "Suivre les points de vie du joueur pour chaque niveau dans la classe.",
+      "Breakdown": {
+        "Bonus": "Bonus",
+        "Roll": "Jet"
+      }
     },
     "ItemGrant": {
       "Details": "Détails de l'attribution",
@@ -1510,7 +1514,22 @@
       "HalfCantrip": "Évolution des sorts mineurs (moitié)",
       "WholeCantrip": "Évolution des sorts mineurs"
     },
-    "Hint": "Dégâts infligés à une créature sans attaque ni sauvegarde."
+    "Hint": "Dégâts infligés à une créature sans attaque ni sauvegarde.",
+    "Type": {
+      "Acid": "Acide",
+      "Bludgeoning": "Contondants",
+      "Cold": "Froid",
+      "Fire": "Feu",
+      "Force": "Force",
+      "Lightning": "Foudre",
+      "Necrotic": "Nécrotiques",
+      "Piercing": "Perforants",
+      "Poison": "Poison",
+      "Psychic": "Psychiques",
+      "Radiant": "Radiants",
+      "Slashing": "Tranchants",
+      "Thunder": "Tonnerre"
+    }
   },
   "DND5E.DamImm": "Immunités (dégâts)",
   "DND5E.DamMod": "Modifications des dégâts",
@@ -2043,7 +2062,13 @@
         }
       }
     },
-    "Hint": "Soigner une créature"
+    "Hint": "Soigner une créature",
+    "Type": {
+      "Healing": "Points de vie",
+      "HealingShort": "Soins",
+      "Temporary": "Points de vie temporaires"
+    },
+    "HealingButton": "Soins"
   },
   "DND5E.Height": "Taille",
   "DND5E.HitPoints": "Points de vie",
@@ -2239,7 +2264,7 @@
       "InvalidLevel": "doit être au moins de niveau {level}",
       "Message": "{actor} {requirements} afin de prendre cela {type}.",
       "MissingItem": "doit avoir déjà pris {items}",
-      "NotRepeatable": "n'a pas dû prendre cela auparavant"
+      "NotRepeatable": "ne doit pas avoir pris {name} auparavant"
     }
   },
   "DND5E.Price": "Prix",
@@ -3324,7 +3349,7 @@
     "CheckShort": "{check}",
     "CheckLong": "test {check}",
     "DamageShort": "{formula} {type}",
-    "DamageLong": "{average} ({formula}) {type}",
+    "DamageLong": "{average} <span class=\"formula-group\">({formula})</span> {type}",
     "DC": "{check} DD {dc}",
     "DCPassiveShort": "{check} passif DD {dc}",
     "DCPassiveLong": "valeur {check} passive de {dc} ou plus",
@@ -5433,22 +5458,22 @@
     }
   },
   "DND5E.SheetClass": {
-    "Character": "Feuille de personnage 5e par défaut",
-    "ClassSummary": "Feuille de résumé des classes 5e par défaut",
-    "Container": "Feuille de conteneur 5e par défaut",
-    "DifficultTerrain": "Feuille de Terrain difficile 5e par défaut",
-    "Encounter": "Feuille de rencontre 5e par défaut",
-    "Group": "Feuille de groupe 5e par défaut",
-    "Item": "Feuille d'objet 5e par défaut",
-    "JournalEntry": "Feuille de journal 5e par défaut",
-    "JournalEntryLegacy": "Feuille de journal 5e historique",
-    "MapLocation": "Feuille de carte 5e par défaut",
-    "NPC": "Feuille de PNJ 5e par défaut",
-    "RotateArea": "Feuille de zone de rotation 5e par défaut",
-    "Rule": "Feuille de règles 5e par défaut",
-    "SpellList": "Feuille de liste de sorts 5e par défaut",
-    "Token": "Feuille de token 5e par défaut",
-    "Vehicle": "Feuille de véhicule 5e par défaut"
+    "Character": "Fiche de personnage D&D 5e",
+    "ClassSummary": "Fiche récapitulative des classes D&D 5e",
+    "Container": "Fiche de conteneur D&D 5e",
+    "DifficultTerrain": "Fiche de Terrain difficile D&D 5e",
+    "Encounter": "Fiche de rencontre D&D 5e",
+    "Group": "Fiche de groupe D&D 5e",
+    "Item": "Fiche d'objet D&D 5e",
+    "JournalEntry": "Feuille de journal D&D 5e",
+    "JournalEntryLegacy": "Feuille de journal D&D 5e historique",
+    "MapLocation": "Fiche de carte D&D 5e",
+    "NPC": "Fiche de PNJ D&D 5e",
+    "RotateArea": "Fiche de zone de rotation D&D 5e",
+    "Rule": "Fiche des règles D&D 5e",
+    "SpellList": "Fiche de listes de sorts D&D 5e",
+    "Token": "Fiche de token D&D 5e",
+    "Vehicle": "Fiche de véhicule D&D 5e"
   },
   "DND5E.SkillRoll": "Test de {ability} ({skill})",
   "DND5E.SpellLevelSpell": "{level} ({n} Emplacements)",
