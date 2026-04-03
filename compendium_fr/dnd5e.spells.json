@@ -57,7 +57,8 @@
       },
       "effects": {
         "Animal Friendship": {
-          "name": "Amitié avec les animaux"
+          "name": "Amitié avec les animaux",
+          "description": "<p>Vous êtes &reference[charmed apply=false]{charmé} par le lanceur jusqu'à la fin du sort. Si le lanceur ou l'un de ses alliés vous fonts du mal, le sort prend fin.</p>"
         }
       }
     },
@@ -249,7 +250,8 @@
       "materials": "un peu d'eau bénite aspergée",
       "effects": {
         "Bless": {
-          "name": "Bénédiction"
+          "name": "Bénédiction",
+          "description": "<p>Chaque fois que vous effectuez un jet d'attaque ou un jet de sauvegarde avant la fin du sort, vous pouvez lancer un d4 et en ajouter le résultat au jet d'attaque ou jet de sauvegarde.</p>"
         }
       },
       "activities": {
@@ -315,7 +317,7 @@
       "description": "<p>Vous tentez de charmer un humanoïde que vous voyez à portée. Il effectue un jet de sauvegarde de Sagesse, avec avantage si vous ou l'un de vos compagnons êtes en plein combat contre lui. Si elle rate le jet de sauvegarde, la créature est &Reference[charmed]{charmée} par vous jusqu'à la fin du sort ou jusqu'à ce que vous ou l'un de vos compagnons lui nuisiez directement. La créature charmée vous considère comme une relation de confiance. Lorsque le sort prend fin, la créature sait que vous l'avez charmée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>",
       "effects": {
         "Charm Person": {
-          "description": "<p>Vous êtes &reference[Charmed apply=false]{charmé} par le lanceur de sorts jusqu'à la fin du sort. Vous considérez le lanceur de sorts comme une relation de confiance. Lorsque le sort prend fin, vous savez que vous avez été charmé.</p>",
+          "description": "<p>Vous êtes &reference[Charmed apply=false]{charmé} par le lanceur jusqu'à la fin du sort. Vous considérez le lanceur de sorts comme une relation de confiance. Lorsque le sort prend fin, vous savez que vous avez été charmé.</p>",
           "name": "Charme-personne"
         }
       },
@@ -335,7 +337,8 @@
       },
       "effects": {
         "Chill Touch": {
-          "name": "Contact glacial"
+          "name": "Contact glacial",
+          "description": "<p>Vous ne pouvez pas récupérer de points de vie jusqu'au début du tour suivant du lanceur.</p>"
         }
       }
     },
@@ -369,7 +372,8 @@
       },
       "effects": {
         "Color Spray": {
-          "name": "Couleurs dansantes"
+          "name": "Couleurs dansantes",
+          "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé} jusqu'à la fin du sort.</p>"
         }
       }
     },
@@ -383,7 +387,8 @@
       },
       "effects": {
         "Command": {
-          "name": "Injonction"
+          "name": "Injonction",
+          "description": "<p>Vous avez reçu un ordre et devez vous y soumettre à votre tour suivant.</p>"
         }
       }
     },
@@ -407,7 +412,8 @@
       },
       "effects": {
         "Comprehend Languages": {
-          "name": "Compréhension des langues"
+          "name": "Compréhension des langues",
+          "description": "<p>Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte.</p><p>Ce sort ne décrypte pas les messages secrets ni les glyphes, tels que les symboles arcaniques, s'ils ne correspondent pas à une langue écrite.</p>"
         }
       }
     },
@@ -498,7 +504,20 @@
     "Create or Destroy Water": {
       "name": "Création ou destruction d'eau",
       "description": "<p>Vous créez de l'eau ou en détruisez.</p><p><em><strong>Création d'eau.</strong></em> Vous créez jusqu'à 40 litres d'eau propre dans un récipient ouvert à portée. Une autre solution consiste à faire pleuvoir cette eau dans un cube de 9 m d'arête à portée, ce qui éteint les flammes nues de la zone.</p><p><em><strong>Destruction d'eau.</strong></em> Vous détruisez jusqu'à 40 litres d'eau dans un récipient ouvert à portée. Au lieu de cela, vous pouvez chasser le brouillard dans un cube de 9 m d'arête à portée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous créez ou détruisez 40 litres d'eau supplémentaires ou augmentez l'arête du cube de 1,50 m par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
-      "materials": "une goutte d'eau pour en créer, quelques grains de sable pour en détruire"
+      "materials": "une goutte d'eau pour en créer, quelques grains de sable pour en détruire",
+      "activities": {
+        "Create Water": {
+          "name": "Création d'eau",
+          "roll": "Litres d'eau invoqués"
+        },
+        "Destroy Water": {
+          "name": "Destruction d'eau",
+          "roll": "Litres d'eau détruits"
+        },
+        "Destroy Fog": {
+          "name": "Chasser le brouillard"
+        }
+      }
     },
     "Creation": {
       "name": "Création",
@@ -517,7 +536,12 @@
     "Dancing Lights": {
       "name": "Lumières dansantes",
       "description": "<p>Vous créez jusqu'à quatre lumières de la taille d'une torche, à portée ; pour toute la durée, elles ont l'aspect de torches, de lanternes ou de globes luisants qui flottent dans les airs. Vous pouvez également fusionner les quatre lueurs pour former une silhouette vaguement humanoïde de taille M. Quelle que soit la forme choisie, chaque lueur émet une &reference[dim light]{lumière faible} dans un rayon de 3 m.</p><p>Par une action bonus à chacun de vos tours, vous pouvez déplacer les lueurs d'un maximum de 18 m vers un nouvel endroit à portée. Chaque lueur du sort, à sa création, doit se situer dans un rayon de 6 m d'une autre, et s'évanouit si jamais elle quitte la portée du sort.</p>",
-      "materials": "un peu de phosphore ou d'orme blanc, ou un ver luisant"
+      "materials": "un peu de phosphore ou d'orme blanc, ou un ver luisant",
+      "activities": {
+        "Conjure Lights": {
+          "name": "Invocation de lumières"
+        }
+      }
     },
     "Darkness": {
       "name": "Ténèbres",
@@ -615,7 +639,11 @@
           "name": "Incanter"
         },
         "Change Appearance": {
-          "name": "Changement d'aspect"
+          "name": "Changement d'aspect",
+          "condition": "Lorsque vous lancez ce sort."
+        },
+        "Investigate Disguise Check": {
+          "name": "Test d'investigation du déguisement"
         }
       }
     },
@@ -648,7 +676,8 @@
       },
       "effects": {
         "Divine Favor": {
-          "name": "Faveur divine"
+          "name": "Faveur divine",
+          "description": "<p>Vos prières vous nimbent de radiance divine. Jusqu'à la fin du sort, vos attaques d'arme infligent 1d4 dégâts radiants supplémentaires quand elles touchent.</p>"
         }
       }
     },
@@ -750,6 +779,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Escape Plants Check": {
+          "name": "Test d'évasion des plantes"
         }
       }
     },
@@ -771,7 +803,8 @@
       },
       "effects": {
         "Expeditious Retreat": {
-          "name": "Repli expéditif"
+          "name": "Repli expéditif",
+          "description": "<p>Par une action bonus à chacun de vos tours jusqu'à la fin du sort, vous pouvez entreprendre l'action &reference[Dash].</p>"
         }
       }
     },
@@ -795,7 +828,7 @@
     },
     "Faerie Fire": {
       "name": "Lueurs féeriques",
-      "description": "<p>Le contour de tous les objets compris dans un cube de 6 m d'arête à portée luit de bleu, de vert ou de violet, à votre convenance. Toute créature prise dans la zone à l'incantation du sort est aussi nimbée de lueur si elle rate un jet de sauvegarde de Dextérité. Pour toute la durée, les objets et les créatures affectées projettent une lumière faible sur un rayon de 3 m.</p><p>Tout jet d'attaque contre les créatures affectées et les objets de la zone est avantagé si l'assaillant voit sa cible. En outre, les créatures et objets affectés ne retirent aucun bénéfice de l'état invisible.</p>",
+      "description": "<p>Le contour de tous les objets compris dans un cube de 6 m d'arête à portée luit de bleu, de vert ou de violet, à votre convenance. Toute créature prise dans la zone à l'incantation du sort est aussi nimbée de lueur si elle rate un jet de sauvegarde de Dextérité. Pour toute la durée, les objets et les créatures affectées projettent une &reference[dim light]{lumière faible} sur un rayon de 3 m.</p><p>Tout jet d'attaque contre les créatures affectées et les objets de la zone est avantagé si l'assaillant voit sa cible. En outre, les créatures et objets affectés ne retirent aucun bénéfice de l'état &reference[invisible apply=false]{invisible}.</p>",
       "activities": {
         "Cast": {
           "name": "Incanter"
@@ -803,7 +836,8 @@
       },
       "effects": {
         "Faerie Fire": {
-          "name": "Lueurs féeriques"
+          "name": "Lueurs féeriques",
+          "description": "<p>Vous êtes entouré d'une lueur qui projette une &reference[dim light]{lumière faible} sur un rayon de 3 m.</p><p>Tout jet d'attaque contre vous est avantagé si l'assaillant vous voit. En outre, vous ne retirent aucun bénéfice de l'état &reference[invisible apply=false]{invisible}.</p>"
         }
       }
     },
@@ -823,7 +857,8 @@
       },
       "effects": {
         "False Life": {
-          "name": "Simulacre de vie"
+          "name": "Simulacre de vie",
+          "description": "<p>Vous recevez des points de vie temporaires pour toute la durée de ce sort.</p>"
         }
       }
     },
@@ -850,7 +885,8 @@
       },
       "effects": {
         "Feather Fall": {
-          "name": "Feuille morte"
+          "name": "Feuille morte",
+          "description": "<p>Votre vitesse passe à 18 m par round jusqu'à la fin du sort. Si vous atterrissez avant la fin du sort, vous ne subissez aucun dégât de chute et terminez sur vos pieds, et le sort prend fin pour vous.</p>"
         }
       }
     },
@@ -867,7 +903,7 @@
     },
     "Find Familiar": {
       "name": "Appel de familier",
-      "description": "<p>Vous obtenez les services d'un familier, un esprit qui prend forme animale en choisissant parmi les options suivantes : @UUID[Compendium.dnd5e.monsters.Actor.28gU50HtG8Kp7uIz]{araignée}, @UUID[Compendium.dnd5e.monsters.Actor.WOdeacKCYVhgLDuN]{belette}, @UUID[Compendium.dnd5e.monsters.Actor.hIf83RD3ZVW4Egfi]{chat}, @UUID[Compendium.dnd5e.monsters.Actor.qav2dvMIUiMQCCsy]{chauve-souris}, @UUID[Compendium.dnd5e.monsters.Actor.d0prpsGSAorDadec]{chouette}, @UUID[Compendium.dnd5e.monsters.Actor.LPdX5YLlwci0NDZx]{corbeau}, @UUID[Compendium.dnd5e.monsters.Actor.8RgUhb31VvjUNZU1]{crabe}, @UUID[Compendium.dnd5e.monsters.Actor.fnkPNfIpS62LqOu4]{faucon}, @UUID[Compendium.dnd5e.monsters.Actor.EZgiprHXA2D7Uyb3]{grenouille} (crapaud), @UUID[Compendium.dnd5e.monsters.Actor.FWSDiq9SZsdiBAa8]{hippocampe}, @UUID[Compendium.dnd5e.monsters.Actor.I2x01hzOjVN4NUjf]{lézard}, @UUID[Compendium.dnd5e.monsters.Actor.3UUNbGiG2Yf1ZPxM]{pieuvre}, poisson (@UUID[Compendium.dnd5e.monsters.Actor.nkyCGJ9wXeAZkyyz]{piranha}), @UUID[Compendium.dnd5e.monsters.Actor.pozQUPTnLZW8epox]{rat} @UUID[Compendium.dnd5e.monsters.Actor.D5rwVIxmfFrdyyxT]{serpent venimeux}. Le familier se présente en un espace inoccupé à portée, avec le profil de jeu de la forme retenue, si ce n'est qu'il s'agit d'un céleste, d'une fée ou d'un fiélon (à votre convenance) et non d'une bête.</p><p>Votre familier agit indépendamment de vous mais il obéit toujours à vos instructions. Au combat, il joue sa propre initiative et agit à son tour. Un familier ne peut pas attaquer mais il peut entreprendre normalement d'autres actions.</p><p>Quand le familier tombe à 0 point de vie, il disparaît sans laisser de trace physique. Il réapparaît si vous relancez ce sort.</p><p>Tant que votre familier se trouve dans un rayon de 30 m de vous, vous pouvez communiquer avec lui par télépathie. De plus, au prix d'une action, vous pouvez voir par ses yeux et entendre par son ouïe jusqu'au début de votre tour suivant, en bénéficiant de ses éventuels sens spéciaux. Durant cet intervalle, vous êtes en revanche aveugle et sourd pour ce qui est de vos propres sens.</p><p>Au prix d'une action, vous pouvez révoquer temporairement votre familier. Il disparaît dans une dimension parallèle où il attend d'être convoqué. Vous pouvez également le révoquer à tout jamais. Au prix d'une action, tant qu'il est provisoirement révoqué, vous pouvez le faire réapparaître en un espace inoccupé dans un rayon de 9 m de vous.</p><p>Vous ne pouvez pas disposer de plus d'un familier à la fois. Si vous lancez ce sort alors que vous disposez déjà d'un familier, ce dernier adopte en fait une nouvelle forme. Choisissez alors l'une des formes de la liste ci-dessus. Votre familier se transforme en la créature retenue.</p><p>Enfin, si vous lancez un sort dont la portée est « contact », votre familier peut l'appliquer comme s'il avait lui-même lancé le sort. Il doit se trouver dans un rayon de 30 m de vous et doit jouer sa réaction pour transmettre le sort lors de l'incantation. Si le sort nécessite un jet d'attaque, c’est votre modificateur d'attaque qui s'applique.</p>",
+      "description": "<p>Vous obtenez les services d'un familier, un esprit qui prend forme animale en choisissant parmi les options suivantes : @UUID[Compendium.dnd5e.monsters.Actor.28gU50HtG8Kp7uIz]{araignée}, @UUID[Compendium.dnd5e.monsters.Actor.WOdeacKCYVhgLDuN]{belette}, @UUID[Compendium.dnd5e.monsters.Actor.hIf83RD3ZVW4Egfi]{chat}, @UUID[Compendium.dnd5e.monsters.Actor.qav2dvMIUiMQCCsy]{chauve-souris}, @UUID[Compendium.dnd5e.monsters.Actor.d0prpsGSAorDadec]{chouette}, @UUID[Compendium.dnd5e.monsters.Actor.LPdX5YLlwci0NDZx]{corbeau}, @UUID[Compendium.dnd5e.monsters.Actor.8RgUhb31VvjUNZU1]{crabe}, @UUID[Compendium.dnd5e.monsters.Actor.fnkPNfIpS62LqOu4]{faucon}, @UUID[Compendium.dnd5e.monsters.Actor.EZgiprHXA2D7Uyb3]{grenouille} (crapaud), @UUID[Compendium.dnd5e.monsters.Actor.FWSDiq9SZsdiBAa8]{hippocampe}, @UUID[Compendium.dnd5e.monsters.Actor.I2x01hzOjVN4NUjf]{lézard}, @UUID[Compendium.dnd5e.monsters.Actor.3UUNbGiG2Yf1ZPxM]{pieuvre}, poisson (@UUID[Compendium.dnd5e.monsters.Actor.nkyCGJ9wXeAZkyyz]{piranha}), @UUID[Compendium.dnd5e.monsters.Actor.pozQUPTnLZW8epox]{rat} @UUID[Compendium.dnd5e.monsters.Actor.D5rwVIxmfFrdyyxT]{serpent venimeux}. Le familier se présente en un espace inoccupé à portée, avec le profil de jeu de la forme retenue, si ce n'est qu'il s'agit d'un céleste, d'une fée ou d'un fiélon (à votre convenance) et non d'une bête.</p><p>Votre familier agit indépendamment de vous mais il obéit toujours à vos instructions. Au combat, il joue sa propre initiative et agit à son tour. Un familier ne peut pas attaquer mais il peut entreprendre normalement d'autres actions.</p><p>Quand le familier tombe à 0 point de vie, il disparaît sans laisser de trace physique. Il réapparaît si vous relancez ce sort.</p><p>Tant que votre familier se trouve dans un rayon de 30 m de vous, vous pouvez communiquer avec lui par télépathie. De plus, au prix d'une action, vous pouvez voir par ses yeux et entendre par son ouïe jusqu'au début de votre tour suivant, en bénéficiant de ses éventuels sens spéciaux. Durant cet intervalle, vous êtes en revanche &reference[blinded apply=false]{aveugle} et &reference[deafened apply=false]{sourd} pour ce qui est de vos propres sens.</p><p>Au prix d'une action, vous pouvez révoquer temporairement votre familier. Il disparaît dans une dimension parallèle où il attend d'être convoqué. Vous pouvez également le révoquer à tout jamais. Au prix d'une action, tant qu'il est provisoirement révoqué, vous pouvez le faire réapparaître en un espace inoccupé dans un rayon de 9 m de vous.</p><p>Vous ne pouvez pas disposer de plus d'un familier à la fois. Si vous lancez ce sort alors que vous disposez déjà d'un familier, ce dernier adopte en fait une nouvelle forme. Choisissez alors l'une des formes de la liste ci-dessus. Votre familier se transforme en la créature retenue.</p><p>Enfin, si vous lancez un sort dont la portée est « contact », votre familier peut l'appliquer comme s'il avait lui-même lancé le sort. Il doit se trouver dans un rayon de 30 m de vous et doit jouer sa réaction pour transmettre le sort lors de l'incantation. Si le sort nécessite un jet d'attaque, c’est votre modificateur d'attaque qui s'applique.</p>",
       "materials": "l'équivalent de 10 po de charbon, d'encens et d'herbes consumés par les flammes d'un brasero de laiton",
       "activities": {
         "summon": {
@@ -1060,7 +1096,7 @@
     },
     "Grease": {
       "name": "Graisse",
-      "description": "<p>Une graisse glissante recouvre le sol sur un carré de 3 m de côté centré en un point à portée, ce qui en fait un terrain difficile pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de se retrouver à terre. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir un jet de sauvegarde de Dextérité sous peine de se retrouver à terre.</p>",
+      "description": "<p>Une graisse glissante recouvre le sol sur un carré de 3 m de côté centré en un point à portée, ce qui en fait un &reference[difficult terrain]{terrain difficile} pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de se retrouver &reference[prone]{à terre}. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir un jet de sauvegarde de Dextérité sous peine de se retrouver à terre.</p>",
       "materials": "un peu de couenne de porc ou de beurre",
       "activities": {
         "Cast": {
@@ -1191,7 +1227,7 @@
     },
     "Heroism": {
       "name": "Héroïsme",
-      "description": "<p>Une créature consentante que vous touchez est investie de vaillance. Jusqu'à la fin du sort, la créature est immunisée contre l'état effrayé et reçoit autant de points de vie temporaires que votre modificateur de caractéristique d'incantation au début de chacun de ses tours. Quand le sort prend fin, la cible perd tous les points de vie temporaires restants issus du sort.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "description": "<p>Une créature consentante que vous touchez est investie de vaillance. Jusqu'à la fin du sort, la créature est immunisée contre l'état &reference[Frightened apply=false]{effrayé} et reçoit autant de points de vie temporaires que votre modificateur de caractéristique d'incantation au début de chacun de ses tours. Quand le sort prend fin, la cible perd tous les points de vie temporaires restants issus du sort.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
       "activities": {
         "Cast": {
           "name": "Incanter"
@@ -1205,7 +1241,7 @@
     },
     "Hideous Laughter": {
       "name": "Fou rire",
-      "description": "<p>Une créature de votre choix parmi celles que vous voyez à portée perçoit tout comme hilarant et se prend d'un fou rire si le sort l'affecte. La cible doit réussir un jet de sauvegarde de Sagesse, sous peine de tomber à terre et d'être neutralisée, incapable de se relever pour toute la durée. Une créature dont la valeur d'Intelligence est de 4 ou moins n'est pas affectée.</p><p>À la fin de chacun de ses tours et chaque fois qu'elle subit des dégâts, la cible peut réitérer le jet de sauvegarde de Sagesse. Elle est avantagée au jet de sauvegarde s'il est déclenché par des dégâts. En cas de réussite, le sort prend fin.</p>",
+      "description": "<p>Une créature de votre choix parmi celles que vous voyez à portée perçoit tout comme hilarant et se prend d'un fou rire si le sort l'affecte. La cible doit réussir un jet de sauvegarde de Sagesse, sous peine de tomber à terre et d'être &reference[Incapacitated]{neutralisée}, incapable de se relever pour toute la durée. Une créature dont la valeur d'Intelligence est de 4 ou moins n'est pas affectée.</p><p>À la fin de chacun de ses tours et chaque fois qu'elle subit des dégâts, la cible peut réitérer le jet de sauvegarde de Sagesse. Elle est avantagée au jet de sauvegarde s'il est déclenché par des dégâts. En cas de réussite, le sort prend fin.</p>",
       "materials": "de minuscules tartes à la crème et une plume agitée en l'air",
       "activities": {
         "Cast": {
@@ -1290,7 +1326,7 @@
     },
     "Illusory Script": {
       "name": "Texte illusoire",
-      "description": "<p>Vous écrivez sur du parchemin, du papier ou autre surface adaptée et y insufflez une puissante illusion qui persiste pour toute la durée.</p><p>À vos yeux, ainsi qu'à ceux de toute créature que vous désignez à l'incantation du sort, le texte paraît normalement écrit de votre main et porte le message voulu de votre part. Pour toute autre créature, le texte paraît rédigé selon un alphabet inconnu ou magique, parfaitement incompréhensible. Une autre option consiste à donner un sens entièrement différent au message, qui semble écrit par quelqu'un d'autre et dans une autre langue que vous maîtrisez.</p><p>Si le sort est dissipé, le texte original et l'illusion disparaissent.</p><p>Une créature dotée de la vision lucide peut lire le message caché.</p>",
+      "description": "<p>Vous écrivez sur du parchemin, du papier ou autre surface adaptée et y insufflez une puissante illusion qui persiste pour toute la durée.</p><p>À vos yeux, ainsi qu'à ceux de toute créature que vous désignez à l'incantation du sort, le texte paraît normalement écrit de votre main et porte le message voulu de votre part. Pour toute autre créature, le texte paraît rédigé selon un alphabet inconnu ou magique, parfaitement incompréhensible. Une autre option consiste à donner un sens entièrement différent au message, qui semble écrit par quelqu'un d'autre et dans une autre langue que vous maîtrisez.</p><p>Si le sort est dissipé, le texte original et l'illusion disparaissent.</p><p>Une créature dotée de la &reference[Truesight]{vision lucide} peut lire le message caché.</p>",
       "materials": "de l'encre au plomb d'une valeur minimale de 10 po, que le sort détruit",
       "activities": {
         "Cast": {
@@ -1343,7 +1379,7 @@
     },
     "Jump": {
       "name": "Saut",
-      "description": "<p>Vous touchez une créature. La distance de saut de la créature est triplée jusqu'à la fin du sort.</p>",
+      "description": "<p>Vous touchez une créature. La distance de &reference[jumping]{saut} de la créature est triplée jusqu'à la fin du sort.</p>",
       "materials": "une patte arrière de sauterelle",
       "activities": {
         "Cast": {
@@ -1376,7 +1412,7 @@
     },
     "Light": {
       "name": "Lumière",
-      "description": "<p>Vous touchez un objet dont aucune dimension ne dépasse 3 m. Jusqu'à la fin du sort, l'objet produit une lumière vive sur un rayon de 6 m et une lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix. Recouvrir intégralement l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le relancez ou le révoquez au prix d'une action.</p><p>Si vous ciblez un objet porté par une créature hostile, celle-ci doit réussir un jet de sauvegarde de Dextérité pour éviter le sort.</p>",
+      "description": "<p>Vous touchez un objet dont aucune dimension ne dépasse 3 m. Jusqu'à la fin du sort, l'objet produit une &reference[bright light]{lumière vive} sur un rayon de 6 m et une &reference[dim light]{lumière faible} sur 6 m de plus. La lumière peut présenter les teintes de votre choix. Recouvrir intégralement l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le relancez ou le révoquez au prix d'une action.</p><p>Si vous ciblez un objet porté par une créature hostile, celle-ci doit réussir un jet de sauvegarde de Dextérité pour éviter le sort.</p>",
       "materials": "une luciole ou de la mousse phosphorescente",
       "activities": {
         "Cast": {
@@ -1425,7 +1461,7 @@
       "materials": "un morceau de cuir traité",
       "effects": {
         "Mage Armor": {
-          "description": "<p>La CA de base de la cible devient 13 + son modificateur de Dextérité.</p>",
+          "description": "<p>Une force magique protectrice vous enveloppe jusqu'à la fin du sort.</p><p>Votre CA de base devient 13 + votre modificateur de Dextérité. Le sort prend fin si vous enfilez une armure ou si le lanceur le révoque au prix d'une action.</p>",
           "name": "Armure du mage"
         }
       },
@@ -1711,7 +1747,7 @@
     },
     "Produce Flame": {
       "name": "Flammes",
-      "description": "<p>Une flamme vacillante prend vie dans votre main. Elle y reste pour toute la durée, sans vous nuire ni menacer votre équipement. La flamme projette une lumière vive sur un rayon de 3 m, et une lumière faible sur 3 m de plus. Le sort prend fin si vous le révoquez au prix d'une action ou si vous le relancez.</p><p>Vous pouvez également attaquer avec la flamme, ce qui met également un terme au sort. À l'incantation du sort, ou au prix d'une action lors d'un tour ultérieur, vous pouvez projeter la flamme vers une créature située dans un rayon de 9 m. Effectuez une attaque de sort à distance. Si l'attaque touche, la cible subit 1d8 dégâts de feu.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "description": "<p>Une flamme vacillante prend vie dans votre main. Elle y reste pour toute la durée, sans vous nuire ni menacer votre équipement. La flamme projette une &reference[bright light]{lumière vive} sur un rayon de 3 m, et une &reference[dim light]{lumière faible} sur 3 m de plus. Le sort prend fin si vous le révoquez au prix d'une action ou si vous le relancez.</p><p>Vous pouvez également attaquer avec la flamme, ce qui met également un terme au sort. À l'incantation du sort, ou au prix d'une action lors d'un tour ultérieur, vous pouvez projeter la flamme vers une créature située dans un rayon de 9 m. Effectuez une attaque de sort à distance. Si l'attaque touche, la cible subit 1d8 dégâts de feu.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
       "activities": {
         "Cast": {
           "name": "Incanter"
@@ -1734,7 +1770,7 @@
     },
     "Protection from Evil and Good": {
       "name": "Protection contre le mal et le bien",
-      "description": "<p>Vous touchez une créature consentante ; jusqu'à la fin du sort, celle-ci est protégée contre les types de créatures suivants : aberrations, célestes, élémentaires, fées, fiélons et morts-vivants.</p><p>Cette protection octroie plusieurs bénéfices. Les créatures concernées sont désavantagées aux jets d'attaque contre la cible. La cible ne peut également pas être charmée, effrayée ou possédée par ces créatures. Si la cible est déjà charmée, effrayée ou possédée par une telle créature, elle est avantagée aux nouveaux jets de sauvegarde contre l'effet correspondant.</p>",
+      "description": "<p>Vous touchez une créature consentante ; jusqu'à la fin du sort, celle-ci est protégée contre les types de créatures suivants : aberrations, célestes, élémentaires, fées, fiélons et morts-vivants.</p><p>Cette protection octroie plusieurs bénéfices. Les créatures concernées sont désavantagées aux jets d'attaque contre la cible. La cible ne peut également pas être &reference[charmed apply=false]{charmée}, &reference[frightened apply=false]{effrayée} ou possédée par ces créatures. Si la cible est déjà charmée, effrayée ou possédée par une telle créature, elle est avantagée aux nouveaux jets de sauvegarde contre l'effet correspondant.</p>",
       "materials": "de l'eau bénite ou de la poudre de fer et d'argent, que le sort détruit",
       "activities": {
         "Cast": {
@@ -1845,7 +1881,7 @@
     },
     "Sacred Flame": {
       "name": "Flamme sacrée",
-      "description": "<p>Une radiance embrasée s'abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les abris ne confèrent aucun avantage dans le cadre de ce jet de sauvegarde.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "description": "<p>Une radiance embrasée s'abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les &reference[cover]{abris} ne confèrent aucun avantage dans le cadre de ce jet de sauvegarde.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
       "activities": {
         "Cast": {
           "name": "Incanter"
@@ -1854,7 +1890,7 @@
     },
     "Sanctuary": {
       "name": "Sanctuaire",
-      "description": "<p>Vous protégez une créature à portée contre les attaques. Jusqu'à la fin du sort, toute créature qui cible la créature protégée avec une attaque ou un sort nuisible effectue d'abord un jet de sauvegarde de Sagesse. En cas d'échec, la créature doit changer de cible sous peine de perdre son attaque ou son sort. Le sort ne protège pas la cible des effets de zone, comme l'explosion d'une boule de feu.</p><p>Si la créature protégée effectue une attaque ou lance un sort qui affecte une créature ennemie, le sort prend fin.</p>",
+      "description": "<p>Vous protégez une créature à portée contre les attaques. Jusqu'à la fin du sort, toute créature qui cible la créature protégée avec une attaque ou un sort nuisible effectue d'abord un jet de sauvegarde de Sagesse. En cas d'échec, la créature doit changer de cible sous peine de perdre son attaque ou son sort. Le sort ne protège pas la cible des effets de zone, comme l'explosion d'une @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{boule de feu}.</p><p>Si la créature protégée effectue une attaque ou lance un sort qui affecte une créature ennemie, le sort prend fin.</p>",
       "materials": "un petit miroir en argent",
       "activities": {
         "Cast": {
@@ -1912,10 +1948,10 @@
     },
     "Shield": {
       "name": "Bouclier",
-      "description": "<p>Une barrière invisible de force magique apparaît pour vous protéger. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de projectile magique.</p>",
+      "description": "<p>Une barrière invisible de force magique apparaît pour vous protéger. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{projectile magique}.</p>",
       "effects": {
         "Shield": {
-          "description": "<p>Jusqu’au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l’attaque qui a déclenché le sort, et vous ne subissez aucun dégât de projectile magique.</p>",
+          "description": "<p>Jusqu’au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l’attaque qui a déclenché le sort, et vous ne subissez aucun dégât de @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{projectile magique}.</p>",
           "name": "Bouclier"
         }
       },
@@ -1933,7 +1969,7 @@
       "effects": {
         "Shield of Faith": {
           "name": "Bouclier de la foi",
-          "description": "<p>La cible bénéficie d'un bonus de +2 à la CA pour toute la durée.</p>"
+          "description": "<p>Un champ scintillant apparaît autour de vous et vous octroie un bonus de +2 à la CA pour toute la durée du sort.</p>"
         }
       },
       "activities": {
@@ -2002,7 +2038,7 @@
       "materials": "une pincée de sable fin, des pétales de rose ou un grillon",
       "effects": {
         "Sleep": {
-          "description": "<p>La créature affectée par ce sort tombe inconsciente et le reste jusqu’à la fin du sort, jusqu’à ce qu’elle subisse des dégâts ou que quelqu’un consacre une action à la réveiller énergiquement.</p>",
+          "description": "<p>Vous tombez &reference[Unconscious apply=false]{inconscient} et vous le restez jusqu'à la fin du sort, jusqu'à ce que vous subissiez des dégâts ou que quelqu'un consacre une action à vous réveiller énergiquement.</p>",
           "name": "Sommeil"
         }
       },
@@ -2030,7 +2066,7 @@
     },
     "Spare the Dying": {
       "name": "Stabilisation",
-      "description": "<p>Vous touchez physiquement une créature vivante dotée de 0 point de vie. La créature est stabilisée. Ce sort est sans effet sur les morts-vivants et les artificiels.</p>",
+      "description": "<p>Vous touchez physiquement une créature vivante dotée de 0 point de vie. La créature est &reference[stable]{stabilisée}. Ce sort est sans effet sur les morts-vivants et les artificiels.</p>",
       "activities": {
         "Cast": {
           "name": "Incanter"
@@ -2237,7 +2273,7 @@
     },
     "Unseen Servant": {
       "name": "Serviteur invisible",
-      "description": "<p>Le sort crée une force informe, &Reference[Invisible]{invisible} et dépourvue de conscience qui accomplit des tâches rudimentaires sous vos ordres jusqu'à la fin du sort. Le serviteur se matérialise au sol, en un espace inoccupé à portée. Il est doté d'une CA de 10, de 1 point de vie, d'une Force de 2, et ne peut pas effectuer d'attaques. S'il tombe à 0 point de vie, le sort prend fin.</p><p>À chacun de vos tours, vous pouvez par une action bonus ordonner mentalement au serviteur de se déplacer d'un maximum de 4,50 m et d'interagir avec un objet. Le serviteur peut accomplir des tâches rudimentaires à la portée d'un humain, comme aller chercher des objets, nettoyer, réparer, repasser les vêtements, allumer un feu ou servir à manger et à boire. Une fois l'instruction reçue, le serviteur s'attèle à la tâche de son mieux jusqu'à l'avoir accomplie, puis attend vos prochaines directives.</p><p>Si vous lui assignez une tâche qui lui demande de s'éloigner de plus de 18 m de vous, le sort prend fin.</p>",
+      "description": "<p>Le sort crée une force informe, &Reference[Invisible apply=false]{invisible} et dépourvue de conscience qui accomplit des tâches rudimentaires sous vos ordres jusqu'à la fin du sort. Le serviteur se matérialise au sol, en un espace inoccupé à portée. Il est doté d'une CA de 10, de 1 point de vie, d'une Force de 2, et ne peut pas effectuer d'attaques. S'il tombe à 0 point de vie, le sort prend fin.</p><p>À chacun de vos tours, vous pouvez par une action bonus ordonner mentalement au serviteur de se déplacer d'un maximum de 4,50 m et d'interagir avec un objet. Le serviteur peut accomplir des tâches rudimentaires à la portée d'un humain, comme aller chercher des objets, nettoyer, réparer, repasser les vêtements, allumer un feu ou servir à manger et à boire. Une fois l'instruction reçue, le serviteur s'attèle à la tâche de son mieux jusqu'à l'avoir accomplie, puis attend vos prochaines directives.</p><p>Si vous lui assignez une tâche qui lui demande de s'éloigner de plus de 18 m de vous, le sort prend fin.</p>",
       "materials": "un bout de ficelle et un morceau de bois"
     },
     "Vampiric Touch": {
