@@ -1420,7 +1420,7 @@
     },
     "Fireball": {
       "name": "Fireball",
-      "description": "<p>A bright streak flashes from you to a point you choose within range and then blossoms with a low roar into a fiery explosion. Each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much damage on a successful one.</p><p>Flammable objects in the area that aren't being worn or carried start burning.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 3.</p>",
+      "description": "<p>A bright streak flashes from you to a point you choose within range and then blossoms with a low roar into a fiery explosion. [[lookup @labels.description.affects capitalize]] in a [[lookup @labels.description.template]] centered on that point makes a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much damage on a successful one.</p><p>Flammable objects in the area that aren't being worn or carried start burning.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d6 for each spell slot level above 3.</p>",
       "materials": "a ball of bat guano and sulfur"
     },
     "Flame Blade": {
@@ -3028,7 +3028,10 @@
       "materials": "a pinch of talc",
       "effects": {
         "See Invisibility": {
-          "name": "See Invisibility"
+          "name": "See Invisibility",
+          "changes": {
+            "system.attributes.senses.special": ";Ethereal Plane"
+          }
         }
       }
     },
@@ -3233,7 +3236,10 @@
       "description": "<p>For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the Influence action's skill options with them.</p><p>Most Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day.</p>",
       "effects": {
         "Bestial Communication": {
-          "name": "Bestial Communication"
+          "name": "Bestial Communication",
+          "changes": {
+            "system.traits.languages.custom": ";comprehend and verbally communicate with Beasts"
+          }
         }
       }
     },
@@ -3476,7 +3482,10 @@
       },
       "effects": {
         "Bonded Telepathy": {
-          "name": "Bonded Telepathy"
+          "name": "Bonded Telepathy",
+          "changes": {
+            "system.traits.languages.custom": ";Bonded telepathy"
+          }
         }
       }
     },
@@ -3525,7 +3534,10 @@
       "materials": "a miniature ziggurat",
       "effects": {
         "Universal Communication": {
-          "name": "Universal Communication"
+          "name": "Universal Communication",
+          "changes": {
+            "system.traits.languages.custom": ";all spoken or signed languages"
+          }
         }
       }
     },

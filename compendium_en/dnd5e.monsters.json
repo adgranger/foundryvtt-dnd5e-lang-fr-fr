@@ -1507,7 +1507,7 @@
         },
         "Spellcasting": {
           "name": "Spellcasting",
-          "description": "<p>The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:</p><p>• Cantrips (at will): [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .8zT7njvqbpXs4Cel]]{spare the dying}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}• 1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}• 2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .CylBa7jR8DSbo8Z3]]{zone of truth}• 3rd level (3 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .gopnZvS0c2jD5FP8]]{tongues}• 4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .da0a1t2FqaTjRZGT]]{freedom of movement}• 5th level (2 slots): [[/item .5e1xTohkzqFqbYH4]]{flame strike}, [[/item .WzvJ7G3cqvIubsLk]]{greater restoration}• 6th level (1 slot): [[/item .mgFqi0ev8f7Ut19y]]{heroes' feast}</p>",
+          "description": "<p>The sphinx is a 12th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). It requires no material components to cast its spells. The sphinx has the following cleric spells prepared:</p><p>Cantrips (at will): [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .8zT7njvqbpXs4Cel]]{spare the dying}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}</p><p>1st level (4 slots): [[/item .arzCrMRgcNiQuh43]]{command}, [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}</p><p>2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .CylBa7jR8DSbo8Z3]]{zone of truth}</p><p>3rd level (3 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .gopnZvS0c2jD5FP8]]{tongues}</p><p>4th level (3 slots): [[/item .pxpb2eOB6bv4phAf]]{banishment}, [[/item .da0a1t2FqaTjRZGT]]{freedom of movement}</p><p>5th level (2 slots): [[/item .5e1xTohkzqFqbYH4]]{flame strike}, [[/item .WzvJ7G3cqvIubsLk]]{greater restoration}</p><p>6th level (1 slot): [[/item .mgFqi0ev8f7Ut19y]]{heroes' feast}</p>",
           "chat": "<p>The sphinx is a spellcaster. Its spellcasting ability is Wisdom.</p>"
         },
         "Claw": {
@@ -1521,24 +1521,31 @@
         },
         "Roar": {
           "name": "Roar",
-          "description": "<p>The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.</p><p>**First Roar.** Each creature that fails a  <strong>DC 18 Wisdom</strong> saving throw is frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.**Second Roar.** Each creature that fails a  <strong>DC 18 Wisdom</strong> saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.**Third Roar.** Each creature makes a  <strong>DC 18 Constitution</strong> saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone.</p>",
-          "chat": "<p>The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.</p>"
-        },
-        "First Roar": {
-          "name": "First Roar",
-          "description": "<p>Each creature that fails a  <strong>DC 18 Wisdom</strong> saving throw is frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
-        },
-        "Second Roar": {
-          "name": "Second Roar",
-          "description": "<p>Each creature that fails a  <strong>DC 18 Wisdom</strong> saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
-        },
-        "Third Roar": {
-          "name": "Third Roar",
-          "description": "<p>Each creature makes a  <strong>DC 18 Constitution</strong> saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone.</p>"
+          "description": "<p>The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.</p><p><strong>First Roar.</strong> Each creature that fails a DC 18 Wisdom saving throw is &amp;Reference[frightened apply=false]{frightened} for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p><strong>Second Roar.</strong> Each creature that fails a DC 18 Wisdom saving throw is &amp;Reference[deafened apply=false]{deafened} and frightened for 1 minute. A frightened creature is &amp;Reference[paralyzed apply=false]{paralyzed} and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p><p><strong>Third Roar.</strong> Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked &amp;Reference[prone]{prone}. On a successful save, the creature takes half as much damage and isn't knocked prone.</p>",
+          "chat": "<p>The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.</p>",
+          "activities": {
+            "First Roar": {
+              "name": "First Roar"
+            },
+            "Second Roar": {
+              "name": "Second Roar"
+            },
+            "Third Roar": {
+              "name": "Third Roar"
+            }
+          },
+          "effects": {
+            "Frightened": {
+              "name": "Frightened"
+            },
+            "Deafened, Frightened, & Paralyzed": {
+              "name": "Deafened, Frightened, & Paralyzed"
+            }
+          }
         },
         "Claw Attack": {
           "name": "Claw Attack",
-          "description": "<p>The sphinx makes one claw attack.</p>"
+          "description": "<p>The sphinx makes one [[/item .yotsIj19d5spOVGb]]{claw} attack.</p>"
         },
         "Teleport": {
           "name": "Teleport",
@@ -1653,7 +1660,7 @@
         },
         "Acid Spray": {
           "name": "Acid Spray",
-          "description": "<p>The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature grappled.</p><p>Each creature in that line must make a  <strong>DC 13 Dexterity</strong> saving throw, taking <strong>10 (3d6) <em>acid damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide, provided that it has no creature grappled.</p><p>Each creature in that line must make a DC 13 Dexterity saving throw, taking 10 (3d6) <em>acid damage</em> on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>The ankheg spits acid in a line that is 30 ft. long and 5 ft. wide. Each creature in that line must make a <strong>Dexterity</strong> saving throw.</p>"
         }
       }
@@ -1929,7 +1936,7 @@
       "items": {
         "Incorporeal Movement": {
           "name": "Incorporeal Movement",
-          "description": "<p>The avatar can move through other creatures and objects as if they were difficult terrain.</p><p>It takes <strong>5 (1d10) <em>force damage</em></strong> if it ends its turn inside an object.</p>",
+          "description": "<p>The avatar can move through other creatures and objects as if they were difficult terrain.</p><p>It takes 5 (1d10) force damage if it ends its turn inside an object.</p>",
           "chat": "<p>The avatar can move through other creatures and objects as if they were difficult terrain.</p>"
         },
         "Turn Immunity": {
@@ -1938,7 +1945,7 @@
         },
         "Reaping Scythe": {
           "name": "Reaping Scythe",
-          "description": "<p>The avatar sweeps its spectral scythe through a creature within 5 feet of it, dealing <strong>7 (1d8 + 3) <em>slashing damage</em></strong> plus <strong>4 (1d8) <em>necrotic damage</em></strong>.</p>",
+          "description": "<p>The avatar sweeps its spectral scythe through a creature within 5 feet of it, dealing 7 (1d8 + 3) slashing damage plus 4 (1d8) necrotic damage.</p>",
           "chat": "<p>The avatar sweeps its spectral scythe through a creature within 5 feet of it.</p>"
         }
       }
@@ -2205,7 +2212,7 @@
       "items": {
         "Petrifying Gaze": {
           "name": "Petrifying Gaze",
-          "description": "<p>If a creature starts its turn within <strong>30 ft.</strong> of the basilisk and the two of them can see each other, the basilisk can force the creature to make a <strong>DC 12 Constitution saving throw</strong> if the basilisk isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.</p><p>A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save<strong>. I</strong>f the basilisk sees its reflection within <strong>30 ft.</strong> of it in bright light, it mistakes itself for a rival and targets itself with its gaze.</p>",
+          "description": "<p>If a creature starts its turn within 30 ft. of the basilisk and the two of them can see each other, the basilisk can force the creature to make a DC 12 Constitution saving throw if the basilisk isn't incapacitated. On a failed save, the creature magically begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the <em>greater restoration</em> spell or other magic.</p><p>A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.</p><p>If the basilisk sees its reflection within 30 ft. of it in bright light, it mistakes itself for a rival and targets itself with its gaze.</p>",
           "chat": "<p>The basilisk can force the creature to make a <strong>Constitution</strong> saving throw. It must repeat the saving throw at the end of its next turn. A creature that isn't surprised can avert its eyes to avoid the saving throw at the start of its turn. If it does so, it can't see the basilisk until the start of its next turn, when it can avert its eyes again. If it looks at the basilisk in the meantime, it must immediately make the save.</p>"
         },
         "Bite": {
@@ -2291,12 +2298,12 @@
         },
         "Lightning Breath": {
           "name": "Lightning Breath",
-          "description": "<p>The behir exhales a line of lightning that is 20 ft. long and 5 ft. wide. Each creature in that line must make a  <strong>DC 16 Dexterity</strong> saving throw, taking <strong>66 (12d10) <em>lightning damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>The behir exhales a line of lightning that is 20 ft. long and 5 ft. wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 66 (12d10) <em>lightning damage</em> on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>The behir exhales a line of lightning that is 20 ft. long and 5 ft. wide. Each creature in that line must make a <strong>Dexterity</strong> saving throw.</p>"
         },
         "Swallow": {
           "name": "Swallow",
-          "description": "<p>The behir makes one bite attack against a <strong>Medium or smaller target it is grappling</strong>. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is blinded and restrained, it has total cover against attacks and other effects outside the behir, and it takes <strong>21 (6d6) <em>acid damage</em></strong> at the start of each of the behir's turns. A behir can have only one creature swallowed at a time.</p><p>If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a  <strong>DC 14 Constitution</strong> saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 ft. of the behir. If the behir dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 ft. of movement, exiting prone.</p>",
+          "description": "<p>The behir makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is also swallowed, and the grapple ends. While swallowed, the target is blinded and restrained, it has total cover against attacks and other effects outside the behir, and it takes 21 (6d6) acid damage at the start of each of the behir's turns. A behir can have only one creature swallowed at a time.</p><p>If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a DC 14 Constitution saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 ft. of the behir. If the behir dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 ft. of movement, exiting prone.</p>",
           "chat": "<p>The Behir attacks with its Swallow.</p>"
         }
       }
@@ -2386,7 +2393,7 @@
         },
         "Corrosive Form": {
           "name": "Corrosive Form",
-          "description": "<p>A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes <strong>4 (1d8) <em>acid damage</em></strong>. Any nonmagical weapon made of metal or wood that hits the pudding corrodes.</p><p>After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage. The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</p>",
+          "description": "<p>A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes.</p><p>After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage. The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</p>",
           "chat": "<p>A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes <em>acid damage</em>. Any nonmagical weapon made of metal or wood that hits the pudding corrodes.</p>"
         },
         "Spider Climb": {
@@ -2643,11 +2650,11 @@
         },
         "Standing Leap": {
           "name": "Standing Leap",
-          "description": "<p>The bulette's long jump is up to <strong>30 ft.</strong> and its high jump is up to <strong>15 ft.</strong>, with or without a running start.</p>"
+          "description": "<p>The bulette's long jump is up to 30 feet and its high jump is up to 15 feet, with or without a running start.</p>"
         },
         "Deadly leap": {
           "name": "Deadly leap",
-          "description": "<p>If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures.</p><p>Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take <strong>14 (3d6 + 4) <em>bludgeoning damage</em></strong> plus <strong>14 (3d6 + 4) <em>slashing damage</em></strong>. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls prone in the bulette's space.</p>",
+          "description": "<p>If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures.</p><p>Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6 + 4) <em>bludgeoning damage</em> plus 14 (3d6 + 4) <em>slashing damage</em>. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 ft. out of the bulette's space into an unoccupied space of the creature's choice. If no unoccupied space is within range, the creature instead falls prone in the bulette's space.</p>",
           "chat": "<p>If the bulette jumps at least 15 ft. as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must make a Strength or Dexterity saving throw (target's choice) or be knocked prone.</p>"
         }
       }
@@ -2715,7 +2722,7 @@
         },
         "Charge": {
           "name": "Charge",
-          "description": "<p>If the centaur moves at least 30 ft. straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra <strong>10 (3d6) <em>piercing damage</em></strong>.</p>",
+          "description": "<p>If the centaur moves at least 30 ft. straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra 10 (3d6) piercing damage.</p>",
           "chat": "<p>If the centaur moves at least 30 ft. straight toward a target and then hits it with a pike attack on the same turn, the target takes extra <em>piercing damage</em>.</p>"
         }
       }
@@ -2772,7 +2779,7 @@
         },
         "Fire Breath": {
           "name": "Fire Breath",
-          "description": "<p>The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a  <strong>DC 15 Dexterity</strong> saving throw, taking <strong>31 (7d8) <em>fire damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a DC 15 Dexterity saving throw, taking 31 (7d8) fire damage on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>The dragon head exhales fire in a 15-foot cone. Each creature in that area must make a <strong>Dexterity</strong> saving throw.</p>"
         },
         "Multiattack": {
@@ -2979,7 +2986,7 @@
       "items": {
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must succeed on a  <strong>DC 11 Constitution</strong> saving throw against being magically petrified. On a failed save, the creature begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified for 24 hours.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must succeed on a DC 11 Constitution saving throw against being magically petrified. On a failed save, the creature begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified for 24 hours.</p>",
           "chat": "<p>The Cockatrice attacks with its Bite. The target must make a <strong>Constitution</strong> saving throw. On a failed save, it must repeat the saving throw at the end of its next turn.</p>"
         }
       }
@@ -3056,7 +3063,7 @@
         },
         "Constrict": {
           "name": "Constrict",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target is grappled (escape [[/check]]). Until this grapple ends, the target is restrained, and the [[lookup @name lowercase]] can't constrict another target.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target is grappled (escape [[/check]]). Until this grapple ends, the target is restrained, and the [[lookup @name lowercase]]{monster} can't constrict another target.</p>",
           "chat": "<p>The Couatl attacks with its Constrict. The target is grappled. Until this grapple ends, the target is restrained, and the couatl can't constrict another target.</p>",
           "activities": {
             "Escape Check": {
@@ -3076,7 +3083,7 @@
         },
         "Innate Spellcasting": {
           "name": "Innate Spellcasting",
-          "description": "<p>The [[lookup @name lowercase]]'s spellcasting ability is Charisma (spell save DC [[lookup @abilities.cha.dc]]). It can innately cast the following spells, requiring only verbal components:</p><p>At will:  [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .ppWAAEul0QHtm4er]]{detect thoughts}</p><p>3/day each: [[/item .8dzaICjGy6mTUaUr]]{bless}, [[/item .BV0mpbHh29IbbIj5]]{create food and water}, [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .MAxM77CDUu8dgIRQ]]{protection from poison}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}, [[/item .z1mx84ONwkXKUZd7]]{shield}</p><p>1/day each: [[/item .kSPRpeIx3w3nihrF]]{dream}, [[/item .WzvJ7G3cqvIubsLk]]{greater restoration}, [[/item .fVbCxFRaORalHB20]]{scrying}</p>"
+          "description": "<p>The [[lookup @name lowercase]]{monster}'s spellcasting ability is Charisma (spell save DC [[lookup @abilities.cha.dc]]). It can innately cast the following spells, requiring only verbal components:</p><p>At will: [[/item .Mzh95utKDPIrjiH8]]{detect evil and good}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .ppWAAEul0QHtm4er]]{detect thoughts}</p><p>3/day each: [[/item .8dzaICjGy6mTUaUr]]{bless}, [[/item .BV0mpbHh29IbbIj5]]{create food and water}, [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .MAxM77CDUu8dgIRQ]]{protection from poison}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}, [[/item .z1mx84ONwkXKUZd7]]{shield}</p><p>1/day each: [[/item .kSPRpeIx3w3nihrF]]{dream}, [[/item .WzvJ7G3cqvIubsLk]]{greater restoration}, [[/item .fVbCxFRaORalHB20]]{scrying}</p>"
         },
         "Magic Weapons": {
           "name": "Magic Weapons",
@@ -3300,7 +3307,12 @@
         "Crush": {
           "name": "Crush",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The darkmantle attaches to the target. If the target is Medium or smaller and the darkmantle has advantage on the attack roll, it attaches by engulfing the target's head, and the target is also blinded and unable to breathe while the darkmantle is attached in this way.</p><p>While attached to the target, the darkmantle can attack no other creature except the target but has advantage on its attack rolls. The darkmantle's speed also becomes 0, it can't benefit from any bonus to its speed, and it moves with the target.</p><p>A creature can detach the darkmantle by making a successful DC 13 Strength check as an action. On its turn, the darkmantle can detach itself from the target by using 5 feet of movement.</p>",
-          "chat": "<p>The darkmantle attacks with its Crush. The darkmantle attaches to the target. While attached to the target, the darkmantle can attack no other creature except the target but has advantage on its attack rolls. A creature can detach the darkmantle by making a successful Strength check as an action.</p>"
+          "chat": "<p>The darkmantle attacks with its Crush. The darkmantle attaches to the target. While attached to the target, the darkmantle can attack no other creature except the target but has advantage on its attack rolls. A creature can detach the darkmantle by making a successful Strength check as an action.</p>",
+          "activities": {
+            "Detach": {
+              "name": "Detach"
+            }
+          }
         },
         "Darkness Aura": {
           "name": "Darkness Aura",
@@ -3321,7 +3333,7 @@
         },
         "Two-Headed": {
           "name": "Two-Headed",
-          "description": "<p>The dog has<strong> advantage </strong>on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, or knocked unconscious.</p>"
+          "description": "<p>The dog has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, or knocked unconscious.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -3561,7 +3573,7 @@
       "items": {
         "Ambusher": {
           "name": "Ambusher",
-          "description": "<p>In the first round of a combat, the doppelganger has<strong> advantage </strong>on attack rolls against any creature it has surprised.</p>"
+          "description": "<p>In the first round of a combat, the doppelganger has advantage on attack rolls against any creature it has surprised.</p>"
         },
         "Surprise Attack": {
           "name": "Surprise Attack",
@@ -3583,7 +3595,7 @@
         },
         "Shapechanger": {
           "name": "Shapechanger",
-          "description": "<p>The doppelganger can use its action to <strong>polymorph</strong> into a Small or Medium humanoid it has seen, or back into its true form.</p><p>Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.</p>",
+          "description": "<p>The doppelganger can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form.</p><p>Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.</p>",
           "chat": "<p>The doppelganger can use its action to <strong>polymorph</strong> into a Small or Medium humanoid it has seen, or back into its true form.</p>"
         }
       }
@@ -3668,7 +3680,7 @@
       "items": {
         "Fey Ancestry": {
           "name": "Fey Ancestry",
-          "description": "<p>The drider has<strong> advantage </strong>on saving throws against being charmed, and magic can't put the drider to sleep.</p>"
+          "description": "<p>The drider has advantage on saving throws against being charmed, and magic can't put the drider to sleep.</p>"
         },
         "Innate Spellcasting": {
           "name": "Innate Spellcasting",
@@ -3680,7 +3692,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sunlight Sensitivity",
-          "description": "<p>While in sunlight, the drider has<strong> disadvantage </strong>on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>While in sunlight, the drider has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
         },
         "Web Walker": {
           "name": "Web Walker",
@@ -4250,7 +4262,7 @@
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>The target must succeed on a  <strong>DC 11 Constitution</strong> saving throw or be poisoned for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must succeed on a DC 11 Constitution saving throw or be poisoned for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
           "chat": "<p>The Ettercap attacks with its Bite. The target must make a <strong>Constitution</strong> saving throw. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         },
         "Claws": {
@@ -4506,12 +4518,17 @@
       "items": {
         "Ooze Cube": {
           "name": "Ooze Cube",
-          "description": "<p>The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has<strong> disadvantage </strong>on the saving throw<strong>. C</strong>reatures inside the cube can be seen but have total cover.</p><p>A creature <strong>within 5 feet</strong> of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful <strong>DC 12 Strength check</strong>, and the creature making the attempt takes <strong>10 (3d6) <em>acid damage</em></strong><strong>. T</strong>he cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.</p>",
-          "chat": "<p>The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has<strong> disadvantage </strong>on the saving throw<strong>. C</strong>reatures inside the cube can be seen but have total cover<strong>. A</strong> creature <strong>within 5 feet</strong> of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful Strength check.</p>"
+          "description": "<p>The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw. Creatures inside the cube can be seen but have total cover.</p><p>A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage. The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.</p>",
+          "chat": "<p>The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has<strong> disadvantage </strong>on the saving throw<strong>. C</strong>reatures inside the cube can be seen but have total cover<strong>. A</strong> creature <strong>within 5 feet</strong> of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful Strength check.</p>",
+          "activities": {
+            "Rescue": {
+              "name": "Rescue"
+            }
+          }
         },
         "Transparent": {
           "name": "Transparent",
-          "description": "<p>Even when the cube is in plain sight, it takes a successful <strong>DC 15 Wisdom (Perception) check</strong> to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.</p>",
+          "description": "<p>Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.</p>",
           "chat": "<p>Even when the cube is in plain sight, it takes a successful Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.</p>"
         },
         "Pseudopod": {
@@ -4521,8 +4538,13 @@
         },
         "Engulf": {
           "name": "Engulf",
-          "description": "<p>The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a  <strong>DC 12 Dexterity</strong> saving throw.On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.</p><p>On a failed save, the cube enters the creature's space, and the creature takes <strong>10 (3d6) <em>acid damage</em></strong> and is engulfed. The engulfed creature can't breathe, is restrained, and takes <strong>21 (6d6) <em>acid damage</em></strong> at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.</p>",
-          "chat": "<p>Whenever the cube enters a creature's space, the creature must make a <strong>Dexterity</strong> saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.</p>"
+          "description": "<p>The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.</p><p>On a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.</p>",
+          "chat": "<p>Whenever the cube enters a creature's space, the creature must make a <strong>Dexterity</strong> saving throw. On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.</p>",
+          "activities": {
+            "Escape Check": {
+              "name": "Escape Check"
+            }
+          }
         }
       }
     },
@@ -4533,12 +4555,12 @@
       "items": {
         "Stench": {
           "name": "Stench",
-          "description": "<p>Any creature that starts its turn within <strong>5 ft.</strong> of the ghast must succeed on a <strong>DC 10 Constitution saving throw</strong> or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.</p>",
+          "description": "<p>Any creature that starts its turn within 5 feet of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.</p>",
           "chat": "<p>Any creature that starts its turn within <strong>5 ft.</strong> of the ghast must succeed on a Constitution saving throw.</p>"
         },
         "Turn Defiance": {
           "name": "Turn Defiance",
-          "description": "<p>The ghast and any ghouls within <strong>30 ft.</strong> of it have<strong> advantage </strong>on saving throws against effects that turn undead.</p>"
+          "description": "<p>The ghast and any ghouls within 30 feet of it have advantage on saving throws against effects that turn undead.</p>"
         },
         "Bite": {
           "name": "Bite",
@@ -4547,7 +4569,7 @@
         },
         "Claws": {
           "name": "Claws",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>If the target is a creature other than an undead, it must succeed on a  <strong>DC 10 Constitution</strong> saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a creature other than an undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
           "chat": "<p>The Ghast attacks with its Claws. If the target is a creature other than an undead, it must make a <strong>Constitution</strong> saving throw. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -4560,11 +4582,11 @@
       "items": {
         "Ethereal Sight": {
           "name": "Ethereal Sight",
-          "description": "<p>The ghost can see <strong>60 ft.</strong> into the Ethereal Plane when it is on the Material Plane, and vice versa.</p>"
+          "description": "<p>The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.</p>"
         },
         "Incorporeal Movement": {
           "name": "Incorporeal Movement",
-          "description": "<p>The ghost can move through other creatures and objects as if they were difficult terrain. </p><p>It takes <strong>5 (1d10) <em>force damage</em></strong> if it ends its turn inside an object.</p>",
+          "description": "<p>The ghost can move through other creatures and objects as if they were difficult terrain.</p><p>It takes 5 (1d10) force damage if it ends its turn inside an object.</p>",
           "chat": "<p>The ghost can move through other creatures and objects as if they were difficult terrain.</p>"
         },
         "Withering Touch": {
@@ -4578,12 +4600,12 @@
         },
         "Horrifying Visage": {
           "name": "Horrifying Visage",
-          "description": "<p>Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a  <strong>DC 13 Wisdom</strong> saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 x 10 years. </p><p>A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.</p>",
+          "description": "<p>Each non-undead creature within 60 ft. of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. If the save fails by 5 or more, the target also ages 1d4 x 10 years.</p><p>A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed with a greater restoration spell, but only within 24 hours of it occurring.</p>",
           "chat": "<p>Each non-undead creature within 60 ft. of the ghost that can see it must succeed make a <strong>Wisdom</strong> saving throw. A target can repeat the saving throw at the end of each of its turns, ending the condition on itself on a success.</p>"
         },
         "Possession": {
           "name": "Possession",
-          "description": "<p>One humanoid that the ghost can see within 5 ft. of it must succeed on a  <strong>DC 13 Charisma</strong> saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness. </p><p>The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being charmed and frightened. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 ft. of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession ends.</p>",
+          "description": "<p>One humanoid that the ghost can see within 5 ft. of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control of its body. The ghost now controls the body but doesn't deprive the target of awareness.</p><p>The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being charmed and frightened. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 ft. of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession ends.</p>",
           "chat": "<p>One humanoid that the ghost can see within 5 ft. of it must make a <strong>Charisma</strong> saving throw.</p>"
         }
       }
@@ -4600,7 +4622,7 @@
         },
         "Claws": {
           "name": "Claws",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>If the target is a creature other than an elf or undead, it must succeed on a  <strong>DC 10 Constitution</strong> saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>",
           "chat": "<p>The Ghoul attacks with its Claws. If the target is a creature other than an elf or undead, it must make a <strong>Constitution</strong> saving throw. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>"
         }
       }
@@ -5477,7 +5499,7 @@
       "items": {
         "Trampling Charge": {
           "name": "Trampling Charge",
-          "description": "<p>If the gorgon moves at <strong>least 20 feet</strong> straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a <strong>DC 16 Strength saving throw</strong> or be knocked prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.</p>",
+          "description": "<p>If the gorgon moves at least 20 feet straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 16 Strength saving throw or be knocked prone. If the target is prone, the gorgon can make one attack with its hooves against it as a bonus action.</p>",
           "chat": "<p>If the gorgon moves at <strong>least 20 feet</strong> straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on Strength saving throw.</p>"
         },
         "Gore": {
@@ -5492,7 +5514,7 @@
         },
         "Petrifying Breath": {
           "name": "Petrifying Breath",
-          "description": "<p>The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a  <strong>DC 13 Constitution</strong> saving throw. </p><p>On a failed save, a target begins to turn to stone and is restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is petrified until freed by the greater restoration spell or other magic.</p>",
+          "description": "<p>The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 13 Constitution saving throw.</p><p>On a failed save, a target begins to turn to stone and is restrained. The restrained target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is petrified until freed by the greater restoration spell or other magic.</p>",
           "chat": "<p>The gorgon exhales petrifying gas in a 30-foot cone. Each creature in that area must make a <strong>Constitution</strong> saving throw. </p>"
         }
       }
@@ -5509,7 +5531,7 @@
         },
         "Corrode Metal": {
           "name": "Corrode Metal",
-          "description": "<p>Any nonmagical weapon made of metal that hits the ooze corrodes. After <strong>dealing damage</strong>, the weapon takes a permanent and cumulative -1 penalty to damage rolls.</p><p>If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage. The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</p>",
+          "description": "<p>Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls.</p><p>If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage. The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</p>",
           "chat": "<p>The ooze corrodes metal.</p>"
         },
         "False Appearance": {
@@ -5598,7 +5620,7 @@
       "items": {
         "Stone Camouflage": {
           "name": "Stone Camouflage",
-          "description": "<p>The grick has<strong> advantage </strong>on Dexterity (Stealth) checks made to hide in rocky terrain.</p>"
+          "description": "<p>The grick has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -5623,7 +5645,7 @@
       "items": {
         "Keen Sight": {
           "name": "Keen Sight",
-          "description": "<p>The griffon has<strong> advantage </strong>on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>The griffon has advantage on Wisdom (Perception) checks that rely on sight.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -5695,7 +5717,7 @@
       "items": {
         "Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>If it dies, the naga returns to life in 1d6 days and regains all its<strong> hit points</strong>. </p><p>Only a wish spell can prevent this trait from functioning.</p>",
+          "description": "<p>If it dies, the naga returns to life in 1d6 days and regains all its hit points.</p><p>Only a wish spell can prevent this trait from functioning.</p>",
           "chat": "<p>If it dies, the naga returns to life in 1d6 days and regains all its<strong> hit points</strong>.</p>"
         },
         "Spellcasting": {
@@ -5813,7 +5835,7 @@
         },
         "Claw Attack": {
           "name": "Claw Attack",
-          "description": "<p>The sphinx makes one claw attack.</p>"
+          "description": "<p>The sphinx makes one [[/item .gVFZXBtgx450yiH7]]{claw} attack.</p>"
         },
         "Teleport": {
           "name": "Teleport",
@@ -5956,7 +5978,7 @@
         },
         "Luring Song": {
           "name": "Luring Song",
-          "description": "<p>The harpy sings a magical melody. Every humanoid and giant within 300 ft. of the harpy that can hear the song must succeed on a  <strong>DC 11 Wisdom</strong> saving throw or be charmed until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is incapacitated.</p><p>While charmed by the harpy, a target is incapacitated and ignores the songs of other harpies. If the charmed target is more than 5 feet away from the harpy, the target must move on its turn toward the harpy by the most direct route, trying to get within 5 feet. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, the target can repeat the saving throw. A charmed target can also repeat the saving throw at the end of each of its turns. If the saving throw is successful, the effect ends on it.</p><p>A target that successfully saves is immune to this harpy's song for the next 24 hours.</p>",
+          "description": "<p>The harpy sings a magical melody. Every humanoid and giant within 300 ft. of the harpy that can hear the song must succeed on a DC 11 Wisdom saving throw or be charmed until the song ends. The harpy must take a bonus action on its subsequent turns to continue singing. It can stop singing at any time. The song ends if the harpy is incapacitated.</p><p>While charmed by the harpy, a target is incapacitated and ignores the songs of other harpies. If the charmed target is more than 5 feet away from the harpy, the target must move on its turn toward the harpy by the most direct route, trying to get within 5 feet. It doesn't avoid opportunity attacks, but before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the harpy, the target can repeat the saving throw. A charmed target can also repeat the saving throw at the end of each of its turns. If the saving throw is successful, the effect ends on it.</p><p>A target that successfully saves is immune to this harpy's song for the next 24 hours.</p>",
           "chat": "<p>The harpy sings a magical melody. Every humanoid and giant within 300 ft. of the harpy that can hear the song must make a <strong>Wisdom</strong> saving throw. A creature can also repeat the saving throw at the end of each of its turns.</p>"
         }
       }
@@ -6061,7 +6083,7 @@
       "items": {
         "Keen Sight": {
           "name": "Keen Sight",
-          "description": "<p>The hippogriff has<strong> advantage </strong>on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>The hippogriff has advantage on Wisdom (Perception) checks that rely on sight.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -6191,7 +6213,7 @@
         },
         "Multiple Heads": {
           "name": "Multiple Heads",
-          "description": "<p>The hydra has five heads. While it has more than one head, the hydra has<strong> advantage </strong>on saving throws <strong>against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious</strong><strong>. </strong></p><p>Whenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.</p><p>At the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken <em>fire damage</em> since its last turn. The hydra regains <strong>10 hit points</strong> for each head regrown in this way.</p>",
+          "description": "<p>The hydra has five heads. While it has more than one head, the hydra has advantage on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious.</p><p>Whenever the hydra takes 25 or more damage in a single turn, one of its heads dies. If all its heads die, the hydra dies.</p><p>At the end of its turn, it grows two heads for each of its heads that died since its last turn, unless it has taken <em>fire damage</em> since its last turn. The hydra regains 10 hit points for each head regrown in this way.</p>",
           "chat": "<p>The hydra has five heads. While it has more than one head, the hydra has<strong> advantage </strong>on saving throws <strong>against being blinded, charmed, deafened, frightened, stunned, and knocked unconscious</strong>.</p>"
         },
         "Reactive Heads": {
@@ -6551,8 +6573,13 @@
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes <strong>42 (12d6) <em>acid damage</em></strong> at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a  <strong>DC 25 Constitution</strong> saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone.</p>",
-          "chat": "<p>The Kraken attacks with its Bite. If the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns. If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. If the kraken dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 15 feet of movement, exiting prone.</p>",
+          "chat": "<p>The Kraken attacks with its Bite. If the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends.</p>",
+          "activities": {
+            "Swallowed Damage": {
+              "name": "Swallowed Damage"
+            }
+          }
         },
         "Tentacle": {
           "name": "Tentacle",
@@ -6561,12 +6588,12 @@
         },
         "Fling": {
           "name": "Fling",
-          "description": "<p>One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. </p><p>If a thrown target strikes a solid surface, the target takes <strong>3 (1d6) <em>bludgeoning damage</em></strong> for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a  <strong>DC 18 Dexterity</strong> saving throw or take the same damage and be knocked prone.</p>",
+          "description": "<p>One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone.</p><p>If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</p>",
           "chat": "<p>One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. If the target is thrown at another creature, that creature must make a <strong>Dexterity</strong> saving throw or take the same damage and be knocked prone.</p>"
         },
         "Lightning Storm": {
           "name": "Lightning Storm",
-          "description": "<p>The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. </p><p>A target must make a  <strong>DC 23 Dexterity</strong> saving throw, taking <strong>22 (4d10) <em>lightning damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it.</p><p>A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a <strong>Dexterity</strong> saving throw.</p>"
         },
         "Legendary Actions": {
@@ -6574,26 +6601,17 @@
           "description": "<p>The kraken can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. The kraken regains spent legendary actions at the start of its turn.</p>",
           "chat": "<p>The kraken can take 3 legendary actions.</p>"
         },
-        "Lair Actions": {
-          "name": "Lair Actions",
-          "description": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), it can use one of its lair action options. It can't do so while incapacitated or otherwise unable to take actions. If surprised, it can't use one until after its first turn in the combat.</p>",
-          "chat": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. </p>"
-        },
-        "Regional Effects": {
-          "name": "Regional Effects",
-          "description": "<p>The mere presence of a legendary creature can have strange and wondrous effects on its environment. Regional effects end abruptly or dissipate over time when the legendary creature dies.</p>"
-        },
         "Tentacle Attack or Fling": {
           "name": "Tentacle Attack or Fling",
-          "description": "<p>The kraken makes one tentacle attack or uses its Fling.</p>"
+          "description": "<p>The kraken makes one [[/item .lfg28JvVAru30yJ4]]{tentacle} attack or uses its [[/item .bwwyMBn4QwiNd4SM]]{Fling}.</p>"
         },
         "OKGAJSxcW9xQiwyj": {
           "name": "Lightning Storm",
-          "description": "<p>The kraken uses Lightning Storm.</p>"
+          "description": "<p>The kraken uses [[/item .wVCkpBj5omvdfaMm]]{Lightning Storm}.</p>"
         },
         "Ink Cloud": {
           "name": "Ink Cloud",
-          "description": "<p>While Underwater, the Kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the Kraken. Each creature other than the Kraken that ends its turn there must succeed on a  <strong>DC 23 Constitution</strong> saving throw, taking <strong>16 (3d10) <em>poison damage</em></strong> on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of the kraken's next turn.</p>",
+          "description": "<p>While Underwater, the Kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the Kraken. Each creature other than the Kraken that ends its turn there must succeed on a DC 23 Constitution saving throw, taking 16 (3d10) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of the kraken's next turn.</p>",
           "chat": "<p>The Kraken expels an ink cloud. The cloud spreads around corners, and that area is heavily obscured to creatures other than the Kraken. Each creature other than the Kraken that ends its turn there must succeed on a Constitution saving throw.</p>"
         }
       }
@@ -6603,13 +6621,13 @@
       "description": "<p><em>Token artwork by <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
       "habitat": "Desert",
       "items": {
-        "Disguise Self (any humanoid form)": {
-          "name": "Disguise Self (any humanoid form)",
+        "Disguise Self": {
+          "name": "Disguise Self",
           "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.</p><p>To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.</p>"
         },
         "Innate Spellcasting": {
           "name": "Innate Spellcasting",
-          "description": "<p>The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:</p>\n<p>At will: disguise self (any humanoid form), [[/item .nslx2nT3p4lNkmdp]]{major image}</p>\n<p>3/day each: [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .X4c8xCkmF8U9HUMz]]{mirror image}, [[/item .fVbCxFRaORalHB20]]{scrying}, [[/item .zMAWdyc8UVb37BK4]]{suggestion}</p>\n<p>1/day: [[/item .JQyigMNPiDnGI18b]]{geas}</p>"
+          "description": "<p>The lamia's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast the following spells, requiring no material components:</p><p>At will: [[/item .72qxug7ywesnINin]]{disguise self} (any humanoid form), [[/item .nslx2nT3p4lNkmdp]]{major image}</p><p>3/day each: [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .X4c8xCkmF8U9HUMz]]{mirror image}, [[/item .fVbCxFRaORalHB20]]{scrying}, [[/item .zMAWdyc8UVb37BK4]]{suggestion}</p><p>1/day: [[/item .JQyigMNPiDnGI18b]]{geas}</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -6695,16 +6713,16 @@
         },
         "Paralyzing Touch": {
           "name": "Paralyzing Touch",
-          "description": "<p>The lich uses its Paralyzing Touch.</p>"
+          "description": "<p>The lich uses its [[/item .KDSrdpdFPDKnh80y]]{Paralyzing Touch}.</p>"
         },
         "Frightening Gaze": {
           "name": "Frightening Gaze",
-          "description": "<p>The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a  <strong>DC 18 Wisdom</strong> saving throw against this magic or become grappled for 1 minute. The grappled target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.</p>",
+          "description": "<p>The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become grappled for 1 minute. The grappled target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.</p>",
           "chat": "<p>The lich fixes its gaze on one creature it can see within 10 feet of it. The target must make a <strong>Wisdom</strong> saving throw.</p>"
         },
         "Disrupt Life": {
           "name": "Disrupt Life",
-          "description": "<p>Each non-undead creature within 20 feet of the lich must make a  <strong>DC 18 Constitution</strong> saving throw against this magic, taking <strong>21 (6d6) <em>necrotic damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>Each non-undead creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>Each non-undead creature within 20 feet of the lich must make a <strong>Constitution</strong> saving throw against this magic.</p>"
         },
         "Legendary Resistance": {
@@ -6713,7 +6731,7 @@
         },
         "Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its<strong> hit points</strong> and becoming active again. The new body appears <strong>within 5 feet</strong> of the phylactery.</p>",
+          "description": "<p>If it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.</p>",
           "chat": "<p>A destroyed lich gains a new body in 1d10 days, regaining all its<strong> hit points</strong> and becoming active again.</p>"
         },
         "Spellcasting": {
@@ -6734,15 +6752,6 @@
           "name": "Legendary Actions",
           "description": "<p>The lich can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. The lich regains spent legendary actions at the start of its turn.</p>",
           "chat": "<p>The lich can take 3 legendary actions.</p>"
-        },
-        "Regional Effects": {
-          "name": "Regional Effects",
-          "description": "<p>The mere presence of a legendary creature can have strange and wondrous effects on its environment. Regional effects end abruptly or dissipate over time when the legendary creature dies.</p>"
-        },
-        "Lair Actions": {
-          "name": "Lair Actions",
-          "description": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), it can use one of its lair action options. It can't do so while incapacitated or otherwise unable to take actions. If surprised, it can't use one until after its first turn in the combat.</p>",
-          "chat": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. </p>"
         },
         "Mage Hand": {
           "name": "Mage Hand",
@@ -7239,7 +7248,7 @@
       "items": {
         "Petrifying Gaze": {
           "name": "Petrifying Gaze",
-          "description": "<p>When a creature that can see the medusa's eyes starts its turn within <strong>30 ft.</strong> of the medusa, the medusa can force it to make a <strong>DC 14 Constitution saving throw</strong> if the medusa isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.</p><p>Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save<strong>. I</strong>f the medusa sees itself reflected on a polished surface within <strong>30 ft.</strong> of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze.</p>",
+          "description": "<p>When a creature that can see the medusa's eyes starts its turn within 30 ft. of the medusa, the medusa can force it to make a DC 14 Constitution saving throw if the medusa isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.</p><p>Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save. If the medusa sees itself reflected on a polished surface within 30 ft. of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze.</p>",
           "chat": "<p>The medusa can force it to make a <strong>Constitution</strong> saving throw. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic. Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the medusa until the start of its next turn, when it can avert its eyes again. If the creature looks at the medusa in the meantime, it must immediately make the save. If the medusa sees itself reflected on a polished surface within <strong>30 ft.</strong> of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze.</p>"
         },
         "Multiattack": {
@@ -7318,12 +7327,12 @@
       "items": {
         "Shapechanger": {
           "name": "Shapechanger",
-          "description": "<p>The mimic can use its action to <strong>polymorph</strong> into an object or back into its true, amorphous form. Its statistics are the same in each form. </p><p>Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.</p>",
+          "description": "<p>The mimic can use its action to polymorph into an object or back into its true, amorphous form. Its statistics are the same in each form.</p><p>Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.</p>",
           "chat": "<p>The mimic can use its action to <strong>polymorph</strong> into an object or back into its true, amorphous form. </p>"
         },
         "Adhesive (Object Form Only)": {
           "name": "Adhesive (Object Form Only)",
-          "description": "<p>The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it <strong>escape DC 13</strong>. Ability checks made to escape this grapple have disadvantage.</p>",
+          "description": "<p>The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it escape DC 13. Ability checks made to escape this grapple have disadvantage.</p>",
           "chat": "<p>The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic is also grappled by it. Make an escape check, with disadvantage.</p>"
         },
         "False Appearance (Object Form Only)": {
@@ -7332,7 +7341,7 @@
         },
         "Grappler": {
           "name": "Grappler",
-          "description": "<p>The mimic has<strong> advantage </strong>on attack rolls against any creature grappled by it.</p>"
+          "description": "<p>The mimic has advantage on attack rolls against any creature grappled by it.</p>"
         },
         "Pseudopod": {
           "name": "Pseudopod",
@@ -7353,7 +7362,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>If the minotaur moves at least 10 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra <strong>9 (2d8) <em>piercing damage</em></strong>. </p><p>If the target is a creature, it must succeed on a  <strong>DC 14 Strength</strong> saving throw or be pushed up to 10 ft. away and knocked prone.</p>",
+          "description": "<p>If the minotaur moves at least 10 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage.</p><p>If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 ft. away and knocked prone.</p>",
           "chat": "<p>If the minotaur moves at least 10 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes extra <em>piercing damage</em>. If the target is a creature, it must make a <strong>Strength</strong> saving throw or be pushed up to 10 ft. away and knocked prone.</p>"
         },
         "Labyrinthine Recall": {
@@ -7362,6 +7371,7 @@
         },
         "Reckless": {
           "name": "Reckless",
+          "description": "<p>At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage  until the start of its next turn.</p>",
           "chat": "<section class=\"secret\"><p></p></section><p>At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</p>"
         },
         "Greataxe": {
@@ -7384,7 +7394,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>If the skeleton moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra <strong>9 (2d8) <em>piercing damage</em></strong>. </p><p>If the target is a creature, it must succeed on a  <strong>DC 14 Strength</strong> saving throw or be pushed up to 10 feet away and knocked prone.</p>",
+          "description": "<p>If the skeleton moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage.</p><p>If the target is a creature, it must succeed on a DC 14 Strength saving throw or be pushed up to 10 feet away and knocked prone.</p>",
           "chat": "<p>If the skeleton moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes extra <em>piercing damage</em>. If the target is a creature, it must make a <strong>Strength</strong> saving throw or be pushed up to 10 feet away and knocked prone.</p>"
         },
         "Greataxe": {
@@ -7430,12 +7440,12 @@
         },
         "Rotting Fist": {
           "name": "Rotting Fist",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>If the target is a creature, it must succeed on a  <strong>DC 12 Constitution</strong> saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a creature, it must succeed on a DC 12 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic.</p>",
           "chat": "<p>The Mummy attacks with its Rotting Fist. If the target is a creature, it must make a <strong>Constitution</strong> saving throw.</p>"
         },
         "Dreadful Glare": {
           "name": "Dreadful Glare",
-          "description": "<p>The mummy targets one creature it can see within 60 ft. of it. If the target can see the mummy, it must succeed on a  <strong>DC 11 Wisdom</strong> saving throw against this magic or become frightened until the end of the mummy's next turn. </p><p>If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies (but not mummy lords) for the next 24 hours.</p>",
+          "description": "<p>The mummy targets one creature it can see within 60 ft. of it. If the target can see the mummy, it must succeed on a DC 11 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn.</p><p>If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies (but not mummy lords) for the next 24 hours.</p>",
           "chat": "<p>The mummy targets one creature it can see within 60 ft. of it. If the target can see the mummy, it must make a <strong>Wisdom</strong> saving throw against this magic.</p>"
         }
       }
@@ -7448,12 +7458,12 @@
       "items": {
         "Blinding Dust": {
           "name": "Blinding Dust",
-          "description": "<p>Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a  <strong>DC 16 Constitution</strong> saving throw or be blinded until the end of the creature's next turn.</p>",
+          "description": "<p>Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must succeed on a DC 16 Constitution saving throw or be blinded until the end of the creature's next turn.</p>",
           "chat": "<p>Blinding dust and sand swirls magically around the mummy lord. Each creature within 5 feet of the mummy lord must make a <strong>Constitution</strong> saving throw.</p>"
         },
         "Blasphemous Word": {
           "name": "Blasphemous Word",
-          "description": "<p>The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a  <strong>DC 16 Constitution</strong> saving throw or be stunned until the end of the mummy lord's next turn.</p>",
+          "description": "<p>The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must succeed on a DC 16 Constitution saving throw or be stunned until the end of the mummy lord's next turn.</p>",
           "chat": "<p>The mummy lord utters a blasphemous word. Each non-undead creature within 10 feet of the mummy lord that can hear the magical utterance must make a <strong>Constitution</strong> saving throw.</p>"
         },
         "Channel Negative Energy": {
@@ -7462,11 +7472,11 @@
         },
         "Magic Resistance": {
           "name": "Magic Resistance",
-          "description": "<p>The mummy lord has<strong> advantage </strong>on saving throws against spells and other magical effects.</p>"
+          "description": "<p>The mummy lord has advantage on saving throws against spells and other magical effects.</p>"
         },
         "Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its<strong> hit points</strong> and becoming active again. The new body appears <strong>within 5 feet</strong> of the mummy lord's heart.</p>",
+          "description": "<p>A destroyed mummy lord gains a new body in 24 hours if its heart is intact, regaining all its hit points and becoming active again. The new body appears within 5 feet of the mummy lord's heart.</p>",
           "chat": "<p>A destroyed mummy lord gains a new body in 24 hours.</p>"
         },
         "Spellcasting": {
@@ -7485,7 +7495,7 @@
         },
         "Dreadful Glare": {
           "name": "Dreadful Glare",
-          "description": "<p>The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a  <strong>DC 16 Wisdom</strong> saving throw against this magic or become frightened until the end of the mummy's next turn. </p><p>If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours.</p>",
+          "description": "<p>The mummy lord targets one creature it can see within 60 feet of it. If the target can see the mummy lord, it must succeed on a DC 16 Wisdom saving throw against this magic or become frightened until the end of the mummy's next turn.</p><p>If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies and mummy lords for the next 24 hours.</p>",
           "chat": "<p>The mummy lord targets one creature it can see within 60 ft. of it. If the target can see the mummy, it must make a <strong>Wisdom</strong> saving throw against this magic.</p>"
         },
         "Legendary Actions": {
@@ -7493,18 +7503,9 @@
           "description": "<p>The mummy lord can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. The mummy lord regains spent legendary actions at the start of its turn.</p>",
           "chat": "<p>The mummy lord can take 3 legendary actions.</p>"
         },
-        "Lair Actions": {
-          "name": "Lair Actions",
-          "description": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), it can use one of its lair action options. It can't do so while incapacitated or otherwise unable to take actions. If surprised, it can't use one until after its first turn in the combat.</p>",
-          "chat": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. </p>"
-        },
-        "Regional Effects": {
-          "name": "Regional Effects",
-          "description": "<p>The mere presence of a legendary creature can have strange and wondrous effects on its environment. Regional effects end abruptly or dissipate over time when the legendary creature dies.</p>"
-        },
         "Attack": {
           "name": "Attack",
-          "description": "<p>The mummy lord makes one attack with its Rotting Fist or uses its Dreadful Glare.</p>"
+          "description": "<p>The mummy lord makes one attack with its [[/item .M6t9H8pMhzQxM9qv]]{Rotting Fist} or uses its [[/item .yHydHrxw4vlDlyjf]]{Dreadful Glare}.</p>"
         },
         "Whirlwind of Sand": {
           "name": "Whirlwind of Sand",
@@ -7802,7 +7803,7 @@
         },
         "Undead Fortitude": {
           "name": "Undead Fortitude",
-          "description": "<p>If damage reduces the zombie to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to <strong>1 hit point</strong> instead.</p>",
+          "description": "<p>If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</p>",
           "chat": "<p>If damage reduces the zombie to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw.</p>"
         }
       }
@@ -7970,7 +7971,7 @@
       "items": {
         "Keen Sight and Smell": {
           "name": "Keen Sight and Smell",
-          "description": "<p>The owlbear has<strong> advantage </strong>on Wisdom (Perception) checks that rely on sight or smell.</p>"
+          "description": "<p>The owlbear has advantage on Wisdom (Perception) checks that rely on sight or smell.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -8154,7 +8155,7 @@
         },
         "Healing Touch": {
           "name": "Healing Touch",
-          "description": "<p>The [[lookup @name lowercase]] touches another creature. The target magically regains 30 ([[/heal]]{6d8 + 3}) hit points and is freed from any curse, disease, poison, blindness, or deafness.</p>",
+          "description": "<p>The [[lookup @name lowercase]]{monster} touches another creature. The target magically regains 30 ([[/heal]]{6d8 + 3}) hit points and is freed from any curse, disease, poison, blindness, or deafness.</p>",
           "chat": "<section class=\"secret\"><p></p></section><p>The planetar touches another creature. The target magically regains 30 (6d8 + 3) hit points and is freed from any curse, disease, poison, blindness, or deafness.</p>"
         },
         "Detect Evil and Good": {
@@ -8271,7 +8272,7 @@
       "items": {
         "Spellcasting": {
           "name": "Spellcasting",
-          "description": "<p>The [[lookup @name lowercase]] is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:</p><p>Cantrip (at will): [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}</p><p>1st level (4 slots): [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .7buEm5KhI5lP8m1z]]{guiding bolt}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}</p><p>2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .JbxsYXxSOTZbf9I0]]{spiritual weapon}</p><p>3rd level (2 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .uCud2s4TjMfjiXUb]]{spirit guardians}</p>"
+          "description": "<p>The [[lookup @name lowercase]]{monster} is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). The priest has the following cleric spells prepared:</p><p>Cantrip (at will): [[/item .Bnn9Nzajixvow9xi]]{light}, [[/item .n9pJzTDsAwQxJVRl]]{sacred flame}, [[/item .MUO1uYN7JR1hm4dR]]{thaumaturgy}</p><p>1st level (4 slots): [[/item .uUWb1wZgtMou0TVP]]{cure wounds}, [[/item .7buEm5KhI5lP8m1z]]{guiding bolt}, [[/item .gvdA9nPuWLck4tBl]]{sanctuary}</p><p>2nd level (3 slots): [[/item .F0GsG0SJzsIOacwV]]{lesser restoration}, [[/item .JbxsYXxSOTZbf9I0]]{spiritual weapon}</p><p>3rd level (2 slots): [[/item .15Fa6q1nH27XfbR8]]{dispel magic}, [[/item .uCud2s4TjMfjiXUb]]{spirit guardians}</p>"
         },
         "Divine Eminence": {
           "name": "Divine Eminence",
@@ -8371,16 +8372,16 @@
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>The worm makes two attacks: one with its [[/item .dlzFJ5UjbMAfJ6Sb]]{bite} and one with its stinger.</p>"
+          "description": "<p>The worm makes two attacks: one with its [[/item .dlzFJ5UjbMAfJ6Sb]]{bite} and one with its [[/item .yOjkK3f9jt2fYu3M]]{stinger}.</p>"
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>If the target is a Large or smaller creature, it must succeed on a  <strong>DC 19 Dexterity</strong> saving throw or be swallowed by the worm. A swallowed creature is blinded and restrained, it has total cover against attacks and other effects outside the worm, and it takes <strong>21 (6d6) <em>acid damage</em></strong> at the start of each of the worm's turns.If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a  <strong>DC 21 Constitution</strong> saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 20 feet of movement, exiting prone.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a Large or smaller creature, it must succeed on a DC 19 Dexterity saving throw or be swallowed by the worm. A swallowed creature is blinded and restrained, it has total cover against attacks and other effects outside the worm, and it takes 21 (6d6) acid damage at the start of each of the worm's turns.If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the worm. If the worm dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 20 feet of movement, exiting prone.</p>",
           "chat": "<p>The Purple Worm attacks with its Bite. If the target is a Large or smaller creature, it must make a <strong>Dexterity</strong> saving throw. </p>"
         },
         "Tail Stinger": {
           "name": "Tail Stinger",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a  <strong>DC 19 Constitution</strong> saving throw, taking <strong>42 (12d6) <em>poison damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a DC 19 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>The Purple Worm attacks with its Tail Stinger. The target must make a <strong>Constitution</strong> saving throw.</p>"
         }
       }
@@ -8603,12 +8604,12 @@
         },
         "Heated Body": {
           "name": "Heated Body",
-          "description": "<p>A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes <strong>10 (3d6) <em>fire damage</em></strong>.</p>",
+          "description": "<p>A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes 10 (3d6) fire damage.</p>",
           "chat": "<p>A creature that touches the remorhaz or hits it with a melee attack while within 5 feet of it takes <em>fire damage</em>.</p>"
         },
         "Swallow": {
           "name": "Swallow",
-          "description": "<p>The remorhaz makes one bite attack against a Medium or smaller creature it is grappling. </p><p>If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the remorhaz, and it takes <strong>21 (6d6) <em>acid damage</em></strong> at the start of each of the remorhaz's turns.</p>",
+          "description": "<p>The remorhaz makes one bite attack against a Medium or smaller creature it is grappling.</p><p>If the attack hits, that creature takes the bite's damage and is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the remorhaz, and it takes 21 (6d6) acid damage at the start of each of the remorhaz's turns.</p>",
           "chat": "<p>The Remorhaz attacks with its Swallow.</p>"
         }
       }
@@ -8654,7 +8655,7 @@
         },
         "Keen Sight": {
           "name": "Keen Sight",
-          "description": "<p>The roc has<strong> advantage </strong>on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>The roc has advantage on Wisdom (Perception) checks that rely on sight.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -8678,7 +8679,7 @@
         },
         "Grasping Tendrils": {
           "name": "Grasping Tendrils",
-          "description": "<p>The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; <strong>10 hit points</strong>; immunity to poison and <em>psychic damage</em>). </p><p>Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a <strong>DC 15 Strength check</strong> against it.</p>",
+          "description": "<p>The roper can have up to six tendrils at a time. Each tendril can be attacked (AC 20; 10 hit points; immunity to poison and psychic damage).</p><p>Destroying a tendril deals no damage to the roper, which can extrude a replacement tendril on its next turn. A tendril can also be broken if a creature takes an action and succeeds on a DC 15 Strength check against it.</p>",
           "chat": "<p>The roper can have up to six tendrils at a time. Each tendril can be attacked. A tendril can also be broken if a creature takes an action and succeeds on a Strength check against it.</p>"
         },
         "Spider Climb": {
@@ -8697,6 +8698,7 @@
         },
         "Reel": {
           "name": "Reel",
+          "description": "<p>The roper pulls each creature grappled by it up to 25 feet straight toward it.</p>",
           "chat": "<section class=\"secret\"><p></p></section><p>The roper pulls each creature grappled by it up to 25 ft. straight toward it.</p>"
         },
         "Multiattack": {
@@ -8737,11 +8739,11 @@
       "items": {
         "Iron Scent": {
           "name": "Iron Scent",
-          "description": "<p>The rust monster can pinpoint, by scent, the location of ferrous metal <strong>within 30 feet</strong> of it.</p>"
+          "description": "<p>The rust monster can pinpoint, by scent, the location of ferrous metal within 30 feet of it.</p>"
         },
         "Rust Metal": {
           "name": "Rust Metal",
-          "description": "<p>Any nonmagical weapon made of metal that hits the rust monster corrodes. After <strong>dealing damage</strong>, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Non magical ammunition made of metal that hits the rust monster is destroyed after dealing damage.</p>",
+          "description": "<p>Any nonmagical weapon made of metal that hits the rust monster corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Non magical ammunition made of metal that hits the rust monster is destroyed after dealing damage.</p>",
           "chat": "<p>Any nonmagical weapon made of metal that hits the rust monster corrodes. After <strong>dealing damage</strong>, the weapon takes a permanent and cumulative -1 penalty to damage rolls.</p>"
         },
         "Bite": {
@@ -8751,7 +8753,7 @@
         },
         "Antennae": {
           "name": "Antennae",
-          "description": "<p>The rust monster corrodes a nonmagical ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. </p><p>If the object is being worn or carried by a creature, the creature can make a  <strong>DC 11 Dexterity</strong> saving throw to avoid the rust monster's touch.If the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait.</p>",
+          "description": "<p>The rust monster corrodes a nonmagical ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. If the object is being worn or carried by a creature, the creature can make a DC 11 Dexterity saving throw to avoid the rust monster's touch.</p><p>If the object touched is either metal armor or a metal shield being worn or carried, its takes a permanent and cumulative -1 penalty to the AC it offers. Armor reduced to an AC of 10 or a shield that drops to a +0 bonus is destroyed. If the object touched is a held metal weapon, it rusts as described in the Rust Metal trait.</p>",
           "chat": "<p>The rust monster corrodes a ferrous metal object it can see within 5 feet of it. If the object isn't being worn or carried, the touch destroys a 1-foot cube of it. </p>"
         }
       }
@@ -8984,11 +8986,11 @@
         },
         "Sunlight Weakness": {
           "name": "Sunlight Weakness",
-          "description": "<p>While in sunlight, the shadow has<strong> disadvantage </strong>on attack rolls, ability checks, and saving throws.</p>"
+          "description": "<p>While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws.</p>"
         },
         "Strength Drain": {
           "name": "Strength Drain",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target's Strength score is reduced by 1d4. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.If a non-evil humanoid dies from this attack, a new shadow rises from the corpse 1d4 hours later.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target's Strength score is reduced by [[/r 1d4]]. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.If a non-evil humanoid dies from this attack, a new shadow rises from the corpse 1d4 hours later.</p>",
           "chat": "<p>The Shadow attacks with its Strength Drain.</p>"
         }
       }
@@ -9001,15 +9003,15 @@
       "items": {
         "Lightning Absorption": {
           "name": "Lightning Absorption",
-          "description": "<p>Whenever the shambling mound is subjected to <strong><em>lightning damage</em></strong>, it takes no damage and regains a number of<strong> hit points</strong> equal to the <strong><em>lightning damage</em> dealt</strong>.</p>"
+          "description": "<p>Whenever the shambling mound is subjected to lightning damage, it takes no damage and regains a number of hit points equal to the lightning damage dealt.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
-          "description": "<p>The shambling mound makes two [[/item .lOIA9YKQU8xSx7Lj]]{slam} attacks. If both attacks hit a Medium or smaller target, the target is grappled <strong>escape DC 14</strong>, and the shambling mound uses its [[/item .N42BQALoCmeYphD1]]{Engulf} on it.</p>"
+          "description": "<p>The shambling mound makes two [[/item .lOIA9YKQU8xSx7Lj]]{slam} attacks. If both attacks hit a Medium or smaller target, the target is grappled escape DC 14, and the shambling mound uses its [[/item .N42BQALoCmeYphD1]]{Engulf} on it.</p>"
         },
         "Engulf": {
           "name": "Engulf",
-          "description": "<p>The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is blinded, restrained, and unable to breathe, and it must succeed on a  <strong>DC 14 Constitution</strong> saving throw at the start of each of the mound's turns or take <strong>13 (2d8 + 4) <em>bludgeoning damage</em></strong>.</p><p>If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.</p>",
+          "description": "<p>The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is blinded, restrained, and unable to breathe, and it must succeed on a DC 14 Constitution saving throw at the start of each of the mound's turns or take 13 (2d8 + 4) bludgeoning damage.</p><p>If the mound moves, the engulfed target moves with it. The mound can have only one creature engulfed at a time.</p>",
           "chat": "<p>The shambling mound engulfs a Medium or smaller creature grappled by it. The engulfed target is blinded, restrained, and unable to breathe, and it must make a <strong>Constitution</strong> saving throw at the start of each of the mound's turns. If the mound moves, the engulfed target moves with it.</p>"
         },
         "Slam": {
@@ -9225,7 +9227,7 @@
       "items": {
         "Incorporeal Movement": {
           "name": "Incorporeal Movement",
-          "description": "<p>The specter can move through other creatures and objects as if they were difficult terrain.</p><p>It takes <strong>5 (1d10) <em>force damage</em></strong> if it ends its turn inside an object.</p>",
+          "description": "<p>The specter can move through other creatures and objects as if they were difficult terrain.</p><p>It takes 5 (1d10) force damage if it ends its turn inside an object.</p>",
           "chat": "<p>The specter can move through other creatures and objects as if they were difficult terrain.</p>"
         },
         "Life Drain": {
@@ -9235,7 +9237,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sunlight Sensitivity",
-          "description": "<p>While in sunlight, the specter has<strong> disadvantage </strong>on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>While in sunlight, the specter has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
         }
       }
     },
@@ -9269,17 +9271,17 @@
       "items": {
         "Bite": {
           "name": "Bite",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a  <strong>DC 13 Constitution</strong> saving throw, taking <strong>31 (7d8) <em>poison damage</em></strong> on a failed save, or half as much damage on a successful one.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must make a DC 13 Constitution saving throw, taking 31 (7d8) poison damage on a failed save, or half as much damage on a successful one.</p>",
           "chat": "<p>The Spirit Naga attacks with its Bite. The target must make a <strong>Constitution</strong> saving throw.</p>"
         },
         "Rejuvenation": {
           "name": "Rejuvenation",
-          "description": "<p>If it dies, the naga returns to life in 1d6 days and regains all its<strong> hit points</strong>. Only a wish spell can prevent this trait from functioning.</p>",
+          "description": "<p>If it dies, the naga returns to life in 1d6 days and regains all its hit points. Only a wish spell can prevent this trait from functioning.</p>",
           "chat": "<p>If it dies, the naga returns to life in 1d6 days and regains all its<strong> hit points</strong>.</p>"
         },
         "Spellcasting": {
           "name": "Spellcasting",
-          "description": "<p>The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:</p><p><strong>• Cantrips (at will)</strong>: [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .oIzA2MEHwxhtQneU]]{minor illusion}, [[/item .ctW81uiX56xZR2c5]]{ray of frost}</p><p><strong>• 1st level (4 slots)</strong>: [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .KhwiSi9fwVfUPtku]]{sleep}</p><p><strong>• 2nd level (3 slots)</strong>: [[/item .ppWAAEul0QHtm4er]]{detect thoughts}, [[/item .3Lo9boi7P2ro6QV4]]{hold person}</p><p><strong>• 3rd level (3 slots)</strong>: [[/item .IyikgTEOTv701jgQ]]{lightning bolt}, [[/item .13uVuBQP6VaiSPvC]]{water breathing}</p><p><strong>• 4th level (3 slots)</strong>: [[/item .pybg5MNc3lkerH4Y]]{blight}, [[/item .A4RsPuSvB9wFtz1j]]{dimension door}</p><p><strong>• 5th level (2 slots)</strong>: [[/item .91Sw6vOIaO7U8DvM]]{dominate person}</p>",
+          "description": "<p>The naga is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks), and it needs only verbal components to cast its spells. It has the following wizard spells prepared:</p><p>Cantrips (at will): [[/item .Utk1OQRwYkMkFRD3]]{mage hand}, [[/item .oIzA2MEHwxhtQneU]]{minor illusion}, [[/item .ctW81uiX56xZR2c5]]{ray of frost}</p><p>1st level (4 slots): [[/item .eS7XnnApoxRxYXPs]]{charm person}, [[/item .ghXTfe7sgCbgf1Q8]]{detect magic}, [[/item .KhwiSi9fwVfUPtku]]{sleep}</p><p>2nd level (3 slots): [[/item .ppWAAEul0QHtm4er]]{detect thoughts}, [[/item .3Lo9boi7P2ro6QV4]]{hold person}</p><p>3rd level (3 slots): [[/item .IyikgTEOTv701jgQ]]{lightning bolt}, [[/item .13uVuBQP6VaiSPvC]]{water breathing}</p><p>4th level (3 slots): [[/item .pybg5MNc3lkerH4Y]]{blight}, [[/item .A4RsPuSvB9wFtz1j]]{dimension door}</p><p>5th level (2 slots): [[/item .91Sw6vOIaO7U8DvM]]{dominate person}</p>",
           "chat": "<p>The naga is a spellcaster. Its spellcasting ability is Intelligence and it needs only verbal components to cast its spells.</p>"
         },
         "Mage Hand": {
@@ -9850,7 +9852,7 @@
         },
         "Magic Resistance": {
           "name": "Magic Resistance",
-          "description": "<p>The tarrasque has<strong> advantage </strong>on saving throws against spells and other magical effects.</p>"
+          "description": "<p>The tarrasque has advantage on saving throws against spells and other magical effects.</p>"
         },
         "Reflective Carapace": {
           "name": "Reflective Carapace",
@@ -9882,41 +9884,27 @@
         },
         "Tail": {
           "name": "Tail",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>If the target is a creature, it must succeed on a  <strong>DC 20 Strength</strong> saving throw or be knocked prone.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>If the target is a creature, it must succeed on a DC 20 Strength saving throw or be knocked prone.</p>",
           "chat": "<p>The Tarrasque attacks with its Tail. If the target is a creature, it must make a <strong>Strength</strong> saving throw or be knocked prone.</p>"
         },
         "Frightful Presence": {
           "name": "Frightful Presence",
-          "description": "<p>Each creature of the tarrasque's choice <strong>within 120 feet</strong> of it and aware of it must succeed on a <strong>DC 17 Wisdom saving throw</strong> or become frightened for <strong>1 minute</strong>.</p><p>A creature can repeat the saving throw at the end of each of its turns, with<strong> disadvantage </strong>if the tarrasque is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the tarrasque's Frightful Presence for the next 24 hours.</p>",
+          "description": "<p>Each creature of the tarrasque's choice within 120 feet of it and aware of it must succeed on a DC 17 Wisdom saving throw or become frightened for 1 minute.</p><p>A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the tarrasque is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the tarrasque's Frightful Presence for the next 24 hours.</p>",
           "chat": "<p>Each creature of the tarrasque's choice <strong>within 120 feet</strong> of it and aware of it must succeed on a Wisdom saving throw.</p>"
         },
         "Swallow": {
           "name": "Swallow",
-          "description": "<p>The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. </p><p>While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the tarrasque, and it takes <strong>56 (16d6) <em>acid damage</em></strong> at the start of each of the tarrasque's turns.If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a  <strong>DC 20 Constitution</strong> saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 30 feet of movement, exiting prone.</p>",
-          "chat": "<p>The Tarrasque attacks with its Swallow.</p>",
-          "activities": {
-            "attack": {
-              "condition": "Large or smaller creature it is grappling"
-            }
-          }
-        },
-        "Lair Actions": {
-          "name": "Lair Actions",
-          "description": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), it can use one of its lair action options. It can't do so while incapacitated or otherwise unable to take actions. If surprised, it can't use one until after its first turn in the combat.</p>",
-          "chat": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. </p>"
+          "description": "<p>The tarrasque makes one bite attack against a Large or smaller creature it is grappling. If the attack hits, the target takes the bite's damage, the target is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the tarrasque, and it takes 56 (16d6) acid damage at the start of each of the tarrasque's turns.</p><p>If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the tarrasque. If the tarrasque dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 30 feet of movement, exiting prone.</p>",
+          "chat": "<p>The Tarrasque attacks with its Swallow.</p>"
         },
         "Legendary Actions": {
           "name": "Legendary Actions",
           "description": "<p>The tarrasque can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. The tarrasque regains spent legendary actions at the start of its turn.</p>",
           "chat": "<p>The tarrasque can take 3 legendary actions.</p>"
         },
-        "Regional Effects": {
-          "name": "Regional Effects",
-          "description": "<p>The mere presence of a legendary creature can have strange and wondrous effects on its environment. Regional effects end abruptly or dissipate over time when the legendary creature dies.</p>"
-        },
         "Attack": {
           "name": "Attack",
-          "description": "<p>The tarrasque makes one claw attack or tail attack.</p>"
+          "description": "<p>The tarrasque makes one [[/item .7DRko62ztr6FjZLA]]{claw} attack or [[/item .Lo4LU9FBxez1Nzqm]]{tail} attack.</p>"
         },
         "Move": {
           "name": "Move",
@@ -9924,7 +9912,7 @@
         },
         "Chomp": {
           "name": "Chomp",
-          "description": "<p>The tarrasque makes one bite attack or uses its Swallow.</p>"
+          "description": "<p>The tarrasque makes one [[/item .suUr7bJqBqE7xk2F]]{bite} attack or uses its [[/item .7ycN6rrAEJQP3ZOs]]{Swallow}.</p>"
         }
       }
     },
@@ -9991,7 +9979,7 @@
       "items": {
         "Animate Trees": {
           "name": "Animate Trees",
-          "description": "<p>The treant magically animates one or two trees it can see <strong>within 60 feet</strong> of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. </p><p>An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.</p>",
+          "description": "<p>The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option.</p><p>An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.</p>",
           "chat": "<p>The treant magically animates one or two trees it can see <strong>within 60 feet</strong> of it.</p>"
         },
         "False Appearance": {
@@ -10002,8 +9990,8 @@
           "name": "Multiattack",
           "description": "<p>The treant makes two [[/item .lisZZTaupqInGEi1]]{slam} attacks.</p>"
         },
-        "Treant - Rock": {
-          "name": "Treant - Rock",
+        "Rock": {
+          "name": "Rock",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
           "chat": "<p>The Treant attacks with its Rock.</p>"
         },
@@ -10155,7 +10143,7 @@
         },
         "Healing Touch": {
           "name": "Healing Touch",
-          "description": "<p>The [[lookup @name lowercase]] touches another creature. The target magically regains 30 ([[/heal]]{2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.</p>",
+          "description": "<p>The [[lookup @name lowercase]]{monster} touches another creature. The target magically regains 30 ([[/heal]]{2d8 + 2}) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.</p>",
           "chat": "<section class=\"secret\"><p></p></section><p>The unicorn touches another creature with its horn. The target magically regains 11 (2d8 + 2) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.</p>"
         },
         "Teleport": {
@@ -10226,7 +10214,7 @@
       "items": {
         "Shapechanger": {
           "name": "Shapechanger",
-          "description": "<p>If the vampire isn't in sun light or running water, it can use its action to <strong>polymorph</strong> into a Tiny bat or a Medium cloud of mist, or back into its true form.</p><p>While in bat form, the vampire can't speak, its walking speed is <strong>5 feet,</strong> and it has a flying speed of <strong>30 feet.</strong> Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies<strong>. </strong>While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of <strong>20 feet,</strong> can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has<strong> advantage </strong>on Strength, Dexterity, and Constitution saving throws, and it is immune to all <strong>nonmagical damage</strong>, except the damage it takes from sunlight.</p>",
+          "description": "<p>If the vampire isn't in sun light or running water, it can use its action to polymorph into a Tiny bat or a Medium cloud of mist, or back into its true form.</p><p>While in bat form, the vampire can't speak, its walking speed is 5 feet, and it has a flying speed of 30 feet. Its statistics, other than its size and speed, are unchanged. Anything it is wearing transforms with it, but nothing it is carrying does. It reverts to its true form if it dies.</p><p>While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless, has a flying speed of 20 feet, can hover, and can enter a hostile creature's space and stop there. In addition, if air can pass through a space, the mist can do so without squeezing, and it can't pass through water. It has advantage on Strength, Dexterity, and Constitution saving throws, and it is immune to all nonmagical damage, except the damage it takes from sunlight.</p>",
           "chat": "<p>The vampire can use its action to <strong>polymorph</strong> or return to its true form.</p>"
         },
         "Legendary Resistance": {
@@ -10235,12 +10223,12 @@
         },
         "Misty Escape": {
           "name": "Misty Escape",
-          "description": "<p>When it drops to <strong>0 hit points</strong> outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.</p><p>While it has <strong>0 hit points</strong> in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then paralyzed until it regains at least <strong>1 hit point</strong>. After spending 1 hour in its resting place with <strong>0 hit points</strong>, it regains <strong>1 hit point</strong>.</p>",
+          "description": "<p>When it drops to 0 hit points outside its resting place, the vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious, provided that it isn't in sunlight or running water. If it can't transform, it is destroyed.</p><p>While it has 0 hit points in mist form, it can't revert to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it reverts to its vampire form. It is then paralyzed until it regains at least 1 hit point. After spending 1 hour in its resting place with 0 hit points, it regains 1 hit point.</p>",
           "chat": "<p>A slain vampire transforms into a cloud of mist (as in the Shapechanger trait) instead of falling unconscious.</p>"
         },
         "Regeneration": {
           "name": "Regeneration",
-          "description": "<p>The vampire regains <strong>20 hit points</strong> at the start of its turn if it has at least <strong>1 hit point</strong> and isn't in sunlight or running water. If the vampire takes <em>radiant damage</em> or damage from holy water, this trait doesn't function at the start of the vampire's next turn.</p>",
+          "description": "<p>The vampire regains 20 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.</p>",
           "chat": "<p>The vampire regains <strong>20 hit points</strong> at the start of its turn.</p>"
         },
         "Spider Climb": {
@@ -10249,7 +10237,7 @@
         },
         "Vampire Weaknesses": {
           "name": "Vampire Weaknesses",
-          "description": "<p>The vampire has the following flaws:</p>\n<p><em>Forbiddance</em>. The vampire can't enter a residence without an invitation from one of the occupants<strong>. </strong></p>\n<p><em>Harmed by Running Water</em>. The vampire takes 20 <em>acid damage</em> if it ends its turn in running water<strong>. </strong></p>\n<p><em>Stake to the Heart</em>. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.</p>\n<p><em>Sunlight Hypersensitivity</em>. The vampire takes 20 <em>radiant damage</em> when it starts its turn in sunlight. While in sunlight, it has<strong> disadvantage </strong>on attack rolls and ability checks.</p>"
+          "description": "<p>The vampire has the following flaws:</p><p><em>Forbiddance</em>. The vampire can't enter a residence without an invitation from one of the occupants.</p><p><em>Harmed by Running Water</em>. The vampire takes 20 acid damage if it ends its turn in running water.</p><p><em>Stake to the Heart</em>. If a piercing weapon made of wood is driven into the vampire's heart while the vampire is incapacitated in its resting place, the vampire is paralyzed until the stake is removed.</p><p><em>Sunlight Hypersensitivity</em>. The vampire takes 20 <em>radiant damage</em> when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.</p>"
         },
         "Multiattack (Vampire Form Only)": {
           "name": "Multiattack (Vampire Form Only)",
@@ -10272,7 +10260,7 @@
         },
         "Charm": {
           "name": "Charm",
-          "description": "<p>The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must succeed on a  <strong>DC 17 Wisdom</strong> saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.</p><p>Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.</p>",
+          "description": "<p>The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must succeed on a DC 17 Wisdom saving throw against this magic or be charmed by the vampire. The charmed target regards the vampire as a trusted friend to be heeded and protected. Although the target isn't under the vampire's control, it takes the vampire's requests or actions in the most favorable way it can, and it is a willing target for the vampire's bite attack.</p><p>Each time the vampire or the vampire's companions do anything harmful to the target, it can repeat the saving throw, ending the effect on itself on a success. Otherwise, the effect lasts 24 hours or until the vampire is destroyed, is on a different plane of existence than the target, or takes a bonus action to end the effect.</p>",
           "chat": "<p>The vampire targets one humanoid it can see within 30 ft. of it. If the target can see the vampire, the target must make a <strong>Wisdom</strong> saving throw against this magic.</p>"
         },
         "Children of the Night": {
@@ -10285,26 +10273,17 @@
           "description": "<p>The vampire can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. The vampire regains spent legendary actions at the start of its turn.</p>",
           "chat": "<p>The vampire can take 3 legendary actions.</p>"
         },
-        "Lair Actions": {
-          "name": "Lair Actions",
-          "description": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), it can use one of its lair action options. It can't do so while incapacitated or otherwise unable to take actions. If surprised, it can't use one until after its first turn in the combat.</p>",
-          "chat": "<p>If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. </p>"
-        },
-        "Regional Effects": {
-          "name": "Regional Effects",
-          "description": "<p>The mere presence of a legendary creature can have strange and wondrous effects on its environment. Regional effects end abruptly or dissipate over time when the legendary creature dies.</p>"
-        },
         "Move": {
           "name": "Move",
           "description": "<p>The vampire moves up to its speed without provoking opportunity attacks.</p>"
         },
         "Unarmed Strike": {
           "name": "Unarmed Strike",
-          "description": "<p>The vampire makes one unarmed strike.</p>"
+          "description": "<p>The vampire makes one [[/item .jYBYvv9EF1UnOvqZ]]{unarmed strike}.</p>"
         },
         "Bite": {
           "name": "Bite",
-          "description": "<p>The vampire makes a bite attack.</p>"
+          "description": "<p>The vampire makes a [[/item .uqHuj7Pjf2sjny21]]{bite} attack.</p>"
         }
       }
     },
@@ -10321,7 +10300,7 @@
         },
         "Claws": {
           "name": "Claws",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Instead of dealing damage, the vampire can grapple the target (escape DC 13).</p>",
           "chat": "<p>The Vampire Spawn attacks with its Claws. Instead of dealing damage, the vampire can grapple the target.</p>"
         },
         "Multiattack": {
@@ -10330,7 +10309,7 @@
         },
         "Regeneration": {
           "name": "Regeneration",
-          "description": "<p>The vampire regains <strong>10 hit points</strong> at the start of its turn if it has at least <strong>1 hit point</strong> and isn't in sunlight or running water. If the vampire takes <em>radiant damage</em> or damage from holy water, this trait doesn't function at the start of the vampire's next turn.</p>",
+          "description": "<p>The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampire's next turn.</p>",
           "chat": "<p>The vampire regains <strong>10 hit points</strong> at the start of its turn.</p>"
         },
         "Spider Climb": {
@@ -10339,7 +10318,7 @@
         },
         "Vampire Weaknesses": {
           "name": "Vampire Weaknesses",
-          "description": "<p>The vampire has the following flaws:</p>\n<p><strong>Forbiddance</strong>. The vampire can't enter a residence without an invitation from one of the occupants<strong>. </strong></p>\n<p><strong>Harmed by Running Water. </strong>The vampire takes 20 <em>acid damage</em> when it ends its turn in running water<strong>. </strong></p>\n<p><strong>Stake to the Heart. </strong>The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is incapacitated in its resting place<strong>. </strong></p>\n<p><strong>Sunlight Hypersensitivity.</strong> The vampire takes 20 <em>radiant damage</em> when it starts its turn in sunlight. While in sunlight, it has<strong> disadvantage </strong>on attack rolls and ability checks.</p>"
+          "description": "<p>The vampire has the following flaws:</p><p><em>Forbiddance.</em> The vampire can't enter a residence without an invitation from one of the occupants.</p><p><em>Harmed by Running Water.</em> The vampire takes 20 acid damage when it ends its turn in running water.</p><p><em>Stake to the Heart.</em> The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is incapacitated in its resting place.</p><p><em>Sunlight Hypersensitivity.</em> The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.</p>"
         }
       }
     },
@@ -10662,7 +10641,7 @@
         },
         "Pounce (Tiger or Hybrid Form Only)": {
           "name": "Pounce (Tiger or Hybrid Form Only)",
-          "description": "<p>If the [[lookup @name lowercase]] moves at <strong>least 15 feet</strong> straight toward a creature and then hits it with a [[/item .HPmjVRKpG08bgohb]]{claw} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &amp;Reference[prone]. If the target is prone, the weretiger can make one [[/item .FOkSL18gU0Sli5ZA]]{bite} attack against it as a bonus action.</p>",
+          "description": "<p>If the [[lookup @name lowercase]]{monster} moves at <strong>least 15 feet</strong> straight toward a creature and then hits it with a [[/item .HPmjVRKpG08bgohb]]{claw} attack on the same turn, that target must succeed on a [[/save]] saving throw or be knocked &amp;Reference[prone]. If the target is prone, the weretiger can make one [[/item .FOkSL18gU0Sli5ZA]]{bite} attack against it as a bonus action.</p>",
           "requirements": "Tiger or Hybrid Form",
           "chat": "<p>If the weretiger moves at <strong>least 15 feet</strong> straight toward a creature and then hits it with a claw attack on the same turn, that target must make a <strong>Strength</strong> saving throw or be knocked prone.</p>",
           "activities": {
@@ -10768,7 +10747,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sunlight Sensitivity",
-          "description": "<p>While in sunlight, the wight has<strong> disadvantage </strong>on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>While in sunlight, the wight has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
         },
         "Multiattack": {
           "name": "Multiattack",
@@ -10786,7 +10765,7 @@
         },
         "Life Drain": {
           "name": "Life Drain",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must succeed on a  <strong>DC 13 Constitution</strong> saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p><p>A humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p><p>A humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.</p>",
           "chat": "<p>The Wight attacks with its Life Drain. The target must make a <strong>Constitution</strong> saving throw.</p>"
         }
       }
@@ -10799,8 +10778,13 @@
       "items": {
         "Consume Life": {
           "name": "Consume Life",
-          "description": "<p>As a bonus action, the will-o'-wisp can target one creature it can see within <strong>5 ft.</strong> of it that has <strong>0 hit points</strong> and is still alive. </p><p>The target must succeed on a <strong>DC 10 Constitution saving throw</strong> against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6)<strong> hit points</strong>.</p>",
-          "chat": "<p>The will-o'-wisp can target one creature it can see within <strong>5 ft.</strong> The target must succeed on a Constitution saving throw.</p>"
+          "description": "<p>As a bonus action, the will-o'-wisp can target one creature it can see within 5 feet of it that has 0 hit points and is still alive.</p><p>The target must succeed on a DC 10 Constitution saving throw against this magic or die. If the target dies, the will-o'-wisp regains 10 (3d6) hit points.</p>",
+          "chat": "<p>The will-o'-wisp can target one creature it can see within <strong>5 ft.</strong> The target must succeed on a Constitution saving throw.</p>",
+          "activities": {
+            "heal": {
+              "condition": "if the target dies"
+            }
+          }
         },
         "Ephemeral": {
           "name": "Ephemeral",
@@ -10808,12 +10792,12 @@
         },
         "Incorporeal Movement": {
           "name": "Incorporeal Movement",
-          "description": "<p>The will-o'-wisp can move through other creatures and objects as if they were difficult terrain.</p><p>It takes <strong>5 (1d10) <em>force damage</em></strong> if it ends its turn inside an object.</p>",
+          "description": "<p>The will-o'-wisp can move through other creatures and objects as if they were difficult terrain.</p><p>It takes 5 (1d10) force damage if it ends its turn inside an object.</p>",
           "chat": "<p>The will-o'-wisp can move through other creatures and objects as if they were difficult terrain.</p>"
         },
         "Variable Illumination": {
           "name": "Variable Illumination",
-          "description": "<p>The will-o'-wisp sheds bright light in a 5- to <strong>20-foot radius</strong> and dim light for an additional number of<strong> ft.</strong> equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.</p>"
+          "description": "<p>The will-o'-wisp sheds bright light in a 5- to 20-foot radius and dim light for an additional number of feet equal to the chosen radius. The will-o'-wisp can alter the radius as a bonus action.</p>"
         },
         "Shock": {
           "name": "Shock",
@@ -10835,15 +10819,15 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Keen Hearing and Smell",
-          "description": "<p>The wolf has<strong> advantage </strong>on Wisdom (Perception) checks that rely on hearing or smell.</p>"
+          "description": "<p>The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.</p>"
         },
         "Pack Tactics": {
           "name": "Pack Tactics",
-          "description": "<p>The wolf has<strong> advantage </strong>on an attack roll against a creature if at least one of the wolf's allies is within <strong>5 ft.</strong> of the creature and the ally isn't incapacitated.</p>"
+          "description": "<p>The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.</p>"
         },
         "Snow Camouflage": {
           "name": "Snow Camouflage",
-          "description": "<p>The wolf has<strong> advantage </strong>on Dexterity (Stealth) checks made to hide in snowy terrain.</p>"
+          "description": "<p>The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain.</p>"
         },
         "Bite": {
           "name": "Bite",
@@ -10885,7 +10869,7 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Keen Hearing and Smell",
-          "description": "<p>The worg has<strong> advantage </strong>on Wisdom (Perception) checks that rely on hearing or smell.</p>"
+          "description": "<p>The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.</p>"
         },
         "Bite": {
           "name": "Bite",
@@ -10907,17 +10891,17 @@
         },
         "Incorporeal Movement": {
           "name": "Incorporeal Movement",
-          "description": "<p>The wraith can move through other creatures and objects as if they were difficult terrain. </p><p>It takes <strong>5 (1d10) <em>force damage</em></strong> if it ends its turn inside an object.</p>",
+          "description": "<p>The wraith can move through other creatures and objects as if they were difficult terrain.</p><p>It takes 5 (1d10) force damage if it ends its turn inside an object.</p>",
           "chat": "<p>The wraith can move through other creatures and objects as if they were difficult terrain.</p>"
         },
-        "Wraith - Life Drain": {
-          "name": "Wraith - Life Drain",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. </p><p>The target must succeed on a  <strong>DC 14 Constitution</strong> saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>",
+        "Life Drain": {
+          "name": "Life Drain",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</p>",
           "chat": "<p>The Wraith attacks with its Life Drain. The target must make a <strong>Constitution</strong> saving throw.</p>"
         },
         "Sunlight Sensitivity": {
           "name": "Sunlight Sensitivity",
-          "description": "<p>While in sunlight, the wraith has<strong> disadvantage </strong>on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
+          "description": "<p>While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</p>"
         }
       }
     },
@@ -11335,7 +11319,7 @@
         },
         "Undead Fortitude": {
           "name": "Undead Fortitude",
-          "description": "<p>If damage reduces the zombie to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to <strong>1 hit point</strong> instead.</p>",
+          "description": "<p>If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</p>",
           "chat": "<p>If damage reduces the zombie to <strong>0 hit points</strong>, it must make a <strong>Constitution</strong> saving throw.</p>"
         }
       }

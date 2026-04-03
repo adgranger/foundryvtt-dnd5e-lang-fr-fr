@@ -20,7 +20,12 @@
     },
     "Acid Splash": {
       "name": "Acid Splash",
-      "description": "<p>You hurl a bubble of acid. Choose one creature you can see within range, or choose two creatures you can see within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6acid damage.</p><p>This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>"
+      "description": "<p>You hurl a bubble of acid. Choose one creature you can see within range, or choose two creatures you can see within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.</p><p>This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Aid": {
       "name": "Aid",
@@ -30,7 +35,12 @@
     "Alarm": {
       "name": "Alarm",
       "description": "<p>You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.</p><p>A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.</p><p>An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.</p>",
-      "materials": "A tiny bell and a piece of fine silver wire."
+      "materials": "A tiny bell and a piece of fine silver wire.",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Alter Self": {
       "name": "Alter Self",
@@ -38,8 +48,19 @@
     },
     "Animal Friendship": {
       "name": "Animal Friendship",
-      "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
-      "materials": "A morsel of food."
+      "description": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast's Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be &amp;reference[charmed apply=false] by you for the spell's duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>",
+      "materials": "A morsel of food.",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Animal Friendship": {
+          "name": "Animal Friendship",
+          "description": "<p>You are &amp;reference[charmed apply=false] by the caster for the duration of the spell. If the caster or one of their allies harms you, the spell ends.</p>"
+        }
+      }
     },
     "Animal Messenger": {
       "name": "Animal Messenger",
@@ -123,10 +144,15 @@
       "name": "Bane",
       "description": "<p>Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.</p>\n<p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>",
       "materials": "A drop of blood",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Bane": {
           "name": "Bane",
-          "description": "<p>Whenever the target makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.</p>"
+          "description": "<p>Whenever you make an attack roll or a saving throw before the spell ends, you must roll a d4 and subtract the number rolled from the attack roll or saving throw.</p>"
         }
       }
     },
@@ -222,9 +248,15 @@
       "name": "Bless",
       "description": "<p>You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll 1d4 and add the number rolled to the attack roll or saving throw.</p>\n<p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>",
       "materials": "A sprinkling of holy water",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Bless": {
-          "name": "Bless"
+          "name": "Bless",
+          "description": "<p>Whenever you make an attack roll or a saving throw before the spell ends, you can roll 1d4 and add the number rolled to the attack roll or saving throw.</p>"
         }
       }
     },
@@ -260,7 +292,12 @@
     },
     "Burning Hands": {
       "name": "Burning Hands",
-      "description": "<p>As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.</p><p>The fire ignites any flammable objects in the area that aren't being worn or carried.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>"
+      "description": "<p>As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a Dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.</p><p>The fire ignites any flammable objects in the area that aren't being worn or carried.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Call Lightning": {
       "name": "Call Lightning",
@@ -278,16 +315,32 @@
     "Charm Person": {
       "name": "Charm Person",
       "description": "<p>You attempt to charm a humanoid you can see within range. It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is &amp;Reference[charmed] by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Charm Person": {
           "name": "Charm Person",
-          "description": "<p>The target is Charmed by the caster until the spell ends. The charmed creature regards the caster as a friendly acquaintance. When the spell ends, the creature knows it was charmed.</p>"
+          "description": "<p>You are &amp;reference[Charmed apply=false] by the caster until the spell ends. You regard the caster as a friendly acquaintance. When the spell ends, you know you were charmed.</p>"
         }
       }
     },
     "Chill Touch": {
       "name": "Chill Touch",
-      "description": "<p>You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 Necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.</p><p>If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+      "description": "<p>You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 Necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.</p><p>If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Chill Touch": {
+          "name": "Chill Touch",
+          "description": "<p>You cannot regain hit points until the start of the caster's next turn.</p>"
+        }
+      }
     },
     "Circle of Death": {
       "name": "Circle of Death",
@@ -310,12 +363,34 @@
     },
     "Color Spray": {
       "name": "Color Spray",
-      "description": "<p>A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).</p><p>Starting with the creature that has the lowest current hit points, each creature affected by this spell is blinded until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st.</p>",
-      "materials": "A pinch of powder or sand that is colored red, yellow, and blue."
+      "description": "<p>A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring &amp;reference[unconscious apply=false] creatures and creatures that can't see).</p><p>Starting with the creature that has the lowest current hit points, each creature affected by this spell is &amp;reference[blinded] until the spell ends. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st.</p>",
+      "materials": "A pinch of powder or sand that is colored red, yellow, and blue.",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Color Spray": {
+          "name": "Color Spray",
+          "description": "<p>You are &amp;reference[blinded apply=false] until the spell ends.</p>"
+        }
+      }
     },
     "Command": {
       "name": "Command",
-      "description": "<p>You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.</p><p>Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can't follow your command, the spell ends.</p><p><strong>Approach.</strong> The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.</p><p><strong>Drop.</strong> The target drops whatever it is holding and then ends its turn.</p><p><strong>Flee.</strong> The target spends its turn moving away from you by the fastest available means.</p><p><strong>Grovel.</strong> The target falls prone and then ends its turn.</p><p><strong>Halt.</strong> The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.</p>"
+      "description": "<p>You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. The spell has no effect if the target is undead, if it doesn't understand your language, or if your command is directly harmful to it.</p><p>Some typical commands and their effects follow. You might issue a command other than one described here. If you do so, the DM determines how the target behaves. If the target can't follow your command, the spell ends.</p><p><strong>Approach.</strong> The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you.</p><p><strong>Drop.</strong> The target drops whatever it is holding and then ends its turn.</p><p><strong>Flee.</strong> The target spends its turn moving away from you by the fastest available means.</p><p><strong>Grovel.</strong> The target falls &amp;reference[prone] and then ends its turn.</p><p><strong>Halt.</strong> The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Command": {
+          "name": "Command",
+          "description": "<p>You have been commanded, and must follow the command on your next turn.</p>"
+        }
+      }
     },
     "Commune": {
       "name": "Commune",
@@ -329,7 +404,18 @@
     "Comprehend Languages": {
       "name": "Comprehend Languages",
       "description": "<p>For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.</p><p>This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language.</p>",
-      "materials": "A pinch of soot and salt"
+      "materials": "A pinch of soot and salt",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Comprehend Languages": {
+          "name": "Comprehend Languages",
+          "description": "<p>For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.</p><p>This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language.</p>"
+        }
+      }
     },
     "Compulsion": {
       "name": "Compulsion",
@@ -417,8 +503,21 @@
     },
     "Create or Destroy Water": {
       "name": "Create or Destroy Water",
-      "description": "<p>You either create or destroy water.</p><p><strong>Create Water.</strong> You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range.</p><p><strong>Destroy Water.</strong> You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.</p>",
-      "materials": "A drop of water if creating water or a few grains of sand if destroying it."
+      "description": "<p>You either create or destroy water.</p><p><strong>Create Water.</strong> You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range.</p><p><strong>Destroy Water.</strong> You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.</p>",
+      "materials": "A drop of water if creating water or a few grains of sand if destroying it.",
+      "activities": {
+        "Create Water": {
+          "name": "Create Water",
+          "roll": "Gallons of Water Conjured"
+        },
+        "Destroy Water": {
+          "name": "Destroy Water",
+          "roll": "Gallons of Water Destroyed"
+        },
+        "Destroy Fog": {
+          "name": "Destroy Fog"
+        }
+      }
     },
     "Creation": {
       "name": "Creation",
@@ -427,12 +526,22 @@
     },
     "Cure Wounds": {
       "name": "Cure Wounds",
-      "description": "<p>A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.</p>"
+      "description": "<p>A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Dancing Lights": {
       "name": "Dancing Lights",
-      "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
-      "materials": "A bit of phosphorus or wychwood, or a glowworm"
+      "description": "<p>You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds &amp;reference[dim light] in a 10-foot radius.</p><p>As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.</p>",
+      "materials": "A bit of phosphorus or wychwood, or a glowworm",
+      "activities": {
+        "Conjure Lights": {
+          "name": "Conjure Lights"
+        }
+      }
     },
     "Darkness": {
       "name": "Darkness",
@@ -469,16 +578,49 @@
     },
     "Detect Evil and Good": {
       "name": "Detect Evil and Good",
-      "description": "<p>For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>"
+      "description": "<p>For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Detect Evil and Good": {
+          "name": "Detect Evil and Good",
+          "description": "<p>For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>"
+        }
+      }
     },
     "Detect Magic": {
       "name": "Detect Magic",
-      "description": "<p>For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>"
+      "description": "<p>For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Detect Magic": {
+          "name": "Detect Magic",
+          "description": "<p>For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>"
+        }
+      }
     },
     "Detect Poison and Disease": {
       "name": "Detect Poison and Disease",
       "description": "<p>For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>",
-      "materials": "A yew leaf"
+      "materials": "A yew leaf",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Detect Poison and Disease": {
+          "name": "Detect Poison and Disease",
+          "description": "<p>For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.</p><p>The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.</p>"
+        }
+      }
     },
     "Detect Thoughts": {
       "name": "Detect Thoughts",
@@ -491,7 +633,19 @@
     },
     "Disguise Self": {
       "name": "Disguise Self",
-      "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.</p><p>To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.</p>"
+      "description": "<p>You make yourself—including your clothing, armor, weapons, and other belongings on your person—look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.</p><p>The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.</p><p>To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        },
+        "Change Appearance": {
+          "name": "Change Appearance",
+          "condition": "When you cast this spell."
+        },
+        "Investigate Disguise Check": {
+          "name": "Investigate Disguise Check"
+        }
+      }
     },
     "Disintegrate": {
       "name": "Disintegrate",
@@ -514,7 +668,18 @@
     },
     "Divine Favor": {
       "name": "Divine Favor",
-      "description": "<p>Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.</p>"
+      "description": "<p>Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Divine Favor": {
+          "name": "Divine Favor",
+          "description": "<p>Your prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.</p>"
+        }
+      }
     },
     "Divine Word": {
       "name": "Divine Word",
@@ -571,7 +736,12 @@
     },
     "Druidcraft": {
       "name": "Druidcraft",
-      "description": "<p>Whispering to the spirits of Nature, you create one of the following Effects within range:</p>\n<ul>\n<li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, Falling snowflakes for snow, and so on. This effect persists for 1 round.</li>\n<li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li>\n<li>You create an Instantaneous, harmless sensory effect, such as Falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li>\n<li>You instantly light or snuff out a Candle, a torch, or a small campfire.</li>\n</ul>"
+      "description": "<p>Whispering to the spirits of Nature, you create one of the following Effects within range:</p>\n<ul>\n<li>You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, Falling snowflakes for snow, and so on. This effect persists for 1 round.</li>\n<li>You instantly make a flower blossom, a seed pod open, or a leaf bud bloom.</li>\n<li>You create an Instantaneous, harmless sensory effect, such as Falling leaves, a puff of wind, the sound of a small animal, or the faint odor of skunk. The effect must fit in a 5-foot cube.</li>\n<li>You instantly light or snuff out a Candle, a torch, or a small campfire.</li>\n</ul>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Earthquake": {
       "name": "Earthquake",
@@ -580,7 +750,12 @@
     },
     "Eldritch Blast": {
       "name": "Eldritch Blast",
-      "description": "<p>A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.</p><p>The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</p>"
+      "description": "<p>A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.</p><p>The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Enhance Ability": {
       "name": "Enhance Ability",
@@ -594,11 +769,19 @@
     },
     "Entangle": {
       "name": "Entangle",
-      "description": "<p>Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the Duration, these Plants turn the ground in the area into difficult terrain.</p><p>A creature in the area when you cast the spell must succeed on a Strength saving throw or be &amp;Reference[Restrained] by the entangling Plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.</p><p>When the spell ends, the conjured Plants wilt away.</p>",
+      "description": "<p>Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range. For the Duration, these Plants turn the ground in the area into &amp;reference[difficult terrain].</p><p>A creature in the area when you cast the spell must succeed on a Strength saving throw or be &amp;Reference[Restrained] by the entangling Plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.</p><p>When the spell ends, the conjured Plants wilt away.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        },
+        "Escape Plants Check": {
+          "name": "Escape Plants Check"
+        }
+      },
       "effects": {
         "Entangle": {
           "name": "Entangle",
-          "description": "<p>A creature in the area is Restrained by the entangling Plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.</p>"
+          "description": "<p>You are &amp;reference[Restrained apply=false] by the entangling Plants until the spell ends. While restrained by the plants, you can use your action to make a [[/check str]] against the caster's spell save DC. On a success, you free yourself.</p>"
         }
       }
     },
@@ -612,7 +795,18 @@
     },
     "Expeditious Retreat": {
       "name": "Expeditious Retreat",
-      "description": "<p>This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.</p>"
+      "description": "<p>This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the &amp;reference[Dash] action.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Expeditious Retreat": {
+          "name": "Expeditious Retreat",
+          "description": "<p>As a bonus action on each of your turns until the spell ends, you can take the &amp;reference[Dash] action.</p>"
+        }
+      }
     },
     "Eyebite": {
       "name": "Eyebite",
@@ -634,7 +828,18 @@
     },
     "Faerie Fire": {
       "name": "Faerie Fire",
-      "description": "<p>Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.</p><p>Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.</p>"
+      "description": "<p>Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a Dexterity saving throw. For the duration, objects and affected creatures shed &amp;reference[dim light] in a 10-foot radius.</p><p>Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being &amp;reference[invisible apply=false].</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Faerie Fire": {
+          "name": "Faerie Fire",
+          "description": "<p>You are outlined in light, shedding &amp;reference[dim light] in a 10-foot radius.</p><p>Any attack roll against you has advantage if the attacker can see you, and you can't benefit from being &amp;reference[invisible apply=false].</p>"
+        }
+      }
     },
     "Faithful Hound": {
       "name": "Faithful Hound",
@@ -644,7 +849,18 @@
     "False Life": {
       "name": "False Life",
       "description": "<p>Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 Temporary Hit Points for the Duration.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional Temporary Hit Points for each slot level above 1st.</p>",
-      "materials": "A small amount of alcohol or distilled spirits"
+      "materials": "A small amount of alcohol or distilled spirits",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "False Life": {
+          "name": "False Life",
+          "description": "<p>You gain Temporary Hit Points for the duration of this spell.</p>"
+        }
+      }
     },
     "Fear": {
       "name": "Fear",
@@ -661,7 +877,18 @@
       "name": "Feather Fall",
       "description": "<p>Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.</p>",
       "materials": "A small feather or piece of down",
-      "condition": "which you take when you or a creature within 60 feet of you falls"
+      "condition": "which you take when you or a creature within 60 feet of you falls",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Feather Fall": {
+          "name": "Feather Fall",
+          "description": "<p>Your rate of descent slows to 60 feet per round until the spell ends. If you land before the spell ends, you take no falling damage and can land on your feet, and the spell ends for you.</p>"
+        }
+      }
     },
     "Feeblemind": {
       "name": "Feeblemind",
@@ -676,7 +903,7 @@
     },
     "Find Familiar": {
       "name": "Find Familiar",
-      "description": "<p>You gain the service of a familiar, a spirit that takes an animal form you choose: @UUID[Compendium.dnd5e.monsters.Actor.qav2dvMIUiMQCCsy]{bat}, @UUID[Compendium.dnd5e.monsters.Actor.hIf83RD3ZVW4Egfi]{cat}, @UUID[Compendium.dnd5e.monsters.Actor.8RgUhb31VvjUNZU1]{crab}, @UUID[Compendium.dnd5e.monsters.Actor.EZgiprHXA2D7Uyb3]{frog} (toad), @UUID[Compendium.dnd5e.monsters.Actor.fnkPNfIpS62LqOu4]{hawk}, @UUID[Compendium.dnd5e.monsters.Actor.I2x01hzOjVN4NUjf]{lizard}, @UUID[Compendium.dnd5e.monsters.Actor.3UUNbGiG2Yf1ZPxM]{octopus}, @UUID[Compendium.dnd5e.monsters.Actor.d0prpsGSAorDadec]{owl}, @UUID[Compendium.dnd5e.monsters.Actor.D5rwVIxmfFrdyyxT]{poisonous snake}, fish (@UUID[Compendium.dnd5e.monsters.Actor.nkyCGJ9wXeAZkyyz]{quipper}), @UUID[Compendium.dnd5e.monsters.Actor.pozQUPTnLZW8epox]{rat}, @UUID[Compendium.dnd5e.monsters.Actor.LPdX5YLlwci0NDZx]{raven}, @UUID[Compendium.dnd5e.monsters.Actor.FWSDiq9SZsdiBAa8]{sea horse}, @UUID[Compendium.dnd5e.monsters.Actor.28gU50HtG8Kp7uIz]{spider}, or @UUID[Compendium.dnd5e.monsters.Actor.WOdeacKCYVhgLDuN]{weasel}. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.</p><p>Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.</p><p>When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.</p><p>While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.</p><p>As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.</p><p>You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.</p><p>Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your action modifier for the roll.</p>",
+      "description": "<p>You gain the service of a familiar, a spirit that takes an animal form you choose: @UUID[Compendium.dnd5e.monsters.Actor.qav2dvMIUiMQCCsy]{bat}, @UUID[Compendium.dnd5e.monsters.Actor.hIf83RD3ZVW4Egfi]{cat}, @UUID[Compendium.dnd5e.monsters.Actor.8RgUhb31VvjUNZU1]{crab}, @UUID[Compendium.dnd5e.monsters.Actor.EZgiprHXA2D7Uyb3]{frog} (toad), @UUID[Compendium.dnd5e.monsters.Actor.fnkPNfIpS62LqOu4]{hawk}, @UUID[Compendium.dnd5e.monsters.Actor.I2x01hzOjVN4NUjf]{lizard}, @UUID[Compendium.dnd5e.monsters.Actor.3UUNbGiG2Yf1ZPxM]{octopus}, @UUID[Compendium.dnd5e.monsters.Actor.d0prpsGSAorDadec]{owl}, @UUID[Compendium.dnd5e.monsters.Actor.D5rwVIxmfFrdyyxT]{poisonous snake}, fish (@UUID[Compendium.dnd5e.monsters.Actor.nkyCGJ9wXeAZkyyz]{quipper}), @UUID[Compendium.dnd5e.monsters.Actor.pozQUPTnLZW8epox]{rat}, @UUID[Compendium.dnd5e.monsters.Actor.LPdX5YLlwci0NDZx]{raven}, @UUID[Compendium.dnd5e.monsters.Actor.FWSDiq9SZsdiBAa8]{sea horse}, @UUID[Compendium.dnd5e.monsters.Actor.28gU50HtG8Kp7uIz]{spider}, or @UUID[Compendium.dnd5e.monsters.Actor.WOdeacKCYVhgLDuN]{weasel}. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.</p><p>Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.</p><p>When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.</p><p>While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are &amp;reference[deafened apply=false]{Deaf} and &amp;reference[blinded apply=false]{Blind} with regard to your own senses.</p><p>As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.</p><p>You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.</p><p>Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your action modifier for the roll.</p>",
       "materials": "10 gp worth of charcoal, incense, and herbs that must be consumed by fire in a brass brazier",
       "activities": {
         "summon": {
@@ -684,6 +911,15 @@
             "Fish": {
               "name": "Fish"
             }
+          }
+        }
+      },
+      "effects": {
+        "Familiar": {
+          "name": "Familiar",
+          "description": "<p>This creature is a @UUID[Compendium.dnd5e.spells.Item.JGT5bNqu9REL7Fuz]{Familiar}. A familiar can't attack, but it can take other actions as normal.</p>",
+          "changes": {
+            "name": "{} Familiar"
           }
         }
       }
@@ -707,7 +943,12 @@
     },
     "Fire Bolt": {
       "name": "Fire Bolt",
-      "description": "<p>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.</p><p>This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</p>"
+      "description": "<p>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.</p><p>This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Fire Shield": {
       "name": "Fire Shield",
@@ -762,7 +1003,12 @@
     "Floating Disk": {
       "name": "Floating Disk",
       "description": "<p>This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the Duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.</p><p>The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.</p><p>If you move more than 100 feet from the disk (typically because it can't move around an obstacle to follow you), the spell ends.</p>",
-      "materials": "A drop of mercury"
+      "materials": "A drop of mercury",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Fly": {
       "name": "Fly",
@@ -850,12 +1096,26 @@
     "Goodberry": {
       "name": "Goodberry",
       "description": "<p>Up to ten berries appear in your hand and are infused with magic for the duration. A creature can use its action to eat one berry. Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.</p><p>The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.</p>",
-      "materials": "A spring of mistletoe"
+      "materials": "A spring of mistletoe",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Grease": {
       "name": "Grease",
-      "description": "<p>Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into difficult terrain for the duration.</p><p>When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall prone. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.</p>",
-      "materials": "A bit of pork rind or butter"
+      "description": "<p>Slick grease covers the ground in a 10-foot square centered on a point within range and turns it into &amp;reference[difficult terrain] for the duration.</p><p>When the grease appears, each creature standing in its area must succeed on a Dexterity saving throw or fall &amp;reference[prone]. A creature that enters the area or ends its turn there must also succeed on a Dexterity saving throw or fall prone.</p>",
+      "materials": "A bit of pork rind or butter",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        },
+        "Enter / End Turn in Grease Save": {
+          "name": "Enter / End Turn in Grease Save",
+          "condition": "When a creature enters the area or ends its turn there."
+        }
+      }
     },
     "Greater Invisibility": {
       "name": "Greater Invisibility",
@@ -883,11 +1143,33 @@
     },
     "Guidance": {
       "name": "Guidance",
-      "description": "<p>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.</p>"
+      "description": "<p>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Guidance": {
+          "name": "Guidance",
+          "description": "<p>Once before the spell ends, you can roll a [[/r d4]] and add the number rolled to one ability check of your choice. You can roll the die before or after making the ability check. The spell then ends.</p>"
+        }
+      }
     },
     "Guiding Bolt": {
       "name": "Guiding Bolt",
-      "description": "<p>A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>"
+      "description": "<p>A flash of light streaks toward a creature of your choice within range. Make a ranged spell attack against the target. On a hit, the target takes 4d6 radiant damage, and the next attack roll made against this target before the end of your next turn has advantage, thanks to the mystical dim light glittering on the target until then.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Guiding Bolt": {
+          "name": "Guiding Bolt",
+          "description": "<p>The next attack roll made against you before the end of the caster's next turn has advantage thanks to the mystical dim light glittering on you.</p>"
+        }
+      }
     },
     "Gust of Wind": {
       "name": "Gust of Wind",
@@ -925,7 +1207,12 @@
     },
     "Healing Word": {
       "name": "Healing Word",
-      "description": "<p>A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.</p>"
+      "description": "<p>A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Heat Metal": {
       "name": "Heat Metal",
@@ -935,7 +1222,12 @@
     "Hellish Rebuke": {
       "name": "Hellish Rebuke",
       "description": "<p>When you are damaged by a creature within 60 feet of you that you can see, you point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.</p>",
-      "condition": "Which you take in response to being damaged by a creature within 60 feet of you that you can see"
+      "condition": "Which you take in response to being damaged by a creature within 60 feet of you that you can see",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Heroes' Feast": {
       "name": "Heroes' Feast",
@@ -950,12 +1242,38 @@
     },
     "Heroism": {
       "name": "Heroism",
-      "description": "<p>A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being Frightened and gains Temporary Hit Points equal to your Spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>"
+      "description": "<p>A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being &amp;reference[Frightened apply=false] and gains Temporary Hit Points equal to your Spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>",
+      "activities": {
+        "Grant Temporary Hit Points": {
+          "name": "Grant Temporary Hit Points",
+          "condition": "When a creature under the effects of this spell starts their turn."
+        },
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Heroism": {
+          "name": "Heroism",
+          "description": "<p>You have been imbued with bravery. Until the spell ends, you are immune to being &amp;reference[Frightened apply=false] and gain Temporary Hit Points equal to the caster's Spellcasting ability modifier at the start of each of your turns. When the spell ends, you lose any remaining temporary hit points from this spell.</p>"
+        }
+      }
     },
     "Hideous Laughter": {
       "name": "Hideous Laughter",
-      "description": "<p>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming Incapacitated and unable to stand up for the Duration. A creature with an Intelligence score of 4 or less isn't affected.</p><p>At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends.</p>",
-      "materials": "Tiny tarts and a feather that is waved in the air"
+      "description": "<p>A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a Wisdom saving throw or fall prone, becoming &amp;reference[Incapacitated] and unable to stand up for the Duration. A creature with an Intelligence score of 4 or less isn't affected.</p><p>At the end of each of its turns, and each time it takes damage, the target can make another Wisdom saving throw. The target has advantage on the saving throw if it's triggered by damage. On a success, the spell ends.</p>",
+      "materials": "Tiny tarts and a feather that is waved in the air",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Hideous Laughter": {
+          "name": "Hideous Laughter",
+          "description": "<p>You perceives everything as hilariously funny and fall into fits of laughter. You are &amp;reference[Incapacitated apply=false] and unable to stand up for the Duration.</p><p>At the end of each of your turns, and each time you take damage, you can make another Wisdom saving throw. You have advantage on the saving throw if it's triggered by damage. On a success, the spell ends.</p>"
+        }
+      }
     },
     "Hold Monster": {
       "name": "Hold Monster",
@@ -987,9 +1305,19 @@
     "Hunter's Mark": {
       "name": "Hunter's Mark",
       "description": "<p>You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra 1d6 damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours.</p>",
+      "activities": {
+        "Bonus Mark Damage": {
+          "name": "Bonus Mark Damage",
+          "condition": "When you hit a creature under the effects of this spell with a weapon attack."
+        },
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Hunter's Mark": {
-          "name": "Hunter's Mark"
+          "name": "Hunter's Mark",
+          "description": "<p>You have been mystically marked as the caster's quarry. Until the spell ends, they deal an extra 1d6 damage to you whenever they hit you with a weapon attack, and they have advantage on any Wisdom (Perception) or Wisdom (Survival) check they make to find you.</p>"
         }
       }
     },
@@ -1012,12 +1340,22 @@
     "Identify": {
       "name": "Identify",
       "description": "<p>You choose one object that you must touch throughout the casting of the spell. If it is a magic item or some other magic-imbued object, you learn its properties and how to use them, whether it requires attunement to use, and how many charges it has, if any. You learn whether any spells are affecting the item and what they are. If the item was created by a spell, you learn which spell created it.</p><p>If you instead touch a creature throughout the casting, you learn what spells, if any, are currently affecting it.</p>",
-      "materials": "A pearl worth at least 100gp and an owl feather"
+      "materials": "A pearl worth at least 100gp and an owl feather",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Illusory Script": {
       "name": "Illusory Script",
-      "description": "<p>You write on Parchment, paper, or some other suitable writing material and imbue it with a potent Illusion that lasts for the Duration.</p><p>To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.</p><p>Should the spell be dispelled, the original script and the Illusion both disappear.</p><p>A creature with Truesight can read the hidden message.</p>",
-      "materials": "A lead-based ink worth at least 10gp, which the spell consumes"
+      "description": "<p>You write on Parchment, paper, or some other suitable writing material and imbue it with a potent Illusion that lasts for the Duration.</p><p>To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.</p><p>Should the spell be dispelled, the original script and the Illusion both disappear.</p><p>A creature with &amp;reference[Truesight] can read the hidden message.</p>",
+      "materials": "A lead-based ink worth at least 10gp, which the spell consumes",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Imprisonment": {
       "name": "Imprisonment",
@@ -1030,7 +1368,12 @@
     },
     "Inflict Wounds": {
       "name": "Inflict Wounds",
-      "description": "<p>Make a melee spell Attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.</p>"
+      "description": "<p>Make a melee spell Attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Insect Plague": {
       "name": "Insect Plague",
@@ -1059,8 +1402,19 @@
     },
     "Jump": {
       "name": "Jump",
-      "description": "<p>You touch a creature. The creature's jump distance is tripled until the spell ends.</p>",
-      "materials": "A grasshopper's hind leg"
+      "description": "<p>You touch a creature. The creature's &amp;reference[jumping]{jump} distance is tripled until the spell ends.</p>",
+      "materials": "A grasshopper's hind leg",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Jump": {
+          "name": "Jump",
+          "description": "<p>Your &amp;reference[jumping]{jump} distance is tripled until the spell ends.</p>"
+        }
+      }
     },
     "Knock": {
       "name": "Knock",
@@ -1082,8 +1436,17 @@
     },
     "Light": {
       "name": "Light",
-      "description": "<p>You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.</p><p>If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.</p>",
-      "materials": "A firefly or phosphorescent moss."
+      "description": "<p>You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds &amp;reference[bright light] in a 20-foot radius and &amp;reference[dim light] for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.</p><p>If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.</p>",
+      "materials": "A firefly or phosphorescent moss.",
+      "activities": {
+        "Avoid Light Save": {
+          "name": "Avoid Light Save",
+          "condition": "When you target an object held or worn by a hostile creature."
+        },
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Lightning Bolt": {
       "name": "Lightning Bolt",
@@ -1108,22 +1471,46 @@
     "Longstrider": {
       "name": "Longstrider",
       "description": "<p>You touch a creature. The target's speed increases by 10 feet until the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>",
-      "materials": "A pinch of dirt"
+      "materials": "A pinch of dirt",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Longstrider": {
+          "name": "Longstrider",
+          "description": "<p>Your speed increases by 10 feet until the spell ends.</p>"
+        }
+      }
     },
     "Mage Armor": {
       "name": "Mage Armor",
       "description": "<p>You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action.</p>",
       "materials": "A piece of cured leather",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Mage Armor": {
           "name": "Mage Armor",
-          "description": "<p>The target's base AC becomes 13 + its Dexterity modifier.</p>"
+          "description": "<p>A protective magical force surrounds it until the spell ends.</p><p>Your base AC becomes 13 + your Dexterity modifier. The spell ends if you don armor or if the caster dismisses the spell as an action.</p>"
         }
       }
     },
     "Mage Hand": {
       "name": "Mage Hand",
-      "description": "<p>A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.</p><p>You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.</p><p>The hand can't attack, activate magic items, or carry more than 10 pounds.</p>"
+      "description": "<p>A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.</p><p>You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.</p><p>The hand can't attack, activate magic items, or carry more than 10 pounds.</p>",
+      "activities": {
+        "Conjure Mage Hand": {
+          "name": "Conjure Mage Hand"
+        },
+        "Control Mage Hand": {
+          "name": "Control Mage Hand"
+        }
+      }
     },
     "Magic Circle": {
       "name": "Magic Circle",
@@ -1137,7 +1524,12 @@
     },
     "Magic Missile": {
       "name": "Magic Missile",
-      "description": "<p>You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.</p>"
+      "description": "<p>You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals 1d4 + 1 force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several.</p><p><strong>Higher Levels. </strong>When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Magic Mouth": {
       "name": "Magic Mouth",
@@ -1209,12 +1601,22 @@
     "Mending": {
       "name": "Mending",
       "description": "<p>This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.</p><p>This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.</p>",
-      "materials": "Two lodestones"
+      "materials": "Two lodestones",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Message": {
       "name": "Message",
       "description": "<p>You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.</p><p>You can cast this spell through solid Objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings.</p>",
-      "materials": "A short piece of copper wire"
+      "materials": "A short piece of copper wire",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Meteor Swarm": {
       "name": "Meteor Swarm",
@@ -1227,7 +1629,15 @@
     "Minor Illusion": {
       "name": "Minor Illusion",
       "description": "<p>You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.</p><p>If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.</p><p>If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.</p><p>If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.</p>",
-      "materials": "A bit of fleece."
+      "materials": "A bit of fleece.",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        },
+        "Investigate Illusion Check": {
+          "name": "Investigate Illusion Check"
+        }
+      }
     },
     "Mirage Arcane": {
       "name": "Mirage Arcane",
@@ -1308,7 +1718,12 @@
     },
     "Poison Spray": {
       "name": "Poison Spray",
-      "description": "<p>You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.</p><p>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).</p>"
+      "description": "<p>You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.</p><p>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Polymorph": {
       "name": "Polymorph",
@@ -1340,7 +1755,12 @@
     },
     "Prestidigitation": {
       "name": "Prestidigitation",
-      "description": "<p>This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range:</p>\n<ul>\n<li>You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.</li>\n<li>You instantaneously light or snuff out a candle, a torch, or a small campfire.</li>\n<li>You instantaneously clean or soil an object no larger than 1 cubic foot.</li>\n<li>You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.</li>\n<li>You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.</li>\n<li>You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.</li>\n</ul>\n<p>If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.</p>"
+      "description": "<p>This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range:</p>\n<ul>\n<li>You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.</li>\n<li>You instantaneously light or snuff out a candle, a torch, or a small campfire.</li>\n<li>You instantaneously clean or soil an object no larger than 1 cubic foot.</li>\n<li>You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.</li>\n<li>You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour.</li>\n<li>You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn.</li>\n</ul>\n<p>If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Prismatic Spray": {
       "name": "Prismatic Spray",
@@ -1367,7 +1787,12 @@
     },
     "Produce Flame": {
       "name": "Produce Flame",
-      "description": "<p>A flickering flame appears in your hand. The flame remains there for the Duration and harms neither you nor your Equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.</p><p>You can also Attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell Attack. On a hit, the target takes 1d8 fire damage.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+      "description": "<p>A flickering flame appears in your hand. The flame remains there for the Duration and harms neither you nor your Equipment. The flame sheds &amp;reference[bright light] in a 10-foot radius and &amp;reference[dim light] for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again.</p><p>You can also Attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell Attack. On a hit, the target takes 1d8 fire damage.</p><p>This spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Programmed Illusion": {
       "name": "Programmed Illusion",
@@ -1385,8 +1810,19 @@
     },
     "Protection from Evil and Good": {
       "name": "Protection from Evil and Good",
-      "description": "<p>Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.</p><p>The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be charmed, frightened, or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.</p>",
-      "materials": "Holy water or powdered silver and iron, which the spell consumes"
+      "description": "<p>Until the spell ends, one willing creature you touch is protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.</p><p>The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against the target. The target also can't be &amp;reference[charmed apply=false], &amp;reference[frightened apply=false], or possessed by them. If the target is already charmed, frightened, or possessed by such a creature, the target has advantage on any new saving throw against the relevant effect.</p>",
+      "materials": "Holy water or powdered silver and iron, which the spell consumes",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Protection from Evil and Good": {
+          "name": "Protection from Evil and Good",
+          "description": "<p>Until the spell ends, you are protected against certain types of creatures: aberrations, celestials, elementals, fey, fiends, and undead.</p><p>The protection grants several benefits. Creatures of those types have disadvantage on attack rolls against you. You also can't be &amp;reference[charmed apply=false], &amp;reference[frightened apply=false], or possessed by them. If you are already charmed, frightened, or possessed by such a creature, you have advantage on any new saving throw against the relevant effect.</p>"
+        }
+      }
     },
     "Protection from Poison": {
       "name": "Protection from Poison",
@@ -1400,7 +1836,12 @@
     },
     "Purify Food and Drink": {
       "name": "Purify Food and Drink",
-      "description": "<p>All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.</p>"
+      "description": "<p>All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Raise Dead": {
       "name": "Raise Dead",
@@ -1413,7 +1854,18 @@
     },
     "Ray of Frost": {
       "name": "Ray of Frost",
-      "description": "<p>A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+      "description": "<p>A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Chilled": {
+          "name": "Chilled",
+          "description": "<p>Your speed is reduced by 10 feet until the start of the caster's next turn.</p>"
+        }
+      }
     },
     "Regenerate": {
       "name": "Regenerate",
@@ -1437,7 +1889,18 @@
     "Resistance": {
       "name": "Resistance",
       "description": "<p>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.</p>",
-      "materials": "A miniature clock"
+      "materials": "A miniature clock",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Resistance": {
+          "name": "Resistance",
+          "description": "<p>Once before the spell ends, you can roll a [[/r d4]] and add the number rolled to one saving throw of your choice. You can roll the die before or after making the saving throw. The spell then ends.</p>"
+        }
+      }
     },
     "Resurrection": {
       "name": "Resurrection",
@@ -1461,12 +1924,32 @@
     },
     "Sacred Flame": {
       "name": "Sacred Flame",
-      "description": "<p>Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+      "description": "<p>Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from &amp;reference[cover] for this saving throw.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Sanctuary": {
       "name": "Sanctuary",
-      "description": "<p>You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a Fireball.</p><p>If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.</p>",
-      "materials": "A small silver mirror"
+      "description": "<p>You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball}.</p><p>If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.</p>",
+      "materials": "A small silver mirror",
+      "activities": {
+        "Ward Save": {
+          "name": "Ward Save",
+          "condition": "When a creature targets you with an attack or a harmful spell."
+        },
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Sanctuary": {
+          "name": "Sanctuary",
+          "description": "<p>You have been warded against attack. Until the spell ends, any creature who targets you with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect you from area effects, such as the explosion of a @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball}.</p><p>If you make an attack or casts a spell that affects an enemy creature, this spell ends.</p>"
+        }
+      }
     },
     "Scorching Ray": {
       "name": "Scorching Ray",
@@ -1513,12 +1996,17 @@
     },
     "Shield": {
       "name": "Shield",
-      "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>",
+      "description": "<p>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{magic missile}.</p>",
       "condition": "Which you take when you are hit by an attack or targeted by the magic missile spell",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Shield": {
           "name": "Shield",
-          "description": "<p>Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.</p>"
+          "description": "<p>Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{magic missile}.</p>"
         }
       }
     },
@@ -1526,10 +2014,15 @@
       "name": "Shield of Faith",
       "description": "<p>A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.</p>",
       "materials": "A small parchment with a bit of holy text written on it.",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
       "effects": {
         "Shield of Faith": {
           "name": "Shield of Faith",
-          "description": "<p>The target gains it a +2 bonus to AC for the duration.</p>"
+          "description": "<p>A shimmering field appears and surrounds you, granting you a +2 bonus to AC for the duration of this spell.</p>"
         }
       }
     },
@@ -1548,6 +2041,7 @@
       "effects": {
         "Shillelagh": {
           "name": "Shillelagh",
+          "description": "<p>For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using this weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon.</p>",
           "changes": {
             "name": ", Shillelagh"
           }
@@ -1556,7 +2050,18 @@
     },
     "Shocking Grasp": {
       "name": "Shocking Grasp",
-      "description": "<p>Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>"
+      "description": "<p>Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can't take reactions until the start of its next turn.</p><p>The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Shocking Grasp": {
+          "name": "Shocking Grasp",
+          "description": "<p>You can't take reactions until the start of your next turn.</p>"
+        }
+      }
     },
     "Silence": {
       "name": "Silence",
@@ -1565,7 +2070,15 @@
     "Silent Image": {
       "name": "Silent Image",
       "description": "<p>You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.</p><p>You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.</p><p>Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image.</p>",
-      "materials": "A bit of fleece"
+      "materials": "A bit of fleece",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        },
+        "Investigate Illusion Check": {
+          "name": "Investigate Illusion Check"
+        }
+      }
     },
     "Simulacrum": {
       "name": "Simulacrum",
@@ -1576,10 +2089,16 @@
       "name": "Sleep",
       "description": "<p>This spell sends creatures into a magical slumber. Roll 5d8; the total is how many hit points of creatures this spell can affect. Creatures within 20 feet of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures).</p><p>Starting with the creature that has the lowest current hit points, each creature affected by this spell falls &amp;Reference[unconscious] until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature's hit points from the total before moving on to the creature with the next lowest hit points. A creature's hit points must be equal to or less than the remaining total for that creature to be affected.</p><p>Undead and creatures immune to being charmed aren't affected by this spell.</p><p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st.</p>",
       "materials": "A pinch of fine sand, rose petals, or a cricket.",
+      "activities": {
+        "Cast": {
+          "name": "Cast",
+          "roll": "Affected Hit Points"
+        }
+      },
       "effects": {
         "Sleep": {
           "name": "Sleep",
-          "description": "<p>The creature affected by this spell falls Unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake.</p>"
+          "description": "<p>You have fallen &amp;reference[Unconscious apply=faklse] until the spell ends, you take damage, or someone uses an action to shake or slap you awake.</p>"
         }
       }
     },
@@ -1601,11 +2120,27 @@
     },
     "Spare the Dying": {
       "name": "Spare the Dying",
-      "description": "<p>You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.</p>"
+      "description": "<p>You touch a living creature that has 0 hit points. The creature becomes &amp;reference[stable]. This spell has no effect on undead or constructs.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Speak with Animals": {
       "name": "Speak with Animals",
-      "description": "<p>You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.</p>"
+      "description": "<p>You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Speak with Animals": {
+          "name": "Speak with Animals",
+          "description": "<p>You gain the ability to comprehend and verbally communicate with beasts for the duration. The knowledge and awareness of many beasts is limited by their intelligence, but at minimum, beasts can give you information about nearby locations and monsters, including whatever they can perceive or have perceived within the past day. You might be able to persuade a beast to perform a small favor for you, at the DM's discretion.</p>"
+        }
+      }
     },
     "Speak with Dead": {
       "name": "Speak with Dead",
@@ -1723,11 +2258,21 @@
     },
     "Thaumaturgy": {
       "name": "Thaumaturgy",
-      "description": "<p>You create one of the following magical effects within range:</p>\n<ul>\n<li>Your voice booms up to three times as loud as normal for 1 minute.</li>\n<li>You cause flames to flicker, brighten, dim, or change color for 1 minute.</li>\n<li>You cause harmless tremors in the ground for 1 minute.</li>\n<li>You create a sound that originates from a point of your choice within range.</li>\n<li>You cause an unlocked door or window to fly open or slam shut.</li>\n<li>You alter the appearance of your eyes for 1 minute.</li>\n</ul>\n<p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>"
+      "description": "<p>You create one of the following magical effects within range:</p><ul><li>Your voice booms up to three times as loud as normal for 1 minute.</li><li>You cause flames to flicker, brighten, dim, or change color for 1 minute.</li><li>You cause harmless tremors in the ground for 1 minute.</li><li>You create a sound that originates from a point of your choice within range.</li><li>You cause an unlocked door or window to fly open or slam shut.</li><li>You alter the appearance of your eyes for 1 minute.</li></ul><p>If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Thunderwave": {
       "name": "Thunderwave",
-      "description": "<p>A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.</p><p>In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>"
+      "description": "<p>A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.</p><p>In addition, unsecured objects that are completely within the area of effect are automatically pushed 10 feet away from you by the spell's effect, and the spell emits a thunderous boom audible out to 300 feet.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      }
     },
     "Time Stop": {
       "name": "Time Stop",
@@ -1768,12 +2313,31 @@
     },
     "True Strike": {
       "name": "True Strike",
-      "description": "<p>You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.</p>"
+      "description": "<p>You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "True Strike": {
+          "name": "True Strike",
+          "description": "<p>The caster has advantage on the first attack roll they make against you.</p>"
+        }
+      }
     },
     "Unseen Servant": {
       "name": "Unseen Servant",
-      "description": "<p>This spell creates an &amp;Reference[Invisible], mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.</p><p>Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.</p><p>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.</p>",
-      "materials": "A bit of string and of wood"
+      "description": "<p>This spell creates an &amp;Reference[Invisible apply=false], mindless, shapeless, Medium force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within range. It has AC 10, 1 hit point, and a Strength of 2, and it can't attack. If it drops to 0 hit points, the spell ends.</p><p>Once on each of your turns as a Bonus Action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command.</p><p>If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.</p>",
+      "materials": "A bit of string and of wood",
+      "activities": {
+        "Summon Servant": {
+          "name": "Summon Servant"
+        },
+        "Command Servant": {
+          "name": "Command Servant"
+        }
+      }
     },
     "Vampiric Touch": {
       "name": "Vampiric Touch",
@@ -1781,7 +2345,18 @@
     },
     "Vicious Mockery": {
       "name": "Vicious Mockery",
-      "description": "<p>You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.</p><p>This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>"
+      "description": "<p>You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.</p><p>This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Cast"
+        }
+      },
+      "effects": {
+        "Vicious Mockery": {
+          "name": "Vicious Mockery",
+          "description": "<p>You have disadvantage on the next attack roll you make before the end of your next turn.</p>"
+        }
+      }
     },
     "Wall of Fire": {
       "name": "Wall of Fire",

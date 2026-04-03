@@ -810,7 +810,12 @@
     },
     "Boots of Elvenkind": {
       "name": "Boots of Elvenkind",
-      "description": "<div><p><em>Wondrous Item, Uncommon</em></p></div><p>While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks.</p>"
+      "description": "<div><p><em>Wondrous Item, Uncommon</em></p></div><p>While you wear these boots, your steps make no sound, regardless of the surface you are moving across. You also have Advantage on Dexterity (Stealth) checks.</p>",
+      "effects": {
+        "Boots of Elvenkind": {
+          "name": "Boots of Elvenkind"
+        }
+      }
     },
     "Boots of Levitation": {
       "name": "Boots of Levitation",
@@ -1127,6 +1132,9 @@
         }
       }
     },
+    "Central Pouch": {
+      "name": "Central Pouch"
+    },
     "Chain": {
       "name": "Chain",
       "description": "<p>As a Utilize action, you can wrap a Chain around an unwilling creature within 5 feet of yourself that has the &amp;Reference[Grappled], &amp;Reference[Incapacitated], or &amp;Reference[Restrained] condition if you succeed on a DC 13 Strength (Athletics) check. If the creature's legs are bound, the creature has the Restrained condition until it escapes. Escaping the Chain requires the creature to make a successful DC 18 Dexterity (Acrobatics) check as an action. Bursting the Chain requires a successful DC 20 Strength (Athletics) check as an action.</p>",
@@ -1191,7 +1199,12 @@
     },
     "Cloak of Elvenkind": {
       "name": "Cloak of Elvenkind",
-      "description": "<div><p><em>Wondrous Item, Uncommon (Requires Attunement)</em></p></div><p>While you wear this cloak, Wisdom (Perception) checks made to perceive you have Disadvantage, and you have Advantage on Dexterity (Stealth) checks.</p>"
+      "description": "<div><p><em>Wondrous Item, Uncommon (Requires Attunement)</em></p></div><p>While you wear this cloak, Wisdom (Perception) checks made to perceive you have Disadvantage, and you have Advantage on Dexterity (Stealth) checks.</p>",
+      "effects": {
+        "Cloak of Elvenkind": {
+          "name": "Cloak of Elvenkind"
+        }
+      }
     },
     "Cloak of Invisibility": {
       "name": "Cloak of Invisibility",
@@ -2702,7 +2715,10 @@
       "description": "<p><em>Wondrous Item, Uncommon (Requires Attunement)</em></p><p>While wearing this helm, you have telepathy with a range of 30 feet, and you can cast @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{Detect Thoughts} or @UUID[Compendium.dnd5e.spells24.Item.phbsplSuggestion]{Suggestion} (save DC 13) from the helm. Once either spell is cast from the helm, that spell can't be cast from it again until the next dawn.</p>",
       "effects": {
         "Telepathy": {
-          "name": "Telepathy"
+          "name": "Telepathy",
+          "changes": {
+            "system.traits.languages.custom": "Telepathy (30 feet)"
+          }
         }
       }
     },
@@ -3013,9 +3029,9 @@
         }
       }
     },
-    "Ioun Stone of Regneration": {
-      "name": "Ioun Stone of Regneration",
-      "description": "<p><em>See: @UUID[Compendium.dnd5e.equipment24.Item.dmgIounStone0000]{Ioun Stone}</em></p><p>When you take a Magic action to toss an <em>Ioun Stone</em> into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three <em>Ioun Stones</em> orbiting your head at the same time.</p><p>As a Utilize action, you can seize and stow any number of <em>Ioun Stones</em> orbiting your head. If your Attunement to an <em>Ioun Stone</em> ends while it's orbiting your head, the stone falls as though you had dropped it.</p><p>You regain [[/healing 15 type=healing]]{15 Hit Points} at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point.</p>",
+    "Ioun Stone of Regeneration": {
+      "name": "Ioun Stone of Regeneration",
+      "description": "<p><em>See: @UUID[Compendium.dnd5e.equipment24.Item.dmgIounStone0000]{Ioun Stone}</em></p><p>When you take a Magic action to toss an <em>Ioun Stone</em> into the air, the stone orbits your head at a distance of 1d3 feet, conferring its benefit to you while doing so. You can have up to three <em>Ioun Stones</em> orbiting your head at the same time.</p><p>As a Utilize action, you can seize and stow any number of <em>Ioun Stones</em> orbiting your head. If your Attunement to an <em>Ioun Stone</em> ends while it's orbiting your head, the stone falls as though you had dropped it.</p><p>You regain [[/healing 15 type=healing]] at the end of each hour this pearly white spindle orbits your head if you have at least 1 Hit Point.</p>",
       "activities": {
         "Regeneration": {
           "name": "Regeneration",
@@ -3243,6 +3259,9 @@
         }
       }
     },
+    "Left Pouch": {
+      "name": "Left Pouch"
+    },
     "Light Crossbow": {
       "name": "Light Crossbow"
     },
@@ -3252,6 +3271,10 @@
     "Lock": {
       "name": "Lock",
       "description": "<p>A Lock comes with a key. Without the key, a creature can use @UUID[Compendium.dnd5e.equipment24.Item.phbtulThievesToo]{Thieves' Tools} to pick this Lock with a successful [[/tool thief dex 15]] check.</p>"
+    },
+    "Long Compartment": {
+      "name": "Long Compartment",
+      "description": "<p>The long compartment holds up to 6 long objects, such as bows, Quarterstaffs, or Spears.</p>"
     },
     "Longbow": {
       "name": "Longbow"
@@ -3519,6 +3542,10 @@
           "name": "Use Poison"
         }
       }
+    },
+    "Midsize Compartment": {
+      "name": "Midsize Compartment",
+      "description": "<p>The midsize compartment holds up to 18 Javelins or similar objects.</p>"
     },
     "Mirror": {
       "name": "Mirror",
@@ -4097,7 +4124,7 @@
     },
     "Potion of Giant Strength (Fire)": {
       "name": "Potion of Giant Strength (Fire)",
-      "description": "<p><em>Potion, Rare</em></p><p>When you drink this potion, your Strength score changes for 1 hour to 23. The type of giant determines the score. The potion has no effect on you if your Strength is equal to or greater than that score.</p><p>This potion's transparent liquid has floating in it a sliver of light resembling a giant's fingernail.</p>",
+      "description": "<p><em>Potion, Rare</em></p><p>When you drink this potion, your Strength score changes for 1 hour to 25. The type of giant determines the score. The potion has no effect on you if your Strength is equal to or greater than that score.</p><p>This potion's transparent liquid has floating in it a sliver of light resembling a giant's fingernail.</p>",
       "activities": {
         "Drink Potion": {
           "name": "Drink Potion"
@@ -4419,6 +4446,9 @@
       "name": "Reliquary",
       "description": "<p><em><strong>Usage Requirement: </strong>Held</em></p><p>A @UUID[Compendium.dnd5e.equipment24.Item.phbagHolySymbolV]{Holy Symbol} takes one of the forms in the Holy Symbol table and is bejeweled or painted to channel divine magic. A Cleric or Paladin can use a Holy Symbol as a Spellcasting Focus.</p>"
     },
+    "Right Pouch": {
+      "name": "Right Pouch"
+    },
     "Ring": {
       "name": "Ring"
     },
@@ -4732,6 +4762,11 @@
       "activities": {
         "Enter/Exit Astral Plane": {
           "name": "Enter/Exit Astral Plane"
+        }
+      },
+      "effects": {
+        "Robe of Stars": {
+          "name": "Robe of Stars"
         }
       }
     },
@@ -5115,6 +5150,10 @@
         }
       }
     },
+    "Short Compartment": {
+      "name": "Short Compartment",
+      "description": "<p>The short compartment can hold up to 60 Arrows, Bolts, or similar objects.</p>"
+    },
     "Shortbow": {
       "name": "Shortbow"
     },
@@ -5368,6 +5407,11 @@
         "Retributive Strike: Save": {
           "name": "Retributive Strike: Save"
         }
+      },
+      "effects": {
+        "Staff of Power": {
+          "name": "Staff of Power"
+        }
       }
     },
     "Staff of Striking": {
@@ -5544,7 +5588,7 @@
       "effects": {
         "Sun Card: Daily Temp HP": {
           "name": "Sun Card: Daily Temp HP",
-          "description": "<p><em>Source: @UUID[Compendium.dnd5e.equipment24.Item.dmgDmtSun0000000]{Sun}</em></p><p>You gain [[/healing 10 type=temphp]]{10 Temporary Hit Points} daily at dawn until you die.</p>"
+          "description": "<p><em>Source: @UUID[Compendium.dnd5e.equipment24.Item.dmgDmtSun0000000]{Sun}</em></p><p>You gain [[/healing 10 temp]] daily at dawn until you die.</p>"
         }
       }
     },
