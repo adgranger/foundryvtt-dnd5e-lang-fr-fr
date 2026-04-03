@@ -154,7 +154,7 @@
     },
     "Blessed Healer": {
       "name": "Blessed Healer",
-      "description": "<p>Beginning at 6th level, the healing spells you cast on others heal you as well.</p><p>When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.</p><section class=\"secret foundry-note\" id=\"secret-8pxfORAMtA2mWG44\"><p><strong>Foundry Note</strong></p><p>The healing formula is set to 2. Please add the additional from the spell level manually.</p></section>",
+      "description": "<p>Beginning at 6th level, the healing spells you cast on others heal you as well.</p><p>When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.</p><section class=\"secret foundry-note\" id=\"secret-8pxfORAMtA2mWG44\"><p><strong>Foundry Note</strong></p><p>The feature includes a healing activity. Set the scale to the spell slot level you cast and it will provide a healing roll for you.</p></section>",
       "requirements": "Life Domain 6"
     },
     "Blindsense": {
@@ -592,7 +592,10 @@
       "requirements": "The Fiend 10",
       "effects": {
         "Fiendish Resilience": {
-          "name": "Fiendish Resilience"
+          "name": "Fiendish Resilience",
+          "changes": {
+            "system.traits.dr.custom": "Fiendish Resilience"
+          }
         }
       }
     },
@@ -1270,7 +1273,7 @@
     },
     "Unarmed Strike": {
       "name": "Unarmed Strike",
-      "description": "<p></p>"
+      "description": "<p>A punch, kick, head-butt, or similar forceful blow (none of which count as weapons). You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes. You can roll your Martial Arts die in place of the normal damage.</p>\n<p><em>See: @UUID[Compendium.dnd5e.classfeatures.Item.l50hjTxO2r0iecKw]{Martial Arts (Monk)}</em></p>"
     },
     "Unarmored Defense": {
       "name": "Unarmored Defense",

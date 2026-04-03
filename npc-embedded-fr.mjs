@@ -46,7 +46,7 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
           .map(([k, { label }]) => {
             let prepared = prepareMeasured(this.attributes.movement[k], this.attributes.movement.units, label.toLowerCase());
             if ( (k === "fly") && this.attributes.movement.hover ) {
-              prepared = `${prepared} (${game.i18n.localize("DND5E.MOVEMENT.Hover").toLowerCase()})`;
+              prepared = game.i18n.format("DND5E.MOVEMENT.HoverSpeed", { speed: prepared });
             }
             return prepared;
           })
@@ -112,7 +112,14 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
         cr: `${o.cr ?? globalThis.dnd5e.utils.formatCR(this.details.cr, { narrow: false })} (${xp})`,
 
         // Gear
-        gear: o.gear ?? this.getGear().map(i => i.system.quantity > 1 ? `${i.name.toLowerCase()}s (${globalThis.dnd5e.utils.formatNumber(i.system.quantity)})` : i.name.toLowerCase()).sort().join(", "),
+        gear: o.gear ?? this.parent.items
+          .filter(item => item.system.quantity && item.system.properties?.has("gear"))
+          .map(item => {
+            const { nameHTML } = item.system.gearPresentationData();
+            return item.system.quantity > 1 ? `${nameHTML.toLowerCase()}s (${globalThis.dnd5e.utils.formatNumber(item.system.quantity)})` : nameHTML.toLowerCase();
+          })
+          .sort((lhs, rhs) => lhs.localeCompare(rhs, game.i18n.lang))
+          .join(", "),
 
         // Initiative (e.g. `+0 (10)`)
         initiative: o.initiative ?? `${globalThis.dnd5e.utils.formatNumber(this.attributes.init.total, { signDisplay: "always" })} (${
@@ -133,8 +140,9 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
         senses: o.senses ?? [
           [
             ...Object.entries(CONFIG.DND5E.senses)
-              .filter(([k]) => this.attributes.senses[k])
-              .map(([k, label]) => prepareMeasured(this.attributes.senses[k], this.attributes.senses.units, rulesVersion === "2024" ? label : label.toLowerCase())),
+              .filter(([k]) => this.attributes.senses.ranges[k])
+              .map(([k, label]) =>
+                prepareMeasured(this.attributes.senses.ranges[k], this.attributes.senses.units, rulesVersion === "2024" ? label : label.toLowerCase())),
             ...globalThis.dnd5e.utils.splitSemicolons(this.attributes.senses.special)
           ].sort((lhs, rhs) => lhs.localeCompare(rhs, game.i18n.lang)).join(", "),
           `${game.i18n.localize("DND5E.PassivePerception")} ${globalThis.dnd5e.utils.formatNumber(this.skills.prc.passive)}`
@@ -175,7 +183,7 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
         }, { value: [], physical: [] });
         let list = prepareTrait({ value, custom: data.custom }, trait);
         if ( list ) entries.push(category !== "condition" ? list.toLowerCase() : list);
-        if ( physical.length ) entries.push(game.i18n.format("DND5E.DamagePhysicalBypasses", {
+        if ( physical.length ) entries.push(game.i18n.format("DND5E.DAMAGE.PhysicalBypass.Description", {
           damageTypes: game.i18n.getListFormatter({ style: "long", type: "conjunction" }).format(
             physical.map(t => CONFIG.DND5E.damageTypes[t].label)
           ),
@@ -206,7 +214,7 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
         summary.vulnerabilities ? { label: "DND5E.Vulnerabilities", definitions: [summary.vulnerabilities] } : null,
         summary.resistances ? { label: "DND5E.Resistances", definitions: [summary.resistances] } : null,
         summary.immunities ? { label: "DND5E.Immunities", definitions: [summary.immunities] } : null,
-        summary.gear ? { label: "DND5E.Gear", definitions: [summary.gear] } : null,
+        summary.gear ? { label: "DND5E.Gear.Label", definitions: [summary.gear], allowHTML: !o.gear } : null,
         { label: "DND5E.Senses", definitions: [summary.senses] },
         { label: "DND5E.Languages", definitions: [summary.languages] },
         { label: "DND5E.AbbreviationCR", definitions: [summary.cr] }
@@ -239,7 +247,7 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
         { label: "DND5E.Languages", definitions: [summary.languages] },
         { label: "DND5E.Challenge", classes: "half-width", definitions: [summary.cr] },
         { label: "DND5E.ProficiencyBonus", classes: "half-width", definitions: [
-          o.pb ?? formatNumber(this.attributes.prof, { signDisplay: "always" })
+          o.pb ?? globalThis.dnd5e.utils.formatNumber(this.attributes.prof, { signDisplay: "always" })
         ] }
       ].filter(_ => _);
       context.summary.tag = context.summary.tag.toLowerCase().capitalize();
@@ -260,12 +268,6 @@ export default class NPCDataFr extends globalThis.dnd5e.dataModels.actor.NPCData
         } else {
           const openingTag = description.match(/^\s*(<p(?:\s[^>]+)?>)/gi)?.[0];
           if ( openingTag ) description = description.replace(openingTag, "");
-          // let uses = item.system.uses.label || item.system.activities?.contents[0]?.uses.label;
-          // const recoveryPeriod = item.system.uses.recovery[0]?.period || item.system.activities?.contents[0]?.uses.recovery[0]?.period;
-          // const usesMax = item.system.uses.max || item.system.activities?.contents[0]?.uses.max;
-          // if (!(["lr", "sr"].includes(recoveryPeriod) && (usesMax === 1))) {
-          //   uses = uses?.toLowerCase();
-          // }
           const uses = item.system.uses.label
             || (item.system.activities?.size === 1 ? item.system.activities?.contents[0]?.uses.label : undefined);
           context.actionSections[category].actions.push({

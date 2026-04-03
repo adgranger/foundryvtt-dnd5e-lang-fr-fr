@@ -148,10 +148,12 @@ export class Converters {
 		const conversion = Converters.conversionInfo[senses.units ?? "ft"];
 		if (!conversion) return senses;
 		return foundry.utils.mergeObject(senses, {
-			"darkvision": conversion.converter(senses.darkvision),
-			"blindsight": conversion.converter(senses.blindsight),
-			"tremorsense": conversion.converter(senses.tremorsense),
-			"truesight": conversion.converter(senses.truesight),
+			"ranges": {
+				"darkvision": conversion.converter(senses.ranges.darkvision),
+				"blindsight": conversion.converter(senses.ranges.blindsight),
+				"tremorsense": conversion.converter(senses.ranges.tremorsense),
+				"truesight": conversion.converter(senses.ranges.truesight),
+			},
 			"units": conversion.units
 		});
 	}
@@ -211,7 +213,8 @@ export class Converters {
 	}
 
 	static distanceAdvancement(advancements) {
-		advancements.forEach(adv => {
+		Object.keys(advancements).forEach(key => {
+			const adv = advancements[key];
 			if (adv.type === "ScaleValue" && adv.configuration.type === "distance") {
 	            const conversion = Converters.conversionInfo[adv.configuration.distance.units || "ft"];
 				if (conversion) {
@@ -225,6 +228,8 @@ export class Converters {
 				}
 			}
 		});
+
+		return advancements;
 	}
 
 	static tokenLight(light) {
@@ -626,10 +631,11 @@ export class Converters {
 	static _advancement(advancements, translations) {
 		if (!translations) return advancements;
 
-		return advancements.map(adv => {
+		Object.keys(advancements).forEach(key => {
+			const adv = advancements[key];
 			const translation = translations[adv._id] || translations[adv.title];
 			if (translation) {
-				return foundry.utils.mergeObject(adv, {
+				foundry.utils.mergeObject(adv, {
 					title: translation.title ?? adv.title,
 					hint: translation.hint ?? adv.hint,
 					configuration: {
@@ -637,8 +643,9 @@ export class Converters {
 					}
 				});
 			}
-			return adv;
 		});
+
+		return advancements;
 	}
 
 	static planarSubtype() {
@@ -672,5 +679,66 @@ export var journalPagesToSort = {
 	"eVtpEGXjA2tamEIJ": [
 		"8AIlZ95v54mL531X", "I6ABWHBYwGl55dLY", "0RBamBThjzeAdMSt", "8iC24otVX4n1yrYw",
 		"eW0LypO5xZZdq4I9", "I13SYX1zaCLYmaYF", "EQWAcrLYsd96MzJH", "X2CTP455Zpr7Shs9"
-	]
+	],
+	//SRD 5.2
+	//Character Species
+	"phbSpeciesDescri": {
+		firstPages: ["7iLsgz6RUQJVpUsH"]
+	},
+	//Spells
+	"phbSpells0000000": {
+		conserveOriginalSort: true,
+		pagesGroups: [
+			{
+				parent: "yspaGdvukcwiodvl",
+				isRange: true,
+				associatePages: ["wwia6Wwo4BgE9GSI", "6AnqLUowgdsqMFvz"]
+			}
+		]
+	},
+	//Rules Glossary
+	"phbAppendixCRule": {
+		firstPages: ["FvDonO0qOQWp1RIw"],
+		pagesGroups: [
+			{
+				parent: "SsIXfzS2ZttwAaKj",
+				associatePages: [
+					"f4fZHwBvpbpzRyn4", "w1AGsemFERfjqWNx", "3YJIuyCMmuUrfmuX", "Nuz0Wx4a4aAPcC34",
+					"rqhOsUY4wWa1oHTy", "4V59Q1dlWjNhpJGo", "nI9tN6Oq7fCV7hcA", "iIIDUsmSOkL0xNzF",
+					"ySj4gYZ4ADZoia7R", "6l6nBKip4LqB1sCU", "5S8i59qskkd9GGcJ", "UDlogfdiT2uYEZz4"
+				]
+			},
+			{
+				parent: "ahMxQJTGDhq08GWQ",
+				associatePages: [
+					"RVcWSqblHIs7SUzn", "BNxLbtJofbNGzjsp", "eYX5eimGuYhHPoj4"
+				]
+			},
+			{
+				parent: "5hyEitPd1Kb27fP5",
+				associatePages: [
+					"gAvV8TLyS8UGq00x", "lCwPWK4ODxw2IV1x", "FZFvLNOX0lHaHZ1k", "mPBGM1vguT5IPzxT", "earBo4vQPC1ti4g7"
+				]
+			},
+			{
+				parent: "UIKLZmiLuENHk1wn",
+				associatePages: [
+					"QxCrRcgMdUd3gfzz", "KbQ1k0OIowtZeQgp", "qlRw66tJhk0zLnwq", "uDogReMO6QtH6NDw", "vLAsIUa0FhZNsyLk",
+					"93uaingTESo8N1qL", "HWs8kEojffqwTSJz", "dqLeGdpHtb8FfcxX", "jSQtPgNm0i4f3Qi3", "EjbXjvyQAMlDyANI",
+					"fZCRaKEJd4KoQCqH", "MQIZ1zRLWRcNOtPN", "4i3G895hy99piand", "RnxZoTglPnLc6UPb", "6vtLuQT9lwZ9N299"
+				]
+			},
+			{
+				parent: "On6Sg3vUokAkXBB5",
+				associatePages: [
+					"JwK8XOkGSX9xE5Dc", "p5qUBMQO7shfNeCD", "i3ijpxEn5LuSO7C0",
+					"eSsITWhcNMkoa9WP", "T1ln1l6uKkkMuieP", "LgpZdAOhTnSHGCNa"
+				]
+			}
+		]
+	},
+	//Monsters A to Z
+	"mmMonstersAtoZ00": {},
+	//Animals
+	"mmAppendixAAnima": {}
 };

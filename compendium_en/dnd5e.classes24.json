@@ -866,7 +866,12 @@
     },
     "Eldritch Mind": {
       "name": "Eldritch Mind",
-      "description": "<p>You have Advantage on Constitution saving throws that you make to maintain Concentration.</p>"
+      "description": "<p>You have Advantage on Constitution saving throws that you make to maintain Concentration.</p>",
+      "effects": {
+        "Eldritch Mind": {
+          "name": "Eldritch Mind"
+        }
+      }
     },
     "Eldritch Smite": {
       "name": "Eldritch Smite",
@@ -2340,6 +2345,11 @@
     "Sacred Weapon": {
       "name": "Sacred Weapon",
       "description": "<p>When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1), and each time you hit with it, you cause it to deal its normal damage type or Radiant damage.</p><p>The weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.</p><p>You can end this effect early (no action required). This effect also ends if you aren't carrying the weapon.</p>",
+      "activities": {
+        "enchant": {
+          "condition": "when taking the Attack action"
+        }
+      },
       "effects": {
         "Sacred Weapon": {
           "name": "Sacred Weapon",
@@ -2379,7 +2389,12 @@
     },
     "Second-Story Work": {
       "name": "Second-Story Work",
-      "description": "<p>You've trained to get into especially hard-to-reach places, granting you these benefits.</p><p><strong>Climber.</strong> You gain a Climb Speed equal to your Speed.</p><p><strong>Jumper.</strong> You can determine your &amp;Reference[Jumping]{jump} distance using your Dexterity rather than your Strength.</p><section class=\"secret\" id=\"secret-7BCLTkAFUjinYhJw\"><p><strong>Foundry Note</strong></p><p>This feature does not automatically add the Climb Speed and will have to be added manually.</p></section>"
+      "description": "<p>You've trained to get into especially hard-to-reach places, granting you these benefits.</p><p><strong>Climber.</strong> You gain a Climb Speed equal to your Speed.</p><p><strong>Jumper.</strong> You can determine your &amp;Reference[Jumping]{jump} distance using your Dexterity rather than your Strength.</p><section class=\"secret\" id=\"secret-7BCLTkAFUjinYhJw\"><p><strong>Foundry Note</strong></p><p>This feature does not automatically add the Climb Speed and will have to be added manually.</p></section>",
+      "effects": {
+        "Second-Story Work": {
+          "name": "Second-Story Work"
+        }
+      }
     },
     "Seeking Spell": {
       "name": "Seeking Spell",
@@ -3044,7 +3059,7 @@
     },
     "phbmnkUnarmedStr": {
       "name": "Unarmed Strike",
-      "description": "<p><em>See: @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Martial Arts (Monk)}</em></p>",
+      "description": "<p>You can use Dexterity instead of Strength for the attack and damage rolls of your &amp;Reference[Unarmed Strike]{unarmed strikes}. You can roll your Martial Arts die in place of the normal damage.</p>\n<p><em>See: @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Martial Arts (Monk)}</em></p>",
       "activities": {
         "Grapple/Shove": {
           "name": "Grapple/Shove",
