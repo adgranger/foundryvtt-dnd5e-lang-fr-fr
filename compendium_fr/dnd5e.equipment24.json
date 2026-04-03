@@ -2712,7 +2712,10 @@
             "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Tant que vous portez ce heaume, vous bénéficiez de la télépathie à une portée de 9 m, et pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{détection des pensées} ou @UUID[Compendium.dnd5e.spells24.Item.phbsplSuggestion]{suggestion} (DD de sauvegarde 13) par le biais du heaume. Dès que l'un de ces sorts a été lancé par le biais du heaume, il ne peut plus être lancé via cet objet avant l'aube suivante.</p>",
             "effects": {
                 "Telepathy": {
-                    "name": "Télépathie"
+                    "name": "Télépathie",
+                    "changes": {
+                        "system.traits.languages.custom": "Télépathie (9 m)"
+                    }
                 }
             }
         },
@@ -6326,9 +6329,32 @@
             "name": "Pierre de Ioun de Régénération",
             "activities": {
                 "Regeneration": {
-                    "name": "Régénération"
+                    "name": "Régénération",
+                    "condition": "une fois par heure, à condition qu'il vous reste au moins 1 point de vie"
                 }
-            }
+            },
+            "description": "<p><em>Voir : @UUID[Compendium.dnd5e.equipment24.Item.dmgIounStone0000]{Pierre de Ioun}</em></p><p>Quand vous entreprenez l'action Magie pour lancer en l'air une <em>pierre de Ioun</em>, celle-ci se place en orbite autour de votre tête à une distance de 1d3 x 30 cm et vous octroie son bénéfice tant qu'elle tourne. Vous pouvez avoir jusqu'à trois <em>pierres de Ioun</em> en orbite simultanée autour de votre tête.</p><p>Au prix de l'action Utilisation, vous pouvez saisir et ranger une ou plusieurs <em>pierres de Ioun</em> gravitant autour de votre tête. Si votre Harmonisation avec une <em>pierre de Ioun</em> cesse alors qu'elle gravite autour de vous, elle tombe au sol comme si vous l'aviez lâchée.</p><p>Vous récupérez [[/healing 15 type=healing]] à la fin de chaque heure tant que ce fuseau blanc nacré gravite autour de votre tête, à condition qu'il vous reste au moins 1 point de vie.</p>"
+        },
+        "Central Pouch": {
+            "name": "Poche centrale"
+        },
+        "Left Pouch": {
+            "name": "Poche gauche"
+        },
+        "Long Compartment": {
+            "name": "Compartiment long",
+            "description": "<p>Le compartiment long peut contenir jusqu'à 6 objets longs de type arc, bâton de combat ou lance.</p>"
+        },
+        "Midsize Compartment": {
+            "name": "Compartiment intermédiaire",
+            "description": "<p>Le compartiment de taille intermédiaire peut contenir jusqu'à 18 javelines ou objets comparables.</p>"
+        },
+        "Right Pouch": {
+            "name": "Poche droite"
+        },
+        "Short Compartment": {
+            "name": "Compartiment court",
+            "description": "<p>Le compartiment court peut contenir jusqu'à 60 flèches, carreaux ou objets comparables.</p>"
         }
     }
 }
