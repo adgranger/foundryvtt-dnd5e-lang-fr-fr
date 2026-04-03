@@ -866,7 +866,12 @@
         },
         "Eldritch Mind": {
             "name": "Esprit occulte",
-            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Constitution visant à maintenir la Concentration.</p>"
+            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Constitution visant à maintenir la Concentration.</p>",
+            "effects": {
+                "Eldritch Mind": {
+                    "name": "Esprit occulte"
+                }
+            }
         },
         "Eldritch Smite": {
             "name": "Frappe occulte",
@@ -2347,6 +2352,11 @@
                         "name": ", Arme sacrée"
                     }
                 }
+            },
+            "activities": {
+                "enchant": {
+                    "condition": "Lorsque vous entreprenez l'action Attaque"
+                }
             }
         },
         "Scholar": {
@@ -2379,7 +2389,12 @@
         },
         "Second-Story Work": {
             "name": "Monte-en-l'air",
-            "description": "<p>Rompu à l'accès aux endroits difficiles, vous recevez les bénéfices ci-après.</p><p><strong>Escaladeur.</strong> Vous recevez une Vitesse d'escalade égale à votre Vitesse.</p><p><strong>Sauteur.</strong> Vous pouvez déterminer votre distance de &Reference[Jumping]{saut} en utilisant votre Dextérité plutôt que votre Force.</p><section class=\"secret\" id=\"secret-7BCLTkAFUjinYhJw\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'ajoute pas automatiquement la Vitesse d'escalade et devra être ajoutée manuellement.</p></section>"
+            "description": "<p>Rompu à l'accès aux endroits difficiles, vous recevez les bénéfices ci-après.</p><p><strong>Escaladeur.</strong> Vous recevez une Vitesse d'escalade égale à votre Vitesse.</p><p><strong>Sauteur.</strong> Vous pouvez déterminer votre distance de &Reference[Jumping]{saut} en utilisant votre Dextérité plutôt que votre Force.</p><section class=\"secret\" id=\"secret-7BCLTkAFUjinYhJw\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'ajoute pas automatiquement la Vitesse d'escalade et devra être ajoutée manuellement.</p></section>",
+            "effects": {
+                "Second-Story Work": {
+                    "name": "Monte-en-l'air"
+                }
+            }
         },
         "Seeking Spell": {
             "name": "Sort chercheur",
@@ -3058,7 +3073,7 @@
                     "name": "À terre"
                 }
             },
-            "description": "<p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>"
+            "description": "<p>Vous pouvez recourir à la Dextérité au lieu de la Force pour les jets d'attaque et de dégâts si vous &Reference[Unarmed Strike]{attaquez à mains nues}. Vous pouvez lancer votre dé d'Arts martiaux à la place des dégâts normaux.</p><p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>"
         },
         "phbmnkUnarmoredD": {
             "name": "Défense sans armure",

@@ -810,7 +810,12 @@
         },
         "Boots of Elvenkind": {
             "name": "Bottes elfiques",
-            "description": "<p><em>Objet merveilleux, peu courant</em></p><p>Tant que vous portez ces bottes, vos pas restent silencieux, quelle que soit la surface que vous foulez. Vous avez l'Avantage aux tests de Dextérité (Discrétion).</p>"
+            "description": "<p><em>Objet merveilleux, peu courant</em></p><p>Tant que vous portez ces bottes, vos pas restent silencieux, quelle que soit la surface que vous foulez. Vous avez l'Avantage aux tests de Dextérité (Discrétion).</p>",
+            "effects": {
+                "Boots of Elvenkind": {
+                    "name": "Bottes elfiques"
+                }
+            }
         },
         "Boots of Levitation": {
             "name": "Bottes de lévitation",
@@ -1136,7 +1141,7 @@
                     "target": "Subissant l'état Agrippé, Entravé ou Neutralisé"
                 },
                 "Escape Check": {
-                    "name": "Test de libération"
+                    "name": "Test d'évasion"
                 },
                 "Burst Chain Check": {
                     "name": "Test de rupture de la chaîne"
@@ -1191,7 +1196,12 @@
         },
         "Cloak of Elvenkind": {
             "name": "Cape elfique",
-            "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Tant que vous portez cette cape, tout test de Sagesse (Perception) effectué pour vous repérer subit le Désavantage, et vous bénéficiez de l'Avantage à vos tests de Dextérité (Discrétion).</p>"
+            "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Tant que vous portez cette cape, tout test de Sagesse (Perception) effectué pour vous repérer subit le Désavantage, et vous bénéficiez de l'Avantage à vos tests de Dextérité (Discrétion).</p>",
+            "effects": {
+                "Cloak of Elvenkind": {
+                    "name": "Cape elfique"
+                }
+            }
         },
         "Cloak of Invisibility": {
             "name": "Cape d'invisibilité",
@@ -3371,7 +3381,7 @@
                     "target": "Qui subit l'état Agrippé, Entravé ou Neutralisé"
                 },
                 "Escape Check": {
-                    "name": "Test de libération"
+                    "name": "Test d'évasion"
                 },
                 "Burst Check": {
                     "name": "Test de rupture"
@@ -4015,7 +4025,7 @@
                     "name": "Déplier le puits portable"
                 },
                 "Escape Check": {
-                    "name": "Test de libération"
+                    "name": "Test d'évasion"
                 }
             }
         },
@@ -4723,6 +4733,11 @@
                 "Enter/Exit Astral Plane": {
                     "name": "Entrer/sortir du Plan Astral"
                 }
+            },
+            "effects": {
+                "Robe of Stars": {
+                    "name": "Robe aux étoiles"
+                }
             }
         },
         "Robe of Useful Items": {
@@ -4892,7 +4907,7 @@
                     "name": "Rompre la corde"
                 },
                 "Escape Check": {
-                    "name": "Test de libération"
+                    "name": "Test d'évasion"
                 }
             }
         },
@@ -5322,6 +5337,11 @@
                 "Retributive Strike: Save": {
                     "name": "Explosion vengeresse : Sauvegarde"
                 }
+            },
+            "effects": {
+                "Staff of Power": {
+                    "name": "Bâton de surpuissance"
+                }
             }
         },
         "Staff of Striking": {
@@ -5498,7 +5518,7 @@
             "effects": {
                 "Sun Card: Daily Temp HP": {
                     "name": "Carte Le Soleil : Pv temporaire quotidien",
-                    "description": "<p><em>Source : @UUID[Compendium.dnd5e.equipment24.Item.dmgDmtSun0000000]{Le Soleil}</em></p><p>Vous recevez en outre [[/healing 10 type=temphp]]{10 points de vie temporaires} chaque matin à l'aube, et ce jusqu'à votre mort.</p>"
+                    "description": "<p><em>Source : @UUID[Compendium.dnd5e.equipment24.Item.dmgDmtSun0000000]{Le Soleil}</em></p><p>Vous recevez en outre [[/healing 10 type=temphp]] chaque matin à l'aube, et ce jusqu'à votre mort.</p>"
                 }
             }
         },
@@ -6301,6 +6321,14 @@
         "Spell Scroll, 9th Level": {
             "name": "Parchemin de sort (9e niveau)",
             "description": "<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgSpellScroll00 inline]</p>"
+        },
+        "Ioun Stone of Regeneration": {
+            "name": "Pierre de Ioun de Régénération",
+            "activities": {
+                "Regeneration": {
+                    "name": "Régénération"
+                }
+            }
         }
     }
 }

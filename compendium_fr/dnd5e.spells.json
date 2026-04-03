@@ -20,7 +20,12 @@
     },
     "Acid Splash": {
       "name": "Aspersion acide",
-      "description": "<p>Vous projetez une bulle d'acide. Choisissez une créature à portée, ou deux créatures à portée qui ne sont pas distantes de plus de 1,50 m l'une de l'autre. Chaque cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d6 dégâts d'acide.</p><p>Les dégâts du sort augmentent de 1d6 lorsque vous atteignez le niveau 5 (2d6), le niveau 11 (3d6) et le niveau 17 (4d6).</p>"
+      "description": "<p>Vous projetez une bulle d'acide. Choisissez une créature à portée, ou deux créatures à portée qui ne sont pas distantes de plus de 1,50 m l'une de l'autre. Chaque cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d6 dégâts d'acide.</p><p>Les dégâts du sort augmentent de 1d6 lorsque vous atteignez le niveau 5 (2d6), le niveau 11 (3d6) et le niveau 17 (4d6).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Aid": {
       "name": "Aide",
@@ -30,7 +35,12 @@
     "Alarm": {
       "name": "Alarme",
       "description": "<p>Vous disposez une alarme contre les intrus. Choisissez une porte, une fenêtre ou une zone à portée dont la taille n'excède pas un cube de 6 m d'arête. Jusqu'à la fin du sort, vous êtes alerté chaque fois qu'une créature de taille TP ou supérieure touche la zone protégée ou y pénètre. À l'incantation du sort, vous pouvez désigner des créatures qui ne déclencheront pas l'alarme. Vous choisissez également si l'alarme est mentale ou sonore.</p><p>Une alarme mentale vous alerte par un signal psychique, à condition que vous soyez dans un rayon de 1,5 km de la zone protégée. Si vous dormez, ce signal vous réveille.</p><p>Une alarme sonore produit le même son qu'une clochette, pendant 10 secondes, audible sur un rayon de 18 m.</p>",
-      "materials": "une clochette et un bout de fil d'argent"
+      "materials": "une clochette et un bout de fil d'argent",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Alter Self": {
       "name": "Modification d'apparence",
@@ -38,8 +48,18 @@
     },
     "Animal Friendship": {
       "name": "Amitié avec les animaux",
-      "description": "<p>Ce sort vous permet de convaincre une bête que vous ne lui voulez aucun mal. Choisissez une bête que vous voyez à portée. Elle doit vous voir et vous entendre. Si l'Intelligence de la bête est de 4 ou plus, le sort échoue. Sinon, la bête doit réussir un jet de sauvegarde de Sagesse pour ne pas être charmée par vous jusqu'à la fin du sort. Si vous ou l'un de vos compagnons faites du mal à la cible, le sort prend fin.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une bête de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
-      "materials": "un peu de nourriture"
+      "description": "<p>Ce sort vous permet de convaincre une bête que vous ne lui voulez aucun mal. Choisissez une bête que vous voyez à portée. Elle doit vous voir et vous entendre. Si l'Intelligence de la bête est de 4 ou plus, le sort échoue. Sinon, la bête doit réussir un jet de sauvegarde de Sagesse pour ne pas être &reference[charmed apply=false]{charmée} par vous jusqu'à la fin du sort. Si vous ou l'un de vos compagnons faites du mal à la cible, le sort prend fin.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une bête de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "materials": "un peu de nourriture",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Animal Friendship": {
+          "name": "Amitié avec les animaux"
+        }
+      }
     },
     "Animal Messenger": {
       "name": "Messager animal",
@@ -125,8 +145,13 @@
       "materials": "une goutte de sang",
       "effects": {
         "Bane": {
-          "description": "<p>Lorsque la cible effectue un jet d’attaque ou un jet de sauvegarde avant la fin du sort, doit lancer un d4 qu’elle retranche au résultat du jet d’attaque ou de sauvegarde correspondant.</p>",
+          "description": "<p>Lorsque vous effectuez un jet d'attaque ou un jet de sauvegarde avant la fin du sort, lancez un d4 que vous retranchez au résultat du jet d'attaque ou de sauvegarde correspondant.</p>",
           "name": "Fléau"
+        }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
         }
       }
     },
@@ -226,6 +251,11 @@
         "Bless": {
           "name": "Bénédiction"
         }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
       }
     },
     "Blight": {
@@ -260,7 +290,12 @@
     },
     "Burning Hands": {
       "name": "Mains brûlantes",
-      "description": "<p>Alors que vous tendez les mains, pouces en contact et doigts écartés, une fine nappe de flammes jaillit du bout de vos ongles. Chaque créature prise dans un cône de 4,50 m effectue un jet de sauvegarde de Dextérité. Une créature subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les flammes embrasent tous les objets inflammables de la zone qui ne sont pas portés.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Alors que vous tendez les mains, pouces en contact et doigts écartés, une fine nappe de flammes jaillit du bout de vos ongles. Chaque créature prise dans un cône de 4,50 m effectue un jet de sauvegarde de Dextérité. Une créature subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les flammes embrasent tous les objets inflammables de la zone qui ne sont pas portés.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Call Lightning": {
       "name": "Appel de la foudre",
@@ -280,14 +315,29 @@
       "description": "<p>Vous tentez de charmer un humanoïde que vous voyez à portée. Il effectue un jet de sauvegarde de Sagesse, avec avantage si vous ou l'un de vos compagnons êtes en plein combat contre lui. Si elle rate le jet de sauvegarde, la créature est &Reference[charmed]{charmée} par vous jusqu'à la fin du sort ou jusqu'à ce que vous ou l'un de vos compagnons lui nuisiez directement. La créature charmée vous considère comme une relation de confiance. Lorsque le sort prend fin, la créature sait que vous l'avez charmée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>",
       "effects": {
         "Charm Person": {
-          "description": "<p>La cible est charmée par le lanceur de sorts jusqu'à la fin du sort. La créature charmée considère le lanceur de sorts comme une relation de confiance. Lorsque le sort prend fin, la créature sait qu'elle a été charmée.</p>",
+          "description": "<p>Vous êtes &reference[Charmed apply=false]{charmé} par le lanceur de sorts jusqu'à la fin du sort. Vous considérez le lanceur de sorts comme une relation de confiance. Lorsque le sort prend fin, vous savez que vous avez été charmé.</p>",
           "name": "Charme-personne"
+        }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
         }
       }
     },
     "Chill Touch": {
       "name": "Contact glacial",
-      "description": "<p>Vous faites apparaître une main spectrale squelettique dans l'espace d'une créature à portée. Effectuez une attaque de sort à distance contre la créature pour la soumettre à la caresse funeste de cette main d'outre-tombe. Si l'attaque touche, la cible subit 1d8 dégâts nécrotiques et ne peut pas récupérer de points de vie jusqu'au début de votre tour suivant. La main reste accrochée à la cible dans l'intervalle.</p><p>Si l'attaque touche un mort-vivant, celui-ci est aussi désavantagé à ses jets d'attaque contre vous jusqu'à la fin de votre tour suivant.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>"
+      "description": "<p>Vous faites apparaître une main spectrale squelettique dans l'espace d'une créature à portée. Effectuez une attaque de sort à distance contre la créature pour la soumettre à la caresse funeste de cette main d'outre-tombe. Si l'attaque touche, la cible subit 1d8 dégâts nécrotiques et ne peut pas récupérer de points de vie jusqu'au début de votre tour suivant. La main reste accrochée à la cible dans l'intervalle.</p><p>Si l'attaque touche un mort-vivant, celui-ci est aussi désavantagé à ses jets d'attaque contre vous jusqu'à la fin de votre tour suivant.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Chill Touch": {
+          "name": "Contact glacial"
+        }
+      }
     },
     "Circle of Death": {
       "name": "Cercle de mort",
@@ -310,12 +360,32 @@
     },
     "Color Spray": {
       "name": "Couleurs dansantes",
-      "description": "<p>Une gerbe éblouissante de lueurs colorées jaillit de votre main. Lancez 6d10 ; le total représente la somme des points de vie de créatures que le sort peut affecter. Les créatures prises dans un cône de 4,50 m émanant de vous sont affectées par ordre croissant de leurs points de vie actuels (sans tenir compte des créatures inconscientes ni de celles qui ne voient rien).</p><p>À commencer par la créature dotée des points de vie actuels les plus faibles, chaque créature affectée par ce sort se retrouve aveuglée et le reste jusqu'à la fin du sort. Soustrayez les points de vie de chaque créature ainsi aveuglée du total avant de passer à la suivante dans l'ordre croissant des points de vie. Une créature ne peut être affectée que si ses points de vie ne dépassent pas le total restant.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, lancez 2d10 supplémentaires par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
-      "materials": "une pincée de poudre ou de sable de couleur rouge, jaune et bleue"
+      "description": "<p>Une gerbe éblouissante de lueurs colorées jaillit de votre main. Lancez 6d10 ; le total représente la somme des points de vie de créatures que le sort peut affecter. Les créatures prises dans un cône de 4,50 m émanant de vous sont affectées par ordre croissant de leurs points de vie actuels (sans tenir compte des créatures &reference[unconscious apply=false]{inconscientes} ni de celles qui ne voient rien).</p><p>À commencer par la créature dotée des points de vie actuels les plus faibles, chaque créature affectée par ce sort se retrouve &reference[blinded]{aveuglée} et le reste jusqu'à la fin du sort. Soustrayez les points de vie de chaque créature ainsi aveuglée du total avant de passer à la suivante dans l'ordre croissant des points de vie. Une créature ne peut être affectée que si ses points de vie ne dépassent pas le total restant.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, lancez 2d10 supplémentaires par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "materials": "une pincée de poudre ou de sable de couleur rouge, jaune et bleue",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Color Spray": {
+          "name": "Couleurs dansantes"
+        }
+      }
     },
     "Command": {
       "name": "Injonction",
-      "description": "<p>Vous adressez un simple mot de commande à une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine de devoir s'y soumettre à son tour suivant. Le sort est sans effet sur un mort-vivant et sur toute créature ne comprenant pas votre langue, ainsi que si votre ordre est directement nuisible à la créature.</p><p>Ci-après, une liste de mots de commande classiques, avec leurs effets associés. Vous pouvez tout à fait prononcer une autre instruction. Le MJ déterminera comment réagit la cible, le cas échéant. Si la cible ne peut se soumettre à votre ordre, le sort prend fin.</p><p><em><strong>Approche.</strong></em> La cible se déplace dans votre direction par le chemin le plus court et direct, et termine son tour si elle se retrouve dans un rayon de 1,50 m de vous.</p><p><em><strong>Fuis.</strong></em> La cible consacre son tour à s'éloigner de vous par le moyen le plus rapide.</p><p><em><strong>Halte.</strong></em> La cible ne se déplace pas et n'entreprend aucune action. Une créature volante peut rester dans les airs à condition d'en avoir la capacité. Si elle doit se déplacer pour ne pas tomber, elle parcourt la distance minimale pour ce faire.</p><p><em><strong>Lâche.</strong></em> La cible lâche ce qu'elle tient et termine son tour.</p><p><em><strong>Rampe.</strong></em> La cible tombe à terre et termine son tour.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>"
+      "description": "<p>Vous adressez un simple mot de commande à une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine de devoir s'y soumettre à son tour suivant. Le sort est sans effet sur un mort-vivant et sur toute créature ne comprenant pas votre langue, ainsi que si votre ordre est directement nuisible à la créature.</p><p>Ci-après, une liste de mots de commande classiques, avec leurs effets associés. Vous pouvez tout à fait prononcer une autre instruction. Le MJ déterminera comment réagit la cible, le cas échéant. Si la cible ne peut se soumettre à votre ordre, le sort prend fin.</p><p><em><strong>Approche.</strong></em> La cible se déplace dans votre direction par le chemin le plus court et direct, et termine son tour si elle se retrouve dans un rayon de 1,50 m de vous.</p><p><em><strong>Fuis.</strong></em> La cible consacre son tour à s'éloigner de vous par le moyen le plus rapide.</p><p><em><strong>Halte.</strong></em> La cible ne se déplace pas et n'entreprend aucune action. Une créature volante peut rester dans les airs à condition d'en avoir la capacité. Si elle doit se déplacer pour ne pas tomber, elle parcourt la distance minimale pour ce faire.</p><p><em><strong>Lâche.</strong></em> La cible lâche ce qu'elle tient et termine son tour.</p><p><em><strong>Rampe.</strong></em> La cible tombe &reference[prone]{à terre} et termine son tour.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>. Les créatures ainsi ciblées doivent toutes se trouver dans un rayon de 9 m les unes des autres.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Command": {
+          "name": "Injonction"
+        }
+      }
     },
     "Commune": {
       "name": "Communion",
@@ -329,7 +399,17 @@
     "Comprehend Languages": {
       "name": "Compréhension des langues",
       "description": "<p>Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte.</p><p>Ce sort ne décrypte pas les messages secrets ni les glyphes, tels que les symboles arcaniques, s'ils ne correspondent pas à une langue écrite.</p>",
-      "materials": "une pincée de suie et de sel"
+      "materials": "une pincée de suie et de sel",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Comprehend Languages": {
+          "name": "Compréhension des langues"
+        }
+      }
     },
     "Compulsion": {
       "name": "Compulsion",
@@ -427,11 +507,16 @@
     },
     "Cure Wounds": {
       "name": "Soins",
-      "description": "<p>La créature que vous touchez récupère un nombre de points de vie égal à 1d8 + votre modificateur de caractéristique d'incantation. Ce sort est sans effet sur les morts-vivants et les artificiels.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, il soigne 1d8 supplémentaires par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>La créature que vous touchez récupère un nombre de points de vie égal à 1d8 + votre modificateur de caractéristique d'incantation. Ce sort est sans effet sur les morts-vivants et les artificiels.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, il soigne 1d8 supplémentaires par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Dancing Lights": {
       "name": "Lumières dansantes",
-      "description": "<p>Vous créez jusqu'à quatre lumières de la taille d'une torche, à portée ; pour toute la durée, elles ont l'aspect de torches, de lanternes ou de globes luisants qui flottent dans les airs. Vous pouvez également fusionner les quatre lueurs pour former une silhouette vaguement humanoïde de taille M. Quelle que soit la forme choisie, chaque lueur émet une lumière faible dans un rayon de 3 m.</p><p>Par une action bonus à chacun de vos tours, vous pouvez déplacer les lueurs d'un maximum de 18 m vers un nouvel endroit à portée. Chaque lueur du sort, à sa création, doit se situer dans un rayon de 6 m d'une autre, et s'évanouit si jamais elle quitte la portée du sort.</p>",
+      "description": "<p>Vous créez jusqu'à quatre lumières de la taille d'une torche, à portée ; pour toute la durée, elles ont l'aspect de torches, de lanternes ou de globes luisants qui flottent dans les airs. Vous pouvez également fusionner les quatre lueurs pour former une silhouette vaguement humanoïde de taille M. Quelle que soit la forme choisie, chaque lueur émet une &reference[dim light]{lumière faible} dans un rayon de 3 m.</p><p>Par une action bonus à chacun de vos tours, vous pouvez déplacer les lueurs d'un maximum de 18 m vers un nouvel endroit à portée. Chaque lueur du sort, à sa création, doit se situer dans un rayon de 6 m d'une autre, et s'évanouit si jamais elle quitte la portée du sort.</p>",
       "materials": "un peu de phosphore ou d'orme blanc, ou un ver luisant"
     },
     "Darkness": {
@@ -469,16 +554,49 @@
     },
     "Detect Evil and Good": {
       "name": "Détection du mal et du bien",
-      "description": "<p>Pour toute la durée, vous prenez conscience de la présence dans un rayon de 9 m de toute créature dont le type est l'un des suivants : aberration, céleste, élémentaire, fée, fiélon ou mort-vivant. Vous savez aussi où elle se trouve. De même, vous savez si un lieu ou un objet situé dans un rayon de 9 m a été magiquement consacré ou profané.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>"
+      "description": "<p>Pour toute la durée, vous prenez conscience de la présence dans un rayon de 9 m de toute créature dont le type est l'un des suivants : aberration, céleste, élémentaire, fée, fiélon ou mort-vivant. Vous savez aussi où elle se trouve. De même, vous savez si un lieu ou un objet situé dans un rayon de 9 m a été magiquement consacré ou profané.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Detect Evil and Good": {
+          "name": "Détection du mal et du bien",
+          "description": "<p>Pour toute la durée, vous prenez conscience de la présence dans un rayon de 9 m de toute créature dont le type est l'un des suivants : aberration, céleste, élémentaire, fée, fiélon ou mort-vivant. Vous savez aussi où elle se trouve. De même, vous savez si un lieu ou un objet situé dans un rayon de 9 m a été magiquement consacré ou profané.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>"
+        }
+      }
     },
     "Detect Magic": {
       "name": "Détection de la magie",
-      "description": "<p>Pour toute la durée, vous percevez la présence de la magie dans un rayon de 9 m de vous. Si vous percevez de la magie par ce biais, vous pouvez consacrer votre action à discerner une faible aura entourant les objets et créatures visibles et porteurs de magie de la zone. Vous en apprenez également les écoles de magie associées, le cas échéant.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>"
+      "description": "<p>Pour toute la durée, vous percevez la présence de la magie dans un rayon de 9 m de vous. Si vous percevez de la magie par ce biais, vous pouvez consacrer votre action à discerner une faible aura entourant les objets et créatures visibles et porteurs de magie de la zone. Vous en apprenez également les écoles de magie associées, le cas échéant.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Detect Magic": {
+          "name": "Détection de la magie",
+          "description": "<p>Pour toute la durée, vous percevez la présence de la magie dans un rayon de 9 m de vous. Si vous percevez de la magie par ce biais, vous pouvez consacrer votre action à discerner une faible aura entourant les objets et créatures visibles et porteurs de magie de la zone. Vous en apprenez également les écoles de magie associées, le cas échéant.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>"
+        }
+      }
     },
     "Detect Poison and Disease": {
       "name": "Détection du poison et des maladies",
       "description": "<p>Pour toute la durée, vous percevez dans un rayon de 9 m la présence et la position de tous les poisons, créatures venimeuses et vénéneuses, et maladies. Vous identifiez également le type de chacune de ces présences.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>",
-      "materials": "une feuille d'if"
+      "materials": "une feuille d'if",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Detect Poison and Disease": {
+          "name": "Détection du poison et des maladies",
+          "description": "<p>Pour toute la durée, vous percevez dans un rayon de 9 m la présence et la position de tous les poisons, créatures venimeuses et vénéneuses, et maladies. Vous identifiez également le type de chacune de ces présences.</p><p>Le sort perce la plupart des obstacles, mais 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer.</p>"
+        }
+      }
     },
     "Detect Thoughts": {
       "name": "Détection des pensées",
@@ -491,7 +609,15 @@
     },
     "Disguise Self": {
       "name": "Déguisement",
-      "description": "<p>Vous vous donnez un aspect différent jusqu'à la fin du sort ou jusqu'à ce que vous le révoquiez en y consacrant votre action. Vous pouvez ainsi altérer l'apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu'à 30 cm plus grand ou plus petit, sembler plus maigre ou plus dodu. Vous ne pouvez pas changer d'anatomie, si bien que la forme choisie doit conserver votre répartition de membres. Pour le reste, les détails de l'illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air, votre crâne ou vos cheveux. Si le sort vous fait paraître plus mince que la réalité, quelqu'un qui tend la main pour vous toucher vous heurtera plus tôt que prévu.</p><p>Pour comprendre que vous êtes déguisé, une créature peut consacrer son action à vous examiner et doit réussir un test d'Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts.</p>"
+      "description": "<p>Vous vous donnez un aspect différent jusqu'à la fin du sort ou jusqu'à ce que vous le révoquiez en y consacrant votre action. Vous pouvez ainsi altérer l'apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu'à 30 cm plus grand ou plus petit, sembler plus maigre ou plus dodu. Vous ne pouvez pas changer d'anatomie, si bien que la forme choisie doit conserver votre répartition de membres. Pour le reste, les détails de l'illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air, votre crâne ou vos cheveux. Si le sort vous fait paraître plus mince que la réalité, quelqu'un qui tend la main pour vous toucher vous heurtera plus tôt que prévu.</p><p>Pour comprendre que vous êtes déguisé, une créature peut consacrer son action à vous examiner et doit réussir un test d'Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        },
+        "Change Appearance": {
+          "name": "Changement d'aspect"
+        }
+      }
     },
     "Disintegrate": {
       "name": "Désintégration",
@@ -514,7 +640,17 @@
     },
     "Divine Favor": {
       "name": "Faveur divine",
-      "description": "<p>Vos prières vous nimbent de radiance divine. Jusqu'à la fin du sort, vos attaques d'arme infligent 1d4 dégâts radiants supplémentaires quand elles touchent.</p>"
+      "description": "<p>Vos prières vous nimbent de radiance divine. Jusqu'à la fin du sort, vos attaques d'arme infligent 1d4 dégâts radiants supplémentaires quand elles touchent.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Divine Favor": {
+          "name": "Faveur divine"
+        }
+      }
     },
     "Divine Word": {
       "name": "Parole divine",
@@ -571,7 +707,12 @@
     },
     "Druidcraft": {
       "name": "Druidisme",
-      "description": "<p>Vous murmurez aux esprits de la nature pour créer l'un des effets suivants à portée :</p><ul><li>Vous produisez un minuscule effet sensoriel inoffensif qui prédit le temps qu'il fera où vous vous trouvez dans les 24 prochaines heures. L'effet peut se manifester sous forme d'un globe doré pour un ciel dégagé, d'un nuage pour la pluie, de flocons qui tombent pour la neige, etc. Cet effet persiste pendant 1 round.</li><li>Vous faites aussitôt s'épanouir une fleur, s'ouvrir une cosse de graines ou fleurir un bourgeon.</li><li>Vous produisez fugacement un effet sensoriel et inoffensif, comme une chute de feuilles, une petite rafale, des bruits de petit animal ou une vague odeur de sconse. L'effet doit tenir dans un cube de 1,50 m d'arête.</li><li>Vous allumez ou éteignez instantanément une bougie, une torche ou un petit feu de camp.</li></ul>"
+      "description": "<p>Vous murmurez aux esprits de la nature pour créer l'un des effets suivants à portée :</p><ul><li>Vous produisez un minuscule effet sensoriel inoffensif qui prédit le temps qu'il fera où vous vous trouvez dans les 24 prochaines heures. L'effet peut se manifester sous forme d'un globe doré pour un ciel dégagé, d'un nuage pour la pluie, de flocons qui tombent pour la neige, etc. Cet effet persiste pendant 1 round.</li><li>Vous faites aussitôt s'épanouir une fleur, s'ouvrir une cosse de graines ou fleurir un bourgeon.</li><li>Vous produisez fugacement un effet sensoriel et inoffensif, comme une chute de feuilles, une petite rafale, des bruits de petit animal ou une vague odeur de sconse. L'effet doit tenir dans un cube de 1,50 m d'arête.</li><li>Vous allumez ou éteignez instantanément une bougie, une torche ou un petit feu de camp.</li></ul>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Earthquake": {
       "name": "Tremblement de terre",
@@ -580,7 +721,12 @@
     },
     "Eldritch Blast": {
       "name": "Décharge occulte",
-      "description": "<p>Un rayon d'énergie crépitante fuse vers une créature à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de force.</p><p>Le sort produit davantage de rayons lorsque vous atteignez certains niveaux : deux rayons au niveau 5, trois au niveau 11 et quatre au niveau 17. Vous pouvez viser la même cible avec ces rayons ou les répartir entre plusieurs cibles. Effectuez un jet d'attaque séparé pour chaque rayon.</p>"
+      "description": "<p>Un rayon d'énergie crépitante fuse vers une créature à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de force.</p><p>Le sort produit davantage de rayons lorsque vous atteignez certains niveaux : deux rayons au niveau 5, trois au niveau 11 et quatre au niveau 17. Vous pouvez viser la même cible avec ces rayons ou les répartir entre plusieurs cibles. Effectuez un jet d'attaque séparé pour chaque rayon.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Enhance Ability": {
       "name": "Amélioration de caractéristique",
@@ -594,11 +740,16 @@
     },
     "Entangle": {
       "name": "Enchevêtrement",
-      "description": "<p>Des herbes et plantes grimpantes émergent du sol dans un carré de 6 m de côté émanant d'un point à portée. Pour toute la durée, cette végétation transforme le sol de la zone en terrain difficile.</p><p>Une créature située dans la zone à l'incantation du sort doit réussir un jet de sauvegarde de Force pour ne pas être &Reference[Restrained]{entravée} par les plantes grimpantes jusqu'à la fin du sort. Une créature entravée par cet enchevêtrement peut consacrer son action à effectuer un test de Force contre votre DD de sauvegarde des sorts. En cas de réussite, elle se libère.</p><p>Lorsque le sort prend fin, les plantes invoquées se fanent.</p>",
+      "description": "<p>Des herbes et plantes grimpantes émergent du sol dans un carré de 6 m de côté émanant d'un point à portée. Pour toute la durée, cette végétation transforme le sol de la zone en &reference[difficult terrain]{terrain difficile}.</p><p>Une créature située dans la zone à l'incantation du sort doit réussir un jet de sauvegarde de Force pour ne pas être &Reference[Restrained]{entravée} par les plantes grimpantes jusqu'à la fin du sort. Une créature entravée par cet enchevêtrement peut consacrer son action à effectuer un test de Force contre votre DD de sauvegarde des sorts. En cas de réussite, elle se libère.</p><p>Lorsque le sort prend fin, les plantes invoquées se fanent.</p>",
       "effects": {
         "Entangle": {
-          "description": "<p>Une créature située dans la zone est entravée par les plantes grimpantes jusqu'à la fin du sort. Une créature entravée par cet enchevêtrement peut consacrer son action à effectuer un test de Force contre votre DD de sauvegarde des sorts. En cas de succès, elle se libère.</p>",
+          "description": "<p>Vous êtes &reference[Restrained apply=false]{entravé} par les plantes grimpantes jusqu'à la fin du sort. Tant que vous êtes entravé par cet enchevêtrement, vous pouvez consacrer votre action à effectuer un test de [[/check str]] contre le DD de sauvegarde des sorts du lanceur. En cas de succès, vous vous libérez.</p>",
           "name": "Enchevêtrement"
+        }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
         }
       }
     },
@@ -612,7 +763,17 @@
     },
     "Expeditious Retreat": {
       "name": "Repli expéditif",
-      "description": "<p>Ce sort vous permet de vous mouvoir à une vitesse incroyable. À l'incantation du sort, puis par une action bonus à chacun de vos tours jusqu'à la fin du sort, vous pouvez entreprendre l'action Foncer.</p>"
+      "description": "<p>Ce sort vous permet de vous mouvoir à une vitesse incroyable. À l'incantation du sort, puis par une action bonus à chacun de vos tours jusqu'à la fin du sort, vous pouvez entreprendre l'action &reference[Dash].</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Expeditious Retreat": {
+          "name": "Repli expéditif"
+        }
+      }
     },
     "Eyebite": {
       "name": "Mauvais œil",
@@ -634,7 +795,17 @@
     },
     "Faerie Fire": {
       "name": "Lueurs féeriques",
-      "description": "<p>Le contour de tous les objets compris dans un cube de 6 m d'arête à portée luit de bleu, de vert ou de violet, à votre convenance. Toute créature prise dans la zone à l'incantation du sort est aussi nimbée de lueur si elle rate un jet de sauvegarde de Dextérité. Pour toute la durée, les objets et les créatures affectées projettent une lumière faible sur un rayon de 3 m.</p><p>Tout jet d'attaque contre les créatures affectées et les objets de la zone est avantagé si l'assaillant voit sa cible. En outre, les créatures et objets affectés ne retirent aucun bénéfice de l'état invisible.</p>"
+      "description": "<p>Le contour de tous les objets compris dans un cube de 6 m d'arête à portée luit de bleu, de vert ou de violet, à votre convenance. Toute créature prise dans la zone à l'incantation du sort est aussi nimbée de lueur si elle rate un jet de sauvegarde de Dextérité. Pour toute la durée, les objets et les créatures affectées projettent une lumière faible sur un rayon de 3 m.</p><p>Tout jet d'attaque contre les créatures affectées et les objets de la zone est avantagé si l'assaillant voit sa cible. En outre, les créatures et objets affectés ne retirent aucun bénéfice de l'état invisible.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Faerie Fire": {
+          "name": "Lueurs féeriques"
+        }
+      }
     },
     "Faithful Hound": {
       "name": "Chien de garde",
@@ -644,7 +815,17 @@
     "False Life": {
       "name": "Simulacre de vie",
       "description": "<p>Vous vous renforcez d'un semblant nécromantique de vie, ce qui vous fait recevoir 1d4 + 4 points de vie temporaires pour toute la durée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous recevez 5 points de vie temporaires de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
-      "materials": "une petite quantité d'alcool ou d'eau-de-vie"
+      "materials": "une petite quantité d'alcool ou d'eau-de-vie",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "False Life": {
+          "name": "Simulacre de vie"
+        }
+      }
     },
     "Fear": {
       "name": "Terreur",
@@ -661,7 +842,17 @@
       "name": "Feuille morte",
       "description": "<p>Choisissez jusqu'à cinq créatures qui chutent à portée. La vitesse de chute de chacune passe à 18 m par round jusqu'à la fin du sort. Si la créature atterrit avant la fin du sort, elle ne subit aucun dégât de chute et termine sur ses pieds, et le sort prend fin en ce qui la concerne.</p>",
       "materials": "une petite plume ou un peu de duvet",
-      "condition": "que vous jouez quand vous-même ou une créature dans un rayon de 18 m chutez"
+      "condition": "que vous jouez quand vous-même ou une créature dans un rayon de 18 m chutez",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Feather Fall": {
+          "name": "Feuille morte"
+        }
+      }
     },
     "Feeblemind": {
       "name": "Esprit faible",
@@ -707,7 +898,12 @@
     },
     "Fire Bolt": {
       "name": "Trait de feu",
-      "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p>Les dégâts de ce sort augmentent de 1d10 lorsque vous atteignez le niveau 5 (2d10), le niveau 11 (3d10) et le niveau 17 (4d10).</p>"
+      "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p>Les dégâts de ce sort augmentent de 1d10 lorsque vous atteignez le niveau 5 (2d10), le niveau 11 (3d10) et le niveau 17 (4d10).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Fire Shield": {
       "name": "Bouclier de feu",
@@ -762,7 +958,12 @@
     "Floating Disk": {
       "name": "Disque flottant",
       "description": "<p>Ce sort crée un plan horizontal et circulaire de force, de 90 cm de diamètre pour 2,5 cm d'épaisseur, qui flotte 90 cm au-dessus du sol en un espace inoccupé de votre choix que vous voyez à portée. Le disque persiste pour toute la durée et supporte 250 kg. Si on y pose un excédent de poids, le sort prend fin et tout ce qui se trouvait sur le disque tombe au sol.</p><p>Le disque est immobile tant que vous restez dans un rayon de 6 m de lui. Si vous vous en écartez de plus de 6 m, le disque vous suit pour rester dans ce rayon. Il peut traverser un terrain difficile, monter ou descendre des marches, une pente ou équivalent, mais ne peut pas franchir une dénivellation abrupte de 3 m ou plus. Le disque ne peut ainsi pas franchir une fosse profonde de 3 m, pas plus qu'il ne pourra en sortir s'il a été créé en son fond.</p><p>Si vous vous éloignez de plus de 30 m du disque (parce qu'il n'a pu contourner un obstacle pour vous suivre, notamment), le sort prend fin.</p>",
-      "materials": "une goutte de mercure"
+      "materials": "une goutte de mercure",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Fly": {
       "name": "Vol",
@@ -850,12 +1051,22 @@
     "Goodberry": {
       "name": "Baies nourricières",
       "description": "<p>Un maximum de dix baies se matérialisent dans votre main, gorgées de magie pour toute la durée. Une créature peut consacrer une action à manger une telle baie. L'ingestion d'une baie fait récupérer 1 point de vie et fournit l'équivalent d'une journée de sustentation pour une créature.</p><p>Les baies perdent leurs propriétés si on ne les consomme pas dans les 24 heures qui suivent l'incantation du sort.</p>",
-      "materials": "une branche de gui"
+      "materials": "une branche de gui",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Grease": {
       "name": "Graisse",
       "description": "<p>Une graisse glissante recouvre le sol sur un carré de 3 m de côté centré en un point à portée, ce qui en fait un terrain difficile pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de se retrouver à terre. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir un jet de sauvegarde de Dextérité sous peine de se retrouver à terre.</p>",
-      "materials": "un peu de couenne de porc ou de beurre"
+      "materials": "un peu de couenne de porc ou de beurre",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Greater Invisibility": {
       "name": "Invisibilité suprême",
@@ -883,11 +1094,31 @@
     },
     "Guidance": {
       "name": "Assistance",
-      "description": "<p>Vous touchez une créature consentante. Une fois avant la fin du sort, la cible peut lancer un d4 et en ajouter le résultat au test de caractéristique de son choix. Elle peut lancer ce dé avant ou après avoir effectué le test de caractéristique. Le sort prend alors fin.</p>"
+      "description": "<p>Vous touchez une créature consentante. Une fois avant la fin du sort, la cible peut lancer un d4 et en ajouter le résultat au test de caractéristique de son choix. Elle peut lancer ce dé avant ou après avoir effectué le test de caractéristique. Le sort prend alors fin.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Guidance": {
+          "name": "Assistance"
+        }
+      }
     },
     "Guiding Bolt": {
       "name": "Rayon traçant",
-      "description": "<p>Un trait de lumière jaillit vers une créature de votre choix à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 4d6 dégâts radiants et le prochain jet d'attaque qui la vise avant la fin de votre tour suivant est avantagé, grâce à la lumière faible et scintillante qui émane d'elle.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Un trait de lumière jaillit vers une créature de votre choix à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 4d6 dégâts radiants et le prochain jet d'attaque qui la vise avant la fin de votre tour suivant est avantagé, grâce à la lumière faible et scintillante qui émane d'elle.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Guiding Bolt": {
+          "name": "Rayon traçant"
+        }
+      }
     },
     "Gust of Wind": {
       "name": "Bourrasque",
@@ -925,7 +1156,12 @@
     },
     "Healing Word": {
       "name": "Mot de guérison",
-      "description": "<p>Une créature de votre choix que vous voyez à portée récupère autant de points de vie que 1d4 + votre modificateur de caractéristique d'incantation. Ce sort est sans effet sur les morts-vivants et les artificiels.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, il soigne 1d4 supplémentaires par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Une créature de votre choix que vous voyez à portée récupère autant de points de vie que 1d4 + votre modificateur de caractéristique d'incantation. Ce sort est sans effet sur les morts-vivants et les artificiels.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, il soigne 1d4 supplémentaires par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Heat Metal": {
       "name": "Métal brûlant",
@@ -935,7 +1171,12 @@
     "Hellish Rebuke": {
       "name": "Représailles infernales",
       "description": "<p>Vous pointez votre doigt et la créature qui vous a infligé des dégâts se retrouve un court instant cernée de flammes des enfers. La créature effectue un jet de sauvegarde de Dextérité. Elle subit 2d10 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
-      "condition": "Que vous jouez lorsqu'une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts"
+      "condition": "Que vous jouez lorsqu'une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Heroes' Feast": {
       "name": "Festin des héros",
@@ -950,12 +1191,32 @@
     },
     "Heroism": {
       "name": "Héroïsme",
-      "description": "<p>Une créature consentante que vous touchez est investie de vaillance. Jusqu'à la fin du sort, la créature est immunisée contre l'état effrayé et reçoit autant de points de vie temporaires que votre modificateur de caractéristique d'incantation au début de chacun de ses tours. Quand le sort prend fin, la cible perd tous les points de vie temporaires restants issus du sort.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Une créature consentante que vous touchez est investie de vaillance. Jusqu'à la fin du sort, la créature est immunisée contre l'état effrayé et reçoit autant de points de vie temporaires que votre modificateur de caractéristique d'incantation au début de chacun de ses tours. Quand le sort prend fin, la cible perd tous les points de vie temporaires restants issus du sort.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Heroism": {
+          "name": "Héroïsme"
+        }
+      }
     },
     "Hideous Laughter": {
       "name": "Fou rire",
       "description": "<p>Une créature de votre choix parmi celles que vous voyez à portée perçoit tout comme hilarant et se prend d'un fou rire si le sort l'affecte. La cible doit réussir un jet de sauvegarde de Sagesse, sous peine de tomber à terre et d'être neutralisée, incapable de se relever pour toute la durée. Une créature dont la valeur d'Intelligence est de 4 ou moins n'est pas affectée.</p><p>À la fin de chacun de ses tours et chaque fois qu'elle subit des dégâts, la cible peut réitérer le jet de sauvegarde de Sagesse. Elle est avantagée au jet de sauvegarde s'il est déclenché par des dégâts. En cas de réussite, le sort prend fin.</p>",
-      "materials": "de minuscules tartes à la crème et une plume agitée en l'air"
+      "materials": "de minuscules tartes à la crème et une plume agitée en l'air",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Hideous Laughter": {
+          "name": "Fou rire"
+        }
+      }
     },
     "Hold Monster": {
       "name": "Immobilisation de monstre",
@@ -991,6 +1252,14 @@
         "Hunter's Mark": {
           "name": "Marque du chasseur"
         }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        },
+        "Bonus Mark Damage": {
+          "name": "Dégâts bonus de marque"
+        }
       }
     },
     "Hypnotic Pattern": {
@@ -1012,12 +1281,22 @@
     "Identify": {
       "name": "Identification",
       "description": "<p>Vous choisissez un objet au contact duquel vous devez rester pendant toute l'incantation. S'il s'agit d'un objet magique ou imprégné de magie, vous en apprenez les propriétés et savez les utiliser ; vous savez également si l'harmonisation est requise et de combien de charges l'objet dispose, le cas échéant. Vous apprenez aussi quels sorts éventuels affectent l'objet. Si l'objet a été créé par un sort, vous apprenez lequel.</p><p>Si au lieu d'un objet, vous touchez une créature pendant toute l'incantation, vous apprenez quels sorts éventuels l'affectent.</p>",
-      "materials": "une perle d'une valeur minimale de 100 po et une plume de hibou"
+      "materials": "une perle d'une valeur minimale de 100 po et une plume de hibou",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Illusory Script": {
       "name": "Texte illusoire",
       "description": "<p>Vous écrivez sur du parchemin, du papier ou autre surface adaptée et y insufflez une puissante illusion qui persiste pour toute la durée.</p><p>À vos yeux, ainsi qu'à ceux de toute créature que vous désignez à l'incantation du sort, le texte paraît normalement écrit de votre main et porte le message voulu de votre part. Pour toute autre créature, le texte paraît rédigé selon un alphabet inconnu ou magique, parfaitement incompréhensible. Une autre option consiste à donner un sens entièrement différent au message, qui semble écrit par quelqu'un d'autre et dans une autre langue que vous maîtrisez.</p><p>Si le sort est dissipé, le texte original et l'illusion disparaissent.</p><p>Une créature dotée de la vision lucide peut lire le message caché.</p>",
-      "materials": "de l'encre au plomb d'une valeur minimale de 10 po, que le sort détruit"
+      "materials": "de l'encre au plomb d'une valeur minimale de 10 po, que le sort détruit",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Imprisonment": {
       "name": "Emprisonnement",
@@ -1030,7 +1309,12 @@
     },
     "Inflict Wounds": {
       "name": "Blessure",
-      "description": "<p>Effectuez une attaque de sort au corps à corps contre une créature à portée d'allonge. Si l'attaque touche, la cible subit 3d10 dégâts nécrotiques.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Effectuez une attaque de sort au corps à corps contre une créature à portée d'allonge. Si l'attaque touche, la cible subit 3d10 dégâts nécrotiques.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Insect Plague": {
       "name": "Fléau d'insectes",
@@ -1060,7 +1344,17 @@
     "Jump": {
       "name": "Saut",
       "description": "<p>Vous touchez une créature. La distance de saut de la créature est triplée jusqu'à la fin du sort.</p>",
-      "materials": "une patte arrière de sauterelle"
+      "materials": "une patte arrière de sauterelle",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Jump": {
+          "name": "Saut"
+        }
+      }
     },
     "Knock": {
       "name": "Déblocage",
@@ -1083,7 +1377,12 @@
     "Light": {
       "name": "Lumière",
       "description": "<p>Vous touchez un objet dont aucune dimension ne dépasse 3 m. Jusqu'à la fin du sort, l'objet produit une lumière vive sur un rayon de 6 m et une lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix. Recouvrir intégralement l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le relancez ou le révoquez au prix d'une action.</p><p>Si vous ciblez un objet porté par une créature hostile, celle-ci doit réussir un jet de sauvegarde de Dextérité pour éviter le sort.</p>",
-      "materials": "une luciole ou de la mousse phosphorescente"
+      "materials": "une luciole ou de la mousse phosphorescente",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Lightning Bolt": {
       "name": "Éclair",
@@ -1108,7 +1407,17 @@
     "Longstrider": {
       "name": "Grande foulée",
       "description": "<p>Vous touchez une créature. La vitesse de la cible augmente de 3 m jusqu'à la fin du sort.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, vous pouvez cibler une créature de plus par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
-      "materials": "une pincée de terre"
+      "materials": "une pincée de terre",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Longstrider": {
+          "name": "Grande foulée"
+        }
+      }
     },
     "Mage Armor": {
       "name": "Armure du mage",
@@ -1118,6 +1427,11 @@
         "Mage Armor": {
           "description": "<p>La CA de base de la cible devient 13 + son modificateur de Dextérité.</p>",
           "name": "Armure du mage"
+        }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
         }
       }
     },
@@ -1137,7 +1451,12 @@
     },
     "Magic Missile": {
       "name": "Projectile magique",
-      "description": "<p>Vous créez trois traits de force magique et scintillante. Chaque projectile touche une créature de votre choix que vous voyez à portée. Un projectile inflige 1d4 + 1 dégâts de force à sa cible. Les traits frappent tous simultanément, sachant que vous pouvez viser une seule créature ou plusieurs.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, le sort crée un projectile supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Vous créez trois traits de force magique et scintillante. Chaque projectile touche une créature de votre choix que vous voyez à portée. Un projectile inflige 1d4 + 1 dégâts de force à sa cible. Les traits frappent tous simultanément, sachant que vous pouvez viser une seule créature ou plusieurs.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, le sort crée un projectile supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Magic Mouth": {
       "name": "Bouche magique",
@@ -1209,12 +1528,22 @@
     "Mending": {
       "name": "Réparation",
       "description": "<p>Ce sort répare une dégradation (déchirure ou bris) sur l'objet que vous touchez, comme un maillon de chaîne brisé, une clef en deux morceaux, une cape déchirée ou une outre percée. Tant que la dégradation ne dépasse pas 30 cm dans quelque dimension que ce soit, vous la réparez et il n'en reste nulle trace.</p><p>Ce sort peut réparer la structure physique d'un objet magique ou d'un artificiel, mais il ne rendra pas sa magie à un tel objet.</p>",
-      "materials": "deux magnétites"
+      "materials": "deux magnétites",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Message": {
       "name": "Message",
       "description": "<p>Vous pointez le doigt vers une créature à portée et murmurez un message. La cible (et seulement elle) entend votre message et peut y répondre par un murmure audible de votre seule personne.</p><p>Vous pouvez lancer ce sort à travers des objets solides si vous connaissez la cible et savez qu'elle se trouve derrière ces obstacles. Le silence magique, 30 cm de pierre, 90 cm de bois ou de terre, ou 2,5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à bloquer le sort. Le sort n'est pas tenu de suivre une ligne droite ; il peut librement contourner les angles et franchir les ouvertures.</p>",
-      "materials": "un peu de fil de cuivre"
+      "materials": "un peu de fil de cuivre",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Meteor Swarm": {
       "name": "Nuée de météores",
@@ -1227,7 +1556,12 @@
     "Minor Illusion": {
       "name": "Illusion mineure",
       "description": "<p>Vous créez à portée un son ou l'image d'un objet qui persiste pour toute la durée. Cette illusion prend également fin si vous la révoquez au prix d'une action ou relancez ce sort.</p><p>Si vous créez un son, son volume peut aller du murmure au cri. Il peut prendre votre voix, celle de quelqu'un d'autre, imiter le rugissement du lion, un tambour qui bat ou toute autre forme de votre choix. Le son se prolonge sans discontinuer pour toute la durée, à moins que vous préfériez ne le faire intervenir que de temps à autre jusqu'à la fin du sort.</p><p>Si vous créez l'image d'un objet, comme une chaise, des empreintes boueuses ou un petit coffre, il doit pouvoir tenir dans un cube de 1,50 m d'arête. L'image ne peut créer ni son, ni lumière, ni odeur, ni autre effet sensoriel. Toute interaction physique avec l'image percera l'illusion, car elle n'est pas tangible.</p><p>Une créature qui consacre son action à examiner le son ou l'image peut comprendre qu'il s'agit d'une illusion en réussissant un test d'Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts. Une créature qui perce l'illusion continue de la percevoir, quoiqu'amoindrie.</p>",
-      "materials": "un peu de laine brute"
+      "materials": "un peu de laine brute",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Mirage Arcane": {
       "name": "Mirage",
@@ -1308,7 +1642,12 @@
     },
     "Poison Spray": {
       "name": "Bouffée de poison",
-      "description": "<p>Vous tendez la main vers une créature que vous voyez à portée et votre paume projette un petit nuage de gaz toxique. La créature doit réussir un jet de sauvegarde de Constitution sous peine de subir 1d12 dégâts de poison.</p><p>Les dégâts du sort augmentent de 1d12 lorsque vous atteignez le niveau 5 (2d12), le niveau 11 (3d12) et le niveau 17 (4d12).</p>"
+      "description": "<p>Vous tendez la main vers une créature que vous voyez à portée et votre paume projette un petit nuage de gaz toxique. La créature doit réussir un jet de sauvegarde de Constitution sous peine de subir 1d12 dégâts de poison.</p><p>Les dégâts du sort augmentent de 1d12 lorsque vous atteignez le niveau 5 (2d12), le niveau 11 (3d12) et le niveau 17 (4d12).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Polymorph": {
       "name": "Métamorphose",
@@ -1340,7 +1679,12 @@
     },
     "Prestidigitation": {
       "name": "Prestidigitation",
-      "description": "<p>Ce tour de passe-passe sert d'entraînement aux lanceurs de sorts débutants. Vous créez l'un des effets magiques suivants à portée :</p><ul><li>Vous produisez un effet sensoriel instantané et inoffensif, comme une pluie d'étincelles, une petite rafale, quelques notes de musique ou une odeur étrange.</li><li>Vous allumez ou éteignez une bougie, une torche ou un petit feu de camp, en un instant.</li><li>Vous nettoyez ou souillez en un instant un objet dont le volume ne dépasse pas 30 litres (ou 0,03 m3).</li><li>Vous refroidissez, réchauffez ou parfumez de la matière inerte pendant 1 heure, à condition que son volume ne dépasse pas 30 litres (ou 0,03 m3).</li><li>Vous faites apparaître pendant 1 heure, sur un objet ou une surface, une couleur, une petite marque ou un symbole.</li><li>Vous faites apparaître jusqu'à la fin de votre tour suivant une babiole non magique ou une image illusoire tenant dans votre main.</li></ul><p>Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets non instantanés, sachant que vous pouvez révoquer un tel effet au prix d'une action.</p>"
+      "description": "<p>Ce tour de passe-passe sert d'entraînement aux lanceurs de sorts débutants. Vous créez l'un des effets magiques suivants à portée :</p><ul><li>Vous produisez un effet sensoriel instantané et inoffensif, comme une pluie d'étincelles, une petite rafale, quelques notes de musique ou une odeur étrange.</li><li>Vous allumez ou éteignez une bougie, une torche ou un petit feu de camp, en un instant.</li><li>Vous nettoyez ou souillez en un instant un objet dont le volume ne dépasse pas 30 litres (ou 0,03 m3).</li><li>Vous refroidissez, réchauffez ou parfumez de la matière inerte pendant 1 heure, à condition que son volume ne dépasse pas 30 litres (ou 0,03 m3).</li><li>Vous faites apparaître pendant 1 heure, sur un objet ou une surface, une couleur, une petite marque ou un symbole.</li><li>Vous faites apparaître jusqu'à la fin de votre tour suivant une babiole non magique ou une image illusoire tenant dans votre main.</li></ul><p>Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets non instantanés, sachant que vous pouvez révoquer un tel effet au prix d'une action.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Prismatic Spray": {
       "name": "Embruns prismatiques",
@@ -1367,7 +1711,12 @@
     },
     "Produce Flame": {
       "name": "Flammes",
-      "description": "<p>Une flamme vacillante prend vie dans votre main. Elle y reste pour toute la durée, sans vous nuire ni menacer votre équipement. La flamme projette une lumière vive sur un rayon de 3 m, et une lumière faible sur 3 m de plus. Le sort prend fin si vous le révoquez au prix d'une action ou si vous le relancez.</p><p>Vous pouvez également attaquer avec la flamme, ce qui met également un terme au sort. À l'incantation du sort, ou au prix d'une action lors d'un tour ultérieur, vous pouvez projeter la flamme vers une créature située dans un rayon de 9 m. Effectuez une attaque de sort à distance. Si l'attaque touche, la cible subit 1d8 dégâts de feu.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>"
+      "description": "<p>Une flamme vacillante prend vie dans votre main. Elle y reste pour toute la durée, sans vous nuire ni menacer votre équipement. La flamme projette une lumière vive sur un rayon de 3 m, et une lumière faible sur 3 m de plus. Le sort prend fin si vous le révoquez au prix d'une action ou si vous le relancez.</p><p>Vous pouvez également attaquer avec la flamme, ce qui met également un terme au sort. À l'incantation du sort, ou au prix d'une action lors d'un tour ultérieur, vous pouvez projeter la flamme vers une créature située dans un rayon de 9 m. Effectuez une attaque de sort à distance. Si l'attaque touche, la cible subit 1d8 dégâts de feu.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Programmed Illusion": {
       "name": "Illusion programmée",
@@ -1386,7 +1735,17 @@
     "Protection from Evil and Good": {
       "name": "Protection contre le mal et le bien",
       "description": "<p>Vous touchez une créature consentante ; jusqu'à la fin du sort, celle-ci est protégée contre les types de créatures suivants : aberrations, célestes, élémentaires, fées, fiélons et morts-vivants.</p><p>Cette protection octroie plusieurs bénéfices. Les créatures concernées sont désavantagées aux jets d'attaque contre la cible. La cible ne peut également pas être charmée, effrayée ou possédée par ces créatures. Si la cible est déjà charmée, effrayée ou possédée par une telle créature, elle est avantagée aux nouveaux jets de sauvegarde contre l'effet correspondant.</p>",
-      "materials": "de l'eau bénite ou de la poudre de fer et d'argent, que le sort détruit"
+      "materials": "de l'eau bénite ou de la poudre de fer et d'argent, que le sort détruit",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Protection from Evil and Good": {
+          "name": "Protection contre le mal et le bien"
+        }
+      }
     },
     "Protection from Poison": {
       "name": "Protection contre le poison",
@@ -1400,7 +1759,12 @@
     },
     "Purify Food and Drink": {
       "name": "Purification de la nourriture et de l'eau",
-      "description": "<p>Tous les aliments et boissons non magiques dans une sphère de 1,50 m de rayon centrée sur un point que vous choisissez à portée sont purifiés et purgés de tout poison comme de toute maladie.</p>"
+      "description": "<p>Tous les aliments et boissons non magiques dans une sphère de 1,50 m de rayon centrée sur un point que vous choisissez à portée sont purifiés et purgés de tout poison comme de toute maladie.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Raise Dead": {
       "name": "Rappel à la vie",
@@ -1413,7 +1777,17 @@
     },
     "Ray of Frost": {
       "name": "Rayon de givre",
-      "description": "<p>Un rayon de lueur zébrée bleuâtre et glaciale file vers une créature à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d8 dégâts de froid et sa vitesse est réduite de 3 m jusqu'au début de votre tour suivant.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>"
+      "description": "<p>Un rayon de lueur zébrée bleuâtre et glaciale file vers une créature à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d8 dégâts de froid et sa vitesse est réduite de 3 m jusqu'au début de votre tour suivant.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Chilled": {
+          "name": "Gelé"
+        }
+      }
     },
     "Regenerate": {
       "name": "Régénération",
@@ -1437,7 +1811,17 @@
     "Resistance": {
       "name": "Résistance",
       "description": "<p>Vous touchez une créature consentante. Une fois avant la fin du sort, la cible peut lancer un d4 et en ajouter le résultat au jet de sauvegarde de son choix. Elle peut lancer ce dé avant ou après avoir effectué le jet de sauvegarde. Le sort prend alors fin.</p>",
-      "materials": "une cape miniature"
+      "materials": "une cape miniature",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Resistance": {
+          "name": "Résistance"
+        }
+      }
     },
     "Resurrection": {
       "name": "Résurrection",
@@ -1461,12 +1845,27 @@
     },
     "Sacred Flame": {
       "name": "Flamme sacrée",
-      "description": "<p>Une radiance embrasée s'abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les abris ne confèrent aucun avantage dans le cadre de ce jet de sauvegarde.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>"
+      "description": "<p>Une radiance embrasée s'abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les abris ne confèrent aucun avantage dans le cadre de ce jet de sauvegarde.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Sanctuary": {
       "name": "Sanctuaire",
       "description": "<p>Vous protégez une créature à portée contre les attaques. Jusqu'à la fin du sort, toute créature qui cible la créature protégée avec une attaque ou un sort nuisible effectue d'abord un jet de sauvegarde de Sagesse. En cas d'échec, la créature doit changer de cible sous peine de perdre son attaque ou son sort. Le sort ne protège pas la cible des effets de zone, comme l'explosion d'une boule de feu.</p><p>Si la créature protégée effectue une attaque ou lance un sort qui affecte une créature ennemie, le sort prend fin.</p>",
-      "materials": "un petit miroir en argent"
+      "materials": "un petit miroir en argent",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Sanctuary": {
+          "name": "Sanctuaire"
+        }
+      }
     },
     "Scorching Ray": {
       "name": "Rayon ardent",
@@ -1520,7 +1919,12 @@
           "name": "Bouclier"
         }
       },
-      "condition": "Que vous jouez lorsque vous êtes touché par une attaque ou ciblé par le sort projectile magique"
+      "condition": "Que vous jouez lorsque vous êtes touché par une attaque ou ciblé par le sort projectile magique",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Shield of Faith": {
       "name": "Bouclier de la foi",
@@ -1530,6 +1934,11 @@
         "Shield of Faith": {
           "name": "Bouclier de la foi",
           "description": "<p>La cible bénéficie d'un bonus de +2 à la CA pour toute la durée.</p>"
+        }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
         }
       }
     },
@@ -1556,7 +1965,17 @@
     },
     "Shocking Grasp": {
       "name": "Poigne électrique",
-      "description": "<p>Votre main se met à crépiter d'énergies qu'elle s'apprête à décharger sur la créature que vous tentez de toucher. Effectuez une attaque de sort au corps à corps contre la cible. Vous êtes avantagé au jet d'attaque si la cible porte une armure en métal. Si l'attaque touche, la cible subit 1d8 dégâts de foudre et ne peut pas jouer de réaction jusqu'au début de son tour suivant.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>"
+      "description": "<p>Votre main se met à crépiter d'énergies qu'elle s'apprête à décharger sur la créature que vous tentez de toucher. Effectuez une attaque de sort au corps à corps contre la cible. Vous êtes avantagé au jet d'attaque si la cible porte une armure en métal. Si l'attaque touche, la cible subit 1d8 dégâts de foudre et ne peut pas jouer de réaction jusqu'au début de son tour suivant.</p><p>Les dégâts du sort augmentent de 1d8 lorsque vous atteignez le niveau 5 (2d8), le niveau 11 (3d8) et le niveau 17 (4d8).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Shocking Grasp": {
+          "name": "Poigne électrique"
+        }
+      }
     },
     "Silence": {
       "name": "Silence",
@@ -1565,7 +1984,12 @@
     "Silent Image": {
       "name": "Image silencieuse",
       "description": "<p>Vous créez l'image d'un objet, d'une créature ou autre phénomène visible dont la taille ne dépasse pas celle d'un cube de 4,50 m d'arête. L'image apparaît en un endroit à portée et persiste pour toute la durée. Elle est purement visuelle, dépourvue de son, d'odeur et de tout autre effet sensoriel.</p><p>Vous pouvez consacrer votre action à déplacer l'image vers un autre endroit à portée. Lors de ce déplacement, vous pouvez modifier l'aspect de l'image afin que ses mouvements paraissent naturels. Exemple : si vous créez l'image d'une créature que vous faites déplacer, vous pouvez faire en sorte qu'elle donne l'impression de marcher.</p><p>Toute interaction physique avec l'image percera l'illusion, car elle n'est pas tangible. Une créature qui consacre son action à examiner l'image peut comprendre qu'il s'agit d'une illusion en réussissant un test d'Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts. Une créature qui perce l'illusion voit à travers l'image.</p>",
-      "materials": "un peu de laine brute"
+      "materials": "un peu de laine brute",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Simulacrum": {
       "name": "Simulacre",
@@ -1580,6 +2004,11 @@
         "Sleep": {
           "description": "<p>La créature affectée par ce sort tombe inconsciente et le reste jusqu’à la fin du sort, jusqu’à ce qu’elle subisse des dégâts ou que quelqu’un consacre une action à la réveiller énergiquement.</p>",
           "name": "Sommeil"
+        }
+      },
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
         }
       }
     },
@@ -1601,11 +2030,27 @@
     },
     "Spare the Dying": {
       "name": "Stabilisation",
-      "description": "<p>Vous touchez physiquement une créature vivante dotée de 0 point de vie. La créature est stabilisée. Ce sort est sans effet sur les morts-vivants et les artificiels.</p>"
+      "description": "<p>Vous touchez physiquement une créature vivante dotée de 0 point de vie. La créature est stabilisée. Ce sort est sans effet sur les morts-vivants et les artificiels.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Speak with Animals": {
       "name": "Communication avec les animaux",
-      "description": "<p>Vous recevez la faculté de comprendre les bêtes et de communiquer verbalement avec elles pour toute la durée. Le savoir et le niveau de conscience de bien des bêtes sont limités par leur intellect, mais toutes sont capables de vous informer sur les environs et les monstres locaux, notamment ce qu'elles ont perçu au cours de la dernière journée. À la discrétion du MJ, vous pourriez convaincre une bête de vous rendre un menu service.</p>"
+      "description": "<p>Vous recevez la faculté de comprendre les bêtes et de communiquer verbalement avec elles pour toute la durée. Le savoir et le niveau de conscience de bien des bêtes sont limités par leur intellect, mais toutes sont capables de vous informer sur les environs et les monstres locaux, notamment ce qu'elles ont perçu au cours de la dernière journée. À la discrétion du MJ, vous pourriez convaincre une bête de vous rendre un menu service.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Speak with Animals": {
+          "name": "Communication avec les animaux",
+          "description": "<p>Vous recevez la faculté de comprendre les bêtes et de communiquer verbalement avec elles pour toute la durée. Le savoir et le niveau de conscience de bien des bêtes sont limités par leur intellect, mais toutes sont capables de vous informer sur les environs et les monstres locaux, notamment ce qu'elles ont perçu au cours de la dernière journée. À la discrétion du MJ, vous pourriez convaincre une bête de vous rendre un menu service.</p>"
+        }
+      }
     },
     "Speak with Dead": {
       "name": "Communication avec les morts",
@@ -1723,11 +2168,21 @@
     },
     "Thaumaturgy": {
       "name": "Thaumaturgie",
-      "description": "<p>Vous engendrez une manifestation surnaturelle mineure, à portée. Vous créez l'un des effets magiques suivants à portée :</p><ul><li>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute.</li><li>Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</li><li>Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</li><li>Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</li><li>Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</li><li>Vous altérez l'aspect de vos yeux pendant 1 minute.</li></ul><p>Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois des effets d'une minute, sachant que vous pouvez révoquer un tel effet au prix d'une action.</p>"
+      "description": "<p>Vous engendrez une manifestation surnaturelle mineure, à portée. Vous créez l'un des effets magiques suivants à portée :</p><ul><li>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute.</li><li>Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</li><li>Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</li><li>Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</li><li>Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</li><li>Vous altérez l'aspect de vos yeux pendant 1 minute.</li></ul><p>Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois des effets d'une minute, sachant que vous pouvez révoquer un tel effet au prix d'une action.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Thunderwave": {
       "name": "Vague tonnante",
-      "description": "<p>Une vague de force tonitruante déferle depuis vous. Chaque créature prise dans un cube de 4,50 m d'arête émanant de vous effectue un jet de sauvegarde de Constitution. En cas d'échec, la créature subit 2d8 dégâts de tonnerre et le choc l'éloigne de 3 m de vous. En cas de réussite, la créature subit la moitié de ces dégâts et n'est pas repoussée.</p><p>En outre, les objets non fixés entièrement compris dans la zone d'effet sont automatiquement repoussés de 3 m de vous par le sort, dont le fracas s'entend à une distance de 90 m.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+      "description": "<p>Une vague de force tonitruante déferle depuis vous. Chaque créature prise dans un cube de 4,50 m d'arête émanant de vous effectue un jet de sauvegarde de Constitution. En cas d'échec, la créature subit 2d8 dégâts de tonnerre et le choc l'éloigne de 3 m de vous. En cas de réussite, la créature subit la moitié de ces dégâts et n'est pas repoussée.</p><p>En outre, les objets non fixés entièrement compris dans la zone d'effet sont automatiquement repoussés de 3 m de vous par le sort, dont le fracas s'entend à une distance de 90 m.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 2<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      }
     },
     "Time Stop": {
       "name": "Arrêt du temps",
@@ -1768,7 +2223,17 @@
     },
     "True Strike": {
       "name": "Coup au but",
-      "description": "<p>Vous tendez la main et pointez le doigt vers une cible à portée. Votre magie vous permet d'entrevoir une faiblesse dans les défenses de la cible. À votre tour suivant, vous recevez l'avantage à votre premier jet d'attaque contre la cible, à condition que le sort n'ait pas pris fin.</p>"
+      "description": "<p>Vous tendez la main et pointez le doigt vers une cible à portée. Votre magie vous permet d'entrevoir une faiblesse dans les défenses de la cible. À votre tour suivant, vous recevez l'avantage à votre premier jet d'attaque contre la cible, à condition que le sort n'ait pas pris fin.</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "True Strike": {
+          "name": "Coup au but"
+        }
+      }
     },
     "Unseen Servant": {
       "name": "Serviteur invisible",
@@ -1781,7 +2246,17 @@
     },
     "Vicious Mockery": {
       "name": "Moquerie cruelle",
-      "description": "<p>Vous adressez un chapelet d'insultes assaisonnées de subtils enchantements à une créature que vous voyez à portée. Si la cible vous entend (même sans vous comprendre), elle doit réussir un jet de sauvegarde de Sagesse sous peine de subir 1d4 dégâts psychiques et d'être désavantagée au prochain jet d'attaque qu'elle effectue avant la fin de son tour suivant.</p><p>Les dégâts du sort augmentent de 1d4 lorsque vous atteignez le niveau 5 (2d4), le niveau 11 (3d4) et le niveau 17 (4d4).</p>"
+      "description": "<p>Vous adressez un chapelet d'insultes assaisonnées de subtils enchantements à une créature que vous voyez à portée. Si la cible vous entend (même sans vous comprendre), elle doit réussir un jet de sauvegarde de Sagesse sous peine de subir 1d4 dégâts psychiques et d'être désavantagée au prochain jet d'attaque qu'elle effectue avant la fin de son tour suivant.</p><p>Les dégâts du sort augmentent de 1d4 lorsque vous atteignez le niveau 5 (2d4), le niveau 11 (3d4) et le niveau 17 (4d4).</p>",
+      "activities": {
+        "Cast": {
+          "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Vicious Mockery": {
+          "name": "Moquerie cruelle"
+        }
+      }
     },
     "Wall of Fire": {
       "name": "Mur de feu",
