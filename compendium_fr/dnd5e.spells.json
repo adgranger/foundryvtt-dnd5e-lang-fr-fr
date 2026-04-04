@@ -913,6 +913,15 @@
             }
           }
         }
+      },
+      "effects": {
+        "Familiar": {
+          "name": "Familier",
+          "description": "<p>Cette créature est un @UUID[Compendium.dnd5e.spells.Item.JGT5bNqu9REL7Fuz]{familier}. Un familier ne peut pas attaquer mais il peut entreprendre normalement d'autres actions.</p>",
+          "changes": {
+            "name": "{} Familier"
+          }
+        }
       }
     },
     "Find Steed": {
@@ -1101,6 +1110,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Enter / End Turn in Grease Save": {
+          "name": "Sauvegarde : Entrer / Fin de tour dans la graisse",
+          "condition": "Lorsqu'une créature pénètre dans la zone ou y termine son tour."
         }
       }
     },
@@ -1138,7 +1151,8 @@
       },
       "effects": {
         "Guidance": {
-          "name": "Assistance"
+          "name": "Assistance",
+          "description": "<p>Une fois avant la fin du sort, vous pouvez lancer un [[/r d4]] et en ajouter le résultat au test de caractéristique de votre choix. Vous pouvez lancer ce dé avant ou après avoir effectué le test de caractéristique. Le sort prend alors fin.</p>"
         }
       }
     },
@@ -1152,7 +1166,8 @@
       },
       "effects": {
         "Guiding Bolt": {
-          "name": "Rayon traçant"
+          "name": "Rayon traçant",
+          "description": "<p>Le prochain jet d'attaque qui vous vise avant la fin du tour suivant du lanceur est avantagé, grâce à la lumière faible et scintillante qui émane de vous.</p>"
         }
       }
     },
@@ -1231,11 +1246,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Grant Temporary Hit Points": {
+          "name": "Octroyer des points de vie temporaires",
+          "condition": "Lorsqu'une créature sous l'effet de ce sort commence son tour."
         }
       },
       "effects": {
         "Heroism": {
-          "name": "Héroïsme"
+          "name": "Héroïsme",
+          "description": "<p>Vous êtes investie de vaillance. Jusqu'à la fin du sort, vous êtes immunisé contre l'état &reference[Frightened apply=false]{effrayé} et recevez autant de points de vie temporaires que le modificateur de caractéristique d'incantation du lanceur au début de chacun de vos tours. Quand le sort prend fin, vous perdez tous les points de vie temporaires restants issus du sort.</p>"
         }
       }
     },
@@ -1250,7 +1270,8 @@
       },
       "effects": {
         "Hideous Laughter": {
-          "name": "Fou rire"
+          "name": "Fou rire",
+          "description": "<p>Vous percevez tout comme hilarant et vous prend d'un fou rire. Vous êtes &reference[Incapacitated apply=false]{neutralisé}, incapable de vous relever pour toute la durée.</p><p>À la fin de chacun de vos tours et chaque fois que vous subissez des dégâts, vous pouvez réitérer le jet de sauvegarde de Sagesse. Vous êtes avantagé au jet de sauvegarde s'il est déclenché par des dégâts. En cas de réussite, le sort prend fin.</p>"
         }
       }
     },
@@ -1286,7 +1307,8 @@
       "description": "<p>Vous choisissez une créature que vous voyez à portée, que vous désignez mystiquement comme votre proie. Jusqu'à la fin du sort, vous infligez 1d6 dégâts supplémentaires à la cible chaque fois que vous la touchez avec une attaque d'arme et vous avez l'avantage à vos tests de Sagesse (Survie) et de Sagesse (Perception) visant à la retrouver. Si la cible tombe à 0 point de vie avant la fin du sort, vous pouvez, par une action bonus à l'un de vos tours suivants, marquer une nouvelle créature.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 3<sup>e</sup> ou 4<sup>e</sup> niveau, vous pouvez maintenir votre concentration sur le sort pendant un maximum de 8 heures. Avec un emplacement de sort du 5<sup>e</sup> niveau ou supérieur, vous pouvez maintenir votre concentration sur le sort pendant un maximum de 24 heures.</p>",
       "effects": {
         "Hunter's Mark": {
-          "name": "Marque du chasseur"
+          "name": "Marque du chasseur",
+          "description": "<p>Vous êtes mystiquement pris comme proie par le lanceur. Jusqu'à la fin du sort, il vous inflige 1d6 dégâts supplémentaires chaque fois qu'il vous touche avec une attaque d'arme et il a l'avantage sur ses tests de Sagesse (Survie) et de Sagesse (Perception) visant à vous retrouver.</p>"
         }
       },
       "activities": {
@@ -1294,7 +1316,8 @@
           "name": "Incanter"
         },
         "Bonus Mark Damage": {
-          "name": "Dégâts bonus de marque"
+          "name": "Dégâts bonus de marque",
+          "condition": "Lorsque vous touchez une créature sous l'effet de ce sort avec une attaque d'arme."
         }
       }
     },
@@ -1388,7 +1411,8 @@
       },
       "effects": {
         "Jump": {
-          "name": "Saut"
+          "name": "Saut",
+          "description": "<p>Votre distance de &reference[jumping]{saut} est triplée jusqu'à la fin du sort.</p>"
         }
       }
     },
@@ -1417,6 +1441,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Avoid Light Save": {
+          "name": "Sauvegarde : Éviter la lumière",
+          "condition": "Lorsque vous ciblez un objet porté par une créature hostile."
         }
       }
     },
@@ -1451,7 +1479,8 @@
       },
       "effects": {
         "Longstrider": {
-          "name": "Grande foulée"
+          "name": "Grande foulée",
+          "description": "<p>Votre vitesse augmente de 3 m jusqu'à la fin du sort.</p>"
         }
       }
     },
@@ -1473,7 +1502,15 @@
     },
     "Mage Hand": {
       "name": "Main du mage",
-      "description": "<p>Une main spectrale et flottante apparaît en un point que vous choisissez à portée. La main persiste pour toute la durée ou jusqu'à ce que vous la révoquiez au prix d'une action. Elle disparaît si jamais elle se retrouve à plus de 9 m de vous ou si vous relancez ce sort.</p><p>Vous pouvez consacrer votre action à contrôler la main. Celle-ci peut servir à manipuler un objet, à ouvrir une porte ou un récipient non verrouillés, à ranger ou récupérer un objet dans un conteneur ouvert ou à déverser le contenu d'une fiole. Vous pouvez déplacer la main d'un maximum de 9 m chaque fois que vous l'utilisez.</p><p>Elle ne peut ni attaquer, ni utiliser d'objet magique, ni porter plus de 5 kg.</p>"
+      "description": "<p>Une main spectrale et flottante apparaît en un point que vous choisissez à portée. La main persiste pour toute la durée ou jusqu'à ce que vous la révoquiez au prix d'une action. Elle disparaît si jamais elle se retrouve à plus de 9 m de vous ou si vous relancez ce sort.</p><p>Vous pouvez consacrer votre action à contrôler la main. Celle-ci peut servir à manipuler un objet, à ouvrir une porte ou un récipient non verrouillés, à ranger ou récupérer un objet dans un conteneur ouvert ou à déverser le contenu d'une fiole. Vous pouvez déplacer la main d'un maximum de 9 m chaque fois que vous l'utilisez.</p><p>Elle ne peut ni attaquer, ni utiliser d'objet magique, ni porter plus de 5 kg.</p>",
+      "activities": {
+        "Conjure Mage Hand": {
+          "name": "Invoquer une Main du mage"
+        },
+        "Control Mage Hand": {
+          "name": "Contrôler la Main du mage"
+        }
+      }
     },
     "Magic Circle": {
       "name": "Cercle magique",
@@ -1596,6 +1633,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Investigate Illusion Check": {
+          "name": "Test d'investigation de l'illusion"
         }
       }
     },
@@ -1779,7 +1819,8 @@
       },
       "effects": {
         "Protection from Evil and Good": {
-          "name": "Protection contre le mal et le bien"
+          "name": "Protection contre le mal et le bien",
+          "description": "<p>Jusqu'à la fin du sort, vous êtes protégé contre les types de créatures suivants : aberrations, célestes, élémentaires, fées, fiélons et morts-vivants.</p><p>Cette protection octroie plusieurs bénéfices. Les créatures concernées sont désavantagées aux jets d'attaque contre vous. Vous ne pouvez également pas être &reference[charmed apply=false]{charmé}, &reference[frightened apply=false]{effrayé} ou possédé par ces créatures. Si vous êtes déjà charmé, effrayé ou possédé par une telle créature, elle est avantagée aux nouveaux jets de sauvegarde contre l'effet correspondant.</p>"
         }
       }
     },
@@ -1821,7 +1862,8 @@
       },
       "effects": {
         "Chilled": {
-          "name": "Gelé"
+          "name": "Gelé",
+          "description": "<p>Votre vitesse est réduite de 3 m jusqu'au début de votre tour suivant du lanceur.</p>"
         }
       }
     },
@@ -1855,7 +1897,8 @@
       },
       "effects": {
         "Resistance": {
-          "name": "Résistance"
+          "name": "Résistance",
+          "description": "<p>Une fois avant la fin du sort, vous pouvez lancer un [[/r d4]] et en ajouter le résultat au jet de sauvegarde de votre choix. Vous pouvez lancer ce dé avant ou après avoir effectué le jet de sauvegarde. Le sort prend alors fin.</p>"
         }
       }
     },
@@ -1895,11 +1938,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Ward Save": {
+          "name": "Sauvegarde de protection",
+          "condition": "Lorsqu'une créature vous cible avec une attaque ou un sort nuisible."
         }
       },
       "effects": {
         "Sanctuary": {
-          "name": "Sanctuaire"
+          "name": "Sanctuaire",
+          "description": "<p>Vous avez été protégé contre les attaques. Jusqu'à la fin du sort, toute créature qui vous cible avec une attaque ou un sort nuisible effectue d'abord un jet de sauvegarde de Sagesse. En cas d'échec, la créature doit changer de cible sous peine de perdre son attaque ou son sort. Le sort ne vous protège pas des effets de zone, comme l'explosion d'une @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{boule de feu}.</p><p>Si vous effectuez une attaque ou lancez un sort qui affecte une créature ennemie, le sort prend fin.</p>"
         }
       }
     },
@@ -1995,7 +2043,8 @@
           "changes": {
             "name": ", Crosse des druides"
           },
-          "name": "Crosse des druides"
+          "name": "Crosse des druides",
+          "description": "<p>Pour toute la durée, vous pouvez recourir à votre caractéristique d'incantation plutôt qu'à la Force pour les jets d'attaque et de dégâts de vos attaques de corps à corps effectuées avec cette arme, dont le dé de dégâts passe à d8. Si elle ne l'était pas déjà, l'arme est désormais magique. Le sort prend fin si vous le relancez ou si vous lâchez l'arme.</p>"
         }
       }
     },
@@ -2009,7 +2058,8 @@
       },
       "effects": {
         "Shocking Grasp": {
-          "name": "Poigne électrique"
+          "name": "Poigne électrique",
+          "description": "<p>Vous ne pouvez pas jouer de réaction jusqu'au début de votre tour suivant.</p>"
         }
       }
     },
@@ -2024,6 +2074,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Investigate Illusion Check": {
+          "name": "Test d'investigation de l'illusion"
         }
       }
     },
@@ -2044,7 +2097,8 @@
       },
       "activities": {
         "Cast": {
-          "name": "Incanter"
+          "name": "Incanter",
+          "roll": "Points de vie affectés"
         }
       }
     },
@@ -2267,7 +2321,8 @@
       },
       "effects": {
         "True Strike": {
-          "name": "Coup au but"
+          "name": "Coup au but",
+          "description": "<p>Le lanceur reçois l'avantage à son premier jet d'attaque contre vous.</p>"
         }
       }
     },
