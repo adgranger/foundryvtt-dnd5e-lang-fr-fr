@@ -2329,7 +2329,15 @@
     "Unseen Servant": {
       "name": "Serviteur invisible",
       "description": "<p>Le sort crée une force informe, &Reference[Invisible apply=false]{invisible} et dépourvue de conscience qui accomplit des tâches rudimentaires sous vos ordres jusqu'à la fin du sort. Le serviteur se matérialise au sol, en un espace inoccupé à portée. Il est doté d'une CA de 10, de 1 point de vie, d'une Force de 2, et ne peut pas effectuer d'attaques. S'il tombe à 0 point de vie, le sort prend fin.</p><p>À chacun de vos tours, vous pouvez par une action bonus ordonner mentalement au serviteur de se déplacer d'un maximum de 4,50 m et d'interagir avec un objet. Le serviteur peut accomplir des tâches rudimentaires à la portée d'un humain, comme aller chercher des objets, nettoyer, réparer, repasser les vêtements, allumer un feu ou servir à manger et à boire. Une fois l'instruction reçue, le serviteur s'attèle à la tâche de son mieux jusqu'à l'avoir accomplie, puis attend vos prochaines directives.</p><p>Si vous lui assignez une tâche qui lui demande de s'éloigner de plus de 18 m de vous, le sort prend fin.</p>",
-      "materials": "un bout de ficelle et un morceau de bois"
+      "materials": "un bout de ficelle et un morceau de bois",
+      "activities": {
+        "Summon Servant": {
+          "name": "Invoquer un serviteur"
+        },
+        "Command Servant": {
+          "name": "Ordonner le serviteur"
+        }
+      }
     },
     "Vampiric Touch": {
       "name": "Caresse du vampire",
@@ -2345,7 +2353,8 @@
       },
       "effects": {
         "Vicious Mockery": {
-          "name": "Moquerie cruelle"
+          "name": "Moquerie cruelle",
+          "description": "<p>Vous êtes désavantagé au prochain jet d'attaque que vous effectuez avant la fin de votre tour suivant.</p>"
         }
       }
     },
