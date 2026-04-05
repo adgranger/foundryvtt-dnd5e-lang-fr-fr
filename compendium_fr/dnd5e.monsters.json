@@ -1518,7 +1518,7 @@
         },
         "Roar": {
           "name": "Rugissement",
-          "description": "<p>Le sphinx pousse un rugissement magique. Chaque fois qu’il rugit avant de terminer un repos long, son cri se fait plus puissant et l’effet diffère, comme détaillé ci-après. Chaque créature située dans un rayon de 150 m du sphinx effectue un jet de sauvegarde si elle l’entend.</p>",
+          "description": "<p>Le sphinx pousse un rugissement magique. Chaque fois qu'il rugit avant de terminer un repos long, son cri se fait plus puissant et l'effet diffère, comme détaillé ci-après. Chaque créature située dans un rayon de 150 m du sphinx effectue un jet de sauvegarde si elle l'entend.</p><p><strong>Premier rugissement.</strong> Toute créature qui rate un jet de sauvegarde de Sagesse DD 18 est &Reference[frightened apply=false]{effrayée} pendant 1 minute. Une créature effrayée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p><p><strong>Deuxième rugissement.</strong> Toute créature qui rate un jet de sauvegarde de Sagesse DD 18 est &Reference[deafened apply=false]{assourdie} et effrayée pendant 1 minute. Une créature ainsi effrayée est &Reference[paralyzed apply=false]{paralysée}, et peut réitérer le jet de sauvegarde à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite.</p><p><strong>Troisième rugissement.</strong> Chaque créature concernée effectue un jet de sauvegarde de Constitution DD 18. En cas d'échec, elle subit 44 (8d10) dégâts de tonnerre et se retrouve &Reference[prone]{à terre}. En cas de réussite, la créature subit la moitié de ces dégâts et n'est pas jetée à terre.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Rugissement.</p>",
           "activities": {
             "First Roar": {
@@ -1534,12 +1534,15 @@
           "effects": {
             "Frightened": {
               "name": "Effrayé"
+            },
+            "Deafened, Frightened, & Paralyzed": {
+              "name": "Assourdi, Effrayé et Paralysé"
             }
           }
         },
         "Claw Attack": {
           "name": "Attaque de griffe",
-          "description": "<p>Le sphinx effectue une attaque de Griffe.</p>"
+          "description": "<p>Le sphinx effectue une attaque de [[/item .yotsIj19d5spOVGb]]{Griffe}.</p>"
         },
         "Teleport": {
           "name": "Téléportation",
@@ -1655,7 +1658,7 @@
         },
         "Acid Spray": {
           "name": "Aspersion acide",
-          "description": "<p>L’[[lookup @name]] crache de l’acide sous forme d’une ligne de 9 m de long et 1,50 m de large, à condition qu’il ne soit pas en train d’agripper une créature. Chaque créature prise dans la ligne effectue un [[/save dex 13 format=long]] , et subit <strong><em>[[/damage 3d6 acid average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>L'ankheg crache de l'acide sous forme d'une ligne de 9 m de long et 1,50 m de large, à condition qu'il ne soit pas en train d'agripper une créature. Chaque créature prise dans la ligne effectue un jet de sauvegarde de Dextérité DD 13, et subit 10 (3d6) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Aspersion acide.</p>"
         }
       },
@@ -1932,7 +1935,7 @@
       "items": {
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
-          "description": "<p>L’avatar peut traverser d’autres créatures et objets comme s’il s’agissait d’un terrain difficile. Il subit <strong><em>[[/damage 1d10 force average]]</em></strong> s’il termine son tour à l’intérieur d’un objet.</p>",
+          "description": "<p>L'avatar peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Déplacement intangible.</p>"
         },
         "Turn Immunity": {
@@ -1941,7 +1944,7 @@
         },
         "Reaping Scythe": {
           "name": "Faux tournoyante",
-          "description": "<p>L’avatar abat sa faux spectrale sur une créature située dans un rayon de 1,50 m de lui, et lui inflige <strong><em>[[/damage 1d8 + 3 slashing average]]</em></strong> plus <strong><em>[[/damage 1d8 necrotic average]]</em></strong>.</p>",
+          "description": "<p>L'avatar abat sa faux spectrale sur une créature située dans un rayon de 1,50 m de lui, et lui inflige 7 (1d8 + 3) dégâts tranchants plus 4 (1d8) dégâts nécrotiques.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Faux tournoyante.</p>"
         }
       },
@@ -2207,7 +2210,7 @@
       "items": {
         "Petrifying Gaze": {
           "name": "Regard pétrifiant",
-          "description": "<p>Si une créature commence son tour dans un rayon de 9 m du basilic et que les deux se voient mutuellement, le basilic peut contraindre la créature à effectuer un jet de sauvegarde de Constitution DD 12 s'il n'est pas &Reference[incapacitated]{neutralisé}. En cas d'échec, la créature est &Reference[restrained]{entravée} et commence à se transformer magiquement en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée jusqu'à ce que le sort restauration suprême ou une magie comparable la libère.</p><p>Toute créature qui n'est pas surprise peut détourner le regard au début de son tour pour se soustraire au jet de sauvegarde. Ce faisant, la créature ne voit pas le basilic jusqu'au début de son tour suivant, moment auquel elle peut de nouveau détourner les yeux. Si la créature regarde le basilic entretemps, elle doit aussitôt effectuer le JS.</p><p>Si le basilic voit son reflet dans un rayon de 9 m et sous une lumière vive, il le prend pour un rival et se cible lui-même avec son regard.</p>",
+          "description": "<p>Si une créature commence son tour dans un rayon de 9 m du basilic et que les deux se voient mutuellement, le basilic peut contraindre la créature à effectuer un jet de sauvegarde de Constitution DD 12 s'il n'est pas &Reference[incapacitated]{neutralisé}. En cas d'échec, la créature est &Reference[restrained]{entravée} et commence à se transformer magiquement en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée jusqu'à ce que le sort <em>restauration suprême</em> ou une magie comparable la libère.</p><p>Toute créature qui n'est pas surprise peut détourner le regard au début de son tour pour se soustraire au jet de sauvegarde. Ce faisant, la créature ne voit pas le basilic jusqu'au début de son tour suivant, moment auquel elle peut de nouveau détourner les yeux. Si la créature regarde le basilic entretemps, elle doit aussitôt effectuer le JS.</p><p>Si le basilic voit son reflet dans un rayon de 9 m et sous une lumière vive, il le prend pour un rival et se cible lui-même avec son regard.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Regard pétrifiant.</p>"
         },
         "Bite": {
@@ -2293,12 +2296,12 @@
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
-          "description": "<p>Le [[lookup @name]] crache une ligne de foudre de 6 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un [[/save dex 16 format=long]] , et subit <strong><em>[[/damage 12d10 lightning average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le béhir crache une ligne de foudre de 6 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de Dextérité DD 16, et subit 66 (12d10) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
         },
         "Swallow": {
           "name": "Engloutissement",
-          "description": "<p>Le [[lookup @name]] effectue une attaque de Morsure contre une cible de taille M ou inférieure qu’il agrippe. Si l’attaque touche, la cible est engloutie et n’est plus agrippée. La cible engloutie est &Reference[blinded] et &Reference[restrained], bénéficie d’un abri total contre les attaques et effets émanant de l’extérieur du [[lookup @name]] et subit <strong><em>[[/damage 6d6 acid average]]</em></strong> au début de chacun des tours du monstre. Le [[lookup @name]] ne peut pas engloutir plus d’une créature à la fois.</p><p>Si le [[lookup @name]] subit 30 dégâts ou plus lors d’un même tour de la part d’une créature engloutie, il doit réussir un [[/save con 14 format=long]]  à la fin du tour concerné sous peine de régurgiter la créature, qui se retrouve &Reference[prone] dans un espace situé à 3 m ou moins du monstre. Si le [[lookup @name]] meurt, la créature engloutie n’est plus entravée par lui et peut s’en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
+          "description": "<p>Le béhir effectue une attaque de Morsure contre une cible de taille M ou inférieure qu'il agrippe. Si l'attaque touche, la cible est engloutie et n'est plus agrippée. La cible engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du béhir et subit 21 (6d6) dégâts d'acide au début de chacun des tours du monstre. Le béhir ne peut pas engloutir plus d'une créature à la fois.</p><p>Si le béhir subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 14 à la fin du tour concerné sous peine de régurgiter la créature, qui se retrouve à terre dans un espace situé à 3 m ou moins du monstre. Si le béhir meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>"
         }
       },
@@ -2387,7 +2390,7 @@
         },
         "Corrosive Form": {
           "name": "Masse corrosive",
-          "description": "<p>Une créature qui touche le pouding, directement ou avec une attaque de corps à corps alors qu’elle se trouve à 1,50 m ou moins de lui, subit <strong><em>[[/damage 1d8 acid average]]</em></strong>. Toute arme non magique en métal ou en bois qui touche le pouding lors d’une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l’arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l’arme est détruite. Les munitions non magiques en métal ou en bois qui touchent le pouding dans le cadre d’une attaque sont détruites après application des dégâts.</p><p>Le pouding peut ronger le bois et le métal non magiques, au rythme de 5 cm d’épaisseur par round.</p>",
+          "description": "<p>Une créature qui touche le pouding, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit 4 (1d8) dégâts d'acide. Toute arme non magique en métal ou en bois qui touche le pouding lors d'une attaque est aussitôt rongée.</p><p>Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal ou en bois qui touchent le pouding dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>Le pouding peut ronger le bois et le métal non magiques, au rythme de 5 cm d'épaisseur par round.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Masse corrosive.</p>"
         },
         "Spider Climb": {
@@ -2645,11 +2648,11 @@
         },
         "Standing Leap": {
           "name": "Saut sans élan",
-          "description": "<p>Les sauts en longueur de la [[lookup @name]] peuvent atteindre 9 m et ses sauts en hauteur 4,50 m, avec ou sans élan.</p>"
+          "description": "<p>Les sauts en longueur de la bulette peuvent atteindre 9 m et ses sauts en hauteur 4,50 m, avec ou sans élan.</p>"
         },
         "Deadly leap": {
           "name": "Saut meurtrier",
-          "description": "<p>Si la [[lookup @name]] effectue un saut d’au moins 4,50 m dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature. Toute créature sur laquelle elle atterrit doit réussir un jet de sauvegarde de Dextérité ou de Force (à la convenance de la cible) DD 16 sous peine d’être jetée &Reference[prone] et de subir <strong><em>[[/damage 3d6 + 4 bludgeoning average]]</em></strong> plus <strong><em>[[/damage 3d6 + 4 slashing average]]</em></strong>. En cas de réussite, la créature ne subit que la moitié de ces dégâts et ne tombe pas à terre ; elle est repoussée de 1,50 m de l’espace de la [[lookup @name]] dans l’espace inoccupé du choix de la créature. Si aucun espace inoccupé n’est à portée, la créature tombe en fait à terre dans l’espace de la [[lookup @name]].</p>",
+          "description": "<p>Si la bulette effectue un saut d'au moins 4,50 m dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature.</p><p>Toute créature sur laquelle elle atterrit doit réussir un jet de sauvegarde de Dextérité ou de Force (à la convenance de la cible) DD 16 sous peine d'être jetée à terre et de subir 14 (3d6 + 4) dégâts contondants plus 14 (3d6 + 4) dégâts tranchants. En cas de réussite, la créature ne subit que la moitié de ces dégâts et ne tombe pas à terre ; elle est repoussée de 1,50 m de l'espace de la bulette dans l'espace inoccupé du choix de la créature. Si aucun espace inoccupé n'est à portée, la créature tombe en fait à terre dans l'espace de la bulette.</p>",
           "chat": "<p>La [[lookup @name]] utilise Saut meurtrier.</p>"
         }
       },
@@ -2717,7 +2720,7 @@
         },
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si le [[lookup @name]] se déplace d’au moins 9 m en ligne droite vers une cible qu’il touche ensuite avec une attaque de pique au même tour, il lui inflige <strong><em>[[/damage 3d6 piercing average]]</em></strong> supplémentaires.</p>",
+          "description": "<p>Si le centaure se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de pique au même tour, il lui inflige 10 (3d6) dégâts perforants supplémentaires.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
         }
       },
@@ -2773,7 +2776,7 @@
         },
         "Fire Breath": {
           "name": "Souffle de feu",
-          "description": "<p>La tête de dragon crache des flammes sous forme d’un cône de 4,50 m. Chaque créature prise dans la zone effectue un [[/save dex 15 format=long]]  et subit <strong><em>[[/damage 7d8 fire average]]</em></strong> en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>La tête de dragon crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité DD 15 et subit 31 (7d8) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] utilise Souffle de feu.</p>"
         },
         "Multiattack": {
@@ -2981,7 +2984,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 3 ([[/damage]]{1d4 + 1}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] contre la pétrification magique. En cas d'échec, la créature est &Reference[restrained]{entravée} et commence à se transformer en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée pendant 24 heures.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de Constitution DD 11 contre la pétrification magique. En cas d'échec, la créature est entravée et commence à se transformer en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée pendant 24 heures.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>"
         }
       },
@@ -3058,7 +3061,7 @@
         },
         "Constrict": {
           "name": "Constriction",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature de taille M ou inférieure. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts contondants et la cible est agrippée (évasion DD 15). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et la constriction ne peut pas s'appliquer à une autre cible.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature de taille M ou inférieure. [[/damage extended]] et la cible est agrippée (évasion DD 15). Tant que la cible est agrippée, elle est entravée et la constriction ne peut pas s'appliquer à une autre cible.</p>",
           "chat": "<p>[[lookup @name]] attaque avec Constriction.</p>",
           "effects": {
             "Restrained": {
@@ -3302,7 +3305,12 @@
         "Crush": {
           "name": "Écrasement",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts contondants, et la mante obscure se fixe à la cible. Si la cible est de taille M ou inférieure et si la mante obscure a l'avantage au jet d'attaque, cette dernière se fixe en engloutissant la tête de la cible, qui se retrouve &Reference[blinded]{aveuglée} et incapable de respirer tant que la mante obscure reste ainsi fixée.</p><p>Tant qu'elle est fixée à la cible, la mante obscure ne peut attaquer que cette créature mais elle est avantagée à ses jets d'attaque contre elle. La vitesse de la mante obscure passe aussi à 0, elle ne peut profiter d'aucun bonus en vitesse, mais elle suit les déplacements de la cible.</p><p>Une créature peut détacher la mante obscure en réussissant un test de Force (Athlétisme) DD 13 au prix d'une action. À son tour, la mante obscure peut se détacher de la cible en y consacrant 1,50 m de déplacement.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Écrasement.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Écrasement.</p>",
+          "activities": {
+            "Detach": {
+              "name": "Détacher"
+            }
+          }
         },
         "Darkness Aura": {
           "name": "Aura de ténèbres",
@@ -3562,7 +3570,7 @@
       "items": {
         "Ambusher": {
           "name": "Embuscade",
-          "description": "<p>Lors du premier round d’un combat, le [[lookup @name]] est<strong> avantagé</strong> aux jets d’attaque contre toute créature qu’il a surprise.</p>"
+          "description": "<p>Lors du premier round d'un combat, le doppelganger est avantagé aux jets d'attaque contre toute créature qu'il a surprise.</p>"
         },
         "Surprise Attack": {
           "name": "Attaque surprise",
@@ -3584,7 +3592,7 @@
         },
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>Le [[lookup @name]] peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu’il porte n’est transformé. S’il meurt, il reprend sa forme véritable.</p>",
+          "description": "<p>Le doppelganger peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
         }
       },
@@ -3670,7 +3678,7 @@
       "items": {
         "Fey Ancestry": {
           "name": "Ascendance féerique",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux jets de sauvegarde contre l’état &Reference[charmed] et la magie ne peut pas l’endormir.</p>"
+          "description": "<p>Le drider est avantagé aux jets de sauvegarde contre l'état charmé et la magie ne peut pas l'endormir.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -3682,7 +3690,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
-          "description": "<p>Quand le [[lookup @name]] est exposé à la lumière du soleil, il est<strong> désavantagé</strong> aux jets d’attaque ainsi qu’aux tests de Sagesse (Perception) basés sur la vue.</p>"
+          "description": "<p>Quand le drider est exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -4252,7 +4260,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6([[/damage]]{1d8 + 2}) dégâts perforants plus 4 ([[/damage]]{1d8}) dégâts de poison. La créature ciblée doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La créature ciblée doit réussir un jet de sauvegarde de Constitution DD 11 sous peine d'être empoisonnée pendant 1 minute. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
         },
         "Claws": {
@@ -4507,12 +4515,17 @@
       "items": {
         "Ooze Cube": {
           "name": "Cube de vase",
-          "description": "<p>Le cube occupe l’intégralité de son espace. D’autres créatures peuvent entrer dans cet espace, mais ce faisant, elles se soumettent à l’Enveloppement du cube en étant<strong> désavantagées</strong> au jet de sauvegarde.</p><p>Les créatures prises dans le cube restent visibles mais disposent d’un abri total.</p><p>Une créature située dans un rayon de 1,50 m du cube peut consacrer une action à extraire une créature ou un objet qui s’y trouve. Pour ce faire, elle doit réussir un test de Force DD 12 et subit <strong><em>[[/damage 3d6 acid average]]</em></strong> quelle que soit l’issue de la tentative.</p><p>Le cube ne peut contenir qu’une seule créature de taille G ou un maximum de quatre créatures de taille M ou inférieure.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Cube de vase.</p>"
+          "description": "<p>Le cube occupe l'intégralité de son espace. D'autres créatures peuvent entrer dans cet espace, mais ce faisant, elles se soumettent à l'Enveloppement du cube en étant désavantagées au jet de sauvegarde.</p><p>Les créatures prises dans le cube restent visibles mais disposent d'un abri total.</p><p>Une créature située dans un rayon de 1,50 m du cube peut consacrer une action à extraire une créature ou un objet qui s'y trouve. Pour ce faire, elle doit réussir un test de Force DD 12 et subit 10 (3d6) dégâts d'acide quelle que soit l'issue de la tentative.</p><p>Le cube ne peut contenir qu'une seule créature de taille G ou un maximum de quatre créatures de taille M ou inférieure.</p>",
+          "chat": "<p>Le [[lookup @name]] utilise Cube de vase.</p>",
+          "activities": {
+            "Rescue": {
+              "name": "Secourir"
+            }
+          }
         },
         "Transparent": {
           "name": "Transparent",
-          "description": "<p>Même lorsque le cube est exposé à la vue de tous, il faut réussir un test de Sagesse (Perception) DD 15 pour le détecter tant qu’il ne s’est pas déplacé et n’a pas attaqué. Une créature qui tente de pénétrer dans l’espace du cube sans se douter de sa présence est surprise par le monstre.</p>",
+          "description": "<p>Même lorsque le cube est exposé à la vue de tous, il faut réussir un test de Sagesse (Perception) DD 15 pour le détecter tant qu'il ne s'est pas déplacé et n'a pas attaqué. Une créature qui tente de pénétrer dans l'espace du cube sans se douter de sa présence est surprise par le monstre.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Transparent.</p>"
         },
         "Pseudopod": {
@@ -4522,7 +4535,7 @@
         },
         "Engulf": {
           "name": "Enveloppement",
-          "description": "<p>Le cube se déplace dans les limites de sa vitesse. Ce faisant, il peut entrer dans les espaces de créatures de taille G ou inférieure. Chaque fois que le cube pénètre dans l’espace d’une créature, celle-ci effectue un [[/save dex 12 format=long]] .</p><p>En cas de réussite, la créature peut choisir d’être repoussée de 1,50 m, en arrière ou sur le côté du cube. Si elle refuse d’être repoussée, elle subit les mêmes conséquences que si elle avait raté le JS.</p><p>En cas d’échec, le cube pénètre dans l’espace de la créature, et celle-ci subit <strong><em>[[/damage 3d6 acid average]]</em></strong> et se retrouve enveloppée. Une créature enveloppée ne peut pas respirer, est &Reference[restrained], et subit <strong><em>[[/damage 6d6 acid average]]</em></strong> au début de chacun des tours du cube. Lorsque le cube se déplace, la créature enveloppée l’accompagne.</p><p>Une créature enveloppée peut tenter de s’extraire du cube au prix d’une action, en tentant un test de Force DD 12. En cas de réussite, elle se libère du cube et entre dans l’espace de son choix, dans un rayon de 1,50 m du monstre.</p>",
+          "description": "<p>Le cube se déplace dans les limites de sa vitesse. Ce faisant, il peut entrer dans les espaces de créatures de taille G ou inférieure. Chaque fois que le cube pénètre dans l'espace d'une créature, celle-ci effectue un jet de sauvegarde de Dextérité DD 12.</p><p>En cas de réussite, la créature peut choisir d'être repoussée de 1,50 m, en arrière ou sur le côté du cube. Si elle refuse d'être repoussée, elle subit les mêmes conséquences que si elle avait raté le JS.</p><p>En cas d'échec, le cube pénètre dans l'espace de la créature, et celle-ci subit 10 (3d6) dégâts d'acide et se retrouve enveloppée. Une créature enveloppée ne peut pas respirer, est entravée, et subit 21 (6d6) dégâts d'acide au début de chacun des tours du cube. Lorsque le cube se déplace, la créature enveloppée l'accompagne.</p><p>Une créature enveloppée peut tenter de s'extraire du cube au prix d'une action, en tentant un test de Force DD 12. En cas de réussite, elle se libère du cube et entre dans l'espace de son choix, dans un rayon de 1,50 m du monstre.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Enveloppement.</p>",
           "activities": {
             "Escape Check": {
@@ -4545,7 +4558,7 @@
         },
         "Turn Defiance": {
           "name": "Mépris du renvoi",
-          "description": "<p>La [[lookup @name]] et toute goule dans un rayon de 9 m d’elle sont<strong> avantagée</strong>s aux jets de sauvegarde contre les effets qui renvoient les morts-vivants.</p>"
+          "description": "<p>La blême et toute goule dans un rayon de 9 m d'elle sont avantagées aux jets de sauvegarde contre les effets qui renvoient les morts-vivants.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -4554,7 +4567,7 @@
         },
         "Claws": {
           "name": "Griffes",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts tranchants. Si la cible est une créature autre qu'un mort-vivant, elle doit réussir un jet de sauvegarde de [[/save con 10]] sous peine d'être &Reference[paralyzed]{paralysée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être paralysée pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>"
         }
       },
@@ -4566,11 +4579,11 @@
       "items": {
         "Ethereal Sight": {
           "name": "Vision éthérée",
-          "description": "<p>Le [[lookup @name]] voit sur un rayon de 18 m dans le Plan Éthéré quand il est sur le Plan Matériel, et vice versa.</p>"
+          "description": "<p>Le fantôme voit sur un rayon de 18 m dans le Plan Éthéré quand il est sur le Plan Matériel, et vice versa.</p>"
         },
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
-          "description": "<p>Le [[lookup @name]] peut traverser d’autres créatures et objets comme s’il s’agissait d’un terrain difficile. Il subit <strong><em>[[/damage 1d10 force average]]</em></strong> s’il termine son tour à l’intérieur d’un objet.</p>",
+          "description": "<p>Le fantôme peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>"
         },
         "Withering Touch": {
@@ -4584,12 +4597,12 @@
         },
         "Horrifying Visage": {
           "name": "Visage terrifiant",
-          "description": "<p>Toute créature non morte-vivante située dans un rayon de 18 m du [[lookup @name]], si elle voit celui-ci, doit réussir un [[/save wis 13 format=long]]  sous peine d’être &Reference[frightened] pendant 1 minute. Si le JS est raté d’au moins 5, la cible vieillit également de 1d4 x 10 ans. Une cible effrayée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l’état effrayé sur elle-même en cas de réussite. Si la cible réussit la sauvegarde ou que l’effet prend fin sur elle, elle est immunisée contre le Visage terrifiant de ce [[lookup @name]] pendant 24 heures. Le vieillissement peut être inversé par le sort restauration suprême, à condition qu’il soit appliqué dans les 24 heures.</p>",
+          "description": "<p>Toute créature non morte-vivante située dans un rayon de 18 m du fantôme, si elle voit celui-ci, doit réussir un jet de sauvegarde de Sagesse DD 13 sous peine d'être effrayée pendant 1 minute. Si le JS est raté d'au moins 5, la cible vieillit également de 1d4 x 10 ans.</p><p>Une cible effrayée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'état effrayé sur elle-même en cas de réussite. Si la cible réussit la sauvegarde ou que l'effet prend fin sur elle, elle est immunisée contre le Visage terrifiant de ce fantôme pendant 24 heures. Le vieillissement peut être inversé par le sort restauration suprême, à condition qu'il soit appliqué dans les 24 heures.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Visage terrifiant.</p>"
         },
         "Possession": {
           "name": "Possession",
-          "description": "<p>Un humanoïde que le [[lookup @name]] voit dans un rayon de 1,50 m doit réussir un [[/save cha 13 format=long]]  sous peine d’être possédé par le [[lookup @name]] ; ce dernier disparaît alors et la cible, &Reference[incapacitated], perd le contrôle de son corps. C’est désormais le [[lookup @name]] qui en a le contrôle, mais la cible reste onsciente. Les attaques, sorts et autres effets ne peuvent pas cibler le [[lookup @name]], en dehors de ceux qui renvoient les morts-vivants. Il conserve son alignement, ses valeurs d’Intelligence, de Sagesse et de Charisme, et son immunité contre les états &Reference[charmed] et &Reference[frightened]. Pour le reste, il reprend le profil de jeu de la cible possédée mais n’a accès ni à son savoir, ni à ses aptitudes de classe, ni à ses maîtrises.</p><p>La possession persiste jusqu’à ce que le corps tombe à 0 point de vie, que le [[lookup @name]] y mette un terme par une action bonus ou qu’il soit renvoyé (ou encore chassé du corps par un effet tel que dissipation du mal et du bien). Quand la possession prend fin, le [[lookup @name]] réapparaît en un espace inoccupé dans un rayon de 1,50 m du corps. Si elle réussit le jet de sauvegarde ou quand la possession prend fin, la cible devient immunisée contre la possession de ce [[lookup @name]] pendant 24 heures.</p>",
+          "description": "<p>Un humanoïde que le fantôme voit dans un rayon de 1,50 m doit réussir un jet de sauvegarde de Charisme DD 13 sous peine d'être possédé par le fantôme ; ce dernier disparaît alors et la cible, neutralisée, perd le contrôle de son corps. C'est désormais le fantôme qui en a le contrôle, mais la cible reste consciente.</p><p>Les attaques, sorts et autres effets ne peuvent pas cibler le fantôme, en dehors de ceux qui renvoient les morts-vivants. Il conserve son alignement, ses valeurs d'Intelligence, de Sagesse et de Charisme, et son immunité contre les états charmé et effrayé. Pour le reste, il reprend le profil de jeu de la cible possédée mais n'a accès ni à son savoir, ni à ses aptitudes de classe, ni à ses maîtrises.</p><p>La possession persiste jusqu'à ce que le corps tombe à 0 point de vie, que le fantôme y mette un terme par une action bonus ou qu'il soit renvoyé (ou encore chassé du corps par un effet tel que dissipation du mal et du bien). Quand la possession prend fin, le fantôme réapparaît en un espace inoccupé dans un rayon de 1,50 m du corps. Si elle réussit le jet de sauvegarde ou quand la possession prend fin, la cible devient immunisée contre la possession de ce fantôme pendant 24 heures.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Possession.</p>"
         }
       },
@@ -4607,7 +4620,7 @@
         },
         "Claws": {
           "name": "Griffes",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{2d4 + 2}) dégâts tranchants. Si la cible est une créature autre qu'un elfe ou un mort-vivant, elle doit réussir un jet de sauvegarde de [[/save con 10]] sous peine d'être &Reference[paralyzed]{paralysée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un elfe ou un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être paralysée pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>"
         }
       },
@@ -5499,7 +5512,7 @@
         },
         "Petrifying Breath": {
           "name": "Souffle pétrifiant",
-          "description": "<p>La [[lookup @name]] exhale des vapeurs pétrifiantes sous forme d’un cône de 9 m. Chaque créature prise dans la zone effectue un [[/save con 13 format=long]] . En cas d’échec, la cible est &Reference[restrained] et commence à se transformer en pierre. Une cible ainsi entravée doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l’effet prend fin sur elle. En cas d’échec, la créature est pétrifiée jusqu’à ce que le sort restauration suprême ou une magie comparable la libère.</p>",
+          "description": "<p>La gorgone exhale des vapeurs pétrifiantes sous forme d'un cône de 9 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Constitution DD 13.</p><p>En cas d'échec, la cible est entravée et commence à se transformer en pierre. Une cible ainsi entravée doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin sur elle. En cas d'échec, la créature est pétrifiée jusqu'à ce que le sort restauration suprême ou une magie comparable la libère.</p>",
           "chat": "<p>La [[lookup @name]] utilise Souffle pétrifiant.</p>"
         }
       },
@@ -5515,7 +5528,7 @@
         },
         "Corrode Metal": {
           "name": "Corrosion du métal (vase)",
-          "description": "<p>Toute arme non magique en métal qui touche la vase lors d’une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l’arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l’arme est détruite. Les munitions non magiques en métal qui touchent la vase dans le cadre d’une attaque sont détruites après application des dégâts.</p><p>La vase peut ronger le métal non magique, au rythme de 5 cm d’épaisseur par round.</p>",
+          "description": "<p>Toute arme non magique en métal qui touche la vase lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p><p>Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent la vase dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>La vase peut ronger le métal non magique, au rythme de 5 cm d'épaisseur par round.</p>",
           "chat": "<p>La [[lookup @name]] utilise Corrosion du métal (vase).</p>"
         },
         "False Appearance": {
@@ -5702,7 +5715,7 @@
       "items": {
         "Rejuvenation": {
           "name": "Reconstitution",
-          "description": "<p>S’il meurt, le naga revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort souhait peut empêcher ce trait de fonctionner.</p>",
+          "description": "<p>S'il meurt, le naga revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort souhait peut empêcher ce trait de fonctionner.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Reconstitution.</p>"
         },
         "Spellcasting": {
@@ -5963,7 +5976,7 @@
         },
         "Luring Song": {
           "name": "Chant captivant",
-          "description": "<p>La [[lookup @name]] entonne une mélodie magique. Chaque humanoïde et géant dans un rayon de 90 m de la [[lookup @name]], s’il entend le chant, doit réussir un [[/save wis 11 format=long]]  sous peine d’être &Reference[charmed] jusqu’à la fin du chant. La [[lookup @name]] doit à chacun de ses tours suivants consacrer une action bonus à prolonger la mélodie. Elle peut cesser de chanter à tout moment. Le chant prend fin si la [[lookup @name]] est &Reference[incapacitated].</p><p>Tant qu’elle est charmée par la [[lookup @name]], la cible est neutralisée et n’est pas sujette aux chants des autres [[lookup @name]]s. Si la cible charmée se trouve à plus de 1,50 m de la [[lookup @name]], elle doit à son tour consacrer son déplacement pour se rapprocher de la [[lookup @name]] par le chemin le plus direct, afin de terminer dans un rayon de 1,50 m du monstre. Elle ne cherche pas à éviter les attaques d’opportunité, mais si elle doit traverser un terrain dangereux (comme une fosse de lave) elle peut réitérer le JS, même chose chaque fois qu’elle subit des dégâts d’une source autre que la [[lookup @name]]. Une cible charmée peut aussi réitérer le JS à la fin de chacun de ses tours. En cas de réussite, l’effet prend fin en ce qui la concerne.</p><p>Une cible qui se sauvegarde est immunisée contre le chant de cette [[lookup @name]] pendant 24 heures.</p>",
+          "description": "<p>La harpie entonne une mélodie magique. Chaque humanoïde et géant dans un rayon de 90 m de la harpie, s'il entend le chant, doit réussir un jet de sauvegarde de Sagesse DD 11 sous peine d'être charmé jusqu'à la fin du chant. La harpie doit à chacun de ses tours suivants consacrer une action bonus à prolonger la mélodie. Elle peut cesser de chanter à tout moment. Le chant prend fin si la harpie est neutralisée.</p><p>Tant qu'elle est charmée par la harpie, la cible est neutralisée et n'est pas sujette aux chants des autres harpies. Si la cible charmée se trouve à plus de 1,50 m de la harpie, elle doit à son tour consacrer son déplacement pour se rapprocher de la harpie par le chemin le plus direct, afin de terminer dans un rayon de 1,50 m du monstre. Elle ne cherche pas à éviter les attaques d'opportunité, mais si elle doit traverser un terrain dangereux (comme une fosse de lave) elle peut réitérer le JS, même chose chaque fois qu'elle subit des dégâts d'une source autre que la harpie. Une cible charmée peut aussi réitérer le JS à la fin de chacun de ses tours. En cas de réussite, l'effet prend fin en ce qui la concerne.</p><p>Une cible qui se sauvegarde est immunisée contre le chant de cette harpie pendant 24 heures.</p>",
           "chat": "<p>La [[lookup @name]] utilise Chant captivant.</p>"
         }
       },
@@ -6558,7 +6571,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 23 ([[/damage]]{3d8 + 10}) dégâts perforants. Si la cible est une créature de taille G ou inférieure agrippée par le kraken, elle est engloutie et n'est plus agrippée. La créature engloutie est &Reference[blinded]{aveuglée} et &Reference[restrained]{entravée}, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du kraken et subit 42 ([[/damage 12d6 acid]]{12d6}) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le kraken subit 50 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de [[/save con 25]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant &Reference[prone]{à terre} dans un espace situé à 3 m ou moins de lui. Si le kraken meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Swallowed Damage": {
+              "name": "Dégâts engloutis"
+            }
+          }
         },
         "Tentacle": {
           "name": "Tentacule",
@@ -7351,7 +7369,8 @@
         },
         "Reckless": {
           "name": "Téméraire",
-          "chat": "<p>Le [[lookup @name]] utilise Téméraire.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Téméraire.</p>",
+          "description": "<p>Au début de son tour, le minotaure peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>"
         },
         "Greataxe": {
           "name": "Hache à deux mains",
@@ -8677,7 +8696,8 @@
         },
         "Reel": {
           "name": "Traction",
-          "chat": "<p>L'[[lookup @name]] utilise Traction.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Traction.</p>",
+          "description": "<p>L'enlaceur tire vers lui chaque créature agrippée, en ligne droite, d'un maximum de 7,50 m.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9979,7 +9999,8 @@
         },
         "Rock": {
           "name": "Rocher",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "chat": "<p>Le sylvanien attaque avec son Rocher.</p>"
         }
       },
       "habitat": "Forêt",
@@ -10755,7 +10776,12 @@
         "Consume Life": {
           "name": "Festin d’essence vitale",
           "description": "<p>Par une action bonus, le feu follet peut cibler une créature qu'il voit dans un rayon de 1,50 m, à condition qu'elle ait 0 point de vie et soit toujours vivante. La cible doit réussir un jet de sauvegarde de Constitution DD 10 contre cette magie sous peine de mourir. Si elle meurt, le feu follet récupère 10 (3d6) points de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Festin d’essence vitale.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Festin d’essence vitale.</p>",
+          "activities": {
+            "heal": {
+              "condition": "si la cible meurt"
+            }
+          }
         },
         "Ephemeral": {
           "name": "Fugace",
@@ -10870,7 +10896,9 @@
           "description": "<p>Quand l’[[lookup @name]] est exposée à la lumière du soleil, elle est<strong> désavantagée</strong> aux jets d’attaque ainsi qu’aux tests de Sagesse (Perception) basés sur la vue.</p>"
         },
         "Life Drain": {
-          "name": "Absorption de vie"
+          "name": "Absorption de vie",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de Constitution DD 14, faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
+          "chat": "<p>L'âme-en-peine attaque avec son Absorption de vie. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>.</p>"
         }
       },
       "languages": "celles qu'elle parlait de son vivant",
