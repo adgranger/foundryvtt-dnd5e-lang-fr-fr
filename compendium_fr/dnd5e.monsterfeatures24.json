@@ -41,7 +41,7 @@
         },
         "Acid Spray": {
             "name": "Aspersion acide",
-            "description": "<p><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=20GU2JBM5zJfNPD1]], chaque créature dans une Ligne de [[lookup @target.template.size activity=20GU2JBM5zJfNPD1]] [[lookup @target.template.units activity=20GU2JBM5zJfNPD1]] de long sur [[lookup @target.template.width activity=20GU2JBM5zJfNPD1]] [[lookup @target.template.units activity=20GU2JBM5zJfNPD1]] de large. <em>Échec :</em> [[/damage average]]. <em>Réussite :</em> demi-dégâts.</p>"
+            "description": "<p><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=20GU2JBM5zJfNPD1]], [[lookup @labels.description.affects activity=20GU2JBM5zJfNPD1]] dans une [[lookup @labels.description.template activity=20GU2JBM5zJfNPD1]]. <em>Échec :</em> [[/damage average]]. <em>Réussite :</em> demi-dégâts.</p>"
         },
         "Adhesive (Object Form Only)": {
             "name": "Engluage (forme d'objet uniquement)",
@@ -1440,15 +1440,15 @@
         },
         "Ice Walk": {
             "name": "Marche sur la glace",
-            "description": "<p>Le [[lookup @name lowercase]] peut parcourir et gravir toute surface gelée sans passer par le moindre test de caractéristique. En outre, tout &Reference[Difficult Terrain] composé de glace ou de neige ne lui demande aucune dépense de déplacement supplémentaire.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} peut parcourir et gravir toute surface gelée sans passer par le moindre test de caractéristique. En outre, tout &Reference[Difficult Terrain] composé de glace ou de neige ne lui demande aucune dépense de déplacement supplémentaire.</p>"
         },
         "Ice Wall": {
             "name": "Mur de glace",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofIce0]{mur de glace}</em> (au 8<sup>e</sup> niveau) sans composantes de sort, l'Intelligence étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @abilities.int.dc]]).</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofIce0]{mur de glace}</em> (au 8<sup>e</sup> niveau) sans composantes de sort, l'Intelligence étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @abilities.int.dc]]).</p>"
         },
         "Ignited Illumination": {
             "name": "Illumination embrasée",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] s'embrase ou éteint ses flammes. Embrasé, le [[lookup @name lowercase]] produit une Lumière vive sur un rayon de 3 m et une Lumière faible sur 3 m de plus.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} s'embrase ou éteint ses flammes. Embrasé, le [[lookup @name lowercase]]{monstre} produit une Lumière vive sur un rayon de 3 m et une Lumière faible sur 3 m de plus.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -1457,23 +1457,23 @@
         },
         "Illumination": {
             "name": "Illumination",
-            "description": "<p>L'[[lookup @name lowercase]] projette une Lumière vive sur un rayon de 3 m, et une Lumière faible sur 3 m de plus.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} projette une Lumière vive sur un rayon de 3 m, et une Lumière faible sur 3 m de plus.</p>"
         },
         "Illusory Appearance": {
             "name": "Apparence illusoire",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{déguisement}</em>, la Constitution étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]). La durée du sort est de [[lookup @duration.value activity=qY8e7Xm7QYQDXqsd]] heures.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{déguisement}</em>, la Constitution étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]). La durée du sort est de [[lookup @duration.value activity=qY8e7Xm7QYQDXqsd]] heures.</p>"
         },
         "Immutable Form": {
             "name": "Forme immuable",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] ne peut pas être métamorphosé.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} ne peut pas être métamorphosé.</p>"
         },
         "Incorporeal Movement": {
             "name": "Déplacement intangible",
-            "description": "<p>La [[lookup @name lowercase]] peut traverser d'autres créatures et objets comme s'il s'agissait de &Reference[Difficult Terrain]. Elle subit [[/damage 1d10 average type=force]] si elle termine son tour à l'intérieur d'un objet.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait de &Reference[Difficult Terrain]. Elle subit [[/damage 1d10 average type=force]] si elle termine son tour à l'intérieur d'un objet.</p>"
         },
         "Incubus Form": {
             "name": "Forme d'incube",
-            "description": "<p class=\"feature\">Lorsque la [[lookup @name lowercase]] termine un Repos long, elle peut se transformer en <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{incube}</strong>, le profil de celui-ci remplaçant alors le sien.</p>",
+            "description": "<p class=\"feature\">Lorsque le [[lookup @name lowercase]]{monstre} termine un Repos long, il peut se transformer en <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmIncubus0000000]{incube}</strong>, le profil de celui-ci remplaçant alors le sien.</p>",
             "activities": {
                 "Incubus": {
                     "name": "Incube",
@@ -1499,7 +1499,7 @@
         },
         "Infernal Sting": {
             "name": "Dard infernal",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible subit l'état &Reference[Poisoned apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]. Ainsi Empoisonnée, la cible ne peut pas récupérer de points de vie.</p>",
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible subit l'état &Reference[Poisoned apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}. Ainsi Empoisonnée, la cible ne peut pas récupérer de points de vie.</p>",
             "effects": {
                 "Poisoned": {
                     "name": "Empoisonné",
@@ -1509,7 +1509,7 @@
         },
         "Infernal Tail": {
             "name": "Queue infernale",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=tJYeyUk3iPYJq9xM]], une créature que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=tJYeyUk3iPYJq9xM]] [[lookup @range.units activity=tJYeyUk3iPYJq9xM]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average activity=tJYeyUk3iPYJq9xM]], et la cible subit une plaie infernale si elle n'en a pas déjà une. Ainsi blessée, la cible perd [[/damage average activity=zZfCQ0IeJZCjPLzE]] points de vie au début de chacun de ses tours. La plaie se referme au bout de [[lookup @duration.value activity=tJYeyUk3iPYJq9xM]] [[lookup @duration.units activity=tJYeyUk3iPYJq9xM]], si un sort restitue des points de vie à la cible ou si elle-même ou une créature dans un rayon de 1,50 m d'elle consacre une action à panser la plaie et réussit un [[/check dc=17 ability=wis skill=med format=long]].</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=tJYeyUk3iPYJq9xM]], une créature que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=tJYeyUk3iPYJq9xM]] [[lookup @range.units activity=tJYeyUk3iPYJq9xM]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average activity=tJYeyUk3iPYJq9xM]], et la cible subit une plaie infernale si elle n'en a pas déjà une. Ainsi blessée, la cible perd [[/damage average activity=zZfCQ0IeJZCjPLzE]] points de vie au début de chacun de ses tours. La plaie se referme au bout de [[lookup @duration.value activity=tJYeyUk3iPYJq9xM]] [[lookup @duration.units activity=tJYeyUk3iPYJq9xM]], si un sort restitue des points de vie à la cible ou si elle-même ou une créature dans un rayon de 1,50 m d'elle consacre une action à panser la plaie et réussit un [[/check dc=17 ability=wis skill=med format=long]].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1524,7 +1524,7 @@
         },
         "Ink Cloud": {
             "name": "Nuage d'encre",
-            "description": "<p><em>Déclencheur :</em> le [[lookup @name lowercase]] subit des dégâts alors qu'il est sous l'eau.</p><p><em>Conséquences :</em> le [[lookup @name lowercase]] libère de l'encre qui remplit un Cube de [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]] [[lookup @target.template.units activity=1MiIPcVuCpfgBIkS]] centré sur lui, et il se déplace dans les limites de sa Vitesse de nage. Le Cube constitue une zone à Visibilité nulle pendant 1 minute, mais un courant important ou effet comparable disperse l'encre.</p>",
+            "description": "<p><em>Déclencheur :</em> le [[lookup @name lowercase]]{monstre} subit des dégâts alors qu'il est sous l'eau.</p><p><em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} libère de l'encre qui remplit un Cube de [[lookup @target.template.size activity=1MiIPcVuCpfgBIkS]] [[lookup @target.template.units activity=1MiIPcVuCpfgBIkS]] centré sur lui, et il se déplace dans les limites de sa Vitesse de nage. Le Cube constitue une zone à Visibilité nulle pendant 1 minute, mais un courant important ou effet comparable disperse l'encre.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -1539,15 +1539,15 @@
         },
         "Inscrutable": {
             "name": "Insondable",
-            "description": "<p class=\"feature\">Nulle magie ne permet d'observer le [[lookup @name lowercase]] à distance ni de détecter ses pensées sans son consentement. Les tests de Sagesse (Intuition) visant à percer ses intentions ou évaluer sa sincérité subissent le Désavantage.</p>"
+            "description": "<p class=\"feature\">Nulle magie ne permet d'observer le [[lookup @name lowercase]]{monstre} à distance ni de détecter ses pensées sans son consentement. Les tests de Sagesse (Intuition) visant à percer ses intentions ou évaluer sa sincérité subissent le Désavantage.</p>"
         },
         "Invisibility": {
             "name": "Invisibilité",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{invisibilité}</em> sur lui-même, sans composante matérielle, le Charisme étant sa caractéristique d'incantation.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{invisibilité}</em> sur lui-même, sans composante matérielle, le Charisme étant sa caractéristique d'incantation.</p>"
         },
         "Iron Scent": {
             "name": "Perception du fer",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] perçoit précisément la position de tout [[lookup @target.affects.special activity=I1ppxiVO5CS6tKj0]] dans un rayon de [[lookup @target.template.size activity=I1ppxiVO5CS6tKj0]] [[lookup @target.template.units activity=I1ppxiVO5CS6tKj0]].</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} perçoit précisément la position de tout [[lookup @target.affects.special activity=I1ppxiVO5CS6tKj0]] dans un rayon de [[lookup @target.template.size activity=I1ppxiVO5CS6tKj0]] [[lookup @target.template.units activity=I1ppxiVO5CS6tKj0]].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
@@ -1557,11 +1557,11 @@
         },
         "Jumper": {
             "name": "Sauteur",
-            "description": "<p class=\"feature\">La distance de saut du [[lookup @name lowercase]] se base sur la Dextérité au lieu de la Force.</p>"
+            "description": "<p class=\"feature\">La distance de saut du [[lookup @name lowercase]]{monstre} se base sur la Dextérité au lieu de la Force.</p>"
         },
         "Lash": {
             "name": "Coup de tentacule",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] effectue une attaque de Tentacule.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} effectue une attaque de Tentacule.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -1570,7 +1570,7 @@
         },
         "Leap": {
             "name": "Bond",
-            "description": "<p>Le [[lookup @name lowercase]] effectue un saut d'un maximum de [[lookup @range.value activity=C28C43DeD8iFtZMe]] [[lookup @range.units activity=C28C43DeD8iFtZMe]] en [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].</p>",
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un saut d'un maximum de [[lookup @range.value activity=C28C43DeD8iFtZMe]] [[lookup @range.units activity=C28C43DeD8iFtZMe]] en [[lookup @activation.condition activity=C28C43DeD8iFtZMe]].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
@@ -1580,7 +1580,7 @@
         },
         "Legendary Resistance": {
             "name": "Résistance légendaire",
-            "description": "<p>Si l'[[lookup @name lowercase]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+            "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
@@ -1594,16 +1594,16 @@
         },
         "Light Sensitivity": {
             "name": "Sensibilité à la lumière",
-            "description": "<p class=\"feature\">Exposé à une Lumière vive, le [[lookup @name lowercase]] subit le Désavantage aux jets d'attaque.</p>"
+            "description": "<p class=\"feature\">Exposé à une Lumière vive, le [[lookup @name lowercase]]{monstre} subit le Désavantage aux jets d'attaque.</p>"
         },
         "Lightning Absorption": {
             "name": "Absorption de la foudre",
-            "description": "<p class=\"feature\">Chaque fois que le [[lookup @name lowercase]] est soumis à des dégâts de foudre, il récupère en fait autant de points de vie que les dégâts de foudre infligés.</p>",
+            "description": "<p class=\"feature\">Chaque fois que le [[lookup @name lowercase]]{monstre} est soumis à des dégâts de foudre, il récupère en fait autant de points de vie que les dégâts de foudre infligés.</p>",
             "requirements": "Soumis à des dégâts de foudre"
         },
         "Lightning Blade": {
             "name": "Lame de foudre",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible ne peut pas jouer de &Reference[Reaction]{Réaction} jusqu'au début du tour suivant du [[lookup @name lowercase]].</p>"
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible ne peut pas jouer de &Reference[Reaction]{Réaction} jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}.</p>"
         },
         "Lightning Breath": {
             "name": "Souffle de foudre",
@@ -1611,7 +1611,7 @@
         },
         "Lightning Storm": {
             "name": "Tempête foudroyante",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=YVri6iuieFUUiO1d]], chaque créature dans un Cylindre de [[lookup @target.template.size activity=YVri6iuieFUUiO1d]] [[lookup @target.template.units activity=YVri6iuieFUUiO1d]] de rayon et [[lookup @target.template.height activity=YVri6iuieFUUiO1d]] [[lookup @target.template.units activity=YVri6iuieFUUiO1d]] de haut émanant d'un point que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=YVri6iuieFUUiO1d]] [[lookup @range.units activity=YVri6iuieFUUiO1d]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]].</p><p class=\"feature\"><em>Réussite :</em> demi-dégâts.</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=YVri6iuieFUUiO1d]], chaque créature dans un Cylindre de [[lookup @target.template.size activity=YVri6iuieFUUiO1d]] [[lookup @target.template.units activity=YVri6iuieFUUiO1d]] de rayon et [[lookup @target.template.height activity=YVri6iuieFUUiO1d]] [[lookup @target.template.units activity=YVri6iuieFUUiO1d]] de haut émanant d'un point que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=YVri6iuieFUUiO1d]] [[lookup @range.units activity=YVri6iuieFUUiO1d]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]].</p><p class=\"feature\"><em>Réussite :</em> demi-dégâts.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1620,7 +1620,7 @@
         },
         "Lightning Strike": {
             "name": "Trait de foudre",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=v39JwGqgfaKiA4vc]], une créature que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=v39JwGqgfaKiA4vc]] [[lookup @range.units activity=v39JwGqgfaKiA4vc]]. <em>Échec :</em> [[/damage average]]. <em>Réussite :</em> demi-dégâts.</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=v39JwGqgfaKiA4vc]], une créature que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=v39JwGqgfaKiA4vc]] [[lookup @range.units activity=v39JwGqgfaKiA4vc]]. <em>Échec :</em> [[/damage average]]. <em>Réussite :</em> demi-dégâts.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1629,11 +1629,11 @@
         },
         "Limited Amphibiousness": {
             "name": "Amphibiose partielle",
-            "description": "<p class=\"feature\">Capable de respirer aussi bien sous l'eau qu'à l'air libre, le [[lookup @name lowercase]] doit s'immerger dans l'eau au moins une fois toutes les 4 heures sous peine de s'asphyxier.</p>"
+            "description": "<p class=\"feature\">Capable de respirer aussi bien sous l'eau qu'à l'air libre, le [[lookup @name lowercase]]{monstre} doit s'immerger dans l'eau au moins une fois toutes les 4 heures sous peine de s'asphyxier.</p>"
         },
         "Loathsome Limbs": {
             "name": "Membres abominables",
-            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]] termine un tour En péril et subit au moins 15 dégâts tranchants à ce tour, l'un de ses membres est sectionné et tombe dans l'espace du monstre, pour devenir un <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmTrollLimb00000]{abattis de troll}</strong>, sorte de membre autonome. L'abattis agit juste après le tour du [[lookup @name lowercase]]. Le [[lookup @name lowercase]] subit 1 niveau d'&Reference[Exhaustion apply=false] par membre manquant, sachant qu'un nouveau membre pousse pour le remplacer la prochaine fois qu'il récupère des points de vie.</p><section class=\"secret\" id=\"secret-01PBOuaZ8xS1KYt6\"><p><strong>Note Foundry</strong></p><p>Cette aptitude fournit un Effet actif d'état dans l'onglet Effets de la fiche de personnage pour activer chaque niveau d'épuisement. Comme cet effet peut être appliqué plusieurs fois, le MJ doit gérer manuellement le niveau d'épuisement. Il y a un effet actif pour chaque niveau d'épuisement.</p></section>",
+            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]]{monstre} termine un tour En péril et subit au moins 15 dégâts tranchants à ce tour, l'un de ses membres est sectionné et tombe dans l'espace du monstre, pour devenir un <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmTrollLimb00000]{abattis de troll}</strong>, sorte de membre autonome. L'abattis agit juste après le tour du [[lookup @name lowercase]]{monstre}. Le [[lookup @name lowercase]]{monstre} subit 1 niveau d'&Reference[Exhaustion apply=false] par membre manquant, sachant qu'un nouveau membre pousse pour le remplacer la prochaine fois qu'il récupère des points de vie.</p><section class=\"secret\" id=\"secret-01PBOuaZ8xS1KYt6\"><p><strong>Note Foundry</strong></p><p>Cette aptitude fournit un Effet actif d'état dans l'onglet Effets de la fiche de personnage pour activer chaque niveau d'épuisement. Comme cet effet peut être appliqué plusieurs fois, le MJ doit gérer manuellement le niveau d'épuisement. Il y a un effet actif pour chaque niveau d'épuisement.</p></section>",
             "activities": {
                 "Troll Limb": {
                     "name": "Abattis de troll",
@@ -1673,7 +1673,7 @@
         },
         "Luring Song": {
             "name": "Chant captivant",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] chante une mélodie magique qui persiste jusqu'à ce que cesse la Concentration de la [[lookup @name lowercase]].</p><p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=dxxqZP7Vo01te3QB]], chaque [[lookup @target.affects.special activity=dxxqZP7Vo01te3QB]] dans une Émanation de [[lookup @target.template.size activity=dxxqZP7Vo01te3QB]] [[lookup @target.template.units activity=dxxqZP7Vo01te3QB]] centrée sur la [[lookup @name lowercase]] quand le chant débute.</p><p class=\"feature\"><em>Échec :</em> la cible subit l'état &Reference[Charmed apply=false] jusqu'à ce que le chant cesse et réitère le JS à la fin de chacun de ses tours. Tant qu'elle est ainsi Charmée, la cible subit l'état &Reference[Incapacitated apply=false] et ignore le Chant captivant des autres harpies.</p><p class=\"feature\">Si la cible se trouve à plus de 1,50 m de la [[lookup @name lowercase]], elle doit à son tour consacrer son déplacement pour se rapprocher du monstre par le chemin le plus direct, jusqu'à terminer dans un rayon de 1,50 m de lui. La cible ne cherche pas à éviter les &Reference[OpportunityAttacks]{attaques d'Opportunité}, mais si elle doit traverser un terrain dangereux (comme une fosse de lave), elle peut réitérer le JS, même chose chaque fois qu'elle subit des dégâts d'une source autre que la [[lookup @name lowercase]].</p><p class=\"feature\"><em>Réussite :</em> la cible est immunisée contre le Chant captivant de cette [[lookup @name lowercase]] pendant 24 heures.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} chante une mélodie magique qui persiste jusqu'à ce que cesse la Concentration du [[lookup @name lowercase]]{monstre}.</p><p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=dxxqZP7Vo01te3QB]], chaque [[lookup @target.affects.special activity=dxxqZP7Vo01te3QB]] dans une Émanation de [[lookup @target.template.size activity=dxxqZP7Vo01te3QB]] [[lookup @target.template.units activity=dxxqZP7Vo01te3QB]] centrée sur le [[lookup @name lowercase]]{monstre} quand le chant débute.</p><p class=\"feature\"><em>Échec :</em> la cible subit l'état &Reference[Charmed apply=false] jusqu'à ce que le chant cesse et réitère le JS à la fin de chacun de ses tours. Tant qu'elle est ainsi Charmée, la cible subit l'état &Reference[Incapacitated apply=false] et ignore le Chant captivant des autres harpies.</p><p class=\"feature\">Si la cible se trouve à plus de 1,50 m du [[lookup @name lowercase]]{monstre}, elle doit à son tour consacrer son déplacement pour se rapprocher du monstre par le chemin le plus direct, jusqu'à terminer dans un rayon de 1,50 m de lui. La cible ne cherche pas à éviter les &Reference[OpportunityAttacks]{attaques d'Opportunité}, mais si elle doit traverser un terrain dangereux (comme une fosse de lave), elle peut réitérer le JS, même chose chaque fois qu'elle subit des dégâts d'une source autre que le [[lookup @name lowercase]]{monstre}.</p><p class=\"feature\"><em>Réussite :</em> la cible est immunisée contre le Chant captivant de ce [[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde",
@@ -1689,19 +1689,19 @@
         },
         "Magic Resistance": {
             "name": "Résistance à la magie",
-            "description": "<p>Le [[lookup @name lowercase]] a l'Avantage aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} a l'Avantage aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Rope": {
             "name": "Corde magique",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] possède une corde magique. Tant qu'elle la porte sur elle, elle peut recourir à l'action Rets implacables. La corde présente le profil suivant : CA 20, 90 pv, Immunité contre les dégâts psychiques et de poison. La corde est réduite en poussière si elle tombe à 0 point de vie, se trouve à 1,50 m ou plus de l'[[lookup @name lowercase]] pendant au moins 1 heure ou si l'[[lookup @name lowercase]] meurt. Si la corde subit des dégâts ou est détruite, l'[[lookup @name lowercase]] peut la restaurer entièrement en terminant un Repos court ou long.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} possède une corde magique. Tant qu'il la porte sur lui, il peut recourir à l'action Rets implacables. La corde présente le profil suivant : CA 20, 90 pv, Immunité contre les dégâts psychiques et de poison. La corde est réduite en poussière si elle tombe à 0 point de vie, se trouve à 1,50 m ou plus du [[lookup @name lowercase]]{monstre} pendant au moins 1 heure ou si le [[lookup @name lowercase]]{monstre} meurt. Si la corde subit des dégâts ou est détruite, le [[lookup @name lowercase]]{monstre} peut la restaurer entièrement en terminant un Repos court ou long.</p>"
         },
         "Magic of the Spider Queen": {
             "name": "Magie de la Reine Araignée",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{lueurs féeriques}</em>, <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWeb0000000]{toile d'araignée}</em>, sans composantes matérielles, la Sagesse étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]).</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFaerieFire]{lueurs féeriques}</em>, <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWeb0000000]{toile d'araignée}</em>, sans composantes matérielles, la Sagesse étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]).</p>"
         },
         "Mimicry": {
             "name": "Imitation",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] peut imiter des bruits simples qu'il a entendus, comme un murmure ou des pépiements. Une créature qui l'entend peut se rendre compte qu'il s'agit d'imitations en réussissant un [[/check format=long]].</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} peut imiter des bruits simples qu'il a entendus, comme un murmure ou des pépiements. Une créature qui l'entend peut se rendre compte qu'il s'agit d'imitations en réussissant un [[/check format=long]].</p>"
         },
         "Mind Invasion": {
             "name": "Invasion mentale",
@@ -1709,11 +1709,11 @@
         },
         "Mind Jolt": {
             "name": "Secousse mentale",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] recourt à Incantation pour lancer <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{épine mentale}</em> (au 4<sup>e</sup> niveau). Le [[lookup @name lowercase]] ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} recourt à Incantation pour lancer <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMindSpike0]{épine mentale}</em> (au 4<sup>e</sup> niveau). Le [[lookup @name lowercase]]{monstre} ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>"
         },
         "Mind-Rending Roar": {
             "name": "Rugissement débilitant",
-            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=zPMfwwIoTFzIrN5H]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=zPMfwwIoTFzIrN5H]] [[lookup @target.template.units activity=zPMfwwIoTFzIrN5H]] centrée sur le [[lookup @name lowercase]]. <em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Incapacitated apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=zPMfwwIoTFzIrN5H]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=zPMfwwIoTFzIrN5H]] [[lookup @target.template.units activity=zPMfwwIoTFzIrN5H]] centrée sur le [[lookup @name lowercase]]{monstre}. <em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Incapacitated apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1728,7 +1728,7 @@
         },
         "Misty Escape": {
             "name": "Échappatoire brumeuse",
-            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]] tombe à 0 point de vie hors de son refuge, il recourt à Changement d'aspect pour se transformer en brume (pas d'action requise). S'il ne peut pas utiliser Changement d'aspect, il est détruit.</p><p class=\"feature\">Tant qu'il est à 0 point de vie sous forme de brume, il ne peut pas retrouver sa forme de vampire et doit atteindre son refuge dans les 2 heures sous peine d'être détruit. Une fois son refuge atteint, il retrouve sa forme de vampire et subit l'état &Reference[Paralyzed apply=false] jusqu'à ce qu'il ait récupéré au moins 1 point de vie, sachant qu'il récupère 1 pv au bout de 1 heure passée à son refuge.</p>",
+            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]]{monstre} tombe à 0 point de vie hors de son refuge, il recourt à Changement d'aspect pour se transformer en brume (pas d'action requise). S'il ne peut pas utiliser Changement d'aspect, il est détruit.</p><p class=\"feature\">Tant qu'il est à 0 point de vie sous forme de brume, il ne peut pas retrouver sa forme de vampire et doit atteindre son refuge dans les 2 heures sous peine d'être détruit. Une fois son refuge atteint, il retrouve sa forme de vampire et subit l'état &Reference[Paralyzed apply=false] jusqu'à ce qu'il ait récupéré au moins 1 point de vie, sachant qu'il récupère 1 pv au bout de 1 heure passée à son refuge.</p>",
             "activities": {
                 "Paralyzed": {
                     "name": "Paralysé"
@@ -1743,11 +1743,11 @@
         },
         "Misty Step": {
             "name": "Foulée brumeuse",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{foulée brumeuse}</em>, avec la même caractéristique d'incantation que pour Incantation.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMistyStep0]{foulée brumeuse}</em>, avec la même caractéristique d'incantation que pour Incantation.</p>"
         },
         "Moan": {
             "name": "Lamentation",
-            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=Mng39fcFDc4I1AzY]], chaque créature dans une Émanation de [[lookup @target.template.size activity=Mng39fcFDc4I1AzY]] [[lookup @target.template.units activity=Mng39fcFDc4I1AzY]] centrée sur le [[lookup @name lowercase]]. <em>Échec :</em> la cible subit l'état &Reference[Frightened apply=false] jusqu'à la fin du tour suivant du [[lookup @name lowercase]]. <em>Réussite :</em> la cible est immunisée contre la Lamentation de ce [[lookup @name lowercase]] pendant 24 heures.</p>",
+            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=Mng39fcFDc4I1AzY]], chaque créature dans une Émanation de [[lookup @target.template.size activity=Mng39fcFDc4I1AzY]] [[lookup @target.template.units activity=Mng39fcFDc4I1AzY]] centrée sur le [[lookup @name lowercase]]{monstre}. <em>Échec :</em> la cible subit l'état &Reference[Frightened apply=false] jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}. <em>Réussite :</em> la cible est immunisée contre la Lamentation de ce [[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1762,7 +1762,7 @@
         },
         "Mockery": {
             "name": "Moquerie",
-            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=s5CMus4LOXBkt1Wn]], [[lookup @target.affects.labels.statblock activity=s5CMus4LOXBkt1Wn]] que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=s5CMus4LOXBkt1Wn]] [[lookup @range.units activity=s5CMus4LOXBkt1Wn]]. <em>Échec :</em> [[/damage average]].</p>",
+            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=s5CMus4LOXBkt1Wn]], [[lookup @target.affects.labels.statblock activity=s5CMus4LOXBkt1Wn]] que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=s5CMus4LOXBkt1Wn]] [[lookup @range.units activity=s5CMus4LOXBkt1Wn]]. <em>Échec :</em> [[/damage average]].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1771,7 +1771,7 @@
         },
         "Mucus Cloud": {
             "name": "Nuage de mucus",
-            "description": "<p class=\"feature\">Tant qu'il est sous l'eau, l'[[lookup @name lowercase]] est entouré d'un mucus réactif.</p><p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=clFFG8uDBSFzxIo8]], chaque créature dans une Émanation de [[lookup @target.template.size activity=clFFG8uDBSFzxIo8]] [[lookup @target.template.units activity=clFFG8uDBSFzxIo8]] centrée sur l'[[lookup @name lowercase]], à la fin du tour de celui-ci. <em>Échec :</em> la cible est maudite. Jusqu'à la fin de la malédiction, la cible présente une peau visqueuse, elle peut respirer sous l'eau comme à l'air libre et ne peut récupérer de points de vie que si elle est sous l'eau.</p><p class=\"feature\">Quand la créature maudite n'est pas dans l'eau, elle subit [[/damage average activity=JrxCVyCOsBAMVZS7]] à la fin de chaque période de 10 minutes, sauf sa peau est humidifiée dans l'intervalle.</p>",
+            "description": "<p class=\"feature\">Tant qu'il est sous l'eau, le [[lookup @name lowercase]]{monstre} est entouré d'un mucus réactif.</p><p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=clFFG8uDBSFzxIo8]], chaque créature dans une Émanation de [[lookup @target.template.size activity=clFFG8uDBSFzxIo8]] [[lookup @target.template.units activity=clFFG8uDBSFzxIo8]] centrée sur le [[lookup @name lowercase]]{monstre}, à la fin du tour de celui-ci. <em>Échec :</em> la cible est maudite. Jusqu'à la fin de la malédiction, la cible présente une peau visqueuse, elle peut respirer sous l'eau comme à l'air libre et ne peut récupérer de points de vie que si elle est sous l'eau.</p><p class=\"feature\">Quand la créature maudite n'est pas dans l'eau, elle subit [[/damage average activity=JrxCVyCOsBAMVZS7]] à la fin de chaque période de 10 minutes, sauf sa peau est humidifiée dans l'intervalle.</p>",
             "activities": {
                 "Damage: Outside Water": {
                     "name": "Dégâts : Hors de l'eau",
@@ -1787,7 +1787,7 @@
         },
         "Multiattack": {
             "name": "Attaques multiples",
-            "description": "<p>Le [[lookup @name lowercase]] effectue {nombre} attaques de [[/item]] et recourt à [[/item]].</p>",
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue {nombre} attaques de [[/item]] et recourt à [[/item]].</p>",
             "activities": {
                 "Use": {
                     "name": "Utiliser"
@@ -1796,7 +1796,7 @@
         },
         "Multiple Heads": {
             "name": "Têtes multiples",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] est dotée de cinq têtes. Chaque fois que l'[[lookup @name lowercase]] subit au moins 25 dégâts dans un même tour, l'une de ses têtes meurt. L'[[lookup @name lowercase]] meurt quand toutes ses têtes sont mortes. À la fin de chacun de ses tours et à condition d'avoir au moins une tête vivante, deux têtes lui repoussent par tête morte depuis son tour précédent, sauf si elle a subi des dégâts de feu entre-temps. L'[[lookup @name lowercase]] récupère 20 points de vie quand il lui pousse de nouvelles têtes.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} est doté de cinq têtes. Chaque fois que le [[lookup @name lowercase]]{monstre} subit au moins 25 dégâts dans un même tour, l'une de ses têtes meurt. Le [[lookup @name lowercase]]{monstre} meurt quand toutes ses têtes sont mortes. À la fin de chacun de ses tours et à condition d'avoir au moins une tête vivante, deux têtes lui repoussent par tête morte depuis son tour précédent, sauf si il a subi des dégâts de feu entre-temps. Le [[lookup @name lowercase]]{monstre} récupère 20 points de vie quand il lui pousse de nouvelles têtes.</p>"
         },
         "Necrotic Bow": {
             "name": "Arc nécrotique",
@@ -1808,7 +1808,7 @@
         },
         "Necrotic Strike": {
             "name": "Frappe nécrotique",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] effectue une attaque de Poing putréfié ou de Conduit d'énergie négative.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} effectue une attaque de Poing putréfié ou de Conduit d'énergie négative.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -1825,7 +1825,7 @@
         },
         "Nightmare": {
             "name": "Cauchemar",
-            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=Y9H9ImnMcffBZlH3]], une créature que l'[[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=Y9H9ImnMcffBZlH3]] [[lookup @range.units activity=Y9H9ImnMcffBZlH3]]. <em>Échec :</em> si la cible a 20 points de vie ou moins, elle subit l'état &Reference[Unconscious apply=false] pendant [[lookup @duration.value activity=Y9H9ImnMcffBZlH3]] heure, jusqu'à ce qu'elle subisse des dégâts ou qu'une créature dans un rayon de 1,50 m consacre une action à la réveiller. Sinon, la cible subit [[/damage average]].</p>",
+            "description": "<p class=\"feature\"><em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=Y9H9ImnMcffBZlH3]], une créature que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=Y9H9ImnMcffBZlH3]] [[lookup @range.units activity=Y9H9ImnMcffBZlH3]]. <em>Échec :</em> si la cible a 20 points de vie ou moins, elle subit l'état &Reference[Unconscious apply=false] pendant [[lookup @duration.value activity=Y9H9ImnMcffBZlH3]] heure, jusqu'à ce qu'elle subisse des dégâts ou qu'une créature dans un rayon de 1,50 m consacre une action à la réveiller. Sinon, la cible subit [[/damage average]].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1840,7 +1840,7 @@
         },
         "Nightmare Haunting": {
             "name": "Cauchemars accablants",
-            "description": "<p class=\"feature\">Alors qu'elle se trouve sur le Plan Ethéré, la [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDream00000]{songe}</em> avec la même caractéristique d'incantation que pour Incantation. Seule la [[lookup @name lowercase]] peut faire office de messager du sort, et la cible doit être une créature que la [[lookup @name lowercase]] voit [[lookup @target.affects.special activity=4GGGVhvLSrHgHdb9]]. Le sort échoue et il est gaspille si la cible est sous l'effet du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{protection contre le mal et le bien}</em> ou dans la zone du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicCircl]{cercle magique}</em>.</p><p class=\"feature\">Si le sort <em>songe</em> inflige des dégâts à la cible, le maximum de points de vie de celle-ci est réduit d'un montant égal aux dégâts subis. Si le sort tue la cible, son âme se retrouve piégée dans le sac des âmes de la [[lookup @name lowercase]], et la cible ne peut pas revenir à la vie tant que son âme n'a pas été libérée.</p>",
+            "description": "<p class=\"feature\">Alors qu'elle se trouve sur le Plan Ethéré, le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDream00000]{songe}</em> avec la même caractéristique d'incantation que pour Incantation. Seule le [[lookup @name lowercase]]{monstre} peut faire office de messager du sort, et la cible doit être une créature que le [[lookup @name lowercase]]{monstre} voit [[lookup @target.affects.special activity=4GGGVhvLSrHgHdb9]]. Le sort échoue et il est gaspille si la cible est sous l'effet du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{protection contre le mal et le bien}</em> ou dans la zone du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicCircl]{cercle magique}</em>.</p><p class=\"feature\">Si le sort <em>songe</em> inflige des dégâts à la cible, le maximum de points de vie de celle-ci est réduit d'un montant égal aux dégâts subis. Si le sort tue la cible, son âme se retrouve piégée dans le sac des âmes du [[lookup @name lowercase]]{monstre}, et la cible ne peut pas revenir à la vie tant que son âme n'a pas été libérée.</p>",
             "requirements": "Sac des âmes requis",
             "activities": {
                 "4GGGVhvLSrHgHdb9": {
@@ -1850,7 +1850,7 @@
         },
         "Nightmare Ray": {
             "name": "Rayon de cauchemar",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible subit l'état &Reference[Frightened apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible subit l'état &Reference[Frightened apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
             "effects": {
                 "Frightened": {
                     "name": "Effrayé",
@@ -1860,7 +1860,7 @@
         },
         "Nimble Escape": {
             "name": "Fuite agile",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] entreprend l'action &Reference[Disengage] ou &Reference[Hide].</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} entreprend l'action &Reference[Disengage] ou &Reference[Hide].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -1874,7 +1874,7 @@
         },
         "Noxious Miasma": {
             "name": "Miasmes nocifs",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], chaque créature dans une Sphère de [[lookup @target.template.size activity=Blm8nddvCOH69bL8]] [[lookup @target.template.units activity=Blm8nddvCOH69bL8]] de rayon centrée sur un point que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=Blm8nddvCOH69bL8]] [[lookup @range.units activity=Blm8nddvCOH69bL8]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]], et la cible subit un malus de -2 à la CA jusqu'à la fin de son tour suivant.</p><p class=\"feature\"><em>Échec ou réussite :</em> le [[lookup @name lowercase]] ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=Blm8nddvCOH69bL8]], chaque créature dans une Sphère de [[lookup @target.template.size activity=Blm8nddvCOH69bL8]] [[lookup @target.template.units activity=Blm8nddvCOH69bL8]] de rayon centrée sur un point que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=Blm8nddvCOH69bL8]] [[lookup @range.units activity=Blm8nddvCOH69bL8]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]], et la cible subit un malus de -2 à la CA jusqu'à la fin de son tour suivant.</p><p class=\"feature\"><em>Échec ou réussite :</em> le [[lookup @name lowercase]]{monstre} ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1889,7 +1889,7 @@
         },
         "Ocean Spear": {
             "name": "Lance océanique",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. Si la cible est une créature, sa Vitesse est réduite de 3 m jusqu'à la fin de son tour suivant. <em>Touché ou raté :</em> aussitôt après une attaque à distance, la lance retourne magiquement dans la main du [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. Si la cible est une créature, sa Vitesse est réduite de 3 m jusqu'à la fin de son tour suivant. <em>Touché ou raté :</em> aussitôt après une attaque à distance, la lance retourne magiquement dans la main du [[lookup @name lowercase]]{monstre}.</p>",
             "effects": {
                 "Speed: -10 feet": {
                     "name": "Vitesse : -3 m",
@@ -1899,7 +1899,7 @@
         },
         "Onslaught": {
             "name": "Offensive",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] se déplace à concurrence de la moitié de sa Vitesse et effectue une attaque de Griffe ou de Queue.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} se déplace à concurrence de la moitié de sa Vitesse et effectue une attaque de Griffe ou de Queue.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -1908,7 +1908,7 @@
         },
         "Ooze Cube": {
             "name": "Cube de vase",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] emplit la totalité de son espace et il est transparent. D'autres créatures peuvent entrer dans cet espace, mais ce faisant, elles se soumettent à l'Enveloppement du [[lookup @name lowercase]] en subissant le Désavantage au jet de sauvegarde.</p><p class=\"feature\">Les créatures dans le [[lookup @name lowercase]] bénéficient d'un &Reference[Total Cover], sachant que le [[lookup @name lowercase]] peut contenir une créature de taille G ou jusqu'à quatre créatures de taille M ou P.</p><p class=\"feature\">Au prix d'une action, une créature dans un rayon de [[lookup @range.value activity=EcTOfXWsDJRHLydy]] [[lookup @range.units activity=EcTOfXWsDJRHLydy]] du [[lookup @name lowercase]] peut en extraire une autre ou un objet à condition de réussir un [[/check dc=12 ability=str skill=ath format=long]], l'opération lui infligeant [[/damage average activity=PMCvyqxfUYiPzNK8]].</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} emplit la totalité de son espace et il est transparent. D'autres créatures peuvent entrer dans cet espace, mais ce faisant, elles se soumettent à l'Enveloppement du [[lookup @name lowercase]]{monstre} en subissant le Désavantage au jet de sauvegarde.</p><p class=\"feature\">Les créatures dans le [[lookup @name lowercase]]{monstre} bénéficient d'un &Reference[Total Cover], sachant que le [[lookup @name lowercase]]{monstre} peut contenir une créature de taille G ou jusqu'à quatre créatures de taille M ou P.</p><p class=\"feature\">Au prix d'une action, une créature dans un rayon de [[lookup @range.value activity=EcTOfXWsDJRHLydy]] [[lookup @range.units activity=EcTOfXWsDJRHLydy]] du [[lookup @name lowercase]]{monstre} peut en extraire une autre ou un objet à condition de réussir un [[/check dc=12 ability=str skill=ath format=long]], l'opération lui infligeant [[/damage average activity=PMCvyqxfUYiPzNK8]].</p>",
             "activities": {
                 "Total Cover": {
                     "name": "Abri total"
@@ -1929,7 +1929,7 @@
         },
         "Pack Tactics": {
             "name": "Tactique de meute",
-            "description": "<p>Quand au moins un de ses alliés non Neutralisés se situe dans un rayon de 1,50 m de la créature qu'il cible, le [[lookup @name lowercase]] a l'Avantage au jet d'attaque correspondant.</p>",
+            "description": "<p>Quand au moins un de ses alliés non Neutralisés se situe dans un rayon de 1,50 m de la créature qu'il cible, le [[lookup @name lowercase]]{monstre} a l'Avantage au jet d'attaque correspondant.</p>",
             "requirements": "Allié dans un rayon de 1,50 m de la cible de l'attaque"
         },
         "Pact Blade": {
@@ -1957,7 +1957,7 @@
         },
         "Paralyzing Tentacles": {
             "name": "Tentacules paralysants",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=p157Iqz8s0M0VilW]], une créature que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @target.template.size activity=p157Iqz8s0M0VilW]] [[lookup @target.template.units activity=p157Iqz8s0M0VilW]].</p><p class=\"feature\"><em>Échec :</em> la cible subit l'état &Reference[Poisoned apply=false] et réitère le JS à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite. Au bout de [[lookup @duration.value activity=p157Iqz8s0M0VilW]] [[lookup @duration.units activity=p157Iqz8s0M0VilW]], elle réussit automatiquement ce JS. Tant qu'elle est ainsi Empoisonnée, la cible subit l'état &Reference[Paralyzed apply=false].</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=p157Iqz8s0M0VilW]], une créature que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @target.template.size activity=p157Iqz8s0M0VilW]] [[lookup @target.template.units activity=p157Iqz8s0M0VilW]].</p><p class=\"feature\"><em>Échec :</em> la cible subit l'état &Reference[Poisoned apply=false] et réitère le JS à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite. Au bout de [[lookup @duration.value activity=p157Iqz8s0M0VilW]] [[lookup @duration.units activity=p157Iqz8s0M0VilW]], elle réussit automatiquement ce JS. Tant qu'elle est ainsi Empoisonnée, la cible subit l'état &Reference[Paralyzed apply=false].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -1972,7 +1972,7 @@
         },
         "Paralyzing Touch": {
             "name": "Contact paralysant",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible subit l'état &Reference[Paralyzed apply=false] jusqu'au début du tour suivant de la [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible subit l'état &Reference[Paralyzed apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
             "effects": {
                 "Paralyzed": {
                     "name": "Paralysé",
@@ -1982,7 +1982,7 @@
         },
         "Parry": {
             "name": "Parade",
-            "description": "<p><em>Déclencheur :</em> le [[lookup @name lowercase]] est [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Conséquences :</em> le [[lookup @name lowercase]] ajoute [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] à sa CA contre cette attaque, ce qui peut la faire rater.</p>",
+            "description": "<p><em>Déclencheur :</em> le [[lookup @name lowercase]]{monstre} est [[lookup @activation.condition activity=aLG3BRZL7P6OEjwd]]. <em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} ajoute [[lookup @roll.formula activity=aLG3BRZL7P6OEjwd]] à sa CA contre cette attaque, ce qui peut la faire rater.</p>",
             "activities": {
                 "Use": {
                     "name": "Utiliser",
@@ -2034,7 +2034,7 @@
         },
         "Petrifying Gaze": {
             "name": "Regard pétrifiant",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=mN9aF1WkHQWLIN4B]], chaque créature dans un Cône de [[lookup @target.template.size activity=mN9aF1WkHQWLIN4B]] [[lookup @target.template.units activity=mN9aF1WkHQWLIN4B]]. Si le [[lookup @name lowercase]] voit son reflet dans le Cône, il effectue ce JS.</p><p class=\"feature\"><em>Premier échec :</em> la cible subit l'état &Reference[Restrained apply=false] et réitère le JS à la fin de son tour suivant si elle est toujours Entravée ; elle met un terme à l'effet sur elle-même en cas de réussite.</p><p class=\"feature\"><em>Deuxième échec :</em> la cible subit l'état &Reference[Petrified apply=false] qui remplace l'état Entravé.</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=mN9aF1WkHQWLIN4B]], chaque créature dans un Cône de [[lookup @target.template.size activity=mN9aF1WkHQWLIN4B]] [[lookup @target.template.units activity=mN9aF1WkHQWLIN4B]]. Si le [[lookup @name lowercase]]{monstre} voit son reflet dans le Cône, il effectue ce JS.</p><p class=\"feature\"><em>Premier échec :</em> la cible subit l'état &Reference[Restrained apply=false] et réitère le JS à la fin de son tour suivant si elle est toujours Entravée ; elle met un terme à l'effet sur elle-même en cas de réussite.</p><p class=\"feature\"><em>Deuxième échec :</em> la cible subit l'état &Reference[Petrified apply=false] qui remplace l'état Entravé.</p>",
             "activities": {
                 "First Save": {
                     "name": "Première sauvegarde"
@@ -2057,7 +2057,7 @@
         },
         "Phantasms": {
             "name": "Fantasmagories",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMirrorImag]{image miroir}</em>, sans composantes matérielles, la Sagesse étant sa caractéristique d'incantation. Le sort prend fin prématurément si le [[lookup @name lowercase]] démarre son tour sous une Lumière vive.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMirrorImag]{image miroir}</em>, sans composantes matérielles, la Sagesse étant sa caractéristique d'incantation. Le sort prend fin prématurément si le [[lookup @name lowercase]]{monstre} démarre son tour sous une Lumière vive.</p>"
         },
         "Pincer": {
             "name": "Pince",
@@ -2093,7 +2093,7 @@
         },
         "Poisonous Spittle": {
             "name": "Crachat venimeux",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=r4plP8QiJxzFZZO7]], [[lookup @target.affects.labels.statblock activity=r4plP8QiJxzFZZO7]] que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=r4plP8QiJxzFZZO7]] [[lookup @range.units activity=r4plP8QiJxzFZZO7]]. <em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Blinded apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]. <em>Réussite :</em> demi-dégâts uniquement.</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=r4plP8QiJxzFZZO7]], [[lookup @target.affects.labels.statblock activity=r4plP8QiJxzFZZO7]] que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=r4plP8QiJxzFZZO7]] [[lookup @range.units activity=r4plP8QiJxzFZZO7]]. <em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Blinded apply=false] jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}. <em>Réussite :</em> demi-dégâts uniquement.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2108,7 +2108,7 @@
         },
         "Possession": {
             "name": "Possession",
-            "description": "<p class=\"feature\"><em>JS Charisme :</em> DD [[lookup @save.dc.value activity=7gmNBVjwuYTyANMe]], un [[lookup @target.affects.special activity=7gmNBVjwuYTyANMe]] que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=7gmNBVjwuYTyANMe]] [[lookup @range.units activity=7gmNBVjwuYTyANMe]].</p><p class=\"feature\"><em>Échec :</em> la cible est possédée par le [[lookup @name lowercase]] ; le [[lookup @name lowercase]] disparaît, la cible subit l'état &Reference[Incapacitated apply=false] et perd le contrôle de son corps. Le [[lookup @name lowercase]] prend le contrôle du corps, mais la cible reste consciente. Le [[lookup @name lowercase]] ne peut être ciblé par aucun sort, effet ou attaque, à l'exception de ceux qui ciblent spécifiquement les Morts-vivants. Le profil de jeu du [[lookup @name lowercase]] reste le même, si ce n'est qu'il reprend la Vitesse de la cible, ainsi que ses modificateurs de Force, de Dextérité et de Constitution.</p><p class=\"feature\">Cette possession persiste jusqu'à ce que le corps tombe à 0 point de vie ou que le [[lookup @name lowercase]] le quitte par une action Bonus. Quand la possession prend fin, le [[lookup @name lowercase]] apparaît en un espace inoccupé dans un rayon de 1,50 m de la cible, et celle-ci est immunisée contre la Possession de ce [[lookup @name lowercase]] pendant 24 heures.</p><p class=\"feature\"><em>Réussite :</em> la cible est immunisée contre la Possession de ce [[lookup @name lowercase]] pendant 24 heures.</p>",
+            "description": "<p class=\"feature\"><em>JS Charisme :</em> DD [[lookup @save.dc.value activity=7gmNBVjwuYTyANMe]], un [[lookup @target.affects.special activity=7gmNBVjwuYTyANMe]] que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=7gmNBVjwuYTyANMe]] [[lookup @range.units activity=7gmNBVjwuYTyANMe]].</p><p class=\"feature\"><em>Échec :</em> la cible est possédée par le [[lookup @name lowercase]]{monstre} ; le [[lookup @name lowercase]]{monstre} disparaît, la cible subit l'état &Reference[Incapacitated apply=false] et perd le contrôle de son corps. Le [[lookup @name lowercase]]{monstre} prend le contrôle du corps, mais la cible reste consciente. Le [[lookup @name lowercase]]{monstre} ne peut être ciblé par aucun sort, effet ou attaque, à l'exception de ceux qui ciblent spécifiquement les Morts-vivants. Le profil de jeu du [[lookup @name lowercase]]{monstre} reste le même, si ce n'est qu'il reprend la Vitesse de la cible, ainsi que ses modificateurs de Force, de Dextérité et de Constitution.</p><p class=\"feature\">Cette possession persiste jusqu'à ce que le corps tombe à 0 point de vie ou que le [[lookup @name lowercase]]{monstre} le quitte par une action Bonus. Quand la possession prend fin, le [[lookup @name lowercase]]{monstre} apparaît en un espace inoccupé dans un rayon de 1,50 m de la cible, et celle-ci est immunisée contre la Possession de ce [[lookup @name lowercase]]{monstre} pendant 24 heures.</p><p class=\"feature\"><em>Réussite :</em> la cible est immunisée contre la Possession de ce [[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
             "activities": {
                 "save": {
                     "target": "Humanoïde"
@@ -2123,7 +2123,7 @@
         },
         "Pounce": {
             "name": "Assaut incisif",
-            "description": "<p>Le [[lookup @name lowercase]] se déplace à concurrence de la moitié de sa Vitesse et effectue une attaque de [[/item Saignée]].</p>",
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} se déplace à concurrence de la moitié de sa Vitesse et effectue une attaque de [[/item Saignée]].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2132,7 +2132,7 @@
         },
         "Probing Telepathy": {
             "name": "Télépathie inquisitrice",
-            "description": "<p class=\"feature\">Si une créature communique par télépathie avec l'[[lookup @name lowercase]], ce dernier a conscience des désirs profonds de la créature.</p>"
+            "description": "<p class=\"feature\">Si une créature communique par télépathie avec le [[lookup @name lowercase]]{monstre}, ce dernier a conscience des désirs profonds de la créature.</p>"
         },
         "Proboscis": {
             "name": "Trompe",
@@ -2140,7 +2140,7 @@
         },
         "Protection": {
             "name": "Protection",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> un jet d'attaque touche le porteur de l'amulette du [[lookup @name lowercase]] alors qu'ils sont dans un rayon de 1,50 m l'un de l'autre.</p><p class=\"feature\"><em>Conséquences :</em> le porteur reçoit un bonus de +5 à la CA, y compris contre l'attaque correspondante (ce qui peut la faire rater), jusqu'au début du tour suivant du [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> un jet d'attaque touche le porteur de l'amulette du [[lookup @name lowercase]]{monstre} alors qu'ils sont dans un rayon de 1,50 m l'un de l'autre.</p><p class=\"feature\"><em>Conséquences :</em> le porteur reçoit un bonus de +5 à la CA, y compris contre l'attaque correspondante (ce qui peut la faire rater), jusqu'au début du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
             "effects": {
                 "Protected": {
                     "name": "Protégé",
@@ -2150,11 +2150,11 @@
         },
         "Protective Magic": {
             "name": "Magie protectrice",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{bouclier}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{contresort}</em> en réponse au déclencheur du sort correspondant, avec la même caractéristique d'incantation que pour Incantation.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{bouclier}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCounterspe]{contresort}</em> en réponse au déclencheur du sort correspondant, avec la même caractéristique d'incantation que pour Incantation.</p>"
         },
         "Prowl (Tiger or Hybrid Form Only)": {
             "name": "Affût (forme de tigre ou hybride uniquement)",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] se déplace dans les limites de sa Vitesse sans provoquer d'&Reference[OpportunityAttacks]{attaques d'Opportunité}. À la fin de ce déplacement, il peut entreprendre l'action &Reference[Hide apply=false].</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} se déplace dans les limites de sa Vitesse sans provoquer d'&Reference[OpportunityAttacks]{attaques d'Opportunité}. À la fin de ce déplacement, il peut entreprendre l'action &Reference[Hide apply=false].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2167,7 +2167,7 @@
         },
         "Psychic Drain": {
             "name": "Succion psychique",
-            "description": "<p class=\"feature\">Si l'[[lookup @name lowercase]] maintient au moins une créature Charmée ou Agrippée, il recourt à Assimilation de mémoire et récupère [[/healing average]].</p>",
+            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]]{monstre} maintient au moins une créature Charmée ou Agrippée, il recourt à Assimilation de mémoire et récupère [[/healing average]].</p>",
             "activities": {
                 "heal": {
                     "target": "une créature Charmée ou Agrippée"
@@ -2176,7 +2176,7 @@
         },
         "Pummel": {
             "name": "Rincée",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=aae828c0Hue0XOMP]], une créature Agrippée par le [[lookup @name lowercase]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]].</p><p class=\"feature\"><em>Réussite :</em> demi-dégâts.</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=aae828c0Hue0XOMP]], une créature Agrippée par le [[lookup @name lowercase]]{monstre}.</p><p class=\"feature\"><em>Échec :</em> [[/damage average]].</p><p class=\"feature\"><em>Réussite :</em> demi-dégâts.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde",
@@ -2186,7 +2186,7 @@
         },
         "Pursuit": {
             "name": "Poursuite",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> une autre créature que le [[lookup @name lowercase]] voit termine son déplacement dans un rayon de [[lookup @range.value activity=blUXkjLhs9kD2ofo]] [[lookup @range.units activity=blUXkjLhs9kD2ofo]] de lui. <em>Conséquences :</em> le [[lookup @name lowercase]] recourt à Téléportation, mais son espace de destination doit être [[lookup @target.affects.special activity=blUXkjLhs9kD2ofo]].</p>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> une autre créature que le [[lookup @name lowercase]]{monstre} voit termine son déplacement dans un rayon de [[lookup @range.value activity=blUXkjLhs9kD2ofo]] [[lookup @range.units activity=blUXkjLhs9kD2ofo]] de lui. <em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} recourt à Téléportation, mais son espace de destination doit être [[lookup @target.affects.special activity=blUXkjLhs9kD2ofo]].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
@@ -2196,7 +2196,7 @@
         },
         "Quick Grapple": {
             "name": "Lutte rapide",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=aDWVHpJgsNPPNrDs]], [[lookup @target.affects.special activity=aDWVHpJgsNPPNrDs]] que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @target.template.size activity=aDWVHpJgsNPPNrDs]] [[lookup @target.template.units activity=aDWVHpJgsNPPNrDs]]. <em>Échec :</em> la cible subit l'état &Reference[Grappled apply=false] (évasion DD [[lookup @skills.ath.passive]]).</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=aDWVHpJgsNPPNrDs]], [[lookup @target.affects.special activity=aDWVHpJgsNPPNrDs]] que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @target.template.size activity=aDWVHpJgsNPPNrDs]] [[lookup @target.template.units activity=aDWVHpJgsNPPNrDs]]. <em>Échec :</em> la cible subit l'état &Reference[Grappled apply=false] (évasion DD [[lookup @skills.ath.passive]]).</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde",
@@ -2227,7 +2227,7 @@
         },
         "Radiant Teleport": {
             "name": "Téléportation radiante",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] se téléporte d'un maximum de [[lookup @range.value activity=HtsFBK1PYKjvy9mn]] [[lookup @range.units activity=HtsFBK1PYKjvy9mn]] vers un espace inoccupé qu'il voit.</p><p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=HtsFBK1PYKjvy9mn]], chaque créature dans une Émanation de [[lookup @target.template.size activity=HtsFBK1PYKjvy9mn]] [[lookup @target.template.units activity=HtsFBK1PYKjvy9mn]] centrée sur le [[lookup @name lowercase]] à son espace de destination.</p><p class=\"feature\"><em>Échec :</em> [[/damage average]].</p><p class=\"feature\"><em>Réussite :</em> demi-dégâts.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} se téléporte d'un maximum de [[lookup @range.value activity=HtsFBK1PYKjvy9mn]] [[lookup @range.units activity=HtsFBK1PYKjvy9mn]] vers un espace inoccupé qu'il voit.</p><p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=HtsFBK1PYKjvy9mn]], chaque créature dans une Émanation de [[lookup @target.template.size activity=HtsFBK1PYKjvy9mn]] [[lookup @target.template.units activity=HtsFBK1PYKjvy9mn]] centrée sur le [[lookup @name lowercase]]{monstre} à son espace de destination.</p><p class=\"feature\"><em>Échec :</em> [[/damage average]].</p><p class=\"feature\"><em>Réussite :</em> demi-dégâts.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2255,7 +2255,7 @@
         },
         "Rampage": {
             "name": "Déchaînement",
-            "description": "<p class=\"feature\">Aussitôt après avoir infligé des dégâts à une créature déjà &Reference[Bloodied], la [[lookup @name lowercase]] se déplace à concurrence de la moitié de sa Vitesse et effectue une attaque de {action}.</p>",
+            "description": "<p class=\"feature\">Aussitôt après avoir infligé des dégâts à une créature déjà &Reference[Bloodied], le [[lookup @name lowercase]]{monstre} se déplace à concurrence de la moitié de sa Vitesse et effectue une attaque de {action}.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2264,19 +2264,19 @@
         },
         "Reactive": {
             "name": "Réactivité",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] peut jouer une &Reference[Reaction]{Réaction} à chaque tour d'un combat.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} peut jouer une &Reference[Reaction]{Réaction} à chaque tour d'un combat.</p>"
         },
         "Reactive Heads": {
             "name": "Têtes réactives",
-            "description": "<p class=\"feature\">Chaque tête dont est dotée l'[[lookup @name lowercase]] en plus de la première lui octroie une &Reference[Reaction]{Réaction} supplémentaire qu'elle ne peut jouer que pour effectuer une &Reference[OpportunityAttacks]{attaque d'Opportunité}.</p>"
+            "description": "<p class=\"feature\">Chaque tête dont est doté le [[lookup @name lowercase]]{monstre} en plus de la première lui octroie une &Reference[Reaction]{Réaction} supplémentaire qu'il ne peut jouer que pour effectuer une &Reference[OpportunityAttacks]{attaque d'Opportunité}.</p>"
         },
         "Read Thoughts": {
             "name": "Lecture des pensées",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{détection des pensées}</em> sans composantes de sort, le Charisme étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @abilities.cha.dc]]).</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectThou]{détection des pensées}</em> sans composantes de sort, le Charisme étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @abilities.cha.dc]]).</p>"
         },
         "Redirect Attack": {
             "name": "Attaque redirigée",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> une créature que le [[lookup @name lowercase]] voit effectue un jet d'attaque contre lui.</p><p class=\"feature\"><em>Conséquences :</em> le [[lookup @name lowercase]] choisit [[lookup @target.affects.special activity=pIlCmuPw8YUqAISY]] dans un rayon de [[lookup @range.value activity=pIlCmuPw8YUqAISY]] [[lookup @range.units activity=pIlCmuPw8YUqAISY]]. Le [[lookup @name lowercase]] et cet allié échangent leurs places ; l'allié devient la nouvelle cible de l'attaque.</p>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> une créature que le [[lookup @name lowercase]]{monstre} voit effectue un jet d'attaque contre lui.</p><p class=\"feature\"><em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} choisit [[lookup @target.affects.special activity=pIlCmuPw8YUqAISY]] dans un rayon de [[lookup @range.value activity=pIlCmuPw8YUqAISY]] [[lookup @range.units activity=pIlCmuPw8YUqAISY]]. Le [[lookup @name lowercase]]{monstre} et cet allié échangent leurs places ; l'allié devient la nouvelle cible de l'attaque.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
@@ -2287,11 +2287,11 @@
         },
         "Reel": {
             "name": "Traction",
-            "description": "<p>L'[[lookup @name lowercase]] tire vers lui en ligne droite [[lookup @target.affects.labels.statblock activity=jWkEQYHBd7aht1kG]] Entravée par sa Filandre et située dans un rayon de [[lookup @range.value activity=jWkEQYHBd7aht1kG]] [[lookup @range.units activity=jWkEQYHBd7aht1kG]], en la déplaçant d'un maximum de 7,50 m.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} tire vers lui en ligne droite [[lookup @target.affects.labels.statblock activity=jWkEQYHBd7aht1kG]] Entravée par sa Filandre et située dans un rayon de [[lookup @range.value activity=jWkEQYHBd7aht1kG]] [[lookup @range.units activity=jWkEQYHBd7aht1kG]], en la déplaçant d'un maximum de 7,50 m.</p>"
         },
         "Reflective Carapace": {
             "name": "Carapace réfléchissante",
-            "description": "<p class=\"feature\">Si la [[lookup @name lowercase]] est ciblée par le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectile magique}</em> ou tout autre sort qui nécessite un jet d'attaque à distance, lancez [[/r 1d6]].</p><p class=\"feature\">Sur un résultat de <strong>1 à 5</strong>, la [[lookup @name lowercase]] n'est pas affectée.</p><p class=\"feature\">Sur un <strong>6</strong>, la [[lookup @name lowercase]] n'est pas affectée et renvoie le sort, l'incantateur en devenant la cible.</p>",
+            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]]{monstre} est ciblé par le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectile magique}</em> ou tout autre sort qui nécessite un jet d'attaque à distance, lancez [[/r 1d6]].</p><p class=\"feature\">Sur un résultat de <strong>1 à 5</strong>, le [[lookup @name lowercase]]{monstre} n'est pas affecté.</p><p class=\"feature\">Sur un <strong>6</strong>, le [[lookup @name lowercase]]{monstre} n'est pas affecté et renvoie le sort, l'incantateur en devenant la cible.</p>",
             "activities": {
                 "Roll d6": {
                     "name": "Lancer d6",
@@ -2301,7 +2301,7 @@
         },
         "Reflexive Antennae": {
             "name": "Antennes réactives",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> un jet d'attaque touche l'[[lookup @name lowercase]]. <em>Conséquences :</em> l'[[lookup @name lowercase]] recourt à Antennes.</p>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> un jet d'attaque touche le [[lookup @name lowercase]]{monstre}. <em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} recourt à Antennes.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2310,7 +2310,7 @@
         },
         "Regeneration": {
             "name": "Régénération",
-            "description": "<p>Le [[lookup @name lowercase]] récupère [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] points de vie au début de chacun de ses tours s'il lui reste au moins 1 point de vie.</p>",
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} récupère [[lookup @healing.formula activity=5cGvjZJIJVicjJ3d]] points de vie au début de chacun de ses tours s'il lui reste au moins 1 point de vie.</p>",
             "requirements": "Au moins 1 point de vie",
             "activities": {
                 "heal": {
@@ -2324,7 +2324,7 @@
         },
         "Repulsion Breath": {
             "name": "Souffle répulsif",
-            "description": "<p class=\"feature\"><em>JS Force :</em> DD [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], chaque créature dans un Cône de [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]] [[lookup @target.template.units activity=zuf9EEVj4nI1joaH]].</p><p class=\"feature\"><em>Échec :</em> la cible est repoussée du [[lookup @name lowercase]] sur 9 m en ligne droite et subit l'état &Reference[Prone apply=false].</p>",
+            "description": "<p class=\"feature\"><em>JS Force :</em> DD [[lookup @save.dc.value activity=zuf9EEVj4nI1joaH]], chaque créature dans un Cône de [[lookup @target.template.size activity=zuf9EEVj4nI1joaH]] [[lookup @target.template.units activity=zuf9EEVj4nI1joaH]].</p><p class=\"feature\"><em>Échec :</em> la cible est repoussée du [[lookup @name lowercase]]{monstre} sur 9 m en ligne droite et subit l'état &Reference[Prone apply=false].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2339,7 +2339,7 @@
         },
         "Restless Touch": {
             "name": "Contact fébrile",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible est maudite pendant 24 heures ou jusqu'à ce que l'[[lookup @name lowercase]] meure. Tant que persiste la malédiction, la cible ne reçoit aucun bénéfice en terminant un Repos court.</p>",
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]], et la cible est maudite pendant 24 heures ou jusqu'à ce que le [[lookup @name lowercase]]{monstre} meure. Tant que persiste la malédiction, la cible ne reçoit aucun bénéfice en terminant un Repos court.</p>",
             "effects": {
                 "Cursed": {
                     "name": "Maudit",
@@ -2349,7 +2349,7 @@
         },
         "Riposte": {
             "name": "Parade-riposte",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> le [[lookup @name lowercase]] est touché par un jet d'attaque de corps à corps alors qu'il tient une arme.</p><p class=\"feature\"><em>Conséquences :</em> le [[lookup @name lowercase]] ajoute 3 à sa CA contre cette attaque, ce qui peut la faire rater. En cas d'échec de l'attaque, le [[lookup @name lowercase]] effectue une attaque de Rapière contre la créature qui a déclenché sa Réaction si celle-ci est à portée.</p><section class=\"secret\" id=\"secret-VqXu1b39RjadyOE4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude fournit également un <strong>Effet actif (EA)</strong> qui modifie la <strong>classe d'armure</strong> de cette créature lorsque vous utilisez la réaction. Vous pouvez activer l'EA dans l'onglet des effets de la fiche de personnage.</p></section>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> le [[lookup @name lowercase]]{monstre} est touché par un jet d'attaque de corps à corps alors qu'il tient une arme.</p><p class=\"feature\"><em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} ajoute 3 à sa CA contre cette attaque, ce qui peut la faire rater. En cas d'échec de l'attaque, le [[lookup @name lowercase]]{monstre} effectue une attaque de Rapière contre la créature qui a déclenché sa Réaction si celle-ci est à portée.</p><section class=\"secret\" id=\"secret-VqXu1b39RjadyOE4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude fournit également un <strong>Effet actif (EA)</strong> qui modifie la <strong>classe d'armure</strong> de cette créature lorsque vous utilisez la réaction. Vous pouvez activer l'EA dans l'onglet des effets de la fiche de personnage.</p></section>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2358,7 +2358,7 @@
             "effects": {
                 "+3 AC": {
                     "name": "+3 CA",
-                    "description": "<p>Le [[lookup @name lowercase]] ajoute 3 à sa CA contre cette attaque, ce qui peut la faire rater.</p>"
+                    "description": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 3 à sa CA contre cette attaque, ce qui peut la faire rater.</p>"
                 }
             }
         },
@@ -2368,7 +2368,7 @@
         },
         "Roar": {
             "name": "Rugissement",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] pousse un rugissement magique. Chaque fois qu'il rugit, il produit un effet différent, comme détaillé ci-après (la séquence est réinitialisée lorsqu'il prend un Repos long) :</p><p class=\"feature-trait\"><strong>Premier rugissement.</strong> <em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=Igeu89TALGlNPXDg]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=Igeu89TALGlNPXDg]] [[lookup @target.template.units activity=Igeu89TALGlNPXDg]] centrée sur le [[lookup @name lowercase]]. <em>Échec :</em> la cible subit l'état &Reference[Frightened apply=false] pendant [[lookup @duration.value activity=Igeu89TALGlNPXDg]] [[lookup @duration.units activity=Igeu89TALGlNPXDg]].</p><p class=\"feature-trait\"><strong>Deuxième rugissement.</strong> <em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=uFTndQPvULZVHT9R]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=uFTndQPvULZVHT9R]] [[lookup @target.template.units activity=uFTndQPvULZVHT9R]] centrée sur le [[lookup @name lowercase]]. <em>Échec :</em> la cible subit l'état &Reference[Paralyzed apply=false] et réitère le JS à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite. Au bout de [[lookup @duration.value activity=uFTndQPvULZVHT9R]] [[lookup @duration.units activity=uFTndQPvULZVHT9R]], elle réussit automatiquement ce JS.</p><p class=\"feature-trait\"><strong>Troisième rugissement.</strong> <em>JS Constitution :</em> DD [[lookup @save.dc.value activity=Td8ArIMDfxWDLbE9]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=Td8ArIMDfxWDLbE9]] [[lookup @target.template.units activity=Td8ArIMDfxWDLbE9]] centrée sur le [[lookup @name lowercase]]. <em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Prone apply=false]. <em>Réussite :</em> demi-dégâts uniquement.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} pousse un rugissement magique. Chaque fois qu'il rugit, il produit un effet différent, comme détaillé ci-après (la séquence est réinitialisée lorsqu'il prend un Repos long) :</p><p class=\"feature-trait\"><strong>Premier rugissement.</strong> <em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=Igeu89TALGlNPXDg]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=Igeu89TALGlNPXDg]] [[lookup @target.template.units activity=Igeu89TALGlNPXDg]] centrée sur le [[lookup @name lowercase]]{monstre}. <em>Échec :</em> la cible subit l'état &Reference[Frightened apply=false] pendant [[lookup @duration.value activity=Igeu89TALGlNPXDg]] [[lookup @duration.units activity=Igeu89TALGlNPXDg]].</p><p class=\"feature-trait\"><strong>Deuxième rugissement.</strong> <em>JS Sagesse :</em> DD [[lookup @save.dc.value activity=uFTndQPvULZVHT9R]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=uFTndQPvULZVHT9R]] [[lookup @target.template.units activity=uFTndQPvULZVHT9R]] centrée sur le [[lookup @name lowercase]]{monstre}. <em>Échec :</em> la cible subit l'état &Reference[Paralyzed apply=false] et réitère le JS à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite. Au bout de [[lookup @duration.value activity=uFTndQPvULZVHT9R]] [[lookup @duration.units activity=uFTndQPvULZVHT9R]], elle réussit automatiquement ce JS.</p><p class=\"feature-trait\"><strong>Troisième rugissement.</strong> <em>JS Constitution :</em> DD [[lookup @save.dc.value activity=Td8ArIMDfxWDLbE9]], chaque ennemi dans une Émanation de [[lookup @target.template.size activity=Td8ArIMDfxWDLbE9]] [[lookup @target.template.units activity=Td8ArIMDfxWDLbE9]] centrée sur le [[lookup @name lowercase]]{monstre}. <em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Prone apply=false]. <em>Réussite :</em> demi-dégâts uniquement.</p>",
             "activities": {
                 "First Roar: Save": {
                     "name": "Premier rugissement : Sauvegarde"
@@ -2431,7 +2431,7 @@
         },
         "Running Leap": {
             "name": "Saut avec élan",
-            "description": "<p class=\"feature\">Avec une prise d'élan de 3 m, le [[lookup @name lowercase]] peut franchir jusqu'à 7,50 m d'un saut en longueur.</p>"
+            "description": "<p class=\"feature\">Avec une prise d'élan de 3 m, le [[lookup @name lowercase]]{monstre} peut franchir jusqu'à 7,50 m d'un saut en longueur.</p>"
         },
         "Scare": {
             "name": "Frayeur",
@@ -2445,7 +2445,7 @@
         },
         "Scorching Sands": {
             "name": "Sables brûlants",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=g5fxAWhrpwohtETl]], [[lookup @target.affects.labels.statblock activity=g5fxAWhrpwohtETl]] que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=g5fxAWhrpwohtETl]] [[lookup @range.units activity=g5fxAWhrpwohtETl]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]], et la Vitesse de la cible est réduite de moitié jusqu'à la fin de son tour suivant.</p><p class=\"feature\"><em>Échec ou réussite :</em> le [[lookup @name lowercase]] ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=g5fxAWhrpwohtETl]], [[lookup @target.affects.labels.statblock activity=g5fxAWhrpwohtETl]] que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=g5fxAWhrpwohtETl]] [[lookup @range.units activity=g5fxAWhrpwohtETl]].</p><p class=\"feature\"><em>Échec :</em> [[/damage average]], et la Vitesse de la cible est réduite de moitié jusqu'à la fin de son tour suivant.</p><p class=\"feature\"><em>Échec ou réussite :</em> le [[lookup @name lowercase]]{monstre} ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2468,11 +2468,11 @@
         },
         "Sense Magic": {
             "name": "Perception de la magie",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] perçoit la magie dans un rayon de 36 m. Ce trait fonctionne pour le reste comme le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{détection de la magie}</em> même s'il n'est pas magique en lui-même.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} perçoit la magie dans un rayon de 36 m. Ce trait fonctionne pour le reste comme le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{détection de la magie}</em> même s'il n'est pas magique en lui-même.</p>"
         },
         "Shadow Stealth": {
             "name": "Discrétion dans les ombres",
-            "description": "<p class=\"feature\">Tant qu'il reste dans les Ténèbres ou sous une Lumière faible, le [[lookup @name lowercase]] peut entreprendre l'action &Reference[Hide].</p>",
+            "description": "<p class=\"feature\">Tant qu'il reste dans les Ténèbres ou sous une Lumière faible, le [[lookup @name lowercase]]{monstre} peut entreprendre l'action &Reference[Hide].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2487,21 +2487,21 @@
         },
         "Shape-Shift": {
             "name": "Changement d'aspect",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] se transforme en [[lookup @target.affects.special activity=EU2q25V5hIaM1ZlR]], ou bien retrouve sa forme véritable d'humanoïde. En dehors de sa catégorie de taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} se transforme en [[lookup @target.affects.special activity=EU2q25V5hIaM1ZlR]], ou bien retrouve sa forme véritable d'humanoïde. En dehors de sa catégorie de taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
-                    "target": "hybride {créature}-humanoïde de taille {taille} ou en {créature} de taille {taille}"
+                    "target": "hybride {monstre}-humanoïde de taille {taille} ou en {monstre} de taille {taille}"
                 }
             }
         },
         "Shark Telepathy": {
             "name": "Télépathie avec les requins",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] peut contrôler magiquement les requins dans un rayon de 36 m, par le biais d'une télépathie spéciale.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} peut contrôler magiquement les requins dans un rayon de 36 m, par le biais d'une télépathie spéciale.</p>"
         },
         "Shield Bash": {
             "name": "Coup de bouclier",
-            "description": "<p class=\"feature\"><em>JS Force :</em> DD [[lookup @save.dc.value activity=eIErvLccVVCXiCSl]], une créature dans un rayon de [[lookup @range.value activity=eIErvLccVVCXiCSl]] [[lookup @range.units activity=eIErvLccVVCXiCSl]] que le [[lookup @name lowercase]] voit. <em>Échec :</em> [[/damage average]]. Si la cible est une créature de taille M ou inférieure, elle subit l'état &Reference[Prone apply=false].</p>",
+            "description": "<p class=\"feature\"><em>JS Force :</em> DD [[lookup @save.dc.value activity=eIErvLccVVCXiCSl]], une créature dans un rayon de [[lookup @range.value activity=eIErvLccVVCXiCSl]] [[lookup @range.units activity=eIErvLccVVCXiCSl]] que le [[lookup @name lowercase]]{monstre} voit. <em>Échec :</em> [[/damage average]]. Si la cible est une créature de taille M ou inférieure, elle subit l'état &Reference[Prone apply=false].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2516,11 +2516,11 @@
         },
         "Shielded Mind": {
             "name": "Esprit protégé",
-            "description": "<p class=\"feature\">Rien ne peut lire les pensées du [[lookup @name lowercase]] et les autres créatures ne peuvent communiquer avec lui par télépathie que s'il le permet.</p>"
+            "description": "<p class=\"feature\">Rien ne peut lire les pensées du [[lookup @name lowercase]]{monstre} et les autres créatures ne peuvent communiquer avec lui par télépathie que s'il le permet.</p>"
         },
         "Shimmering Shield": {
             "name": "Pavois chatoyant",
-            "description": "<p>La [[lookup @name lowercase]] cible une créature qu'elle voit dans un rayon de [[lookup @range.value activity=sl8NoPhB0e5z6jmK]] [[lookup @range.units activity=sl8NoPhB0e5z6jmK]] (ou bien elle-même). La cible reçoit [[/healing average temp]], et sa CA augmente de 2 jusqu'à la fin du tour suivant de la [[lookup @name lowercase]]. La [[lookup @name lowercase]] ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>",
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} cible une créature qu'il voit dans un rayon de [[lookup @range.value activity=sl8NoPhB0e5z6jmK]] [[lookup @range.units activity=sl8NoPhB0e5z6jmK]] (ou bien lui-même). La cible reçoit [[/healing average temp]], et sa CA augmente de 2 jusqu'à la fin du tour suivant de la [[lookup @name lowercase]]{monstre}. Le [[lookup @name lowercase]]{monstre} ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>",
             "activities": {
                 "Temporary Healing": {
                     "name": "Soin temporaire",
@@ -2544,7 +2544,7 @@
         },
         "Shriek": {
             "name": "Criaillement",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> une créature ou une source de Lumière vive se déplace dans un rayon de [[lookup @range.value activity=Tlv3gcYk5KfdtV7c]] [[lookup @range.units activity=Tlv3gcYk5KfdtV7c]] du [[lookup @name lowercase]]. <em>Conséquences :</em> le [[lookup @name lowercase]] émet un hurlement audible dans un rayon de [[lookup @target.template.size activity=Tlv3gcYk5KfdtV7c]] [[lookup @target.template.units activity=Tlv3gcYk5KfdtV7c]] pendant [[lookup @duration.value activity=Tlv3gcYk5KfdtV7c]] [[lookup @duration.units activity=Tlv3gcYk5KfdtV7c]] (le cri cesse s'il meurt).</p>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> une créature ou une source de Lumière vive se déplace dans un rayon de [[lookup @range.value activity=Tlv3gcYk5KfdtV7c]] [[lookup @range.units activity=Tlv3gcYk5KfdtV7c]] du [[lookup @name lowercase]]{monstre}. <em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} émet un hurlement audible dans un rayon de [[lookup @target.template.size activity=Tlv3gcYk5KfdtV7c]] [[lookup @target.template.units activity=Tlv3gcYk5KfdtV7c]] pendant [[lookup @duration.value activity=Tlv3gcYk5KfdtV7c]] [[lookup @duration.units activity=Tlv3gcYk5KfdtV7c]] (le cri cesse s'il meurt).</p>",
             "activities": {
                 "Use": {
                     "name": "Utiliser"
@@ -2553,7 +2553,7 @@
         },
         "Siege Monster": {
             "name": "Monstre de siège",
-            "description": "<p>Le [[lookup @name lowercase]] inflige des dégâts doublés aux objets et aux structures.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Slam": {
             "name": "Coup",
@@ -2565,7 +2565,7 @@
         },
         "Slaying Bow": {
             "name": "Arc tueur",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=C7BMf8hIfCjxRSWC]], une créature que le [[lookup @name lowercase]] voit dans un rayon de [[lookup @range.value activity=C7BMf8hIfCjxRSWC]] [[lookup @range.units activity=C7BMf8hIfCjxRSWC]]. <em>Échec :</em> si la créature est dotée de 100 points de vie ou moins, elle meurt. Sinon, elle subit [[/damage average]].</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=C7BMf8hIfCjxRSWC]], une créature que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @range.value activity=C7BMf8hIfCjxRSWC]] [[lookup @range.units activity=C7BMf8hIfCjxRSWC]]. <em>Échec :</em> si la créature est dotée de 100 points de vie ou moins, elle meurt. Sinon, elle subit [[/damage average]].</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2574,7 +2574,7 @@
         },
         "Sleep": {
             "name": "Sommeil",
-            "description": "<p>Le [[lookup @name lowercase]] lance @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{sommeil} sans composantes de sort, le Charisme étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]).</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} lance @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{sommeil} sans composantes de sort, le Charisme étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]).</p>"
         },
         "Sleep Breath": {
             "name": "Souffle soporifique",
@@ -2601,7 +2601,7 @@
         },
         "Slow": {
             "name": "Lenteur",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{lenteur}</em>, sans composantes de sort, la Constitution étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @abilities.con.dc]]).</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSlow000000]{lenteur}</em>, sans composantes de sort, la Constitution étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @abilities.con.dc]]).</p>"
         },
         "Slowing Breath": {
             "name": "Souffle ralentissant",
@@ -2615,7 +2615,7 @@
         },
         "Smother": {
             "name": "Étouffement",
-            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. Si la cible est une créature de taille M ou inférieure, le [[lookup @name lowercase]] peut lui imposer l'état &Reference[Grappled apply=false] (évasion DD [[lookup @skills.ath.passive]]) au lieu de lui infliger des dégâts. Tant que la cible est Agrippée, elle subit les états &Reference[Blinded apply=false] et &Reference[Restrained apply=false], s'&Reference[Suffocating]{asphyxie}, et subit [[/damage average]] au début de chacun de ses tours. Le [[lookup @name lowercase]] ne peut étouffer qu'une créature à la fois.</p><p class=\"feature\">Tant qu'il agrippe la cible, le [[lookup @name lowercase]] ne peut pas entreprendre cette action, il réduit de moitié les dégâts qu'il subit (arrondis à l'inférieur) et la cible subit autant de dégâts que lui.</p>",
+            "description": "<p class=\"feature\">[[/attack extended]]. [[/damage average extended]]. Si la cible est une créature de taille M ou inférieure, le [[lookup @name lowercase]]{monstre} peut lui imposer l'état &Reference[Grappled apply=false] (évasion DD [[lookup @skills.ath.passive]]) au lieu de lui infliger des dégâts. Tant que la cible est Agrippée, elle subit les états &Reference[Blinded apply=false] et &Reference[Restrained apply=false], s'&Reference[Suffocating]{asphyxie}, et subit [[/damage average]] au début de chacun de ses tours. Le [[lookup @name lowercase]]{monstre} ne peut étouffer qu'une créature à la fois.</p><p class=\"feature\">Tant qu'il agrippe la cible, le [[lookup @name lowercase]]{monstre} ne peut pas entreprendre cette action, il réduit de moitié les dégâts qu'il subit (arrondis à l'inférieur) et la cible subit autant de dégâts que lui.</p>",
             "activities": {
                 "Grappled: Damage": {
                     "name": "Agrippé : Dégâts"
@@ -2634,31 +2634,31 @@
         },
         "Sonic Boom": {
             "name": "Fracas tonitruant",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] recourt à Incantation pour lancer <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplShatter000]{fracassement}</em>. Le [[lookup @name lowercase]] ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} recourt à Incantation pour lancer <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplShatter000]{fracassement}</em>. Le [[lookup @name lowercase]]{monstre} ne peut alors plus entreprendre cette action jusqu'au début de son tour suivant.</p>"
         },
         "Soul Bag": {
             "name": "Sac des âmes",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] possède un sac des âmes. Tant qu'elle brandit ou porte ce sac, la [[lookup @name lowercase]] peut recourir à l'action Cauchemars accablants.</p><p class=\"feature\">Le profil du sac est le suivant : CA 15, 20 Pv et Résistance à tous les dégâts. Le sac tombe en poussière s'il est réduit à 0 point de vie. Si le sac est détruit, les âmes qu'il contenait sont libérées. Il faut 7 jours à la [[lookup @name lowercase]] pour créer un nouveau sac.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} possède un sac des âmes. Tant qu'elle brandit ou porte ce sac, le [[lookup @name lowercase]]{monstre} peut recourir à l'action Cauchemars accablants.</p><p class=\"feature\">Le profil du sac est le suivant : CA 15, 20 Pv et Résistance à tous les dégâts. Le sac tombe en poussière s'il est réduit à 0 point de vie. Si le sac est détruit, les âmes qu'il contenait sont libérées. Il faut 7 jours au [[lookup @name lowercase]]{monstre} pour créer un nouveau sac.</p>"
         },
         "Speak with Beasts and Plants": {
             "name": "Communication avec les bêtes et les plantes",
-            "description": "<p class=\"feature\">La [[lookup @name lowercase]] peut communiquer avec les Bêtes et les Plantes comme si elles parlaient la même langue.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} peut communiquer avec les Bêtes et les Plantes comme si elles parlaient la même langue.</p>"
         },
         "Spell Storing": {
             "name": "Stockage de sort",
-            "description": "<p class=\"feature\">Un incantateur qui porte l'amulette du [[lookup @name lowercase]] peut stocker un sort du 4<sup>e</sup> niveau ou inférieur dans l'Artificiel. Pour ce faire, le porteur doit lancer le sort sur le [[lookup @name lowercase]] en étant à 1,50 m ou moins de lui. Le sort n'a aucun effet immédiat ; il est stocké dans le [[lookup @name lowercase]]. Tout sort précédemment stocké est perdu quand on en stocke un nouveau. Le [[lookup @name lowercase]] peut lancer le sort stocké avec tous les paramètres choisis par l'incantateur de départ, sans composantes de sort et en prenant la caractéristique d'incantation de cet incantateur. Le sort stocké est alors perdu.</p>"
+            "description": "<p class=\"feature\">Un incantateur qui porte l'amulette du [[lookup @name lowercase]]{monstre} peut stocker un sort du 4<sup>e</sup> niveau ou inférieur dans l'Artificiel. Pour ce faire, le porteur doit lancer le sort sur le [[lookup @name lowercase]]{monstre} en étant à 1,50 m ou moins de lui. Le sort n'a aucun effet immédiat ; il est stocké dans le [[lookup @name lowercase]]{monstre}. Tout sort précédemment stocké est perdu quand on en stocke un nouveau. Le [[lookup @name lowercase]]{monstre} peut lancer le sort stocké avec tous les paramètres choisis par l'incantateur de départ, sans composantes de sort et en prenant la caractéristique d'incantation de cet incantateur. Le sort stocké est alors perdu.</p>"
         },
         "Spellcasting": {
             "name": "Incantation",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance l'un des sorts suivants, sans composantes {type}, le {caractéristique} étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]) :</p><p class=\"feature-trait\"><strong>À volonté :</strong> <em>{sort}</em></p><p class=\"feature-trait\"><strong>{nombre}/jour chacun :</strong> <em>{sort}</em></p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance l'un des sorts suivants, sans composantes {type}, le {caractéristique} étant sa caractéristique d'incantation (DD de sauvegarde [[lookup @attributes.spell.dc]]) :</p><p class=\"feature-trait\"><strong>À volonté :</strong> <em>{sort}</em></p><p class=\"feature-trait\"><strong>{nombre}/jour chacun :</strong> <em>{sort}</em></p>"
         },
         "Spider Climb": {
             "name": "Pattes d'araignée",
-            "description": "<p>Le [[lookup @name lowercase]] peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
+            "description": "<p>Le [[lookup @name lowercase]]{monstre} peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
         },
         "Spirit Jar": {
             "name": "Réceptacle spirituel",
-            "description": "<p class=\"feature\">Si elle est détruite, la [[lookup @name lowercase]] se reconstitue en [[/r 1d10]] jours si elle possède un réceptacle spirituel, en récupérant tous ses points de vie. Le nouveau corps apparaît en un espace inoccupé dans l'antre de la [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\">S'il est détruit, le [[lookup @name lowercase]]{monstre} se reconstitue en [[/r 1d10]] jours si il possède un réceptacle spirituel, en récupérant tous ses points de vie. Le nouveau corps apparaît en un espace inoccupé dans l'antre du [[lookup @name lowercase]]{monstre}.</p>",
             "activities": {
                 "Days to Reform": {
                     "name": "Jours à se reconstituer",
@@ -2668,11 +2668,11 @@
         },
         "Spiritual Weapon": {
             "name": "Arme spirituelle",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] lance le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSpiritualW]{arme spirituelle}</em> avec la même caractéristique d'incantation que pour Incantation.</p>"
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSpiritualW]{arme spirituelle}</em> avec la même caractéristique d'incantation que pour Incantation.</p>"
         },
         "Split": {
             "name": "Division",
-            "description": "<p class=\"feature\"><em>Déclencheur :</em> alors que le [[lookup @name lowercase]] [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]]</p><p class=\"feature\"><em>Conséquences :</em> le [[lookup @name lowercase]] se scinde en deux nouveaux <strong>[[lookup @name capitalize]]</strong>. Chaque nouveau [[lookup @name lowercase]] présente une catégorie de taille de moins que le [[lookup @name lowercase]] dont il est issu et agit au même rang d'Initiative. Les points de vie du [[lookup @name lowercase]] « parent » sont divisés équitablement entre les deux nouveaux [[lookup @name lowercase]]s (arrondir à l'inférieur).</p>",
+            "description": "<p class=\"feature\"><em>Déclencheur :</em> alors que le [[lookup @name lowercase]]{monstre} [[lookup @activation.condition activity=zoXFSgzmWq8frUjI]]</p><p class=\"feature\"><em>Conséquences :</em> le [[lookup @name lowercase]]{monstre} se scinde en deux nouveaux <strong>[[lookup @name capitalize]]{monstre}</strong>. Chaque nouveau [[lookup @name lowercase]]{monstre} présente une catégorie de taille de moins que le [[lookup @name lowercase]]{monstre} dont il est issu et agit au même rang d'Initiative. Les points de vie du [[lookup @name lowercase]]{monstre} « parent » sont divisés équitablement entre les deux nouveaux [[lookup @name lowercase]]{monstre}s (arrondir à l'inférieur).</p>",
             "activities": {
                 "Split": {
                     "name": "Division",
@@ -2687,7 +2687,7 @@
         },
         "Spores": {
             "name": "Spores",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=voqQeTnihpy3BTFf]], chaque créature dans une Émanation de [[lookup @target.template.size activity=voqQeTnihpy3BTFf]] [[lookup @target.template.units activity=voqQeTnihpy3BTFf]] centrée sur le [[lookup @name lowercase]].</p><p class=\"feature\"><em>Échec :</em> la cible subit l'état &Reference[Poisoned apply=false] et réitère le JS à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite. Ainsi Empoisonnée, une cible subit [[/damage average activity=ukZveNVmvvtwbDj0]] au début de chacun de ses tours. Vider une flasque d'eau bénite sur la cible met prématurément fin à l'effet.</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=voqQeTnihpy3BTFf]], chaque créature dans une Émanation de [[lookup @target.template.size activity=voqQeTnihpy3BTFf]] [[lookup @target.template.units activity=voqQeTnihpy3BTFf]] centrée sur le [[lookup @name lowercase]]{monstre}.</p><p class=\"feature\"><em>Échec :</em> la cible subit l'état &Reference[Poisoned apply=false] et réitère le JS à la fin de chacun de ses tours ; elle met un terme à l'effet sur elle-même en cas de réussite. Ainsi Empoisonnée, une cible subit [[/damage average activity=ukZveNVmvvtwbDj0]] au début de chacun de ses tours. Vider une flasque d'eau bénite sur la cible met prématurément fin à l'effet.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde"
@@ -2706,7 +2706,7 @@
         },
         "Standing Leap": {
             "name": "Saut sans élan",
-            "description": "<p class=\"feature\">Les sauts en longueur de la [[lookup @name lowercase]] peuvent atteindre 6 m et ses sauts en hauteur 3 m, avec ou sans élan.</p>"
+            "description": "<p class=\"feature\">Les sauts en longueur du [[lookup @name lowercase]]{monstre} peuvent atteindre 6 m et ses sauts en hauteur 3 m, avec ou sans élan.</p>"
         },
         "Steam Breath": {
             "name": "Souffle de vapeur",
@@ -2719,7 +2719,7 @@
         },
         "Stench": {
             "name": "Puanteur",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=mJbwhj3beOIB3Jgj]], toute créature (autre qu'un [[lookup @name lowercase]]) qui commence son tour dans une Émanation de [[lookup @target.template.size activity=mJbwhj3beOIB3Jgj]] [[lookup @target.template.units activity=mJbwhj3beOIB3Jgj]] centrée sur le [[lookup @name lowercase]]. <em>Échec :</em> la cible subit l'état &Reference[Poisoned apply=false] jusqu'au début de son tour suivant. <em>Réussite :</em> la cible est immunisée contre la Puanteur de tous les [[lookup @name lowercase]]s pendant 1 heure.</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=mJbwhj3beOIB3Jgj]], toute créature (autre qu'un [[lookup @name lowercase]]{monstre}) qui commence son tour dans une Émanation de [[lookup @target.template.size activity=mJbwhj3beOIB3Jgj]] [[lookup @target.template.units activity=mJbwhj3beOIB3Jgj]] centrée sur le [[lookup @name lowercase]]{monstre}. <em>Échec :</em> la cible subit l'état &Reference[Poisoned apply=false] jusqu'au début de son tour suivant. <em>Réussite :</em> la cible est immunisée contre la Puanteur de tous les [[lookup @name lowercase]]{monstre}s pendant 1 heure.</p>",
             "effects": {
                 "Poisoned": {
                     "name": "Empoisonné",
@@ -2755,7 +2755,7 @@
         },
         "Stunning Screech": {
             "name": "Piaillement étourdissant",
-            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=eoIikvnPayaj02oN]], chaque créature dans une Émanation de [[lookup @target.template.size activity=eoIikvnPayaj02oN]] [[lookup @target.template.units activity=eoIikvnPayaj02oN]] centrée sur le [[lookup @name lowercase]] (les démons réussissent automatiquement).</p><p class=\"feature\"><em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Stunned apply=false] jusqu'à la fin du tour suivant du [[lookup @name lowercase]].</p>",
+            "description": "<p class=\"feature\"><em>JS Constitution :</em> DD [[lookup @save.dc.value activity=eoIikvnPayaj02oN]], chaque créature dans une Émanation de [[lookup @target.template.size activity=eoIikvnPayaj02oN]] [[lookup @target.template.units activity=eoIikvnPayaj02oN]] centrée sur le [[lookup @name lowercase]]{monstre} (les démons réussissent automatiquement).</p><p class=\"feature\"><em>Échec :</em> [[/damage average]], et la cible subit l'état &Reference[Stunned apply=false] jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
             "effects": {
                 "Stunned": {
                     "name": "Étourdi",
@@ -2765,7 +2765,7 @@
         },
         "Succubus Form": {
             "name": "Forme de succube",
-            "description": "<p class=\"feature\">Lorsque l'[[lookup @name lowercase]] termine un Repos long, il peut se transformer en <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{succube}</strong>, le profil de celle-ci remplaçant alors le sien. Rien de ce qu'il porte n'est transformé.</p>",
+            "description": "<p class=\"feature\">Lorsque le [[lookup @name lowercase]]{monstre} termine un Repos long, il peut se transformer en <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmSuccubus000000]{succube}</strong>, le profil de celle-ci remplaçant alors le sien. Rien de ce qu'il porte n'est transformé.</p>",
             "activities": {
                 "Shape-Shift: Succubus": {
                     "name": "Transformer : Succube",
@@ -2779,17 +2779,17 @@
         },
         "Sunlight Sensitivity": {
             "name": "Sensibilité au soleil",
-            "description": "<p>Tant qu'il est exposé à la lumière du soleil, le [[lookup @name lowercase]] subit le Désavantage aux tests de caractéristique et aux jets d'attaque.</p>",
+            "description": "<p>Tant qu'il est exposé à la lumière du soleil, le [[lookup @name lowercase]]{monstre} subit le Désavantage aux tests de caractéristique et aux jets d'attaque.</p>",
             "requirements": "Tant qu'il est exposé à la lumière du soleil"
         },
         "Sunlight Weakness": {
             "name": "Morsure du soleil",
-            "description": "<p class=\"feature\">Tant qu'elle est exposée à la lumière du soleil, l'[[lookup @name lowercase]] subit le Désavantage aux Tests d20.</p>",
+            "description": "<p class=\"feature\">Tant qu'il est exposée à la lumière du soleil, le [[lookup @name lowercase]]{monstre} subit le Désavantage aux Tests d20.</p>",
             "requirements": "Tant qu'elle est exposée à la lumière du soleil"
         },
         "Swallow": {
             "name": "Engloutissement",
-            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] par le [[lookup @name lowercase]] (celui-ci ne peut contenir qu'une seule créature engloutie).</p><p class=\"feature\"><em>Échec :</em> le [[lookup @name lowercase]] engloutit la cible, qui n'est plus Agrippée. La créature engloutie subit les états &Reference[Blinded apply=false] et &Reference[Restrained apply=false], bénéficie d'un &Reference[Total Cover] contre les attaques et effets émanant de l'extérieur du [[lookup @name lowercase]] et subit [[/damage average activity=zrWNjO9mkbN28spL]] au début de chacun des tours du monstre.</p><p class=\"feature\">Si le [[lookup @name lowercase]] subit 30 dégâts ou plus lors d'un même tour de la part de la créature engloutie, il doit réussir un [[/save format=long activity=rGeGukkm2t2fXsoy]] à la fin du tour concerné sous peine de régurgiter la créature, qui se retrouve avec l'état &Reference[Prone apply=false] dans un espace situé dans un rayon de [[lookup @range.value activity=rGeGukkm2t2fXsoy]] [[lookup @range.units activity=rGeGukkm2t2fXsoy]] du monstre. Si le [[lookup @name lowercase]] meurt, la créature engloutie n'est plus Entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver À terre près du cadavre.</p>",
+            "description": "<p class=\"feature\"><em>JS Dextérité :</em> DD [[lookup @save.dc.value activity=YorssyWMumAsvzx3]], [[lookup @target.affects.special activity=YorssyWMumAsvzx3]] par le [[lookup @name lowercase]]{monstre} (celui-ci ne peut contenir qu'une seule créature engloutie).</p><p class=\"feature\"><em>Échec :</em> le [[lookup @name lowercase]]{monstre} engloutit la cible, qui n'est plus Agrippée. La créature engloutie subit les états &Reference[Blinded apply=false] et &Reference[Restrained apply=false], bénéficie d'un &Reference[Total Cover] contre les attaques et effets émanant de l'extérieur du [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=zrWNjO9mkbN28spL]] au début de chacun des tours du monstre.</p><p class=\"feature\">Si le [[lookup @name lowercase]]{monstre} subit 30 dégâts ou plus lors d'un même tour de la part de la créature engloutie, il doit réussir un [[/save format=long activity=rGeGukkm2t2fXsoy]] à la fin du tour concerné sous peine de régurgiter la créature, qui se retrouve avec l'état &Reference[Prone apply=false] dans un espace situé dans un rayon de [[lookup @range.value activity=rGeGukkm2t2fXsoy]] [[lookup @range.units activity=rGeGukkm2t2fXsoy]] du monstre. Si le [[lookup @name lowercase]]{monstre} meurt, la créature engloutie n'est plus Entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver À terre près du cadavre.</p>",
             "activities": {
                 "Save": {
                     "name": "Sauvegarde",
@@ -2835,7 +2835,7 @@
         },
         "Swoop": {
             "name": "Piqué",
-            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]] tient une créature Agrippée, il vole à concurrence de la moitié de sa Vitesse de vol sans provoquer d'&Reference[OpportunityAttacks]{attaques d'Opportunité} et lâche cette créature.</p>",
+            "description": "<p class=\"feature\">Si le [[lookup @name lowercase]]{monstre} tient une créature Agrippée, il vole à concurrence de la moitié de sa Vitesse de vol sans provoquer d'&Reference[OpportunityAttacks]{attaques d'Opportunité} et lâche cette créature.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation",
@@ -2863,7 +2863,7 @@
         },
         "Tail Swipe": {
             "name": "Balayage caudal",
-            "description": "<p class=\"feature\">Le [[lookup @name lowercase]] effectue une attaque de [[/item Saignée]].</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item Saignée]].</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
@@ -2876,11 +2876,11 @@
         },
         "Telepathic Bond": {
             "name": "Lien télépathique",
-            "description": "<p class=\"feature\">Tant que l'[[lookup @name lowercase]] et son maître se trouvent sur le même plan d'existence, ils peuvent communiquer entre eux par télépathie.</p>"
+            "description": "<p class=\"feature\">Tant que le [[lookup @name lowercase]]{monstre} et son maître se trouvent sur le même plan d'existence, ils peuvent communiquer entre eux par télépathie.</p>"
         },
         "Teleport": {
             "name": "Téléportation",
-            "description": "<p class=\"feature\">L'[[lookup @name lowercase]] se téléporte d'un maximum de [[lookup @range.value activity=dnoRMdFzhUUku26D]] [[lookup @range.units activity=dnoRMdFzhUUku26D]] dans un espace inoccupé qu'il voit.</p>",
+            "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} se téléporte d'un maximum de [[lookup @range.value activity=dnoRMdFzhUUku26D]] [[lookup @range.units activity=dnoRMdFzhUUku26D]] dans un espace inoccupé qu'il voit.</p>",
             "activities": {
                 "Expend Use": {
                     "name": "Dépenser utilisation"
