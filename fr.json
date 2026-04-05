@@ -419,11 +419,14 @@
         "Roll": "Jet",
         "Average": "Moy.",
         "Final": "Final",
-        "Max": "Max"
+        "Max": "Max",
+        "Previous": "Préc."
       },
       "Action": {
-        "RollDie": "Lancer {die}"
-      }
+        "RollDie": "Lancer {die}",
+        "RollClass": "Lancer les points de vie de {class}"
+      },
+      "Options": "Options"
     },
     "ItemGrant": {
       "Details": "Détails de l'attribution",
@@ -537,7 +540,8 @@
       "Action": {
         "SelectGeneric": "Sélectionner un objet",
         "SelectSpecific": "Sélectionner {type}"
-      }
+      },
+      "Options": "Options"
     },
     "ScaleValue": {
       "FIELDS": {
@@ -616,12 +620,17 @@
         }
       },
       "Hint": "Définir la taille d'un personnage.",
-      "Title": "Taille"
+      "Title": "Taille",
+      "Action": {
+        "SelectSize": "Sélectionner la taille"
+      }
     },
     "Trait": {
       "Action": {
         "AddChoice": "Ajouter un choix",
-        "RemoveChoice": "Supprimer un choix"
+        "RemoveChoice": "Supprimer un choix",
+        "RemoveTrait": "Retirer le trait",
+        "SelectTrait": "Sélectionner un trait"
       },
       "ChoicesRemaining": "Sélectionnez {count} {type} supplémentaires",
       "Details": "Détails du trait",
@@ -1557,6 +1566,13 @@
       "Radiant": "Radiants",
       "Slashing": "Tranchants",
       "Thunder": "Tonnerre"
+    },
+    "All": "Tous les dégâts",
+    "PhysicalBypass": {
+      "Description": "{damageTypes} des attaques qui ne sont pas {bypassTypes}",
+      "DescriptionShort": "Contourné par les sources de type {type}",
+      "Hint": "Les propriétés de ces armes permettent de contourner la résistance aux dégâts pour les dégâts physiques.",
+      "Label": "Contournements dégâts physiques"
     }
   },
   "DND5E.DamImm": "Immunités (dégâts)",
@@ -2094,9 +2110,13 @@
     "Type": {
       "Healing": "Points de vie",
       "HealingShort": "Soins",
-      "Temporary": "Points de vie temporaires"
+      "Temporary": "Points de vie temporaires",
+      "Maximum": "Points de vie maximums",
+      "MaximumShort": "PV max",
+      "TemporaryShort": "Pv temp"
     },
-    "HealingButton": "Soins"
+    "HealingButton": "Soins",
+    "HealingRoll": "Jet de soin"
   },
   "DND5E.Height": "Taille",
   "DND5E.HitPoints": "Points de vie",
@@ -2815,6 +2835,10 @@
           "label": "Fenêtre d'invocation",
           "hint": "Faut-il inviter le joueur à placer les invocations ? Les joueurs pourront toujours invoquer à partir de la carte de tchat si l'invite est désactivée."
         }
+      },
+      "tempHP": {
+        "label": "Pv temp",
+        "hint": "Accorde à la créature invoquée des points de vie temporaires, en remplaçant les points de vie temporaires existants."
       }
     },
     "SECTIONS": {
@@ -2918,6 +2942,10 @@
           "width": {
             "label": "Largeur de la zone",
             "hint": "Largeur d'une ligne affectée, le cas échéant."
+          },
+          "stationary": {
+            "label": "Stationnaire",
+            "hint": "Une Émanation ne peut pas être déplacée une fois placée."
           }
         }
       }
@@ -4166,7 +4194,8 @@
   "TYPES.ChatMessage": {
     "turn": "Message de tour de combat",
     "rest": "Message de repos",
-    "request": "Demande de message"
+    "request": "Demande de message",
+    "usage": "Message d'utilisation"
   },
   "DND5E.Language": {
     "Language": {
@@ -5283,7 +5312,11 @@
     "Navigation": {
       "Next": "Suivant",
       "Previous": "Précédent",
-      "Up": "Remonter"
+      "Up": "Remonter",
+      "Title": "Navigation"
+    },
+    "Action": {
+      "ConfigureNavigation": "Configurer la navigation"
     }
   },
   "SOURCE.BOOK.SRD51": "Document de Référence Système 5.1",
@@ -5319,7 +5352,8 @@
       "WeightlessContents": "Contenu sans poids",
       "Special": "Spécial",
       "StealthDisadvantage": "Désavantage de Discrétion",
-      "Sidekick": "Comparses"
+      "Sidekick": "Comparses",
+      "Gear": "Équipement"
     },
     "SECTIONS": {
       "Activities": "Activités",
@@ -5543,7 +5577,8 @@
     "Rule": "Fiche des règles D&D 5e",
     "SpellList": "Fiche de listes de sorts D&D 5e",
     "Token": "Fiche de token D&D 5e",
-    "Vehicle": "Fiche de véhicule D&D 5e"
+    "Vehicle": "Fiche de véhicule D&D 5e",
+    "RollTable": "Fiche de table aléatoire D&D 5e"
   },
   "DND5E.SkillRoll": "Test de {ability} ({skill})",
   "DND5E.SpellLevelSpell": "{level} ({n} Emplacements)",
@@ -5579,7 +5614,8 @@
       }
     },
     "Hover": "Vol stationnaire",
-    "Speed": "Vitesse de combat"
+    "Speed": "Vitesse de combat",
+    "HoverSpeed": "{speed} (vol stationnaire)"
   },
   "DND5E.TRAVEL": {
     "Label": "Allure de voyage",
@@ -5842,5 +5878,30 @@
       "dnd5e.difficultTerrain": "Marquez une région comme terrain difficile, puis définissez son type et les entités concernées.",
       "dnd5e.rotateArea": "Faites pivoter les tokens, les tuiles, les murs et autres objets autour d'un point de pivot central."
     }
-  }
+  },
+  "DND5E.Gear": {
+    "Action": {
+      "Add": "Ajouter à l'équipement",
+      "Remove": "Retirer de l'équipement"
+    },
+    "Label": "Équipement"
+  },
+  "DND5E.SourceItem": {
+    "Label": "Objet source",
+    "LockedHint": "La source de cet objet est déterminée automatiquement par l'objet qui l'a attribué et ne peut pas être modifiée."
+  },
+  "DND5E.SPELL": {
+    "Embed": {
+      "CastingTimeTrigger": "{castingTime}, que vous jouez {trigger}",
+      "Tag": {
+        "Cantrip": "{school} mineure",
+        "CantripLegacy": "Sort mineur de {school}",
+        "Classes": "{levelSchool} ({classes})",
+        "Leveled": "{school} du {levelOrdinal} niveau",
+        "LeveledLegacy": "{school} du {levelOrdinal} niveau",
+        "Ritual": "{levelSchool} (rituel)"
+      }
+    }
+  },
+  "DND5E.SpellComponentsMaterial": "{components} ({materials})"
 }
