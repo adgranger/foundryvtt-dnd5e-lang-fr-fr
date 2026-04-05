@@ -357,7 +357,8 @@
       "Action": {
         "Select": "Sélectionner un don"
       },
-      "TitleEpic": "Faveur épique"
+      "TitleEpic": "Faveur épique",
+      "EffectTargetHint": "Cette valeur est modifiée par un effet actif. Sa valeur finale sera {value}."
     },
     "SPELLCONFIG": {
       "FreeCasting": "Incantation gratuite",
@@ -415,7 +416,13 @@
       "Hint": "Suivre les points de vie du joueur pour chaque niveau dans la classe.",
       "Breakdown": {
         "Bonus": "Bonus",
-        "Roll": "Jet"
+        "Roll": "Jet",
+        "Average": "Moy.",
+        "Final": "Final",
+        "Max": "Max"
+      },
+      "Action": {
+        "RollDie": "Lancer {die}"
       }
     },
     "ItemGrant": {
@@ -689,6 +696,18 @@
       "BackgroundFeature": "Aptitude d'historique",
       "BackgroundProficiencies": "Maîtrises d'historique",
       "ChooseLanguages": "Choix des langues"
+    },
+    "Deletion": {
+      "Delete": {
+        "Message": "La suppression de cet objet supprimera également tous les choix de progression qui y ont été associés. Ces modifications seront supprimées de votre personnage tant que la case ci-dessous sera cochée.",
+        "Title": "Confirmer la suppression"
+      },
+      "LevelDown": {
+        "Message": "La réduction du niveau de cette classe supprime également tous les choix de progression qui y ont été effectués. Ces modifications seront supprimées de votre personnage tant que la case ci-dessous restera cochée.",
+        "Title": "Réduire le niveau"
+      },
+      "Label": "Retirer les modifications",
+      "Options": "Options"
     }
   },
   "DND5E.AdvancementChoices": "choix",
@@ -5816,6 +5835,12 @@
         "Autumn": "Automne",
         "Winter": "Hiver"
       }
+    }
+  },
+  "TYPES.HINTS": {
+    "RegionBehavior": {
+      "dnd5e.difficultTerrain": "Marquez une région comme terrain difficile, puis définissez son type et les entités concernées.",
+      "dnd5e.rotateArea": "Faites pivoter les tokens, les tuiles, les murs et autres objets autour d'un point de pivot central."
     }
   }
 }
