@@ -14457,6 +14457,9 @@
                             "name": "Changements du sort"
                         }
                     }
+                },
+                "Chain Shirt": {
+                    "name": "Chemise de mailles"
                 }
             }
         },
@@ -14554,6 +14557,9 @@
                             "name": "Changements du sort"
                         }
                     }
+                },
+                "Chain Shirt": {
+                    "name": "Chemise de mailles"
                 }
             }
         },
@@ -18437,6 +18443,9 @@
                     "name": "Tactique de meute",
                     "description": "<p>Quand au moins un de ses alliés non Neutralisés se situe dans un rayon de 1,50 m de la créature qu'il cible, le soldat a l'Avantage au jet d'attaque correspondant.</p>",
                     "requirements": "Allié dans un rayon de 1,50 m de la cible de l'attaque"
+                },
+                "Chain Shirt": {
+                    "name": "Chemise de mailles"
                 }
             }
         },
@@ -19635,6 +19644,27 @@
                             }
                         }
                     }
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19653,6 +19683,23 @@
                             "changes": {
                                 "system.traits.languages.custom": ";comprend les Bêtes et communique verbalement avec elles"
                             }
+                        }
+                    }
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19675,6 +19722,23 @@
                             }
                         }
                     }
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19695,6 +19759,36 @@
                             }
                         }
                     }
+                },
+                "Shield +2": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +2": {
+                            "name": "Bouclier +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19704,6 +19798,19 @@
                     "activities": {
                         "Escape Check": {
                             "name": "Test d'évasion"
+                        }
+                    }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19717,6 +19824,19 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19726,6 +19846,19 @@
                     "activities": {
                         "Escape Check": {
                             "name": "Test d'évasion"
+                        }
+                    }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19739,6 +19872,19 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19750,6 +19896,42 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -19761,6 +19943,46 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -19772,6 +19994,46 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -19783,6 +20045,46 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -19798,6 +20100,31 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19813,6 +20140,31 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19828,6 +20180,31 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19843,6 +20220,31 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19852,6 +20254,19 @@
                     "activities": {
                         "Escape Check": {
                             "name": "Test d'évasion"
+                        }
+                    }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19865,6 +20280,19 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19874,6 +20302,19 @@
                     "activities": {
                         "Escape Check": {
                             "name": "Test d'évasion"
+                        }
+                    }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19887,6 +20328,19 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19896,6 +20350,19 @@
                     "activities": {
                         "Escape Check": {
                             "name": "Test d'évasion"
+                        }
+                    }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19909,6 +20376,19 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19920,6 +20400,19 @@
                             "name": "Test d'évasion"
                         }
                     }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19929,6 +20422,19 @@
                     "activities": {
                         "Escape Check": {
                             "name": "Test d'évasion"
+                        }
+                    }
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
                         }
                     }
                 }
@@ -19946,6 +20452,19 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19961,6 +20480,19 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19976,6 +20508,19 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -19991,6 +20536,23 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         },
@@ -20037,6 +20599,125 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>"
+                },
+                "Chain Shirt": {
+                    "name": "Chemise de mailles"
+                },
+                "Mace": {
+                    "name": "Masse d'armes"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
+                },
+                "Resistance": {
+                    "name": "Résistance",
+                    "description": "<p>Vous touchez physiquement une créature consentante en choisissant un type de dégâts entre : acide, contondants, feu, foudre, froid, nécrotiques, perforants, poison, radiants, tonnerre et tranchants. Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de 1d4. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>",
+                    "activities": {
+                        "utility": {
+                            "roll": "Réduction des dégâts"
+                        }
+                    },
+                    "effects": {
+                        "Acid Protection": {
+                            "name": "Protection : acide",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Bludgeoning Protection": {
+                            "name": "Protection : contondants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Cold Protection": {
+                            "name": "Protection : froid",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Fire Protection": {
+                            "name": "Protection : feu",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Lightning Protection": {
+                            "name": "Protection : foudre",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Necrotic Protection": {
+                            "name": "Protection : nécrotiques",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Piercing Protection": {
+                            "name": "Protection : perforants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -20083,6 +20764,122 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>"
+                },
+                "Mace": {
+                    "name": "Masse d'armes"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
+                },
+                "Resistance": {
+                    "name": "Résistance",
+                    "description": "<p>Vous touchez physiquement une créature consentante en choisissant un type de dégâts entre : acide, contondants, feu, foudre, froid, nécrotiques, perforants, poison, radiants, tonnerre et tranchants. Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de 1d4. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>",
+                    "activities": {
+                        "utility": {
+                            "roll": "Réduction des dégâts"
+                        }
+                    },
+                    "effects": {
+                        "Acid Protection": {
+                            "name": "Protection : acide",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Bludgeoning Protection": {
+                            "name": "Protection : contondants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Cold Protection": {
+                            "name": "Protection : froid",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Fire Protection": {
+                            "name": "Protection : feu",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Lightning Protection": {
+                            "name": "Protection : foudre",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Necrotic Protection": {
+                            "name": "Protection : nécrotiques",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Piercing Protection": {
+                            "name": "Protection : perforants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -20129,6 +20926,131 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield +2": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +2": {
+                            "name": "Bouclier +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Mace": {
+                    "name": "Masse d'armes"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
+                },
+                "Resistance": {
+                    "name": "Résistance",
+                    "description": "<p>Vous touchez physiquement une créature consentante en choisissant un type de dégâts entre : acide, contondants, feu, foudre, froid, nécrotiques, perforants, poison, radiants, tonnerre et tranchants. Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de 1d4. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>",
+                    "activities": {
+                        "utility": {
+                            "roll": "Réduction des dégâts"
+                        }
+                    },
+                    "effects": {
+                        "Acid Protection": {
+                            "name": "Protection : acide",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Bludgeoning Protection": {
+                            "name": "Protection : contondants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Cold Protection": {
+                            "name": "Protection : froid",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Fire Protection": {
+                            "name": "Protection : feu",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Lightning Protection": {
+                            "name": "Protection : foudre",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Necrotic Protection": {
+                            "name": "Protection : nécrotiques",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Piercing Protection": {
+                            "name": "Protection : perforants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -20175,6 +21097,131 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Book (prayers)": {
+                    "name": "Livre (prières)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Holy Symbol (Varies)": {
+                    "name": "Symbole sacré (variable)",
+                    "description": "<p>Un symbole sacré, qui prend l'une des formes proposées dans la table Symboles sacrés, est serti de pierreries ou peint afin de canaliser la magie divine. Clercs et Paladins peuvent se servir d'un symbole sacré comme focaliseur d'incantation.</p><p>La table indique si un symbole sacré doit être tenu, porté ou cousu sur une étoffe, par exemple sur un tabard ou une bannière, ou fixé sur un bouclier.</p><table><caption>Symboles sacrés</caption><thead><tr><td>Symbole</td><td>Poids</td><td>Prix</td></tr></thead><tbody><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyAmuletworn]{Amulette} (portée ou tenue)</td><td>0,5 kg</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyEmblemborn]{Emblème} (cousu sur une étoffe ou fixé un bouclier)</td><td>—</td><td>5 po</td></tr><tr><td>@UUID[Compendium.dnd5e.equipment24.Item.phbhsyReliquaryh]{Reliquaire} (tenu)</td><td>1 kg</td><td>5 po</td></tr></tbody></table>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield +3": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +3": {
+                            "name": "Bouclier +3",
+                            "changes": {
+                                "name": "{} +3",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Mace": {
+                    "name": "Masse d'armes"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                },
+                "Thaumaturgy": {
+                    "name": "Thaumaturgie",
+                    "description": "<p>Vous engendrez une manifestation surnaturelle mineure. Vous créez l'un des effets magiques suivants à portée. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets d'une minute.</p><p><strong>Bruit fantôme.</strong> Vous faites émaner un son bref d'un point que vous choisissez à portée, comme un grondement de tonnerre, un croassement ou des murmures inquiétants.</p><p><strong>Jeu avec le feu.</strong> Vous manipulez des flammes pendant 1 minute : elles vacillent, s'intensifient, s'atténuent ou changent de couleur.</p><p><strong>Main invisible.</strong> Vous provoquez l'ouverture soudaine d'une porte ou fenêtre non verrouillée ou la faites claquer.</p><p><strong>Secousse.</strong> Vous provoquez un léger tremblement de terre inoffensif pendant 1 minute.</p><p><strong>Voix retentissante.</strong> Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p><p><strong>Yeux modifiés.</strong> Vous altérez l'aspect de vos yeux pendant 1 minute.</p>",
+                    "effects": {
+                        "Booming Voice": {
+                            "name": "Voix retentissante",
+                            "description": "<p>Votre voix retentit jusqu'à trois fois plus fort que la normale pendant 1 minute. Pour toute la durée, vous avez l'Avantage aux tests de [[/check ability=cha skill=itm]].</p>"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
+                },
+                "Resistance": {
+                    "name": "Résistance",
+                    "description": "<p>Vous touchez physiquement une créature consentante en choisissant un type de dégâts entre : acide, contondants, feu, foudre, froid, nécrotiques, perforants, poison, radiants, tonnerre et tranchants. Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de 1d4. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>",
+                    "activities": {
+                        "utility": {
+                            "roll": "Réduction des dégâts"
+                        }
+                    },
+                    "effects": {
+                        "Acid Protection": {
+                            "name": "Protection : acide",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Bludgeoning Protection": {
+                            "name": "Protection : contondants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Cold Protection": {
+                            "name": "Protection : froid",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Fire Protection": {
+                            "name": "Protection : feu",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Lightning Protection": {
+                            "name": "Protection : foudre",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Necrotic Protection": {
+                            "name": "Protection : nécrotiques",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        },
+                        "Piercing Protection": {
+                            "name": "Protection : perforants",
+                            "description": "<p>Quand la créature subit des dégâts du type retenu avant la fin du sort, elle réduit les dégâts subis de [[/r 1d4]]. Une même créature ne peut bénéficier qu'une fois par tour de ce sort.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -20183,6 +21230,41 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -20191,6 +21273,41 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -20199,6 +21316,41 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
                 }
             }
         },
@@ -20207,6 +21359,434 @@
                 "Calligrapher's Supplies": {
                     "name": "Matériel de calligraphe",
                     "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Dextérité</p><p class=\"phb-meta\"><strong>Utilisation :</strong> écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, <em>parchemin de sort</em></p>"
+                },
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Light": {
+                    "name": "Lumière",
+                    "description": "<p>Vous touchez physiquement un objet de taille G ou inférieure qui n'est porté par personne d'autre. Jusqu'à la fin du sort, l'objet produit une Lumière vive sur un rayon de 6 m et une Lumière faible sur 6 m de plus. La lumière peut présenter les teintes de votre choix.</p><p>Recouvrir l'objet d'une surface opaque bloque la lumière. Le sort prend fin si vous le lancez à nouveau.</p>",
+                    "materials": "une luciole ou de la mousse phosphorescente"
+                }
+            }
+        },
+        "Sefris": {
+            "items": {
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "SefrisLv05000000": {
+            "items": {
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "SefrisLv11000000": {
+            "items": {
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "SefrisLv17000000": {
+            "items": {
+                "Parchment": {
+                    "name": "Parchemin",
+                    "description": "<p>Une feuille de parchemin peut contenir environ 250 mots écrits à la main.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "Krusk": {
+            "items": {
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                }
+            }
+        },
+        "KruskLv050000000": {
+            "items": {
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                }
+            }
+        },
+        "KruskLv110000000": {
+            "items": {
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                }
+            }
+        },
+        "KruskLv170000000": {
+            "items": {
+                "Robe": {
+                    "name": "Robe",
+                    "description": "<p>Une robe a une signification professionnelle ou cérémonielle. Certains événements et lieux n'admettent que les personnes vêtues d'une robe d'une couleur donnée ou arborant certains symboles.</p>"
+                },
+                "Shield +2": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +2": {
+                            "name": "Bouclier +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Priest's Pack": {
+                    "name": "Paquetage d'ecclésiastique",
+                    "description": "<p>Le paquetage d'ecclésiastique contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagBlanket0000]{couverture}, @UUID[Compendium.dnd5e.equipment24.Item.phbagHolyWater00]{eau bénite}, @UUID[Compendium.dnd5e.equipment24.Item.phbagLamp0000000]{lampe}, 7 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{robe}.</p>"
+                },
+                "Blanket": {
+                    "name": "Couverture",
+                    "description": "<p>Enveloppé dans une couverture, vous avez l'Avantage aux jets de sauvegarde contre le froid extrême (cf. « @UUID[Compendium.dnd5e.content24.JournalEntry.dmgDmsToolbox000.JournalEntryPage.xgLA30rErlkjIPAK]{Boîte à outils ludique} »).</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Lamp": {
+                    "name": "Lampe",
+                    "description": "<p>Une lampe brûle de l'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile} comme combustible et produit une Lumière vive sur un rayon de 4,50 m, ainsi qu'une Lumière faible sur 9 m de plus.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                },
+                "Holy Water": {
+                    "name": "Eau bénite",
+                    "description": "<p>Lorsque vous effectuez l'action Attaque, vous pouvez remplacer l'une de vos attaques par le jet d'une flasque d'eau bénite. Ciblez une créature que vous voyez dans un rayon de 6 m. La cible doit réussir un jet de sauvegarde de Dextérité (DD égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise) sous peine de subir 2d8 dégâts radiants si elle est de type Fiélon ou Mort-vivant.</p>",
+                    "activities": {
+                        "Throw": {
+                            "name": "Lancer"
+                        }
+                    }
+                }
+            }
+        },
+        "Beiro": {
+            "items": {
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "BeiroLv050000000": {
+            "items": {
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "BeiroLv110000000": {
+            "items": {
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
+                }
+            }
+        },
+        "BeiroLv170000000": {
+            "items": {
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>"
+                },
+                "Rations": {
+                    "name": "Rations",
+                    "description": "<p>Les rations sont composées d'aliments de voyage, viande séchée, fruits secs, biscuits et fruits à coque. Voir à « &Reference[Malnutrition] » dans le glossaire de règles pour les risques liés à l'absence de nourriture.</p>"
+                },
+                "Tinderbox": {
+                    "name": "Boîte à amadou",
+                    "description": "<p>Ce petit conteneur renferme silex, pierre à briquet et amorce (généralement un morceau de tissu imbibé d'huile), soit de quoi allumer un feu. L'utiliser pour allumer une bougie, une lampe, une lanterne ou une torche, ou tout autre objet dont le combustible est exposé, s'effectue par une action Bonus. Produire un autre type de flammes demande 1 minute.</p>",
+                    "activities": {
+                        "Light": {
+                            "name": "Lumière"
+                        }
+                    }
                 }
             }
         }
