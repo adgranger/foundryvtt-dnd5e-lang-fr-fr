@@ -21781,9 +21781,13 @@
                 "Sunburst": {
                     "effects": {
                         "Blinded": {
-                            "name": "Aveuglé"
+                            "name": "Aveuglé",
+                            "description": "<p>Une créature &Reference[Blinded apply=false]{Aveuglée} par ce sort réitère le jet de sauvegarde de [[/save ability=con dc=@attributes.spell.dc]] à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
                         }
-                    }
+                    },
+                    "name": "Éclat du soleil",
+                    "description": "<p>La lumière du soleil brille soudain dans une Sphère de 18 m de rayon, centrée sur un point que vous choisissez à portée. Chaque créature prise dans la Sphère effectue un jet de sauvegarde de Constitution. En cas d'échec, elle subit 12d6 dégâts radiants, ainsi que l'état &Reference[Blinded apply=false] pendant 1 minute. En cas de réussite, elle subit uniquement la moitié de ces dégâts.</p><p>Une créature Aveuglée par ce sort réitère le jet de sauvegarde de [[/save ability=con dc=@attributes.spell.dc]] à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p><p>Le sort dissipe dans la zone toutes les &Reference[Darkness] qui résultent d'un sort.</p>",
+                    "materials": "un morceau d'héliolite"
                 },
                 "Bag of Holding": {
                     "name": "Sac sans fond",
@@ -21807,6 +21811,14 @@
                     "activities": {
                         "Drink": {
                             "name": "Boire"
+                        }
+                    },
+                    "name": "Potion d'héroïsme",
+                    "description": "<p><em>Potion, rare</em></p><p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent 1 heure. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{bénédiction} (aucune Concentration requise).</p><p>Ce liquide bleu bouillonne et fume comme s'il était en ébullition.</p>",
+                    "effects": {
+                        "Blessed": {
+                            "name": "Béni",
+                            "description": "<p>Chaque fois qu'une de ces cibles effectue un jet d'attaque ou un jet de sauvegarde avant la fin de l'effet, elle ajoute 1d4 au résultat correspondant.</p>"
                         }
                     }
                 },
@@ -21918,7 +21930,9 @@
                     "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Druide (actuellement, [[lookup @abilities.wis.mod]]).</p><section class=\"secret\" id=\"secret-kC2Lr5eZe550Tams\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas l'ajout du modificateur de Sagesse aux sorts mineurs de Druide.</p></section>"
                 },
                 "Improved Elemental Fury": {
-                    "requirements": "Druide"
+                    "requirements": "Druide",
+                    "name": "Fureur élémentaire améliorée",
+                    "description": "<p>L'option retenue pour votre Fureur élémentaire se renforce, comme suit.</p><p><strong>Attaques primitives.</strong> Les dégâts supplémentaires d'Attaques primitives passent à 2d8.</p><p><strong>Incantation puissante.</strong> Lorsque vous lancez un sort mineur de Druide avec une portée de 3 m ou plus, cette portée augmente de 90 m.</p><section id=\"secret-7G1qK3zQ41zJONSd\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les dégâts de Attaques primitives sont automatiquement augmentés à ce niveau. Cette aptitude n'automatise pas les changements de portée.</p></section>"
                 },
                 "Wild Shape": {
                     "requirements": "Druide",
@@ -22043,7 +22057,31 @@
                     }
                 },
                 "Nature's Sanctuary": {
-                    "requirements": "Cercle de la Terre"
+                    "requirements": "Cercle de la Terre",
+                    "name": "Sanctuaire de dame Nature",
+                    "description": "<p>Au prix de l'action Magie, vous pouvez dépenser une utilisation de Forme sauvage pour faire apparaître au sol des plantes grimpantes et arbres spectraux dans un Cube de 4,50 m, dans un rayon de 36 m de vous. Ces végétaux spectraux persistent pendant 1 minute, mais disparaissent prématurément si vous subissez l'état Neutralisé ou mourez. Vous et vos alliés bénéficiez d'un Abri partiel dans la zone et vos alliés reçoivent la Résistance que vous octroie actuellement Protégé de dame Nature tant qu'ils restent dans la zone.</p><p>Par une action Bonus, vous pouvez déplacer au sol le Cube d'un maximum de 18 m, à condition qu'il reste dans un rayon de 36 m de vous.</p><section class=\"secret\" id=\"secret-OyXlvV2zR9s0WXyn\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut des effets actifs pour chaque type d'environnement de Sanctuaire de dame Nature et ajoute l'effet d'un Abri partiel qui applique automatiquement les bonus correspondants. Appliquez l'effet correspondant à vos alliés.</p><p>Cependant, ces effets actifs ne sont pas automatiquement ajoutés/supprimés aux acteurs dans la zone désignée.</p><p>Il comprend également une activité qui peut être utilisée pour suivre l'utilisation de votre action Bonus lorsque vous déplacez les plantes grimpantes et les arbres spectraux.</p></section>",
+                    "activities": {
+                        "Spectral Trees and Vines": {
+                            "name": "Plantes grimpantes et arbres spectraux"
+                        },
+                        "Move": {
+                            "name": "Se déplacer"
+                        }
+                    },
+                    "effects": {
+                        "Nature's Ward: Arid": {
+                            "name": "Protégé de dame Nature : Aride"
+                        },
+                        "Nature's Ward: Polar": {
+                            "name": "Protégé de dame Nature : Polaire"
+                        },
+                        "Nature's Ward: Temperate": {
+                            "name": "Protégé de dame Nature : Tempéré"
+                        },
+                        "Nature's Ward: Tropical": {
+                            "name": "Protégé de dame Nature : Tropical"
+                        }
+                    }
                 },
                 "Lightning Bolt": {
                     "name": "Éclair",
@@ -22241,6 +22279,66 @@
                     "activities": {
                         "summon": {
                             "target": "espace inoccupé aussi près que possible de l'encensoir"
+                        }
+                    }
+                },
+                "Dwarven Half Plate Armor": {
+                    "name": "Demi-plate",
+                    "activities": {
+                        "Reduce Unwilling Movement": {
+                            "name": "Réduire les déplacements involontaires",
+                            "condition": "un effet vous déplace au sol contre votre volonté",
+                            "chatFlavor": "Distance déplacée réduite au maximum de 3 m"
+                        }
+                    },
+                    "effects": {
+                        "Dwarven Plate": {
+                            "name": "Harnois nain",
+                            "changes": {
+                                "name": "{} nain",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgDwarvenPlate0 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Reverse Gravity": {
+                    "name": "Inversion de la gravité",
+                    "description": "<p>Ce sort inverse la gravité dans un Cylindre de 15 m de rayon et 30 m de haut centré sur un point à portée. Tous les objets et créatures de la zone qui ne sont pas ancrés au sol « chutent » vers le haut pour atteindre le sommet du Cylindre. Une créature a droit à un jet de sauvegarde de Dextérité pour saisir un objet fixé à portée d'allonge et ainsi éviter la « chute ».</p><p>Si un plafond ou un objet ancré se présente en travers de la chute, les objets et créatures qui tombent le heurtent comme ils le feraient lors d'une chute normale. Les objets et créatures qui atteignent le sommet du Cylindre sans rien heurter y restent en suspension pour toute la durée. À la fin du sort, les objets et créatures affectés retombent vers le bas.</p>",
+                    "materials": "une magnétite et de la limaille de fer"
+                },
+                "Shapechange": {
+                    "name": "Changement de forme",
+                    "description": "<p>Vous vous métamorphosez en une autre créature pour toute la durée, mais avez la possibilité d'entreprendre l'action Magie pour adopter une autre forme couverte par le sort. La nouvelle forme doit être une créature dont le facteur de puissance n'est pas supérieur à votre niveau ou FP. Vous devez déjà avoir vu une telle créature, qui ne doit être ni un Artificiel ni un Mort-vivant.</p><p>À l'incantation du sort, vous recevez autant de points de vie temporaires que les points de vie de la première forme adoptée. S'il vous en reste quand le sort prend fin, ces pv temporaires disparaissent.</p><p>Votre profil de jeu est remplacé par celui de la créature retenue, mais vous conservez certains de vos aspects : type de créature, alignement, personnalité, valeurs d'Intelligence, de Sagesse et de Charisme, points de vie, dés de vie, maitrises et faculté de communication. Si vous disposez de l'aptitude Sorts ou Incantation, vous la conservez aussi.</p><p>Lors de la transformation, vous déterminez si votre équipement tombe au sol ou change de taille et de configuration pour s'adapter à votre nouvelle forme.</p>",
+                    "materials": "diadème de jade d'une valeur minimale de 1 500 po"
+                },
+                "Ring of Protection": {
+                    "name": "Anneau de protection",
+                    "description": "<p><em>Anneau, rare (Harmonisation requise)</em></p><p>Vous recevez un bonus de +1 à la CA et aux jets de sauvegarde tant que vous portez cet anneau.</p>",
+                    "effects": {
+                        "Ring of Protection": {
+                            "name": "Anneau de protection"
+                        }
+                    }
+                },
+                "Mantle of Spell Resistance": {
+                    "name": "Manteau de résistance aux sorts",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Vous avez l'Avantage aux jets de sauvegarde contre les sorts quand vous portez ce manteau.</p>"
+                },
+                "Component: Jade Circlet": {
+                    "name": "Composant : Diadème de jade"
+                },
+                "Ring of Resistance (jet)": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
                         }
                     }
                 }
@@ -24596,6 +24694,21 @@
                             "name": "Lunettes chaussée"
                         }
                     }
+                },
+                "Ring of Resistance (jet)": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
+                        }
+                    }
                 }
             }
         },
@@ -24865,6 +24978,21 @@
                     "effects": {
                         "Goggles On": {
                             "name": "Lunettes chaussée"
+                        }
+                    }
+                },
+                "Ring of Resistance (jet)": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
                         }
                     }
                 }
@@ -25864,6 +25992,14 @@
                         "Drink": {
                             "name": "Boire"
                         }
+                    },
+                    "name": "Potion d'héroïsme",
+                    "description": "<p><em>Potion, rare</em></p><p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent 1 heure. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{bénédiction} (aucune Concentration requise).</p><p>Ce liquide bleu bouillonne et fume comme s'il était en ébullition.</p>",
+                    "effects": {
+                        "Blessed": {
+                            "name": "Béni",
+                            "description": "<p>Chaque fois qu'une de ces cibles effectue un jet d'attaque ou un jet de sauvegarde avant la fin de l'effet, elle ajoute 1d4 au résultat correspondant.</p>"
+                        }
                     }
                 },
                 "Potion of Water Breathing": {
@@ -25971,6 +26107,21 @@
                         },
                         "Enrichment": {
                             "name": "Fertilisation"
+                        }
+                    }
+                },
+                "Ring of Resistance (jet)": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
                         }
                     }
                 }
@@ -31275,9 +31426,13 @@
                 "Sunburst": {
                     "effects": {
                         "Blinded": {
-                            "name": "Aveuglé"
+                            "name": "Aveuglé",
+                            "description": "<p>Une créature &Reference[Blinded apply=false]{Aveuglée} par ce sort réitère le jet de sauvegarde de [[/save ability=con dc=@attributes.spell.dc]] à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
                         }
-                    }
+                    },
+                    "name": "Éclat du soleil",
+                    "description": "<p>La lumière du soleil brille soudain dans une Sphère de 18 m de rayon, centrée sur un point que vous choisissez à portée. Chaque créature prise dans la Sphère effectue un jet de sauvegarde de Constitution. En cas d'échec, elle subit 12d6 dégâts radiants, ainsi que l'état &Reference[Blinded apply=false] pendant 1 minute. En cas de réussite, elle subit uniquement la moitié de ces dégâts.</p><p>Une créature Aveuglée par ce sort réitère le jet de sauvegarde de [[/save ability=con dc=@attributes.spell.dc]] à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p><p>Le sort dissipe dans la zone toutes les &Reference[Darkness] qui résultent d'un sort.</p>",
+                    "materials": "un morceau d'héliolite"
                 },
                 "Bag of Holding": {
                     "name": "Sac sans fond",
@@ -31349,6 +31504,26 @@
                     "name": "Métamorphose",
                     "description": "<p>Vous tentez de transformer en Bête une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine d'être métamorphosée en Bête pour toute la durée. Cette forme est une Bête de votre choix dont le facteur de puissance est inférieur ou égal à celui de la cible (ou à son niveau, si elle n'a pas de facteur de puissance). Le profil de la cible est remplacé par celui de la Bête retenue, si ce n'est que la cible conserve son alignement, sa personnalité, son type de créature, ses points de vie et ses dés de vie. L'annexe B propose un échantillon de profils de Bêtes.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de sa forme de Bête. Le sort prend fin prématurément sur la cible s'il ne lui reste plus de points de vie temporaires. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent.</p><p>La cible est limitée dans les actions qu'elle peut entreprendre par l'anatomie de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.</p><p>L'équipement porté par la cible se fond dans sa nouvelle forme. La créature ne peut pas utiliser son équipement ni en bénéficier de quelque manière que ce soit.</p>",
                     "materials": "une chrysalide"
+                },
+                "Reverse Gravity": {
+                    "name": "Inversion de la gravité",
+                    "description": "<p>Ce sort inverse la gravité dans un Cylindre de 15 m de rayon et 30 m de haut centré sur un point à portée. Tous les objets et créatures de la zone qui ne sont pas ancrés au sol « chutent » vers le haut pour atteindre le sommet du Cylindre. Une créature a droit à un jet de sauvegarde de Dextérité pour saisir un objet fixé à portée d'allonge et ainsi éviter la « chute ».</p><p>Si un plafond ou un objet ancré se présente en travers de la chute, les objets et créatures qui tombent le heurtent comme ils le feraient lors d'une chute normale. Les objets et créatures qui atteignent le sommet du Cylindre sans rien heurter y restent en suspension pour toute la durée. À la fin du sort, les objets et créatures affectés retombent vers le bas.</p>",
+                    "materials": "une magnétite et de la limaille de fer"
+                },
+                "Ring of Resistance (jet)": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
+                        }
+                    }
                 }
             }
         },
@@ -32655,6 +32830,9 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Blessed": {
+                            "name": "Béni"
                         }
                     }
                 },
@@ -32977,6 +33155,9 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Blessed": {
+                            "name": "Béni"
                         }
                     }
                 },
@@ -33223,7 +33404,9 @@
                         }
                     }
                 }
-            }
+            },
+            "name": "Beiro",
+            "description": "<p>Beiro était un célèbre artiste dans sa taverne locale, lorsqu'un jour il n'eut plus d'histoires à raconter. Pour y remédier, il s'est mis à écrire ses propres histoires, afin de pouvoir un jour les raconter à nouveau dans sa taverne.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "BeiroLv050000000": {
             "items": {
@@ -33434,7 +33617,9 @@
                         }
                     }
                 }
-            }
+            },
+            "name": "Beiro",
+            "description": "<p>Beiro était un célèbre artiste dans sa taverne locale, lorsqu'un jour il n'eut plus d'histoires à raconter. Pour y remédier, il s'est mis à écrire ses propres histoires, afin de pouvoir un jour les raconter à nouveau dans sa taverne.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "BeiroLv110000000": {
             "items": {
@@ -33740,7 +33925,9 @@
                     "description": "<p>Vous tentez de transformer en Bête une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine d'être métamorphosée en Bête pour toute la durée. Cette forme est une Bête de votre choix dont le facteur de puissance est inférieur ou égal à celui de la cible (ou à son niveau, si elle n'a pas de facteur de puissance). Le profil de la cible est remplacé par celui de la Bête retenue, si ce n'est que la cible conserve son alignement, sa personnalité, son type de créature, ses points de vie et ses dés de vie. L'annexe B propose un échantillon de profils de Bêtes.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de sa forme de Bête. Le sort prend fin prématurément sur la cible s'il ne lui reste plus de points de vie temporaires. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent.</p><p>La cible est limitée dans les actions qu'elle peut entreprendre par l'anatomie de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.</p><p>L'équipement porté par la cible se fond dans sa nouvelle forme. La créature ne peut pas utiliser son équipement ni en bénéficier de quelque manière que ce soit.</p>",
                     "materials": "une chrysalide"
                 }
-            }
+            },
+            "name": "Beiro",
+            "description": "<p>Beiro était un célèbre artiste dans sa taverne locale, lorsqu'un jour il n'eut plus d'histoires à raconter. Pour y remédier, il s'est mis à écrire ses propres histoires, afin de pouvoir un jour les raconter à nouveau dans sa taverne.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "BeiroLv170000000": {
             "items": {
@@ -34027,6 +34214,14 @@
                         "Drink": {
                             "name": "Boire"
                         }
+                    },
+                    "name": "Potion d'héroïsme",
+                    "description": "<p><em>Potion, rare</em></p><p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent 1 heure. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{bénédiction} (aucune Concentration requise).</p><p>Ce liquide bleu bouillonne et fume comme s'il était en ébullition.</p>",
+                    "effects": {
+                        "Blessed": {
+                            "name": "Béni",
+                            "description": "<p>Chaque fois qu'une de ces cibles effectue un jet d'attaque ou un jet de sauvegarde avant la fin de l'effet, elle ajoute 1d4 au résultat correspondant.</p>"
+                        }
                     }
                 },
                 "Clothes, Traveler's": {
@@ -34089,7 +34284,9 @@
                     "description": "<p>Vous tentez de transformer en Bête une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine d'être métamorphosée en Bête pour toute la durée. Cette forme est une Bête de votre choix dont le facteur de puissance est inférieur ou égal à celui de la cible (ou à son niveau, si elle n'a pas de facteur de puissance). Le profil de la cible est remplacé par celui de la Bête retenue, si ce n'est que la cible conserve son alignement, sa personnalité, son type de créature, ses points de vie et ses dés de vie. L'annexe B propose un échantillon de profils de Bêtes.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de sa forme de Bête. Le sort prend fin prématurément sur la cible s'il ne lui reste plus de points de vie temporaires. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent.</p><p>La cible est limitée dans les actions qu'elle peut entreprendre par l'anatomie de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.</p><p>L'équipement porté par la cible se fond dans sa nouvelle forme. La créature ne peut pas utiliser son équipement ni en bénéficier de quelque manière que ce soit.</p>",
                     "materials": "une chrysalide"
                 }
-            }
+            },
+            "name": "Beiro",
+            "description": "<p>Beiro était un célèbre artiste dans sa taverne locale, lorsqu'un jour il n'eut plus d'histoires à raconter. Pour y remédier, il s'est mis à écrire ses propres histoires, afin de pouvoir un jour les raconter à nouveau dans sa taverne.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         }
     }
 }
