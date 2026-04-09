@@ -22412,9 +22412,31 @@
                             "title": "Formation aux armures"
                         },
                         "Weapon Mastery": {
-                            "title": "Bottes d'arme"
+                            "title": "Bottes d'arme",
+                            "hint": "Votre entraînement martial vous permet de recourir à la botte d'armes supplémentaires."
+                        },
+                        "Rage Damage": {
+                            "title": "Dégâts de Rage"
+                        },
+                        "Weapon Masteries Known": {
+                            "title": "Bottes d'arme connues"
+                        },
+                        "Primal Knowledge": {
+                            "title": "Savoir primal",
+                            "hint": "Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste des compétences disponibles aux Barbares de niveau 1."
+                        },
+                        "Brutal Strike": {
+                            "title": "Coup brutal"
+                        },
+                        "Saving Throws Proficiencies": {
+                            "title": "Maîtrise des jets de sauvegarde"
+                        },
+                        "Rages": {
+                            "title": "Rages"
                         }
-                    }
+                    },
+                    "name": "Barbare",
+                    "description": "<h3>Traits de base du Barbare</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p>Caractéristique principale</p></th><td><p>Force</p></td></tr><tr><th><p><strong>Dé de vie</strong></p></th><td><p>d12 par niveau de Barbare</p></td></tr><tr><th><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Force et Constitution</p></td></tr><tr><th><p><strong>Maîtrise de coméptence</strong></p></th><td><p><em>2 au choix parmi :</em> Athlétisme, Dressage, Intimidation, Nature, Perception et Survie</p></td></tr><tr><th><p><strong>Maîtrise d'arme</strong></p></th><td><p>Armes courantes et armes de guerre</p></td></tr><tr><th><p><strong>Formation aux armures</strong></p></th><td><p>Armures légères et intermédiaires, et boucliers</p></td></tr><tr><th><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepGreataxe00]{Hache à deux mains}, 4 @UUID[Compendium.dnd5e.equipment24.Item.phbwepHandaxe000]{hachettes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagExplorersPa]{paquetage d'explorateur} et [[/award 15GP]] ; ou (B) [[/award 75GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbbrbBarbarian0 inline classes=\"free-rules-embed\"]</p><h2>Devenir Barbare…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base du Barbare.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez les traits suivants de l'encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul>"
                 },
                 "Vigilante": {
                     "advancement": {
@@ -22474,7 +22496,113 @@
                 },
                 "Weapon Mastery": {
                     "name": "Bottes d'arme",
-                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>"
+                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>",
+                    "requirements": "Barbare"
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Rage": {
+                    "name": "Rage",
+                    "description": "<p>Vous pouvez vous animer d'une force primitive appelée Rage, qui vous investit d'une puissance et d'une résistance accrues. Vous pouvez entrer en Rage, par une action Bonus, si vous ne portez pas d'armure lourde.</p><p>Vous pouvez entrer en Rage autant de fois par jour qu'indiqué dans la colonne Rages de la table Aptitudes du Barbare, pour votre niveau de Barbare. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Tant que votre Rage est active, les règles suivantes s'appliquent.</p><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p><p><strong>Ni Concentration ni sorts.</strong> Vous ne pouvez pas maintenir votre Concentration ni lancer de sorts.</p><p><strong>Durée.</strong> La Rage persiste jusqu'à la fin de votre tour suivant, mais se termine prématurément si vous enfilez une armure lourde ou subissez l'état Neutralisé. Si votre Rage est encore active lorsque votre tour suivant intervient, vous pouvez la prolonger d'un round par n'importe laquelle des choses suivantes :</p><ul><li>Effectuer un jet d'attaque contre un ennemi.</li><li>Contraindre un ennemi à effectuer un jet de sauvegarde.</li><li>Entreprendre une action Bonus pour prolonger votre Rage.</li></ul><p>Chaque fois que la Rage est prolongée, elle persiste jusqu'à la fin de votre tour suivant. Vous pouvez maintenir votre Rage pendant un maximum de 10 minutes.</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise la Résistance et les dégâts supplémentaires. Elle recharge également automatiquement vos utilisations de Rage lors des Repos courts et longs.</p></section>",
+                    "requirements": "Barbare",
+                    "activities": {
+                        "Expend Rage": {
+                            "name": "Dépenser la Rage"
+                        }
+                    },
+                    "effects": {
+                        "Rage": {
+                            "name": "Rage"
+                        }
+                    }
+                },
+                "Unarmored Defense": {
+                    "requirements": "Barbare",
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Constitution. Vous conservez ce bénéfice si vous vous servez d'un bouclier.</p>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : &Reference[unarmedstrike]</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Mason's Tools": {
+                    "name": "Outils de maçon",
+                    "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Force</p><p class=\"phb-meta\"><strong>Utilisation :</strong> ciseler un symbole ou creuser un trou dans la pierre (DD 10)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagBlockandTac]{palan}</p>",
+                    "activities": {
+                        "Chisel a Symbol or Hole": {
+                            "name": "Ciseler un symbole ou creuser un trou"
+                        }
+                    }
+                },
+                "Greataxe": {
+                    "name": "Hache à deux mains"
+                },
+                "Handaxe": {
+                    "name": "Hachette"
+                },
+                "Goliath": {
+                    "name": "Goliath",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspGoliath0000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"goliath-traits\">Traits des goliaths</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 2,15 m et 2,45 m)</p><p><strong>Vitesse :</strong> 10,50 m</p><p>En tant que goliath, vous disposez des traits spéciaux suivants.</p><p><strong>Ascendance gigante.</strong> Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p><p><strong>Forme de géant.</strong> À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Forte carrure.</strong> Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
+                    "subtype": "Goliath",
+                    "advancement": {
+                        "LETPMtBLvmzWUUb0": {
+                            "hint": "M (moyenne, entre 2,15 m et 2,45 m)"
+                        },
+                        "Goliath Traits": {
+                            "title": "Traits des goliaths"
+                        },
+                        "Giant Ancestry": {
+                            "title": "Ascendance gigante",
+                            "hint": "Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long."
+                        }
+                    }
+                },
+                "Giant Ancestry": {
+                    "name": "Ascendance gigante",
+                    "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+                    "requirements": "Goliath"
+                },
+                "Powerful Build": {
+                    "requirements": "Goliath",
+                    "name": "Forte carrure",
+                    "description": "<p>Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état &Reference[Grappled apply=false]. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p><section class=\"secret\" id=\"secret-7qaTRjmRe4PD41G3\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre taille lors de la détermination de la capacité de charge.</p></section>",
+                    "effects": {
+                        "Powerful Build": {
+                            "name": "Forte carrure"
+                        }
+                    }
+                },
+                "Cloud's Jaunt": {
+                    "requirements": "Goliath (géants des nuages)",
+                    "name": "Saut des nuées",
+                    "description": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+                    "activities": {
+                        "Cloud's Jaunt": {
+                            "name": "Saut des nuées",
+                            "target": "Espace inoccupé"
+                        }
+                    }
                 }
             },
             "name": "Merric",
@@ -22525,9 +22653,31 @@
                             "title": "Formation aux armures"
                         },
                         "Weapon Mastery": {
-                            "title": "Bottes d'arme"
+                            "title": "Bottes d'arme",
+                            "hint": "Votre entraînement martial vous permet de recourir à la botte d'armes supplémentaires."
+                        },
+                        "Rage Damage": {
+                            "title": "Dégâts de Rage"
+                        },
+                        "Weapon Masteries Known": {
+                            "title": "Bottes d'arme connues"
+                        },
+                        "Primal Knowledge": {
+                            "title": "Savoir primal",
+                            "hint": "Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste des compétences disponibles aux Barbares de niveau 1."
+                        },
+                        "Brutal Strike": {
+                            "title": "Coup brutal"
+                        },
+                        "Saving Throws Proficiencies": {
+                            "title": "Maîtrise des jets de sauvegarde"
+                        },
+                        "Rages": {
+                            "title": "Rages"
                         }
-                    }
+                    },
+                    "name": "Barbare",
+                    "description": "<h3>Traits de base du Barbare</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p>Caractéristique principale</p></th><td><p>Force</p></td></tr><tr><th><p><strong>Dé de vie</strong></p></th><td><p>d12 par niveau de Barbare</p></td></tr><tr><th><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Force et Constitution</p></td></tr><tr><th><p><strong>Maîtrise de coméptence</strong></p></th><td><p><em>2 au choix parmi :</em> Athlétisme, Dressage, Intimidation, Nature, Perception et Survie</p></td></tr><tr><th><p><strong>Maîtrise d'arme</strong></p></th><td><p>Armes courantes et armes de guerre</p></td></tr><tr><th><p><strong>Formation aux armures</strong></p></th><td><p>Armures légères et intermédiaires, et boucliers</p></td></tr><tr><th><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepGreataxe00]{Hache à deux mains}, 4 @UUID[Compendium.dnd5e.equipment24.Item.phbwepHandaxe000]{hachettes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagExplorersPa]{paquetage d'explorateur} et [[/award 15GP]] ; ou (B) [[/award 75GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbbrbBarbarian0 inline classes=\"free-rules-embed\"]</p><h2>Devenir Barbare…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base du Barbare.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez les traits suivants de l'encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul>"
                 },
                 "Vigilante": {
                     "advancement": {
@@ -22549,7 +22699,9 @@
                         "Subclass Features": {
                             "title": "Aptitudes de sous-classe"
                         }
-                    }
+                    },
+                    "name": "Voie du Berserker",
+                    "description": "<blockquote><p>Convertissez la Rage en déchaînement de violence</p></blockquote><p>Les Barbares qui empruntent la Voie du Berserker transforment l'essentiel de leur Rage en violence. C'est la voie de la fureur débridée, dans laquelle on se laisse dominer et animer par la Rage pour s'abandonner dans le chaos des batailles.</p>"
                 },
                 "Potion of Healing": {
                     "name": "Potion de guérison",
@@ -22603,7 +22755,8 @@
                 },
                 "Weapon Mastery": {
                     "name": "Bottes d'arme",
-                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>"
+                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>",
+                    "requirements": "Barbare"
                 },
                 "Javelin": {
                     "name": "Javeline",
@@ -22611,7 +22764,193 @@
                 },
                 "Extra Attack": {
                     "name": "Attaque supplémentaire",
-                    "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>"
+                    "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>",
+                    "requirements": "Barbare"
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Rage": {
+                    "name": "Rage",
+                    "description": "<p>Vous pouvez vous animer d'une force primitive appelée Rage, qui vous investit d'une puissance et d'une résistance accrues. Vous pouvez entrer en Rage, par une action Bonus, si vous ne portez pas d'armure lourde.</p><p>Vous pouvez entrer en Rage autant de fois par jour qu'indiqué dans la colonne Rages de la table Aptitudes du Barbare, pour votre niveau de Barbare. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Tant que votre Rage est active, les règles suivantes s'appliquent.</p><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p><p><strong>Ni Concentration ni sorts.</strong> Vous ne pouvez pas maintenir votre Concentration ni lancer de sorts.</p><p><strong>Durée.</strong> La Rage persiste jusqu'à la fin de votre tour suivant, mais se termine prématurément si vous enfilez une armure lourde ou subissez l'état Neutralisé. Si votre Rage est encore active lorsque votre tour suivant intervient, vous pouvez la prolonger d'un round par n'importe laquelle des choses suivantes :</p><ul><li>Effectuer un jet d'attaque contre un ennemi.</li><li>Contraindre un ennemi à effectuer un jet de sauvegarde.</li><li>Entreprendre une action Bonus pour prolonger votre Rage.</li></ul><p>Chaque fois que la Rage est prolongée, elle persiste jusqu'à la fin de votre tour suivant. Vous pouvez maintenir votre Rage pendant un maximum de 10 minutes.</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise la Résistance et les dégâts supplémentaires. Elle recharge également automatiquement vos utilisations de Rage lors des Repos courts et longs.</p></section>",
+                    "requirements": "Barbare",
+                    "activities": {
+                        "Expend Rage": {
+                            "name": "Dépenser la Rage"
+                        }
+                    },
+                    "effects": {
+                        "Rage": {
+                            "name": "Rage"
+                        }
+                    }
+                },
+                "Unarmored Defense": {
+                    "requirements": "Barbare",
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Constitution. Vous conservez ce bénéfice si vous vous servez d'un bouclier.</p>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Danger Sense": {
+                    "requirements": "Barbare",
+                    "name": "Sens du danger",
+                    "description": "<p>Vous acquérez un talent surnaturel qui vous permet d'esquiver plus aisément les dangers que d'autres remarqueraient trop tard. Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p><section id=\"secret-gIJELszWrIqRFCxF\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude automatise l'Avantage aux jets de sauvegarde de Dextérité, mais n'est pas automatiquement désactivée lorsqu'il est Neutralisé. Elle peut être temporairement désactivée dans l'onglet Effets.</p></section>",
+                    "effects": {
+                        "Danger Sense": {
+                            "name": "Sens du danger",
+                            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p>"
+                        }
+                    }
+                },
+                "Reckless Attack": {
+                    "requirements": "Barbare",
+                    "name": "Témérité",
+                    "description": "<p>Vous pouvez renoncer à toute velléité de vous défendre au profit d'une férocité accrue. Quand vous effectuez le premier jet d'attaque de votre tour, vous pouvez décider d'attaquer avec témérité. Ce faisant, vous avez l'Avantage aux jets d'attaque basés sur la Force jusqu'au début de votre tour suivant, mais les jets d'attaque contre vous ont l'Avantage dans le même intervalle.</p><section id=\"secret-W7MI2ZVKsMQcSW6d\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif permettant de savoir si vous êtes imprudent ou non, mais elle n'automatise pas l'Avantage sur vos attaques ou les attaques contre vous.</p></section>",
+                    "effects": {
+                        "Reckless": {
+                            "name": "Téméraire"
+                        }
+                    }
+                },
+                "Primal Knowledge": {
+                    "requirements": "Barbare",
+                    "name": "Savoir primal",
+                    "description": "<p>Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste de compétences disponibles aux Barbares de niveau 1.</p><p>De plus, tant que votre Rage est active, vous pouvez canaliser les énergies primales lorsque vous tentez certaines tâches ; chaque fois que vous effectuez un test de caractéristique avec l'une des compétences suivantes, vous pouvez en faire un test de Force même s'il s'agit normalement d'une autre caractéristique : Acrobaties, Discrétion, Intimidation, Perception et Survie. Lorsque vous recourez à cette aptitude, votre Force illustre les énergies primales qui vous animent, et affûtent vos sens, votre aplomb et votre agilité.</p><section class=\"secret\" id=\"secret-himIRZuFGInNkZgU\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui fera en sorte que ces compétences utilisent automatiquement votre modificateur de Force s'il est supérieur à la valeur de caractéristique normalement associé à la compétence.</p></section>",
+                    "effects": {
+                        "Primal Knowledge": {
+                            "name": "Savoir primal"
+                        }
+                    }
+                },
+                "Fast Movement": {
+                    "requirements": "Barbare",
+                    "name": "Déplacement rapide",
+                    "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez pas d'armure lourde.</p><section id=\"secret-6cmMiIJhUk5cpOGz\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre vitesse de déplacement. Désactivez l'effet actif « Déplacement rapide » si vous portez une armure lourde.</p></section>",
+                    "effects": {
+                        "Fast Movement": {
+                            "name": "Déplacement rapide"
+                        }
+                    }
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : &Reference[unarmedstrike]</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Mason's Tools": {
+                    "name": "Outils de maçon",
+                    "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Force</p><p class=\"phb-meta\"><strong>Utilisation :</strong> ciseler un symbole ou creuser un trou dans la pierre (DD 10)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagBlockandTac]{palan}</p>",
+                    "activities": {
+                        "Chisel a Symbol or Hole": {
+                            "name": "Ciseler un symbole ou creuser un trou"
+                        }
+                    }
+                },
+                "Goliath": {
+                    "name": "Goliath",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspGoliath0000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"goliath-traits\">Traits des goliaths</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 2,15 m et 2,45 m)</p><p><strong>Vitesse :</strong> 10,50 m</p><p>En tant que goliath, vous disposez des traits spéciaux suivants.</p><p><strong>Ascendance gigante.</strong> Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p><p><strong>Forme de géant.</strong> À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Forte carrure.</strong> Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
+                    "subtype": "Goliath",
+                    "advancement": {
+                        "LETPMtBLvmzWUUb0": {
+                            "hint": "M (moyenne, entre 2,15 m et 2,45 m)"
+                        },
+                        "Goliath Traits": {
+                            "title": "Traits des goliaths"
+                        },
+                        "Giant Ancestry": {
+                            "title": "Ascendance gigante",
+                            "hint": "Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long."
+                        }
+                    }
+                },
+                "Giant Ancestry": {
+                    "name": "Ascendance gigante",
+                    "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+                    "requirements": "Goliath"
+                },
+                "Powerful Build": {
+                    "requirements": "Goliath",
+                    "name": "Forte carrure",
+                    "description": "<p>Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état &Reference[Grappled apply=false]. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p><section class=\"secret\" id=\"secret-7qaTRjmRe4PD41G3\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre taille lors de la détermination de la capacité de charge.</p></section>",
+                    "effects": {
+                        "Powerful Build": {
+                            "name": "Forte carrure"
+                        }
+                    }
+                },
+                "Large Form": {
+                    "requirements": "Goliath",
+                    "name": "Forme de géant",
+                    "description": "<p>À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section class=\"secret\" id=\"secret-MnS2QCGjgh6nXxEa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise l'augmentation de votre Vitesse et l'Avantage aux tests de Force.</p></section>",
+                    "activities": {
+                        "Enlarge": {
+                            "name": "Agrandissement"
+                        }
+                    },
+                    "effects": {
+                        "Large Form": {
+                            "name": "Forme de géant",
+                            "description": "<p>Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>"
+                        }
+                    }
+                },
+                "Cloud's Jaunt": {
+                    "requirements": "Goliath (géants des nuages)",
+                    "name": "Saut des nuées",
+                    "description": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+                    "activities": {
+                        "Cloud's Jaunt": {
+                            "name": "Saut des nuées",
+                            "target": "Espace inoccupé"
+                        }
+                    }
+                },
+                "Frenzy": {
+                    "name": "Frénésie",
+                    "description": "<p>Si vous recourez à Témérité alors que votre Rage est active, vous infligez des dégâts supplémentaires à la première cible que vous touchez à votre tour avec une attaque basée sur la Force. Pour déterminer ces dégâts supplémentaires, lancez autant de d6 que votre bonus de Rage aux dégâts et faites en la somme. Ces dégâts sont du même type que ceux de l'arme ou l'attaque à mains nues employée pour l'attaque.</p><section id=\"secret-EsDSGWYhmnmiS9Cu\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Dégâts</strong> s'adapte automatiquement à votre progression et vous permet de sélectionner le type de dégâts à utiliser dans la boîte de dialogue du jet de dégâts. Votre choix sera alors mémorisé.</p></section>",
+                    "requirements": "Voie du Berserker"
+                },
+                "Breastplate": {
+                    "name": "Cuirasse"
+                },
+                "Halberd": {
+                    "name": "Hallebarde"
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Pike": {
+                    "name": "Pique"
                 }
             },
             "name": "Merric",
@@ -22662,9 +23001,31 @@
                             "title": "Formation aux armures"
                         },
                         "Weapon Mastery": {
-                            "title": "Bottes d'arme"
+                            "title": "Bottes d'arme",
+                            "hint": "Votre entraînement martial vous permet de recourir à la botte d'armes supplémentaires."
+                        },
+                        "Rage Damage": {
+                            "title": "Dégâts de Rage"
+                        },
+                        "Weapon Masteries Known": {
+                            "title": "Bottes d'arme connues"
+                        },
+                        "Primal Knowledge": {
+                            "title": "Savoir primal",
+                            "hint": "Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste des compétences disponibles aux Barbares de niveau 1."
+                        },
+                        "Brutal Strike": {
+                            "title": "Coup brutal"
+                        },
+                        "Saving Throws Proficiencies": {
+                            "title": "Maîtrise des jets de sauvegarde"
+                        },
+                        "Rages": {
+                            "title": "Rages"
                         }
-                    }
+                    },
+                    "name": "Barbare",
+                    "description": "<h3>Traits de base du Barbare</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p>Caractéristique principale</p></th><td><p>Force</p></td></tr><tr><th><p><strong>Dé de vie</strong></p></th><td><p>d12 par niveau de Barbare</p></td></tr><tr><th><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Force et Constitution</p></td></tr><tr><th><p><strong>Maîtrise de coméptence</strong></p></th><td><p><em>2 au choix parmi :</em> Athlétisme, Dressage, Intimidation, Nature, Perception et Survie</p></td></tr><tr><th><p><strong>Maîtrise d'arme</strong></p></th><td><p>Armes courantes et armes de guerre</p></td></tr><tr><th><p><strong>Formation aux armures</strong></p></th><td><p>Armures légères et intermédiaires, et boucliers</p></td></tr><tr><th><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepGreataxe00]{Hache à deux mains}, 4 @UUID[Compendium.dnd5e.equipment24.Item.phbwepHandaxe000]{hachettes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagExplorersPa]{paquetage d'explorateur} et [[/award 15GP]] ; ou (B) [[/award 75GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbbrbBarbarian0 inline classes=\"free-rules-embed\"]</p><h2>Devenir Barbare…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base du Barbare.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez les traits suivants de l'encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul>"
                 },
                 "Vigilante": {
                     "advancement": {
@@ -22686,7 +23047,9 @@
                         "Subclass Features": {
                             "title": "Aptitudes de sous-classe"
                         }
-                    }
+                    },
+                    "name": "Voie du Berserker",
+                    "description": "<blockquote><p>Convertissez la Rage en déchaînement de violence</p></blockquote><p>Les Barbares qui empruntent la Voie du Berserker transforment l'essentiel de leur Rage en violence. C'est la voie de la fureur débridée, dans laquelle on se laisse dominer et animer par la Rage pour s'abandonner dans le chaos des batailles.</p>"
                 },
                 "Potion of Healing": {
                     "name": "Potion de guérison",
@@ -22711,14 +23074,27 @@
                         "Consume": {
                             "name": "Consommer"
                         }
-                    }
+                    },
+                    "name": "Potion de guérison (importante)",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Vous récupérez 4d4 + 4 points de vie en buvant cette potion.</p><p>Quelle que soit la puissance de la potion, son liquide rouge étincelle lorsqu'on l'agite.</p>"
                 },
                 "Enlarge/Reduce": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
-                    }
+                    },
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer"
                 },
                 "Ring of Resistance (garnet)": {
                     "name": "Anneau",
@@ -22769,7 +23145,8 @@
                 },
                 "Weapon Mastery": {
                     "name": "Bottes d'arme",
-                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>"
+                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>",
+                    "requirements": "Barbare"
                 },
                 "Javelin": {
                     "name": "Javeline",
@@ -22777,7 +23154,8 @@
                 },
                 "Extra Attack": {
                     "name": "Attaque supplémentaire",
-                    "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>"
+                    "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>",
+                    "requirements": "Barbare"
                 },
                 "Efficient Quiver": {
                     "name": "Carquois efficace",
@@ -22804,6 +23182,282 @@
                             "description": "<p><strong>Ami des nains.</strong> Vous bénéficiez de l'Avantage aux tests de Charisme (Persuasion) effectués dans le cadre d'interactions avec des nains et des duergars.</p><p><strong>Nain.</strong> Vous parlez et lisez le nain.</p><p><strong>Robustesse.</strong> Votre Constitution augmente de 2, jusqu'à un maximum de 20.</p><p>Si vous n'êtes ni nain ni duergar, vous recevez les bénéfices suivants tant que vous portez ce ceinturon :</p><p><strong>Résilience.</strong> Vous bénéficiez de la Résistance aux dégâts de poison. Vous avez en outre l'Avantage aux jets de sauvegarde visant à éviter l'état Empoisonné ou à y mettre un terme sur vous-même.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 18 m.</p>"
                         }
                     }
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Rage": {
+                    "name": "Rage",
+                    "description": "<p>Vous pouvez vous animer d'une force primitive appelée Rage, qui vous investit d'une puissance et d'une résistance accrues. Vous pouvez entrer en Rage, par une action Bonus, si vous ne portez pas d'armure lourde.</p><p>Vous pouvez entrer en Rage autant de fois par jour qu'indiqué dans la colonne Rages de la table Aptitudes du Barbare, pour votre niveau de Barbare. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Tant que votre Rage est active, les règles suivantes s'appliquent.</p><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p><p><strong>Ni Concentration ni sorts.</strong> Vous ne pouvez pas maintenir votre Concentration ni lancer de sorts.</p><p><strong>Durée.</strong> La Rage persiste jusqu'à la fin de votre tour suivant, mais se termine prématurément si vous enfilez une armure lourde ou subissez l'état Neutralisé. Si votre Rage est encore active lorsque votre tour suivant intervient, vous pouvez la prolonger d'un round par n'importe laquelle des choses suivantes :</p><ul><li>Effectuer un jet d'attaque contre un ennemi.</li><li>Contraindre un ennemi à effectuer un jet de sauvegarde.</li><li>Entreprendre une action Bonus pour prolonger votre Rage.</li></ul><p>Chaque fois que la Rage est prolongée, elle persiste jusqu'à la fin de votre tour suivant. Vous pouvez maintenir votre Rage pendant un maximum de 10 minutes.</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise la Résistance et les dégâts supplémentaires. Elle recharge également automatiquement vos utilisations de Rage lors des Repos courts et longs.</p></section>",
+                    "requirements": "Barbare",
+                    "activities": {
+                        "Expend Rage": {
+                            "name": "Dépenser la Rage"
+                        }
+                    },
+                    "effects": {
+                        "Rage": {
+                            "name": "Rage"
+                        }
+                    }
+                },
+                "Unarmored Defense": {
+                    "requirements": "Barbare",
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Constitution. Vous conservez ce bénéfice si vous vous servez d'un bouclier.</p>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Danger Sense": {
+                    "requirements": "Barbare",
+                    "name": "Sens du danger",
+                    "description": "<p>Vous acquérez un talent surnaturel qui vous permet d'esquiver plus aisément les dangers que d'autres remarqueraient trop tard. Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p><section id=\"secret-gIJELszWrIqRFCxF\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude automatise l'Avantage aux jets de sauvegarde de Dextérité, mais n'est pas automatiquement désactivée lorsqu'il est Neutralisé. Elle peut être temporairement désactivée dans l'onglet Effets.</p></section>",
+                    "effects": {
+                        "Danger Sense": {
+                            "name": "Sens du danger",
+                            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p>"
+                        }
+                    }
+                },
+                "Reckless Attack": {
+                    "requirements": "Barbare",
+                    "name": "Témérité",
+                    "description": "<p>Vous pouvez renoncer à toute velléité de vous défendre au profit d'une férocité accrue. Quand vous effectuez le premier jet d'attaque de votre tour, vous pouvez décider d'attaquer avec témérité. Ce faisant, vous avez l'Avantage aux jets d'attaque basés sur la Force jusqu'au début de votre tour suivant, mais les jets d'attaque contre vous ont l'Avantage dans le même intervalle.</p><section id=\"secret-W7MI2ZVKsMQcSW6d\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif permettant de savoir si vous êtes imprudent ou non, mais elle n'automatise pas l'Avantage sur vos attaques ou les attaques contre vous.</p></section>",
+                    "effects": {
+                        "Reckless": {
+                            "name": "Téméraire"
+                        }
+                    }
+                },
+                "Primal Knowledge": {
+                    "requirements": "Barbare",
+                    "name": "Savoir primal",
+                    "description": "<p>Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste de compétences disponibles aux Barbares de niveau 1.</p><p>De plus, tant que votre Rage est active, vous pouvez canaliser les énergies primales lorsque vous tentez certaines tâches ; chaque fois que vous effectuez un test de caractéristique avec l'une des compétences suivantes, vous pouvez en faire un test de Force même s'il s'agit normalement d'une autre caractéristique : Acrobaties, Discrétion, Intimidation, Perception et Survie. Lorsque vous recourez à cette aptitude, votre Force illustre les énergies primales qui vous animent, et affûtent vos sens, votre aplomb et votre agilité.</p><section class=\"secret\" id=\"secret-himIRZuFGInNkZgU\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui fera en sorte que ces compétences utilisent automatiquement votre modificateur de Force s'il est supérieur à la valeur de caractéristique normalement associé à la compétence.</p></section>",
+                    "effects": {
+                        "Primal Knowledge": {
+                            "name": "Savoir primal"
+                        }
+                    }
+                },
+                "Fast Movement": {
+                    "requirements": "Barbare",
+                    "name": "Déplacement rapide",
+                    "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez pas d'armure lourde.</p><section id=\"secret-6cmMiIJhUk5cpOGz\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre vitesse de déplacement. Désactivez l'effet actif « Déplacement rapide » si vous portez une armure lourde.</p></section>",
+                    "effects": {
+                        "Fast Movement": {
+                            "name": "Déplacement rapide"
+                        }
+                    }
+                },
+                "Feral Instinct": {
+                    "requirements": "Barbare",
+                    "name": "Instinct sauvage",
+                    "effects": {
+                        "Feral Instinct": {
+                            "name": "Instinct sauvage"
+                        }
+                    },
+                    "description": "<p>Votre instinct s'est affuté au point que vous avez l'Avantage aux jets d'Initiatives.</p>"
+                },
+                "Instinctive Pounce": {
+                    "requirements": "Barbare",
+                    "name": "Bond instinctif",
+                    "description": "<p>Dans le cadre de l'action Bonus entreprise pour entrer en Rage, vous pouvez vous déplacer à concurrence de la moitié de votre Vitesse.</p>"
+                },
+                "Brutal Strike": {
+                    "requirements": "Barbare",
+                    "name": "Coup brutal",
+                    "activities": {
+                        "Brutal Strike": {
+                            "name": "Coup brutal"
+                        }
+                    },
+                    "description": "<p>Si vous recourez à [[/item Témérité]], vous pouvez renoncer a l'Avantage pour un jet d'attaque basé sur la Force, de votre choix et à votre tour. Le jet d'attaque retenu ne doit pas avoir le Désavantage, Si ce jet d'attaque touche, la cible subit [[lookup @scale.barbarian.brutal-strike]] dégâts supplémentaires du même type qu'infligé par l'arme ou à mains nues, et vous pouvez lui imposer l'effet de Coup brutal de votre choix. Vous disposez des options d'effet suivantes.</p><p><strong>Coup appuyé.</strong> La cible est repoussée de vous de 4,50 m, en ligne droite. Vous pouvez alors vous déplacer à concurrence de la moitié de votre Vitesse sans provoquer d'&Reference[Opportunity Attacks]{attaques d'Opportunité}.</p><p><strong>Coup au jarret.</strong> La Vitesse de la cible est réduite de 4,50 m jusqu'au début de votre tour suivant. Une même cible ne peut être affectée que par un seul Coup au jarret à la fois ; le plus récent.</p><section class=\"secret\" id=\"secret-vLb1SoKHWW2796Ko\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif pour le Coup aux jarret qui peut être appliqué à une cible.</p><p>L'activité de <strong>dégâts</strong> s'adapte automatiquement lorsque vous obtenez Coup brutal amélioré (2).</p></section>",
+                    "effects": {
+                        "Hamstrung": {
+                            "name": "Jarret",
+                            "description": "<p>Touché par un coup au jarret, la Vitesse de ce personnage a été réduite de 4,50 m jusqu'au début du prochain tour de l'attaquant.</p>"
+                        }
+                    }
+                },
+                "Relentless Rage": {
+                    "requirements": "Barbare",
+                    "name": "Rage implacable",
+                    "description": "<p>Votre Rage vous permet de continuer à combattre malgré les pires blessures. Si vous tombez à 0 point de vie alors que votre Rage est active et que vous ne mourez pas sur le coup, vous pouvez effectuer un jet de sauvegarde de Constitution DD 10. En cas de réussite, vos points de vie se retrouvent en fait au double de votre niveau de Barbare.</p><p>Par la suite et chaque fois que vous réutilisez cette aptitude, le DD augmente de 5. Lorsque vous terminez un Repos court ou long, le DD retombe à 10.</p><section class=\"secret\" id=\"secret-GTpuSHXh1ZobcQYd\"><p><strong>Note Foundry</strong></p><p>Cette aptitude augmente automatiquement le DD de 5 si vous consommez la ressource lors de son activation. Elle est également automatiquement réinitialisée à 10 après un Repos court ou long.</p></section>"
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : &Reference[unarmedstrike]</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Mason's Tools": {
+                    "name": "Outils de maçon",
+                    "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Force</p><p class=\"phb-meta\"><strong>Utilisation :</strong> ciseler un symbole ou creuser un trou dans la pierre (DD 10)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagBlockandTac]{palan}</p>",
+                    "activities": {
+                        "Chisel a Symbol or Hole": {
+                            "name": "Ciseler un symbole ou creuser un trou"
+                        }
+                    }
+                },
+                "Goliath": {
+                    "name": "Goliath",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspGoliath0000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"goliath-traits\">Traits des goliaths</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 2,15 m et 2,45 m)</p><p><strong>Vitesse :</strong> 10,50 m</p><p>En tant que goliath, vous disposez des traits spéciaux suivants.</p><p><strong>Ascendance gigante.</strong> Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p><p><strong>Forme de géant.</strong> À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Forte carrure.</strong> Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
+                    "subtype": "Goliath",
+                    "advancement": {
+                        "LETPMtBLvmzWUUb0": {
+                            "hint": "M (moyenne, entre 2,15 m et 2,45 m)"
+                        },
+                        "Goliath Traits": {
+                            "title": "Traits des goliaths"
+                        },
+                        "Giant Ancestry": {
+                            "title": "Ascendance gigante",
+                            "hint": "Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long."
+                        }
+                    }
+                },
+                "Giant Ancestry": {
+                    "name": "Ascendance gigante",
+                    "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+                    "requirements": "Goliath"
+                },
+                "Powerful Build": {
+                    "requirements": "Goliath",
+                    "name": "Forte carrure",
+                    "description": "<p>Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état &Reference[Grappled apply=false]. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p><section class=\"secret\" id=\"secret-7qaTRjmRe4PD41G3\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre taille lors de la détermination de la capacité de charge.</p></section>",
+                    "effects": {
+                        "Powerful Build": {
+                            "name": "Forte carrure"
+                        }
+                    }
+                },
+                "Large Form": {
+                    "requirements": "Goliath",
+                    "name": "Forme de géant",
+                    "description": "<p>À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section class=\"secret\" id=\"secret-MnS2QCGjgh6nXxEa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise l'augmentation de votre Vitesse et l'Avantage aux tests de Force.</p></section>",
+                    "activities": {
+                        "Enlarge": {
+                            "name": "Agrandissement"
+                        }
+                    },
+                    "effects": {
+                        "Large Form": {
+                            "name": "Forme de géant",
+                            "description": "<p>Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>"
+                        }
+                    }
+                },
+                "Cloud's Jaunt": {
+                    "requirements": "Goliath (géants des nuages)",
+                    "name": "Saut des nuées",
+                    "description": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+                    "activities": {
+                        "Cloud's Jaunt": {
+                            "name": "Saut des nuées",
+                            "target": "Espace inoccupé"
+                        }
+                    }
+                },
+                "Frenzy": {
+                    "name": "Frénésie",
+                    "description": "<p>Si vous recourez à Témérité alors que votre Rage est active, vous infligez des dégâts supplémentaires à la première cible que vous touchez à votre tour avec une attaque basée sur la Force. Pour déterminer ces dégâts supplémentaires, lancez autant de d6 que votre bonus de Rage aux dégâts et faites en la somme. Ces dégâts sont du même type que ceux de l'arme ou l'attaque à mains nues employée pour l'attaque.</p><section id=\"secret-EsDSGWYhmnmiS9Cu\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Dégâts</strong> s'adapte automatiquement à votre progression et vous permet de sélectionner le type de dégâts à utiliser dans la boîte de dialogue du jet de dégâts. Votre choix sera alors mémorisé.</p></section>",
+                    "requirements": "Voie du Berserker"
+                },
+                "Mindless Rage": {
+                    "requirements": "Voie du Berserker",
+                    "name": "Rage aveugle",
+                    "effects": {
+                        "Mindless Rage": {
+                            "name": "Rage aveugle"
+                        }
+                    },
+                    "description": "<p>Vous avez l'Immunité contre les états &Reference[Charmed] et &Reference[Frightened] tant que votre Rage est active. Si vous subissez déjà l'état Charmé ou Effrayé au moment où vous entrez en Rage, l'état en question prend fin sur vous.</p><section class=\"secret\" id=\"secret-CnCRD0Dyvx4FFGfV\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui confère l'Immunité aux états Charmé et Effrayé. Cependant, il ne s'applique pas automatiquement lorsque vous déclenchez votre Rage.</p></section>"
+                },
+                "Retaliation": {
+                    "requirements": "Voie du Berserker",
+                    "name": "Représailles",
+                    "description": "<p>Lorsque vous subissez des dégâts de la part d'une créature située dans un rayon de 1,50 m, vous pouvez jouer une Réaction pour effectuer contre elle une attaque de corps à corps avec une arme ou à mains nues.</p>",
+                    "activities": {
+                        "Retaliate": {
+                            "name": "Représailles",
+                            "condition": "Lorsque vous subissez des dégâts de la part d'une créature située dans un rayon de 1,50 m"
+                        }
+                    }
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Halberd +1": {
+                    "name": "Hallebarde",
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Pike +1": {
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    },
+                    "name": "Pique"
+                },
+                "Adamantine Half Plate Armor": {
+                    "name": "Demi-plate",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Trident": {
+                    "name": "Trident"
+                },
+                "Potion of Growth": {
+                    "name": "Potion d'agrandissement",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
                 }
             },
             "name": "Merric",
@@ -22854,9 +23508,31 @@
                             "title": "Formation aux armures"
                         },
                         "Weapon Mastery": {
-                            "title": "Bottes d'arme"
+                            "title": "Bottes d'arme",
+                            "hint": "Votre entraînement martial vous permet de recourir à la botte d'armes supplémentaires."
+                        },
+                        "Rage Damage": {
+                            "title": "Dégâts de Rage"
+                        },
+                        "Weapon Masteries Known": {
+                            "title": "Bottes d'arme connues"
+                        },
+                        "Primal Knowledge": {
+                            "title": "Savoir primal",
+                            "hint": "Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste des compétences disponibles aux Barbares de niveau 1."
+                        },
+                        "Brutal Strike": {
+                            "title": "Coup brutal"
+                        },
+                        "Saving Throws Proficiencies": {
+                            "title": "Maîtrise des jets de sauvegarde"
+                        },
+                        "Rages": {
+                            "title": "Rages"
                         }
-                    }
+                    },
+                    "name": "Barbare",
+                    "description": "<h3>Traits de base du Barbare</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p>Caractéristique principale</p></th><td><p>Force</p></td></tr><tr><th><p><strong>Dé de vie</strong></p></th><td><p>d12 par niveau de Barbare</p></td></tr><tr><th><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Force et Constitution</p></td></tr><tr><th><p><strong>Maîtrise de coméptence</strong></p></th><td><p><em>2 au choix parmi :</em> Athlétisme, Dressage, Intimidation, Nature, Perception et Survie</p></td></tr><tr><th><p><strong>Maîtrise d'arme</strong></p></th><td><p>Armes courantes et armes de guerre</p></td></tr><tr><th><p><strong>Formation aux armures</strong></p></th><td><p>Armures légères et intermédiaires, et boucliers</p></td></tr><tr><th><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepGreataxe00]{Hache à deux mains}, 4 @UUID[Compendium.dnd5e.equipment24.Item.phbwepHandaxe000]{hachettes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagExplorersPa]{paquetage d'explorateur} et [[/award 15GP]] ; ou (B) [[/award 75GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbbrbBarbarian0 inline classes=\"free-rules-embed\"]</p><h2>Devenir Barbare…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base du Barbare.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez les traits suivants de l'encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers.</li><li>Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table Aptitudes du Barbare.</li></ul>"
                 },
                 "Vigilante": {
                     "advancement": {
@@ -22878,7 +23554,9 @@
                         "Subclass Features": {
                             "title": "Aptitudes de sous-classe"
                         }
-                    }
+                    },
+                    "name": "Voie du Berserker",
+                    "description": "<blockquote><p>Convertissez la Rage en déchaînement de violence</p></blockquote><p>Les Barbares qui empruntent la Voie du Berserker transforment l'essentiel de leur Rage en violence. C'est la voie de la fureur débridée, dans laquelle on se laisse dominer et animer par la Rage pour s'abandonner dans le chaos des batailles.</p>"
                 },
                 "Potion of Healing": {
                     "name": "Potion de guérison",
@@ -22903,14 +23581,27 @@
                         "Consume": {
                             "name": "Consommer"
                         }
-                    }
+                    },
+                    "name": "Potion de guérison (importante)",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Vous récupérez 4d4 + 4 points de vie en buvant cette potion.</p><p>Quelle que soit la puissance de la potion, son liquide rouge étincelle lorsqu'on l'agite.</p>"
                 },
                 "Enlarge/Reduce": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
-                    }
+                    },
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer"
                 },
                 "Bag of Holding": {
                     "name": "Sac sans fond",
@@ -22993,7 +23684,8 @@
                 },
                 "Weapon Mastery": {
                     "name": "Bottes d'arme",
-                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>"
+                    "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>",
+                    "requirements": "Barbare"
                 },
                 "Javelin": {
                     "name": "Javeline",
@@ -23001,7 +23693,8 @@
                 },
                 "Extra Attack": {
                     "name": "Attaque supplémentaire",
-                    "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>"
+                    "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>",
+                    "requirements": "Barbare"
                 },
                 "Efficient Quiver": {
                     "name": "Carquois efficace",
@@ -23040,6 +23733,345 @@
                     "effects": {
                         "Strength of Fire": {
                             "name": "Force du feu"
+                        }
+                    }
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Rage": {
+                    "name": "Rage",
+                    "description": "<p>Vous pouvez vous animer d'une force primitive appelée Rage, qui vous investit d'une puissance et d'une résistance accrues. Vous pouvez entrer en Rage, par une action Bonus, si vous ne portez pas d'armure lourde.</p><p>Vous pouvez entrer en Rage autant de fois par jour qu'indiqué dans la colonne Rages de la table Aptitudes du Barbare, pour votre niveau de Barbare. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Tant que votre Rage est active, les règles suivantes s'appliquent.</p><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p><p><strong>Ni Concentration ni sorts.</strong> Vous ne pouvez pas maintenir votre Concentration ni lancer de sorts.</p><p><strong>Durée.</strong> La Rage persiste jusqu'à la fin de votre tour suivant, mais se termine prématurément si vous enfilez une armure lourde ou subissez l'état Neutralisé. Si votre Rage est encore active lorsque votre tour suivant intervient, vous pouvez la prolonger d'un round par n'importe laquelle des choses suivantes :</p><ul><li>Effectuer un jet d'attaque contre un ennemi.</li><li>Contraindre un ennemi à effectuer un jet de sauvegarde.</li><li>Entreprendre une action Bonus pour prolonger votre Rage.</li></ul><p>Chaque fois que la Rage est prolongée, elle persiste jusqu'à la fin de votre tour suivant. Vous pouvez maintenir votre Rage pendant un maximum de 10 minutes.</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise la Résistance et les dégâts supplémentaires. Elle recharge également automatiquement vos utilisations de Rage lors des Repos courts et longs.</p></section>",
+                    "requirements": "Barbare",
+                    "activities": {
+                        "Expend Rage": {
+                            "name": "Dépenser la Rage"
+                        }
+                    },
+                    "effects": {
+                        "Rage": {
+                            "name": "Rage"
+                        }
+                    }
+                },
+                "Unarmored Defense": {
+                    "requirements": "Barbare",
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Constitution. Vous conservez ce bénéfice si vous vous servez d'un bouclier.</p>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Danger Sense": {
+                    "requirements": "Barbare",
+                    "name": "Sens du danger",
+                    "description": "<p>Vous acquérez un talent surnaturel qui vous permet d'esquiver plus aisément les dangers que d'autres remarqueraient trop tard. Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p><section id=\"secret-gIJELszWrIqRFCxF\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude automatise l'Avantage aux jets de sauvegarde de Dextérité, mais n'est pas automatiquement désactivée lorsqu'il est Neutralisé. Elle peut être temporairement désactivée dans l'onglet Effets.</p></section>",
+                    "effects": {
+                        "Danger Sense": {
+                            "name": "Sens du danger",
+                            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p>"
+                        }
+                    }
+                },
+                "Reckless Attack": {
+                    "requirements": "Barbare",
+                    "name": "Témérité",
+                    "description": "<p>Vous pouvez renoncer à toute velléité de vous défendre au profit d'une férocité accrue. Quand vous effectuez le premier jet d'attaque de votre tour, vous pouvez décider d'attaquer avec témérité. Ce faisant, vous avez l'Avantage aux jets d'attaque basés sur la Force jusqu'au début de votre tour suivant, mais les jets d'attaque contre vous ont l'Avantage dans le même intervalle.</p><section id=\"secret-W7MI2ZVKsMQcSW6d\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif permettant de savoir si vous êtes imprudent ou non, mais elle n'automatise pas l'Avantage sur vos attaques ou les attaques contre vous.</p></section>",
+                    "effects": {
+                        "Reckless": {
+                            "name": "Téméraire"
+                        }
+                    }
+                },
+                "Primal Knowledge": {
+                    "requirements": "Barbare",
+                    "name": "Savoir primal",
+                    "description": "<p>Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste de compétences disponibles aux Barbares de niveau 1.</p><p>De plus, tant que votre Rage est active, vous pouvez canaliser les énergies primales lorsque vous tentez certaines tâches ; chaque fois que vous effectuez un test de caractéristique avec l'une des compétences suivantes, vous pouvez en faire un test de Force même s'il s'agit normalement d'une autre caractéristique : Acrobaties, Discrétion, Intimidation, Perception et Survie. Lorsque vous recourez à cette aptitude, votre Force illustre les énergies primales qui vous animent, et affûtent vos sens, votre aplomb et votre agilité.</p><section class=\"secret\" id=\"secret-himIRZuFGInNkZgU\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui fera en sorte que ces compétences utilisent automatiquement votre modificateur de Force s'il est supérieur à la valeur de caractéristique normalement associé à la compétence.</p></section>",
+                    "effects": {
+                        "Primal Knowledge": {
+                            "name": "Savoir primal"
+                        }
+                    }
+                },
+                "Fast Movement": {
+                    "requirements": "Barbare",
+                    "name": "Déplacement rapide",
+                    "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez pas d'armure lourde.</p><section id=\"secret-6cmMiIJhUk5cpOGz\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre vitesse de déplacement. Désactivez l'effet actif « Déplacement rapide » si vous portez une armure lourde.</p></section>",
+                    "effects": {
+                        "Fast Movement": {
+                            "name": "Déplacement rapide"
+                        }
+                    }
+                },
+                "Feral Instinct": {
+                    "requirements": "Barbare",
+                    "name": "Instinct sauvage",
+                    "effects": {
+                        "Feral Instinct": {
+                            "name": "Instinct sauvage"
+                        }
+                    },
+                    "description": "<p>Votre instinct s'est affuté au point que vous avez l'Avantage aux jets d'Initiatives.</p>"
+                },
+                "Instinctive Pounce": {
+                    "requirements": "Barbare",
+                    "name": "Bond instinctif",
+                    "description": "<p>Dans le cadre de l'action Bonus entreprise pour entrer en Rage, vous pouvez vous déplacer à concurrence de la moitié de votre Vitesse.</p>"
+                },
+                "Brutal Strike": {
+                    "requirements": "Barbare",
+                    "name": "Coup brutal",
+                    "activities": {
+                        "Brutal Strike": {
+                            "name": "Coup brutal"
+                        }
+                    },
+                    "description": "<p>Si vous recourez à [[/item Témérité]], vous pouvez renoncer a l'Avantage pour un jet d'attaque basé sur la Force, de votre choix et à votre tour. Le jet d'attaque retenu ne doit pas avoir le Désavantage, Si ce jet d'attaque touche, la cible subit [[lookup @scale.barbarian.brutal-strike]] dégâts supplémentaires du même type qu'infligé par l'arme ou à mains nues, et vous pouvez lui imposer l'effet de Coup brutal de votre choix. Vous disposez des options d'effet suivantes.</p><p><strong>Coup appuyé.</strong> La cible est repoussée de vous de 4,50 m, en ligne droite. Vous pouvez alors vous déplacer à concurrence de la moitié de votre Vitesse sans provoquer d'&Reference[Opportunity Attacks]{attaques d'Opportunité}.</p><p><strong>Coup au jarret.</strong> La Vitesse de la cible est réduite de 4,50 m jusqu'au début de votre tour suivant. Une même cible ne peut être affectée que par un seul Coup au jarret à la fois ; le plus récent.</p><section class=\"secret\" id=\"secret-vLb1SoKHWW2796Ko\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif pour le Coup aux jarret qui peut être appliqué à une cible.</p><p>L'activité de <strong>dégâts</strong> s'adapte automatiquement lorsque vous obtenez Coup brutal amélioré (2).</p></section>",
+                    "effects": {
+                        "Hamstrung": {
+                            "name": "Jarret",
+                            "description": "<p>Touché par un coup au jarret, la Vitesse de ce personnage a été réduite de 4,50 m jusqu'au début du prochain tour de l'attaquant.</p>"
+                        }
+                    }
+                },
+                "Relentless Rage": {
+                    "requirements": "Barbare",
+                    "name": "Rage implacable",
+                    "description": "<p>Votre Rage vous permet de continuer à combattre malgré les pires blessures. Si vous tombez à 0 point de vie alors que votre Rage est active et que vous ne mourez pas sur le coup, vous pouvez effectuer un jet de sauvegarde de Constitution DD 10. En cas de réussite, vos points de vie se retrouvent en fait au double de votre niveau de Barbare.</p><p>Par la suite et chaque fois que vous réutilisez cette aptitude, le DD augmente de 5. Lorsque vous terminez un Repos court ou long, le DD retombe à 10.</p><section class=\"secret\" id=\"secret-GTpuSHXh1ZobcQYd\"><p><strong>Note Foundry</strong></p><p>Cette aptitude augmente automatiquement le DD de 5 si vous consommez la ressource lors de son activation. Elle est également automatiquement réinitialisée à 10 après un Repos court ou long.</p></section>"
+                },
+                "Improved Brutal Strike": {
+                    "requirements": "Barbare",
+                    "name": "Coup brutal amélioré",
+                    "description": "<p>Vous avez développé de nouveaux coups féroces. Les effets ci-après figurent désormais dans vos options de Coup brutal.</p><p><strong>Coup déchirant.</strong> Le prochain jet d'attaque effectué avant le début de votre tour suivant par une autre créature contre la cible bénéficie d'un bonus de +5. Un même jet d'attaque ne peut bénéficier que d'un seul bonus de Coup déchirant.</p><p><strong>Coup stupéfiant.</strong> La cible a le Désavantage à son prochain jet de sauvegarde et ne peut pas effectuer d'attaque d'Opportunité jusqu'au début de votre tour suivant.</p><section class=\"secret\" id=\"secret-5KFPx8fyh5NldmJp\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une activité pour chaque option qui comprend un effet actif pour suivre les Coups déchirants et stupéfiants, mais n'automatise pas leurs effets.</p></section>",
+                    "activities": {
+                        "Sundering Blow": {
+                            "name": "Coup déchirant"
+                        },
+                        "Staggering Blow": {
+                            "name": "Coup stupéfiant"
+                        }
+                    },
+                    "effects": {
+                        "Staggered": {
+                            "name": "Stupéfié",
+                            "description": "<p>Touché par un coup stupéfiant, ce personnage a un Désavantage à son prochain jet de sauvegarde et ne peut pas effectuer d'attaques d'Opportunité jusqu'au début du prochain tour de l'attaquant.</p>"
+                        },
+                        "Sundered": {
+                            "name": "Déchiré",
+                            "description": "<p>Touché par un coup déchirant, le prochain jet d'attaque effectué avant le début de votre tour suivant par une autre créature contre la cible bénéficie d'un bonus de +5.</p>"
+                        }
+                    }
+                },
+                "Persistent Rage": {
+                    "requirements": "Barbare",
+                    "name": "Rage persistante",
+                    "description": "<p>Lorsque vous jouez l'Initiative, vous pouvez récupérer toutes vos utilisations de Rage. Après avoir récupéré ainsi vos utilisations de Rage, vous devez terminer un Repos long pour pouvoir le refaire.</p><p>De plus, votre Rage est si féroce qu'elle persiste désormais 10 minutes sans vous demander de la prolonger activement de round en round. Votre Rage prend fin prématurément si vous subissez l'état &Reference[Unconscious] (l'état &Reference[Incapacitated] seul n'y met plus fin) ou si vous enfilez une armure lourde.</p><section class=\"secret\" id=\"secret-3IS0iUbWZ04tp74k\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité qui peut être utilisée lorsque vous lancez l'Initiative, ce qui rechargera toutes vos utilisations de Rage.</p></section>",
+                    "activities": {
+                        "Recharge Rage on Initiative": {
+                            "name": "Recharger la Rage à l'Initiative",
+                            "condition": "Lorsque vous jouez l'Initiative"
+                        }
+                    }
+                },
+                "Improved Brutal Strike (2)": {
+                    "requirements": "Barbare",
+                    "name": "Coup brutal amélioré (2)",
+                    "description": "<p>Les dégâts supplémentaires de votre Coup brutal passent à 2d10. De plus, vous pouvez appliquer simultanément deux effets différents de l'aptitude lorsque vous recourez à Coup brutal.</p><section id=\"secret-XCUecJBPB6amtvj9\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le jet de dégâts dans Coup Brutal sera automatiquement mis à l'échelle pour utiliser cette nouvelle valeur.</p></section>"
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : &Reference[unarmedstrike]</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Mason's Tools": {
+                    "name": "Outils de maçon",
+                    "description": "<p class=\"phb-meta\"><strong>Caractéristique :</strong> Force</p><p class=\"phb-meta\"><strong>Utilisation :</strong> ciseler un symbole ou creuser un trou dans la pierre (DD 10)</p><p class=\"phb-meta\"><strong>Artisanat :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagBlockandTac]{palan}</p>",
+                    "activities": {
+                        "Chisel a Symbol or Hole": {
+                            "name": "Ciseler un symbole ou creuser un trou"
+                        }
+                    }
+                },
+                "Goliath": {
+                    "name": "Goliath",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspGoliath0000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"goliath-traits\">Traits des goliaths</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 2,15 m et 2,45 m)</p><p><strong>Vitesse :</strong> 10,50 m</p><p>En tant que goliath, vous disposez des traits spéciaux suivants.</p><p><strong>Ascendance gigante.</strong> Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p><p><strong>Forme de géant.</strong> À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Forte carrure.</strong> Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
+                    "subtype": "Goliath",
+                    "advancement": {
+                        "LETPMtBLvmzWUUb0": {
+                            "hint": "M (moyenne, entre 2,15 m et 2,45 m)"
+                        },
+                        "Goliath Traits": {
+                            "title": "Traits des goliaths"
+                        },
+                        "Giant Ancestry": {
+                            "title": "Ascendance gigante",
+                            "hint": "Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long."
+                        }
+                    }
+                },
+                "Giant Ancestry": {
+                    "name": "Ascendance gigante",
+                    "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+                    "requirements": "Goliath"
+                },
+                "Powerful Build": {
+                    "requirements": "Goliath",
+                    "name": "Forte carrure",
+                    "description": "<p>Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état &Reference[Grappled apply=false]. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p><section class=\"secret\" id=\"secret-7qaTRjmRe4PD41G3\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre taille lors de la détermination de la capacité de charge.</p></section>",
+                    "effects": {
+                        "Powerful Build": {
+                            "name": "Forte carrure"
+                        }
+                    }
+                },
+                "Large Form": {
+                    "requirements": "Goliath",
+                    "name": "Forme de géant",
+                    "description": "<p>À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section class=\"secret\" id=\"secret-MnS2QCGjgh6nXxEa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise l'augmentation de votre Vitesse et l'Avantage aux tests de Force.</p></section>",
+                    "activities": {
+                        "Enlarge": {
+                            "name": "Agrandissement"
+                        }
+                    },
+                    "effects": {
+                        "Large Form": {
+                            "name": "Forme de géant",
+                            "description": "<p>Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>"
+                        }
+                    }
+                },
+                "Cloud's Jaunt": {
+                    "requirements": "Goliath (géants des nuages)",
+                    "name": "Saut des nuées",
+                    "description": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+                    "activities": {
+                        "Cloud's Jaunt": {
+                            "name": "Saut des nuées",
+                            "target": "Espace inoccupé"
+                        }
+                    }
+                },
+                "Frenzy": {
+                    "name": "Frénésie",
+                    "description": "<p>Si vous recourez à Témérité alors que votre Rage est active, vous infligez des dégâts supplémentaires à la première cible que vous touchez à votre tour avec une attaque basée sur la Force. Pour déterminer ces dégâts supplémentaires, lancez autant de d6 que votre bonus de Rage aux dégâts et faites en la somme. Ces dégâts sont du même type que ceux de l'arme ou l'attaque à mains nues employée pour l'attaque.</p><section id=\"secret-EsDSGWYhmnmiS9Cu\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Dégâts</strong> s'adapte automatiquement à votre progression et vous permet de sélectionner le type de dégâts à utiliser dans la boîte de dialogue du jet de dégâts. Votre choix sera alors mémorisé.</p></section>",
+                    "requirements": "Voie du Berserker"
+                },
+                "Mindless Rage": {
+                    "requirements": "Voie du Berserker",
+                    "name": "Rage aveugle",
+                    "effects": {
+                        "Mindless Rage": {
+                            "name": "Rage aveugle"
+                        }
+                    },
+                    "description": "<p>Vous avez l'Immunité contre les états &Reference[Charmed] et &Reference[Frightened] tant que votre Rage est active. Si vous subissez déjà l'état Charmé ou Effrayé au moment où vous entrez en Rage, l'état en question prend fin sur vous.</p><section class=\"secret\" id=\"secret-CnCRD0Dyvx4FFGfV\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui confère l'Immunité aux états Charmé et Effrayé. Cependant, il ne s'applique pas automatiquement lorsque vous déclenchez votre Rage.</p></section>"
+                },
+                "Retaliation": {
+                    "requirements": "Voie du Berserker",
+                    "name": "Représailles",
+                    "description": "<p>Lorsque vous subissez des dégâts de la part d'une créature située dans un rayon de 1,50 m, vous pouvez jouer une Réaction pour effectuer contre elle une attaque de corps à corps avec une arme ou à mains nues.</p>",
+                    "activities": {
+                        "Retaliate": {
+                            "name": "Représailles",
+                            "condition": "Lorsque vous subissez des dégâts de la part d'une créature située dans un rayon de 1,50 m"
+                        }
+                    }
+                },
+                "Intimidating Presence": {
+                    "requirements": "Voie du Berserker",
+                    "name": "Présence intimidante",
+                    "description": "<p>Par une action Bonus, vous pouvez inspirer la terreur chez autrui grâce à votre présence et votre puissance primale. Ce faisant, chaque créature de votre choix dans une Émanation de 9 m centrée sur vous effectue un jet de sauvegarde de Sagesse (DD 8 plus votre modificateur de Force et votre bonus de maîtrise). En cas d'échec, la créature subit l'état &Reference[Frightened] pendant 1 minute. À la fin de chacun des tours d'une créature Effrayée, celle-ci réitère le JS et met un terme à l'effet sur elle-même en cas de réussite.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser une utilisation de votre Rage (pas d'action requise) pour en récupérer l'usage.</p><section class=\"secret\" id=\"secret-vRQdGrtACAbxH4Tm\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Sauvegarder</strong> inclut un effet actif qui ajoute l'état Effrayé.</p><p>L'activité <strong>Recharger</strong> consomme une utilisation de Rage et recharge votre utilisation de Présence intimidante.</p></section>",
+                    "activities": {
+                        "Recharge with Rage": {
+                            "name": "Recharger avec la Rage"
+                        }
+                    },
+                    "effects": {
+                        "Intimidated": {
+                            "name": "Intimidé"
+                        }
+                    }
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Adamantine Half Plate Armor": {
+                    "name": "Demi-plate",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Trident": {
+                    "name": "Trident"
+                },
+                "Potion of Growth": {
+                    "name": "Potion d'agrandissement",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
+                },
+                "Vicious Halberd": {
+                    "name": "Hallebarde",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Vicious Pike": {
+                    "name": "Pique",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Stone of Controlling Earth Elementals": {
+                    "name": "Pierre de contrôle des élémentaires de la terre",
+                    "description": "<p><em>Objet merveilleux, rare</em></p><p>En maintenant le contact avec cette pierre posée au sol de 2,5 kg, vous pouvez entreprendre l'action Magie pour convoquer un <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmEarthElemental]{élémentaire de la terre}</strong>. L'élémentaire apparaît en un espace inoccupé de votre choix dans un rayon de 9 m, obéit à vos ordres et joue son tour aussitôt après vous dans l'ordre d'Initiative. Il disparaît au bout de 1 heure ; plus tôt s'il meurt ou si vous le révoquez par une action Bonus. La pierre ne peut plus resservir de cette manière avant l'aube suivante.</p>",
+                    "activities": {
+                        "Summon Elemental": {
+                            "name": "Convoquer un élémentaire"
                         }
                     }
                 }
@@ -24710,6 +25742,33 @@
                             "name": "Asperger un espace"
                         }
                     }
+                },
+                "Unarmored Defense": {
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et Sagesse.</p><section class=\"secret\" id=\"secret-yjsIRRlbUz035Dnj\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui met à jour votre classe d'armure.</p></section>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
                 }
             }
         },
@@ -24973,6 +26032,48 @@
                 "Midsize Compartment": {
                     "name": "Compartiment intermédiaire",
                     "description": "<p>Le compartiment de taille intermédiaire peut contenir jusqu'à 18 javelines ou objets comparables.</p>"
+                },
+                "Unarmored Defense": {
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et Sagesse.</p><section class=\"secret\" id=\"secret-yjsIRRlbUz035Dnj\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui met à jour votre classe d'armure.</p></section>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -25267,6 +26368,48 @@
                 "Midsize Compartment": {
                     "name": "Compartiment intermédiaire",
                     "description": "<p>Le compartiment de taille intermédiaire peut contenir jusqu'à 18 javelines ou objets comparables.</p>"
+                },
+                "Unarmored Defense": {
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et Sagesse.</p><section class=\"secret\" id=\"secret-yjsIRRlbUz035Dnj\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui met à jour votre classe d'armure.</p></section>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -25495,7 +26638,9 @@
                         "Consume": {
                             "name": "Consommer"
                         }
-                    }
+                    },
+                    "name": "Potion de guérison (importante)",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Vous récupérez 4d4 + 4 points de vie en buvant cette potion.</p><p>Quelle que soit la puissance de la potion, son liquide rouge étincelle lorsqu'on l'agite.</p>"
                 },
                 "Fireball": {
                     "effects": {
@@ -25606,6 +26751,48 @@
                     "effects": {
                         "Strength of Fire": {
                             "name": "Force du feu"
+                        }
+                    }
+                },
+                "Unarmored Defense": {
+                    "name": "Défense sans armure",
+                    "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et Sagesse.</p><section class=\"secret\" id=\"secret-yjsIRRlbUz035Dnj\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui met à jour votre classe d'armure.</p></section>",
+                    "effects": {
+                        "Unarmored Defense": {
+                            "name": "Défense sans armure"
+                        }
+                    }
+                },
+                "Unarmed Strike": {
+                    "name": "Attaque à mains nues",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>",
+                    "activities": {
+                        "Grapple/Shove": {
+                            "name": "Bousculade/Lutte",
+                            "chatFlavor": "Tentative de bousculade ou de lutte"
+                        }
+                    },
+                    "effects": {
+                        "Grappled": {
+                            "name": "Agrippé"
+                        },
+                        "Prone": {
+                            "name": "À terre"
+                        }
+                    }
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
                         }
                     }
                 }
@@ -26324,8 +27511,19 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
-                    }
+                    },
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer"
                 },
                 "Revivify": {
                     "name": "Retour à la vie",
@@ -26510,6 +27708,10 @@
                             "name": "Boire la potion"
                         }
                     }
+                },
+                "Potion of Growth": {
+                    "name": "Potion d'agrandissement",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
                 }
             }
         },
@@ -26740,8 +27942,19 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
-                    }
+                    },
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer"
                 },
                 "Revivify": {
                     "name": "Retour à la vie",
@@ -26985,6 +28198,10 @@
                             "name": "Boire la potion"
                         }
                     }
+                },
+                "Potion of Growth": {
+                    "name": "Potion d'agrandissement",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
                 }
             }
         },
@@ -27153,6 +28370,10 @@
                             "name": "Défense"
                         }
                     }
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
                 }
             }
         },
@@ -27338,6 +28559,31 @@
                 "Extra Attack": {
                     "name": "Attaque supplémentaire",
                     "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>"
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Halberd": {
+                    "name": "Hallebarde"
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Pike": {
+                    "name": "Pique"
                 }
             }
         },
@@ -27548,6 +28794,31 @@
                 "Midsize Compartment": {
                     "name": "Compartiment intermédiaire",
                     "description": "<p>Le compartiment de taille intermédiaire peut contenir jusqu'à 18 javelines ou objets comparables.</p>"
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Halberd": {
+                    "name": "Hallebarde"
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Pike": {
+                    "name": "Pique"
                 }
             }
         },
@@ -27796,6 +29067,52 @@
                     "effects": {
                         "Strength of Fire": {
                             "name": "Force du feu"
+                        }
+                    }
+                },
+                "Savage Attacker": {
+                    "name": "Sauvagerie martiale",
+                    "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Winged Boots": {
+                    "name": "Bottes ailées",
+                    "description": "<p><em>Objet merveilleux, peu courant (Harmonisation requise)</em></p><p>Ces bottes disposent de 4 charges et récupèrent quotidiennement 1d4 charges dépensées, à l'aube. Tant qu'elles vous chaussent, vous pouvez entreprendre l'action Magie pour dépenser 1 charge et recevoir une Vitesse de vol de 9 m pendant 1 heure. Si vous volez au moment où la durée expire, vous descendez à une vitesse de 9 m par round jusqu'à ce que vous touchiez terre.</p>",
+                    "activities": {
+                        "Fly": {
+                            "name": "Voler"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Trident": {
+                    "name": "Trident"
+                },
+                "Vicious Halberd": {
+                    "name": "Hallebarde",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Vicious Pike": {
+                    "name": "Pique",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
                         }
                     }
                 }
@@ -28284,6 +29601,17 @@
                 "Midsize Compartment": {
                     "name": "Compartiment intermédiaire",
                     "description": "<p>Le compartiment de taille intermédiaire peut contenir jusqu'à 18 javelines ou objets comparables.</p>"
+                },
+                "Shortbow +1": {
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -28676,8 +30004,19 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
-                    }
+                    },
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer"
                 },
                 "Locate Object": {
                     "effects": {
@@ -28841,6 +30180,17 @@
                     "activities": {
                         "qsuojT0nn8ZkAY19": {
                             "chatFlavor": "Cette fumée entraîne une &Reference[LightlyObscured] dans l'espace que vous venez de quitter jusqu'à la fin de votre tour suivant."
+                        }
+                    }
+                },
+                "Shortbow +1": {
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
                         }
                     }
                 }
@@ -32427,6 +33777,21 @@
                 "Magic Missile": {
                     "name": "Projectile magique",
                     "description": "<p>Vous créez trois traits de force magique et scintillante. Chaque projectile heurte une créature de votre choix parmi celles que vous voyez à portée. Un projectile inflige 1d4 + 1 dégâts de force à sa cible. Les traits frappent tous simultanément, sachant que vous pouvez viser une seule créature ou plusieurs.</p><p><strong>Emplacement de niveau supérieur.</strong> Le sort produit un trait supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup>.</p><p>[[2 + @item.level]]{Traits niveau [[lookup @item.level]] }</p>"
+                },
+                "Enlarge/Reduce": {
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer",
+                    "effects": {
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
+                        }
+                    }
                 }
             }
         },
@@ -32789,6 +34154,21 @@
                 "Magic Missile": {
                     "name": "Projectile magique",
                     "description": "<p>Vous créez trois traits de force magique et scintillante. Chaque projectile heurte une créature de votre choix parmi celles que vous voyez à portée. Un projectile inflige 1d4 + 1 dégâts de force à sa cible. Les traits frappent tous simultanément, sachant que vous pouvez viser une seule créature ou plusieurs.</p><p><strong>Emplacement de niveau supérieur.</strong> Le sort produit un trait supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup>.</p><p>[[2 + @item.level]]{Traits niveau [[lookup @item.level]] }</p>"
+                },
+                "Enlarge/Reduce": {
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer",
+                    "effects": {
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
+                        }
+                    }
                 }
             }
         },
@@ -32933,7 +34313,9 @@
                         "Consume": {
                             "name": "Consommer"
                         }
-                    }
+                    },
+                    "name": "Potion de guérison (importante)",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Vous récupérez 4d4 + 4 points de vie en buvant cette potion.</p><p>Quelle que soit la puissance de la potion, son liquide rouge étincelle lorsqu'on l'agite.</p>"
                 },
                 "Case, Map or Scroll": {
                     "name": "Étui à cartes ou à parchemins",
@@ -33281,6 +34663,21 @@
                         },
                         "Acid Resistance": {
                             "name": "Résistance à l'acide"
+                        }
+                    }
+                },
+                "Enlarge/Reduce": {
+                    "name": "Agrandissement/rapetissement",
+                    "description": "<p>Pour toute la durée, le sort agrandit ou rapetisse une créature ou un objet que vous voyez à portée (voir l'effet retenu ci-après). Dans le cas d'un objet, il ne doit être porté par personne. Si la cible est une créature non consentante, elle effectue un jet de sauvegarde de Constitution. En cas de réussite, le sort est sans effet.</p><p>Tout ce que porte une créature ciblée change également de taille. Tout objet qu'elle lâche retrouve aussitôt sa taille normale. Les armes lancées et les projectiles retrouvent aussi leur taille dès qu'ils ont touché ou raté leur cible.</p><p><strong>Agrandissement.</strong> La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p><p><strong>Rapetissement.</strong> La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>",
+                    "materials": "une pincée de poudre de fer",
+                    "effects": {
+                        "Enlarged": {
+                            "name": "Agrandissement",
+                            "description": "<p>La taille de la cible augmente d'une catégorie ; de taille M à G par exemple. La cible a l'Avantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme agrandie ou à mains nues infligent 1d4 dégâts supplémentaires quand elles touchent.</p>"
+                        },
+                        "Reduced": {
+                            "name": "Rapetissement",
+                            "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
                     }
                 }
@@ -34157,7 +35554,9 @@
                         "Consume": {
                             "name": "Consommer"
                         }
-                    }
+                    },
+                    "name": "Potion de guérison (importante)",
+                    "description": "<p><em>Potion, peu courante</em></p><p>Vous récupérez 4d4 + 4 points de vie en buvant cette potion.</p><p>Quelle que soit la puissance de la potion, son liquide rouge étincelle lorsqu'on l'agite.</p>"
                 },
                 "Case, Map or Scroll": {
                     "name": "Étui à cartes ou à parchemins",
