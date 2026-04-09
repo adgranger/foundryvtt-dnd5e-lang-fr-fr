@@ -24151,8 +24151,17 @@
                         },
                         "Weapon Proficiencies": {
                             "title": "Maîtrises d'arme"
+                        },
+                        "Metamagic": {
+                            "title": "Métamagie",
+                            "hint": "Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie."
+                        },
+                        "Sorcery Points": {
+                            "title": "Points de Sorcellerie"
                         }
-                    }
+                    },
+                    "name": "Ensorceleur",
+                    "description": "<h3>Traits de base de l'Ensorceleur</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p><strong>Caractéristique principale</strong></p></th><td><p>Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Dé de vie</strong></p></th><td><p>d6 par niveau d'Ensorceleur</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Constitution et Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise de compétence</strong></p></th><td><p><em>2 au choix parmi :</em> Arcanes, Intimidation, Intuition, Persuasion, Religion et Tromperie</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrises d'arme</strong></p></th><td><p>Armes courantes</p></td></tr><tr><th scope=\"row\"><p><strong>Formation aux armures</strong></p></th><td><p>Aucune</p></td></tr><tr><th scope=\"row\"><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepSpear00000]{Lance}, 2 @UUID[Compendium.dnd5e.equipment24.Item.phbwepDagger0000]{dagues}, @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} (@UUID[Compendium.dnd5e.equipment24.Item.phbafcCrystal000]{cristal}), @UUID[Compendium.dnd5e.equipment24.Item.phbagDungeoneers]{paquetage d'exploration souterraine} et [[/award 28GP]] ; ou (B) [[/award 50GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbscrSorcerer00 inline classes=\"free-rules-embed\"]</p><h2>Devenir Ensorceleur…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#aptitudes-de-classe]{Aptitudes de l'Ensorceleur}.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez le trait Dé de vie de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table Aptitudes de l'Ensorceleur. Référez-vous aux @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{règles du multiclassage}, au chapitre 2, pour déterminer vos emplacements de sort disponibles.</li></ul>"
                 },
                 "Spellcasting": {
                     "name": "Sorts",
@@ -24169,7 +24178,9 @@
                         "Choose Languages": {
                             "title": "Choix des langues"
                         }
-                    }
+                    },
+                    "name": "Démonologue",
+                    "description": "<p><strong>Valeurs de caractéristique.</strong> Charisme, Constitution, Intelligence</p><p><strong>Don.</strong> Initié à la magie (Magicien)</p><p><strong>Maîtrises de compétence.</strong> Arcanes et Histoire</p><p><strong>Maîtrise d'outils.</strong> Matériel d'alchimiste</p><p><strong>Équipement.</strong> <em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{Robe}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInkPen00000]{porte-plume}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{parchemin} (10 feuilles), @UUID[Compendium.dnd5e.equipment24.Item.phbagBook0000000]{livre} (démons), [[/award 13gp]] ; ou (B) [[/award 50gp]]</p>"
                 },
                 "Magic Initiate": {
                     "name": "Initié à la magie",
@@ -24236,6 +24247,15 @@
                         "Spellcasting Attack": {
                             "name": "Attaque de sort"
                         }
+                    },
+                    "name": "Lance",
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
                     }
                 },
                 "True Strike": {
@@ -24273,6 +24293,15 @@
                         "(free casting)": {
                             "name": "(incantation gratuite)"
                         }
+                    },
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité",
+                    "effects": {
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
+                        }
                     }
                 },
                 "Mage Hand": {
@@ -24282,8 +24311,115 @@
                 "Prestidigitation": {
                     "name": "Prestidigitation",
                     "description": "<p>Vous produisez un effet magique à portée. Choisissez l'effet parmi les options ci-après. Si vous lancez ce sort plusieurs fois, vous pouvez faire coexister jusqu'à trois de ces effets non instantanés.</p><p><strong>Effet sensoriel.</strong> Vous produisez un effet sensoriel instantané et inoffensif, comme une pluie d'étincelles, une petite rafale, quelques notes de musique ou une odeur étrange.</p><p><strong>Jeu avec le feu.</strong> Vous allumez ou éteignez une bougie, une torche ou un petit feu de camp, en un instant.</p><p><strong>Nettoyage ou maculage.</strong> Vous nettoyez ou souillez en un instant un objet dont le volume ne dépasse pas 30 litres (ou 0,03 m3).</p><p><strong>Sensation mineure.</strong> Vous refroidissez, réchauffez ou parfumez de la matière inerte pendant 1 heure, à condition que son volume ne dépasse pas 30 litres (ou 0,03 m3).</p><p><strong>Marque magique.</strong> Vous faites apparaître pendant 1 heure, sur un objet ou une surface, une couleur, une petite marque ou un symbole.</p><p><strong>Création mineure.</strong> Vous créez une babiole non magique ou une image illusoire qui tient dans votre main. Elle persiste jusqu'à la fin de votre tour suivant. Une telle babiole ne peut pas infliger de dégâts et n'a aucune valeur monétaire.</p>"
+                },
+                "Tiefling, Infernal": {
+                    "name": "Tieffelin, Infernal",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspTiefling000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"infernal\">Infernal</h3><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspInfernalTie inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"tiefling-traits\">Traits des tieffelins</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m), à choisir lors de la sélection de l'espèce</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que tieffelin, vous disposez des traits spéciaux suivants.</p><p><strong>Héritage fiélon.</strong> Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><p><strong>Présence d'outre-monde.</strong> Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 18 m.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table>",
+                    "subtype": "Tieffelin",
+                    "advancement": {
+                        "lskxIeib6rIreZ1h": {
+                            "hint": "M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m)"
+                        },
+                        "Tiefling Traits": {
+                            "title": "Traits des tieffelins"
+                        },
+                        "Otherworldly Presence": {
+                            "title": "Présence d'outre-monde"
+                        },
+                        "Infernal Tiefling Traits": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "Vous bénéficiez de la Résistance aux dégâts de feu."
+                        },
+                        "gMovXMwHeD9cCL99": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "ol3SWLw2FTNEiXrb": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "cj8h25IH0Zvdy3Bm": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        }
+                    }
+                },
+                "Otherworldly Presence": {
+                    "name": "Présence d'outre-monde",
+                    "description": "<p>Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque ce sort vous est octroyé, il vous permet de choisir votre caractéristique d'incantation.</p></section>",
+                    "requirements": "Tieffelin"
+                },
+                "Fiendish Legacy, Infernal": {
+                    "requirements": "Tieffelin",
+                    "name": "Héritage fiélon, Infernal",
+                    "description": "<p>Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><h3 data-anchor=\"infernal\">Infernal</h3><p>L'héritage infernal relie les tieffelins non seulement à la Géhenne, mais aussi aux Neuf Enfers et aux champs de bataille désolés de l'Achéron. Cornes, épines, queue fourchue, yeux mordorés et vague relent de soufre ou de fumée sont des traits physiques propres à ces tieffelins, dont beaucoup ont un démon pour ancêtre.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table><section class=\"secret\" id=\"secret-UpLnecebx3jeydEG\"><p><strong>Note Foundry</strong></p><p>La Résistance et les sorts vous sont octroyés automatiquement et vous serez invité à choisir la caractéristique d'incantation au cours de la Progression.</p></section>"
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Innate Sorcery": {
+                    "name": "Sorcellerie innée",
+                    "description": "<p>Un événement de votre passé a laissé une marque indélébile sur vous, faisant éclore une magie bouillonnante. Par une action Bonus, vous pouvez libérer cette magie pendant 1 minute, au cours de laquelle vous recevez les bénéfices suivants :</p><ul><li>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</li><li>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</li></ul><p>Vous pouvez recourir à cette aptitude deux fois, et récupérez ce quota en terminant un Repos long.</p><section id=\"secret-nB2j1T08cVjrcuAj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente le DD de sauvegarde des sorts. L'Avantage sur les jets d'attaque n'est pas automatique.</p></section>",
+                    "activities": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée"
+                        }
+                    },
+                    "effects": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée",
+                            "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1. (Automatisé)</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez. (Non automatisé)</p>"
+                        }
+                    }
+                },
+                "Sorcerous Burst": {
+                    "name": "Éruption ensorcelée",
+                    "description": "<p>Vous projetez des énergies ensorcelées vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d8 dégâts du type choisi : acide, feu, foudre, froid, poison, psychiques ou tonnerre.</p><p>Si vous obtenez un 8 sur un d8 du sort, vous pouvez en lancer un autre pour l'ajouter aux dégâts. Quand vous lancez ce sort, le maximum de d8 supplémentaires que vous pouvez ainsi ajouter aux dégâts du sort est égal à votre modificateur de caractéristique d'incantation.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).</p>"
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Book (demons)": {
+                    "name": "Livre (démons)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crystal": {
+                    "name": "Cristal",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
                 }
-            }
+            },
+            "name": "Morthos",
+            "description": "<p>L'enquête de Morthos sur son ascendance draconique-infernale complexe l'a conduite à une vie académique, mais il est vite apparu que les imbéciles en charge lui cachaient de nombreux secrets.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "MorthosLv0500000": {
             "items": {
@@ -24373,8 +24509,17 @@
                         },
                         "Weapon Proficiencies": {
                             "title": "Maîtrises d'arme"
+                        },
+                        "Metamagic": {
+                            "title": "Métamagie",
+                            "hint": "Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie."
+                        },
+                        "Sorcery Points": {
+                            "title": "Points de Sorcellerie"
                         }
-                    }
+                    },
+                    "name": "Ensorceleur",
+                    "description": "<h3>Traits de base de l'Ensorceleur</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p><strong>Caractéristique principale</strong></p></th><td><p>Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Dé de vie</strong></p></th><td><p>d6 par niveau d'Ensorceleur</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Constitution et Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise de compétence</strong></p></th><td><p><em>2 au choix parmi :</em> Arcanes, Intimidation, Intuition, Persuasion, Religion et Tromperie</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrises d'arme</strong></p></th><td><p>Armes courantes</p></td></tr><tr><th scope=\"row\"><p><strong>Formation aux armures</strong></p></th><td><p>Aucune</p></td></tr><tr><th scope=\"row\"><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepSpear00000]{Lance}, 2 @UUID[Compendium.dnd5e.equipment24.Item.phbwepDagger0000]{dagues}, @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} (@UUID[Compendium.dnd5e.equipment24.Item.phbafcCrystal000]{cristal}), @UUID[Compendium.dnd5e.equipment24.Item.phbagDungeoneers]{paquetage d'exploration souterraine} et [[/award 28GP]] ; ou (B) [[/award 50GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbscrSorcerer00 inline classes=\"free-rules-embed\"]</p><h2>Devenir Ensorceleur…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#aptitudes-de-classe]{Aptitudes de l'Ensorceleur}.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez le trait Dé de vie de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table Aptitudes de l'Ensorceleur. Référez-vous aux @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{règles du multiclassage}, au chapitre 2, pour déterminer vos emplacements de sort disponibles.</li></ul>"
                 },
                 "Spellcasting": {
                     "name": "Sorts",
@@ -24391,7 +24536,9 @@
                         "Choose Languages": {
                             "title": "Choix des langues"
                         }
-                    }
+                    },
+                    "name": "Démonologue",
+                    "description": "<p><strong>Valeurs de caractéristique.</strong> Charisme, Constitution, Intelligence</p><p><strong>Don.</strong> Initié à la magie (Magicien)</p><p><strong>Maîtrises de compétence.</strong> Arcanes et Histoire</p><p><strong>Maîtrise d'outils.</strong> Matériel d'alchimiste</p><p><strong>Équipement.</strong> <em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{Robe}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInkPen00000]{porte-plume}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{parchemin} (10 feuilles), @UUID[Compendium.dnd5e.equipment24.Item.phbagBook0000000]{livre} (démons), [[/award 13gp]] ; ou (B) [[/award 50gp]]</p>"
                 },
                 "Magic Initiate": {
                     "name": "Initié à la magie",
@@ -24420,15 +24567,27 @@
                     "advancement": {
                         "Subclass Features": {
                             "title": "Aptitudes de sous-classe"
+                        },
+                        "Draconic Spells": {
+                            "title": "Sorts draconiques",
+                            "hint": "Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous."
+                        },
+                        "8UnvG3X4TR3MpCGe": {
+                            "hint": "Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison. Vous avez la Résistance à ce type de dégâts."
                         }
-                    }
+                    },
+                    "name": "Sorcellerie draconique",
+                    "description": "<blockquote><p>Respirez la magie des dragons</p></blockquote><p>Votre magie innée est le cadeau d'un dragon. Il se peut qu'un dragon vénérable, sentant la mort arriver, vous ait légué, à vous-même ou à un ancêtre, une partie de son pouvoir magique. Vous pourriez aussi avoir absorbé de la magie en un lieu imprégné de puissance draconique. À moins que vous ayez manipulé par mégarde un trésor provenant de l'antre d'un dragon, nimbé de pouvoir draconique. Vous pouvez enfin avoir un dragon comme ancêtre.</p>"
                 },
                 "Hellish Rebuke": {
                     "activities": {
                         "Save (free casting)": {
                             "name": "Sauvegarde (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Représailles infernales",
+                    "description": "<p>La créature qui vous a infligé des dégâts se retrouve un court instant cernée de flammes vertes. Elle effectue un jet de sauvegarde de Dextérité, et subit 2d10 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+                    "condition": "lorsqu'une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts"
                 },
                 "Detect Magic": {
                     "name": "Détection de la magie",
@@ -24535,6 +24694,15 @@
                         "Spellcasting Attack": {
                             "name": "Attaque de sort"
                         }
+                    },
+                    "name": "Lance",
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
                     }
                 },
                 "True Strike": {
@@ -24578,8 +24746,184 @@
                 "Spell Scroll: Feather Fall": {
                     "name": "Parchemin de sort : Feuille morte",
                     "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplFeatherFal inline]</p>"
+                },
+                "Tiefling, Infernal": {
+                    "name": "Tieffelin, Infernal",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspTiefling000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"infernal\">Infernal</h3><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspInfernalTie inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"tiefling-traits\">Traits des tieffelins</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m), à choisir lors de la sélection de l'espèce</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que tieffelin, vous disposez des traits spéciaux suivants.</p><p><strong>Héritage fiélon.</strong> Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><p><strong>Présence d'outre-monde.</strong> Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 18 m.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table>",
+                    "subtype": "Tieffelin",
+                    "advancement": {
+                        "lskxIeib6rIreZ1h": {
+                            "hint": "M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m)"
+                        },
+                        "Tiefling Traits": {
+                            "title": "Traits des tieffelins"
+                        },
+                        "Otherworldly Presence": {
+                            "title": "Présence d'outre-monde"
+                        },
+                        "Infernal Tiefling Traits": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "Vous bénéficiez de la Résistance aux dégâts de feu."
+                        },
+                        "gMovXMwHeD9cCL99": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "ol3SWLw2FTNEiXrb": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "cj8h25IH0Zvdy3Bm": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        }
+                    }
+                },
+                "Otherworldly Presence": {
+                    "name": "Présence d'outre-monde",
+                    "description": "<p>Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque ce sort vous est octroyé, il vous permet de choisir votre caractéristique d'incantation.</p></section>",
+                    "requirements": "Tieffelin"
+                },
+                "Fiendish Legacy, Infernal": {
+                    "requirements": "Tieffelin",
+                    "name": "Héritage fiélon, Infernal",
+                    "description": "<p>Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><h3 data-anchor=\"infernal\">Infernal</h3><p>L'héritage infernal relie les tieffelins non seulement à la Géhenne, mais aussi aux Neuf Enfers et aux champs de bataille désolés de l'Achéron. Cornes, épines, queue fourchue, yeux mordorés et vague relent de soufre ou de fumée sont des traits physiques propres à ces tieffelins, dont beaucoup ont un démon pour ancêtre.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table><section class=\"secret\" id=\"secret-UpLnecebx3jeydEG\"><p><strong>Note Foundry</strong></p><p>La Résistance et les sorts vous sont octroyés automatiquement et vous serez invité à choisir la caractéristique d'incantation au cours de la Progression.</p></section>"
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Innate Sorcery": {
+                    "name": "Sorcellerie innée",
+                    "description": "<p>Un événement de votre passé a laissé une marque indélébile sur vous, faisant éclore une magie bouillonnante. Par une action Bonus, vous pouvez libérer cette magie pendant 1 minute, au cours de laquelle vous recevez les bénéfices suivants :</p><ul><li>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</li><li>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</li></ul><p>Vous pouvez recourir à cette aptitude deux fois, et récupérez ce quota en terminant un Repos long.</p><section id=\"secret-nB2j1T08cVjrcuAj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente le DD de sauvegarde des sorts. L'Avantage sur les jets d'attaque n'est pas automatique.</p></section>",
+                    "activities": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée"
+                        }
+                    },
+                    "effects": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée",
+                            "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1. (Automatisé)</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez. (Non automatisé)</p>"
+                        }
+                    }
+                },
+                "Sorcerous Burst": {
+                    "name": "Éruption ensorcelée",
+                    "description": "<p>Vous projetez des énergies ensorcelées vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d8 dégâts du type choisi : acide, feu, foudre, froid, poison, psychiques ou tonnerre.</p><p>Si vous obtenez un 8 sur un d8 du sort, vous pouvez en lancer un autre pour l'ajouter aux dégâts. Quand vous lancez ce sort, le maximum de d8 supplémentaires que vous pouvez ainsi ajouter aux dégâts du sort est égal à votre modificateur de caractéristique d'incantation.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).</p>"
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Book (demons)": {
+                    "name": "Livre (démons)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
+                },
+                "Font of Magic": {
+                    "name": "Réserve arcanique",
+                    "description": "<p>Vous pouvez puiser dans la réserve de magie qui sommeille en vous. Cette réserve est figurée par des points de Sorcellerie, qui vous permettent de créer une variété d'effets magiques.</p><p>Vous disposez de 2 points de Sorcellerie et en recevez davantage à mesure que vous atteignez des niveaux plus élevés, comme indiqué en colonne Points de Sorcellerie de la table Aptitudes de l'Ensorceleur. Vous ne pouvez pas avoir plus de points de Sorcellerie que ce qui est indiqué sur la table à votre niveau. Vous récupérez tous les points de Sorcellerie dépensés en terminant un Repos long.</p><p>Vous pouvez utiliser vos points de Sorcellerie pour alimenter les options ci-dessous, ainsi que d'autres aptitudes comme Métamagie, qui recourent à ces points.</p><p><strong>Conversion d'emplacements de sort en points de Sorcellerie.</strong> Dépenser un emplacement de sort vous permet de recevoir un nombre de points de Sorcellerie égal au niveau de l'emplacement (pas d'action requise).</p><p><strong>Création d'emplacements de sort.</strong> Par une action Bonus, vous pouvez transformer des points de Sorcellerie non dépensés en un emplacement de sort. La table Création d'emplacements de sort indique le coût de création d'un emplacement de sort selon son niveau, ainsi que le niveau minimum d'Ensorceleur requis pour créer un tel emplacement. Vous ne pouvez pas créer un emplacement de sort au-dessus du 5<sup>e</sup> niveau.</p><p>Tout emplacement de sort créé avec cette aptitude disparaît quand vous terminez un Repos long.</p><table><caption>Création d'emplacements de sort</caption><thead><tr><td>Niveau d'emplacement de sort</td><td>Coût en points de Sorcellerie</td><td>Niveau d'Ensorceleur minimum</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>2</td><td>3</td><td>3</td></tr><tr><td>3</td><td>5</td><td>5</td></tr><tr><td>4</td><td>6</td><td>7</td></tr><tr><td>5</td><td>7</td><td>9</td></tr></tbody></table><section class=\"secret\" id=\"secret-Q72pdf6OJGSybxFV\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Regain d'emplacement de sort.</strong> permet de convertir vos points de Sorcellerie en emplacements de sort.</p><p>L'activité <strong>Regain de points de Sorcellerie</strong> permet de convertir l'emplacement de sort choisi en points de Sorcellerie.</p></section>",
+                    "activities": {
+                        "Regain Spell Slot": {
+                            "name": "Regain d'emplacement de sort"
+                        },
+                        "Regain Sorcery Points": {
+                            "name": "Regain de points de Sorcellerie"
+                        }
+                    }
+                },
+                "Metamagic": {
+                    "name": "Métamagie",
+                    "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p><section id=\"secret-IKw7Qq4qXvzx5Iqj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir des options de métamagie au fur et à mesure de votre montée en niveau.</p></section>"
+                },
+                "Empowered Spell": {
+                    "name": "Sort renforcé",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Quand vous déterminez aléatoirement les dégâts d'un sort, vous pouvez dépenser 1 point de Sorcellerie afin de relancer un nombre de dés de dégâts égal à votre modificateur de Charisme (minimum d'un dé, actuellement [[lookup @abilities.cha.mod]]), auquel cas ce sont les nouveaux jets qui s'appliquent.</p><p>Vous pouvez recourir à Sort renforcé même si vous avez déjà utilisé une autre option de Métamagie durant l'incantation du sort.</p>",
+                    "activities": {
+                        "Empowered Spell": {
+                            "name": "Sort renforcé",
+                            "condition": "Quand vous déterminez aléatoirement les dégâts d'un sort"
+                        }
+                    }
+                },
+                "Quickened Spell": {
+                    "name": "Sort accéléré",
+                    "description": "<blockquote><p>Coût : 2 points de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort dont le temps d'incantation est égal à 1 action, vous pouvez dépenser 2 points de Sorcellerie pour réduire son temps d'incantation à 1 action Bonus pour la présente incantation. Vous ne pouvez pas modifier un sort de cette manière si vous avez déjà lancé un sort du 1<sup>er</sup> niveau ou supérieur pendant le tour en cours, et pas davantage lancer un sort du 1<sup>er</sup> niveau ou supérieur pendant le tour en cours si vous avez déjà modifié un sort de cette manière.</p>",
+                    "activities": {
+                        "Quickened Spell": {
+                            "name": "Sort accéléré",
+                            "condition": "Lorsque vous lancez un sort dont le temps d'incantation est égal à 1 action"
+                        }
+                    }
+                },
+                "Alter Self": {
+                    "name": "Modification d'apparence",
+                    "description": "<p>Vous altérez votre forme physique. Choisissez l'une des options suivantes. Les effets persistent pour toute la durée, durant laquelle vous pouvez entreprendre l'action Magie pour changer d'option.</p><p><strong>Adaptation aquatique.</strong> Vous vous dotez de branchies et vos doigts deviennent palmés. Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p><strong>Armes naturelles.</strong> Vous vous dotez de griffes (dégâts tranchants), de crocs (perforants), de cornes (perforants) ou de sabots (contondants). Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p><p><strong>Changement d'aspect.</strong> Vous transformez votre aspect. Vous décidez de votre apparence, notamment de votre taille, votre poids, les traits de votre visage, le timbre de votre voix, la longueur de vos cheveux, votre teint et autres attributs. Vous pouvez vous faire passer pour un membre d'une autre espèce, mais cela n'influe pas sur votre profil de jeu. Vous ne pouvez pas prendre l'aspect d'une créature dont la catégorie de taille est différente de la vôtre et votre structure corporelle doit rester la même ; si vous êtes bipède, vous ne pouvez pas profiter de ce sort pour devenir quadrupède, par exemple. Pour toute la durée du sort, vous pouvez entreprendre l'action Magie pour changer à nouveau votre aspect de cette manière.</p>",
+                    "activities": {
+                        "Aquatic Adaptation": {
+                            "name": "Adaptation aquatique"
+                        },
+                        "Change Appearance": {
+                            "name": "Changement d'aspect"
+                        },
+                        "Natural Weapons": {
+                            "name": "Armes naturelles"
+                        },
+                        "Attack: Claws": {
+                            "name": "Attaquer : Griffes"
+                        },
+                        "Attack: Fangs/Horns": {
+                            "name": "Attaquer : Crocs/Cornes"
+                        },
+                        "Attack: Hooves": {
+                            "name": "Attaquer : Sabots"
+                        }
+                    },
+                    "effects": {
+                        "Aquatic Adaptation": {
+                            "name": "Adaptation aquatique",
+                            "description": "<p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p>"
+                        },
+                        "Altered Appearance": {
+                            "name": "Aspect modifié"
+                        },
+                        "Natural Weapon": {
+                            "name": "Arme naturelle",
+                            "description": "<p>Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p>"
+                        }
+                    }
                 }
-            }
+            },
+            "name": "Morthos",
+            "description": "<p>L'enquête de Morthos sur son ascendance draconique-infernale complexe l'a conduite à une vie académique, mais il est vite apparu que les imbéciles en charge lui cachaient de nombreux secrets.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "MorthosLv1100000": {
             "items": {
@@ -24669,8 +25013,17 @@
                         },
                         "Weapon Proficiencies": {
                             "title": "Maîtrises d'arme"
+                        },
+                        "Metamagic": {
+                            "title": "Métamagie",
+                            "hint": "Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie."
+                        },
+                        "Sorcery Points": {
+                            "title": "Points de Sorcellerie"
                         }
-                    }
+                    },
+                    "name": "Ensorceleur",
+                    "description": "<h3>Traits de base de l'Ensorceleur</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p><strong>Caractéristique principale</strong></p></th><td><p>Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Dé de vie</strong></p></th><td><p>d6 par niveau d'Ensorceleur</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Constitution et Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise de compétence</strong></p></th><td><p><em>2 au choix parmi :</em> Arcanes, Intimidation, Intuition, Persuasion, Religion et Tromperie</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrises d'arme</strong></p></th><td><p>Armes courantes</p></td></tr><tr><th scope=\"row\"><p><strong>Formation aux armures</strong></p></th><td><p>Aucune</p></td></tr><tr><th scope=\"row\"><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepSpear00000]{Lance}, 2 @UUID[Compendium.dnd5e.equipment24.Item.phbwepDagger0000]{dagues}, @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} (@UUID[Compendium.dnd5e.equipment24.Item.phbafcCrystal000]{cristal}), @UUID[Compendium.dnd5e.equipment24.Item.phbagDungeoneers]{paquetage d'exploration souterraine} et [[/award 28GP]] ; ou (B) [[/award 50GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbscrSorcerer00 inline classes=\"free-rules-embed\"]</p><h2>Devenir Ensorceleur…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#aptitudes-de-classe]{Aptitudes de l'Ensorceleur}.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez le trait Dé de vie de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table Aptitudes de l'Ensorceleur. Référez-vous aux @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{règles du multiclassage}, au chapitre 2, pour déterminer vos emplacements de sort disponibles.</li></ul>"
                 },
                 "Spellcasting": {
                     "name": "Sorts",
@@ -24687,7 +25040,9 @@
                         "Choose Languages": {
                             "title": "Choix des langues"
                         }
-                    }
+                    },
+                    "name": "Démonologue",
+                    "description": "<p><strong>Valeurs de caractéristique.</strong> Charisme, Constitution, Intelligence</p><p><strong>Don.</strong> Initié à la magie (Magicien)</p><p><strong>Maîtrises de compétence.</strong> Arcanes et Histoire</p><p><strong>Maîtrise d'outils.</strong> Matériel d'alchimiste</p><p><strong>Équipement.</strong> <em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{Robe}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInkPen00000]{porte-plume}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{parchemin} (10 feuilles), @UUID[Compendium.dnd5e.equipment24.Item.phbagBook0000000]{livre} (démons), [[/award 13gp]] ; ou (B) [[/award 50gp]]</p>"
                 },
                 "Magic Initiate": {
                     "name": "Initié à la magie",
@@ -24716,15 +25071,27 @@
                     "advancement": {
                         "Subclass Features": {
                             "title": "Aptitudes de sous-classe"
+                        },
+                        "Draconic Spells": {
+                            "title": "Sorts draconiques",
+                            "hint": "Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous."
+                        },
+                        "8UnvG3X4TR3MpCGe": {
+                            "hint": "Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison. Vous avez la Résistance à ce type de dégâts."
                         }
-                    }
+                    },
+                    "name": "Sorcellerie draconique",
+                    "description": "<blockquote><p>Respirez la magie des dragons</p></blockquote><p>Votre magie innée est le cadeau d'un dragon. Il se peut qu'un dragon vénérable, sentant la mort arriver, vous ait légué, à vous-même ou à un ancêtre, une partie de son pouvoir magique. Vous pourriez aussi avoir absorbé de la magie en un lieu imprégné de puissance draconique. À moins que vous ayez manipulé par mégarde un trésor provenant de l'antre d'un dragon, nimbé de pouvoir draconique. Vous pouvez enfin avoir un dragon comme ancêtre.</p>"
                 },
                 "Hellish Rebuke": {
                     "activities": {
                         "Save (free casting)": {
                             "name": "Sauvegarde (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Représailles infernales",
+                    "description": "<p>La créature qui vous a infligé des dégâts se retrouve un court instant cernée de flammes vertes. Elle effectue un jet de sauvegarde de Dextérité, et subit 2d10 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+                    "condition": "lorsqu'une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts"
                 },
                 "Detect Magic": {
                     "name": "Détection de la magie",
@@ -24877,6 +25244,15 @@
                         "Spellcasting Attack": {
                             "name": "Attaque de sort"
                         }
+                    },
+                    "name": "Lance",
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
                     }
                 },
                 "True Strike": {
@@ -24976,8 +25352,184 @@
                             "name": "Bottes elfiques"
                         }
                     }
+                },
+                "Tiefling, Infernal": {
+                    "name": "Tieffelin, Infernal",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspTiefling000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"infernal\">Infernal</h3><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspInfernalTie inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"tiefling-traits\">Traits des tieffelins</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m), à choisir lors de la sélection de l'espèce</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que tieffelin, vous disposez des traits spéciaux suivants.</p><p><strong>Héritage fiélon.</strong> Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><p><strong>Présence d'outre-monde.</strong> Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 18 m.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table>",
+                    "subtype": "Tieffelin",
+                    "advancement": {
+                        "lskxIeib6rIreZ1h": {
+                            "hint": "M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m)"
+                        },
+                        "Tiefling Traits": {
+                            "title": "Traits des tieffelins"
+                        },
+                        "Otherworldly Presence": {
+                            "title": "Présence d'outre-monde"
+                        },
+                        "Infernal Tiefling Traits": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "Vous bénéficiez de la Résistance aux dégâts de feu."
+                        },
+                        "gMovXMwHeD9cCL99": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "ol3SWLw2FTNEiXrb": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "cj8h25IH0Zvdy3Bm": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        }
+                    }
+                },
+                "Otherworldly Presence": {
+                    "name": "Présence d'outre-monde",
+                    "description": "<p>Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque ce sort vous est octroyé, il vous permet de choisir votre caractéristique d'incantation.</p></section>",
+                    "requirements": "Tieffelin"
+                },
+                "Fiendish Legacy, Infernal": {
+                    "requirements": "Tieffelin",
+                    "name": "Héritage fiélon, Infernal",
+                    "description": "<p>Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><h3 data-anchor=\"infernal\">Infernal</h3><p>L'héritage infernal relie les tieffelins non seulement à la Géhenne, mais aussi aux Neuf Enfers et aux champs de bataille désolés de l'Achéron. Cornes, épines, queue fourchue, yeux mordorés et vague relent de soufre ou de fumée sont des traits physiques propres à ces tieffelins, dont beaucoup ont un démon pour ancêtre.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table><section class=\"secret\" id=\"secret-UpLnecebx3jeydEG\"><p><strong>Note Foundry</strong></p><p>La Résistance et les sorts vous sont octroyés automatiquement et vous serez invité à choisir la caractéristique d'incantation au cours de la Progression.</p></section>"
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Innate Sorcery": {
+                    "name": "Sorcellerie innée",
+                    "description": "<p>Un événement de votre passé a laissé une marque indélébile sur vous, faisant éclore une magie bouillonnante. Par une action Bonus, vous pouvez libérer cette magie pendant 1 minute, au cours de laquelle vous recevez les bénéfices suivants :</p><ul><li>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</li><li>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</li></ul><p>Vous pouvez recourir à cette aptitude deux fois, et récupérez ce quota en terminant un Repos long.</p><section id=\"secret-nB2j1T08cVjrcuAj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente le DD de sauvegarde des sorts. L'Avantage sur les jets d'attaque n'est pas automatique.</p></section>",
+                    "activities": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée"
+                        }
+                    },
+                    "effects": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée",
+                            "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1. (Automatisé)</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez. (Non automatisé)</p>"
+                        }
+                    }
+                },
+                "Sorcerous Burst": {
+                    "name": "Éruption ensorcelée",
+                    "description": "<p>Vous projetez des énergies ensorcelées vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d8 dégâts du type choisi : acide, feu, foudre, froid, poison, psychiques ou tonnerre.</p><p>Si vous obtenez un 8 sur un d8 du sort, vous pouvez en lancer un autre pour l'ajouter aux dégâts. Quand vous lancez ce sort, le maximum de d8 supplémentaires que vous pouvez ainsi ajouter aux dégâts du sort est égal à votre modificateur de caractéristique d'incantation.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).</p>"
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Book (demons)": {
+                    "name": "Livre (démons)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
+                },
+                "Font of Magic": {
+                    "name": "Réserve arcanique",
+                    "description": "<p>Vous pouvez puiser dans la réserve de magie qui sommeille en vous. Cette réserve est figurée par des points de Sorcellerie, qui vous permettent de créer une variété d'effets magiques.</p><p>Vous disposez de 2 points de Sorcellerie et en recevez davantage à mesure que vous atteignez des niveaux plus élevés, comme indiqué en colonne Points de Sorcellerie de la table Aptitudes de l'Ensorceleur. Vous ne pouvez pas avoir plus de points de Sorcellerie que ce qui est indiqué sur la table à votre niveau. Vous récupérez tous les points de Sorcellerie dépensés en terminant un Repos long.</p><p>Vous pouvez utiliser vos points de Sorcellerie pour alimenter les options ci-dessous, ainsi que d'autres aptitudes comme Métamagie, qui recourent à ces points.</p><p><strong>Conversion d'emplacements de sort en points de Sorcellerie.</strong> Dépenser un emplacement de sort vous permet de recevoir un nombre de points de Sorcellerie égal au niveau de l'emplacement (pas d'action requise).</p><p><strong>Création d'emplacements de sort.</strong> Par une action Bonus, vous pouvez transformer des points de Sorcellerie non dépensés en un emplacement de sort. La table Création d'emplacements de sort indique le coût de création d'un emplacement de sort selon son niveau, ainsi que le niveau minimum d'Ensorceleur requis pour créer un tel emplacement. Vous ne pouvez pas créer un emplacement de sort au-dessus du 5<sup>e</sup> niveau.</p><p>Tout emplacement de sort créé avec cette aptitude disparaît quand vous terminez un Repos long.</p><table><caption>Création d'emplacements de sort</caption><thead><tr><td>Niveau d'emplacement de sort</td><td>Coût en points de Sorcellerie</td><td>Niveau d'Ensorceleur minimum</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>2</td><td>3</td><td>3</td></tr><tr><td>3</td><td>5</td><td>5</td></tr><tr><td>4</td><td>6</td><td>7</td></tr><tr><td>5</td><td>7</td><td>9</td></tr></tbody></table><section class=\"secret\" id=\"secret-Q72pdf6OJGSybxFV\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Regain d'emplacement de sort.</strong> permet de convertir vos points de Sorcellerie en emplacements de sort.</p><p>L'activité <strong>Regain de points de Sorcellerie</strong> permet de convertir l'emplacement de sort choisi en points de Sorcellerie.</p></section>",
+                    "activities": {
+                        "Regain Spell Slot": {
+                            "name": "Regain d'emplacement de sort"
+                        },
+                        "Regain Sorcery Points": {
+                            "name": "Regain de points de Sorcellerie"
+                        }
+                    }
+                },
+                "Metamagic": {
+                    "name": "Métamagie",
+                    "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p><section id=\"secret-IKw7Qq4qXvzx5Iqj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir des options de métamagie au fur et à mesure de votre montée en niveau.</p></section>"
+                },
+                "Empowered Spell": {
+                    "name": "Sort renforcé",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Quand vous déterminez aléatoirement les dégâts d'un sort, vous pouvez dépenser 1 point de Sorcellerie afin de relancer un nombre de dés de dégâts égal à votre modificateur de Charisme (minimum d'un dé, actuellement [[lookup @abilities.cha.mod]]), auquel cas ce sont les nouveaux jets qui s'appliquent.</p><p>Vous pouvez recourir à Sort renforcé même si vous avez déjà utilisé une autre option de Métamagie durant l'incantation du sort.</p>",
+                    "activities": {
+                        "Empowered Spell": {
+                            "name": "Sort renforcé",
+                            "condition": "Quand vous déterminez aléatoirement les dégâts d'un sort"
+                        }
+                    }
+                },
+                "Quickened Spell": {
+                    "name": "Sort accéléré",
+                    "description": "<blockquote><p>Coût : 2 points de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort dont le temps d'incantation est égal à 1 action, vous pouvez dépenser 2 points de Sorcellerie pour réduire son temps d'incantation à 1 action Bonus pour la présente incantation. Vous ne pouvez pas modifier un sort de cette manière si vous avez déjà lancé un sort du 1<sup>er</sup> niveau ou supérieur pendant le tour en cours, et pas davantage lancer un sort du 1<sup>er</sup> niveau ou supérieur pendant le tour en cours si vous avez déjà modifié un sort de cette manière.</p>",
+                    "activities": {
+                        "Quickened Spell": {
+                            "name": "Sort accéléré",
+                            "condition": "Lorsque vous lancez un sort dont le temps d'incantation est égal à 1 action"
+                        }
+                    }
+                },
+                "Alter Self": {
+                    "name": "Modification d'apparence",
+                    "description": "<p>Vous altérez votre forme physique. Choisissez l'une des options suivantes. Les effets persistent pour toute la durée, durant laquelle vous pouvez entreprendre l'action Magie pour changer d'option.</p><p><strong>Adaptation aquatique.</strong> Vous vous dotez de branchies et vos doigts deviennent palmés. Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p><strong>Armes naturelles.</strong> Vous vous dotez de griffes (dégâts tranchants), de crocs (perforants), de cornes (perforants) ou de sabots (contondants). Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p><p><strong>Changement d'aspect.</strong> Vous transformez votre aspect. Vous décidez de votre apparence, notamment de votre taille, votre poids, les traits de votre visage, le timbre de votre voix, la longueur de vos cheveux, votre teint et autres attributs. Vous pouvez vous faire passer pour un membre d'une autre espèce, mais cela n'influe pas sur votre profil de jeu. Vous ne pouvez pas prendre l'aspect d'une créature dont la catégorie de taille est différente de la vôtre et votre structure corporelle doit rester la même ; si vous êtes bipède, vous ne pouvez pas profiter de ce sort pour devenir quadrupède, par exemple. Pour toute la durée du sort, vous pouvez entreprendre l'action Magie pour changer à nouveau votre aspect de cette manière.</p>",
+                    "activities": {
+                        "Aquatic Adaptation": {
+                            "name": "Adaptation aquatique"
+                        },
+                        "Change Appearance": {
+                            "name": "Changement d'aspect"
+                        },
+                        "Natural Weapons": {
+                            "name": "Armes naturelles"
+                        },
+                        "Attack: Claws": {
+                            "name": "Attaquer : Griffes"
+                        },
+                        "Attack: Fangs/Horns": {
+                            "name": "Attaquer : Crocs/Cornes"
+                        },
+                        "Attack: Hooves": {
+                            "name": "Attaquer : Sabots"
+                        }
+                    },
+                    "effects": {
+                        "Aquatic Adaptation": {
+                            "name": "Adaptation aquatique",
+                            "description": "<p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p>"
+                        },
+                        "Altered Appearance": {
+                            "name": "Aspect modifié"
+                        },
+                        "Natural Weapon": {
+                            "name": "Arme naturelle",
+                            "description": "<p>Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p>"
+                        }
+                    }
                 }
-            }
+            },
+            "name": "Morthos",
+            "description": "<p>L'enquête de Morthos sur son ascendance draconique-infernale complexe l'a conduite à une vie académique, mais il est vite apparu que les imbéciles en charge lui cachaient de nombreux secrets.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "MorthosLv1700000": {
             "items": {
@@ -25067,8 +25619,17 @@
                         },
                         "Weapon Proficiencies": {
                             "title": "Maîtrises d'arme"
+                        },
+                        "Metamagic": {
+                            "title": "Métamagie",
+                            "hint": "Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie."
+                        },
+                        "Sorcery Points": {
+                            "title": "Points de Sorcellerie"
                         }
-                    }
+                    },
+                    "name": "Ensorceleur",
+                    "description": "<h3>Traits de base de l'Ensorceleur</h3><table class=\"core-class-traits\"><tbody><tr><th scope=\"row\"><p><strong>Caractéristique principale</strong></p></th><td><p>Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Dé de vie</strong></p></th><td><p>d6 par niveau d'Ensorceleur</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise des jets de sauvegarde</strong></p></th><td><p>Constitution et Charisme</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrise de compétence</strong></p></th><td><p><em>2 au choix parmi :</em> Arcanes, Intimidation, Intuition, Persuasion, Religion et Tromperie</p></td></tr><tr><th scope=\"row\"><p><strong>Maîtrises d'arme</strong></p></th><td><p>Armes courantes</p></td></tr><tr><th scope=\"row\"><p><strong>Formation aux armures</strong></p></th><td><p>Aucune</p></td></tr><tr><th scope=\"row\"><p><strong>Équipement de départ</strong></p></th><td><p><em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbwepSpear00000]{Lance}, 2 @UUID[Compendium.dnd5e.equipment24.Item.phbwepDagger0000]{dagues}, @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} (@UUID[Compendium.dnd5e.equipment24.Item.phbafcCrystal000]{cristal}), @UUID[Compendium.dnd5e.equipment24.Item.phbagDungeoneers]{paquetage d'exploration souterraine} et [[/award 28GP]] ; ou (B) [[/award 50GP]]</p></td></tr></tbody></table><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixClass.JournalEntryPage.phbscrSorcerer00 inline classes=\"free-rules-embed\"]</p><h2>Devenir Ensorceleur…</h2><h3>En tant que personnage de niveau 1</h3><ul><li>Recevez tous les traits de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#aptitudes-de-classe]{Aptitudes de l'Ensorceleur}.</li></ul><h3>En tant que personnage multiclassé</h3><ul><li>Recevez le trait Dé de vie de l'encadré Traits de base de l'Ensorceleur.</li><li>Recevez les aptitudes de niveau 1 de l'Ensorceleur, qui figurent dans la table Aptitudes de l'Ensorceleur. Référez-vous aux @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.vcs4jfEKRxPCsgXm]{règles du multiclassage}, au chapitre 2, pour déterminer vos emplacements de sort disponibles.</li></ul>"
                 },
                 "Spellcasting": {
                     "name": "Sorts",
@@ -25085,7 +25646,9 @@
                         "Choose Languages": {
                             "title": "Choix des langues"
                         }
-                    }
+                    },
+                    "name": "Démonologue",
+                    "description": "<p><strong>Valeurs de caractéristique.</strong> Charisme, Constitution, Intelligence</p><p><strong>Don.</strong> Initié à la magie (Magicien)</p><p><strong>Maîtrises de compétence.</strong> Arcanes et Histoire</p><p><strong>Maîtrise d'outils.</strong> Matériel d'alchimiste</p><p><strong>Équipement.</strong> <em>Choisissez A ou B :</em> (A) @UUID[Compendium.dnd5e.equipment24.Item.phbagRobe0000000]{Robe}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInkPen00000]{porte-plume}, @UUID[Compendium.dnd5e.equipment24.Item.phbagInk00000000]{encre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagParchment00]{parchemin} (10 feuilles), @UUID[Compendium.dnd5e.equipment24.Item.phbagBook0000000]{livre} (démons), [[/award 13gp]] ; ou (B) [[/award 50gp]]</p>"
                 },
                 "Magic Initiate": {
                     "name": "Initié à la magie",
@@ -25114,15 +25677,27 @@
                     "advancement": {
                         "Subclass Features": {
                             "title": "Aptitudes de sous-classe"
+                        },
+                        "Draconic Spells": {
+                            "title": "Sorts draconiques",
+                            "hint": "Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous."
+                        },
+                        "8UnvG3X4TR3MpCGe": {
+                            "hint": "Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison. Vous avez la Résistance à ce type de dégâts."
                         }
-                    }
+                    },
+                    "name": "Sorcellerie draconique",
+                    "description": "<blockquote><p>Respirez la magie des dragons</p></blockquote><p>Votre magie innée est le cadeau d'un dragon. Il se peut qu'un dragon vénérable, sentant la mort arriver, vous ait légué, à vous-même ou à un ancêtre, une partie de son pouvoir magique. Vous pourriez aussi avoir absorbé de la magie en un lieu imprégné de puissance draconique. À moins que vous ayez manipulé par mégarde un trésor provenant de l'antre d'un dragon, nimbé de pouvoir draconique. Vous pouvez enfin avoir un dragon comme ancêtre.</p>"
                 },
                 "Hellish Rebuke": {
                     "activities": {
                         "Save (free casting)": {
                             "name": "Sauvegarde (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Représailles infernales",
+                    "description": "<p>La créature qui vous a infligé des dégâts se retrouve un court instant cernée de flammes vertes. Elle effectue un jet de sauvegarde de Dextérité, et subit 2d10 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+                    "condition": "lorsqu'une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts"
                 },
                 "Detect Magic": {
                     "name": "Détection de la magie",
@@ -25218,8 +25793,15 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
                         }
-                    }
+                    },
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité"
                 },
                 "BuEDVtKlcxUjnyUT": {
                     "effects": {
@@ -25407,6 +25989,15 @@
                         "Spellcasting Attack": {
                             "name": "Attaque de sort"
                         }
+                    },
+                    "name": "Lance",
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
                     }
                 },
                 "True Strike": {
@@ -25515,8 +26106,184 @@
                             "chatFlavor": "Cette fumée entraîne une &Reference[LightlyObscured] dans l'espace que vous venez de quitter jusqu'à la fin de votre tour suivant."
                         }
                     }
+                },
+                "Tiefling, Infernal": {
+                    "name": "Tieffelin, Infernal",
+                    "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspTiefling000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"infernal\">Infernal</h3><p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspInfernalTie inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"tiefling-traits\">Traits des tieffelins</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m), à choisir lors de la sélection de l'espèce</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que tieffelin, vous disposez des traits spéciaux suivants.</p><p><strong>Héritage fiélon.</strong> Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><p><strong>Présence d'outre-monde.</strong> Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 18 m.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table>",
+                    "subtype": "Tieffelin",
+                    "advancement": {
+                        "lskxIeib6rIreZ1h": {
+                            "hint": "M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 90 cm à 1,20 m)"
+                        },
+                        "Tiefling Traits": {
+                            "title": "Traits des tieffelins"
+                        },
+                        "Otherworldly Presence": {
+                            "title": "Présence d'outre-monde"
+                        },
+                        "Infernal Tiefling Traits": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "Vous bénéficiez de la Résistance aux dégâts de feu."
+                        },
+                        "gMovXMwHeD9cCL99": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "ol3SWLw2FTNEiXrb": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        },
+                        "cj8h25IH0Zvdy3Bm": {
+                            "title": "Traits des tieffelins infernaux",
+                            "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                        }
+                    }
+                },
+                "Otherworldly Presence": {
+                    "name": "Présence d'outre-monde",
+                    "description": "<p>Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque ce sort vous est octroyé, il vous permet de choisir votre caractéristique d'incantation.</p></section>",
+                    "requirements": "Tieffelin"
+                },
+                "Fiendish Legacy, Infernal": {
+                    "requirements": "Tieffelin",
+                    "name": "Héritage fiélon, Infernal",
+                    "description": "<p>Votre héritage vous octroie des aptitudes surnaturelles.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><h3 data-anchor=\"infernal\">Infernal</h3><p>L'héritage infernal relie les tieffelins non seulement à la Géhenne, mais aussi aux Neuf Enfers et aux champs de bataille désolés de l'Achéron. Cornes, épines, queue fourchue, yeux mordorés et vague relent de soufre ou de fumée sont des traits physiques propres à ces tieffelins, dont beaucoup ont un démon pour ancêtre.</p><table><caption>Traits de l'héritage infernal</caption><thead><tr><td>Niveau 1</td><td>Niveau 3</td><td>Niveau 5</td></tr></thead><tbody><tr><td>Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplFireBolt00]{trait de feu}.</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplHellishReb]{représailles infernales}</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDarkness00]{ténèbres}</td></tr></tbody></table><section class=\"secret\" id=\"secret-UpLnecebx3jeydEG\"><p><strong>Note Foundry</strong></p><p>La Résistance et les sorts vous sont octroyés automatiquement et vous serez invité à choisir la caractéristique d'incantation au cours de la Progression.</p></section>"
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Innate Sorcery": {
+                    "name": "Sorcellerie innée",
+                    "description": "<p>Un événement de votre passé a laissé une marque indélébile sur vous, faisant éclore une magie bouillonnante. Par une action Bonus, vous pouvez libérer cette magie pendant 1 minute, au cours de laquelle vous recevez les bénéfices suivants :</p><ul><li>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</li><li>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</li></ul><p>Vous pouvez recourir à cette aptitude deux fois, et récupérez ce quota en terminant un Repos long.</p><section id=\"secret-nB2j1T08cVjrcuAj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente le DD de sauvegarde des sorts. L'Avantage sur les jets d'attaque n'est pas automatique.</p></section>",
+                    "activities": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée"
+                        }
+                    },
+                    "effects": {
+                        "Innate Sorcery": {
+                            "name": "Sorcellerie innée",
+                            "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1. (Automatisé)</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez. (Non automatisé)</p>"
+                        }
+                    }
+                },
+                "Sorcerous Burst": {
+                    "name": "Éruption ensorcelée",
+                    "description": "<p>Vous projetez des énergies ensorcelées vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d8 dégâts du type choisi : acide, feu, foudre, froid, poison, psychiques ou tonnerre.</p><p>Si vous obtenez un 8 sur un d8 du sort, vous pouvez en lancer un autre pour l'ajouter aux dégâts. Quand vous lancez ce sort, le maximum de d8 supplémentaires que vous pouvez ainsi ajouter aux dégâts du sort est égal à votre modificateur de caractéristique d'incantation.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).</p>"
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Book (demons)": {
+                    "name": "Livre (démons)",
+                    "description": "<p>Un livre traite de fiction ou de non-fiction. Si vous consultez un livre de non-fiction précis sur son sujet, vous recevez un bonus de +5 aux tests d'Intelligence (Arcanes, Histoire, Nature ou Religion) que vous effectuez sur ce sujet.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
+                },
+                "Font of Magic": {
+                    "name": "Réserve arcanique",
+                    "description": "<p>Vous pouvez puiser dans la réserve de magie qui sommeille en vous. Cette réserve est figurée par des points de Sorcellerie, qui vous permettent de créer une variété d'effets magiques.</p><p>Vous disposez de 2 points de Sorcellerie et en recevez davantage à mesure que vous atteignez des niveaux plus élevés, comme indiqué en colonne Points de Sorcellerie de la table Aptitudes de l'Ensorceleur. Vous ne pouvez pas avoir plus de points de Sorcellerie que ce qui est indiqué sur la table à votre niveau. Vous récupérez tous les points de Sorcellerie dépensés en terminant un Repos long.</p><p>Vous pouvez utiliser vos points de Sorcellerie pour alimenter les options ci-dessous, ainsi que d'autres aptitudes comme Métamagie, qui recourent à ces points.</p><p><strong>Conversion d'emplacements de sort en points de Sorcellerie.</strong> Dépenser un emplacement de sort vous permet de recevoir un nombre de points de Sorcellerie égal au niveau de l'emplacement (pas d'action requise).</p><p><strong>Création d'emplacements de sort.</strong> Par une action Bonus, vous pouvez transformer des points de Sorcellerie non dépensés en un emplacement de sort. La table Création d'emplacements de sort indique le coût de création d'un emplacement de sort selon son niveau, ainsi que le niveau minimum d'Ensorceleur requis pour créer un tel emplacement. Vous ne pouvez pas créer un emplacement de sort au-dessus du 5<sup>e</sup> niveau.</p><p>Tout emplacement de sort créé avec cette aptitude disparaît quand vous terminez un Repos long.</p><table><caption>Création d'emplacements de sort</caption><thead><tr><td>Niveau d'emplacement de sort</td><td>Coût en points de Sorcellerie</td><td>Niveau d'Ensorceleur minimum</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>2</td><td>3</td><td>3</td></tr><tr><td>3</td><td>5</td><td>5</td></tr><tr><td>4</td><td>6</td><td>7</td></tr><tr><td>5</td><td>7</td><td>9</td></tr></tbody></table><section class=\"secret\" id=\"secret-Q72pdf6OJGSybxFV\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Regain d'emplacement de sort.</strong> permet de convertir vos points de Sorcellerie en emplacements de sort.</p><p>L'activité <strong>Regain de points de Sorcellerie</strong> permet de convertir l'emplacement de sort choisi en points de Sorcellerie.</p></section>",
+                    "activities": {
+                        "Regain Spell Slot": {
+                            "name": "Regain d'emplacement de sort"
+                        },
+                        "Regain Sorcery Points": {
+                            "name": "Regain de points de Sorcellerie"
+                        }
+                    }
+                },
+                "Metamagic": {
+                    "name": "Métamagie",
+                    "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p><section id=\"secret-IKw7Qq4qXvzx5Iqj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir des options de métamagie au fur et à mesure de votre montée en niveau.</p></section>"
+                },
+                "Empowered Spell": {
+                    "name": "Sort renforcé",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Quand vous déterminez aléatoirement les dégâts d'un sort, vous pouvez dépenser 1 point de Sorcellerie afin de relancer un nombre de dés de dégâts égal à votre modificateur de Charisme (minimum d'un dé, actuellement [[lookup @abilities.cha.mod]]), auquel cas ce sont les nouveaux jets qui s'appliquent.</p><p>Vous pouvez recourir à Sort renforcé même si vous avez déjà utilisé une autre option de Métamagie durant l'incantation du sort.</p>",
+                    "activities": {
+                        "Empowered Spell": {
+                            "name": "Sort renforcé",
+                            "condition": "Quand vous déterminez aléatoirement les dégâts d'un sort"
+                        }
+                    }
+                },
+                "Quickened Spell": {
+                    "name": "Sort accéléré",
+                    "description": "<blockquote><p>Coût : 2 points de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort dont le temps d'incantation est égal à 1 action, vous pouvez dépenser 2 points de Sorcellerie pour réduire son temps d'incantation à 1 action Bonus pour la présente incantation. Vous ne pouvez pas modifier un sort de cette manière si vous avez déjà lancé un sort du 1<sup>er</sup> niveau ou supérieur pendant le tour en cours, et pas davantage lancer un sort du 1<sup>er</sup> niveau ou supérieur pendant le tour en cours si vous avez déjà modifié un sort de cette manière.</p>",
+                    "activities": {
+                        "Quickened Spell": {
+                            "name": "Sort accéléré",
+                            "condition": "Lorsque vous lancez un sort dont le temps d'incantation est égal à 1 action"
+                        }
+                    }
+                },
+                "Alter Self": {
+                    "name": "Modification d'apparence",
+                    "description": "<p>Vous altérez votre forme physique. Choisissez l'une des options suivantes. Les effets persistent pour toute la durée, durant laquelle vous pouvez entreprendre l'action Magie pour changer d'option.</p><p><strong>Adaptation aquatique.</strong> Vous vous dotez de branchies et vos doigts deviennent palmés. Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p><strong>Armes naturelles.</strong> Vous vous dotez de griffes (dégâts tranchants), de crocs (perforants), de cornes (perforants) ou de sabots (contondants). Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p><p><strong>Changement d'aspect.</strong> Vous transformez votre aspect. Vous décidez de votre apparence, notamment de votre taille, votre poids, les traits de votre visage, le timbre de votre voix, la longueur de vos cheveux, votre teint et autres attributs. Vous pouvez vous faire passer pour un membre d'une autre espèce, mais cela n'influe pas sur votre profil de jeu. Vous ne pouvez pas prendre l'aspect d'une créature dont la catégorie de taille est différente de la vôtre et votre structure corporelle doit rester la même ; si vous êtes bipède, vous ne pouvez pas profiter de ce sort pour devenir quadrupède, par exemple. Pour toute la durée du sort, vous pouvez entreprendre l'action Magie pour changer à nouveau votre aspect de cette manière.</p>",
+                    "activities": {
+                        "Aquatic Adaptation": {
+                            "name": "Adaptation aquatique"
+                        },
+                        "Change Appearance": {
+                            "name": "Changement d'aspect"
+                        },
+                        "Natural Weapons": {
+                            "name": "Armes naturelles"
+                        },
+                        "Attack: Claws": {
+                            "name": "Attaquer : Griffes"
+                        },
+                        "Attack: Fangs/Horns": {
+                            "name": "Attaquer : Crocs/Cornes"
+                        },
+                        "Attack: Hooves": {
+                            "name": "Attaquer : Sabots"
+                        }
+                    },
+                    "effects": {
+                        "Aquatic Adaptation": {
+                            "name": "Adaptation aquatique",
+                            "description": "<p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p>"
+                        },
+                        "Altered Appearance": {
+                            "name": "Aspect modifié"
+                        },
+                        "Natural Weapon": {
+                            "name": "Arme naturelle",
+                            "description": "<p>Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p>"
+                        }
+                    }
                 }
-            }
+            },
+            "name": "Morthos",
+            "description": "<p>L'enquête de Morthos sur son ascendance draconique-infernale complexe l'a conduite à une vie académique, mais il est vite apparu que les imbéciles en charge lui cachaient de nombreux secrets.</p><p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
         },
         "Perrin": {
             "items": {
@@ -28374,6 +29141,23 @@
                 "Savage Attacker": {
                     "name": "Sauvagerie martiale",
                     "description": "<p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l'arme et utiliser l'un ou l'autre résultat contre la cible.</p>"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
                 }
             }
         },
@@ -28584,6 +29368,23 @@
                 },
                 "Pike": {
                     "name": "Pique"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
                 }
             }
         },
@@ -28819,6 +29620,23 @@
                 },
                 "Pike": {
                     "name": "Pique"
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
                 }
             }
         },
@@ -29115,6 +29933,23 @@
                             }
                         }
                     }
+                },
+                "Dungeoneer's Pack": {
+                    "name": "Paquetage d'exploration souterraine",
+                    "description": "<p>Le paquetage d'exploration souterraine contient les objets suivants : @UUID[Compendium.dnd5e.equipment24.Item.phbagBackpack000]{sac à dos}, @UUID[Compendium.dnd5e.equipment24.Item.phbagTinderbox00]{boîte à amadou}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCaltrops000]{chausse-trappes}, @UUID[Compendium.dnd5e.equipment24.Item.phbagRope0000000]{corde}, 2 flasques d'@UUID[Compendium.dnd5e.equipment24.Item.phbagOil00000000]{huile}, 10 jours de @UUID[Compendium.dnd5e.equipment24.Item.phbagRations0000]{rations}, @UUID[Compendium.dnd5e.equipment24.Item.phbagWaterskin00]{outre}, @UUID[Compendium.dnd5e.equipment24.Item.phbagCrowbar0000]{pied-de-biche}, 10 @UUID[Compendium.dnd5e.equipment24.Item.phbagTorch000000]{torches}.</p>"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Caltrops": {
+                    "name": "Chausse-trappes",
+                    "description": "<p>Par une action Utilisation, vous pouvez répandre les chausse-trappes depuis leur sac pour couvrir une zone de 1,50 m x 1,50 m à une distance maximale de 1,50 m. Une créature qui traverse cette zone pour la première fois d'un tour doit réussir un jet de sauvegarde de Dextérité DD 15 sous peine de subir 1 dégât perforant et voir sa Vitesse réduite à 0 jusqu'au début de son tour suivant. 10 minutes sont nécessaires pour récupérer les chausse-trappes.</p>",
+                    "effects": {
+                        "Slowed": {
+                            "name": "Ralenti"
+                        }
+                    }
                 }
             }
         },
@@ -29236,6 +30071,13 @@
                 "Weapon Mastery": {
                     "name": "Bottes d'arme",
                     "description": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux type d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple la dague et l'arc court.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez changer le type d'arme que vous avez choisi. Vous pourriez par exemple décider d'opter pour les propriétés Bottes du cimeterre et de l'épée courte.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -29386,6 +30228,13 @@
                 "Weapon Mastery": {
                     "name": "Bottes d'arme",
                     "description": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux type d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple la dague et l'arc court.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez changer le type d'arme que vous avez choisi. Vous pourriez par exemple décider d'opter pour les propriétés Bottes du cimeterre et de l'épée courte.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -29612,6 +30461,13 @@
                             }
                         }
                     }
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -29822,8 +30678,15 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
                         }
-                    }
+                    },
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité"
                 },
                 "Tiny Hut": {
                     "effects": {
@@ -30193,6 +31056,13 @@
                             }
                         }
                     }
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -33469,6 +34339,28 @@
                 "Magic Missile": {
                     "name": "Projectile magique",
                     "description": "<p>Vous créez trois traits de force magique et scintillante. Chaque projectile heurte une créature de votre choix parmi celles que vous voyez à portée. Un projectile inflige 1d4 + 1 dégâts de force à sa cible. Les traits frappent tous simultanément, sachant que vous pouvez viser une seule créature ou plusieurs.</p><p><strong>Emplacement de niveau supérieur.</strong> Le sort produit un trait supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup>.</p><p>[[2 + @item.level]]{Traits niveau [[lookup @item.level]] }</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Mage Armor": {
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité",
+                    "effects": {
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -33790,6 +34682,32 @@
                         "Reduced": {
                             "name": "Rapetissement",
                             "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
+                        }
+                    }
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Mage Armor": {
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité",
+                    "effects": {
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
                         }
                     }
                 }
@@ -34167,6 +35085,32 @@
                         "Reduced": {
                             "name": "Rapetissement",
                             "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
+                        }
+                    }
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Mage Armor": {
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité",
+                    "effects": {
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
                         }
                     }
                 }
@@ -34680,6 +35624,32 @@
                             "description": "<p>La taille de la cible diminue d'une catégorie ; de taille G à M par exemple. La cible subit le Désavantage aux tests de Force et aux jets de sauvegarde de Force. Les attaques que la cible effectue avec une arme rapetissée ou à mains nues infligent 1d4 dégâts de moins quand elles touchent (minimum de 1 dégât).</p>"
                         }
                     }
+                },
+                "Fire Bolt": {
+                    "name": "Trait de feu",
+                    "description": "<p>Vous projetez un grain enflammé vers une créature ou un objet à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d10 dégâts de feu. Tout objet inflammable touché par ce sort s'embrase s'il n'est pas porté.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux 5 (2d10), 11 (3d10) et 17 (4d10).</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Mage Armor": {
+                    "name": "Armure du mage",
+                    "description": "<p>Vous touchez une créature consentante qui ne porte pas d'armure. Jusqu'à la fin du sort, sa CA de base est de 13 plus son modificateur de Dextérité. Le sort prend fin prématurément si la cible enfile une armure.</p>",
+                    "materials": "un morceau de cuir traité",
+                    "effects": {
+                        "Mage Armor": {
+                            "name": "Armure du mage",
+                            "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
+                        }
+                    }
                 }
             }
         },
@@ -34833,6 +35803,21 @@
                             "name": "Déplacer des lumières"
                         }
                     }
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -35077,6 +36062,25 @@
                             "name": "Sauvegarde de début de tour"
                         }
                     }
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -35425,6 +36429,25 @@
                             "name": "Sauvegarde de début de tour"
                         }
                     }
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
@@ -35839,6 +36862,25 @@
                             "name": "Sauvegarde de début de tour"
                         }
                     }
+                },
+                "Burning Hands": {
+                    "name": "Mains brûlantes",
+                    "description": "<p>Une fine nappe de flammes jaillit de vous. Chaque créature prise dans un Cône de 4,50 m effectue un jet de sauvegarde de Dextérité et subit 3d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>Les objets inflammables pris dans le Cône s'embrasent s'ils ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>"
+                },
+                "Ink Pen": {
+                    "name": "Porte-plume",
+                    "description": "<p>Combiné à l'encre, le porte-plume permet d'écrire ou de dessiner.</p>"
+                },
+                "Ink": {
+                    "name": "Encre",
+                    "description": "<p>Conditionnée en bouteille de 30 ml, cette quantité d'encre permet de noircir environ 500 pages.</p>"
+                },
+                "Dagger": {
+                    "name": "Dague"
+                },
+                "Crowbar": {
+                    "name": "Pied-de-biche",
+                    "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
                 }
             }
         },
