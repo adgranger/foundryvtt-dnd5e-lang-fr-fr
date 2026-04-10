@@ -24557,7 +24557,10 @@
                         "Use (free casting)": {
                             "name": "Utiliser (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Ténèbres",
+                    "description": "<p>Pour toute la durée, des &Reference[darkness] magiques se déploient depuis un point à portée en remplissant une Sphère de 4,5 m de rayon. La Vision dans le noir ne perce pas ces Ténèbres, et les lumières non magiques n'illuminent pas dans la Sphère.</p><p>Au lieu de ça, vous pouvez lancer le sort sur un objet porté par personne, de manière à ce que les Ténèbres emplissent une Émanation de 4,50 m centrée sur l'objet. Il suffit de recouvrir cet objet d'une surface opaque, comme une gamelle ou un heaume, pour bloquer les Ténèbres.</p><p>Si tout ou partie de ce sort chevauche la zone de Lumière vive ou faible créée par un sort du 2<sup>e</sup> niveau ou inférieur, l'effet qui produit cette lumière est dissipé.</p>",
+                    "materials": "une touffe de fourrure de chauve-souris et un bout de charbon"
                 },
                 "Command": {
                     "name": "Injonction",
@@ -24602,8 +24605,13 @@
                     "activities": {
                         "Cast": {
                             "name": "Incanter"
+                        },
+                        "Exhale": {
+                            "name": "Exhaler"
                         }
-                    }
+                    },
+                    "name": "Souffle du dragon",
+                    "description": "<p>Vous touchez physiquement une créature consentante et choisissez entre acide, feu, foudre, froid et poison. Jusqu'à la fin du sort, la cible peut entreprendre l'action Magie pour exhaler un Cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité, et subit 3d6 dégâts du type choisi en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 2<sup>e</sup>.</p>"
                 },
                 "Component: Diamond": {
                     "name": "Composant : Diamant"
@@ -24641,15 +24649,27 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Comprehension": {
+                            "name": "Compréhension"
                         }
-                    }
+                    },
+                    "name": "Compréhension des langues",
+                    "description": "<p>Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.</p>",
+                    "materials": "une pincée de suie et de sel"
                 },
                 "Disguise Self": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Disguised": {
+                            "name": "Déguisé",
+                            "description": "<p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv]] assorti de votre DD de sauvegarde des sorts.</p>"
                         }
-                    }
+                    },
+                    "name": "Déguisement",
+                    "description": "<p>Vous vous donnez un aspect différent jusqu'à la fin du sort ; vous pouvez ainsi altérer l'apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu'à 30 cm plus grand ou plus petit, sembler plus léger ou plus lourd. Vous devez adopter une forme présentant la même répartition de membres que vous. Pour le reste, les détails de l'illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air.</p><p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts.</p>"
                 },
                 "Case, Map or Scroll": {
                     "name": "Étui à cartes ou à parchemins",
@@ -24920,6 +24940,130 @@
                             "description": "<p>Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p>"
                         }
                     }
+                },
+                "Chromatic Orb": {
+                    "name": "Orbe chromatique",
+                    "description": "<p>Vous projetez un orbe d'énergie sur une cible à portée. Choisissez une énergie entre acide, feu, foudre, froid, poison et tonnerre pour composer l'orbe, puis effectuez un jet d'attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 3d8 dégâts du type retenu.</p><p>Si vous obtenez le même nombre sur au moins deux des d8, l'orbe rebondit vers une autre cible de votre choix dans un rayon de 9 m de la cible. Effectuez un jet d'attaque contre la nouvelle cible et un nouveau jet de dégâts. L'orbe ne rebondit pas une deuxième fois, sauf si vous avez lancé le sort par un emplacement du 2<sup>e</sup> niveau ou supérieur. [[@item.level]]{Nombre de bonds }</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>. L'orbe est susceptible de rebondir autant de fois que le niveau de l'emplacement dépensé, une même créature ne pouvant être ciblée qu'une fois par incantation du sort.</p>",
+                    "materials": "un diamant d'une valeur minimale de 50 po"
+                },
+                "Draconic Resilience": {
+                    "name": "Résistance draconique",
+                    "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p><section class=\"secret\" id=\"secret-uBlQVhOqmjWWiLc4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum de points de vie et met en place votre défense sans armure, qui peut être désactivée si vous préférez utiliser une armure.</p></section>",
+                    "effects": {
+                        "Draconic Resilience: Armor": {
+                            "name": "Résistance draconique : Armure"
+                        },
+                        "Draconic Resilience: HP": {
+                            "name": "Résistance draconique : PV"
+                        }
+                    }
+                },
+                "Draconic Spells": {
+                    "name": "Sorts draconiques",
+                    "description": "<p>Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts draconiques</caption><thead><tr><td>Niveau d'Ensorceleur</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{injonction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplAlterSelf0]{modification d'apparence}, @UUID[Compendium.dnd5e.spells24.Item.phbsplChromaticO]{orbe chromatique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDragonsBre]{souffle du dragon}</em></td></tr><tr><td>5</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{terreur}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{vol}</em></td></tr><tr><td>7</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCharmMonst]{charme-monstre}, @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{œil du mage}</em></td></tr><tr><td>9</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{mythes et légendes}</em></td></tr></tbody></table><section class=\"secret\" id=\"secret-kL8H0ClyrUNajoht\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>"
+                },
+                "Sorcerous Restoration": {
+                    "name": "Restauration ensorcelée",
+                    "description": "<p>En terminant un Repos court, vous récupérez les points de Sorcellerie dépensés à concurrence de la moitié de votre niveau d'Ensorceleur (arrondir à l'inférieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-mYrbb0UHsBGBUVbN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une utilisation gratuite par Repos long. Utilisez-la pour regagner automatiquement le nombre correct de points de Sorcellerie.</p></section>",
+                    "activities": {
+                        "Restore Sorcery Points": {
+                            "name": "Restaurer des points de Sorcellerie"
+                        }
+                    }
+                },
+                "Fear": {
+                    "name": "Terreur",
+                    "description": "<p>Chaque créature prise dans un Cône de 9 m doit réussir un jet de sauvegarde de Sagesse sous peine de lâcher ce qu'elle tient, et de subir l'état &Reference[frightened apply=false] pour toute la durée.</p><p>Ainsi Effrayée, la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de Sagesse. En cas de réussite, le sort prend fin pour elle.</p>",
+                    "materials": "une plume blanche",
+                    "effects": {
+                        "Fear": {
+                            "name": "Terreur",
+                            "description": "<p>Ainsi &Reference[frightened apply=false], la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de [[/save ability=wis]]. En cas de réussite, le sort prend fin pour elle.</p>"
+                        }
+                    }
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Acid Splash": {
+                    "name": "Aspersion acide",
+                    "description": "<p>Vous créez une bulle acide en un point à portée, où elle explose sous forme de Sphère de 1,50 m de rayon. Chaque créature prise dans la Sphère doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d6 dégâts d'acide.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d6 lorsque vous atteignez les niveaux 5 (2d6), 11 (3d6) et 17 (4d6).</p>"
+                },
+                "Counterspell": {
+                    "name": "Contresort",
+                    "description": "<p>Vous tentez d'interrompre une créature en pleine incantation. La créature effectue un jet de sauvegarde de Constitution. En cas d'échec, son sort se dissipe sans effet et l'action, l'action Bonus ou la Réaction entreprise pour l'incantation est gaspillée. Si ce sort était lancé par un emplacement, celui-ci n'est pas dépensé.</p>",
+                    "condition": "en voyant à portée une créature lancer un sort avec une composante verbale, somatique ou matérielle"
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Grease": {
+                    "name": "Graisse",
+                    "description": "<p>Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un &Reference[difficultterrain] pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[prone]. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.</p>",
+                    "materials": "un peu de couenne de porc ou de beurre"
+                },
+                "Jump": {
+                    "name": "Saut",
+                    "description": "<p>Vous touchez une créature consentante. Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup></p>",
+                    "materials": "une patte arrière de sauterelle",
+                    "effects": {
+                        "Jump": {
+                            "name": "Saut",
+                            "description": "<p>Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p>"
+                        }
+                    }
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Web": {
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
+                },
+                "Wand of the War Mage, +1": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +1": {
+                            "name": "Baguette du mage de guerre +1",
+                            "changes": {
+                                "name": "{} du mage de guerre +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +1": {
+                            "name": "Mage de guerre +1"
+                        }
+                    }
+                },
+                "Elemental Gem (Yellow Diamond)": {
+                    "name": "Gemme élémentaire (Diamant jaune)",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.equipment24.Item.dmgElementalGem0]</em></p><p>Cette gemme contient une particule d'énergie élémentaire. Lorsque vous entreprenez l'action Utilisation pour briser la gemme, cela convoque un @UUID[Compendium.dnd5e.actors24.Actor.mmEarthElemental]{élémentaire de la terre}, et la gemme perd sa magie. L'élémentaire apparaît en un espace inoccupé aussi près que possible de la gemme brisée, comprend les mêmes langues que vous, obéit à vos ordres et joue son tour juste après vous à votre rang d'initiative. Il disparaît au bout de 1 heure, s'il meurt, ou si vous le révoquez par une action Bonus.</p>",
+                    "activities": {
+                        "Utilize": {
+                            "name": "Utilisation",
+                            "target": "espace inoccupé aussi près que possible de la gemme brisée"
+                        }
+                    }
+                },
+                "Spell Scroll: Comprehend Languages": {
+                    "name": "Parchemin de sort : Compréhension des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplComprehend inline]</p>"
+                },
+                "Spell Scroll: Disguise Self": {
+                    "name": "Parchemin de sort : Déguisement",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe inline]</p>"
                 }
             },
             "name": "Morthos",
@@ -25061,7 +25205,10 @@
                         "Use (free casting)": {
                             "name": "Utiliser (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Ténèbres",
+                    "description": "<p>Pour toute la durée, des &Reference[darkness] magiques se déploient depuis un point à portée en remplissant une Sphère de 4,5 m de rayon. La Vision dans le noir ne perce pas ces Ténèbres, et les lumières non magiques n'illuminent pas dans la Sphère.</p><p>Au lieu de ça, vous pouvez lancer le sort sur un objet porté par personne, de manière à ce que les Ténèbres emplissent une Émanation de 4,50 m centrée sur l'objet. Il suffit de recouvrir cet objet d'une surface opaque, comme une gamelle ou un heaume, pour bloquer les Ténèbres.</p><p>Si tout ou partie de ce sort chevauche la zone de Lumière vive ou faible créée par un sort du 2<sup>e</sup> niveau ou inférieur, l'effet qui produit cette lumière est dissipé.</p>",
+                    "materials": "une touffe de fourrure de chauve-souris et un bout de charbon"
                 },
                 "Command": {
                     "name": "Injonction",
@@ -25106,20 +25253,39 @@
                     "activities": {
                         "Cast": {
                             "name": "Incanter"
+                        },
+                        "Exhale": {
+                            "name": "Exhaler"
                         }
-                    }
+                    },
+                    "name": "Souffle du dragon",
+                    "description": "<p>Vous touchez physiquement une créature consentante et choisissez entre acide, feu, foudre, froid et poison. Jusqu'à la fin du sort, la cible peut entreprendre l'action Magie pour exhaler un Cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité, et subit 3d6 dégâts du type choisi en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 2<sup>e</sup>.</p>"
                 },
                 "Haste": {
                     "activities": {
                         "Cast": {
                             "name": "Incanter"
+                        },
+                        "Apply Lethargy": {
+                            "name": "Appliquer léthargie"
                         }
                     },
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Hasted": {
+                            "name": "Hâtée",
+                            "description": "<p>Jusqu'à la fin du sort, la cible voit sa Vitesse doubler, sa classe d'armure reçoit un bonus de +2, elle a l'Avantage aux jets de sauvegarde de Dextérité et bénéficie d'une action supplémentaire à chacun de ses tours. Cette action ne peut servir qu'à entreprendre l'action Attaque (une seule attaque d'arme), Désengagement, Furtivité, Pointe ou Utilisation.</p><p>Lorsque le sort prend fin, jusqu'à la fin de son tour suivant, la cible en proie à une @UUID[Compendium.dnd5e.spells24.Item.phbsplHaste00000.ActiveEffect.S5XcFawnnNHO8bUr]{vague de léthargie} subit l'état Neutralisé et sa Vitesse est de 0.</p>"
+                        },
+                        "Lethargy": {
+                            "name": "Léthargie",
+                            "description": "<p>Lorsque le sort prend fin, jusqu'à la fin de son tour suivant, la cible en proie à une vague de léthargie subit l'état &Reference[Incapacitated apply=false] et sa Vitesse est de 0.</p>"
                         }
-                    }
+                    },
+                    "name": "Hâte",
+                    "description": "<p>Choisissez une créature consentante que vous voyez à portée. Jusqu'à la fin du sort, la cible voit sa Vitesse doubler, sa classe d'armure reçoit un bonus de +2, elle a l'Avantage aux jets de sauvegarde de Dextérité et bénéficie d'une action supplémentaire à chacun de ses tours. Cette action ne peut servir qu'à entreprendre l'action Attaque (une seule attaque d'arme), Désengagement, Furtivité, Pointe ou Utilisation.</p><p>Lorsque le sort prend fin, jusqu'à la fin de son tour suivant, la cible en proie à une vague de léthargie subit l'état &Reference[Incapacitated apply=false] et sa Vitesse est de 0.</p>",
+                    "materials": "un copeau de racine de réglisse"
                 },
                 "Component: Diamond": {
                     "name": "Composant : Diamant"
@@ -25157,15 +25323,27 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Comprehension": {
+                            "name": "Compréhension"
                         }
-                    }
+                    },
+                    "name": "Compréhension des langues",
+                    "description": "<p>Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.</p>",
+                    "materials": "une pincée de suie et de sel"
                 },
                 "Disguise Self": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Disguised": {
+                            "name": "Déguisé",
+                            "description": "<p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv]] assorti de votre DD de sauvegarde des sorts.</p>"
                         }
-                    }
+                    },
+                    "name": "Déguisement",
+                    "description": "<p>Vous vous donnez un aspect différent jusqu'à la fin du sort ; vous pouvez ainsi altérer l'apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu'à 30 cm plus grand ou plus petit, sembler plus léger ou plus lourd. Vous devez adopter une forme présentant la même répartition de membres que vous. Pour le reste, les détails de l'illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air.</p><p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts.</p>"
                 },
                 "Daylight": {
                     "effects": {
@@ -25181,7 +25359,9 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Déblocage",
+                    "description": "<p>Choisissez un objet que vous voyez à portée. Il peut s'agir d'une porte, d'une boîte, d'un coffre, de menottes, d'un cadenas ou autre objet muni d'un système de fermeture, magique ou non.</p><p>Une cible verrouillée par une serrure ordinaire, barrée ou coincée est aussitôt déverrouillée, débloquée ou décoincée. Si l'objet présente plusieurs verrous, un seul d'entre eux est débloqué.</p><p>Si la cible est fermée par <em>verrou magique</em>, ce sort est réprimé pendant 10 minutes, durant lesquelles vous pouvez ouvrir et fermer l'objet.</p><p>À l'incantation du sort, un cognement sonore audible jusqu'à 90 m émane de la cible.</p>"
                 },
                 "Case, Map or Scroll": {
                     "name": "Étui à cartes ou à parchemins",
@@ -25221,9 +25401,12 @@
                 "Charm Monster": {
                     "effects": {
                         "Charmed": {
-                            "name": "Charmé"
+                            "name": "Charmé",
+                            "description": "<p>La cible subit l'état &Reference[Charmed apply=false] jusqu'à la fin du sort ou que vous ou vos alliés lui infligiez des dégâts. La créature ainsi Charmée vous est Amicale. Lorsque le sort prend fin, la cible sait que vous l'avez Charmée.</p>"
                         }
-                    }
+                    },
+                    "name": "Charme-monstre",
+                    "description": "<p>Une créature que vous voyez à portée effectue un jet de sauvegarde de Sagesse. Ce jet s'effectue avec l'Avantage si vous ou vos alliés êtes en train de l'affronter. En cas d'échec, la cible subit l'état &Reference[Charmed apply=false] jusqu'à la fin du sort ou que vous ou vos alliés lui infligiez des dégâts. La créature ainsi Charmée vous est Amicale. Lorsque le sort prend fin, la cible sait que vous l'avez Charmée.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 4<sup>e</sup>.</p>"
                 },
                 "Misty Step": {
                     "name": "Foulée brumeuse",
@@ -25526,6 +25709,242 @@
                             "description": "<p>Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p>"
                         }
                     }
+                },
+                "Chromatic Orb": {
+                    "name": "Orbe chromatique",
+                    "description": "<p>Vous projetez un orbe d'énergie sur une cible à portée. Choisissez une énergie entre acide, feu, foudre, froid, poison et tonnerre pour composer l'orbe, puis effectuez un jet d'attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 3d8 dégâts du type retenu.</p><p>Si vous obtenez le même nombre sur au moins deux des d8, l'orbe rebondit vers une autre cible de votre choix dans un rayon de 9 m de la cible. Effectuez un jet d'attaque contre la nouvelle cible et un nouveau jet de dégâts. L'orbe ne rebondit pas une deuxième fois, sauf si vous avez lancé le sort par un emplacement du 2<sup>e</sup> niveau ou supérieur. [[@item.level]]{Nombre de bonds }</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>. L'orbe est susceptible de rebondir autant de fois que le niveau de l'emplacement dépensé, une même créature ne pouvant être ciblée qu'une fois par incantation du sort.</p>",
+                    "materials": "un diamant d'une valeur minimale de 50 po"
+                },
+                "Draconic Resilience": {
+                    "name": "Résistance draconique",
+                    "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p><section class=\"secret\" id=\"secret-uBlQVhOqmjWWiLc4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum de points de vie et met en place votre défense sans armure, qui peut être désactivée si vous préférez utiliser une armure.</p></section>",
+                    "effects": {
+                        "Draconic Resilience: Armor": {
+                            "name": "Résistance draconique : Armure"
+                        },
+                        "Draconic Resilience: HP": {
+                            "name": "Résistance draconique : PV"
+                        }
+                    }
+                },
+                "Draconic Spells": {
+                    "name": "Sorts draconiques",
+                    "description": "<p>Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts draconiques</caption><thead><tr><td>Niveau d'Ensorceleur</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{injonction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplAlterSelf0]{modification d'apparence}, @UUID[Compendium.dnd5e.spells24.Item.phbsplChromaticO]{orbe chromatique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDragonsBre]{souffle du dragon}</em></td></tr><tr><td>5</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{terreur}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{vol}</em></td></tr><tr><td>7</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCharmMonst]{charme-monstre}, @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{œil du mage}</em></td></tr><tr><td>9</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{mythes et légendes}</em></td></tr></tbody></table><section class=\"secret\" id=\"secret-kL8H0ClyrUNajoht\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>"
+                },
+                "Sorcerous Restoration": {
+                    "name": "Restauration ensorcelée",
+                    "description": "<p>En terminant un Repos court, vous récupérez les points de Sorcellerie dépensés à concurrence de la moitié de votre niveau d'Ensorceleur (arrondir à l'inférieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-mYrbb0UHsBGBUVbN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une utilisation gratuite par Repos long. Utilisez-la pour regagner automatiquement le nombre correct de points de Sorcellerie.</p></section>",
+                    "activities": {
+                        "Restore Sorcery Points": {
+                            "name": "Restaurer des points de Sorcellerie"
+                        }
+                    }
+                },
+                "Fear": {
+                    "name": "Terreur",
+                    "description": "<p>Chaque créature prise dans un Cône de 9 m doit réussir un jet de sauvegarde de Sagesse sous peine de lâcher ce qu'elle tient, et de subir l'état &Reference[frightened apply=false] pour toute la durée.</p><p>Ainsi Effrayée, la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de Sagesse. En cas de réussite, le sort prend fin pour elle.</p>",
+                    "materials": "une plume blanche",
+                    "effects": {
+                        "Fear": {
+                            "name": "Terreur",
+                            "description": "<p>Ainsi &Reference[frightened apply=false], la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de [[/save ability=wis]]. En cas de réussite, le sort prend fin pour elle.</p>"
+                        }
+                    }
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Acid Splash": {
+                    "name": "Aspersion acide",
+                    "description": "<p>Vous créez une bulle acide en un point à portée, où elle explose sous forme de Sphère de 1,50 m de rayon. Chaque créature prise dans la Sphère doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d6 dégâts d'acide.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d6 lorsque vous atteignez les niveaux 5 (2d6), 11 (3d6) et 17 (4d6).</p>"
+                },
+                "Counterspell": {
+                    "name": "Contresort",
+                    "description": "<p>Vous tentez d'interrompre une créature en pleine incantation. La créature effectue un jet de sauvegarde de Constitution. En cas d'échec, son sort se dissipe sans effet et l'action, l'action Bonus ou la Réaction entreprise pour l'incantation est gaspillée. Si ce sort était lancé par un emplacement, celui-ci n'est pas dépensé.</p>",
+                    "condition": "en voyant à portée une créature lancer un sort avec une composante verbale, somatique ou matérielle"
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Grease": {
+                    "name": "Graisse",
+                    "description": "<p>Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un &Reference[difficultterrain] pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[prone]. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.</p>",
+                    "materials": "un peu de couenne de porc ou de beurre"
+                },
+                "Jump": {
+                    "name": "Saut",
+                    "description": "<p>Vous touchez une créature consentante. Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup></p>",
+                    "materials": "une patte arrière de sauterelle",
+                    "effects": {
+                        "Jump": {
+                            "name": "Saut",
+                            "description": "<p>Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p>"
+                        }
+                    }
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Web": {
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
+                },
+                "Elemental Gem (Yellow Diamond)": {
+                    "name": "Gemme élémentaire (Diamant jaune)",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.equipment24.Item.dmgElementalGem0]</em></p><p>Cette gemme contient une particule d'énergie élémentaire. Lorsque vous entreprenez l'action Utilisation pour briser la gemme, cela convoque un @UUID[Compendium.dnd5e.actors24.Actor.mmEarthElemental]{élémentaire de la terre}, et la gemme perd sa magie. L'élémentaire apparaît en un espace inoccupé aussi près que possible de la gemme brisée, comprend les mêmes langues que vous, obéit à vos ordres et joue son tour juste après vous à votre rang d'initiative. Il disparaît au bout de 1 heure, s'il meurt, ou si vous le révoquez par une action Bonus.</p>",
+                    "activities": {
+                        "Utilize": {
+                            "name": "Utilisation",
+                            "target": "espace inoccupé aussi près que possible de la gemme brisée"
+                        }
+                    }
+                },
+                "Spell Scroll: Comprehend Languages": {
+                    "name": "Parchemin de sort : Compréhension des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplComprehend inline]</p>"
+                },
+                "Spell Scroll: Disguise Self": {
+                    "name": "Parchemin de sort : Déguisement",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe inline]</p>"
+                },
+                "Wand of the War Mage, +2": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +2": {
+                            "name": "Baguette du mage de guerre +2",
+                            "changes": {
+                                "name": "{} du mage de guerre +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +2": {
+                            "name": "Mage de guerre +2"
+                        }
+                    }
+                },
+                "Elemental Affinity": {
+                    "name": "Affinité élémentaire",
+                    "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la Résistance à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p><section class=\"secret\" id=\"secret-3vHUORtVzoP6V4xF\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir le type de dégâts au fur et à mesure que vous montez en niveau. Les dégâts supplémentaires ne sont pas automatiquement ajoutés, mais cette aptitude comprend une activité pour chaque type de dégâts.</p><p>Vous pouvez accélérer l'utilisation de cette aptitude en plaçant le type de dégâts que vous avez choisi en haut de la liste et il sera utilisé automatiquement lors de l'utilisation de cette aptitude.</p></section>",
+                    "activities": {
+                        "Acid": {
+                            "name": "Acide",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Cold": {
+                            "name": "Froid",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Fire": {
+                            "name": "Feu",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Lightning": {
+                            "name": "Foudre",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Poison": {
+                            "name": "Poison",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        }
+                    }
+                },
+                "Sorcery Incarnate": {
+                    "name": "Sorcellerie incarnée",
+                    "description": "<p>S'il ne vous reste aucune utilisation de Sorcellerie innée, vous pouvez y recourir en dépensant 2 points de Sorcellerie et l'activez par une action Bonus.</p><p>En outre et tant que votre aptitude Sorcellerie innée est active, vous pouvez utiliser jusqu'à deux de vos options de Métamagie pour chaque sort que vous lancez.</p><section id=\"secret-l8yUYHYrWEjQI4Q0\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude permet de consommer 2 points de Sorcellerie et de restaurer une utilisation de Sorcellerie innée.</p></section>",
+                    "activities": {
+                        "Restore Innate Sorcery": {
+                            "name": "Restaurer Sorcellerie innée"
+                        }
+                    }
+                },
+                "Arcane Eye": {
+                    "name": "Œil du mage",
+                    "description": "<p>Vous créez un œil invulnérable et Invisible à portée, qui flotte dans les airs pour toute la durée. Vous recevez mentalement des informations visuelles transmises par l'œil, qui voit dans toutes les directions. Il dispose en outre de la Vision dans le noir sur 9 m.</p><p>Par une action Bonus, vous pouvez déplacer l'œil d'un maximum de 9 m dans la direction de votre choix. Un obstacle solide bloque les déplacements de l'œil, mais celui-ci peut se glisser dans un interstice d'une largeur minimale de 2,5 cm.</p>",
+                    "materials": "une touffe de poils de chauve-souris"
+                },
+                "Legend Lore": {
+                    "name": "Mythes et légendes",
+                    "description": "<p>Nommez ou décrivez un élément notoire : personne, lieu ou objet. Le sort vous fait prendre brièvement conscience d'un fait important (décrit par le MD) concernant l'élément mentionné.</p><p>Cette bribe de savoir peut consister en des détails essentiels, des révélations cocasses, voire quelque secret toujours resté méconnu. Plus vous en savez déjà sur l'élément, plus précises et détaillées seront les informations transmises.</p><p>Les détails révélés sont justes, mais sont parfois formulés de manière imagée ou par le biais de vers (à l'appréciation du MD).</p><p>Si l'élément retenu n'est pas véritablement notoire, vous n'entendez que quelques notes tristes de trombone et le sort prend fin.</p>",
+                    "materials": "de l'encens d'une valeur minimale de 250 po, que le sort détruit, et quatre lamelles d'ivoire d'une valeur minimale de 50 po chacune"
+                },
+                "Summon Dragon": {
+                    "name": "Convocation de dragon",
+                    "description": "<p>Vous invoquez un esprit draconique. Il se manifeste en un espace inoccupé que vous voyez à portée en reprenant le profil de l'<strong>@UUID[Compendium.dnd5e.actors24.Actor.phbmobDraconicSp]{esprit draconique}</strong>. La créature disparaît quand le sort prend fin, mais également si elle tombe à 0 point de vie.</p><p>La créature constitue un allié pour vous et vos alliés. Au combat, la créature partage votre rang d'Initiative, mais elle joue son tour juste après vous. Elle obéit à vos instructions verbales (pas d'action requise de votre part). Sans ordre de votre part, elle entreprend l'action Esquive et consacre son déplacement à se mettre à l'abri du danger.</p><p><strong>Emplacement de niveau supérieur.</strong> Le niveau de l'emplacement s'applique chaque fois que le profil de jeu y fait référence.</p><p>@Embed[Compendium.dnd5e.actors24.Actor.phbmobDraconicSp caption=false statblock]</p>",
+                    "materials": "un objet gravé d'une représentation de dragon, d'une valeur minimale de 500 po"
+                },
+                "Careful Spell": {
+                    "name": "Sort prévenant",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort qui contraint d'autres créatures à effectuer un jet de sauvegarde, vous pouvez protéger certaines de ces créatures des pleins effets du sort. À cette fin, dépensez 1 point de Sorcellerie et désignez des créatures dont le nombre n'excède pas votre modificateur de Charisme (minimum d'une créature). Les créatures choisies réussissent automatiquement leur jet de sauvegarde contre le sort et ne subissent aucun dégât si elles étaient censées les réduire de moitié en cas de réussite.</p><p><strong>Créatures que vous pouvez protéger :</strong> [[lookup @abilities.cha.mod]]</p>",
+                    "activities": {
+                        "Careful Spell": {
+                            "name": "Sort prévenant",
+                            "condition": "Lorsque vous lancez un sort qui contraint d'autres créatures à effectuer un jet de sauvegarde"
+                        }
+                    }
+                },
+                "Chain Lightning": {
+                    "name": "Chaîne d'éclairs",
+                    "description": "<p>Vous projetez un trait de foudre vers une cible que vous voyez à portée. Trois éclairs jaillissent alors de cette cible vers un maximum de trois autres cibles, que vous choisissez, distantes de 9 m ou moins de la première. Toutes ces cibles peuvent être des créatures ou des objets, et ne peuvent être ciblées par plus d'un éclair.</p><p>Chaque cible effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Un éclair supplémentaire jaillit de la première cible vers une autre par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
+                    "materials": "trois broches en argent",
+                    "specialTarget": "les cibles secondaires distantes de 9 m ou moins de la première"
+                },
+                "Arcane Hand": {
+                    "name": "Main arcanique",
+                    "description": "<p>Vous créez une main de taille G faite d'énergies magiques chatoyantes. Elle apparaît dans un espace inoccupé que vous voyez à portée. La main persiste pendant toute la durée et se déplace sous votre contrôle, en reproduisant les mouvements de votre propre main.</p><p>La main est un objet doté d'une CA de 20 et de points de vie égaux à votre maximum de points de vie. S'il tombe à 0 point de vie, le sort prend fin. La main n'occupe pas son espace.</p><p>À l'incantation du sort, ainsi que par une action Bonus à vos tours suivants, vous pouvez déplacer la main d'un maximum de 18 m puis lui faire produire l'un des effets suivants :</p><p><strong>Main agrippeuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiGraspingHa inline classes=\"no-secrets\"]</p><p><strong>Main impérieuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiForcefulHa inline]</p><p><strong>Main interposée</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiInterposin inline]</p><p><strong>Poing serré</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiClenchedFi inline]</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts de l'option poing serré augmentent de 2d8 et ceux de main agrippeuse de 2d6 par niveau d'emplacement au-delà du 5<sup>e</sup>.</p>",
+                    "materials": "une coquille d'œuf et un gant"
+                },
+                "Twinned Spell": {
+                    "name": "Sort jumeau",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort, comme <em>charme-personne</em>, qui peut être lancé avec un emplacement de sort de plus haut niveau pour cibler une créature supplémentaire, vous pouvez dépenser 1 point de Sorcellerie pour augmenter de 1 le niveau effectif de ce sort.</p>",
+                    "activities": {
+                        "Twinned Spell": {
+                            "name": "Sort jumeau",
+                            "condition": "Lorsque vous lancez un sort qui peut être lancé avec un emplacement de sort de plus haut niveau pour cibler une créature supplémentaire"
+                        }
+                    }
+                },
+                "Poison Spray": {
+                    "name": "Bouffée de poison",
+                    "description": "<p>Vous projetez une brume toxique vers une créature à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d12 dégâts de poison.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d12 lorsque vous atteignez les niveaux 5 (2d12), 11 (3d12) et 17 (4d12).</p>"
+                },
+                "Bracers of Defense": {
+                    "name": "Bracelets de défense",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Tant que vous portez ces bracelets et ne portez ni armure ni bouclier, vous recevez un bonus de +2 à la CA.</p>",
+                    "effects": {
+                        "Bonus AC (Unarmored)": {
+                            "name": "Bonus CA (sans armure)"
+                        }
+                    }
+                },
+                "Component: Ivory Strip": {
+                    "name": "Composant : Lamelle d'ivoire"
+                },
+                "Component: Dragon Engraving": {
+                    "name": "Composant : Gravure de dragon"
+                },
+                "Spell Scroll: Haste": {
+                    "name": "Parchemin de sort : Hâte",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplHaste00000 inline]</p>"
+                },
+                "Spell Scroll: Daylight": {
+                    "name": "Parchemin de sort : Lumière du jour",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDaylight00 inline]</p>"
+                },
+                "Spell Scroll: Knock": {
+                    "name": "Parchemin de sort : Déblocage",
+                    "description": "<p><em>&Reference[Spell Scroll] (2<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplKnock00000 inline]</p>"
                 }
             },
             "name": "Morthos",
@@ -25667,7 +26086,10 @@
                         "Use (free casting)": {
                             "name": "Utiliser (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Ténèbres",
+                    "description": "<p>Pour toute la durée, des &Reference[darkness] magiques se déploient depuis un point à portée en remplissant une Sphère de 4,5 m de rayon. La Vision dans le noir ne perce pas ces Ténèbres, et les lumières non magiques n'illuminent pas dans la Sphère.</p><p>Au lieu de ça, vous pouvez lancer le sort sur un objet porté par personne, de manière à ce que les Ténèbres emplissent une Émanation de 4,50 m centrée sur l'objet. Il suffit de recouvrir cet objet d'une surface opaque, comme une gamelle ou un heaume, pour bloquer les Ténèbres.</p><p>Si tout ou partie de ce sort chevauche la zone de Lumière vive ou faible créée par un sort du 2<sup>e</sup> niveau ou inférieur, l'effet qui produit cette lumière est dissipé.</p>",
+                    "materials": "une touffe de fourrure de chauve-souris et un bout de charbon"
                 },
                 "Command": {
                     "name": "Injonction",
@@ -25712,20 +26134,39 @@
                     "activities": {
                         "Cast": {
                             "name": "Incanter"
+                        },
+                        "Exhale": {
+                            "name": "Exhaler"
                         }
-                    }
+                    },
+                    "name": "Souffle du dragon",
+                    "description": "<p>Vous touchez physiquement une créature consentante et choisissez entre acide, feu, foudre, froid et poison. Jusqu'à la fin du sort, la cible peut entreprendre l'action Magie pour exhaler un Cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité, et subit 3d6 dégâts du type choisi en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 2<sup>e</sup>.</p>"
                 },
                 "Haste": {
                     "activities": {
                         "Cast": {
                             "name": "Incanter"
+                        },
+                        "Apply Lethargy": {
+                            "name": "Appliquer léthargie"
                         }
                     },
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Hasted": {
+                            "name": "Hâtée",
+                            "description": "<p>Jusqu'à la fin du sort, la cible voit sa Vitesse doubler, sa classe d'armure reçoit un bonus de +2, elle a l'Avantage aux jets de sauvegarde de Dextérité et bénéficie d'une action supplémentaire à chacun de ses tours. Cette action ne peut servir qu'à entreprendre l'action Attaque (une seule attaque d'arme), Désengagement, Furtivité, Pointe ou Utilisation.</p><p>Lorsque le sort prend fin, jusqu'à la fin de son tour suivant, la cible en proie à une @UUID[Compendium.dnd5e.spells24.Item.phbsplHaste00000.ActiveEffect.S5XcFawnnNHO8bUr]{vague de léthargie} subit l'état Neutralisé et sa Vitesse est de 0.</p>"
+                        },
+                        "Lethargy": {
+                            "name": "Léthargie",
+                            "description": "<p>Lorsque le sort prend fin, jusqu'à la fin de son tour suivant, la cible en proie à une vague de léthargie subit l'état &Reference[Incapacitated apply=false] et sa Vitesse est de 0.</p>"
                         }
-                    }
+                    },
+                    "name": "Hâte",
+                    "description": "<p>Choisissez une créature consentante que vous voyez à portée. Jusqu'à la fin du sort, la cible voit sa Vitesse doubler, sa classe d'armure reçoit un bonus de +2, elle a l'Avantage aux jets de sauvegarde de Dextérité et bénéficie d'une action supplémentaire à chacun de ses tours. Cette action ne peut servir qu'à entreprendre l'action Attaque (une seule attaque d'arme), Désengagement, Furtivité, Pointe ou Utilisation.</p><p>Lorsque le sort prend fin, jusqu'à la fin de son tour suivant, la cible en proie à une vague de léthargie subit l'état &Reference[Incapacitated apply=false] et sa Vitesse est de 0.</p>",
+                    "materials": "un copeau de racine de réglisse"
                 },
                 "Component: Diamond": {
                     "name": "Composant : Diamant"
@@ -25763,15 +26204,27 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Comprehension": {
+                            "name": "Compréhension"
                         }
-                    }
+                    },
+                    "name": "Compréhension des langues",
+                    "description": "<p>Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.</p>",
+                    "materials": "une pincée de suie et de sel"
                 },
                 "Disguise Self": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Disguised": {
+                            "name": "Déguisé",
+                            "description": "<p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv]] assorti de votre DD de sauvegarde des sorts.</p>"
                         }
-                    }
+                    },
+                    "name": "Déguisement",
+                    "description": "<p>Vous vous donnez un aspect différent jusqu'à la fin du sort ; vous pouvez ainsi altérer l'apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu'à 30 cm plus grand ou plus petit, sembler plus léger ou plus lourd. Vous devez adopter une forme présentant la même répartition de membres que vous. Pour le reste, les détails de l'illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air.</p><p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts.</p>"
                 },
                 "Daylight": {
                     "effects": {
@@ -25787,7 +26240,9 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Déblocage",
+                    "description": "<p>Choisissez un objet que vous voyez à portée. Il peut s'agir d'une porte, d'une boîte, d'un coffre, de menottes, d'un cadenas ou autre objet muni d'un système de fermeture, magique ou non.</p><p>Une cible verrouillée par une serrure ordinaire, barrée ou coincée est aussitôt déverrouillée, débloquée ou décoincée. Si l'objet présente plusieurs verrous, un seul d'entre eux est débloqué.</p><p>Si la cible est fermée par <em>verrou magique</em>, ce sort est réprimé pendant 10 minutes, durant lesquelles vous pouvez ouvrir et fermer l'objet.</p><p>À l'incantation du sort, un cognement sonore audible jusqu'à 90 m émane de la cible.</p>"
                 },
                 "Mage Armor": {
                     "effects": {
@@ -25807,8 +26262,15 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Imperceptible Barrier": {
+                            "name": "Barrière imperceptible",
+                            "description": "<p>Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>projectiles magiques</em>.</p>"
                         }
-                    }
+                    },
+                    "name": "Bouclier",
+                    "description": "<p>Une barrière imperceptible de force magique vous protège. Jusqu'au début de votre tour suivant, vous recevez un bonus de +5 à la CA, y compris contre l'attaque qui a déclenché le sort, et vous ne subissez aucun dégât de <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectiles magiques}</em>.</p>",
+                    "condition": "lorsqu'un jet d'attaque vous touche ou que le sort projectile magique vous cible"
                 },
                 "Tiny Hut": {
                     "effects": {
@@ -25825,14 +26287,25 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Sanctuaire privé",
+                    "description": "<p>Vous sécurisez magiquement une zone à portée. La zone est un Cube dont l'arête peut aller de 1,50 m à 30 m. Le sort persiste pour toute la durée.</p><p>À l'incantation du sort, vous décidez quel genre de sécurité octroie le sort, en choisissant autant de propriétés souhaitées parmi les suivantes :</p><ul><li>Les sons ne franchissent pas le périmètre de la zone protégée.</li><li>Le périmètre de la zone protégée apparaît sombre et brumeux, ce qui empêche de voir au travers (y compris avec la &Reference[Darkvision]).</li><li>Les capteurs créés par les sorts de Divination ne peuvent ni apparaître à l'intérieur de la zone protégée ni franchir son périmètre.</li><li>Les créatures de la zone ne peuvent pas être ciblées par les sorts de Divination.</li><li>Rien ne peut se téléporter dans la zone protégée ou hors d'elle.</li><li>Le voyage planaire est bloqué au sein de la zone protégée.</li></ul><p>Lancer ce sort quotidiennement au même endroit pendant 365 jours fait persister le sort jusqu'à dissipation.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez augmenter l'arête du Cube de 30 m par niveau d'emplacement au-delà du 4<sup>e</sup>.</p>",
+                    "materials": "une feuille de plomb"
                 },
                 "Resilient Sphere": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enclosed in Sphere": {
+                            "name": "Confinée dans la sphère",
+                            "description": "<p>Une créature confinée peut consacrer son action à pousser sur les parois de la sphère et la faire rouler à concurrence de la moitié de sa propre Vitesse.</p>"
                         }
-                    }
+                    },
+                    "name": "Sphère résiliente",
+                    "description": "<p>Une sphère chatoyante séquestre une créature ou un objet de taille G ou inférieure à portée. Une créature non consentante doit réussir un jet de sauvegarde de Dextérité pour ne pas être confinée pour toute la durée.</p><p>Rien, ni les objets physiques, ni l'énergie, ni les autres effets de sort, ne peut franchir cette barrière dans un sens comme dans l'autre, mais la créature séquestrée peut respirer normalement. La sphère est immunisée contre tous les dégâts, et la créature ou l'objet enfermé ne peut subir de dégâts des attaques et effets émanant de l'autre côté, pas plus qu'une créature séquestrée ne peut infliger de dégâts vers l'extérieur.</p><p>La sphère, qui ne pèse rien, est juste assez grande pour contenir la créature ou l'objet. Une créature confinée peut consacrer son action à pousser sur les parois de la sphère et la faire rouler à concurrence de la moitié de sa propre Vitesse. De même, d'autres créatures peuvent ramasser le globe et le déplacer.</p><p>Le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{désintégration}</em>, s'il cible le globe, le détruit sans risque pour ce qui se trouve à l'intérieur.</p>",
+                    "materials": "une sphère de verre",
+                    "specialTarget": "Taille G ou inférieure"
                 },
                 "Wall of Force": {
                     "effects": {
@@ -25866,7 +26339,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Cercle de téléportation",
+                    "description": "<p>À l'incantation du sort, vous tracez un cercle de 1,50 m de diamètre au sol, composé de symboles qui relient votre emplacement à un cercle de téléportation permanent de votre choix dont vous connaissez la séquence de runes et situé sur le même plan d'existence que vous. Un portail chatoyant s'ouvre au sein du cercle ainsi tracé et reste ouvert jusqu'à la fin de votre tour suivant. Toute créature qui pénètre dans le portail apparaît aussitôt dans un rayon de 1,50 m du cercle de destination ou, si cet espace n'est pas libre, dans l'espace inoccupé le plus proche.</p><p>De nombreux temples et guildes importants disposent d'un cercle de téléportation permanent dans leurs locaux. Chaque cercle comprend toujours sa propre séquence de runes, une suite de symboles à l'agencement unique.</p><p>La première fois que vous acquérez la faculté de lancer ce sort, vous apprenez la séquence de runes de deux destinations du Plan Matériel, déterminées par le MD. Vous y ajouterez éventuellement d'autres séquences au fil de vos aventures. Graver une nouvelle séquence de runes dans votre mémoire nécessite de l'étudier pendant 1 minute.</p><p>Vous pouvez créer un cercle de téléportation permanent en lançant quotidiennement ce sort au même endroit pendant 365 jours.</p>",
+                    "materials": "encres rares d'une valeur minimale de 50 po, que le sort détruit"
                 },
                 "Protection from Energy": {
                     "effects": {
@@ -25900,16 +26376,26 @@
                         "Universal Communication": {
                             "changes": {
                                 "system.traits.languages.custom": ";toute langue parlée et tout langage des signes"
-                            }
+                            },
+                            "name": "Communication universelle"
                         }
-                    }
+                    },
+                    "name": "Don des langues",
+                    "description": "<p>Ce sort octroie à la créature que vous touchez la faculté de comprendre toute langue parlée qu'elle entend et tout langage des signes qu'elle voit. De plus, lorsque la cible communique par signes ou par la voix, toute créature qui connaît au moins une langue comprend ce que la cible exprime à condition d'entendre ce qu'elle dit ou de voir sa gestuelle.</p>",
+                    "materials": "une ziggourat miniature"
                 },
                 "Water Breathing": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Water Breathing": {
+                            "name": "Respiration aquatique"
                         }
-                    }
+                    },
+                    "name": "Respiration aquatique",
+                    "description": "<p>Ce sort octroie la faculté de respirer sous l'eau à un maximum de dix créatures consentantes que vous choisissez à portée, jusqu'à la fin du sort. Les créatures affectées conservent leurs autres modes respiratoires.</p>",
+                    "materials": "un court roseau"
                 },
                 "Case, Map or Scroll": {
                     "name": "Étui à cartes ou à parchemins",
@@ -25966,9 +26452,12 @@
                 "Charm Monster": {
                     "effects": {
                         "Charmed": {
-                            "name": "Charmé"
+                            "name": "Charmé",
+                            "description": "<p>La cible subit l'état &Reference[Charmed apply=false] jusqu'à la fin du sort ou que vous ou vos alliés lui infligiez des dégâts. La créature ainsi Charmée vous est Amicale. Lorsque le sort prend fin, la cible sait que vous l'avez Charmée.</p>"
                         }
-                    }
+                    },
+                    "name": "Charme-monstre",
+                    "description": "<p>Une créature que vous voyez à portée effectue un jet de sauvegarde de Sagesse. Ce jet s'effectue avec l'Avantage si vous ou vos alliés êtes en train de l'affronter. En cas d'échec, la cible subit l'état &Reference[Charmed apply=false] jusqu'à la fin du sort ou que vous ou vos alliés lui infligiez des dégâts. La créature ainsi Charmée vous est Amicale. Lorsque le sort prend fin, la cible sait que vous l'avez Charmée.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 4<sup>e</sup>.</p>"
                 },
                 "Misty Step": {
                     "name": "Foulée brumeuse",
@@ -26280,6 +26769,346 @@
                             "description": "<p>Lorsque vous recourez à votre attaque à mains nues pour infliger des dégâts avec ces nouveaux appendices, ils infligent 1d6 dégâts quand ils touchent, du type indiqué entre parenthèses, et vous ajoutez votre modificateur de caractéristique d'incantation aux jets d'attaque et de dégâts, au lieu de recourir à la Force.</p>"
                         }
                     }
+                },
+                "Chromatic Orb": {
+                    "name": "Orbe chromatique",
+                    "description": "<p>Vous projetez un orbe d'énergie sur une cible à portée. Choisissez une énergie entre acide, feu, foudre, froid, poison et tonnerre pour composer l'orbe, puis effectuez un jet d'attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 3d8 dégâts du type retenu.</p><p>Si vous obtenez le même nombre sur au moins deux des d8, l'orbe rebondit vers une autre cible de votre choix dans un rayon de 9 m de la cible. Effectuez un jet d'attaque contre la nouvelle cible et un nouveau jet de dégâts. L'orbe ne rebondit pas une deuxième fois, sauf si vous avez lancé le sort par un emplacement du 2<sup>e</sup> niveau ou supérieur. [[@item.level]]{Nombre de bonds }</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>. L'orbe est susceptible de rebondir autant de fois que le niveau de l'emplacement dépensé, une même créature ne pouvant être ciblée qu'une fois par incantation du sort.</p>",
+                    "materials": "un diamant d'une valeur minimale de 50 po"
+                },
+                "Draconic Resilience": {
+                    "name": "Résistance draconique",
+                    "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p><section class=\"secret\" id=\"secret-uBlQVhOqmjWWiLc4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum de points de vie et met en place votre défense sans armure, qui peut être désactivée si vous préférez utiliser une armure.</p></section>",
+                    "effects": {
+                        "Draconic Resilience: Armor": {
+                            "name": "Résistance draconique : Armure"
+                        },
+                        "Draconic Resilience: HP": {
+                            "name": "Résistance draconique : PV"
+                        }
+                    }
+                },
+                "Draconic Spells": {
+                    "name": "Sorts draconiques",
+                    "description": "<p>Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts draconiques</caption><thead><tr><td>Niveau d'Ensorceleur</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{injonction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplAlterSelf0]{modification d'apparence}, @UUID[Compendium.dnd5e.spells24.Item.phbsplChromaticO]{orbe chromatique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDragonsBre]{souffle du dragon}</em></td></tr><tr><td>5</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{terreur}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{vol}</em></td></tr><tr><td>7</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCharmMonst]{charme-monstre}, @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{œil du mage}</em></td></tr><tr><td>9</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{mythes et légendes}</em></td></tr></tbody></table><section class=\"secret\" id=\"secret-kL8H0ClyrUNajoht\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>"
+                },
+                "Sorcerous Restoration": {
+                    "name": "Restauration ensorcelée",
+                    "description": "<p>En terminant un Repos court, vous récupérez les points de Sorcellerie dépensés à concurrence de la moitié de votre niveau d'Ensorceleur (arrondir à l'inférieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-mYrbb0UHsBGBUVbN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une utilisation gratuite par Repos long. Utilisez-la pour regagner automatiquement le nombre correct de points de Sorcellerie.</p></section>",
+                    "activities": {
+                        "Restore Sorcery Points": {
+                            "name": "Restaurer des points de Sorcellerie"
+                        }
+                    }
+                },
+                "Fear": {
+                    "name": "Terreur",
+                    "description": "<p>Chaque créature prise dans un Cône de 9 m doit réussir un jet de sauvegarde de Sagesse sous peine de lâcher ce qu'elle tient, et de subir l'état &Reference[frightened apply=false] pour toute la durée.</p><p>Ainsi Effrayée, la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de Sagesse. En cas de réussite, le sort prend fin pour elle.</p>",
+                    "materials": "une plume blanche",
+                    "effects": {
+                        "Fear": {
+                            "name": "Terreur",
+                            "description": "<p>Ainsi &Reference[frightened apply=false], la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de [[/save ability=wis]]. En cas de réussite, le sort prend fin pour elle.</p>"
+                        }
+                    }
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Acid Splash": {
+                    "name": "Aspersion acide",
+                    "description": "<p>Vous créez une bulle acide en un point à portée, où elle explose sous forme de Sphère de 1,50 m de rayon. Chaque créature prise dans la Sphère doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d6 dégâts d'acide.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d6 lorsque vous atteignez les niveaux 5 (2d6), 11 (3d6) et 17 (4d6).</p>"
+                },
+                "Counterspell": {
+                    "name": "Contresort",
+                    "description": "<p>Vous tentez d'interrompre une créature en pleine incantation. La créature effectue un jet de sauvegarde de Constitution. En cas d'échec, son sort se dissipe sans effet et l'action, l'action Bonus ou la Réaction entreprise pour l'incantation est gaspillée. Si ce sort était lancé par un emplacement, celui-ci n'est pas dépensé.</p>",
+                    "condition": "en voyant à portée une créature lancer un sort avec une composante verbale, somatique ou matérielle"
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Grease": {
+                    "name": "Graisse",
+                    "description": "<p>Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un &Reference[difficultterrain] pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[prone]. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.</p>",
+                    "materials": "un peu de couenne de porc ou de beurre"
+                },
+                "Jump": {
+                    "name": "Saut",
+                    "description": "<p>Vous touchez une créature consentante. Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup></p>",
+                    "materials": "une patte arrière de sauterelle",
+                    "effects": {
+                        "Jump": {
+                            "name": "Saut",
+                            "description": "<p>Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p>"
+                        }
+                    }
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Web": {
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
+                },
+                "Elemental Gem (Yellow Diamond)": {
+                    "name": "Gemme élémentaire (Diamant jaune)",
+                    "description": "<p><em>Voir : @UUID[Compendium.dnd5e.equipment24.Item.dmgElementalGem0]</em></p><p>Cette gemme contient une particule d'énergie élémentaire. Lorsque vous entreprenez l'action Utilisation pour briser la gemme, cela convoque un @UUID[Compendium.dnd5e.actors24.Actor.mmEarthElemental]{élémentaire de la terre}, et la gemme perd sa magie. L'élémentaire apparaît en un espace inoccupé aussi près que possible de la gemme brisée, comprend les mêmes langues que vous, obéit à vos ordres et joue son tour juste après vous à votre rang d'initiative. Il disparaît au bout de 1 heure, s'il meurt, ou si vous le révoquez par une action Bonus.</p>",
+                    "activities": {
+                        "Utilize": {
+                            "name": "Utilisation",
+                            "target": "espace inoccupé aussi près que possible de la gemme brisée"
+                        }
+                    }
+                },
+                "Spell Scroll: Comprehend Languages": {
+                    "name": "Parchemin de sort : Compréhension des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplComprehend inline]</p>"
+                },
+                "Spell Scroll: Disguise Self": {
+                    "name": "Parchemin de sort : Déguisement",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe inline]</p>"
+                },
+                "Elemental Affinity": {
+                    "name": "Affinité élémentaire",
+                    "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la Résistance à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p><section class=\"secret\" id=\"secret-3vHUORtVzoP6V4xF\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir le type de dégâts au fur et à mesure que vous montez en niveau. Les dégâts supplémentaires ne sont pas automatiquement ajoutés, mais cette aptitude comprend une activité pour chaque type de dégâts.</p><p>Vous pouvez accélérer l'utilisation de cette aptitude en plaçant le type de dégâts que vous avez choisi en haut de la liste et il sera utilisé automatiquement lors de l'utilisation de cette aptitude.</p></section>",
+                    "activities": {
+                        "Acid": {
+                            "name": "Acide",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Cold": {
+                            "name": "Froid",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Fire": {
+                            "name": "Feu",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Lightning": {
+                            "name": "Foudre",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        },
+                        "Poison": {
+                            "name": "Poison",
+                            "condition": "Lorsque vous lancez un sort qui inflige des dégâts de votre affinité élémentaire"
+                        }
+                    }
+                },
+                "Sorcery Incarnate": {
+                    "name": "Sorcellerie incarnée",
+                    "description": "<p>S'il ne vous reste aucune utilisation de Sorcellerie innée, vous pouvez y recourir en dépensant 2 points de Sorcellerie et l'activez par une action Bonus.</p><p>En outre et tant que votre aptitude Sorcellerie innée est active, vous pouvez utiliser jusqu'à deux de vos options de Métamagie pour chaque sort que vous lancez.</p><section id=\"secret-l8yUYHYrWEjQI4Q0\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude permet de consommer 2 points de Sorcellerie et de restaurer une utilisation de Sorcellerie innée.</p></section>",
+                    "activities": {
+                        "Restore Innate Sorcery": {
+                            "name": "Restaurer Sorcellerie innée"
+                        }
+                    }
+                },
+                "Arcane Eye": {
+                    "name": "Œil du mage",
+                    "description": "<p>Vous créez un œil invulnérable et Invisible à portée, qui flotte dans les airs pour toute la durée. Vous recevez mentalement des informations visuelles transmises par l'œil, qui voit dans toutes les directions. Il dispose en outre de la Vision dans le noir sur 9 m.</p><p>Par une action Bonus, vous pouvez déplacer l'œil d'un maximum de 9 m dans la direction de votre choix. Un obstacle solide bloque les déplacements de l'œil, mais celui-ci peut se glisser dans un interstice d'une largeur minimale de 2,5 cm.</p>",
+                    "materials": "une touffe de poils de chauve-souris"
+                },
+                "Legend Lore": {
+                    "name": "Mythes et légendes",
+                    "description": "<p>Nommez ou décrivez un élément notoire : personne, lieu ou objet. Le sort vous fait prendre brièvement conscience d'un fait important (décrit par le MD) concernant l'élément mentionné.</p><p>Cette bribe de savoir peut consister en des détails essentiels, des révélations cocasses, voire quelque secret toujours resté méconnu. Plus vous en savez déjà sur l'élément, plus précises et détaillées seront les informations transmises.</p><p>Les détails révélés sont justes, mais sont parfois formulés de manière imagée ou par le biais de vers (à l'appréciation du MD).</p><p>Si l'élément retenu n'est pas véritablement notoire, vous n'entendez que quelques notes tristes de trombone et le sort prend fin.</p>",
+                    "materials": "de l'encens d'une valeur minimale de 250 po, que le sort détruit, et quatre lamelles d'ivoire d'une valeur minimale de 50 po chacune"
+                },
+                "Summon Dragon": {
+                    "name": "Convocation de dragon",
+                    "description": "<p>Vous invoquez un esprit draconique. Il se manifeste en un espace inoccupé que vous voyez à portée en reprenant le profil de l'<strong>@UUID[Compendium.dnd5e.actors24.Actor.phbmobDraconicSp]{esprit draconique}</strong>. La créature disparaît quand le sort prend fin, mais également si elle tombe à 0 point de vie.</p><p>La créature constitue un allié pour vous et vos alliés. Au combat, la créature partage votre rang d'Initiative, mais elle joue son tour juste après vous. Elle obéit à vos instructions verbales (pas d'action requise de votre part). Sans ordre de votre part, elle entreprend l'action Esquive et consacre son déplacement à se mettre à l'abri du danger.</p><p><strong>Emplacement de niveau supérieur.</strong> Le niveau de l'emplacement s'applique chaque fois que le profil de jeu y fait référence.</p><p>@Embed[Compendium.dnd5e.actors24.Actor.phbmobDraconicSp caption=false statblock]</p>",
+                    "materials": "un objet gravé d'une représentation de dragon, d'une valeur minimale de 500 po"
+                },
+                "Careful Spell": {
+                    "name": "Sort prévenant",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort qui contraint d'autres créatures à effectuer un jet de sauvegarde, vous pouvez protéger certaines de ces créatures des pleins effets du sort. À cette fin, dépensez 1 point de Sorcellerie et désignez des créatures dont le nombre n'excède pas votre modificateur de Charisme (minimum d'une créature). Les créatures choisies réussissent automatiquement leur jet de sauvegarde contre le sort et ne subissent aucun dégât si elles étaient censées les réduire de moitié en cas de réussite.</p><p><strong>Créatures que vous pouvez protéger :</strong> [[lookup @abilities.cha.mod]]</p>",
+                    "activities": {
+                        "Careful Spell": {
+                            "name": "Sort prévenant",
+                            "condition": "Lorsque vous lancez un sort qui contraint d'autres créatures à effectuer un jet de sauvegarde"
+                        }
+                    }
+                },
+                "Chain Lightning": {
+                    "name": "Chaîne d'éclairs",
+                    "description": "<p>Vous projetez un trait de foudre vers une cible que vous voyez à portée. Trois éclairs jaillissent alors de cette cible vers un maximum de trois autres cibles, que vous choisissez, distantes de 9 m ou moins de la première. Toutes ces cibles peuvent être des créatures ou des objets, et ne peuvent être ciblées par plus d'un éclair.</p><p>Chaque cible effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Un éclair supplémentaire jaillit de la première cible vers une autre par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
+                    "materials": "trois broches en argent",
+                    "specialTarget": "les cibles secondaires distantes de 9 m ou moins de la première"
+                },
+                "Arcane Hand": {
+                    "name": "Main arcanique",
+                    "description": "<p>Vous créez une main de taille G faite d'énergies magiques chatoyantes. Elle apparaît dans un espace inoccupé que vous voyez à portée. La main persiste pendant toute la durée et se déplace sous votre contrôle, en reproduisant les mouvements de votre propre main.</p><p>La main est un objet doté d'une CA de 20 et de points de vie égaux à votre maximum de points de vie. S'il tombe à 0 point de vie, le sort prend fin. La main n'occupe pas son espace.</p><p>À l'incantation du sort, ainsi que par une action Bonus à vos tours suivants, vous pouvez déplacer la main d'un maximum de 18 m puis lui faire produire l'un des effets suivants :</p><p><strong>Main agrippeuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiGraspingHa inline classes=\"no-secrets\"]</p><p><strong>Main impérieuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiForcefulHa inline]</p><p><strong>Main interposée</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiInterposin inline]</p><p><strong>Poing serré</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiClenchedFi inline]</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts de l'option poing serré augmentent de 2d8 et ceux de main agrippeuse de 2d6 par niveau d'emplacement au-delà du 5<sup>e</sup>.</p>",
+                    "materials": "une coquille d'œuf et un gant"
+                },
+                "Twinned Spell": {
+                    "name": "Sort jumeau",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort, comme <em>charme-personne</em>, qui peut être lancé avec un emplacement de sort de plus haut niveau pour cibler une créature supplémentaire, vous pouvez dépenser 1 point de Sorcellerie pour augmenter de 1 le niveau effectif de ce sort.</p>",
+                    "activities": {
+                        "Twinned Spell": {
+                            "name": "Sort jumeau",
+                            "condition": "Lorsque vous lancez un sort qui peut être lancé avec un emplacement de sort de plus haut niveau pour cibler une créature supplémentaire"
+                        }
+                    }
+                },
+                "Poison Spray": {
+                    "name": "Bouffée de poison",
+                    "description": "<p>Vous projetez une brume toxique vers une créature à portée. Effectuez une attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 1d12 dégâts de poison.</p><p><strong>Amélioration de sort mineur.</strong> Les dégâts augmentent de 1d12 lorsque vous atteignez les niveaux 5 (2d12), 11 (3d12) et 17 (4d12).</p>"
+                },
+                "Bracers of Defense": {
+                    "name": "Bracelets de défense",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Tant que vous portez ces bracelets et ne portez ni armure ni bouclier, vous recevez un bonus de +2 à la CA.</p>",
+                    "effects": {
+                        "Bonus AC (Unarmored)": {
+                            "name": "Bonus CA (sans armure)"
+                        }
+                    }
+                },
+                "Component: Ivory Strip": {
+                    "name": "Composant : Lamelle d'ivoire"
+                },
+                "Component: Dragon Engraving": {
+                    "name": "Composant : Gravure de dragon"
+                },
+                "Spell Scroll: Haste": {
+                    "name": "Parchemin de sort : Hâte",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplHaste00000 inline]</p>"
+                },
+                "Spell Scroll: Daylight": {
+                    "name": "Parchemin de sort : Lumière du jour",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDaylight00 inline]</p>"
+                },
+                "Spell Scroll: Knock": {
+                    "name": "Parchemin de sort : Déblocage",
+                    "description": "<p><em>&Reference[Spell Scroll] (2<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplKnock00000 inline]</p>"
+                },
+                "Wand of the War Mage, +3": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +3": {
+                            "name": "Baguette du mage de guerre +3",
+                            "changes": {
+                                "name": "{} du mage de guerre +3",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +3": {
+                            "name": "Mage de guerre +3"
+                        }
+                    }
+                },
+                "Dragon Wings": {
+                    "name": "Ailes draconiques",
+                    "description": "<p>Par une action Bonus, vous faites apparaître des ailes draconiques dans votre dos. Ces ailes persistent 1 heure ou jusqu'à ce que vous les révoquiez (pas d'action requise). Pour toute la durée, vous bénéficiez d'une Vitesse de vol de 18 m.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser 3 points de Sorcellerie (pas d'action requise) pour en récupérer l'usage.</p><section class=\"secret\" id=\"secret-sOSBeegnxa98QlIn\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Ailes draconiques</strong> comprend un effet actif qui vous accorde une Vitesse de vol de 18 m.</p><p>L'activité <strong>Restaurer l'utilisation</strong> peut être utilisée pour dépenser les points de Sorcellerie afin de restaurer une utilisation de l'activité <strong>Ailes draconiques</strong>.</p></section>",
+                    "activities": {
+                        "Dragon Wings": {
+                            "name": "Ailes draconiques"
+                        },
+                        "Restore Use": {
+                            "name": "Restaurer l'utilisation"
+                        }
+                    },
+                    "effects": {
+                        "Winged": {
+                            "name": "Ailé",
+                            "description": "<p>Ces ailes persistent 1 heure ou jusqu'à ce que vous les révoquiez (pas d'action requise). Pour toute la durée, vous bénéficiez d'une Vitesse de vol de 18 m.</p>"
+                        }
+                    }
+                },
+                "Extended Spell": {
+                    "name": "Sort étendu",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort dont la durée est supérieure ou égale à 1 minute, vous pouvez dépenser 1 point de Sorcellerie pour doubler sa durée, jusqu'à un maximum de 24 heures.</p><p>Si le sort affecté nécessite la Concentration, vous avez l'Avantage à tous les jets de sauvegarde que vous effectuez pour maintenir cette Concentration.</p>",
+                    "activities": {
+                        "Extended Spell": {
+                            "name": "Sort étendu",
+                            "condition": "Lorsque vous lancez un sort dont la durée est supérieure ou égale à 1 minute"
+                        }
+                    }
+                },
+                "Subtle Spell": {
+                    "name": "Sort subtil",
+                    "description": "<blockquote><p>Coût : 1 point de Sorcellerie</p></blockquote><p>Lorsque vous lancez un sort, vous pouvez dépenser 1 point de Sorcellerie pour le lancer sans ses composantes verbale, somatique ou matérielle, sauf en ce qui concerne les composantes matérielles que le sort consomme ou qui ont un coût exprimé dans le descriptif du sort.</p>",
+                    "activities": {
+                        "Subtle Spell": {
+                            "name": "Sort subtil",
+                            "condition": "Lorsque vous lancez un sort"
+                        }
+                    }
+                },
+                "Fire Storm": {
+                    "name": "Tempête de feu",
+                    "description": "<p>Une tempête de flammes éclate à portée. La zone de la tempête consiste en un maximum de 10 Cubes de 3 m, que vous disposez à votre guise. Chaque Cube doit être contigu à au moins un autre Cube. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité et subit 7d10 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p>",
+                    "activities": {
+                        "Create Storm": {
+                            "name": "Créer une tempête"
+                        }
+                    }
+                },
+                "Dominate Monster": {
+                    "name": "Domination de monstre",
+                    "description": "<p>Une créature que vous voyez à portée doit réussir un jet de sauvegarde de Sagesse sous peine de subir l'état &Reference[Charmed apply=false] pour toute la durée. La cible a l'Avantage au JS si vous ou vos alliés êtes en train de l'affronter. Chaque fois que la cible subit des dégâts, elle réitère le JS et met un terme au sort sur elle-même en cas de réussite.</p><p>Un lien télépathique persiste entre vous et la cible Charmée tant que vous êtes tous deux sur un même plan d'existence. À votre tour, vous pouvez profiter de ce lien pour donner des ordres à la cible (pas d'action requise), tels que « Attaque cette créature », « File là-bas » ou « Attrape cet objet ». La cible fait de son mieux pour vous obéir à son tour. Si la créature accomplit sa tâche et ne reçoit pas d'autre instruction de votre part, elle agit et se déplace à sa guise, en cherchant avant tout à se protéger.</p><p>Vous pouvez aussi lui faire jouer une Réaction, au prix toutefois de votre propre Réaction.</p><p><strong>Emplacement de niveau supérieur.</strong> Votre Concentration peut persister plus longtemps avec un emplacement du 9<sup>e</sup> niveau (jusqu'à 8 heures).</p>",
+                    "effects": {
+                        "Dominated": {
+                            "name": "Dominé",
+                            "description": "<p>Chaque fois que la cible subit des dégâts, elle réitère le JS de [[/save ability=wis]] et met un terme au sort sur elle-même en cas de réussite.</p>"
+                        }
+                    }
+                },
+                "Wish": {
+                    "name": "Souhait",
+                    "description": "<p><em>Souhait</em> est le sort le plus puissant que puisse lancer un mortel. De votre seule voix, vous pouvez influer sur la réalité même.</p><p>L'utilisation standard du sort revient à reproduire le sort de votre choix du 8<sup>e</sup> niveau ou inférieur. Dans cette version, vous n'avez pas besoin de remplir les conditions habituelles du sort, y compris ses composantes coûteuses. Le sort prend tout simplement effet.</p><p>Une autre approche vous permet de produire l'un des effets suivants, au choix :</p><p><strong>Création d'objet.</strong> Vous créez un objet non magique d'une valeur maximale de 25 000 po. Aucune des dimensions de l'objet ne peut dépasser 90 m et il apparaît au sol, en un espace inoccupé que vous voyez.</p><p><strong>Santé souveraine.</strong> Vous permettez à un maximum de vingt créatures que vous voyez de récupérer tous leurs points de vie et mettre un terme à tous les effets qui les touchent parmi ceux décrits pour le sort <em>restauration suprême</em>.</p><p><strong>Résistance.</strong> Vous octroyez la Résistance au type de dégâts de votre choix à un maximum de dix créatures que vous voyez. Cette Résistance est permanente.</p><p><strong>Immunité magique.</strong> Vous octroyez l'Immunité contre un sort (ou un effet magique) unique pendant 8 heures, à un maximum de dix créatures que vous voyez.</p><p><strong>Apprentissage instantané.</strong> Vous remplacez l'un de vos dons par un autre don pour lequel vous remplissez les prérequis. Vous perdez tous les bénéfices de l'ancien don au profit de tous ceux du nouveau. Vous ne pouvez pas remplacer un don qui figure parmi les prérequis d'un autre don ou d'une aptitude.</p><p><strong>Caprice des dés.</strong> Vous modifiez un événement récent en faisant rejouer un jet de dés intervenu au cours du dernier round (ce qui comprend votre dernier tour). La réalité s'adapte alors à ce nouveau résultat. <em>Souhait</em> peut ainsi annuler le jet de sauvegarde raté d'un allié ou le Coup critique d'un ennemi. Vous pouvez décider que le jet se refasse avec l'Avantage ou le Désavantage, et vous décidez en connaissance de cause lequel s'applique entre le jet d'origine et le nouveau.</p><p><strong>Réalité remodelée.</strong> Vous pouvez souhaiter quelque chose qui n'entre pas dans le cadre de ces effets. Si vous avez une telle idée, faites-en part à votre MD, le plus précisément possible. Le MD est alors seul juge de ce qui peut se passer : plus le souhait est ambitieux, plus il risque de ne pas tourner comme vous l'attendez. Le sort pourrait tout simplement échouer, ou ne produire que partiellement l'effet désiré, ou vous pourriez connaître un imprévu fâcheux en raison d'une formulation hasardeuse. Si vous faites par exemple le souhait que votre grand ennemi meure, vous pourriez vous retrouver projeté dans l'avenir, à une époque où cet adversaire n'est effectivement plus en vie, mais votre héros quitterait du même coup la partie. De même, souhaiter mettre la main sur un objet magique légendaire ou un Artefact pourrait vous transporter aussitôt face à l'actuel propriétaire. Si votre souhait est exaucé et que ses effets pèsent sur toute une communauté, une région ou un monde, vous risquez fort d'attirer de puissants adversaires. Si votre souhait est susceptible d'affecter un dieu, ses serviteurs divins pourraient bien intervenir dans l'instant pour empêcher ce souhait ou pour vous inciter à le formuler de manière très spécifique. Si votre souhait menace le multivers même ou la Cité de Sigil, ou qu'il risque d'affecter la Dame des Douleurs d'une quelconque manière, une image se forme dans votre esprit : la Dame secoue la tête, et votre souhait n'est pas exaucé.</p><p>Dès lors qu'il ne s'agit pas seulement de reproduire les effets d'un autre sort, lancer <em>souhait</em> est une véritable épreuve. Après une telle gageure, chaque fois que vous jetez un sort sans avoir terminé un Repos long, vous subissez 1d10 dégâts nécrotiques par niveau du sort. Ces dégâts ne peuvent être réduits ni évités d'aucune manière. De plus, votre valeur de Force passe à 3 pendant 2d4 jours. Chaque jour que vous passez alors à vous reposer en vous contentant de menues tâches déduit 2 jours de cette période de convalescence. Enfin, cette épreuve entraîne un risque de [[/r 1d3cs1]]{33 pour cent} que vous ne soyez plus jamais capable de relancer <em>souhait</em>.</p>",
+                    "activities": {
+                        "utility": {
+                            "roll": "Durée de la perte de Force",
+                            "chatFlavor": "<em>Souhait</em> perdu sur 1 : [[/r 1d3cs1]]"
+                        }
+                    },
+                    "effects": {
+                        "Wish Stress": {
+                            "name": "Épreuve de souhait",
+                            "description": "<p>Chaque fois que vous jetez un sort sans avoir terminé un Repos long, vous subissez [[/damage 1d10 type=necrotic]]{1d10} dégâts nécrotiques par niveau du sort. Ces dégâts ne peuvent être réduits ni évités d'aucune manière. De plus, votre valeur de Force passe à 3 pendant [[/r 2d4]] jours.</p>"
+                        }
+                    }
+                },
+                "Cube of Force": {
+                    "name": "Cube de force",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Ce cube mesure 2 à 3 centimètres d'arête. Chaque face s'orne d'un symbole distinct. Il vous suffit d'appuyer sur une face et de dépenser le nombre de charges requis pour lancer le sort associé à cette face (DD de sauvegarde 17), comme indique sur la table « Faces du cube de force ».</p><p>Le cube dispose de 10 charges et récupère quotidiennement 1d6 charges dépensées, à l'aube.</p><table><caption>Faces du cube de force</caption><thead><tr><td>Sort</td><td>Coût en charges</td></tr></thead><tbody><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{armure du mage}</em></td><td>1</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{bouclier}</em></td><td>1</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{mur de force}</em></td><td>5</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplLeomundsTi]{petite hutte}</em></td><td>3</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbPrivateSanctu]{sanctuaire privé}</em></td><td>4</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplOtilukesRe]{sphère résiliente}</em></td><td>4</td></tr></tbody></table>"
+                },
+                "Ring of Resistance (citrine)": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Lightning)": {
+                            "name": "Anneau de résistance (Foudre)",
+                            "changes": {
+                                "name": "Anneau de résistance (Citrine)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Lightning Resistance": {
+                            "name": "Résistance à la foudre"
+                        }
+                    }
+                },
+                "Spell Scroll: Teleportation Circle": {
+                    "name": "Parchemin de sort : Cercle de téléportation",
+                    "description": "<p><em>&Reference[Spell Scroll] (5<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplTeleportat inline]</p>"
+                },
+                "Spell Scroll: Tongues": {
+                    "name": "Parchemin de sort : Don des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplTongues000 inline]</p>"
+                },
+                "Spell Scroll: Water Breathing": {
+                    "name": "Parchemin de sort : Respiration aquatique",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplWaterBreat inline]</p>"
                 }
             },
             "name": "Morthos",
@@ -27062,7 +27891,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
                 },
                 "Explorer's Pack": {
                     "name": "Paquetage d'explorateur",
@@ -27175,6 +28007,15 @@
                         "Winged": {
                             "name": "Ailé",
                             "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Bracers of Defense": {
+                    "name": "Bracelets de défense",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Tant que vous portez ces bracelets et ne portez ni armure ni bouclier, vous recevez un bonus de +2 à la CA.</p>",
+                    "effects": {
+                        "Bonus AC (Unarmored)": {
+                            "name": "Bonus CA (sans armure)"
                         }
                     }
                 }
@@ -27414,7 +28255,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
                 },
                 "Bag of Holding": {
                     "name": "Sac sans fond",
@@ -27560,6 +28404,15 @@
                         "Winged": {
                             "name": "Ailé",
                             "description": "<p>Les ailes persistent pendant 1 heure, sauf si vous y mettez fin prématurément au prix de l'action Magie. Ces ailes vous octroient une Vitesse de vol de 9 m.</p>"
+                        }
+                    }
+                },
+                "Bracers of Defense": {
+                    "name": "Bracelets de défense",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Tant que vous portez ces bracelets et ne portez ni armure ni bouclier, vous recevez un bonus de +2 à la CA.</p>",
+                    "effects": {
+                        "Bonus AC (Unarmored)": {
+                            "name": "Bonus CA (sans armure)"
                         }
                     }
                 }
@@ -28479,6 +29332,21 @@
                 "Potion of Growth": {
                     "name": "Potion d'agrandissement",
                     "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
+                },
+                "Jump": {
+                    "name": "Saut",
+                    "description": "<p>Vous touchez une créature consentante. Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup></p>",
+                    "materials": "une patte arrière de sauterelle",
+                    "effects": {
+                        "Jump": {
+                            "name": "Saut",
+                            "description": "<p>Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p>"
+                        }
+                    }
+                },
+                "Spell Scroll: Daylight": {
+                    "name": "Parchemin de sort : Lumière du jour",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDaylight00 inline]</p>"
                 }
             }
         },
@@ -28969,6 +29837,21 @@
                 "Potion of Growth": {
                     "name": "Potion d'agrandissement",
                     "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
+                },
+                "Jump": {
+                    "name": "Saut",
+                    "description": "<p>Vous touchez une créature consentante. Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup></p>",
+                    "materials": "une patte arrière de sauterelle",
+                    "effects": {
+                        "Jump": {
+                            "name": "Saut",
+                            "description": "<p>Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p>"
+                        }
+                    }
+                },
+                "Spell Scroll: Daylight": {
+                    "name": "Parchemin de sort : Lumière du jour",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDaylight00 inline]</p>"
                 }
             }
         },
@@ -29739,7 +30622,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
                 },
                 "Bag of Holding": {
                     "name": "Sac sans fond",
@@ -30352,7 +31238,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
                 },
                 "Freedom of Movement": {
                     "effects": {
@@ -30372,7 +31261,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Graisse",
+                    "description": "<p>Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un &Reference[difficultterrain] pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[prone]. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.</p>",
+                    "materials": "un peu de couenne de porc ou de beurre"
                 },
                 "Bag of Holding": {
                     "name": "Sac sans fond",
@@ -30652,7 +31544,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
                 },
                 "Freedom of Movement": {
                     "effects": {
@@ -30672,7 +31567,10 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Graisse",
+                    "description": "<p>Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un &Reference[difficultterrain] pour toute la durée.</p><p>À l'apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[prone]. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.</p>",
+                    "materials": "un peu de couenne de porc ou de beurre"
                 },
                 "Mage Armor": {
                     "effects": {
@@ -30703,14 +31601,25 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Sanctuaire privé",
+                    "description": "<p>Vous sécurisez magiquement une zone à portée. La zone est un Cube dont l'arête peut aller de 1,50 m à 30 m. Le sort persiste pour toute la durée.</p><p>À l'incantation du sort, vous décidez quel genre de sécurité octroie le sort, en choisissant autant de propriétés souhaitées parmi les suivantes :</p><ul><li>Les sons ne franchissent pas le périmètre de la zone protégée.</li><li>Le périmètre de la zone protégée apparaît sombre et brumeux, ce qui empêche de voir au travers (y compris avec la &Reference[Darkvision]).</li><li>Les capteurs créés par les sorts de Divination ne peuvent ni apparaître à l'intérieur de la zone protégée ni franchir son périmètre.</li><li>Les créatures de la zone ne peuvent pas être ciblées par les sorts de Divination.</li><li>Rien ne peut se téléporter dans la zone protégée ou hors d'elle.</li><li>Le voyage planaire est bloqué au sein de la zone protégée.</li></ul><p>Lancer ce sort quotidiennement au même endroit pendant 365 jours fait persister le sort jusqu'à dissipation.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez augmenter l'arête du Cube de 30 m par niveau d'emplacement au-delà du 4<sup>e</sup>.</p>",
+                    "materials": "une feuille de plomb"
                 },
                 "Resilient Sphere": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Enclosed in Sphere": {
+                            "name": "Confinée dans la sphère",
+                            "description": "<p>Une créature confinée peut consacrer son action à pousser sur les parois de la sphère et la faire rouler à concurrence de la moitié de sa propre Vitesse.</p>"
                         }
-                    }
+                    },
+                    "name": "Sphère résiliente",
+                    "description": "<p>Une sphère chatoyante séquestre une créature ou un objet de taille G ou inférieure à portée. Une créature non consentante doit réussir un jet de sauvegarde de Dextérité pour ne pas être confinée pour toute la durée.</p><p>Rien, ni les objets physiques, ni l'énergie, ni les autres effets de sort, ne peut franchir cette barrière dans un sens comme dans l'autre, mais la créature séquestrée peut respirer normalement. La sphère est immunisée contre tous les dégâts, et la créature ou l'objet enfermé ne peut subir de dégâts des attaques et effets émanant de l'autre côté, pas plus qu'une créature séquestrée ne peut infliger de dégâts vers l'extérieur.</p><p>La sphère, qui ne pèse rien, est juste assez grande pour contenir la créature ou l'objet. Une créature confinée peut consacrer son action à pousser sur les parois de la sphère et la faire rouler à concurrence de la moitié de sa propre Vitesse. De même, d'autres créatures peuvent ramasser le globe et le déplacer.</p><p>Le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{désintégration}</em>, s'il cible le globe, le détruit sans risque pour ce qui se trouve à l'intérieur.</p>",
+                    "materials": "une sphère de verre",
+                    "specialTarget": "Taille G ou inférieure"
                 },
                 "Wall of Force": {
                     "effects": {
@@ -30743,8 +31652,14 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Comprehension": {
+                            "name": "Compréhension"
                         }
-                    }
+                    },
+                    "name": "Compréhension des langues",
+                    "description": "<p>Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.</p>",
+                    "materials": "une pincée de suie et de sel"
                 },
                 "Create or Destroy Water": {
                     "effects": {
@@ -30760,8 +31675,14 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Disguised": {
+                            "name": "Déguisé",
+                            "description": "<p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv]] assorti de votre DD de sauvegarde des sorts.</p>"
                         }
-                    }
+                    },
+                    "name": "Déguisement",
+                    "description": "<p>Vous vous donnez un aspect différent jusqu'à la fin du sort ; vous pouvez ainsi altérer l'apparence de vos vêtements, de votre armure, de vos armes et autres biens portés. Vous pouvez paraître jusqu'à 30 cm plus grand ou plus petit, sembler plus léger ou plus lourd. Vous devez adopter une forme présentant la même répartition de membres que vous. Pour le reste, les détails de l'illusion vous appartiennent.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air.</p><p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts.</p>"
                 },
                 "Find Familiar": {
                     "effects": {
@@ -30821,8 +31742,15 @@
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Jump": {
+                            "name": "Saut",
+                            "description": "<p>Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p>"
                         }
-                    }
+                    },
+                    "name": "Saut",
+                    "description": "<p>Vous touchez une créature consentante. Une fois à chacun de ses tours jusqu'à la fin du sort, la créature peut sauter d'un maximum de 9 m en dépensant 3 m de déplacement.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 1<sup>er</sup></p>",
+                    "materials": "une patte arrière de sauterelle"
                 },
                 "Longstrider": {
                     "effects": {
@@ -30932,14 +31860,23 @@
                         "Spell Changes": {
                             "name": "Changements du sort"
                         }
-                    }
+                    },
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
                 },
                 "Fly": {
                     "effects": {
                         "Spell Changes": {
                             "name": "Changements du sort"
+                        },
+                        "Flight": {
+                            "name": "Vol"
                         }
-                    }
+                    },
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume"
                 },
                 "Gaseous Form": {
                     "effects": {
@@ -31063,6 +32000,18 @@
                 "Crowbar": {
                     "name": "Pied-de-biche",
                     "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Spell Scroll: Comprehend Languages": {
+                    "name": "Parchemin de sort : Compréhension des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplComprehend inline]</p>"
+                },
+                "Spell Scroll: Disguise Self": {
+                    "name": "Parchemin de sort : Déguisement",
+                    "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe inline]</p>"
+                },
+                "Cube of Force": {
+                    "name": "Cube de force",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Ce cube mesure 2 à 3 centimètres d'arête. Chaque face s'orne d'un symbole distinct. Il vous suffit d'appuyer sur une face et de dépenser le nombre de charges requis pour lancer le sort associé à cette face (DD de sauvegarde 17), comme indique sur la table « Faces du cube de force ».</p><p>Le cube dispose de 10 charges et récupère quotidiennement 1d6 charges dépensées, à l'aube.</p><table><caption>Faces du cube de force</caption><thead><tr><td>Sort</td><td>Coût en charges</td></tr></thead><tbody><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{armure du mage}</em></td><td>1</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplShield0000]{bouclier}</em></td><td>1</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{mur de force}</em></td><td>5</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplLeomundsTi]{petite hutte}</em></td><td>3</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbPrivateSanctu]{sanctuaire privé}</em></td><td>4</td></tr><tr><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplOtilukesRe]{sphère résiliente}</em></td><td>4</td></tr></tbody></table>"
                 }
             }
         },
@@ -34710,6 +35659,25 @@
                             "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
                         }
                     }
+                },
+                "Chromatic Orb": {
+                    "name": "Orbe chromatique",
+                    "description": "<p>Vous projetez un orbe d'énergie sur une cible à portée. Choisissez une énergie entre acide, feu, foudre, froid, poison et tonnerre pour composer l'orbe, puis effectuez un jet d'attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 3d8 dégâts du type retenu.</p><p>Si vous obtenez le même nombre sur au moins deux des d8, l'orbe rebondit vers une autre cible de votre choix dans un rayon de 9 m de la cible. Effectuez un jet d'attaque contre la nouvelle cible et un nouveau jet de dégâts. L'orbe ne rebondit pas une deuxième fois, sauf si vous avez lancé le sort par un emplacement du 2<sup>e</sup> niveau ou supérieur. [[@item.level]]{Nombre de bonds }</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>. L'orbe est susceptible de rebondir autant de fois que le niveau de l'emplacement dépensé, une même créature ne pouvant être ciblée qu'une fois par incantation du sort.</p>",
+                    "materials": "un diamant d'une valeur minimale de 50 po"
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Web": {
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
                 }
             }
         },
@@ -35111,6 +36079,70 @@
                         "Mage Armor": {
                             "name": "Armure du mage",
                             "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
+                        }
+                    }
+                },
+                "Chromatic Orb": {
+                    "name": "Orbe chromatique",
+                    "description": "<p>Vous projetez un orbe d'énergie sur une cible à portée. Choisissez une énergie entre acide, feu, foudre, froid, poison et tonnerre pour composer l'orbe, puis effectuez un jet d'attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 3d8 dégâts du type retenu.</p><p>Si vous obtenez le même nombre sur au moins deux des d8, l'orbe rebondit vers une autre cible de votre choix dans un rayon de 9 m de la cible. Effectuez un jet d'attaque contre la nouvelle cible et un nouveau jet de dégâts. L'orbe ne rebondit pas une deuxième fois, sauf si vous avez lancé le sort par un emplacement du 2<sup>e</sup> niveau ou supérieur. [[@item.level]]{Nombre de bonds }</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>. L'orbe est susceptible de rebondir autant de fois que le niveau de l'emplacement dépensé, une même créature ne pouvant être ciblée qu'une fois par incantation du sort.</p>",
+                    "materials": "un diamant d'une valeur minimale de 50 po"
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Web": {
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
+                },
+                "Chain Lightning": {
+                    "name": "Chaîne d'éclairs",
+                    "description": "<p>Vous projetez un trait de foudre vers une cible que vous voyez à portée. Trois éclairs jaillissent alors de cette cible vers un maximum de trois autres cibles, que vous choisissez, distantes de 9 m ou moins de la première. Toutes ces cibles peuvent être des créatures ou des objets, et ne peuvent être ciblées par plus d'un éclair.</p><p>Chaque cible effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Un éclair supplémentaire jaillit de la première cible vers une autre par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
+                    "materials": "trois broches en argent",
+                    "specialTarget": "les cibles secondaires distantes de 9 m ou moins de la première"
+                },
+                "Arcane Hand": {
+                    "name": "Main arcanique",
+                    "description": "<p>Vous créez une main de taille G faite d'énergies magiques chatoyantes. Elle apparaît dans un espace inoccupé que vous voyez à portée. La main persiste pendant toute la durée et se déplace sous votre contrôle, en reproduisant les mouvements de votre propre main.</p><p>La main est un objet doté d'une CA de 20 et de points de vie égaux à votre maximum de points de vie. S'il tombe à 0 point de vie, le sort prend fin. La main n'occupe pas son espace.</p><p>À l'incantation du sort, ainsi que par une action Bonus à vos tours suivants, vous pouvez déplacer la main d'un maximum de 18 m puis lui faire produire l'un des effets suivants :</p><p><strong>Main agrippeuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiGraspingHa inline classes=\"no-secrets\"]</p><p><strong>Main impérieuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiForcefulHa inline]</p><p><strong>Main interposée</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiInterposin inline]</p><p><strong>Poing serré</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiClenchedFi inline]</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts de l'option poing serré augmentent de 2d8 et ceux de main agrippeuse de 2d6 par niveau d'emplacement au-delà du 5<sup>e</sup>.</p>",
+                    "materials": "une coquille d'œuf et un gant"
+                },
+                "Bracers of Defense": {
+                    "name": "Bracelets de défense",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Tant que vous portez ces bracelets et ne portez ni armure ni bouclier, vous recevez un bonus de +2 à la CA.</p>",
+                    "effects": {
+                        "Bonus AC (Unarmored)": {
+                            "name": "Bonus CA (sans armure)"
+                        }
+                    }
+                },
+                "Teleportation Circle": {
+                    "name": "Cercle de téléportation",
+                    "description": "<p>À l'incantation du sort, vous tracez un cercle de 1,50 m de diamètre au sol, composé de symboles qui relient votre emplacement à un cercle de téléportation permanent de votre choix dont vous connaissez la séquence de runes et situé sur le même plan d'existence que vous. Un portail chatoyant s'ouvre au sein du cercle ainsi tracé et reste ouvert jusqu'à la fin de votre tour suivant. Toute créature qui pénètre dans le portail apparaît aussitôt dans un rayon de 1,50 m du cercle de destination ou, si cet espace n'est pas libre, dans l'espace inoccupé le plus proche.</p><p>De nombreux temples et guildes importants disposent d'un cercle de téléportation permanent dans leurs locaux. Chaque cercle comprend toujours sa propre séquence de runes, une suite de symboles à l'agencement unique.</p><p>La première fois que vous acquérez la faculté de lancer ce sort, vous apprenez la séquence de runes de deux destinations du Plan Matériel, déterminées par le MD. Vous y ajouterez éventuellement d'autres séquences au fil de vos aventures. Graver une nouvelle séquence de runes dans votre mémoire nécessite de l'étudier pendant 1 minute.</p><p>Vous pouvez créer un cercle de téléportation permanent en lançant quotidiennement ce sort au même endroit pendant 365 jours.</p>",
+                    "materials": "encres rares d'une valeur minimale de 50 po, que le sort détruit"
+                },
+                "Water Breathing": {
+                    "name": "Respiration aquatique",
+                    "description": "<p>Ce sort octroie la faculté de respirer sous l'eau à un maximum de dix créatures consentantes que vous choisissez à portée, jusqu'à la fin du sort. Les créatures affectées conservent leurs autres modes respiratoires.</p>",
+                    "materials": "un court roseau",
+                    "effects": {
+                        "Water Breathing": {
+                            "name": "Respiration aquatique"
                         }
                     }
                 }
@@ -35650,6 +36682,86 @@
                             "description": "<p>La CA de base de la cible est de 13 plus son modificateur de Dextérité.</p>"
                         }
                     }
+                },
+                "Chromatic Orb": {
+                    "name": "Orbe chromatique",
+                    "description": "<p>Vous projetez un orbe d'énergie sur une cible à portée. Choisissez une énergie entre acide, feu, foudre, froid, poison et tonnerre pour composer l'orbe, puis effectuez un jet d'attaque de sort à distance contre la cible. Si l'attaque touche, la cible subit 3d8 dégâts du type retenu.</p><p>Si vous obtenez le même nombre sur au moins deux des d8, l'orbe rebondit vers une autre cible de votre choix dans un rayon de 9 m de la cible. Effectuez un jet d'attaque contre la nouvelle cible et un nouveau jet de dégâts. L'orbe ne rebondit pas une deuxième fois, sauf si vous avez lancé le sort par un emplacement du 2<sup>e</sup> niveau ou supérieur. [[@item.level]]{Nombre de bonds }</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 1<sup>er</sup>. L'orbe est susceptible de rebondir autant de fois que le niveau de l'emplacement dépensé, une même créature ne pouvant être ciblée qu'une fois par incantation du sort.</p>",
+                    "materials": "un diamant d'une valeur minimale de 50 po"
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Web": {
+                    "name": "Toile d'araignée",
+                    "description": "<p>Vous invoquez une masse gluante de fils d'araignée en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un Cube de 6 m depuis ce point d'origine. Elle constitue un &Reference[difficultterrain] et la &Reference[lightlyobscured]{Visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Quand une créature pénètre pour la première fois d'un tour dans la toile ou qu'elle y commence son tour, elle doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Restrained] tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi Entravée peut consacrer son action à effectuer un test de [[/check ability=str skill=ath dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus Entravée.</p><p>La toile est inflammable. Tout Cube de toile de 1,50 m exposé aux flammes brûle en 1 round et inflige [[/damage 2d4 type=fire]]{2d4} dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
+                    "materials": "quelques filandres de toile d'araignée"
+                },
+                "Chain Lightning": {
+                    "name": "Chaîne d'éclairs",
+                    "description": "<p>Vous projetez un trait de foudre vers une cible que vous voyez à portée. Trois éclairs jaillissent alors de cette cible vers un maximum de trois autres cibles, que vous choisissez, distantes de 9 m ou moins de la première. Toutes ces cibles peuvent être des créatures ou des objets, et ne peuvent être ciblées par plus d'un éclair.</p><p>Chaque cible effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Un éclair supplémentaire jaillit de la première cible vers une autre par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
+                    "materials": "trois broches en argent",
+                    "specialTarget": "les cibles secondaires distantes de 9 m ou moins de la première"
+                },
+                "Arcane Hand": {
+                    "name": "Main arcanique",
+                    "description": "<p>Vous créez une main de taille G faite d'énergies magiques chatoyantes. Elle apparaît dans un espace inoccupé que vous voyez à portée. La main persiste pendant toute la durée et se déplace sous votre contrôle, en reproduisant les mouvements de votre propre main.</p><p>La main est un objet doté d'une CA de 20 et de points de vie égaux à votre maximum de points de vie. S'il tombe à 0 point de vie, le sort prend fin. La main n'occupe pas son espace.</p><p>À l'incantation du sort, ainsi que par une action Bonus à vos tours suivants, vous pouvez déplacer la main d'un maximum de 18 m puis lui faire produire l'un des effets suivants :</p><p><strong>Main agrippeuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiGraspingHa inline classes=\"no-secrets\"]</p><p><strong>Main impérieuse</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiForcefulHa inline]</p><p><strong>Main interposée</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiInterposin inline]</p><p><strong>Poing serré</strong> @Embed[Compendium.dnd5e.actors24.Actor.phbsplBigbysHand.Item.phbaoiClenchedFi inline]</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts de l'option poing serré augmentent de 2d8 et ceux de main agrippeuse de 2d6 par niveau d'emplacement au-delà du 5<sup>e</sup>.</p>",
+                    "materials": "une coquille d'œuf et un gant"
+                },
+                "Bracers of Defense": {
+                    "name": "Bracelets de défense",
+                    "description": "<p><em>Objet merveilleux, rare (Harmonisation requise)</em></p><p>Tant que vous portez ces bracelets et ne portez ni armure ni bouclier, vous recevez un bonus de +2 à la CA.</p>",
+                    "effects": {
+                        "Bonus AC (Unarmored)": {
+                            "name": "Bonus CA (sans armure)"
+                        }
+                    }
+                },
+                "Wish": {
+                    "name": "Souhait",
+                    "description": "<p><em>Souhait</em> est le sort le plus puissant que puisse lancer un mortel. De votre seule voix, vous pouvez influer sur la réalité même.</p><p>L'utilisation standard du sort revient à reproduire le sort de votre choix du 8<sup>e</sup> niveau ou inférieur. Dans cette version, vous n'avez pas besoin de remplir les conditions habituelles du sort, y compris ses composantes coûteuses. Le sort prend tout simplement effet.</p><p>Une autre approche vous permet de produire l'un des effets suivants, au choix :</p><p><strong>Création d'objet.</strong> Vous créez un objet non magique d'une valeur maximale de 25 000 po. Aucune des dimensions de l'objet ne peut dépasser 90 m et il apparaît au sol, en un espace inoccupé que vous voyez.</p><p><strong>Santé souveraine.</strong> Vous permettez à un maximum de vingt créatures que vous voyez de récupérer tous leurs points de vie et mettre un terme à tous les effets qui les touchent parmi ceux décrits pour le sort <em>restauration suprême</em>.</p><p><strong>Résistance.</strong> Vous octroyez la Résistance au type de dégâts de votre choix à un maximum de dix créatures que vous voyez. Cette Résistance est permanente.</p><p><strong>Immunité magique.</strong> Vous octroyez l'Immunité contre un sort (ou un effet magique) unique pendant 8 heures, à un maximum de dix créatures que vous voyez.</p><p><strong>Apprentissage instantané.</strong> Vous remplacez l'un de vos dons par un autre don pour lequel vous remplissez les prérequis. Vous perdez tous les bénéfices de l'ancien don au profit de tous ceux du nouveau. Vous ne pouvez pas remplacer un don qui figure parmi les prérequis d'un autre don ou d'une aptitude.</p><p><strong>Caprice des dés.</strong> Vous modifiez un événement récent en faisant rejouer un jet de dés intervenu au cours du dernier round (ce qui comprend votre dernier tour). La réalité s'adapte alors à ce nouveau résultat. <em>Souhait</em> peut ainsi annuler le jet de sauvegarde raté d'un allié ou le Coup critique d'un ennemi. Vous pouvez décider que le jet se refasse avec l'Avantage ou le Désavantage, et vous décidez en connaissance de cause lequel s'applique entre le jet d'origine et le nouveau.</p><p><strong>Réalité remodelée.</strong> Vous pouvez souhaiter quelque chose qui n'entre pas dans le cadre de ces effets. Si vous avez une telle idée, faites-en part à votre MD, le plus précisément possible. Le MD est alors seul juge de ce qui peut se passer : plus le souhait est ambitieux, plus il risque de ne pas tourner comme vous l'attendez. Le sort pourrait tout simplement échouer, ou ne produire que partiellement l'effet désiré, ou vous pourriez connaître un imprévu fâcheux en raison d'une formulation hasardeuse. Si vous faites par exemple le souhait que votre grand ennemi meure, vous pourriez vous retrouver projeté dans l'avenir, à une époque où cet adversaire n'est effectivement plus en vie, mais votre héros quitterait du même coup la partie. De même, souhaiter mettre la main sur un objet magique légendaire ou un Artefact pourrait vous transporter aussitôt face à l'actuel propriétaire. Si votre souhait est exaucé et que ses effets pèsent sur toute une communauté, une région ou un monde, vous risquez fort d'attirer de puissants adversaires. Si votre souhait est susceptible d'affecter un dieu, ses serviteurs divins pourraient bien intervenir dans l'instant pour empêcher ce souhait ou pour vous inciter à le formuler de manière très spécifique. Si votre souhait menace le multivers même ou la Cité de Sigil, ou qu'il risque d'affecter la Dame des Douleurs d'une quelconque manière, une image se forme dans votre esprit : la Dame secoue la tête, et votre souhait n'est pas exaucé.</p><p>Dès lors qu'il ne s'agit pas seulement de reproduire les effets d'un autre sort, lancer <em>souhait</em> est une véritable épreuve. Après une telle gageure, chaque fois que vous jetez un sort sans avoir terminé un Repos long, vous subissez 1d10 dégâts nécrotiques par niveau du sort. Ces dégâts ne peuvent être réduits ni évités d'aucune manière. De plus, votre valeur de Force passe à 3 pendant 2d4 jours. Chaque jour que vous passez alors à vous reposer en vous contentant de menues tâches déduit 2 jours de cette période de convalescence. Enfin, cette épreuve entraîne un risque de [[/r 1d3cs1]]{33 pour cent} que vous ne soyez plus jamais capable de relancer <em>souhait</em>.</p>",
+                    "activities": {
+                        "utility": {
+                            "roll": "Durée de la perte de Force",
+                            "chatFlavor": "<em>Souhait</em> perdu sur 1 : [[/r 1d3cs1]]"
+                        }
+                    },
+                    "effects": {
+                        "Wish Stress": {
+                            "name": "Épreuve de souhait",
+                            "description": "<p>Chaque fois que vous jetez un sort sans avoir terminé un Repos long, vous subissez [[/damage 1d10 type=necrotic]]{1d10} dégâts nécrotiques par niveau du sort. Ces dégâts ne peuvent être réduits ni évités d'aucune manière. De plus, votre valeur de Force passe à 3 pendant [[/r 2d4]] jours.</p>"
+                        }
+                    }
+                },
+                "Teleportation Circle": {
+                    "name": "Cercle de téléportation",
+                    "description": "<p>À l'incantation du sort, vous tracez un cercle de 1,50 m de diamètre au sol, composé de symboles qui relient votre emplacement à un cercle de téléportation permanent de votre choix dont vous connaissez la séquence de runes et situé sur le même plan d'existence que vous. Un portail chatoyant s'ouvre au sein du cercle ainsi tracé et reste ouvert jusqu'à la fin de votre tour suivant. Toute créature qui pénètre dans le portail apparaît aussitôt dans un rayon de 1,50 m du cercle de destination ou, si cet espace n'est pas libre, dans l'espace inoccupé le plus proche.</p><p>De nombreux temples et guildes importants disposent d'un cercle de téléportation permanent dans leurs locaux. Chaque cercle comprend toujours sa propre séquence de runes, une suite de symboles à l'agencement unique.</p><p>La première fois que vous acquérez la faculté de lancer ce sort, vous apprenez la séquence de runes de deux destinations du Plan Matériel, déterminées par le MD. Vous y ajouterez éventuellement d'autres séquences au fil de vos aventures. Graver une nouvelle séquence de runes dans votre mémoire nécessite de l'étudier pendant 1 minute.</p><p>Vous pouvez créer un cercle de téléportation permanent en lançant quotidiennement ce sort au même endroit pendant 365 jours.</p>",
+                    "materials": "encres rares d'une valeur minimale de 50 po, que le sort détruit"
+                },
+                "Water Breathing": {
+                    "name": "Respiration aquatique",
+                    "description": "<p>Ce sort octroie la faculté de respirer sous l'eau à un maximum de dix créatures consentantes que vous choisissez à portée, jusqu'à la fin du sort. Les créatures affectées conservent leurs autres modes respiratoires.</p>",
+                    "materials": "un court roseau",
+                    "effects": {
+                        "Water Breathing": {
+                            "name": "Respiration aquatique"
+                        }
+                    }
                 }
             }
         },
@@ -35889,7 +37001,10 @@
                         "Use (free casting)": {
                             "name": "Utiliser (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Ténèbres",
+                    "description": "<p>Pour toute la durée, des &Reference[darkness] magiques se déploient depuis un point à portée en remplissant une Sphère de 4,5 m de rayon. La Vision dans le noir ne perce pas ces Ténèbres, et les lumières non magiques n'illuminent pas dans la Sphère.</p><p>Au lieu de ça, vous pouvez lancer le sort sur un objet porté par personne, de manière à ce que les Ténèbres emplissent une Émanation de 4,50 m centrée sur l'objet. Il suffit de recouvrir cet objet d'une surface opaque, comme une gamelle ou un heaume, pour bloquer les Ténèbres.</p><p>Si tout ou partie de ce sort chevauche la zone de Lumière vive ou faible créée par un sort du 2<sup>e</sup> niveau ou inférieur, l'effet qui produit cette lumière est dissipé.</p>",
+                    "materials": "une touffe de fourrure de chauve-souris et un bout de charbon"
                 },
                 "Command": {
                     "name": "Injonction",
@@ -36081,6 +37196,52 @@
                 "Crowbar": {
                     "name": "Pied-de-biche",
                     "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Fear": {
+                    "name": "Terreur",
+                    "description": "<p>Chaque créature prise dans un Cône de 9 m doit réussir un jet de sauvegarde de Sagesse sous peine de lâcher ce qu'elle tient, et de subir l'état &Reference[frightened apply=false] pour toute la durée.</p><p>Ainsi Effrayée, la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de Sagesse. En cas de réussite, le sort prend fin pour elle.</p>",
+                    "materials": "une plume blanche",
+                    "effects": {
+                        "Fear": {
+                            "name": "Terreur",
+                            "description": "<p>Ainsi &Reference[frightened apply=false], la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de [[/save ability=wis]]. En cas de réussite, le sort prend fin pour elle.</p>"
+                        }
+                    }
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Wand of the War Mage, +1": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +1": {
+                            "name": "Baguette du mage de guerre +1",
+                            "changes": {
+                                "name": "{} du mage de guerre +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +1": {
+                            "name": "Mage de guerre +1"
+                        }
+                    }
                 }
             }
         },
@@ -36152,7 +37313,10 @@
                         "Use (free casting)": {
                             "name": "Utiliser (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Ténèbres",
+                    "description": "<p>Pour toute la durée, des &Reference[darkness] magiques se déploient depuis un point à portée en remplissant une Sphère de 4,5 m de rayon. La Vision dans le noir ne perce pas ces Ténèbres, et les lumières non magiques n'illuminent pas dans la Sphère.</p><p>Au lieu de ça, vous pouvez lancer le sort sur un objet porté par personne, de manière à ce que les Ténèbres emplissent une Émanation de 4,50 m centrée sur l'objet. Il suffit de recouvrir cet objet d'une surface opaque, comme une gamelle ou un heaume, pour bloquer les Ténèbres.</p><p>Si tout ou partie de ce sort chevauche la zone de Lumière vive ou faible créée par un sort du 2<sup>e</sup> niveau ou inférieur, l'effet qui produit cette lumière est dissipé.</p>",
+                    "materials": "une touffe de fourrure de chauve-souris et un bout de charbon"
                 },
                 "Command": {
                     "name": "Injonction",
@@ -36240,9 +37404,13 @@
                         "Universal Communication": {
                             "changes": {
                                 "system.traits.languages.custom": ";toute langue parlée et tout langage des signes"
-                            }
+                            },
+                            "name": "Communication universelle"
                         }
-                    }
+                    },
+                    "name": "Don des langues",
+                    "description": "<p>Ce sort octroie à la créature que vous touchez la faculté de comprendre toute langue parlée qu'elle entend et tout langage des signes qu'elle voit. De plus, lorsque la cible communique par signes ou par la voix, toute créature qui connaît au moins une langue comprend ce que la cible exprime à condition d'entendre ce qu'elle dit ou de voir sa gestuelle.</p>",
+                    "materials": "une ziggourat miniature"
                 },
                 "Banishment": {
                     "name": "Bannissement",
@@ -36448,6 +37616,56 @@
                 "Crowbar": {
                     "name": "Pied-de-biche",
                     "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Fear": {
+                    "name": "Terreur",
+                    "description": "<p>Chaque créature prise dans un Cône de 9 m doit réussir un jet de sauvegarde de Sagesse sous peine de lâcher ce qu'elle tient, et de subir l'état &Reference[frightened apply=false] pour toute la durée.</p><p>Ainsi Effrayée, la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de Sagesse. En cas de réussite, le sort prend fin pour elle.</p>",
+                    "materials": "une plume blanche",
+                    "effects": {
+                        "Fear": {
+                            "name": "Terreur",
+                            "description": "<p>Ainsi &Reference[frightened apply=false], la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de [[/save ability=wis]]. En cas de réussite, le sort prend fin pour elle.</p>"
+                        }
+                    }
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Wand of the War Mage, +2": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +2": {
+                            "name": "Baguette du mage de guerre +2",
+                            "changes": {
+                                "name": "{} du mage de guerre +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +2": {
+                            "name": "Mage de guerre +2"
+                        }
+                    }
+                },
+                "Spell Scroll: Tongues": {
+                    "name": "Parchemin de sort : Don des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplTongues000 inline]</p>"
                 }
             }
         },
@@ -36519,7 +37737,10 @@
                         "Use (free casting)": {
                             "name": "Utiliser (incantation gratuite)"
                         }
-                    }
+                    },
+                    "name": "Ténèbres",
+                    "description": "<p>Pour toute la durée, des &Reference[darkness] magiques se déploient depuis un point à portée en remplissant une Sphère de 4,5 m de rayon. La Vision dans le noir ne perce pas ces Ténèbres, et les lumières non magiques n'illuminent pas dans la Sphère.</p><p>Au lieu de ça, vous pouvez lancer le sort sur un objet porté par personne, de manière à ce que les Ténèbres emplissent une Émanation de 4,50 m centrée sur l'objet. Il suffit de recouvrir cet objet d'une surface opaque, comme une gamelle ou un heaume, pour bloquer les Ténèbres.</p><p>Si tout ou partie de ce sort chevauche la zone de Lumière vive ou faible créée par un sort du 2<sup>e</sup> niveau ou inférieur, l'effet qui produit cette lumière est dissipé.</p>",
+                    "materials": "une touffe de fourrure de chauve-souris et un bout de charbon"
                 },
                 "Command": {
                     "name": "Injonction",
@@ -36616,9 +37837,13 @@
                         "Universal Communication": {
                             "changes": {
                                 "system.traits.languages.custom": ";toute langue parlée et tout langage des signes"
-                            }
+                            },
+                            "name": "Communication universelle"
                         }
-                    }
+                    },
+                    "name": "Don des langues",
+                    "description": "<p>Ce sort octroie à la créature que vous touchez la faculté de comprendre toute langue parlée qu'elle entend et tout langage des signes qu'elle voit. De plus, lorsque la cible communique par signes ou par la voix, toute créature qui connaît au moins une langue comprend ce que la cible exprime à condition d'entendre ce qu'elle dit ou de voir sa gestuelle.</p>",
+                    "materials": "une ziggourat miniature"
                 },
                 "Telekinesis": {
                     "effects": {
@@ -36881,6 +38106,71 @@
                 "Crowbar": {
                     "name": "Pied-de-biche",
                     "description": "<p>Le pied-de-biche vous octroie l'Avantage aux tests de Force chaque fois que son effet de levier peut être pris en compte.</p>"
+                },
+                "Fear": {
+                    "name": "Terreur",
+                    "description": "<p>Chaque créature prise dans un Cône de 9 m doit réussir un jet de sauvegarde de Sagesse sous peine de lâcher ce qu'elle tient, et de subir l'état &Reference[frightened apply=false] pour toute la durée.</p><p>Ainsi Effrayée, la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de Sagesse. En cas de réussite, le sort prend fin pour elle.</p>",
+                    "materials": "une plume blanche",
+                    "effects": {
+                        "Fear": {
+                            "name": "Terreur",
+                            "description": "<p>Ainsi &Reference[frightened apply=false], la créature entreprend à chacun de ses tours l'action &Reference[dash] pour s'éloigner de vous par le chemin le plus sûr, sauf si elle n'a nulle part où aller. Si la créature termine son tour en un espace d'où elle ne vous a plus dans son champ de vision, elle effectue un jet de sauvegarde de [[/save ability=wis]]. En cas de réussite, le sort prend fin pour elle.</p>"
+                        }
+                    }
+                },
+                "Fly": {
+                    "name": "Vol",
+                    "description": "<p>Vous touchez une créature consentante. Pour toute la durée, la cible acquiert une Vitesse de vol de 18 m et bénéficie du vol stationnaire. Lorsque le sort prend fin, la cible tombe si elle est toujours dans les airs, à moins de pouvoir arrêter sa chute.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous pouvez cibler une créature supplémentaire par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une plume",
+                    "effects": {
+                        "Flight": {
+                            "name": "Vol"
+                        }
+                    }
+                },
+                "Fireball": {
+                    "name": "Boule de feu",
+                    "description": "<p>Une zébrure éblouissante jaillit de vous jusqu'au point que vous choisissez à portée, produisant une déflagration au grondement sourd. Chaque créature prise dans la Sphère de 6 m de rayon centrée sur ce point d'origine effectue un jet de sauvegarde de Dextérité et subit 8d6 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d6 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
+                    "materials": "une boulette de guano de chauve-souris et de soufre"
+                },
+                "Scorching Ray": {
+                    "name": "Rayon ardent",
+                    "description": "<p>Vous projetez trois rayons de flammes. Vous pouvez cibler une seule cible à portée ou bien plusieurs. Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><strong>Emplacement de niveau supérieur.</strong> Vous produisez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup></p><p>[[@item.level + 1]]{Nombre total de rayons }</p>"
+                },
+                "Wand of the War Mage, +2": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +2": {
+                            "name": "Baguette du mage de guerre +2",
+                            "changes": {
+                                "name": "{} du mage de guerre +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +2": {
+                            "name": "Mage de guerre +2"
+                        }
+                    }
+                },
+                "Dominate Monster": {
+                    "name": "Domination de monstre",
+                    "description": "<p>Une créature que vous voyez à portée doit réussir un jet de sauvegarde de Sagesse sous peine de subir l'état &Reference[Charmed apply=false] pour toute la durée. La cible a l'Avantage au JS si vous ou vos alliés êtes en train de l'affronter. Chaque fois que la cible subit des dégâts, elle réitère le JS et met un terme au sort sur elle-même en cas de réussite.</p><p>Un lien télépathique persiste entre vous et la cible Charmée tant que vous êtes tous deux sur un même plan d'existence. À votre tour, vous pouvez profiter de ce lien pour donner des ordres à la cible (pas d'action requise), tels que « Attaque cette créature », « File là-bas » ou « Attrape cet objet ». La cible fait de son mieux pour vous obéir à son tour. Si la créature accomplit sa tâche et ne reçoit pas d'autre instruction de votre part, elle agit et se déplace à sa guise, en cherchant avant tout à se protéger.</p><p>Vous pouvez aussi lui faire jouer une Réaction, au prix toutefois de votre propre Réaction.</p><p><strong>Emplacement de niveau supérieur.</strong> Votre Concentration peut persister plus longtemps avec un emplacement du 9<sup>e</sup> niveau (jusqu'à 8 heures).</p>",
+                    "effects": {
+                        "Dominated": {
+                            "name": "Dominé",
+                            "description": "<p>Chaque fois que la cible subit des dégâts, elle réitère le JS de [[/save ability=wis]] et met un terme au sort sur elle-même en cas de réussite.</p>"
+                        }
+                    }
+                },
+                "Teleportation Circle": {
+                    "name": "Cercle de téléportation",
+                    "description": "<p>À l'incantation du sort, vous tracez un cercle de 1,50 m de diamètre au sol, composé de symboles qui relient votre emplacement à un cercle de téléportation permanent de votre choix dont vous connaissez la séquence de runes et situé sur le même plan d'existence que vous. Un portail chatoyant s'ouvre au sein du cercle ainsi tracé et reste ouvert jusqu'à la fin de votre tour suivant. Toute créature qui pénètre dans le portail apparaît aussitôt dans un rayon de 1,50 m du cercle de destination ou, si cet espace n'est pas libre, dans l'espace inoccupé le plus proche.</p><p>De nombreux temples et guildes importants disposent d'un cercle de téléportation permanent dans leurs locaux. Chaque cercle comprend toujours sa propre séquence de runes, une suite de symboles à l'agencement unique.</p><p>La première fois que vous acquérez la faculté de lancer ce sort, vous apprenez la séquence de runes de deux destinations du Plan Matériel, déterminées par le MD. Vous y ajouterez éventuellement d'autres séquences au fil de vos aventures. Graver une nouvelle séquence de runes dans votre mémoire nécessite de l'étudier pendant 1 minute.</p><p>Vous pouvez créer un cercle de téléportation permanent en lançant quotidiennement ce sort au même endroit pendant 365 jours.</p>",
+                    "materials": "encres rares d'une valeur minimale de 50 po, que le sort détruit"
+                },
+                "Spell Scroll: Tongues": {
+                    "name": "Parchemin de sort : Don des langues",
+                    "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplTongues000 inline]</p>"
                 }
             }
         },
