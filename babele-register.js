@@ -199,14 +199,7 @@ export class Converters {
 	static rangeActivities(activities) {
 		Object.keys(activities).forEach(key => {
 			if (activities[key].range) Converters.range(activities[key].range);
-
-			const conversion = Converters.conversionInfo[activities[key].target?.template?.units];
-			if (conversion) {
-				foundry.utils.mergeObject(activities[key].target.template, {
-					"size": conversion.converter(activities[key].target.template.size),
-					"units": conversion.units
-				});
-			}
+			if (activities[key].target) Converters.target(activities[key].target);
 		});
 
 		return activities;
@@ -491,26 +484,31 @@ export class Converters {
 			"system.attributes.movement.fly",
 			"system.attributes.movement.swim",
 			"system.attributes.movement.walk",
-			"system.attributes.senses.blindsight",
-			"system.attributes.senses.darkvision",
-			"system.attributes.senses.tremorsense",
-			"system.attributes.senses.truesight"
+			"system.attributes.senses.ranges.blindsight",
+			"system.attributes.senses.ranges.darkvision",
+			"system.attributes.senses.ranges.tremorsense",
+			"system.attributes.senses.ranges.truesight",
+			"system.attributes.senses.blindsight", //Avant 5.3.0, à supprimer plus tard
+			"system.attributes.senses.darkvision", //Avant 5.3.0, à supprimer plus tard
+			"system.attributes.senses.tremorsense", //Avant 5.3.0, à supprimer plus tard
+			"system.attributes.senses.truesight" //Avant 5.3.0, à supprimer plus tard
 		];
 
 		changes.forEach(change => {
 			if (change.mode != 1) {
+				const value = String(change.value ?? "");
 				if (movementSensesType.includes(change.key)) {
-					if (change.value.startsWith("+") || change.value.startsWith("-")) {
-						change.value = `${change.value[0]}${Converters.footsToMeters(change.value.substring(1))}`;
+					if (value.startsWith("+") || value.startsWith("-")) {
+						change.value = `${value[0]}${Converters.footsToMeters(value.substring(1))}`;
 					} else {
-						change.value = Converters.footsToMeters(change.value);
+						change.value = Converters.footsToMeters(value);
 					}
 				}
 				if (["system.range.value", "system.range.long"].includes(change.key)) {
-					if (parseInt(change.value)) {
-						change.value = Converters.footsToMeters(change.value);
+					if (parseInt(value)) {
+						change.value = Converters.footsToMeters(value);
 					} else {
-						const match = change.value.match(/^(.+?)\s*(\d+)(?:\s+(.*))?$/);
+						const match = value.match(/^(.+?)\s*(\d+)(?:\s+(.*))?$/);
 						if (match) {
 							let [_, begin, numberStr, end] = match;
 							begin ??= "";
