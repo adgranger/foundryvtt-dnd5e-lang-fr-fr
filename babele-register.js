@@ -129,7 +129,7 @@ export class Converters {
 	}
 
 	static target(target) {
-		const conversion = Converters.conversionInfo[target.template.units];
+		const conversion = Converters.conversionInfo[target.template?.units];
 		if (!conversion) return target;
 		return foundry.utils.mergeObject(target, {
 			template: {
