@@ -20604,6 +20604,31 @@
                 "Spell Scroll: Detect Poison and Disease": {
                     "name": "Parchemin de sort : Détection du poison et des maladies",
                     "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDetectPois inline]</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +1": {
+                            "name": "Bouclier +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Staff": {
+                    "name": "Bâton",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p><p>Cet objet fonctionne également comme un @UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{bâton de combat}</p><section class=\"secret\" id=\"secret-wJ4SJVg9unbYSBJb\"><p><strong>Note Foundry</strong></p><p>Cet objet a été configuré avec les propriétés supplémentaires d'un bâton de combat.</p></section>",
+                    "effects": {
+                        "Shillelagh (1d10)": {
+                            "name": "Crosse des druides (1d10)",
+                            "changes": {
+                                "name": "{} (Crosse des druides)"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Aoth",
@@ -21383,6 +21408,31 @@
                     "activities": {
                         "summon": {
                             "target": "espace inoccupé aussi près que possible de l'encensoir"
+                        }
+                    }
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +1": {
+                            "name": "Bouclier +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Staff": {
+                    "name": "Bâton",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p><p>Cet objet fonctionne également comme un @UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{bâton de combat}</p><section class=\"secret\" id=\"secret-wJ4SJVg9unbYSBJb\"><p><strong>Note Foundry</strong></p><p>Cet objet a été configuré avec les propriétés supplémentaires d'un bâton de combat.</p></section>",
+                    "effects": {
+                        "Shillelagh (1d12)": {
+                            "name": "Crosse des druides (1d12)",
+                            "changes": {
+                                "name": "{} (Crosse des druides)"
+                            }
                         }
                     }
                 }
@@ -22265,6 +22315,65 @@
                 },
                 "Component: Jade Circlet": {
                     "name": "Composant : Diadème de jade"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +2": {
+                            "name": "Bouclier +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Staff": {
+                    "name": "Bâton",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p><p>Cet objet fonctionne également comme un @UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{bâton de combat}</p><section class=\"secret\" id=\"secret-wJ4SJVg9unbYSBJb\"><p><strong>Note Foundry</strong></p><p>Cet objet a été configuré avec les propriétés supplémentaires d'un bâton de combat.</p></section>",
+                    "effects": {
+                        "Shillelagh (1d12)": {
+                            "name": "Crosse des druides (1d12)",
+                            "changes": {
+                                "name": "{} (Crosse des druides)"
+                            }
+                        }
+                    }
+                },
+                "Half Plate Armor": {
+                    "name": "Demi-plate",
+                    "activities": {
+                        "Reduce Unwilling Movement": {
+                            "name": "Réduire les déplacements involontaires",
+                            "condition": "un effet vous déplace au sol contre votre volonté",
+                            "chatFlavor": "Distance déplacée réduite au maximum de 3 m"
+                        }
+                    },
+                    "effects": {
+                        "Dwarven Plate": {
+                            "name": "Harnois nain",
+                            "changes": {
+                                "name": "{} nain",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgDwarvenPlate0 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
+                        }
+                    }
                 }
             },
             "name": "Aoth",
@@ -23310,6 +23419,57 @@
                 "Potion of Growth": {
                     "name": "Potion d'agrandissement",
                     "description": "<p><em>Potion, peu courante</em></p><p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells24.Item.phbsplEnlargeRed]{agrandissement/rapetissement} pendant 10 minutes (aucune Concentration requise).</p><p>La partie rouge du liquide de la potion se dilate et se contracte en boucle, d'une petite perle colorant le liquide incolore et vice-versa. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
+                },
+                "Halberd": {
+                    "name": "Hallebarde",
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Pike": {
+                    "name": "Pique",
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Half Plate Armor": {
+                    "name": "Demi-plate",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Fire)": {
+                            "name": "Anneau de résistance (Feu)",
+                            "changes": {
+                                "name": "Anneau de résistance (Grenat)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Fire Resistance": {
+                            "name": "Résistance au feu"
+                        }
+                    }
                 }
             },
             "name": "Merric",
@@ -23860,6 +24020,72 @@
                             "name": "Convoquer un élémentaire"
                         }
                     }
+                },
+                "Halberd": {
+                    "name": "Hallebarde",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Pike": {
+                    "name": "Pique",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Half Plate Armor": {
+                    "name": "Demi-plate",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Fire)": {
+                            "name": "Anneau de résistance (Feu)",
+                            "changes": {
+                                "name": "Anneau de résistance (Grenat)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Fire Resistance": {
+                            "name": "Résistance au feu"
+                        }
+                    }
+                },
+                "2m1nXOrOoSL1lRkt": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Cold)": {
+                            "name": "Anneau de résistance (Froid)",
+                            "changes": {
+                                "name": "Anneau de résistance (Tourmaline)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Cold Resistance": {
+                            "name": "Résistance au froid"
+                        }
+                    }
                 }
             },
             "name": "Merric",
@@ -24184,6 +24410,22 @@
                     "effects": {
                         "Slowed": {
                             "name": "Ralenti"
+                        }
+                    }
+                },
+                "Spear": {
+                    "name": "Lance",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
                         }
                     }
                 }
@@ -24802,6 +25044,38 @@
                 "Spell Scroll: Disguise Self": {
                     "name": "Parchemin de sort : Déguisement",
                     "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe inline]</p>"
+                },
+                "Spear": {
+                    "name": "Lance",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
+                },
+                "Wand": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +1": {
+                            "name": "Baguette du mage de guerre +1",
+                            "changes": {
+                                "name": "{} du mage de guerre +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +1": {
+                            "name": "Mage de guerre +1"
+                        }
+                    }
                 }
             },
             "name": "Morthos",
@@ -25651,6 +25925,38 @@
                 "Spell Scroll: Knock": {
                     "name": "Parchemin de sort : Déblocage",
                     "description": "<p><em>&Reference[Spell Scroll] (2<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplKnock00000 inline]</p>"
+                },
+                "Spear": {
+                    "name": "Lance",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
+                },
+                "Wand": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +2": {
+                            "name": "Baguette du mage de guerre +2",
+                            "changes": {
+                                "name": "{} du mage de guerre +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +2": {
+                            "name": "Mage de guerre +2"
+                        }
+                    }
                 }
             },
             "name": "Morthos",
@@ -26768,6 +27074,53 @@
                 "Spell Scroll: Water Breathing": {
                     "name": "Parchemin de sort : Respiration aquatique",
                     "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplWaterBreat inline]</p>"
+                },
+                "Spear": {
+                    "name": "Lance",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
+                },
+                "Wand": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +3": {
+                            "name": "Baguette du mage de guerre +3",
+                            "changes": {
+                                "name": "{} du mage de guerre +3",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +3": {
+                            "name": "Mage de guerre +3"
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Lightning)": {
+                            "name": "Anneau de résistance (Foudre)",
+                            "changes": {
+                                "name": "Anneau de résistance (Citrine)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Lightning Resistance": {
+                            "name": "Résistance à la foudre"
+                        }
+                    }
                 }
             },
             "name": "Morthos",
@@ -27114,6 +27467,43 @@
                         },
                         "Identify Alcohol": {
                             "name": "Identifier un alcool"
+                        }
+                    }
+                },
+                "Spear": {
+                    "name": "Lance",
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
+                        }
+                    }
+                },
+                "Dagger": {
+                    "name": "Dague",
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
+                        }
+                    }
+                },
+                "Javelin": {
+                    "name": "Javeline",
+                    "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
                         }
                     }
                 }
@@ -27637,6 +28027,19 @@
                     "name": "Empoigneur",
                     "description": "<p>Vous recevez les bénéfices suivants.</p><p><strong>Augmentation de caractéristique.</strong> Votre valeur de Force ou de Dextérité augmente de 1, jusqu'à un maximum de 20.</p><p><strong>Frappe et empoignade.</strong> Lorsque vous touchez une créature avec une attaque à mains nues dans le cadre de l'action Attaque à votre tour, vous pouvez recourir simultanément aux options Dégâts et Lutte. Vous ne pouvez recourir à ce bénéfice qu'une seule fois par tour.</p><p><strong>Attaque avec Avantage.</strong> Vous avez l'Avantage aux jets d'attaque contre une créature à laquelle vous imposez l'état Agrippé.</p><p><strong>Lutteur rapide.</strong> Il ne vous en coûte aucun déplacement supplémentaire lorsque vous déplacez une créature à laquelle vous imposez l'état Agrippé, à condition que cette créature soit de votre taille ou d'une catégorie inférieure.</p><section class=\"secret\" id=\"secret-LAjjGo55LPacAy8v\"><p><strong>Note Foundry</strong></p><p>L'Avantage n'est pas automatisé.</p></section>",
                     "requirements": "Force ou Dextérité 13 ou plus"
+                },
+                "Javelin": {
+                    "name": "Javeline",
+                    "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Perrin",
@@ -28234,6 +28637,34 @@
                         },
                         "Throw Bead": {
                             "name": "Lancer une perle"
+                        }
+                    }
+                },
+                "Javelin": {
+                    "name": "Javeline",
+                    "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
                         }
                     }
                 }
@@ -28948,6 +29379,67 @@
                         "Horn of Valhalla: Condition Immunity": {
                             "name": "Cor du Valhalla : Immunité aux états",
                             "description": "<p>Ces esprits ont l'aspect de combattants vivants et respirants, et bénéficient de l'Immunité contre les états &Reference[Charmed apply=false] et &Reference[Frightened apply=false].</p>"
+                        }
+                    }
+                },
+                "Javelin": {
+                    "name": "Javeline",
+                    "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
+                        }
+                    }
+                },
+                "Quarterstaff of the Acrobat": {
+                    "name": "Bâton de l'acrobate",
+                    "description": "<p><em>Arme (@UUID[Compendium.dnd5e.equipment24.Item.phbwepQuartersta]{bâton de combat}), très rare (Harmonisation requise)</em></p><p>Vous recevez un bonus de +2 aux jets d'attaque et de dégâts effectués avec cette arme magique.</p><p>Tant que vous tenez cette arme, vous pouvez lui faire émettre une Lumière faible verte dans un rayon de 3 m, soit par une action Bonus, soit après avoir joué l'Initiative ; vous pouvez aussi en éteindre la lumière par une action Bonus.</p><p>Si vous tenez l'arme, vous pouvez entreprendre une action Bonus pour modifier sa forme et la transformer en bâtonnet de 15 cm (pour en faciliter le rangement) ou une perche de 3 m, ou bien la ramener à sa forme de bâton de combat. L'arme ne s'allongera que dans la limite de l'espace disponible.</p><p>Sous certaines formes, l'arme est dotée des propriétés supplémentaires suivantes.</p><p><em><strong>Déviation d'attaque (bâton de combat uniquement).</strong></em> Lorsque vous êtes touché par une attaque alors que vous tenez l'arme, vous pouvez jouer votre Réaction pour décrire des moulinets avec le bâton et recevoir un bonus de +5 à votre CA contre l'attaque correspondante, ce qui peut la faire échouer. Vous ne pouvez ensuite plus recourir à cette propriété avant d'avoir terminé un Repos court ou long.</p><p><em><strong>Arme à distance (bâton de combat uniquement).</strong></em> L'arme est dotée de la propriété Lancer avec une portée normale de 9 m et une portée longue de 36 m. Aussitôt après votre attaque à distance avec le bâton, il revient dans votre main.</p><p><em><strong>Assistance acrobatique (bâton de combat ou perche de 3 m uniquement).</strong></em> En tenant cette arme, vous bénéficiez de l'Avantage aux tests de Dextérité (Acrobaties).</p>",
+                    "activities": {
+                        "Attack Deflection": {
+                            "name": "Déviation d'attaque"
+                        }
+                    },
+                    "effects": {
+                        "Dexterous Attacks & Martial Arts Damage": {
+                            "name": "Attaques lestes et dégâts de Arts martiaux",
+                            "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                            "changes": {
+                                "name": "{} (Arts martiaux)"
+                            }
+                        }
+                    }
+                },
+                "wL2mEohJkOCELsIu": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Fire)": {
+                            "name": "Anneau de résistance (Feu)",
+                            "changes": {
+                                "name": "Anneau de résistance (Grenat)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Fire Resistance": {
+                            "name": "Résistance au feu"
                         }
                     }
                 }
@@ -30438,6 +30930,30 @@
                 "Spell Scroll: Silence": {
                     "name": "Parchemin de sort : Silence",
                     "description": "<p><em>&Reference[Spell Scroll] (2<sup>e</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplSilence000 inline]</p>"
+                },
+                "Studded Leather Armor": {
+                    "name": "Armure de cuir clouté",
+                    "effects": {
+                        "Armor +1": {
+                            "name": "Armure +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgArmor12or3000 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Longbow": {
+                    "name": "Arc long",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Quillathe",
@@ -31264,6 +31780,83 @@
                             "target": "espace inoccupé aussi près que possible du brasero"
                         }
                     }
+                },
+                "Studded Leather Armor": {
+                    "name": "Armure de cuir clouté",
+                    "effects": {
+                        "Armor +1": {
+                            "name": "Armure +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgArmor12or3000 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Shortsword": {
+                    "name": "Épée courte",
+                    "effects": {
+                        "Weapon +2": {
+                            "name": "Arme +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Longbow": {
+                    "name": "Arc long",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Arrows": {
+                    "name": "Flèches",
+                    "description": "<p><em><strong>Rangement :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{Carquois}</em></p><p>Les @UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{munitions} sont nécessaires pour toute arme dotée de la propriété Munitions. Le descriptif de l'arme indique le type de munitions qu'elle utilise. La table « Munitions » répertorie les différents types de munitions et la quantité que vous obtenez lorsque vous en achetez. Figure en outre l'objet généralement utilisé pour ranger chaque type de munitions, qui doit être acheté séparément.</p>",
+                    "effects": {
+                        "Ammunition +2": {
+                            "name": "Projectile +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAmmunition12o caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
+                        }
+                    }
+                },
+                "gFkeCeFDSffdlH3p": {
+                    "name": "Flèches",
+                    "description": "<p><em><strong>Rangement :</strong> @UUID[Compendium.dnd5e.equipment24.Item.phbagQuiver00000]{Carquois}</em></p><p>Les @UUID[Compendium.dnd5e.equipment24.Item.phbagAmmunitionV]{munitions} sont nécessaires pour toute arme dotée de la propriété Munitions. Le descriptif de l'arme indique le type de munitions qu'elle utilise. La table « Munitions » répertorie les différents types de munitions et la quantité que vous obtenez lorsque vous en achetez. Figure en outre l'objet généralement utilisé pour ranger chaque type de munitions, qui doit être acheté séparément.</p>",
+                    "effects": {
+                        "Ammunition +1": {
+                            "name": "Projectile +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAmmunition12o caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Quillathe",
@@ -31845,6 +32438,18 @@
                 "Tactical Shift": {
                     "name": "Décalage tactique",
                     "description": "<p>Chaque fois que vous activez votre Second souffle par une action Bonus, vous pouvez vous déplacer à concurrence de la moitié de votre Vitesse, sans provoquer d'attaques d'Opportunité.</p>"
+                },
+                "Splint Armor": {
+                    "name": "Clibanion",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Randal",
@@ -32235,6 +32840,18 @@
                         "Free Action": {
                             "name": "Action libre",
                             "description": "<p>Le Terrain difficile ne vous coûte aucun déplacement supplémentaire.</p>"
+                        }
+                    }
+                },
+                "Plate Armor": {
+                    "name": "Harnois",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
                         }
                     }
                 }
@@ -32689,6 +33306,69 @@
                         "Animated Shield": {
                             "name": "Bouclier animé",
                             "description": "<p>Le bouclier reste en vol stationnaire dans votre espace en vous protégeant comme si vous le portiez, ce qui vous laisse les mains libres.</p>"
+                        }
+                    }
+                },
+                "Greatsword": {
+                    "name": "Épée à deux mains",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Halberd": {
+                    "name": "Hallebarde",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Pike": {
+                    "name": "Pique",
+                    "effects": {
+                        "Vicious Weapon": {
+                            "name": "Arme brutale",
+                            "changes": {
+                                "name": "{} brutale",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Plate Armor": {
+                    "name": "Harnois",
+                    "effects": {
+                        "Adamantine Armor": {
+                            "name": "Armure en adamantium",
+                            "changes": {
+                                "name": "{} en adamantium",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAdamantineArm caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Acid)": {
+                            "name": "Anneau de résistance (Acide)",
+                            "changes": {
+                                "name": "Anneau de résistance (Perle)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Acid Resistance": {
+                            "name": "Résistance à l'acide"
                         }
                     }
                 }
@@ -33902,6 +34582,30 @@
                             "name": "Verser sur le sol"
                         }
                     }
+                },
+                "Shortbow": {
+                    "name": "Arc court",
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Studded Leather Armor": {
+                    "name": "Armure de cuir clouté",
+                    "effects": {
+                        "Armor +1": {
+                            "name": "Armure +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgArmor12or3000 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Riswynn",
@@ -35046,6 +35750,30 @@
                 "Spell Scroll: Gaseous Form": {
                     "name": "Parchemin de sort : Forme gazeuse",
                     "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplGaseousFor inline]</p>"
+                },
+                "Shortbow": {
+                    "name": "Arc court",
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Studded Leather Armor": {
+                    "name": "Armure de cuir clouté",
+                    "effects": {
+                        "Armor +1": {
+                            "name": "Armure +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgArmor12or3000 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Riswynn",
@@ -37019,6 +37747,31 @@
                             "name": "Résistance nécrotique"
                         }
                     }
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +2": {
+                            "name": "Bouclier +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Plate Armor": {
+                    "name": "Harnois",
+                    "effects": {
+                        "Mithral Armor": {
+                            "name": "Armure de mithral",
+                            "changes": {
+                                "name": "{} de mithral",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgMithralArmor0 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -38035,6 +38788,46 @@
                             "name": "Résistant"
                         }
                     }
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +3": {
+                            "name": "Bouclier +3",
+                            "changes": {
+                                "name": "{} +3",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Plate Armor": {
+                    "name": "Harnois",
+                    "effects": {
+                        "Mithral Armor": {
+                            "name": "Armure de mithral",
+                            "changes": {
+                                "name": "{} de mithral",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgMithralArmor0 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Fire)": {
+                            "name": "Anneau de résistance (Feu)",
+                            "changes": {
+                                "name": "Anneau de résistance (Grenat)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Fire Resistance": {
+                            "name": "Résistance au feu"
+                        }
+                    }
                 }
             }
         },
@@ -38352,6 +39145,22 @@
                 "Spellbook": {
                     "name": "Grimoire",
                     "description": "<p>Indispensable pour les magiciens, le grimoire est un tome en cuir relié comportant 100 pages en vélin pour accueillir les formules de sorts.</p>"
+                },
+                "Quarterstaff": {
+                    "name": "Bâton de combat",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Zanna",
@@ -38828,6 +39637,22 @@
                 "Components & Fine Inks": {
                     "name": "Composantes et encres de qualité",
                     "description": "<p>Convient pour copier des sorts.</p>"
+                },
+                "Quarterstaff": {
+                    "name": "Bâton de combat",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Zanna",
@@ -39546,6 +40371,22 @@
                     "name": "Communication à distance",
                     "description": "<p>Vous envoyez un bref message n'excédant pas 25 mots à une créature que vous avez rencontrée (ou qu'une personne qui l'a rencontrée vous a décrite). L'esprit de la cible perçoit le message, celle-ci vous identifie comme expéditeur si elle vous connaît et peut vous répondre aussitôt dans le même mode. Le sort permet aux cibles de comprendre le sens de votre message.</p><p>La distance qui vous sépare du destinataire n'a pas d'importance et vous pouvez même atteindre d'autres plans d'existence, mais si la cible se trouve sur un plan différent, il y a 5 % de chance pour que le message n'aboutisse pas. Si la transmission ne s'est pas faite, vous le savez.</p><p>À la réception du message, la créature peut vous empêcher de la recontacter par ce sort pour les 8 prochaines heures. Si vous tentez de lui envoyer un autre message dans cet intervalle, vous savez qu'elle vous a bloqué et le sort échoue.</p>",
                     "materials": "du fil de cuivre"
+                },
+                "Quarterstaff": {
+                    "name": "Bâton de combat",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Zanna",
@@ -40569,6 +41410,62 @@
                 },
                 "Component: Gem-Encrusted Statuette": {
                     "name": "Composant : Statuette en ivoire incrustée de gemmes"
+                },
+                "Staff of Power": {
+                    "name": "Bâton de surpuissance",
+                    "description": "<p><em>@UUID[Compendium.dnd5e.equipment24.Item.phbafcStaffalsoa]{Bâton}, très rare (Harmonisation requise avec un Ensorceleur, Magicien ou Occultiste)</em></p><p>Ce bâton, qui dispose de 20 charges, peut se manier comme un bâton de combat magique octroyant un bonus de +2 aux jets d'attaque et de dégâts. Tant que vous le tenez, vous recevez un bonus de +2 à la classe d'armure, aux jets de sauvegarde et aux jets d'attaque de sort.</p><p><em><strong>Sorts.</strong></em> Lorsque vous tenez le bâton, vous pouvez lancer l'un des sorts de la table suivante en prenant votre DD de sauvegarde des sorts. La table indique le nombre de charges à dépenser pour lancer le sort.</p><details><summary>Table de Coût des sorts</summary><table><thead><tr><th><p>Sort</p></th><th><p>Coût en charges</p></th><th></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{boule de feu} (au 5<sup>e</sup> niveau)</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplConeofCold]{cône de froid}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplLightningB]{éclair} (au 5<sup>e</sup> niveau)</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplGlobeofInv]{globe d'invulnérabilité}</p></td><td><p>6</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplHoldMonste]{immobilisation de monstre}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplLevitate00]{lévitation}</p></td><td><p>2</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{mur de force}</p></td><td><p>5</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectile magique}</p></td><td><p>1</p></td><td></td></tr><tr><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplRayofEnfee]{rayon affaiblissant}</p></td><td><p>1</p></td><td></td></tr></tbody></table></details><p><em><strong>Récupération des charges.</strong></em> Le bâton récupère quotidiennement 2d8 + 4 charges dépensées, à l'aube. Si vous dépensez la dernière charge, lancez [[/r 1d20]]. Sur un résultat de 1, le bâton conserve son bonus de +2 aux jets d'attaque et de dégâts, mais perd toutes ses autres propriétés. Sur un résultat de 20, il récupère [[/r 1d8 + 2]] charges.</p><p><em><strong>Explosion vengeresse.</strong></em> Vous pouvez entreprendre l'action Magie pour rompre le bâton sur votre genou ou contre une surface solide. Le bâton se détruit alors en libérant sa magie dans une explosion qui emplit une Émanation de 9 m, dont il est l'origine. Vous avez 50 % de chances d'être propulsé instantanément vers un plan d'existence aléatoire et d'éviter ainsi l'explosion. Si vous n'évitez pas l'effet, vous subissez autant de dégâts de force que 16 fois le nombre de charges que contient le bâton. Chaque autre créature de la zone effectue un jet de sauvegarde de Dextérité DD 17. En cas d'échec, une créature subit autant de dégâts de force que 4 fois le nombre de charges contenues dans le bâton. En cas de réussite, elle ne subit que la moitié de ces dégâts.</p>",
+                    "activities": {
+                        "Retributive Strike": {
+                            "name": "Explosion vengeresse"
+                        },
+                        "Retributive Strike: Save": {
+                            "name": "Explosion vengeresse : Sauvegarde"
+                        },
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "Staff of Power": {
+                            "name": "Bâton de surpuissance"
+                        },
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Necrotic)": {
+                            "name": "Anneau de résistance (Nécrotiques)",
+                            "changes": {
+                                "name": "Anneau de résistance (Jais)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Necrotic Resistance": {
+                            "name": "Résistance nécrotique"
+                        }
+                    }
+                },
+                "tCdIbmPrQUaakzWB": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Acid)": {
+                            "name": "Anneau de résistance (Acide)",
+                            "changes": {
+                                "name": "Anneau de résistance (Perle)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Acid Resistance": {
+                            "name": "Résistance à l'acide"
+                        }
+                    }
                 }
             },
             "name": "Zanna",
@@ -41549,6 +42446,22 @@
                 "Spell Scroll: Hideous Laughter": {
                     "name": "Parchemin de sort : Fou rire",
                     "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplTashasHide inline]</p>"
+                },
+                "Wand": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +1": {
+                            "name": "Baguette du mage de guerre +1",
+                            "changes": {
+                                "name": "{} du mage de guerre +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +1": {
+                            "name": "Mage de guerre +1"
+                        }
+                    }
                 }
             },
             "name": "Sefris",
@@ -42521,6 +43434,34 @@
                 "Spell Scroll: Remove Curse": {
                     "name": "Parchemin de sort : Délivrance des malédictions",
                     "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs inline]</p>"
+                },
+                "Wand": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +2": {
+                            "name": "Baguette du mage de guerre +2",
+                            "changes": {
+                                "name": "{} du mage de guerre +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +2": {
+                            "name": "Mage de guerre +2"
+                        }
+                    }
+                },
+                "Chain Mail": {
+                    "name": "Cotte de mailles",
+                    "effects": {
+                        "Elven Chain": {
+                            "name": "Armure de mailles elfique",
+                            "changes": {
+                                "name": "{} elfique",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgElvenChain000 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Sefris",
@@ -43683,6 +44624,49 @@
                             "target": "espace inoccupé"
                         }
                     }
+                },
+                "Wand": {
+                    "name": "Baguette",
+                    "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagArcaneFocus]{focaliseur arcanique} est incrusté de pierreries ou sculpté afin de canaliser la magie arcanique. Un personnage Ensorceleur, Magicien ou Occultiste peut se servir d'un tel objet comme focaliseur d'incantation.</p>",
+                    "effects": {
+                        "Wand of the War Mage, +2": {
+                            "name": "Baguette du mage de guerre +2",
+                            "changes": {
+                                "name": "{} du mage de guerre +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmg1WandOfTheWar caption=false]</p>"
+                            }
+                        },
+                        "War Mage +2": {
+                            "name": "Mage de guerre +2"
+                        }
+                    }
+                },
+                "Chain Mail": {
+                    "name": "Cotte de mailles",
+                    "effects": {
+                        "Elven Chain": {
+                            "name": "Armure de mailles elfique",
+                            "changes": {
+                                "name": "{} elfique",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgElvenChain000 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Cold)": {
+                            "name": "Anneau de résistance (Froid)",
+                            "changes": {
+                                "name": "Anneau de résistance (Tourmaline)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Cold Resistance": {
+                            "name": "Résistance au froid"
+                        }
+                    }
                 }
             },
             "name": "Sefris",
@@ -44386,6 +45370,19 @@
                 "Spell Scroll: Detect Evil and Good": {
                     "name": "Parchemin de sort : Détection du mal et du bien",
                     "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau), nécessite de la concentration</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplDetectEvil inline]</p>"
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +1": {
+                            "name": "Bouclier +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Krusk",
@@ -45038,6 +46035,43 @@
                     "activities": {
                         "Lightning Bolt": {
                             "name": "Éclair"
+                        }
+                    }
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +1": {
+                            "name": "Bouclier +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Warhammer": {
+                    "name": "Marteau de guerre",
+                    "effects": {
+                        "Weapon +1": {
+                            "name": "Arme +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgWeapon12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Plate Armor": {
+                    "name": "Harnois",
+                    "effects": {
+                        "Armor +1": {
+                            "name": "Armure +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgArmor12or3000 caption=false]</p>"
+                            }
                         }
                     }
                 }
@@ -45823,6 +46857,46 @@
                             "name": "Force du feu"
                         }
                     }
+                },
+                "Shield": {
+                    "name": "Bouclier",
+                    "description": "<p>Vous ne recevez le bénéfice Classe d'armure d'un bouclier que si vous êtes formé à le porter.</p>",
+                    "effects": {
+                        "Shield +2": {
+                            "name": "Bouclier +2",
+                            "changes": {
+                                "name": "{} +2",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgShield12or300 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Plate Armor": {
+                    "name": "Harnois",
+                    "effects": {
+                        "Armor +1": {
+                            "name": "Armure +1",
+                            "changes": {
+                                "name": "{} +1",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgArmor12or3000 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Acid)": {
+                            "name": "Anneau de résistance (Acide)",
+                            "changes": {
+                                "name": "Anneau de résistance (Perle)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Acid Resistance": {
+                            "name": "Résistance à l'acide"
+                        }
+                    }
                 }
             },
             "name": "Krusk",
@@ -46163,6 +47237,22 @@
                     "activities": {
                         "Light": {
                             "name": "Lumière"
+                        }
+                    }
+                },
+                "Dagger": {
+                    "name": "Dague",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
                         }
                     }
                 }
@@ -46724,6 +47814,22 @@
                 "Spell Scroll: Feather Fall": {
                     "name": "Parchemin de sort : Feuille morte",
                     "description": "<p><em>&Reference[Spell Scroll] (1<sup>er</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplFeatherFal inline]</p>"
+                },
+                "Dagger": {
+                    "name": "Dague",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Beiro",
@@ -47492,6 +48598,34 @@
                 "Spell Scroll: Nondetection": {
                     "name": "Parchemin de sort : Antidétection",
                     "description": "<p><em>&Reference[Spell Scroll] (3<sup>e</sup> niveau)</em></p><p>@Embed[Compendium.dnd5e.spells24.Item.phbsplNondetecti inline]</p>"
+                },
+                "Dagger": {
+                    "name": "Dague",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
+                },
+                "Chain Shirt": {
+                    "name": "Chemise de mailles",
+                    "effects": {
+                        "Elven Chain": {
+                            "name": "Armure de mailles elfique",
+                            "changes": {
+                                "name": "{} elfique",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgElvenChain000 caption=false]</p>"
+                            }
+                        }
+                    }
                 }
             },
             "name": "Beiro",
@@ -48373,6 +49507,49 @@
                     "activities": {
                         "summon": {
                             "target": "espace inoccupé"
+                        }
+                    }
+                },
+                "Dagger": {
+                    "name": "Dague",
+                    "activities": {
+                        "Spellcasting Attack": {
+                            "name": "Attaque de sort"
+                        }
+                    },
+                    "effects": {
+                        "True Strike": {
+                            "name": "Coup au but",
+                            "changes": {
+                                "name": "{} (Coup au but)"
+                            }
+                        }
+                    }
+                },
+                "Chain Shirt": {
+                    "name": "Chemise de mailles",
+                    "effects": {
+                        "Elven Chain": {
+                            "name": "Armure de mailles elfique",
+                            "changes": {
+                                "name": "{} elfique",
+                                "system.description.value": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgElvenChain000 caption=false]</p>"
+                            }
+                        }
+                    }
+                },
+                "Ring": {
+                    "name": "Anneau",
+                    "effects": {
+                        "Ring of Resistance (Cold)": {
+                            "name": "Anneau de résistance (Froid)",
+                            "changes": {
+                                "name": "Anneau de résistance (Tourmaline)",
+                                "system.description.value": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
+                            }
+                        },
+                        "Cold Resistance": {
+                            "name": "Résistance au froid"
                         }
                     }
                 }
