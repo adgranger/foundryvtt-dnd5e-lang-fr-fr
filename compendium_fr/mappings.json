@@ -22,10 +22,6 @@
       "path": "system.attributes.movement",
       "converter": "movement"
     },
-    "items": {
-      "path": "items",
-      "converter": "items"
-    },
     "senses": {
       "path": "system.attributes.senses",
       "converter": "senses"
@@ -33,10 +29,6 @@
     "communication": {
       "path": "system.traits.languages.communication",
       "converter": "communication"
-    },
-    "effects": {
-      "path": "effects",
-      "converter": "effects"
     },
     "tokenLight": {
       "path": "prototypeToken.light",
@@ -55,6 +47,57 @@
       "converter": "planarSubtype"
     }
   },
+  "ActiveEffect": {
+    "changes": {
+      "path": "changes",
+      "converter": "structured",
+      "cardinality": "many",
+      "container": "array",
+      "key": "key",
+      "valuePath": "value",
+      "mapping": {
+        "_variants": [
+          {
+            "_when": {
+              "path": "key",
+              "in": [
+                "system.attributes.movement.burrow",
+                "system.attributes.movement.climb",
+                "system.attributes.movement.fly",
+                "system.attributes.movement.swim",
+                "system.attributes.movement.walk",
+                "system.attributes.senses.ranges.blindsight",
+                "system.attributes.senses.ranges.darkvision",
+                "system.attributes.senses.ranges.tremorsense",
+                "system.attributes.senses.ranges.truesight",
+                "system.attributes.senses.blindsight",
+                "system.attributes.senses.darkvision",
+                "system.attributes.senses.tremorsense",
+                "system.attributes.senses.truesight"
+              ]
+            },
+            "value": {
+              "path": "value",
+              "converter": "effectDistanceChange"
+            }
+          },
+          {
+            "_when": {
+              "path": "key",
+              "in": [
+                "system.range.value",
+                "system.range.long"
+              ]
+            },
+            "value": {
+              "path": "value",
+              "converter": "effectRangeChange"
+            }
+          }
+        ]
+      }
+    }
+  },
   "Item": {
     "subtype": "system.type.subtype",
     "requirements": "system.requirements",
@@ -71,23 +114,38 @@
     },
     "advancement": {
       "path": "system.advancement",
-      "converter": "advancement"
-    },
-    "distanceAdvancement": {
-      "path": "system.advancement",
-      "converter": "distanceAdvancement"
-    },
-    "effects": {
-      "path": "effects",
-      "converter": "effects"
+      "converter": "structured",
+      "cardinality": "many",
+      "container": "keyed",
+      "keys": ["_id", "title"],
+      "mapping": {
+        "title": "title",
+        "hint": "hint",
+        "identifier": {
+          "path": "configuration.identifier",
+          "converter": "advancementIdentifier"
+        },
+        "_variants": [
+          {
+            "_when": {
+              "path": "type",
+              "equals": "ScaleValue"
+            },
+            "distance": {
+              "path": "configuration.distance",
+              "converter": "advancementDistance"
+            },
+            "scale": {
+              "path": "configuration.scale",
+              "converter": "advancementScaleDistance"
+            }
+          }
+        ]
+      }
     },
     "weight": {
       "path": "system.weight",
       "converter": "weight"
-    },
-    "rangeActivities": {
-      "path": "system.activities",
-      "converter": "rangeActivities"
     },
     "range": {
       "path": "system.range",
@@ -99,7 +157,57 @@
     },
     "activities": {
       "path": "system.activities",
-      "converter": "activities"
+      "converter": "structured",
+      "cardinality": "many",
+      "container": "keyed",
+      "keys": ["_id", "name"],
+      "mapping": {
+        "name": "name",
+        "condition": "activation.condition",
+        "chatFlavor": "description.chatFlavor",
+        "duration": "duration.special",
+        "range": {
+          "path": "range",
+          "converter": "range"
+        },
+        "target": {
+          "path": "target",
+          "converter": "target"
+        },
+        "_variants": [
+          {
+            "_when": {
+              "path": "type",
+              "equals": "utility"
+            },
+            "roll": "roll.name"
+          },
+          {
+            "_when": {
+              "any": [
+                {
+                  "path": "type",
+                  "equals": "summon"
+                },
+                {
+                  "path": "type",
+                  "equals": "transform"
+                }
+              ]
+            },
+            "profiles": {
+              "path": "profiles",
+              "converter": "structured",
+              "cardinality": "many",
+              "container": "array",
+              "key": "name",
+              "mapping": {
+                "name": "name"
+              }
+            }
+          }
+        ]
+      }
     },
     "senses": {
       "path": "system.senses",
@@ -116,5 +224,25 @@
   },
   "JournalEntry": {
     "flagsTitle": "flags.dnd5e.title"
+  },
+  "JournalEntryPage": {
+    "tooltip": "system.tooltip",
+    "subclassHeader": "system.subclassHeader",
+    "description": "system.description.value",
+    "additionalEquipment": "system.description.additionalEquipment",
+    "additionalHitPoints": "system.description.additionalHitPoints",
+    "additionalTraits": "system.description.additionalTraits",
+    "subclass": "system.description.subclass",
+    "flagsTitle": "flags.dnd5e.title",
+    "unlinkedSpells": {
+      "path": "system.unlinkedSpells",
+      "converter": "structured",
+      "cardinality": "many",
+      "container": "array",
+      "key": "name",
+      "mapping": {
+        "name": "name"
+      }
+    }
   }
 }
