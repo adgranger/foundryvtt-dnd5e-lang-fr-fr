@@ -68,7 +68,13 @@
     },
     "Arcane Recovery": {
       "name": "Arcane Recovery",
-      "description": "<p>You can regain some of your magical energy by studying your spellbook. When you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level equal to no more than half your Wizard level (round up), and none of the slots can be level 6 or higher. For example, if you're a level 4 Wizard, you can recover up to two levels' worth of spell slots, regaining either one level 2 spell slot or two level 1 spell slots.</p><p>Once you use this feature, you can't do so again until you finish a Long Rest.</p><p><strong>Combined Level Available:</strong> [[(@classes.wizard.levels / 2)]]</p><section id=\"secret-cO6X083GFJ1W4071\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>Since you can select the slots you will have to manually adjust your available slots. This feature can be used to track the one-time use though.</p></section>"
+      "description": "<p>You can regain some of your magical energy by studying your spellbook. When you finish a Short Rest, you can choose expended spell slots to recover. The spell slots can have a combined level equal to no more than half your Wizard level (round up), and none of the slots can be level 6 or higher. For example, if you're a level 4 Wizard, you can recover up to two levels' worth of spell slots, regaining either one level 2 spell slot or two level 1 spell slots.</p><p>Once you use this feature, you can't do so again until you finish a Long Rest.</p><p><strong>Combined Level Available:</strong> [[ceil(@classes.wizard.levels / 2)]]</p><section class=\"secret\" id=\"secret-cO6X083GFJ1W4071\"><p><strong>Foundry Note</strong></p><p>Since you can select the slots you will have to manually adjust your available slots. This feature can be used to track the one-time use though.</p></section>",
+      "activities": {
+        "Recover": {
+          "name": "Recover",
+          "roll": "Combined Spell Levels"
+        }
+      }
     },
     "Archdruid": {
       "name": "Archdruid",
@@ -896,7 +902,7 @@
         "Eldritch Spear": {
           "name": "Eldritch Spear",
           "changes": {
-            "name": ", Eldritch Spear"
+            "1": ", Eldritch Spear"
           }
         }
       }
@@ -1053,7 +1059,12 @@
     },
     "Favored Enemy": {
       "name": "Favored Enemy",
-      "description": "<p>You always have the @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{Hunter's Mark} spell prepared. You can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest.</p><p>The number of times you can cast the spell without a spell slot increases when you reach certain Ranger levels, as shown in the Favored Enemy column of the Ranger Features table.</p><section id=\"secret-cyuZuzwxsQg01vVN\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>The spell is granted to you at this level and will increase the number of free uses available automatically as you level up.</p></section>"
+      "description": "<p>You always have the @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{Hunter's Mark} spell prepared. You can cast it twice without expending a spell slot, and you regain all expended uses of this ability when you finish a Long Rest.</p><p>The number of times you can cast the spell without a spell slot increases when you reach certain Ranger levels, as shown in the Favored Enemy column of the Ranger Features table.</p>",
+      "advancement": {
+        "Favored Enemy": {
+          "title": "Favored Enemy"
+        }
+      }
     },
     "Feral Instinct": {
       "name": "Feral Instinct",
@@ -1462,17 +1473,13 @@
         "Find Familiar with Flight": {
           "name": "Find Familiar with Flight",
           "profiles": {
-            "CR 0 Beast": {
-              "name": "CR 0 Beast"
-            }
+            "CR 0 Beast": "CR 0 Beast"
           }
         },
         "Find Familiar with Swimming": {
           "name": "Find Familiar with Swimming",
           "profiles": {
-            "CR 0 Beast": {
-              "name": "CR 0 Beast"
-            }
+            "CR 0 Beast": "CR 0 Beast"
           }
         },
         "Invest with Resistance": {
@@ -1625,7 +1632,7 @@
           "name": "Dexterous Attacks & Martial Arts Damage",
           "description": "<p><strong>Martial Arts Die.</strong> You can roll [[lookup @scale.monk.die]] in place of the normal damage of your Unarmed Strike or Monk weapons. This die changes as you gain Monk levels, as shown in the Martial Arts column of the Monk Features table.</p><p><strong>Dexterous Attacks.</strong> You can use your Dexterity modifier instead of your Strength modifier for the attack and damage rolls of your Unarmed Strikes and Monk weapons. In addition, when you use the Grapple or Shove option of your Unarmed Strike, you can use your Dexterity modifier instead of your Strength modifier to determine the save DC.</p><p></p>",
           "changes": {
-            "name": "{} (Martial Arts)"
+            "3": "{} (Martial Arts)"
           }
         }
       }
@@ -1954,7 +1961,7 @@
         "Pact Weapon": {
           "name": "Pact Weapon",
           "changes": {
-            "name": ", Pact Weapon"
+            "0": ", Pact Weapon"
           }
         }
       }
@@ -1966,9 +1973,7 @@
         "Find Familiar": {
           "name": "Find Familiar",
           "profiles": {
-            "CR 0 Beast": {
-              "name": "CR 0 Beast"
-            }
+            "CR 0 Beast": "CR 0 Beast"
           }
         },
         "Find Familiar (Expanded Options)": {
@@ -2265,7 +2270,7 @@
           "name": "Repelling Blast",
           "description": "<p>Choose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.</p>",
           "changes": {
-            "name": ", Repelling"
+            "0": ", Repelling"
           }
         }
       }
@@ -2354,7 +2359,7 @@
         "Sacred Weapon": {
           "name": "Sacred Weapon",
           "changes": {
-            "name": ", Sacred Weapon"
+            "0": ", Sacred Weapon"
           }
         }
       }
@@ -2425,7 +2430,7 @@
           "name": "Signature",
           "description": "<p>Choose two level 3 spells in your spellbook as your signature spells. You always have these spells prepared, and you can cast each of them once at level 3 without expending a spell slot. When you do so, you can’t cast them in this way again until you finish a Short or Long Rest. To cast either spell at a higher level, you must expend a spell slot.</p>",
           "changes": {
-            "name": ", Signature"
+            "0": ", Signature"
           }
         }
       }
@@ -2517,7 +2522,7 @@
         "Mastered": {
           "name": "Mastered",
           "changes": {
-            "name": ", Mastered"
+            "0": ", Mastered"
           }
         }
       }
@@ -2957,15 +2962,9 @@
       "activities": {
         "transform": {
           "profiles": {
-            "CR ¼": {
-              "name": "CR ¼"
-            },
-            "CR ½": {
-              "name": "CR ½"
-            },
-            "CR 1": {
-              "name": "CR 1"
-            }
+            "CR ¼": "CR ¼",
+            "CR ½": "CR ½",
+            "CR 1": "CR 1"
           }
         }
       }
