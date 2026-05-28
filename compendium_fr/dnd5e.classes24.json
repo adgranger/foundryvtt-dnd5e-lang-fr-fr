@@ -68,7 +68,13 @@
         },
         "Arcane Recovery": {
             "name": "Restauration magique",
-            "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[(@classes.wizard.levels / 2)]]</p><section id=\"secret-cO6X083GFJ1W4071\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>"
+            "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[ceil(@classes.wizard.levels / 2)]]</p><section class=\"secret\" id=\"secret-cO6X083GFJ1W4071\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>",
+            "activities": {
+                "Recover": {
+                    "name": "Récupérer",
+                    "roll": "Niveaux de sorts combinés"
+                }
+            }
         },
         "Archdruid": {
             "name": "Archidruide",
@@ -1053,7 +1059,12 @@
         },
         "Favored Enemy": {
             "name": "Ennemi juré",
-            "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p><section id=\"secret-cyuZuzwxsQg01vVN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le sort vous est accordé à ce niveau et le nombre d'utilisations gratuites augmente automatiquement au fur et à mesure que vous montez en niveau.</p></section>"
+            "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
+            "advancement": {
+                "Favored Enemy": {
+                    "title": "Ennemi juré"
+                }
+            }
         },
         "Feral Instinct": {
             "name": "Instinct sauvage",

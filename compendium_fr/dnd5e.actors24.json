@@ -3549,6 +3549,12 @@
                         }
                     }
                 }
+            },
+            "effects": {
+                "Invisible": {
+                    "name": "Invisible",
+                    "description": "@Embed[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.3UU5GCTVeRDbZy9u inline]"
+                }
             }
         },
         "Arcane Hand": {
@@ -6569,6 +6575,37 @@
                             "name": "Changements du sort"
                         }
                     }
+                },
+                "Divine Aid": {
+                    "name": "Soutien divin",
+                    "description": "<p class=\"feature\">Le [[lookup @name lowercase]]{monstre} lance <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplRemoveCurs]{délivrance des malédictions}</em>, <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{restauration partielle}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{soins}</em>, avec la même caractéristique d'incantation que pour Incantation.</p>"
+                },
+                "Lesser Restoration": {
+                    "name": "Restauration partielle",
+                    "description": "<p>Vous touchez physiquement une créature pour mettre fin à un état qui l'affecte parmi : &Reference[deafened], &Reference[blinded], &Reference[poisoned] et &Reference[paralyzed].</p>",
+                    "effects": {
+                        "Spell Changes": {
+                            "name": "Changements du sort"
+                        }
+                    }
+                },
+                "Cure Wounds": {
+                    "name": "Soins",
+                    "description": "<p>La créature que vous touchez physiquement récupère un nombre de points de vie égal à 2d8 + votre modificateur de caractéristique d'incantation.</p><p><strong>Emplacement de niveau supérieur.</strong> Les soins augmentent de 2d8 par niveau d'emplacement au-delà du 1<sup>er</sup>.</p>",
+                    "effects": {
+                        "Spell Changes": {
+                            "name": "Changements du sort"
+                        }
+                    }
+                },
+                "Remove Curse": {
+                    "name": "Délivrance des malédictions",
+                    "description": "<p>À votre contact, toutes les malédictions qui affectent une créature ou un objet prennent fin. Si la cible est un objet magique maudit, la malédiction reste en place, mais le sort rompt l'Harmonisation du propriétaire avec l'objet, si bien que celui-ci peut s'en défaire ou s'en débarrasser.</p>",
+                    "effects": {
+                        "Spell Changes": {
+                            "name": "Changements du sort"
+                        }
+                    }
                 }
             },
             "planarSubtype": "Plans Supérieurs"
@@ -7877,6 +7914,12 @@
                             "condition": "début de votre tour"
                         }
                     }
+                }
+            },
+            "effects": {
+                "Invisible": {
+                    "name": "Invisible",
+                    "description": "@Embed[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.3UU5GCTVeRDbZy9u inline]"
                 }
             }
         },
@@ -11072,6 +11115,10 @@
                 },
                 "Active Sense: Hearing": {
                     "name": "Sens actif : Ouïe"
+                },
+                "Invisible": {
+                    "name": "Invisible",
+                    "description": "@Embed[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.3UU5GCTVeRDbZy9u inline]"
                 }
             }
         },
@@ -11123,6 +11170,12 @@
                             "description": "<p>La cible subit l'état &Reference[Grappled apply=false] (évasion DD [[/check ability=str skill=ath format=long]], voir l'objet source pour le DD).</p><p>Tant qu'elle est Agrippée, la cible ne peut pas lancer de sorts à composante verbale et subit dégâts supplémentaires au début de chacun des tours du PNJ.</p>"
                         }
                     }
+                }
+            },
+            "effects": {
+                "Invisible": {
+                    "name": "Invisible",
+                    "description": "@Embed[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.3UU5GCTVeRDbZy9u inline]"
                 }
             }
         },
@@ -18001,7 +18054,13 @@
         "Unseen Servant": {
             "name": "Serviteur invisible",
             "description": "<p>@Embed[Compendium.dnd5e.spells24.Item.phbsplUnseenServ caption=false]</p>",
-            "customType": "Force informe"
+            "customType": "Force informe",
+            "effects": {
+                "Invisible": {
+                    "name": "Invisible",
+                    "description": "@Embed[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.3UU5GCTVeRDbZy9u inline]"
+                }
+            }
         },
         "Vampire": {
             "name": "Vampire",
@@ -27035,7 +27094,8 @@
                         "Ring of Resistance (Lightning)": {
                             "name": "Anneau de résistance (Foudre)",
                             "changes": {
-                                "0": "Anneau de résistance (Citrine)"
+                                "0": "Anneau de résistance (Citrine)",
+                                "3": "{}<p><em>Cf. : @UUID[Compendium.dnd5e.equipment24.Item.dmgRingOfResista]</em></p> <p>Tant que vous portez cet anneau, vous bénéficiez de la Résistance à un type de dégâts. La gemme de l'anneau indique le type.</p>"
                             }
                         },
                         "Lightning Resistance": {
@@ -29583,7 +29643,12 @@
                 },
                 "Favored Enemy": {
                     "name": "Ennemi juré",
-                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p><section id=\"secret-cyuZuzwxsQg01vVN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le sort vous est accordé à ce niveau et le nombre d'utilisations gratuites augmente automatiquement au fur et à mesure que vous montez en niveau.</p></section>"
+                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
+                    "advancement": {
+                        "Favored Enemy": {
+                            "title": "Ennemi juré"
+                        }
+                    }
                 },
                 "Hunter's Mark": {
                     "name": "Marque du chasseur",
@@ -29669,6 +29734,31 @@
                 "Sprig of mistletoe": {
                     "name": "Branche de houx",
                     "description": "<p>Un @UUID[Compendium.dnd5e.equipment24.Item.phbagDruidicFocu]{focaliseur druidique} prend l'une des formes proposées dans la table « Focaliseurs druidiques » et il est sculpté, attaché avec un ruban ou peint de façon à canaliser la magie primitive. Un Druide ou un Rôdeur peut se servir d'un tel objet comme focaliseur d'incantation.</p>"
+                },
+                "WMKaTlBSGK1PCDTF": {
+                    "name": "Marque du chasseur",
+                    "description": "<p>Vous désignez magiquement une créature que vous voyez à portée comme votre proie. Jusqu'à la fin du sort, vous infligez [[/damage]] à la cible chaque fois que vous la touchez avec un jet d'attaque. Vous avez aussi l'Avantage aux tests de [[/check ability=wis skill=prc]] ou de [[/check ability=wis skill=sur]] visant à la trouver.</p><p>Si la cible tombe à 0 point de vie avant la fin du sort, vous pouvez par une action Bonus déplacer la marque vers une autre créature que vous voyez à portée.</p><p><strong>Emplacement de niveau supérieur.</strong> Votre Concentration peut persister plus longtemps avec un emplacement du 3<sup>e</sup> ou 4<sup>e</sup> niveau (jusqu'à 8 heures), ou du 5<sup>e</sup> et supérieur (24 heures).</p>",
+                    "activities": {
+                        "Bonus Mark Damage": {
+                            "name": "Dégâts bonus de marque"
+                        },
+                        "Mark Creature": {
+                            "name": "Marquer une créature"
+                        },
+                        "Move Mark": {
+                            "name": "Déplacer la marque",
+                            "condition": "lorsque la cible marquée tombe à 0 point de vie"
+                        }
+                    },
+                    "effects": {
+                        "Hunter's Mark": {
+                            "name": "Marque du chasseur",
+                            "description": "<p>Jusqu'à la fin du sort, l'incantateur inflige [[/damage 1d6 force]] à la cible chaque fois qu'il la touche avec un jet d'attaque.</p>"
+                        },
+                        "Spell Changes": {
+                            "name": "Changements du sort"
+                        }
+                    }
                 }
             },
             "name": "Quillathe",
@@ -30038,7 +30128,12 @@
                 },
                 "Favored Enemy": {
                     "name": "Ennemi juré",
-                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p><section id=\"secret-cyuZuzwxsQg01vVN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le sort vous est accordé à ce niveau et le nombre d'utilisations gratuites augmente automatiquement au fur et à mesure que vous montez en niveau.</p></section>"
+                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
+                    "advancement": {
+                        "Favored Enemy": {
+                            "title": "Ennemi juré"
+                        }
+                    }
                 },
                 "Hunter's Mark": {
                     "name": "Marque du chasseur",
@@ -30168,6 +30263,31 @@
                             "changes": {
                                 "2": "{} magique +3"
                             }
+                        }
+                    }
+                },
+                "PuyImwrTF6MASf5z": {
+                    "name": "Marque du chasseur",
+                    "description": "<p>Vous désignez magiquement une créature que vous voyez à portée comme votre proie. Jusqu'à la fin du sort, vous infligez [[/damage]] à la cible chaque fois que vous la touchez avec un jet d'attaque. Vous avez aussi l'Avantage aux tests de [[/check ability=wis skill=prc]] ou de [[/check ability=wis skill=sur]] visant à la trouver.</p><p>Si la cible tombe à 0 point de vie avant la fin du sort, vous pouvez par une action Bonus déplacer la marque vers une autre créature que vous voyez à portée.</p><p><strong>Emplacement de niveau supérieur.</strong> Votre Concentration peut persister plus longtemps avec un emplacement du 3<sup>e</sup> ou 4<sup>e</sup> niveau (jusqu'à 8 heures), ou du 5<sup>e</sup> et supérieur (24 heures).</p>",
+                    "activities": {
+                        "Bonus Mark Damage": {
+                            "name": "Dégâts bonus de marque"
+                        },
+                        "Mark Creature": {
+                            "name": "Marquer une créature"
+                        },
+                        "Move Mark": {
+                            "name": "Déplacer la marque",
+                            "condition": "lorsque la cible marquée tombe à 0 point de vie"
+                        }
+                    },
+                    "effects": {
+                        "Hunter's Mark": {
+                            "name": "Marque du chasseur",
+                            "description": "<p>Jusqu'à la fin du sort, l'incantateur inflige [[/damage 1d6 force]] à la cible chaque fois qu'il la touche avec un jet d'attaque.</p>"
+                        },
+                        "Spell Changes": {
+                            "name": "Changements du sort"
                         }
                     }
                 }
@@ -30628,7 +30748,12 @@
                 },
                 "Favored Enemy": {
                     "name": "Ennemi juré",
-                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p><section id=\"secret-cyuZuzwxsQg01vVN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le sort vous est accordé à ce niveau et le nombre d'utilisations gratuites augmente automatiquement au fur et à mesure que vous montez en niveau.</p></section>"
+                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
+                    "advancement": {
+                        "Favored Enemy": {
+                            "title": "Ennemi juré"
+                        }
+                    }
                 },
                 "Hunter's Mark": {
                     "name": "Marque du chasseur",
@@ -30833,6 +30958,31 @@
                                 "0": "{} brutale",
                                 "2": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgViciousWeapon caption=false]</p>"
                             }
+                        }
+                    }
+                },
+                "Ucj4K2EafF7bnHmL": {
+                    "name": "Marque du chasseur",
+                    "description": "<p>Vous désignez magiquement une créature que vous voyez à portée comme votre proie. Jusqu'à la fin du sort, vous infligez [[/damage]] à la cible chaque fois que vous la touchez avec un jet d'attaque. Vous avez aussi l'Avantage aux tests de [[/check ability=wis skill=prc]] ou de [[/check ability=wis skill=sur]] visant à la trouver.</p><p>Si la cible tombe à 0 point de vie avant la fin du sort, vous pouvez par une action Bonus déplacer la marque vers une autre créature que vous voyez à portée.</p><p><strong>Emplacement de niveau supérieur.</strong> Votre Concentration peut persister plus longtemps avec un emplacement du 3<sup>e</sup> ou 4<sup>e</sup> niveau (jusqu'à 8 heures), ou du 5<sup>e</sup> et supérieur (24 heures).</p>",
+                    "activities": {
+                        "Bonus Mark Damage": {
+                            "name": "Dégâts bonus de marque"
+                        },
+                        "Mark Creature": {
+                            "name": "Marquer une créature"
+                        },
+                        "Move Mark": {
+                            "name": "Déplacer la marque",
+                            "condition": "lorsque la cible marquée tombe à 0 point de vie"
+                        }
+                    },
+                    "effects": {
+                        "Hunter's Mark": {
+                            "name": "Marque du chasseur",
+                            "description": "<p>Jusqu'à la fin du sort, l'incantateur inflige [[/damage 1d6 force]] à la cible chaque fois qu'il la touche avec un jet d'attaque.</p>"
+                        },
+                        "Spell Changes": {
+                            "name": "Changements du sort"
                         }
                     }
                 }
@@ -31359,7 +31509,12 @@
                 },
                 "Favored Enemy": {
                     "name": "Ennemi juré",
-                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p><section id=\"secret-cyuZuzwxsQg01vVN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le sort vous est accordé à ce niveau et le nombre d'utilisations gratuites augmente automatiquement au fur et à mesure que vous montez en niveau.</p></section>"
+                    "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
+                    "advancement": {
+                        "Favored Enemy": {
+                            "title": "Ennemi juré"
+                        }
+                    }
                 },
                 "Hunter's Mark": {
                     "name": "Marque du chasseur",
@@ -31702,6 +31857,31 @@
                                 "0": "{} +1",
                                 "1": "{}<p>@Embed[Compendium.dnd5e.equipment24.Item.dmgAmmunition12o caption=false]</p>"
                             }
+                        }
+                    }
+                },
+                "8oGjpP1SMBN3LR2S": {
+                    "name": "Marque du chasseur",
+                    "description": "<p>Vous désignez magiquement une créature que vous voyez à portée comme votre proie. Jusqu'à la fin du sort, vous infligez [[/damage]] à la cible chaque fois que vous la touchez avec un jet d'attaque. Vous avez aussi l'Avantage aux tests de [[/check ability=wis skill=prc]] ou de [[/check ability=wis skill=sur]] visant à la trouver.</p><p>Si la cible tombe à 0 point de vie avant la fin du sort, vous pouvez par une action Bonus déplacer la marque vers une autre créature que vous voyez à portée.</p><p><strong>Emplacement de niveau supérieur.</strong> Votre Concentration peut persister plus longtemps avec un emplacement du 3<sup>e</sup> ou 4<sup>e</sup> niveau (jusqu'à 8 heures), ou du 5<sup>e</sup> et supérieur (24 heures).</p>",
+                    "activities": {
+                        "Bonus Mark Damage": {
+                            "name": "Dégâts bonus de marque"
+                        },
+                        "Mark Creature": {
+                            "name": "Marquer une créature"
+                        },
+                        "Move Mark": {
+                            "name": "Déplacer la marque",
+                            "condition": "lorsque la cible marquée tombe à 0 point de vie"
+                        }
+                    },
+                    "effects": {
+                        "Hunter's Mark": {
+                            "name": "Marque du chasseur",
+                            "description": "<p>Jusqu'à la fin du sort, l'incantateur inflige [[/damage 1d6 force]] à la cible chaque fois qu'il la touche avec un jet d'attaque.</p>"
+                        },
+                        "Spell Changes": {
+                            "name": "Changements du sort"
                         }
                     }
                 }
@@ -34963,7 +35143,7 @@
                         "See Invisibility": {
                             "name": "Détection de l'invisibilité",
                             "changes": {
-                                "0": "",
+                                "0": ";Créatures invisibles",
                                 "1": ";Plan Éthéré"
                             }
                         }
@@ -38968,7 +39148,13 @@
                 },
                 "Arcane Recovery": {
                     "name": "Restauration magique",
-                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[(@classes.wizard.levels / 2)]]</p><section id=\"secret-cO6X083GFJ1W4071\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>"
+                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[ceil(@classes.wizard.levels / 2)]]</p><section class=\"secret\" id=\"secret-cO6X083GFJ1W4071\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>",
+                    "activities": {
+                        "Recover": {
+                            "name": "Récupérer",
+                            "roll": "Niveaux de sorts combinés"
+                        }
+                    }
                 },
                 "Ray of Frost": {
                     "name": "Rayon de givre",
@@ -39421,7 +39607,13 @@
                 },
                 "Arcane Recovery": {
                     "name": "Restauration magique",
-                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[(@classes.wizard.levels / 2)]]</p><section id=\"secret-cO6X083GFJ1W4071\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>"
+                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[ceil(@classes.wizard.levels / 2)]]</p><section class=\"secret\" id=\"secret-cO6X083GFJ1W4071\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>",
+                    "activities": {
+                        "Recover": {
+                            "name": "Récupérer",
+                            "roll": "Niveaux de sorts combinés"
+                        }
+                    }
                 },
                 "Ray of Frost": {
                     "name": "Rayon de givre",
@@ -40087,7 +40279,13 @@
                 },
                 "Arcane Recovery": {
                     "name": "Restauration magique",
-                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[(@classes.wizard.levels / 2)]]</p><section id=\"secret-cO6X083GFJ1W4071\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>"
+                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[ceil(@classes.wizard.levels / 2)]]</p><section class=\"secret\" id=\"secret-cO6X083GFJ1W4071\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>",
+                    "activities": {
+                        "Recover": {
+                            "name": "Récupérer",
+                            "roll": "Niveaux de sorts combinés"
+                        }
+                    }
                 },
                 "Ray of Frost": {
                     "name": "Rayon de givre",
@@ -40997,7 +41195,13 @@
                 },
                 "Arcane Recovery": {
                     "name": "Restauration magique",
-                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[(@classes.wizard.levels / 2)]]</p><section id=\"secret-cO6X083GFJ1W4071\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>"
+                    "description": "<p>Vous pouvez récupérer une partie de votre énergie magique en étudiant votre grimoire. En terminant un Repos court, désignez si vous le souhaitez les emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements ne doit pas excéder la moitié de votre niveau de Magicien (arrondie au supérieur), et aucun de ces emplacements de sort ne doit être du 6<sup>e</sup> niveau ou plus. En tant que Magicien de niveau 4, par exemple, vous pouvez récupérer jusqu'à deux niveaux d'emplacements de sort, soit un emplacement de sort du 2<sup>e</sup> niveau ou deux emplacements de sort du 1<sup>er</sup> niveau.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Nombre de niveau d'emplacement récupérable :</strong> [[ceil(@classes.wizard.levels / 2)]]</p><section class=\"secret\" id=\"secret-cO6X083GFJ1W4071\"><p><strong>Note Foundry</strong></p><p>Comme vous pouvez sélectionner les emplacements, vous devrez ajuster manuellement vos emplacements disponibles. Cette aptitude peut toutefois être utilisée pour suivre l'utilisation unique.</p></section>",
+                    "activities": {
+                        "Recover": {
+                            "name": "Récupérer",
+                            "roll": "Niveaux de sorts combinés"
+                        }
+                    }
                 },
                 "Ray of Frost": {
                     "name": "Rayon de givre",
