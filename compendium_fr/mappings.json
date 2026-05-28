@@ -1,120 +1,188 @@
 {
   "Actor": {
-    "ci": "system.traits.ci.custom",
-    "armorProf": "system.traits.armorProf.custom",
-    "habitat": "system.details.habitat.custom",
     "subtype": "system.details.type.subtype",
+    "customType": "system.details.type.custom",
     "languages": "system.traits.languages.custom",
-    "specialSenses": "system.attributes.senses.special",
     "dr": "system.traits.dr.custom",
     "dv": "system.traits.dv.custom",
-    "customType": "system.details.type.custom",
+    "ci": "system.traits.ci.custom",
+    "di": "system.traits.di.custom",
+    "armorProf": "system.traits.armorProf.custom",
+    "habitat": "system.details.habitat.custom",
+    "height": "system.details.height",
+    "trait": "system.details.trait",
     "dimensions": "system.traits.dimensions",
+    "ideal": "system.details.ideal",
+    "bond": "system.details.bond",
+    "flaw": "system.details.flaw",
+    "biography": "system.details.biography.public",
+    "encounterDescription": "system.description.full",
     "alignment": {
       "path": "system.details.alignment",
       "converter": "alignment"
     },
-    "token": {
-      "path": "prototypeToken.sight.range",
-      "converter": "sightRange"
+    "sight": {
+      "path": "prototypeToken.sight",
+      "converter": "imperialToMetric"
+    },
+    "detectionModes": {
+      "path": "prototypeToken.detectionModes",
+      "converter": "imperialToMetric"
     },
     "movement": {
       "path": "system.attributes.movement",
-      "converter": "movement"
-    },
-    "items": {
-      "path": "items",
-      "converter": "items"
+      "converter": "imperialToMetric"
     },
     "senses": {
       "path": "system.attributes.senses",
-      "converter": "senses"
+      "converter": "imperialToMetric"
     },
     "communication": {
-      "path": "system.traits.languages.communication",
-      "converter": "communication"
+      "path": "system.traits.languages.communication.telepathy",
+      "converter": "imperialToMetric"
     },
-    "effects": {
-      "path": "effects",
-      "converter": "effects"
-    },
-    "tokenLight": {
+    "light": {
       "path": "prototypeToken.light",
-      "converter": "tokenLight"
+      "converter": "imperialToMetric"
     },
     "travel": {
       "path": "system.attributes.travel",
-      "converter": "travel"
+      "converter": "imperialToMetric"
     },
     "capacityCargo": {
       "path": "system.attributes.capacity.cargo",
-      "converter": "weight"
+      "converter": "imperialToMetric"
     },
     "planarSubtype": {
       "path": "system.details.habitat.value",
       "converter": "planarSubtype"
     }
   },
+  "ActiveEffect": {
+    "changes": {
+      "path": "changes",
+      "converter": "effectsChanges"
+    }
+  },
   "Item": {
     "subtype": "system.type.subtype",
     "requirements": "system.requirements",
     "materials": "system.materials.value",
-    "condition": "system.activation.condition",
-    "chat": "system.description.chat",
-    "specialTarget": "system.target.affects.special",
-    "specialRange": "system.range.special",
     "uname": "system.unidentified.name",
     "udescription": "system.unidentified.description",
-    "movement": {
-      "path": "system.movement",
-      "converter": "movement"
+    "chat": "system.description.chat",
+    "condition": "system.activation.condition",
+    "hpConditions": "system.hp.conditions",
+    "activities": {
+      "path": "system.activities",
+      "converter": "structured",
+      "cardinality": "many",
+      "container": "keyed",
+      "keys": ["_id", "name", "type"],
+      "mapping": {
+        "name": "name",
+        "condition": "activation.condition",
+        "chatFlavor": "description.chatFlavor",
+        "duration": "duration.special",
+        "roll": "roll.name",
+        "range": {
+          "path": "range",
+          "converter": "imperialToMetric"
+        },
+        "target": {
+          "path": "target",
+          "converter": "imperialToMetric"
+        },
+        "profiles": {
+          "path": "profiles",
+          "converter": "nameCollection"
+        }
+      }
     },
     "advancement": {
       "path": "system.advancement",
-      "converter": "advancement"
+      "converter": "structured",
+      "cardinality": "many",
+      "container": "keyed",
+      "keys": ["_id", "title"],
+      "mapping": {
+        "title": "title",
+        "hint": "hint",
+        "_variants": [
+          {
+            "_when": { "path": "type", "equals": "ScaleValue" },
+            "distance": {
+              "path": "configuration.distance",
+              "converter": "imperialToMetric"
+            },
+            "scale": {
+              "path": "configuration.scale",
+              "converter": "imperialToMetric"
+            }
+          }
+        ]
+      }
     },
-    "distanceAdvancement": {
-      "path": "system.advancement",
-      "converter": "distanceAdvancement"
-    },
-    "effects": {
-      "path": "effects",
-      "converter": "effects"
+    "movement": {
+      "path": "system.movement",
+      "converter": "imperialToMetric"
     },
     "weight": {
       "path": "system.weight",
-      "converter": "weight"
-    },
-    "rangeActivities": {
-      "path": "system.activities",
-      "converter": "rangeActivities"
+      "converter": "imperialToMetric"
     },
     "range": {
       "path": "system.range",
-      "converter": "range"
+      "converter": "imperialToMetric"
     },
     "capacityWeight": {
       "path": "system.capacity.weight",
-      "converter": "weight"
-    },
-    "activities": {
-      "path": "system.activities",
-      "converter": "activities"
+      "converter": "imperialToMetric"
     },
     "senses": {
       "path": "system.senses",
-      "converter": "senses"
+      "converter": "imperialToMetric"
     },
     "target": {
       "path": "system.target",
-      "converter": "target"
+      "converter": "imperialToMetric"
     },
     "volume": {
       "path": "system.capacity.volume",
-      "converter": "volume"
+      "converter": "imperialToMetric"
     }
   },
   "JournalEntry": {
     "flagsTitle": "flags.dnd5e.title"
+  },
+  "JournalEntryPage": {
+    "tooltip": "system.tooltip",
+    "subclassHeader": "system.subclassHeader",
+    "description": "system.description.value",
+    "additionalEquipment": "system.description.additionalEquipment",
+    "additionalHitPoints": "system.description.additionalHitPoints",
+    "additionalTraits": "system.description.additionalTraits",
+    "subclass": "system.description.subclass",
+    "flagsTitle": "flags.dnd5e.title",
+    "unlinkedSpells": {
+      "path": "system.unlinkedSpells",
+      "converter": "nameCollection"
+    }
+  },
+  "TableResult": {
+    "range": {
+      "path": "range",
+      "converter": "tableResultRange"
+    }
+  },
+  "Scene": {
+    "grid": {
+      "path": "grid",
+      "converter": "imperialToMetric"
+    },
+    "deltaTokens": {
+      "path": "tokens",
+      "converter": "tokens"
+    }
   }
 }

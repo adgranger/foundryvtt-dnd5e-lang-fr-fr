@@ -159,12 +159,8 @@
             "activities": {
                 "summon": {
                     "profiles": {
-                        "Skeleton (bones)": {
-                            "name": "Squelette (os)"
-                        },
-                        "Zombie (corpse)": {
-                            "name": "Zombi (cadavre)"
-                        }
+                        "Skeleton (bones)": "Squelette (os)",
+                        "Zombie (corpse)": "Zombi (cadavre)"
                     }
                 }
             }
@@ -175,21 +171,11 @@
             "activities": {
                 "summon": {
                     "profiles": {
-                        "Huge Object (costs 3)": {
-                            "name": "Objet TG (coût 3)"
-                        },
-                        "Large Object (costs 2)": {
-                            "name": "Objet G (coût 2)"
-                        },
-                        "Medium Object": {
-                            "name": "Objet M"
-                        },
-                        "Small Object": {
-                            "name": "Objet P"
-                        },
-                        "Tiny Object": {
-                            "name": "Objet TP"
-                        }
+                        "Huge Object (costs 3)": "Objet TG (coût 3)",
+                        "Large Object (costs 2)": "Objet G (coût 2)",
+                        "Medium Object": "Objet M",
+                        "Small Object": "Objet P",
+                        "Tiny Object": "Objet TP"
                     }
                 }
             }
@@ -212,7 +198,7 @@
             "name": "Aversion/attirance",
             "description": "<p>À l'incantation, choisissez si le sort produit de l'aversion ou de l'attirance, et ciblez une créature ou un objet de taille TG ou inférieure. Spécifiez alors une catégorie de créatures, comme les dragons rouges, les gobelins ou les vampires. Toute créature de la catégorie désignée effectue un jet de sauvegarde de Sagesse quand elle entre dans un rayon de 36 m de la cible. Ce qui arrive à une telle créature si elle rate son JS dépend de votre choix : attirance ou aversion.</p><p><strong>Attirance.</strong> La créature subit l'état &Reference[Charmed apply=false]. La créature Charmée doit consacrer le déplacement de ses tours à se rapprocher autant que possible de la cible par le chemin le plus sûr. Si la créature se trouve dans un rayon de 1,50 m de la cible, elle ne peut s'en éloigner volontairement. Si la cible inflige des dégâts à la créature Charmée, cette dernière peut réitérer le JS Sagesse pour mettre un terme à l'effet, comme décrit ci-après.</p><p><strong>Aversion.</strong> La créature subit l'état &Reference[Frightened apply=false]. La créature Effrayée doit consacrer le déplacement de ses tours à s'éloigner autant que possible de la cible par le chemin le plus sûr.</p><p><strong>Mettre fin à l'effet.</strong> Une créature ainsi Charmée ou Effrayée qui termine son tour au-delà de 36 m de la cible effectue un jet de sauvegarde de Sagesse. En cas de réussite, la créature n'est plus affectée par la cible. Une créature qui réussit son JS contre cet effet est immunisée contre celui-ci pendant 1 minute, après quoi elle peut de nouveau être affectée.</p>",
             "materials": "un mélange de vinaigre et de miel",
-            "specialTarget": "Taille TG ou inférieure",
+            "target": "Taille TG ou inférieure",
             "activities": {
                 "Cast": {
                     "name": "Incanter"
@@ -306,7 +292,7 @@
             "name": "Projection astrale",
             "description": "<p>Vous et un maximum de huit créatures consentantes à portée projetez vos corps astraux dans le Plan Astral (le sort prend aussitôt fin si vous occupez déjà ce plan). Le corps abandonné par chaque cible reçoit l'état &Reference[Unconscious apply=false]{Inconscient}, dans un état d'animation suspendue ; il n'a pas besoin de s'alimenter ni de respirer et ne vieillit pas.</p><p>Le corps astral d'une cible ressemble en tout point à sa forme mortelle et reprend son profil de jeu, ainsi que ses biens. La différence principale réside dans l'ajout d'une cordelette d'argent qui part d'un point entre les omoplates de la forme astrale. Ce lien n'est plus visible au bout de 30 cm. Si la cordelette est sectionnée, ce qui ne peut arriver que lorsqu'un effet le mentionne spécifiquement, le corps de la cible et la forme astrale meurent aussitôt.</p><p>La forme astrale d'une cible peut voyager dans le Plan Astral. Dès qu'une forme astrale quitte ce plan, le corps de la cible et ses biens remontent le long de la corde argentée, et la cible reprend possession de son corps sur le nouveau plan.</p><p>Tous les dégâts et effets qui s'appliquent à une forme astrale ne concernent aucunement le corps physique de la cible, et réciproquement. Si le corps d'origine d'une cible ou sa forme astrale tombe à 0 point de vie, le sort prend fin pour elle. Le sort prend fin pour toutes les cibles si vous consacrez l'action Magie à le révoquer.</p><p>Quand le sort prend fin pour une cible qui n'est pas morte, celle-ci réapparaît dans son corps et émerge de son animation suspendue.</p>",
             "materials": "pour chaque cible affectée, une hyacinthe d'une valeur minimale de 1 000 po et un lingot d'argent ouvragé d'une valeur minimale de 100 po, composantes que le sort détruit",
-            "specialTarget": "vous et un maximum de huit créatures consentantes",
+            "target": "vous et un maximum de huit créatures consentantes",
             "effects": {
                 "Suspended Animation": {
                     "name": "Animation suspendue",
@@ -545,7 +531,7 @@
             "name": "Chaîne d'éclairs",
             "description": "<p>Vous projetez un trait de foudre vers une cible que vous voyez à portée. Trois éclairs jaillissent alors de cette cible vers un maximum de trois autres cibles, que vous choisissez, distantes de 9 m ou moins de la première. Toutes ces cibles peuvent être des créatures ou des objets, et ne peuvent être ciblées par plus d'un éclair.</p><p>Chaque cible effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Un éclair supplémentaire jaillit de la première cible vers une autre par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
             "materials": "trois broches en argent",
-            "specialTarget": "les cibles secondaires distantes de 9 m ou moins de la première"
+            "target": "les cibles secondaires distantes de 9 m ou moins de la première"
         },
         "Charm Monster": {
             "name": "Charme-monstre",
@@ -772,7 +758,7 @@
                 "Contingency Spell": {
                     "name": "Sort prémédité",
                     "changes": {
-                        "name": "Préméditation : {}"
+                        "0": "Préméditation : {}"
                     }
                 }
             }
@@ -800,7 +786,7 @@
             "name": "Contrôle du climat",
             "description": "<p>Vous prenez le contrôle du climat dans un rayon de 7,5 km pour toute la durée. Vous devez vous trouver en extérieur pour lancer ce sort, qui prend fin prématurément dès que vous êtes à l'intérieur.</p><p>À l'incantation du sort, vous altérez les conditions climatiques du moment, déterminées par le MD. Vous pouvez modifier les précipitations, la température et le vent. Les nouvelles conditions mettent 1d4 x 10 minutes à prendre effet. Après ce laps de temps, vous pouvez à nouveau altérer les conditions. Quand le sort prend fin, le temps revient progressivement à la normale.</p><p>Lorsque vous changez les conditions climatiques, identifiez celles du moment dans les tables qui suivent et changez-en le stade d'un cran, vers le haut ou le bas. Lorsque vous modifiez le vent, vous pouvez en changer la direction.</p><details><summary><strong>Précipitations</strong></summary><table><thead><tr><td>Stade</td><td>Conditions</td></tr></thead><tbody><tr><td>1</td><td>Ciel dégagé</td></tr><tr><td>2</td><td>Quelques nuages</td></tr><tr><td>3</td><td>Ciel chargé ou brume au sol</td></tr><tr><td>4</td><td>Pluie, grêle ou neige</td></tr><tr><td>5</td><td>Pluie torrentielle, grêle battante ou blizzard</td></tr></tbody></table></details><details><summary><strong>Température</strong></summary><table><thead><tr><td>Stade</td><td>Conditions</td></tr></thead><tbody><tr><td>1</td><td>Caniculaire</td></tr><tr><td>2</td><td>Chaud</td></tr><tr><td>3</td><td>Doux</td></tr><tr><td>4</td><td>Frais</td></tr><tr><td>5</td><td>Froid</td></tr><tr><td>6</td><td>Glacial</td></tr></tbody></table></details><details><summary><strong>Vent</strong></summary><table><thead><tr><td>Stade</td><td>Conditions</td></tr></thead><tbody><tr><td>1</td><td>Calme</td></tr><tr><td>2</td><td>Vent modéré</td></tr><tr><td>3</td><td>Vent fort</td></tr><tr><td>4</td><td>Vent violent</td></tr><tr><td>5</td><td>tempête</td></tr></tbody></table></details>",
             "materials": "de l'encens qui brûle",
-            "specialTarget": "climat dans un rayon de 7,5 km",
+            "target": "climat dans un rayon de 7,5 km",
             "activities": {
                 "Cast and Control": {
                     "name": "Incanter et contrôler",
@@ -826,7 +812,7 @@
             "description": "<p>Vous ne pouvez lancer ce sort que de nuit. Choisissez jusqu'à trois cadavres d'Humanoïdes de taille M ou P à portée. Chaque cadavre devient une <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmGhoul000000000]{goule}</strong> sous votre contrôle (profil dans le <em>Manuel des monstres</em>).</p><p>Par une action Bonus à chacun de vos tours, vous pouvez donner des ordres mentaux à toute créature que vous avez créée par ce sort et qui se trouve dans un rayon de 36 m de vous. Vous pouvez ainsi contrôler plusieurs créatures, en les choisissant, à condition de leur intimer le même ordre. Vous décidez quelle action la créature va entreprendre et où elle se déplacera à son tour suivant, ou pouvez vous contenter de donner une instruction générale, comme garder un lieu donné. Sans instruction de votre part, la créature entreprend l'action &Reference[Dodge] et ne se déplace que pour éviter les dangers. Une fois qu'elle a reçu un ordre, la créature s'y soumet jusqu'à ce que la tâche soit accomplie.</p><p>La créature reste sous votre contrôle pendant 24 heures, après quoi elle cesse d'obéir aux ordres que vous lui avez donnés. Pour garder le contrôle du Mort-vivant pendant 24 heures de plus, vous devez relancer ce sort sur lui avant la fin des 24 heures en cours. Relancer le sort ainsi réaffirme votre emprise sur un maximum de trois créatures que vous avez animées par ce sort, au lieu d'en animer de nouvelles.</p><p><strong>Emplacement de niveau supérieur.</strong> Avec un emplacement du 7<sup>e</sup> niveau, vous prenez ou prolongez le contrôle de quatre <strong>goules</strong>. Avec un emplacement du 8<sup>e</sup> niveau, vous prenez ou prolongez le contrôle de cinq <strong>goules</strong>, ou de deux <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmGhast000000000]{blêmes}</strong> ou <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmWight000000000]{nécrontes}</strong>. Avec un emplacement du 9<sup>e</sup> niveau, vous prenez ou prolongez le contrôle de six <strong>goules</strong>, de trois <strong>blêmes</strong> ou <strong>nécrontes</strong>, ou de deux <strong>@UUID[Compendium.dnd5e.actors24.Actor.mmMummy000000000]{momies}</strong>. Tous ces profils se trouvent dans le <em>Manuel des monstres</em>.</p>",
             "materials": "un onyx noir d'une valeur minimale de 150 po pour chaque cadavre",
             "condition": "que de nuit",
-            "specialTarget": "cadavres d'Humanoïdes de taille M ou P ou d'un mort-vivant créé précédemment",
+            "target": "cadavres d'Humanoïdes de taille M ou P ou d'un mort-vivant créé précédemment",
             "activities": {
                 "Animate Corpses": {
                     "name": "Animer les cadavres"
@@ -921,7 +907,7 @@
         "Demiplane": {
             "name": "Demi-plan",
             "description": "<p>Vous créez une porte ombreuse de taille M sur une surface solide plate que vous voyez à portée. Cette porte peut s'ouvrir et se fermer, et ouvre sur un demi-plan : une salle vide dont chaque dimension est de 9 m, faite de bois ou de pierre (à votre convenance).</p><p>Quand le sort prend fin, la porte disparaît et tous les objets encore dans le demi-plan y restent. Toutes les créatures qui s'y trouvent encore y restent, sauf si celles qui décident d'être renvoyées à la disparition de la porte, qui se retrouvent dans les espaces inoccupés les plus proches de l'espace de la porte, avec l'état &Reference[Prone].</p><p>Chaque fois que vous lancez ce sort, vous pouvez créer un nouveau demi-plan ou décider que la porte ombreuse ouvre sur un demi-plan que vous aviez engendré par une précédente incantation du même sort. Par ailleurs, si vous connaissez la nature et le contenu d'un demi-plan créé par ce sort, mais lancé par une autre créature, vous pouvez décider que votre porte ombreuse donne sur ce demi-plan.</p>",
-            "specialTarget": "surface plate"
+            "target": "surface plate"
         },
         "Detect Evil and Good": {
             "name": "Détection du mal et du bien",
@@ -982,7 +968,7 @@
             "name": "Désintégration",
             "description": "<p>Vous projetez un rayon vert vers une cible que vous voyez à portée. La cible peut être une créature, un objet non magique ou une création de force magique, telle que la paroi formée par <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWallofForc]{mur de force}</em>.</p><p>Une créature ciblée par ce sort effectue un jet de sauvegarde de Dextérité. En cas d'échec, elle subit 10d6 + 40 dégâts de force. Si ces dégâts la font tomber à 0 point de vie, elle est désintégrée en poussière grise avec tout ce qu'elle porte. La cible ne peut être ramenée à la vie que par <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplTrueResurr]{résurrection suprême}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{souhait}</em>.</p><p>Ce sort désintègre automatiquement un objet de taille G ou inférieure non magique, de même qu'une création de force magique dans la limite de cette taille. Dans le cas d'une taille TG ou supérieure, la désintégration ne concerne qu'une portion équivalente à un Cube de 3 m.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 3d6 par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
             "materials": "une magnétite et de la poussière",
-            "specialTarget": "une créature, un objet non magique ou une création de force magique"
+            "target": "une créature, un objet non magique ou une création de force magique"
         },
         "Dispel Evil and Good": {
             "name": "Dissipation du mal et du bien",
@@ -1046,7 +1032,7 @@
         "Divine Word": {
             "name": "Parole divine",
             "description": "<p>Vous prononcez une parole porteuse de la puissance des Plans Supérieurs. Chaque créature que vous choisissez à portée effectue un jet de sauvegarde de Charisme. En cas d'échec, une cible dotée de 50 points de vie ou moins subit un effet qui dépend de ses points de vie actuels, comme indiqué sur la table Effets de parole divine. Quels que soient ses points de vie actuels, une cible Céleste, Élémentaire, Fée ou Fiélon qui rate son JS est renvoyée d'office dans son plan d'origine (s'il ne s'y trouve pas déjà) et ne peut revenir sur votre plan actuel pendant 24 heures, sauf par le biais du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{souhait}</em>.</p><table><thead><tr><td>Points de vie</td><td>Effets de parole divine</td></tr></thead><tbody><tr><td>0–20</td><td>La cible meurt.</td></tr><tr><td>21–30</td><td>La cible subit les états &Reference[Deafened apply=false], &Reference[Blinded apply=false] et &Reference[Stunned apply=false] pendant 1 heure.</td></tr><tr><td>31–40</td><td>La cible subit les états Assourdi et Aveuglé pendant 10 minutes.</td></tr><tr><td>41–50</td><td>La cible subit l'état Assourdi pendant 1 minute.</td></tr></tbody></table>",
-            "specialTarget": "chaque créature que vous choisissez à portée",
+            "target": "chaque créature que vous choisissez à portée",
             "effects": {
                 "Death": {
                     "name": "Mort"
@@ -1261,7 +1247,7 @@
         "Eyebite": {
             "name": "Mauvais œil",
             "description": "<p>Pour toute la durée, vos yeux sont d'un noir d'encre. Une créature que vous choisissez parmi celles que vous voyez dans un rayon de 18 m doit réussir un jet de sauvegarde de Sagesse pour ne pas être affectée par l'un des effets suivants de votre choix, pour toute la durée.</p><p>À chacun de vos tours jusqu'à la fin du sort, vous pouvez entreprendre l'action Magie à cibler une autre créature, sans toutefois pouvoir choisir une créature qui a réussi son JS contre cette incantation du sort.</p><p><strong>Endormie.</strong> La cible subit l'état &Reference[Unconscious apply=false]. Elle reprend conscience si elle subit des dégâts ou si une autre créature consacre une action à la secouer.</p><p><strong>Nauséeuse.</strong> La cible subit l'état &Reference[Poisoned apply=false].</p><p><strong>Paniquée.</strong> La cible subit l'état &Reference[Frightened apply=false]. Ainsi Effrayée, la cible doit à chacun de ses tours entreprendre l'action &Reference[Dash] et s'éloigner de vous par le chemin le plus sûr et le plus court. Si la cible atteint un espace distant de plus de 18 m de vous d'où elle ne vous voit plus, cet effet prend fin.</p>",
-            "specialTarget": "ne peut pas cibler une créature qui a réussi un jet de sauvegarde contre ce sort",
+            "target": "ne peut pas cibler une créature qui a réussi un jet de sauvegarde contre ce sort",
             "activities": {
                 "Initial Cast": {
                     "name": "Incantation initiale"
@@ -1343,9 +1329,7 @@
             "activities": {
                 "summon": {
                     "profiles": {
-                        "CR 0 Beast": {
-                            "name": "Bête FP 0"
-                        }
+                        "CR 0 Beast": "Bête FP 0"
                     }
                 }
             }
@@ -1376,7 +1360,7 @@
             "name": "Orientation",
             "description": "<p>Vous trouvez magiquement le chemin le plus direct jusqu'à un lieu que vous nommez. Vous devez connaître cet endroit et le sort échoue si le lieu nommé est sur un autre plan d'existence, est une destination mobile (comme une forteresse en mouvement) ou un endroit générique (comme « l'antre d'un dragon vert »).</p><p>Pour toute la durée et tant que vous êtes sur le même plan d'existence que la destination, vous savez quelle distance vous en sépare et dans quelle direction elle se trouve. Chaque fois que vous avez le choix entre plusieurs itinéraires, vous savez automatiquement lequel est le plus direct.</p>",
             "materials": "des accessoires de divination, comme des cartes ou des runes, d'une valeur minimale de 100 po",
-            "specialTarget": "devez connaître cet endroit"
+            "target": "devez connaître cet endroit"
         },
         "Finger of Death": {
             "name": "Doigt de mort",
@@ -1481,7 +1465,7 @@
             "name": "Interdiction",
             "description": "<p>Vous créez une barrière contre le voyage magique qui protège jusqu'à 3 600 m2 d'espace au sol, sur une hauteur de 9 m. Pour toute la durée, aucune créature ne peut se téléporter dans la zone ou y pénétrer par le biais d'un accès magique comme celui que crée le sort <em>portail</em>. Le sort proscrit tout voyage planaire dans la zone, ce qui empêche quiconque de s'y rendre depuis le Plan Astral, le Plan Éthéré, la Féerie ou la Gisombre, ou par le biais du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplPlaneShift]{changement de plan}</em>.</p><p>De plus, le sort inflige des dégâts aux types de créature que vous désignez à l'incantation. Choisissez un ou plusieurs types parmi les suivants : Aberrations, Célestes, Élémentaires, Fées, Fiélons et Morts-vivants. Lorsqu'une créature désignée entre dans la zone pour la première fois d'un tour ou y termine son tour, elle subit 5d10 dégâts nécrotiques ou radiants (vous choisissez à l'incantation du sort).</p><p>Vous pouvez choisir un mot de passe à l'incantation du sort. Une créature qui prononce ce sésame en pénétrant dans la zone ne subit aucun dégât du sort.</p><p>La zone du sort ne peut pas chevaucher celle d'un autre sort d'<em>interdiction</em>. Si vous lancez chaque jour <em>interdiction</em> au même endroit pendant 30 jours, le sort persiste jusqu'à dissipation, les composantes matérielles étant détruites à la dernière incantation.</p>",
             "materials": "poudre de rubis d'une valeur minimale de 1 000 po",
-            "specialTarget": "3 600 m2 d'espace au sol, sur une hauteur de 9 m",
+            "target": "3 600 m2 d'espace au sol, sur une hauteur de 9 m",
             "activities": {
                 "Create Ward": {
                     "name": "Créer une barrière"
@@ -1673,7 +1657,7 @@
             "name": "Protections et sceaux",
             "description": "<p>Vous créez une barrière qui protège un espace au sol d'une surface maximale de 225 mètres carrés. La zone protégée peut atteindre 6 m de haut et se présenter comme une zone carrée de 15 m de côté, cent carrés de 1,50 m de côté ou vingt-cinq carrés contigus de 3 m de côté.</p><p>À l'incantation du sort, vous pouvez spécifier quels individus ne seront pas affectés par les effets du sort. Vous pouvez également définir un mot de passe immunisant contre ces effets l'individu qui le prononce dans un rayon de 1,50 m de la zone protégée.</p><p>Le sort crée les effets ci-après au sein de la zone protégée. <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{Dissipation de la magie}</em> n'a en soi aucun effet sur <em>protections et sceaux</em>, mais chacun des effets suivants peut être dissipé. Si ces quatre effets sont dissipés, <em>protections et sceaux</em> prend fin. Si vous lancez quotidiennement ce sort sur la même zone pendant 365 jours, il y persiste jusqu'à ce que tous ses effets soient dissipés.</p><p><strong>Couloirs.</strong> La brume envahit les couloirs protégés, dans lesquels la &Reference[HeavilyObscured]{Visibilité devient nulle}. De plus, à chaque intersection ou embranchement qui présente un choix de direction, toute créature autre que vous a 50 % de chances de croire qu'elle a pris une direction autre que celle qu'elle a réellement empruntée, voire radicalement opposée.</p><p><strong>Escaliers.</strong> Tous les escaliers de la zone protégée sont envahis de filandres de la première à la dernière marche (équivalent du sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplWeb0000000]{toile d'araignée}</em>). Tant que persiste le sort <em>protections et sceaux</em>, cette masse filandreuse se reconstitue en 10 minutes si on la détruit.</p><p><strong>Portes.</strong> Toutes les portes de la zone protégée sont magiquement verrouillées, comme si elles étaient condamnées par le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneLock]{verrou magique}</em>. De plus, vous pouvez assortir un maximum de dix portes d'une illusion afin qu'elles passent pour de simples pans de mur.</p><p><strong>Autres effets du sort.</strong> Appliquez l'un des effets magiques suivants à la zone protégée :</p><ul><li><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDancingLig]{Lumières dansantes}</em> dans quatre couloirs, avec une séquence simple que les lumières répètent tant que le sort persiste</li><li><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMouth]{Bouche magique}</em> en deux endroits</li><li><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{Nuage nauséabond}</em> en deux endroits (les vapeurs se reconstituent en 10 minutes si dispersées alors que persiste <em>protections et sceaux</em>)</li><li><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{Bourrasque}</em> dans un couloir (le vent y souffle de manière continue tant que le sort persiste)</li><li><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSuggestion]{Suggestion}</em> dans un carré de 1,50 m de côté ; toute créature qui pénètre dans ce carré reçoit mentalement la suggestion</li></ul>",
             "materials": "sceptre en argent d'une valeur minimale de 10 po",
-            "specialTarget": "un espace au sol d'une surface maximale de 225 mètres carrés"
+            "target": "un espace au sol d'une surface maximale de 225 mètres carrés"
         },
         "Guidance": {
             "name": "Assistance",
@@ -1826,7 +1810,7 @@
             "name": "Festin des héros",
             "description": "<p>Vous invoquez un festin qui se présente sur une surface dans un Cube inoccupé de 3 m, à côté de vous. Il faut 1 heure pour ingérer ce festin, tous les plats disparaissant à l'issue de cet intervalle. Les bénéfices ne se font pas sentir avant la fin de l'heure. Un maximum de douze créatures peuvent participer au banquet.</p><p>Une créature qui a figuré parmi les convives reçoit plusieurs bénéfices, qui persistent pendant 24 heures. Elle bénéficie de la &Reference[damageResistance]{Résistance} aux dégâts de poison, et de l'Immunité contre les états &Reference[Frightened] et &Reference[Poisoned]. Son maximum de points de vie augmente en outre de 2d10 et elle reçoit ce même nombre de points de vie.</p>",
             "materials": "un vase incrusté de gemmes d'une valeur minimale de 1 000 po, que le sort détruit",
-            "specialTarget": "inoccupé",
+            "target": "inoccupé",
             "activities": {
                 "Conjure Feast": {
                     "name": "Invoquer un festin"
@@ -2180,7 +2164,7 @@
             "name": "Possession",
             "description": "<p>Votre corps sombre en catatonie tandis que votre âme le quitte pour pénétrer dans le récipient ayant servi de composante matérielle. Tant que votre âme occupe ce contenant, vous restez conscient de l'environnement comme si vous occupiez l'espace du récipient. Vous ne pouvez pas vous déplacer ni jouer de &Reference[Reaction]. La seule action que vous puissiez entreprendre consiste à projeter votre âme à une distance maximale de 30 m du récipient, soit en reprenant possession de votre corps (ce qui met un terme au sort) soit en tentant de posséder un autre corps Humanoïde.</p><p>Vous pouvez tenter de posséder tout Humanoïde dans un rayon de 30 m de vous, à condition de le voir (les créatures protégées par le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicCircl]{cercle magique}</em> ou <em>@UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{protection contre le mal et le bien}</em> ne peuvent pas être possédées). La cible effectue un jet de sauvegarde de Charisme. En cas d'échec, votre âme se transporte dans le corps de la cible et l'âme de celle-ci se retrouve séquestrée dans le récipient. En cas de réussite, la cible résiste à votre tentative de possession et vous devez attendre 24 heures pour essayer à nouveau de la posséder.</p><p>Une fois que vous possédez le corps d'une créature, vous la contrôlez. Vos points de vie et dés de vie, vos valeurs de Force, Dextérité et Constitution, votre Vitesse et vos sens sont remplacés par ceux de la créature. Vous conservez pour le reste votre profil.</p><p>De son côté, l'âme de la créature possédée peut percevoir l'environnement depuis le récipient en usant de ses propres sens, mais elle ne peut pas se déplacer et subit l'état Neutralisé.</p><p>Tant que vous possédez un corps, vous pouvez entreprendre l'action Magie pour quitter le corps hôte et retourner dans le récipient si celui-ci se trouve dans un rayon de 30 m, l'âme de la créature hôte retrouvant alors son corps. Si le corps hôte meurt alors que vous le possédez, la créature meurt et vous effectuez un jet de sauvegarde de Charisme contre votre propre DD de sauvegarde des sorts. En cas de réussite, vous retournez dans le récipient si celui-ci se trouve dans un rayon de 30 m. Dans le cas contraire, vous mourez.</p><p>Si le contenant est détruit ou que le sort prend fin, votre âme retrouve votre corps. Si votre corps est distant de plus de 30 m de vous ou s'il est « mort », vous mourez. Si l'âme d'une autre créature occupe le récipient lorsqu'il est détruit, l'âme de celle-ci retrouve son corps s'il est vivant et dans un rayon de 30 m d'elle. Sans cela, la créature meurt.</p><p>Le récipient est détruit quand le sort prend fin.</p>",
             "materials": "une gemme, un cristal ou un reliquaire d'une valeur minimale de 500 po",
-            "specialTarget": "récipient ayant servi de composante matérielle",
+            "target": "récipient ayant servi de composante matérielle",
             "activities": {
                 "Transfer Soul": {
                     "name": "Transférer l'âme"
@@ -2222,21 +2206,21 @@
                     "name": "Arme magique +1",
                     "description": "<p>Jusqu'à la fin du sort, l'arme devient magique, dotée d'un bonus de +1 aux jets d'attaque et aux jets de dégâts.</p>",
                     "changes": {
-                        "name": "{} magique +1"
+                        "2": "{} magique +1"
                     }
                 },
                 "Magic Weapon +2": {
                     "name": "Arme magique +2",
                     "description": "<p>Jusqu'à la fin du sort, l'arme devient magique, dotée d'un bonus de +2 aux jets d'attaque et aux jets de dégâts.</p>",
                     "changes": {
-                        "name": "{} magique +2"
+                        "2": "{} magique +2"
                     }
                 },
                 "Magic Weapon +3": {
                     "name": "Arme magique +3",
                     "description": "<p>Jusqu'à la fin du sort, l'arme devient magique, dotée d'un bonus de +3 aux jets d'attaque et aux jets de dégâts.</p>",
                     "changes": {
-                        "name": "{} magique +3"
+                        "2": "{} magique +3"
                     }
                 }
             }
@@ -2343,12 +2327,8 @@
                 "Create Illusion": {
                     "name": "Créer une illusion",
                     "profiles": {
-                        "Image": {
-                            "name": "Image"
-                        },
-                        "Sound": {
-                            "name": "Son"
-                        }
+                        "Image": "Image",
+                        "Sound": "Son"
                     }
                 }
             }
@@ -2356,8 +2336,8 @@
         "Mirage Arcane": {
             "name": "Mirage",
             "description": "<p>Vous faites en sorte que l'environnement d'une zone carrée de 1,5 km de côté apparaisse différemment sur tous les plans sensoriels. Ainsi, un champ ou une route pourrait se présenter comme un marais, une colline, une crevasse glaciaire ou quelque autre environnement accidenté ou infranchissable. Une mare pourrait apparaître comme une jolie prairie, un précipice comme une pente douce et un ravin comme une route large et dégagée.</p><p>De même, vous pouvez altérer l'aspect des bâtiments ou en ajouter là où il n'y en a pas. Le sort ne permet pas de déguiser ni de cacher des créatures, ni d'en ajouter.</p><p>L'illusion comprend des éléments auditifs, visuels, tactiles et olfactifs, si bien qu'un sol dégagé peut être transformé en Terrain difficile (et vice versa) ou gêner les déplacements dans la zone. Tout élément du terrain illusoire (pierre ou branche, par exemple) retiré de la zone du sort disparaît aussitôt.</p><p>Les créatures dotées de la &Reference[Truesight] percent l'illusion et perçoivent le véritable environnement. Tous les autres éléments de l'illusion restent toutefois en place, si bien qu'une telle créature, consciente de l'illusion, peut toujours interagir physiquement avec ces éléments.</p>",
-            "specialRange": "champ de vision",
-            "specialTarget": "zone carrée de 1,5 km",
+            "range": "champ de vision",
+            "target": "zone carrée de 1,5 km",
             "activities": {
                 "Alter Terrain": {
                     "name": "Altérer l'environnement"
@@ -2504,7 +2484,7 @@
             "name": "Changement de plan",
             "description": "<p>Vous et un maximum de huit créatures consentantes avec lesquelles vous formez un cercle en vous tenant par la main êtes transportés sur un autre plan d'existence. Vous pouvez spécifier une destination en des termes généraux, comme la cite d'Airain sur le Plan Élémentaire du Feu ou le palais de Dispater sur la deuxième strate des Neuf Enfers, auquel cas vous apparaissez à destination ou à proximité (à l'appréciation du MD).</p><p>Ou bien, si vous connaissez la séquence de runes d'un cercle de téléportation sur un autre plan d'existence, ce sort vous transporte directement dans le cercle. Si le cercle de téléportation est trop petit pour accueillir toutes les créatures transportées, elles apparaissent dans les espaces inoccupés les plus proches du cercle.</p>",
             "materials": "une badine métallique fourchue d'une valeur minimale de 250 po, accordée avec un plan d'existence",
-            "specialTarget": "vous et un maximum de huit créatures consentantes",
+            "target": "vous et un maximum de huit créatures consentantes",
             "activities": {
                 "Transport": {
                     "name": "Transporter"
@@ -2723,7 +2703,7 @@
             "name": "Rappel à la vie",
             "description": "<p>D'un contact, vous ramenez à la vie une créature qui n'était pas un Mort-vivant quand elle est morte et dont la mort remonte à un maximum de 10 jours.</p><p>La créature est ramenée à la vie avec 1 point de vie. Ce sort neutralise également tous les poisons qui affectaient la créature au moment de mourir.</p><p>Ce sort referme toutes les blessures mortelles, mais ne fait pas repousser l'anatomie manquante. Si la créature a perdu une partie de son anatomie ou des organes essentiels à sa survie ; sa tête par exemple, le sort échoue automatiquement.</p><p>Revenir d'entre les morts demeure une épreuve. La cible subit un malus de -4 aux Tests d20. Chaque fois qu'elle termine un Repos long, ce malus diminue de 1, jusqu'à ce qu'il tombe à 0.</p>",
             "materials": "un diamant d'une valeur minimale de 500 po, que le sort détruit",
-            "specialTarget": "une créature morte",
+            "target": "une créature morte",
             "activities": {
                 "Revive": {
                     "name": "Ranimer"
@@ -2791,7 +2771,7 @@
             "name": "Réincarnation",
             "description": "<p>Vous touchez physiquement un Humanoïde mort ou l'un de ses restes. Si la créature n'est pas morte depuis plus de 10 jours, le sort forme un nouveau corps et appelle son âme pour prendre possession de ce corps. @Embed[Compendium.dnd5e.tables24.RollTable.phbsplReincarnat rollable classes=\"caption-top\"]</p><p>La créature réincarnée, qui fait les choix proposés par la description de l'espèce, se souvient de son ancienne vie et de ses expériences. Elle conserve les capacités dont elle disposait sous sa forme d'origine, si ce n'est qu'elle perd les traits de l'ancienne forme et acquiert ceux de la nouvelle.</p>",
             "materials": "des huiles rares d'une valeur minimale de 1 000 po, que le sort détruit",
-            "specialTarget": "Humanoïde mort ou l'un de ses restes"
+            "target": "Humanoïde mort ou l'un de ses restes"
         },
         "Remove Curse": {
             "name": "Délivrance des malédictions",
@@ -2801,7 +2781,7 @@
             "name": "Sphère résiliente",
             "description": "<p>Une sphère chatoyante séquestre une créature ou un objet de taille G ou inférieure à portée. Une créature non consentante doit réussir un jet de sauvegarde de Dextérité pour ne pas être confinée pour toute la durée.</p><p>Rien, ni les objets physiques, ni l'énergie, ni les autres effets de sort, ne peut franchir cette barrière dans un sens comme dans l'autre, mais la créature séquestrée peut respirer normalement. La sphère est immunisée contre tous les dégâts, et la créature ou l'objet enfermé ne peut subir de dégâts des attaques et effets émanant de l'autre côté, pas plus qu'une créature séquestrée ne peut infliger de dégâts vers l'extérieur.</p><p>La sphère, qui ne pèse rien, est juste assez grande pour contenir la créature ou l'objet. Une créature confinée peut consacrer son action à pousser sur les parois de la sphère et la faire rouler à concurrence de la moitié de sa propre Vitesse. De même, d'autres créatures peuvent ramasser le globe et le déplacer.</p><p>Le sort <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplDisintegra]{désintégration}</em>, s'il cible le globe, le détruit sans risque pour ce qui se trouve à l'intérieur.</p>",
             "materials": "une sphère de verre",
-            "specialTarget": "Taille G ou inférieure",
+            "target": "Taille G ou inférieure",
             "effects": {
                 "Enclosed in Sphere": {
                     "name": "Confinée dans la sphère",
@@ -2945,7 +2925,7 @@
             "name": "Scrutation",
             "description": "<p>Vous voyez et entendez une créature de votre choix, située sur le même plan d'existence que vous. La cible effectue un jet de sauvegarde de Sagesse, modifié par votre connaissance de la créature et le genre de lien physique que vous entretenez avec elle (voir les tables ci-après). La cible ignore contre quoi s'effectue le JS, et ressent juste une forme de malaise.</p><table><thead><tr><td>Votre connaissance de la cible est…</td><td>Modificateur au JS</td></tr></thead><tbody><tr><td>indirecte (vous avez entendu parler d'elle)</td><td>+5</td></tr><tr><td>directe (vous l'avez rencontrée)</td><td>+0</td></tr><tr><td>intime (vous la connaissez)</td><td>−5</td></tr></tbody></table><table><thead><tr><td>Vous disposez…</td><td>Modificateur au JS</td></tr></thead><tbody><tr><td>de son portrait ou autre représentation</td><td>−2</td></tr><tr><td>d'un vêtement ou autre bien personnel</td><td>−4</td></tr><tr><td>d'un élément anatomique, mèche de cheveux ou rognure d'ongle</td><td>−10</td></tr></tbody></table><p>En cas de JS réussi, la cible n'est pas affectée et vous ne pouvez plus réutiliser ce sort sur elle pendant 24 heures.</p><p>En cas d'échec, le sort crée un capteur Invisible et intangible dans un rayon de 3 m de la cible. Vous voyez et entendez par l'intermédiaire du capteur comme si vous y étiez. Le capteur se déplace avec la cible, en restant dans un rayon de 3 m d'elle pour toute la durée. Pour qui perçoit le capteur, celui-ci apparaît comme un orbe lumineux de la taille de votre poing.</p><p>Plutôt qu'une créature, vous pouvez cibler un lieu que vous avez déjà vu. Ce faisant, le capteur apparaît à l'endroit désigné et ne bouge plus.</p>",
             "materials": "un focaliseur d'une valeur minimale de 1 000 po, comme une boule de cristal, un miroir en argent ou une vasque remplie d'eau bénite",
-            "specialTarget": "créature sur le même plan d'existence ou un lieu que vous avez déjà vu",
+            "target": "créature sur le même plan d'existence ou un lieu que vous avez déjà vu",
             "activities": {
                 "Secondhand and Picture": {
                     "name": "Indirecte et portrait"
@@ -3020,7 +3000,8 @@
                 "See Invisibility": {
                     "name": "Détection de l'invisibilité",
                     "changes": {
-                        "system.attributes.senses.special": ";Plan Éthéré"
+                        "0": "",
+                        "1": ";Plan Éthéré"
                     }
                 }
             }
@@ -3028,7 +3009,7 @@
         "Seeming": {
             "name": "Apparence trompeuse",
             "description": "<p>Vous modifiez de manière illusoire l'aspect des créatures que vous choisissez parmi celles que vous voyez à portée. Une créature non consentante peut effectuer un jet de sauvegarde de Charisme. En cas de réussite, elle n'est pas affectée par le sort.</p><p>Vous pouvez donner le même aspect à chaque cible ou varier les illusions. Le sort altère l'aspect du corps des cibles comme de leur équipement. Vous pouvez aussi les faire paraître plus grandes ou plus petites, individuellement, à concurrence de 30 cm, et les faire passer pour plus lourdes ou plus légères. Le nouvel aspect de chaque cible doit présenter la même configuration de membres que la sienne, mais les détails de l'illusion sont pour le reste laissés à votre guise. Le sort persiste pour toute la durée.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à l'accoutrement d'une créature, ce couvre-chef n'est pas tangible.</p><p>Une créature peut entreprendre l'action Étude pour examiner une cible et effectuer un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sort. En cas de réussite, elle se rend compte que la cible est déguisée.</p>",
-            "specialTarget": "créature visible",
+            "target": "créature visible",
             "activities": {
                 "Unwilling Save": {
                     "name": "Sauvegarde non consentie"
@@ -3096,7 +3077,7 @@
             "name": "Crosse des druides",
             "description": "<p>Le bois d'un gourdin ou d'un bâton de combat que vous tenez s'imprègne du pouvoir de la nature. Pour toute la durée, vous pouvez recourir à votre caractéristique d'incantation plutôt qu'à la Force pour les jets d'attaque et de dégâts de vos attaques de corps à corps effectuées avec cette arme. Le dé de dégâts de l'arme passe en outre à d8. Si l'attaque inflige des dégâts, il peut s'agir de dégâts de force ou des dégâts normaux de l'arme (à votre convenance).</p><p>Le sort prend fin prématurément si vous le relancez ou si vous lâchez l'arme.</p><p><strong>Amélioration de sort mineur.</strong> Le dé de dégâts change lorsque vous atteignez les niveaux 5 (d10), 11 (d12) et 17 (2d6).</p>",
             "materials": "du gui",
-            "specialTarget": "tenir un gourdin ou un bâton de combat",
+            "target": "tenir un gourdin ou un bâton de combat",
             "activities": {
                 "Imbue Weapon": {
                     "name": "Imprégner une arme"
@@ -3109,25 +3090,25 @@
                 "Shillelagh (1d8)": {
                     "name": "Crosse des druides (1d8)",
                     "changes": {
-                        "name": "{} (Crosse des druides)"
+                        "3": "{} (Crosse des druides)"
                     }
                 },
                 "Shillelagh (1d10)": {
                     "name": "Crosse des druides (1d10)",
                     "changes": {
-                        "name": "{} (Crosse des druides)"
+                        "3": "{} (Crosse des druides)"
                     }
                 },
                 "Shillelagh (1d12)": {
                     "name": "Crosse des druides (1d12)",
                     "changes": {
-                        "name": "{} (Crosse des druides)"
+                        "3": "{} (Crosse des druides)"
                     }
                 },
                 "Shillelagh (2d6)": {
                     "name": "Crosse des druides (2d6)",
                     "changes": {
-                        "name": "{} (Crosse des druides)"
+                        "3": "{} (Crosse des druides)"
                     }
                 }
             }
@@ -3173,7 +3154,7 @@
             "name": "Simulacre",
             "description": "<p>Vous façonnez un simulacre d'une Bête ou d'un Humanoïde qui se trouve dans un rayon de 3 m pendant tout le temps d'incantation du sort. Vous terminez l'incantation en touchant physiquement la créature en même temps qu'un tas de neige ou de glace de même taille que la créature, le tas prenant alors la forme du simulacre ; une nouvelle créature. Il reprend le profil de la créature d'origine au moment de l'incantation, si ce n'est qu'il s'agit d'un Artificiel, que son maximum de points de vie est moitié moindre et qu'il ne peut pas lancer de sorts.</p><p>Le simulacre est Amical envers vous et les créatures que vous désignez. Il obéit à vos ordres et agit à votre tour au combat. Le simulacre ne peut pas gagner de niveaux ni prendre de Repos, courts ou longs.</p><p>Si le simulacre subit des dégâts, le seul moyen de lui restituer des points de vie consiste à le réparer lors d'un Repos long de votre part, durant lequel vous devez dépenser des composantes : l'équivalent de 100 po par point de vie restitué. Le simulacre doit rester dans un rayon de 1,50 m de vous durant toute l'opération.</p><p>Le simulacre persiste jusqu'à ce qu'il tombe à 0 point de vie, après quoi il retrouve sa substance aqueuse et fond. Si vous relancez ce sort, tout autre simulacre actif que vous avez créé par ce même sort est aussitôt détruit.</p>",
             "materials": "poudre de rubis d'une valeur minimale de 1 500 po, que le sort détruit",
-            "specialTarget": "en même temps qu'un tas de neige ou de glace",
+            "target": "en même temps qu'un tas de neige ou de glace",
             "activities": {
                 "Create Simulacrum": {
                     "name": "Créer un simulacre"
@@ -3214,7 +3195,7 @@
         "Spare the Dying": {
             "name": "Stabilisation",
             "description": "<p>Choisissez à portée une créature dotée de 0 point de vie, mais qui n'est pas morte. La créature est Stabilisée.</p><p><strong>Amélioration de sort mineur.</strong> La portée augmente lorsque vous atteignez les niveaux 5 (9 m), 11 (18 m) et 17 (36 m).</p>",
-            "specialTarget": "0 point de vie, mais qui n'est pas morte",
+            "target": "0 point de vie, mais qui n'est pas morte",
             "effects": {
                 "Stabilized": {
                     "name": "Stabilisé"
@@ -3228,7 +3209,7 @@
                 "Bestial Communication": {
                     "name": "Communication bestiale",
                     "changes": {
-                        "system.traits.languages.custom": ";comprend les Bêtes et communique verbalement avec elles"
+                        "0": ";comprend les Bêtes et communique verbalement avec elles"
                     }
                 }
             }
@@ -3474,7 +3455,7 @@
                 "Bonded Telepathy": {
                     "name": "Lié par télépathie",
                     "changes": {
-                        "system.traits.languages.custom": ";Lié par télépathie"
+                        "0": ";Lié par télépathie"
                     }
                 }
             }
@@ -3482,7 +3463,7 @@
         "Teleport": {
             "name": "Téléportation",
             "description": "<p>Ce sort vous transporte instantanément, ainsi que huit créatures consentantes que vous voyez à portée, ou bien un seul objet que vous voyez à portée, vers la destination sélectionnée. Si vous ciblez un objet, il doit être de taille G ou inférieure et ne doit pas être porté par une créature non consentante.</p><p>Vous devez connaître la destination que vous choisissez et elle doit se trouver sur le même plan d'existence que vous. Votre niveau de familiarité avec la destination détermine si vous y parvenez effectivement. Le MD lance [[/gmr 1d100]] en consultant la table Résultat de téléportation et l'explication correspondante.</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{Résultat de téléportation}</strong></summary><table><thead><tr><td>Familiarité</td><td>Incident</td><td>Zone comparable</td><td>Déviation</td><td>Sur place</td></tr></thead><tbody><tr><td>Cercle permanent</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Objet lié</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Grande familiarité</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>Vu plusieurs fois</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>Vu une fois ou décrit</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>Destination factice</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>Familiarité.</strong> Les termes de la colonne Familiarité de la table se comprennent comme suit :</p><ul><li>« Cercle permanent » fait référence à un cercle de téléportation permanent dont vous connaissez la séquence de runes.</li><li>« Objet lié » indique que vous détenez un objet rapporté de la destination souhaitée au cours des six derniers mois, comme un livre issu de la bibliothèque d'un Magicien.</li><li>« Grande familiarité » correspond à un endroit où vous avez passé du temps, un lieu que vous avez étudié en profondeur ou un site que vous voyez à l'incantation du sort.</li><li>« Vu plusieurs fois » représente un lieu que vous avez vu plus d'une fois, mais que vous connaissez finalement assez peu.</li><li>« Vu une fois ou décrit » correspond à un site que vous n'avez vu qu'une fois, éventuellement par magie, ou un endroit qu'on vous a décrit avec un certain détail, éventuellement par le biais d'une carte.</li><li>« Destination factice » correspond à un lieu qui n'existe pas. Vous avez par exemple tenté de scruter le sanctuaire de l'ennemi, mais avez été dupé par une illusion, à moins que vous cherchiez à atteindre un lieu qui n'existe plus.</li></ul><p><strong>Incident.</strong> La magie imprévisible de ce sort se traduit par une mésaventure. Chaque créature téléportée (ou l'objet ciblé) subit [[/damage 3d10 type=force]]{3d10} dégâts de force et le MD rejoue sur la table pour voir où vous terminez (plusieurs incidents consécutifs sont possibles, entraînant chaque fois des dégâts).</p><p><strong>Zone comparable.</strong> Vous et votre groupe (ou l'objet ciblé) terminez dans une zone différente dont l'ambiance et l'aspect se rapprochent de la destination souhaitée. Vous apparaissez à l'endroit comparable le plus proche. Si vous souhaitiez rejoindre votre laboratoire, par exemple, vous pourriez aboutir dans celui d'une autre personne de la même ville.</p><p><strong>Déviation.</strong> Vous et votre groupe (ou l'objet ciblé) arrivez à [[/r 2d12 * 1.5]]{2d12 x 1,5} km et dans une direction aléatoire de la destination souhaitée. Lancez [[/r 1d8]] pour la direction : 1, est ; 2, sud-est ; 3, sud ; 4, sud-ouest ; 5, ouest ; 6, nord-ouest ; 7, nord ; 8, nord-est.</p><p><strong>Sur place.</strong> Vous et votre groupe (ou l'objet ciblé) arrivez à l'endroit souhaité.</p>",
-            "specialTarget": "vous ainsi que huit créatures ou bien un objet"
+            "target": "vous ainsi que huit créatures ou bien un objet"
         },
         "Teleportation Circle": {
             "name": "Cercle de téléportation",
@@ -3506,7 +3487,7 @@
         "Time Stop": {
             "name": "Arrêt du temps",
             "description": "<p>Vous mettez un bref coup d'arrêt à l'écoulement du temps, pour tout le monde sauf vous-même. Le temps s'arrête pour les autres créatures tandis que vous prenez 1d4 + 1 tours d'affilée, durant lesquels vous pouvez entreprendre des actions et vous déplacer comme en temps normal.</p><p>Ce sort prend fin si l'une des actions que vous entreprenez durant l'intervalle, ou l'un des effets créés, affecte une créature autre que vous ou un objet porté par quelqu'un d'autre que vous. Il se termine également si vous vous déplacez en un lieu distant de plus de 300 m de l'endroit où vous l'avez lancé.</p>",
-            "specialTarget": "toutes les créatures sauf vous-même",
+            "target": "toutes les créatures sauf vous-même",
             "activities": {
                 "utility": {
                     "roll": "Tours d'affilée"
@@ -3526,7 +3507,7 @@
                 "Universal Communication": {
                     "name": "Communication universelle",
                     "changes": {
-                        "system.traits.languages.custom": ";toute langue parlée et tout langage des signes"
+                        "0": ";toute langue parlée et tout langage des signes"
                     }
                 }
             }
@@ -3534,7 +3515,7 @@
         "Transport via Plants": {
             "name": "Voie végétale",
             "description": "<p>Ce sort crée un lien magique entre une plante inanimée à portée, de taille G ou supérieure, et une autre plante du même plan d'existence, sans contrainte de distance. Vous devez avoir déjà vu ou touché la plante de destination au moins une fois. Pour toute la durée, toutes les créatures peuvent s'avancer dans la plante ciblée et ressortir par la plante de destination en y consacrant 1,50 m de leur déplacement.</p>",
-            "specialTarget": "plante inanimée de taille G ou supérieure"
+            "target": "plante inanimée de taille G ou supérieure"
         },
         "Tree Stride": {
             "name": "Passage par les arbres",
@@ -3549,7 +3530,7 @@
             "name": "Résurrection suprême",
             "description": "<p>Vous touchez une créature morte depuis un maximum de 200 ans pour quelque raison que ce soit, hormis de vieillesse. La créature est ranimée avec tous ses points de vie.</p><p>Ce sort referme toutes les plaies, neutralise tous les poisons, soigne toutes les maladies magiques et lève toutes les malédictions qui affectaient la cible à sa mort. Il remplace les organes et membres endommagés ou manquants. Si la créature était un Mort-vivant, elle retrouve sa forme de vivant.</p><p>Le sort peut fournir un nouveau corps si celui d'origine n'existe plus, auquel cas vous devez prononcer le nom de la créature. Celle-ci apparaît en un espace inoccupé que vous choisissez dans un rayon de 3 m de vous.</p>",
             "materials": "au moins 25 000 po de diamants, que le sort détruit",
-            "specialTarget": "créature morte depuis un maximum de 200 ans pour quelque raison que ce soit, hormis de vieillesse."
+            "target": "créature morte depuis un maximum de 200 ans pour quelque raison que ce soit, hormis de vieillesse."
         },
         "True Seeing": {
             "name": "Vision suprême",
@@ -3585,13 +3566,13 @@
                 "True Strike": {
                     "name": "Coup au but",
                     "changes": {
-                        "name": "{} (Coup au but)"
+                        "1": "{} (Coup au but)"
                     }
                 },
                 "Ranged Weapon": {
                     "name": "Arme à distance",
                     "changes": {
-                        "name": "{} (Coup au but)"
+                        "1": "{} (Coup au but)"
                     }
                 }
             }
@@ -3675,7 +3656,7 @@
             "name": "Mur de glace",
             "description": "<p>Vous créez un mur de glace sur une surface solide à portée. Vous pouvez le façonner en dôme hémisphérique ou en globe d'un rayon maximal de 3 m, ou en faire une surface plane composée de dix pans de 3 m sur 3. Chaque pan doit être contigu avec un autre. Quelle que soit sa forme, le mur est épais de 30 cm et persiste pour toute la durée.</p><p>Si le mur traverse l'espace d'une créature à son apparition, la créature est repoussée du côté du mur que vous choisissez et effectue un jet de sauvegarde de Dextérité ; elle subit 10d6 dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p>Le mur est un objet que l'on peut endommager, ce qui permet d'y ouvrir une brèche. Il est doté d'une CA de 12, de 30 points de vie par section de 3 m de côté, il est immunisé contre les dégâts de froid, de poison et psychiques, et vulnérable aux dégâts de feu. Une section de 3 m de côté réduite à 0 point de vie est détruite et laisse une nappe d'air glacial dans l'espace qu'elle occupait.</p><p>Une créature qui traverse une telle nappe pour la première fois d'un tour effectue un jet de sauvegarde de Constitution et subit 5d6 dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts infligés par le mur à son apparition augmentent de 2d6 et ceux de la nappe d'air glacial de 1d6 par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
             "materials": "un morceau de quartz",
-            "specialTarget": "surface solide",
+            "target": "surface solide",
             "activities": {
                 "Create Globe": {
                     "name": "Créer un globe"
@@ -3776,7 +3757,7 @@
             "name": "Vent divin",
             "description": "<p>Vous et un maximum de dix créatures consentantes que vous choisissez à portée adoptez une forme gazeuse pour toute la durée et apparaissez comme autant de volutes. Tant qu'elle est sous cette forme brumeuse, une cible est dotée d'une Vitesse de vol de 90 m avec la faculté de vol stationnaire, de l'Immunité contre l'état À terre et de la Résistance aux dégâts contondants, perforants et tranchants. Les seules actions qu'elle peut entreprendre sous cette forme sont l'action &Reference[Dash] et commencer à reprendre sa forme normale au prix de l'action Magie. Il lui faut 1 minute pour retrouver sa forme d'origine, intervalle durant lequel elle subit l'état &Reference[Stunned apply=false]. Jusqu'à la fin du sort, la créature peut également reprendre une forme gazeuse, transformation qui lui demande aussi d'entreprendre l'action Magie et nécessite 1 minute.</p><p>Si une cible est sous forme gazeuse et en vol au moment où le sort prend fin, elle redescend au rythme de 18 m par round pendant 1 minute, jusqu'à atterrir sans heurt. Si cette minute ne lui a pas suffi à toucher le sol, la cible chute de la distance restante.</p>",
             "materials": "une bougie",
-            "specialTarget": "vous et un maximum de dix autres créatures",
+            "target": "vous et un maximum de dix autres créatures",
             "activities": {
                 "Transform to Cloud": {
                     "name": "Transformer en brume"
@@ -3821,7 +3802,7 @@
         "Word of Recall": {
             "name": "Mot de retour",
             "description": "<p>Vous-même et un maximum de cinq créatures consentantes situées dans un rayon de 1,50 m vous téléportez en un sanctuaire désigné à l'avance. Vous et les créatures téléportées apparaissez dans les espaces inoccupés les plus proches du point désigné quand vous avez préparé votre sanctuaire (voir plus loin). Si vous lancez ce sort sans avoir préparé de sanctuaire, il est sans effet.</p><p>Le sanctuaire se désigne au préalable en lançant ce sort en un lieu, tel qu'un temple.</p>",
-            "specialTarget": "vous-même et un maximum de cinq autres créatures",
+            "target": "vous-même et un maximum de cinq autres créatures",
             "activities": {
                 "Teleport to Sanctuary": {
                     "name": "Se téléporter au sanctuaire"
