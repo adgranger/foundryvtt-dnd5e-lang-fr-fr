@@ -496,7 +496,7 @@
         },
         "restriction": {
           "level": {
-            "Available": "Tous niveaux disponibles",
+            "Available": "Tout niveau disponible (y compris les sorts mineurs)",
             "label": "Niveau de sort",
             "hint": "Autoriser uniquement les choix à partir de sorts de ce niveau."
           },
@@ -1620,7 +1620,31 @@
     "RIDER": {
       "Activity": "Activité additionnelle d'enchantement",
       "Effect": "Effet additionnelle d'enchantement"
-    }
+    },
+    "Application": {
+      "Header": "Effets"
+    },
+    "BASE": {
+      "FIELDS": {
+        "changes": {
+          "element": {
+            "conditions": {
+              "label": "Modifier les conditions"
+            },
+            "type": {
+              "label": "Type"
+            }
+          }
+        },
+        "magical": {
+          "label": "Magique"
+        }
+      }
+    },
+    "Replacement": {
+      "Target": "Cible"
+    },
+    "Tab": "Effets"
   },
   "DND5E.ENCHANT": {
     "Title": "Enchanter",
@@ -1736,6 +1760,11 @@
       "LongRest": "Repos long",
       "Never": "Jamais",
       "ShortRest": "Repos court"
+    },
+    "FIELDS": {
+      "magical": {
+        "label": "Magique"
+      }
     }
   },
   "DND5E.Environment": "Environnement",
@@ -1864,7 +1893,7 @@
   "DND5E.FlagsReliableTalent": "Savoir-faire",
   "DND5E.FlagsReliableTalentHint": "Un jet de 9 ou moins est traité comme un 10 pour les compétences maîtrisées.",
   "DND5E.FlagsRemarkableAthlete": "Athlète remarquable",
-  "DND5E.FlagsRemarkableAthleteHint": "Ajoute la moitié de votre bonus de maîtrise à tous les jets de caractéristiques physiques non maîtrisées et aux jets d'initiative.",
+  "DND5E.FlagsRemarkableAthleteHint": "Avantage aux jets d'Initiative et aux tests d'Athlétisme.",
   "DND5E.FlagsWeaponCritThreshold": "Plage de critique des armes",
   "DND5E.FlagsWeaponCritThresholdHint": "Permet d'étendre la plage de coup critique ; par exemple, Critique amélioré ou supérieur.",
   "DND5E.FlagsSpellCritThreshold": "Plage de critique des sorts",
@@ -2828,8 +2857,8 @@
       "Cube": {
         "Label": "Cube",
         "Counted": {
-          "other": "cubes {number}",
-          "one": "cube {number}",
+          "other": "cubes",
+          "one": "cube",
           "oneSized": "Cube de {sizes}",
           "otherSized": "{number} Cubes de {sizes}"
         }
@@ -2837,8 +2866,8 @@
       "Cylinder": {
         "Label": "Cylindre",
         "Counted": {
-          "one": "cylindre {number}",
-          "other": "cylindres {number}",
+          "one": "cylindre",
+          "other": "cylindres",
           "oneSized": "Cylindre de {sizes}",
           "otherSized": "{number} Cylindres de {sizes}"
         }
@@ -2846,8 +2875,8 @@
       "Sphere": {
         "Label": "Sphère",
         "Counted": {
-          "one": "sphère {number}",
-          "other": "sphères {number}",
+          "one": "sphère",
+          "other": "sphères",
           "oneSized": "Sphère de {sizes}",
           "otherSized": "{number} Sphères de {sizes}"
         }
@@ -2857,16 +2886,16 @@
         "Counted": {
           "any": "n'importe quels espaces",
           "every": "tout espace",
-          "one": "{number} espace",
-          "other": "{number} espaces",
+          "one": "espace",
+          "other": "espaces",
           "each": "chaque espace"
         }
       },
       "Cone": {
         "Label": "Cône",
         "Counted": {
-          "one": "cône {number}",
-          "other": "cônes {number}",
+          "one": "cône",
+          "other": "cônes",
           "oneSized": "Cône de {sizes}",
           "otherSized": "{number} Cônes de {sizes}"
         }
@@ -2874,8 +2903,8 @@
       "Line": {
         "Label": "Ligne",
         "Counted": {
-          "one": "ligne {number}",
-          "other": "lignes {number}",
+          "one": "ligne",
+          "other": "lignes",
           "oneSized": "Ligne de {sizes}",
           "otherSized": "{number} Lignes de {sizes}"
         }
@@ -2883,8 +2912,8 @@
       "Emanation": {
         "Label": "Émanation",
         "Counted": {
-          "other": "émanations {number}",
-          "one": "émanation {number}",
+          "other": "émanations",
+          "one": "émanation",
           "oneSized": "Émanation de {sizes}",
           "otherSized": "{number} Émanations de {sizes}"
         }
@@ -2896,8 +2925,8 @@
         "Counted": {
           "every": "tout allié",
           "any": "n'importe quels alliés",
-          "one": "{number} allié",
-          "other": "{number} alliés",
+          "one": "allié",
+          "other": "alliés",
           "each": "chaque allié"
         },
         "Label": "Allié"
@@ -2905,8 +2934,8 @@
       "Circle": {
         "Label": "Cercle",
         "Counted": {
-          "one": "cercle {number}",
-          "other": "cercles {number}",
+          "one": "cercle",
+          "other": "cercles",
           "oneSized": "Cercle de {sizes}",
           "otherSized": "{number} Cercles de {sizes}"
         }
@@ -2916,8 +2945,8 @@
         "Counted": {
           "any": "n'importe quelles créatures",
           "every": "toute créature",
-          "one": "{number} créature",
-          "other": "{number} créatures",
+          "one": "créature",
+          "other": "créatures",
           "each": "chaque créature"
         }
       },
@@ -2926,8 +2955,8 @@
         "Counted": {
           "any": "n'importe quels ennemis",
           "every": "tout ennemi",
-          "one": "{number} ennemi",
-          "other": "{number} ennemis",
+          "one": "ennemi",
+          "other": "ennemis",
           "each": "chaque ennemi"
         }
       },
@@ -2936,8 +2965,8 @@
         "Counted": {
           "any": "n'importe quelles créatures ou objets",
           "every": "toute créature ou objet",
-          "one": "{number} créature ou objet",
-          "other": "{number} créatures ou objets",
+          "one": "créature ou objet",
+          "other": "créatures ou objets",
           "each": "chaque créature ou objet"
         }
       },
@@ -2946,16 +2975,16 @@
         "Counted": {
           "any": "n'importe quels objets",
           "every": "tout objet",
-          "one": "{number} objet",
-          "other": "{number} objets",
+          "one": "objet",
+          "other": "objets",
           "each": "chaque objet"
         }
       },
       "Radius": {
         "Label": "Rayon",
         "Counted": {
-          "one": "rayon {number}",
-          "other": "rayons {number}",
+          "one": "rayon",
+          "other": "rayons",
           "oneSized": "rayon de {sizes}",
           "otherSized": "{number} rayons de {sizes}"
         }
@@ -2966,8 +2995,8 @@
       "Square": {
         "Label": "Carré",
         "Counted": {
-          "one": "carré {number}",
-          "other": "carrés {number}",
+          "one": "carré",
+          "other": "carrés",
           "oneSized": "carré de {sizes}",
           "otherSized": "{number} carrés de {sizes}"
         }
@@ -2977,16 +3006,16 @@
         "Counted": {
           "any": "n'importe quelles cibles",
           "every": "chaque cible",
-          "one": "{number} cible",
-          "other": "{number} cibles",
+          "one": "cible",
+          "other": "cibles",
           "each": "chaque cible"
         }
       },
       "Wall": {
         "Label": "Mur",
         "Counted": {
-          "one": "mur {number}",
-          "other": "murs {number}",
+          "one": "mur",
+          "other": "murs",
           "oneSized": "mur de {sizes}",
           "otherSized": "{number} murs de {sizes}"
         }
@@ -2996,8 +3025,8 @@
         "Counted": {
           "any": "n'importe quelles créatures consentantes",
           "every": "toute créature consentante",
-          "one": "{number} créature consentante",
-          "other": "{number} créatures consentantes",
+          "one": "créature consentante",
+          "other": "créatures consentantes",
           "each": "chaque créature consentante"
         }
       },
@@ -3007,9 +3036,12 @@
           "any": "n'importe quels {special}",
           "each": "chaque {special}",
           "every": "tout {special}",
-          "one": "{number} {special}",
-          "other": "{number} {special}"
+          "one": "{special}",
+          "other": "{special}"
         }
+      },
+      "Ring": {
+        "Label": "Anneau"
       }
     },
     "Count": {
@@ -3508,8 +3540,8 @@
     "BLOODIED": {
       "Name": "Statut En péril",
       "Hint": "Configurer la visibilité du statut En péril et s'il est suivi automatiquement.",
-      "All": "Afficher pour les Alliés et les Ennemis",
-      "Player": "Afficher uniquement pour les Alliés",
+      "All": "Afficher pour les tokens amicales, neutres et hostiles",
+      "Player": "Afficher uniquement les tokens amicales",
       "None": "Ne jamais afficher"
     },
     "COLLAPSETRAYS": {
@@ -3686,6 +3718,14 @@
         "NoBlocking": "Partielle",
         "None": "Aucune"
       }
+    },
+    "CHATLOG": {
+      "Options": {
+        "light": "Lumière"
+      }
+    },
+    "CONDITIONS": {
+      "Name": "Les états"
     }
   },
   "SIDEBAR.SortModePriority": "Trier par priorité",
@@ -3933,7 +3973,7 @@
     "Occupants": "Occupants",
     "Trade": {
       "Creatures": {
-        "Buy": "Déposez les animaux que vous souhaitez acheter dans les cases ci-dessus et mettez à jour le coût ci-dessous."
+        "Buy": "Déposez les animaux que vous souhaitez acheter dans les cases ci-dessus. Le coût est calculé à partir de leurs prix individuels et peut être modifié ci-dessous."
       },
       "Stocked": {
         "Label": "Entièrement approvisionné",
@@ -3941,7 +3981,7 @@
       },
       "Price": {
         "Label": "Prix de base",
-        "Hint": "Sélectionnez quel stock vendre et entrez le prix de base ci-dessus."
+        "Hint": "Sélectionnez quel stock vendre. Le prix de base est calculé à partir de leurs prix individuels et peut être ajusté à la hausse."
       },
       "Sell": {
         "Label": "Vendre du stock",
@@ -4011,7 +4051,7 @@
     "SECTIONS": {
       "Score": "Valeur de {ability}",
       "Bonuses": {
-        "Hint": "Ces bonus s'appliquent aux tests et aux jets de sauvegarde effectués avec {ability}.",
+        "Hint": "Ces bonus s'appliquent aux attaques, aux tests et aux jets de sauvegarde effectués avec {ability}.",
         "Label": "Bonus de {ability}"
       },
       "Global": {
@@ -4022,7 +4062,27 @@
     "Configure": {
       "Title": "Configurer {ability}",
       "CheckLabel": "{ability} - Test",
-      "SaveLabel": "{ability} - Sauvegarde"
+      "SaveLabel": "{ability} - Sauvegarde",
+      "AttackLabel": "{ability} - Attaque"
+    },
+    "FIELDS": {
+      "abilities": {
+        "element": {
+          "attack": {
+            "roll": {
+              "bonus": {
+                "label": "Bonus d'attaque"
+              },
+              "max": {
+                "label": "Jet d'attaque maximal"
+              },
+              "min": {
+                "label": "Jet d'attaque minimum"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "DND5E.AbilityScoreMaxShort": "Maximum",
@@ -4190,6 +4250,9 @@
     },
     "Warning": {
       "OnlyByRequest": "Les repos ne peuvent être effectuées qu'à la demande du MJ."
+    },
+    "Duration": {
+      "Label": "Durée"
     }
   },
   "DND5E.UNITS": {
@@ -4373,8 +4436,8 @@
         },
         "label": "Détails de l'incantation",
         "spellbook": {
-          "label": "Afficher dans le Grimoire",
-          "hint": "Afficher le sort dans l'onglet Sorts de la feuille de personnage."
+          "label": "Afficher dans l'onglet Sorts",
+          "hint": "Afficher le sort dans l'onglet Sorts de la fiche de personnage. Les objets doivent posséder la propriété Magique et être harmonisés s'ils nécessitent une harmonisation."
         },
         "uuid": {
           "label": "Sort à incanter"
@@ -4445,6 +4508,16 @@
       },
       "Complete": "Demande satisfaite",
       "PartyMembers": "Membres du groupe"
+    },
+    "Button": {
+      "rollAttack": "Attaquer",
+      "rollCheck": "Test de caractéristique",
+      "rollDamage": "Dégâts",
+      "rollFormula": "Jet",
+      "rollSave": "Jet de sauvegarde"
+    },
+    "Row": {
+      "Targets": "Cibles"
     }
   },
   "DND5E.CreatureTag": "{type} de taille {size}, {alignment}",
@@ -4824,7 +4897,37 @@
         "hint": "Lorsqu'elle est affectée par cet effet actif, la cible est traitée comme ayant ces états supplémentaires."
       }
     },
-    "AttributeKeyTooltip": "Pour obtenir la liste des clés courantes, consultez <a href=\"{url}\">le wiki</a>."
+    "AttributeKeyTooltip": "Pour obtenir la liste des clés courantes et de leurs valeurs autorisées, consultez <a href=\"{url}\">le wiki</a>.",
+    "ChangeType": {
+      "Bonus": {
+        "Label": "Bonus"
+      },
+      "Group": {
+        "Rules": "Règles",
+        "Custom": "Personnalisé",
+        "Standard": "Standard"
+      },
+      "Advantage": {
+        "Label": "Mode Avantage"
+      },
+      "Maximum": {
+        "Label": "Jet maximal"
+      },
+      "Minimum": {
+        "Label": "Jet minimum"
+      }
+    },
+    "Expired": "Expiré",
+    "Expiry": {
+      "Abbreviation": {
+        "End": "Fin",
+        "Start": "Début"
+      },
+      "GROUPS": {
+        "General": "Général",
+        "Specific": "Spécifique"
+      }
+    }
   },
   "DND5E.BONUSES": {
     "FIELDS": {
@@ -4908,9 +5011,9 @@
         },
         "mode": {
           "label": "Mode",
-          "hint": "Définit comment les créatures sources de la transformation sont sélectionnées.",
-          "Direct": "Par lien direct",
-          "CR": "Par facteur de puissance"
+          "hint": "Définit comment les modifications de la transformation sont déterminées.",
+          "Direct": "Profils des créatures (par lien direct)",
+          "CR": "Profils des créatures (par facteur de puissance)"
         },
         "preset": {
           "label": "Préréglage"
@@ -5143,12 +5246,20 @@
       "Details": "Détails",
       "Effects": "Effets",
       "Description": "Description"
+    },
+    "Rarity": {
+      "Common": "Courant",
+      "Legendary": "Légendaire",
+      "Rare": "Rare",
+      "Uncommon": "Peu courant",
+      "VeryRare": "Très rare"
     }
   },
   "DND5E.Remaining": "Restant",
   "TYPES.RegionBehavior": {
     "dnd5e.difficultTerrain": "Terrain difficile",
-    "dnd5e.rotateArea": "Zone de rotation"
+    "dnd5e.rotateArea": "Zone de rotation",
+    "dnd5e.applyActiveEffect": "Appliquer un effet actif (5e)"
   },
   "DND5E.Challenge": "Facteur de puissance",
   "DND5E.ENCOUNTER": {
@@ -5339,6 +5450,13 @@
       },
       "Warning": {
         "RecursiveRegion": "Impossible de faire pivoter la même région qui contient le comportement."
+      }
+    },
+    "APPLYACTIVEEFFECT": {
+      "FIELDS": {
+        "effects": {
+          "label": "Effets"
+        }
       }
     }
   },
@@ -5657,7 +5775,8 @@
   "TYPES.HINTS": {
     "RegionBehavior": {
       "dnd5e.difficultTerrain": "Marquez une région comme terrain difficile, puis définissez son type et les entités concernées.",
-      "dnd5e.rotateArea": "Faites pivoter les tokens, les tuiles, les murs et autres objets autour d'un point de pivot central."
+      "dnd5e.rotateArea": "Faites pivoter les tokens, les tuiles, les murs et autres objets autour d'un point de pivot central.",
+      "dnd5e.applyActiveEffect": "Appliquer des effets actifs aux tokens lorsqu'ils se trouvent dans la région et répondent à certains critères."
     }
   },
   "DND5E.Gear": {
@@ -5684,5 +5803,86 @@
       }
     }
   },
-  "DND5E.SpellComponentsMaterial": "{components} ({materials})"
+  "DND5E.SpellComponentsMaterial": "{components} ({materials})",
+  "DND5E.ARMORCLASS": {
+    "Calculation": {
+      "Draconic": "Résistance draconique",
+      "Mage": "Armure du mage",
+      "UnarmoredBarbarian": "Défense sans armure (Barbare)",
+      "UnarmoredBard": "Défense sans armure (Barde)",
+      "UnarmoredMonk": "Défense sans armure (Moine)"
+    },
+    "FIELDS": {
+      "attributes": {
+        "ac": {
+          "formulas": {
+            "element": {
+              "shielded": {
+                "label": "Protégé"
+              }
+            }
+          },
+          "label": "Classe d'armure"
+        }
+      }
+    }
+  },
+  "DND5E.BASE": {
+    "Image": "Image",
+    "Name": "Nom"
+  },
+  "DND5E.CHARACTER": {
+    "FIELDS": {
+      "traits": {
+        "weaponProf": {
+          "mastery": {
+            "value": {
+              "label": "Bottes d'arme"
+            }
+          }
+        }
+      }
+    }
+  },
+  "DND5E.CONCENTRATION": {
+    "Abbreviation": "B",
+    "FIELDS": {
+      "attributes": {
+        "concentration": {
+          "label": "Concentration"
+        }
+      }
+    }
+  },
+  "DND5E.SplitStack": {
+    "Action": "Division"
+  },
+  "DND5E.TABLEOFCONTENTS": {
+    "FIELDS": {
+      "type": {
+        "label": "Type"
+      }
+    },
+    "Type": {
+      "Special": "Spécial"
+    }
+  },
+  "DND5E.TELEPORT": {
+    "Action": {
+      "Teleport": "Téléportation"
+    },
+    "SECTIONS": {
+      "Teleport": "Téléportation"
+    },
+    "Title": "Téléportation"
+  },
+  "EDITOR.DND5E.Inserts": {
+    "Attack": "Jet d'attaque",
+    "Check": "Test de caractéristique",
+    "Damage": "Dégâts",
+    "Healing": "Soins",
+    "Save": "Jet de sauvegarde"
+  },
+  "DOCUMENT.Activity": "Activité",
+  "DOCUMENT.Advancement": "Progression"
 }
