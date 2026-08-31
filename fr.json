@@ -4082,11 +4082,69 @@
               },
               "min": {
                 "label": "Jet d'attaque minimum"
+              },
+              "mode": {
+                "label": "Mode Avantage à l'attaque"
+              }
+            }
+          },
+          "check": {
+            "roll": {
+              "bonus": {
+                "label": "Bonus de test"
+              },
+              "max": {
+                "label": "Jet de test maximum"
+              },
+              "min": {
+                "label": "Jet de test minimum"
+              },
+              "mode": {
+                "label": "Mode Avantage au test"
+              }
+            }
+          },
+          "save": {
+            "roll": {
+              "bonus": {
+                "label": "Bonus de sauvegarde"
+              },
+              "max": {
+                "label": "Jet de sauvegarde maximum"
+              },
+              "min": {
+                "label": "Jet de sauvegarde minimum"
+              },
+              "mode": {
+                "label": "Mode Avantage à la sauvegarde"
               }
             }
           }
         }
       }
+    },
+    "Formatter": {
+      "Attack": {
+        "AdvantageMode": "Mode Avantage à l'attaque ({name})",
+        "Bonus": "Bonus d'attaque ({name})",
+        "Maximum": "Jet d'attaque de {name} maximum",
+        "Minimum": "Jet d'attaque de {name} minimum"
+      },
+      "Check": {
+        "AdvantageMode": "Mode Avantage au test de {name}",
+        "Bonus": "Bonus de test de {name}",
+        "Maximum": "Jet de test de {name} maximum",
+        "Minimum": "Jet de test de {name} minimum"
+      },
+      "Maximum": "{name} maximum",
+      "Save": {
+        "AdvantageMode": "Mode Avantage à la sauvegarde de {name}",
+        "Bonus": "Bonus de sauvegarde de {name}",
+        "Maximum": "Jet de sauvegarde de {name} maximum",
+        "Minimum": "Jet de sauvegarde de {name} minimum",
+        "Proficiency": "Maîtrise de sauvegarde de {name}"
+      },
+      "Score": "Valeur de {name}"
     }
   },
   "DND5E.AbilityScoreMaxShort": "Maximum",
@@ -4095,7 +4153,10 @@
     "turn": "Message de tour de combat",
     "rest": "Message de repos",
     "request": "Demande de message",
-    "usage": "Message d'utilisation"
+    "usage": "Message d'utilisation",
+    "item": "Message d'objet",
+    "prompt": "Message d'invite",
+    "timePassed": "Message de temps écoulé"
   },
   "DND5E.Language": {
     "Language": {
@@ -4930,7 +4991,11 @@
       "GROUPS": {
         "General": "Général",
         "Specific": "Spécifique"
-      }
+      },
+      "SourceStart": "Début du prochain tour de la source",
+      "SourceEnd": "Fin du prochain tour de la source",
+      "TargetStart": "Début du prochain tour de la cible",
+      "TargetEnd": "Fin du prochain tour de la cible"
     }
   },
   "DND5E.BONUSES": {
