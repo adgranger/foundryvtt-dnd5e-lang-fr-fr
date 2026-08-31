@@ -1612,7 +1612,8 @@
               "hint": "Type de dégâts infligés ou multiples que l’utilisateur peut sélectionner."
             },
             "modifiers": {
-              "label": "Modificateurs"
+              "label": "Modificateurs",
+              "hint": "Modificateurs de jet ajoutés au dé de base."
             }
           }
         }
@@ -1653,7 +1654,9 @@
       "DescriptionShort": "Contourné par les sources de type {type}",
       "Hint": "Les propriétés de ces armes permettent de contourner la résistance aux dégâts pour les dégâts physiques.",
       "Label": "Contournements dégâts physiques"
-    }
+    },
+    "Empty": "Aucun dégât configuré. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour ajouter des parties de dégâts.",
+    "EmptyExceptBase": "Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour ajouter des parties de dégâts supplémentaires."
   },
   "DND5E.DamImm": "Immunités (dégâts)",
   "DND5E.DamMod": "Modifications des dégâts",
@@ -1669,7 +1672,19 @@
       "Threshold": "Seuil de dégâts"
     },
     "Downgrading": "Rétrogradation de {source} à Résistance",
-    "Ignoring": "Ignorer {source}"
+    "Ignoring": "Ignorer {source}",
+    "Back": "Retour au panneau précédent",
+    "Multiplier": "Multiplicateur de dégâts",
+    "Section": {
+      "Changes": "Appliqué à cette cible",
+      "Multiplier": "Multiplicateur",
+      "Targets": "Cibles de ce groupe"
+    },
+    "State": {
+      "active": "Appliqué",
+      "downgrade": "Dégradé",
+      "ignore": "Ignoré"
+    }
   },
   "DND5E.DamageModification": {
     "Label": "Modification des dégâts",
@@ -1767,32 +1782,126 @@
     "Label": "Effets disponibles",
     "RIDER": {
       "Activity": "Activité additionnelle d'enchantement",
-      "Effect": "Effet additionnelle d'enchantement"
+      "Effect": "Effet additionnelle d'enchantement",
+      "FIELDS": {
+        "rider": {
+          "statuses": {
+            "hint": "Lorsque cet effet actif est appliqué, ces états supplémentaires seront appliquées séparément.",
+            "label": "États séparés"
+          }
+        }
+      }
     },
     "Application": {
-      "Header": "Effets"
+      "Header": "Effets",
+      "Action": {
+        "ApplyTokens": "Appliquer aux tokens sélectionnés"
+      },
+      "Warning": {
+        "Ownership": "Les effets ne peuvent pas être appliqués aux tokens dont vous n'êtes pas le propriétaire."
+      }
     },
     "BASE": {
       "FIELDS": {
         "changes": {
           "element": {
             "conditions": {
-              "label": "Modifier les états"
+              "label": "Modifier les états",
+              "hint": "Condition devant être remplie pour que ce changement s'applique."
             },
             "type": {
               "label": "Type"
+            },
+            "key": {
+              "label": "Clé d’attribut"
+            },
+            "phase": {
+              "hint": "Le moment de la préparation des données, ou un autre événement, où un changement doit être appliquée.",
+              "label": "Phase"
+            },
+            "priority": {
+              "label": "Priorité"
+            },
+            "replacement": {
+              "label": "Remplacement",
+              "hint": "Détermine si les propriétés de données de jet dans la valeur sont remplacées avant application, et à partir des données de qui."
+            },
+            "value": {
+              "label": "Valeur"
             }
           }
         },
         "magical": {
-          "label": "Magique"
+          "label": "Magique",
+          "hint": "Cet effet provient d'une source magique et devrait être désactivé lorsque la magie n'est pas disponible."
+        },
+        "conditions": {
+          "hint": "Conditions qui déterminent quand l'effet sera appliqué.",
+          "label": "Conditions de l'effet"
         }
       }
     },
     "Replacement": {
-      "Target": "Cible"
+      "Target": "Cible",
+      "NoChange": "Aucun changement",
+      "Origin": "Origine"
     },
-    "Tab": "Effets"
+    "Tab": "Effets",
+    "Action": {
+      "AddChange": "Ajouter un changement",
+      "Apply": "Appliquer",
+      "CreateEffect": "Créer un effet",
+      "DeleteEffect": "Supprimer l'effet",
+      "DeleteChange": "Supprimer le changement",
+      "DisableEffect": "Désactiver l'effet",
+      "DissociateEffect": "Dissocier l'effet",
+      "EditChange": "Modifier le changement",
+      "EditEffect": "Modifier l'effet",
+      "EnableEffect": "Activer l'effet",
+      "PanToToken": "Centrer la vue sur le token",
+      "RemoveStatus": {
+        "all": "Toutes les sources",
+        "label": "Source"
+      },
+      "Search": "Rechercher des effets"
+    },
+    "AdditionalChanges": "Changements supplémentaires",
+    "Category": {
+      "Temporary": "Effets temporaires",
+      "Passive": "Effets passifs",
+      "Inactive": "Effets inactifs",
+      "Unavailable": "Effets indisponibles"
+    },
+    "Change": {
+      "Configuration": "Configuration du changement",
+      "Label": "Changement",
+      "Title": "{effect} — Changement n°{number}"
+    },
+    "DisabledTooltip": {
+      "Disabled": "Cet effet est actuellement sélectionné dans une ou plusieurs activités de son objet, et ne peut donc pas être suspendu.",
+      "Transfer": "Cet effet est actuellement sélectionné dans une ou plusieurs activités de son objet, et ne peut donc pas s'appliquer passivement à l'acteur de l'objet."
+    },
+    "DropHint": "Déposez un effet actif ici",
+    "Expiry": {
+      "LongRest": "Fin d'un Repos long",
+      "ShortRest": "Fin d'un Repos court"
+    },
+    "New": "Nouvel effet",
+    "Status": {
+      "ChangeActive": "Changement actif",
+      "ChangeInactive": "Changement inactif",
+      "DeleteDialog": {
+        "hint": "Vous êtes sous l'effet de cet état provenant de plusieurs sources. Choisissez quel effet mettre fin.",
+        "title": "Retirer l'effet"
+      },
+      "Inactive": "Inactif",
+      "Passive": "Passif",
+      "Temporary": "Temporaire",
+      "Unavailable": "Indisponible"
+    },
+    "Suppressed": {
+      "Hint": "L'objet source doit être équipé ou harmonisé pour activer ces effets"
+    }
   },
   "DND5E.ENCHANT": {
     "Title": "Enchanter",
@@ -1867,7 +1976,8 @@
     "Enchantment": {
       "Action": {
         "Create": "Créer un enchantement",
-        "Delete": "Supprimer l'enchantement"
+        "Delete": "Supprimer l'enchantement",
+        "Dissociate": "Dissocier l'enchantement"
       },
       "Empty": "Aucun enchantement associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un enchantement existant dans la liste déroulante.",
       "Active": "{name} (actif)"
@@ -1911,8 +2021,14 @@
     },
     "FIELDS": {
       "magical": {
-        "label": "Magique"
+        "label": "Magique",
+        "hint": "Cet enchantement est magique et devrait être désactivé lorsque la magie n'est pas disponible."
       }
+    },
+    "Transfer": {
+      "DisabledTooltip": "Cet enchantement est actuellement sélectionné dans une ou plusieurs activités d'enchantement de son objet, et ne peut donc pas s'appliquer directement à l'objet.",
+      "Hint": "Si coché, cet enchantement sera appliqué directement à son objet parent.",
+      "Label": "Appliquer l'enchantement à l'objet"
     }
   },
   "DND5E.Environment": "Environnement",
@@ -4115,7 +4231,8 @@
         "Hint": "Si activé, l’objet de base sera acheté au prix fort au lieu d’être fabriqué.",
         "Label": "Acheter l’objet de base"
       },
-      "Hint": "Les objets que cette extension est actuellement en train de fabriquer ou de récolter, le cas échéant."
+      "Hint": "Les objets que cette extension est actuellement en train de fabriquer ou de récolter, le cas échéant.",
+      "DropHint": "Déposez un objet ici"
     },
     "Description": "Description",
     "Build": {
@@ -4129,7 +4246,8 @@
       },
       "Stocked": {
         "Label": "Entièrement approvisionné",
-        "Hint": "Entrez le coût nécessaire pour approvisionner entièrement cette extension ci-dessous."
+        "Hint": "Entrez le coût nécessaire pour approvisionner entièrement cette extension ci-dessous.",
+        "Supplement": "Entièrement approvisionné"
       },
       "Price": {
         "Label": "Prix de base",
@@ -6316,5 +6434,75 @@
     "Hint": "Ces comportements s'appliqueront à toute zone d'effet placée par cette activité.",
     "Label": "Comportement"
   },
-  "DND5E.BiographyPublicEdit": "Modifier la biographie publique"
+  "DND5E.BiographyPublicEdit": "Modifier la biographie publique",
+  "DND5E.DEATH": {
+    "FIELDS": {
+      "attributes": {
+        "death": {
+          "roll": {
+            "bonus": {
+              "label": "Bonus de jet de sauvegarde contre la mort"
+            },
+            "max": {
+              "label": "Jet de sauvegarde contre la mort maximum"
+            },
+            "min": {
+              "label": "Jet de sauvegarde contre la mort minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage au jet de sauvegarde contre la mort"
+            }
+          }
+        }
+      }
+    },
+    "Outcome": {
+      "death": "{name} est mort après 3 échecs aux jets de sauvegarde contre la mort !",
+      "revive": "{name} a obtenu une réussite critique à un jet de sauvegarde contre la mort et a récupéré 1 point de vie !",
+      "stable": "{name} a survécu avec 3 réussites aux jets de sauvegarde contre la mort et est désormais stabilisé !"
+    }
+  },
+  "DND5E.ENCUMBRANCE": {
+    "FIELDS": {
+      "attributes": {
+        "encumbrance": {
+          "bonuses": {
+            "encumbered": {
+              "label": "Bonus au seuil d'encombrement"
+            },
+            "heavilyEncumbered": {
+              "label": "Bonus au seuil de surcharge"
+            },
+            "maximum": {
+              "label": "Bonus à la capacité de charge maximale"
+            },
+            "overall": {
+              "label": "Bonus à tous les seuils d'encombrement"
+            }
+          },
+          "multipliers": {
+            "encumbered": {
+              "label": "Multiplicateur du seuil d'encombrement"
+            },
+            "heavilyEncumbered": {
+              "label": "Multiplicateur du seuil de surcharge"
+            },
+            "maximum": {
+              "label": "Multiplicateur de la capacité de charge maximale"
+            },
+            "overall": {
+              "label": "Multiplicateur pour tous les seuils d'encombrement"
+            }
+          }
+        }
+      }
+    }
+  },
+  "DND5E.FALLING": {
+    "DamageFlavor": "Chute de {distance}",
+    "MovementAction": "Chute",
+    "Warning": {
+      "NoLandingSurface": "{name} ne peut pas chuter, il n'y a aucune surface en dessous."
+    }
+  }
 }
