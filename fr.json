@@ -274,6 +274,24 @@
           "hint": "L'activité ne sera pas utilisable si la magie n'est pas disponible.",
           "label": "Magie requise"
         }
+      },
+      "behaviors": {
+        "element": {
+          "level": {
+            "label": "Limite de niveau",
+            "hint": "Plage de niveaux requise pour que ce comportement s'applique.",
+            "max": {
+              "label": "Niveau maximum"
+            },
+            "min": {
+              "label": "Niveau minimum"
+            }
+          },
+          "name": {
+            "label": "Nom"
+          }
+        },
+        "label": "Comportements de zone d'effet"
       }
     },
     "SECTIONS": {
@@ -396,7 +414,12 @@
     },
     "Config": {
       "Details": "Détails de la progression",
-      "AnyLevel": "Tous"
+      "AnyLevel": "Tous",
+      "Status": {
+        "Complete": "Entièrement configuré",
+        "Incomplete": "Non configuré"
+      },
+      "Title": "Configurer la progression de {item}"
     },
     "HitPoints": {
       "Average": "Moyenne",
@@ -433,13 +456,17 @@
         "optional": {
           "label": "Optionnel",
           "hint": "Si l'ensemble de la progression est marqué comme optionnel, les joueurs peuvent renoncer à l'un des objets suivants, sinon tous les objets non optionnels sont accordés."
+        },
+        "sorting": {
+          "label": "Mode de tri"
         }
       },
       "Title": "Attribuer des objets",
       "Warning": {
         "Container": "Le contenu du conteneur ne sera pas ajouté avec les conteneurs.",
         "Duplicate": "Cet objet existe déjà dans cette progression.",
-        "Recursive": "Vous ne pouvez pas attribuer un objet dans sa propre progression."
+        "Recursive": "Vous ne pouvez pas attribuer un objet dans sa propre progression.",
+        "Type": "Les objets {type} ne peuvent pas être ajoutés avec ce type de progression."
       },
       "Hint": "Attribuez des objets au personnage (comme de l'équipement, des caractéristiques ou des sorts) lorsqu'il atteint un certain niveau."
     },
@@ -498,7 +525,8 @@
           "level": {
             "Available": "Tout niveau disponible (y compris les sorts mineurs)",
             "label": "Niveau de sort",
-            "hint": "Autoriser uniquement les choix à partir de sorts de ce niveau."
+            "hint": "Autoriser uniquement les choix à partir de sorts de ce niveau.",
+            "AvailableNoCantrips": "Tout niveau disponible (sorts mineurs exclus)"
           },
           "type": {
             "label": "Type"
@@ -515,6 +543,9 @@
           "Any": "Tout",
           "hint": "Restreindre les types d'objets pouvant être choisis.",
           "label": "Type d'objet"
+        },
+        "sorting": {
+          "label": "Mode de tri"
         }
       },
       "Hint": "Présentez au joueur un choix d'objets (comme de l'équipement, des aptitudes ou des sorts) qu'il peut sélectionner pour son personnage à un ou plusieurs niveaux.",
@@ -598,6 +629,18 @@
           "Hint": "Utilisez ceci si vous n'êtes pas sûr du type des valeurs d'évolution, ou si le type n'a pas d'importance.",
           "Identifier": "Cette valeur d'évolution pour le niveau actuel sera disponible dans une formule en utilisant :<br><copyable-text>@scale.{class}.{identifier}</copyable-text>",
           "Label": "Tout"
+        },
+        "Usage": {
+          "FIELDS": {
+            "period": {
+              "label": "Période"
+            },
+            "value": {
+              "label": "Utilisations"
+            }
+          },
+          "Hint": "À utiliser pour représenter des utilisations d'objet sur une période donnée.",
+          "Label": "Utilisation"
         }
       },
       "Action": {
@@ -685,7 +728,8 @@
       "Delete": "Supprimer la Progression",
       "Duplicate": "Dupliquer la Progression",
       "Edit": "Éditer la Progression",
-      "View": "Voir la Progression"
+      "View": "Voir la Progression",
+      "ModifyChoices": "Modifier les choix"
     },
     "Migration": {
       "Action": {
@@ -712,6 +756,59 @@
       },
       "Label": "Retirer les modifications",
       "Options": "Options"
+    },
+    "FIELDS": {
+      "classRestriction": {
+        "label": "Restriction de classe",
+        "none": "Toutes les classes",
+        "primary": "Classe d'origine uniquement",
+        "secondary": "Multiclasse uniquement"
+      },
+      "hint": {
+        "label": "Conseil"
+      },
+      "img": {
+        "label": "Icône personnalisée"
+      },
+      "level": {
+        "label": "Niveau"
+      },
+      "name": {
+        "label": "Titre personnalisé"
+      }
+    },
+    "Label": "Progression",
+    "Level": {
+      "Any": "Tout niveau",
+      "None": "Aucun niveau",
+      "Specific": "Niveau {level}"
+    },
+    "ModifyItem": {
+      "Action": {
+        "AddChange": "Ajouter un changement",
+        "DeleteChange": "Supprimer le changement"
+      },
+      "DropHint": "Déposez un enchantement ici",
+      "Empty": {
+        "WithDropdown": "Aucun changement. Utilisez le bouton <i class=\"fa-solid fa-plus\"></i> ci-dessus pour en créer un, ou sélectionnez un effet existant dans la liste déroulante.",
+        "WithoutDropdown": "Aucun changement. Utilisez le bouton <i class=\"fa-solid fa-plus\"></i> ci-dessus pour en créer un."
+      },
+      "FIELDS": {
+        "changes": {
+          "element": {
+            "enchantment": {
+              "label": "Enchantement appliqué"
+            },
+            "identifiers": {
+              "hint": "Identifiants des objets qui seront modifiés par cet enchantement. Les identifiants peuvent être préfixés par le type d'objet (ex. « spell:mage-hand »).",
+              "label": "Objets modifiés"
+            }
+          },
+          "label": "Changements d'objet"
+        }
+      },
+      "Hint": "Modifier des objets existants à l'aide d'un enchantement.",
+      "Title": "Modifier des objets"
     }
   },
   "DND5E.Advantage": "Avantage",
@@ -800,6 +897,9 @@
             "label": "Classification d'attaque",
             "hint": "S'agit-il d'une attaque à mains nues, d'une arme ou d'un sort ?"
           }
+        },
+        "abilities": {
+          "label": "Options de caractéristique"
         }
       },
       "damage": {
@@ -936,6 +1036,14 @@
             "label": "Formule du DD",
             "hint": "Formule personnalisée ou valeur fixe pour définir le DD de sauvegarde."
           }
+        },
+        "bonus": {
+          "label": "Bonus de test",
+          "hint": "Bonus ajouté à tous les tests effectués via cette activité."
+        },
+        "visible": {
+          "label": "Visible par tous",
+          "hint": "Affiche le bouton de jet dans le tchat pour tous les joueurs."
         }
       }
     },
@@ -1114,6 +1222,42 @@
         "replace": {
           "label": "Remplacer les dégâts de l'arme",
           "hint": "Remplacer les dégâts de base de l'arme avec ces dégâts plutôt que de les augmenter."
+        },
+        "base": {
+          "bonus": {
+            "label": "Bonus de dégâts de base"
+          },
+          "custom": {
+            "enabled": {
+              "label": "Utiliser une formule de dégâts de base personnalisée"
+            },
+            "formula": {
+              "label": "Formule de dégâts de base personnalisée"
+            }
+          },
+          "denomination": {
+            "label": "Dé de dégâts de base"
+          },
+          "number": {
+            "label": "Nombre de dés de dégâts de base"
+          },
+          "scaling": {
+            "formula": {
+              "label": "Formule de mise à l'échelle des dégâts de base"
+            },
+            "mode": {
+              "label": "Mode de mise à l'échelle des dégâts de base"
+            },
+            "number": {
+              "label": "Valeur de mise à l'échelle des dégâts de base"
+            }
+          },
+          "types": {
+            "label": "Types de dégâts de base"
+          }
+        },
+        "bonus": {
+          "label": "Bonus de dégâts"
         }
       },
       "magicalBonus": {
@@ -1321,7 +1465,8 @@
       "None": "Aucun {type} disponible à dépenser, {cost} requis.",
       "NotEnough": "Pas assez de {type} disponible, {cost} requis et seulement {available} disponible.",
       "WillDestroy": "Consommer {item} utilisera son dernier usage et il sera détruit."
-    }
+    },
+    "Empty": "Aucune consommation associée. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour ajouter des cibles de consommation."
   },
   "DND5E.Consumed": "Consommé",
   "DND5E.Copy": "Copier le texte",
@@ -1465,6 +1610,9 @@
             "types": {
               "label": "Types de dégâts",
               "hint": "Type de dégâts infligés ou multiples que l’utilisateur peut sélectionner."
+            },
+            "modifiers": {
+              "label": "Modificateurs"
             }
           }
         }
@@ -3271,7 +3419,7 @@
           "hint": "Afficher la boîte de dialogue de configuration du jet lors d'un lancer de dé."
         },
         "visible": {
-          "label": "Visible pour tous",
+          "label": "Visible par tous",
           "hint": "Afficher le bouton de lancer dans le tchat pour tous les joueurs."
         }
       }
@@ -4048,6 +4196,36 @@
       "Cancel": "Annuler l'échange en attente",
       "Invalid": "Supprimer un échange en attente invalidera votre ordre d'échange.",
       "Pending": "Échange en attente"
+    },
+    "Action": {
+      "Advance": "Avancer le tour du Bastion",
+      "Maintain": "Entretenir le Bastion"
+    },
+    "Confirm": {
+      "Advance": "Cela fera progresser tous les ordres en cours des extensions de Bastion de {duration}, donnera l'ordre Entretien à toutes les extensions inactives, et réparera toute extension désactivée. Voulez-vous continuer ?",
+      "Maintain": "Cela donnera l'ordre Entretien à toutes les extensions inactives du Bastion et réparera toute extension désactivée. Voulez-vous continuer ?"
+    },
+    "FIELDS": {
+      "button": {
+        "hint": "Affiche un bouton pour avancer les tours de Bastion dans l'interface principale du jeu.",
+        "label": "Afficher le bouton de tour de Bastion"
+      },
+      "duration": {
+        "label": "Durée du tour du Bastion (jours)"
+      },
+      "enabled": {
+        "hint": "Lorsqu'elle est activée, les personnages joueurs auront accès à un nouvel onglet Bastion sur leurs feuilles de personnage dès le niveau 5, et pourront construire des extensions et leur donner des ordres.",
+        "label": "Activer les Bastions"
+      },
+      "reminder": {
+        "hint": "Affiche un rappel dans le tchat lorsque le prochain tour de Bastion doit avoir lieu, en fonction de l'écoulement du temps.",
+        "label": "Rappel automatique de tour"
+      }
+    },
+    "Reminder": {
+      "Elapsed": "{time} se sont écoulés depuis le dernier tour de bastion.",
+      "Triggered": "Un tour de Bastion a eu lieu.",
+      "Unknown": "Un certain temps s'est écoulé depuis le dernier tour du Bastion."
     }
   },
   "DND5E.ArmorValue": "Valeur d'armure",
@@ -4473,7 +4651,8 @@
   "DND5E.AbilityModifierShort": "Mod",
   "DND5E.CAST": {
     "Action": {
-      "RemoveSpell": "Retirer le sort"
+      "RemoveSpell": "Retirer le sort",
+      "DropSpell": "Déposez un sort ici"
     },
     "FIELDS": {
       "spell": {
@@ -4569,10 +4748,13 @@
     "Activities": "Activités",
     "REQUEST": {
       "Action": {
-        "Handle": "Gérer la demande"
+        "Handle": "Gérer la demande",
+        "Post": "Envoyer la demande"
       },
       "Complete": "Demande satisfaite",
-      "PartyMembers": "Membres du groupe"
+      "PartyMembers": "Membres du groupe",
+      "AnyOwner": "N'importe quel propriétaire",
+      "Title": "Demande"
     },
     "Button": {
       "rollAttack": "Attaque",
@@ -4582,7 +4764,21 @@
       "rollSave": "Jet de sauvegarde"
     },
     "Row": {
-      "Targets": "Cibles"
+      "Targets": "Cibles",
+      "Actions": "Actions de l'objet",
+      "Items": "Objets",
+      "Properties": "Propriétés de l'objet",
+      "Roll": "Jet de dé",
+      "rollCheck": "Tests de caractéristique",
+      "rollSave": "Jets de sauvegarde"
+    },
+    "Action": {
+      "SelectAll": "Sélectionner tous les résultats",
+      "SelectFailure": "Sélectionner les échecs",
+      "SelectSuccess": "Sélectionner les réussites"
+    },
+    "Targets": {
+      "Count": "{number}× {name}"
     }
   },
   "DND5E.CreatureTag": "{type} de taille {size}, {alignment}",
@@ -4995,7 +5191,9 @@
       "SourceStart": "Début du prochain tour de la source",
       "SourceEnd": "Fin du prochain tour de la source",
       "TargetStart": "Début du prochain tour de la cible",
-      "TargetEnd": "Fin du prochain tour de la cible"
+      "TargetEnd": "Fin du prochain tour de la cible",
+      "YourStart": "Début de votre prochain tour",
+      "YourEnd": "Fin de votre prochain tour"
     }
   },
   "DND5E.BONUSES": {
@@ -5660,6 +5858,13 @@
       },
       "visible": {
         "label": "Afficher le HUD du calendrier"
+      },
+      "dailyRecovery": {
+        "calendar": "Récupération calendaire (via l'écoulement du temps)",
+        "default": "Défaut (lié au paramètre du calendrier activé)",
+        "hint": "Détermine si les utilisations limitées avec récupération au jour, à l'aube ou au crépuscule se rechargent en fonction du calendrier du monde ou via la boîte de dialogue de repos.",
+        "label": "Mode de récupération journalière",
+        "manual": "Récupération manuelle (via la boîte de dialogue de repos)"
       }
     },
     "Formatters": {
@@ -5839,6 +6044,17 @@
         "Autumn": "Automne",
         "Winter": "Hiver"
       }
+    },
+    "TimePassage": {
+      "Midnight": "Un nouveau jour a commencé.",
+      "Sunrise": "Le soleil s'est levé.",
+      "Sunset": "Le soleil s'est couché.",
+      "SunsetSunrise": "Le soleil s'est couché et l'aube d'un nouveau jour s'est levée.",
+      "TimePassed": {
+        "one": "{number} s'est écoulé.",
+        "other": "{number} se sont écoulés."
+      },
+      "Title": "Écoulement du temps"
     }
   },
   "TYPES.HINTS": {
@@ -5879,7 +6095,12 @@
       "Mage": "Armure du mage",
       "UnarmoredBarbarian": "Défense sans armure (Barbare)",
       "UnarmoredBard": "Défense sans armure (Barde)",
-      "UnarmoredMonk": "Défense sans armure (Moine)"
+      "UnarmoredMonk": "Défense sans armure (Moine)",
+      "Armored": "Armure équipée",
+      "Custom": "Personnalisé",
+      "Label": "Calcul",
+      "Natural": "Armure naturelle",
+      "Unarmored": "Sans armure"
     },
     "FIELDS": {
       "attributes": {
@@ -5887,14 +6108,80 @@
           "formulas": {
             "element": {
               "shielded": {
-                "label": "Protégé"
+                "label": "Protégé",
+                "excluded": "Sans bouclier",
+                "required": "Bouclier requis"
+              },
+              "armored": {
+                "excluded": "Sans armure",
+                "label": "Avec armure",
+                "required": "Armure requise"
+              },
+              "formula": {
+                "label": "Formule"
+              },
+              "label": {
+                "label": "Libellé"
               }
-            }
+            },
+            "label": "Formules"
           },
-          "label": "Classe d'armure"
+          "label": "Classe d'armure",
+          "armor": {
+            "label": "Valeur de l'armure équipée"
+          },
+          "base": {
+            "label": "Classe d'armure de base"
+          },
+          "bonus": {
+            "label": "Bonus de CA"
+          },
+          "calc": {
+            "label": "Méthode de calcul de la CA"
+          },
+          "calcs": {
+            "hint": "Ces formules seront utilisées pour le calcul de la classe d'armure.",
+            "label": "Formules sélectionnées"
+          },
+          "cover": {
+            "label": "CA due à l'Abri"
+          },
+          "flat": {
+            "hint": "Nombre utilisable dans une classe d'armure via @attributes.ac.flat dans la formule.",
+            "label": "Valeur fixe"
+          },
+          "formula": {
+            "label": "Formule de CA supplémentaire"
+          },
+          "min": {
+            "label": "Classe d'armure minimum"
+          },
+          "override": {
+            "hint": "Valeur utilisée à la place de la classe d'armure calculée, en ignorant l'abri, le bouclier et tout autre bonus.",
+            "label": "Surcharger"
+          },
+          "shield": {
+            "label": "Valeur du bouclier équipé"
+          }
         }
       }
-    }
+    },
+    "Action": {
+      "Configure": "Configurer l'armure",
+      "CreateFormula": "Créer une formule personnalisée",
+      "DeleteFormula": "Supprimer la formule personnalisée"
+    },
+    "Condition": {
+      "Positive": "Doit posséder {type}",
+      "Negative": "Ne doit pas posséder {type}"
+    },
+    "Configuration": "Configuration",
+    "CurrentFormula": "Formule actuelle",
+    "CustomFormulas": {
+      "Empty": "Aucune formule personnalisée. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer une."
+    },
+    "Flat": "Fixe",
+    "Formula": "Formule"
   },
   "DND5E.BASE": {
     "Image": "Image",
@@ -5907,6 +6194,9 @@
           "mastery": {
             "value": {
               "label": "Bottes d'arme"
+            },
+            "bonus": {
+              "label": "Bonus Bottes d'arme"
             }
           }
         }
@@ -5918,9 +6208,51 @@
     "FIELDS": {
       "attributes": {
         "concentration": {
-          "label": "Concentration"
+          "label": "Concentration",
+          "limit": {
+            "label": "Limite de concentration"
+          },
+          "roll": {
+            "ability": {
+              "label": "Caractéristique de concentration"
+            },
+            "bonus": {
+              "label": "Bonus de concentration"
+            },
+            "max": {
+              "label": "Jet de concentration maximum"
+            },
+            "min": {
+              "label": "Jet de concentration minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage à la concentration"
+            }
+          }
         }
       }
+    },
+    "Action": {
+      "Break": "Rompre la concentration",
+      "End": "Fin de la concentration"
+    },
+    "Description": "Vous maintenez votre concentration sur les effets du {type} '{name}'.",
+    "Duration": {
+      "Scalar": "Concentration, jusqu'à {duration}",
+      "Special": "Concentration, {durationLc}"
+    },
+    "EndChoice": "Vous vous concentrez sur les effets de plusieurs sources. Choisissez l'effet auquel vous souhaitez mettre fin.",
+    "Limit": {
+      "Hard": "Vous ne pouvez pas vous concentrer sur plus d'effets !",
+      "Optional": "Vous pouvez mettre fin à la concentration sur l'un de vos effets maintenus pour utiliser cet objet.",
+      "Reached": "Vous ne pouvez pas commencer à vous concentrer sur un effet supplémentaire.",
+      "Zero": "Vous n'êtes pas en mesure de vous concentrer sur un quelconque effet !"
+    },
+    "Lost": "Concentration perdue",
+    "NoSource": "Concentration sans source",
+    "Warning": {
+      "BreakWithoutGM": "Rompre la concentration sur un effet qui est actif sur d'autres créatures nécessite la présence d'un MJ actif.",
+      "MissingItem": "L'effet sur lequel porte la concentration et devant être remplacé n'existe pas."
     }
   },
   "DND5E.SplitStack": {
@@ -5953,5 +6285,36 @@
     "Save": "Jet de sauvegarde"
   },
   "DOCUMENT.Activity": "Activité",
-  "DOCUMENT.Advancement": "Progression"
+  "DOCUMENT.Advancement": "Progression",
+  "DND5E.ADVENTURE": {
+    "Action": {
+      "Configure": "Configurer l'aventure",
+      "Launch": "Lancer l'aventure"
+    },
+    "Finished": {
+      "one": "Préparation de {adventure} terminée.",
+      "other": "Préparation de {number} aventures terminée."
+    },
+    "ImportAction": {
+      "ActivateScene": "Activer la scène initiale",
+      "CustomizeWorld": "Personnaliser les détails du Monde",
+      "DisplayJournal": "Afficher le journal de démarrage"
+    },
+    "Warning": {
+      "JournalMissing": "L'entrée de journal « {id} » est introuvable pour l'affichage de {adventure}.",
+      "SceneMissing": "La scène « {id} » est introuvable pour l'activation de {adventure}."
+    }
+  },
+  "DND5E.AttributeScores": "Valeurs de caractéristiques",
+  "DND5E.BaseItem": "Objet de base",
+  "DND5E.BEHAVIOR": {
+    "Action": {
+      "Create": "Créer un comportement",
+      "Delete": "Supprimer le comportement"
+    },
+    "Empty": "Aucun comportement associé. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en créer un.",
+    "Hint": "Ces comportements s'appliqueront à toute zone d'effet placée par cette activité.",
+    "Label": "Comportement"
+  },
+  "DND5E.BiographyPublicEdit": "Modifier la biographie publique"
 }
