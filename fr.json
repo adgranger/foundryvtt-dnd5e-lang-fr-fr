@@ -2088,7 +2088,8 @@
     "SpeciesLegacy": "Aptitude de race",
     "Vehicle": {
       "Label": "Aptitude du véhicule"
-    }
+    },
+    "PietyTrait": "Trait de Piété"
   },
   "DND5E.Focus": {
     "Label": "Focaliseur d'incantation",
@@ -2133,6 +2134,10 @@
     "EnhancedDualWielding": {
       "Name": "Combat à deux armes amélioré",
       "Hint": "Permet des attaques supplémentaires en action bonus avec n'importe quelle arme de mêlée sans la propriété À deux mains."
+    },
+    "IgnoreArmorSpeedReduction": {
+      "Name": "Ignorer la réduction de Vitesse due à l'armure",
+      "Hint": "Ignore la réduction de Vitesse lors du port d'une armure sans en remplir le prérequis de Force."
     }
   },
   "DND5E.FlagsInstructions": "Configurez les caractéristiques et traits du personnage qui ajustent le fonctionnement du système de la cinquième édition de D&D.",
@@ -2458,16 +2463,20 @@
       "prerequisites": {
         "level": {
           "label": "Niveau requis",
-          "hint": "Niveau de personnage ou de classe requis pour sélectionner cette aptitude lors de la montée en niveau."
+          "hint": "Niveau de personnage ou de classe requis pour sélectionner cette aptitude lors de la montée en niveau.",
+          "display": "Niveau {level}+",
+          "displayLegacy": "{levelOrdinal} niveau"
         },
         "label": "Prérequis",
         "repeatable": {
           "hint": "Cette aptitude peut être choisie plusieurs fois.",
-          "label": "Répétable"
+          "label": "Répétable",
+          "display": "Pas déjà pris"
         },
         "items": {
           "hint": "Identifiants des objets que le personnage doit posséder avant de pouvoir sélectionner cet objet.",
-          "label": "Objets requis"
+          "label": "Objets requis",
+          "display": "{items}"
         }
       }
     },
@@ -2476,6 +2485,11 @@
       "Message": "{actor} {requirements} afin de prendre cela {type}.",
       "MissingItem": "doit avoir déjà pris {items}",
       "NotRepeatable": "ne doit pas avoir pris {name} auparavant"
+    },
+    "Status": {
+      "Invalid": "Échec de validation des prérequis",
+      "Unknown": "Validation des prérequis incomplète",
+      "Valid": "Validation des prérequis réussie"
     }
   },
   "DND5E.Price": "Prix",
@@ -2613,7 +2627,18 @@
             "hint": "Formule personnalisée ou valeur fixe pour définir le DD de sauvegarde."
           },
           "CustomFormula": "Formule personnalisée",
-          "DefaultFormula": "8 + @mod + @prof"
+          "DefaultFormula": "8 + @mod + @prof",
+          "bonus": {
+            "label": "Bonus de DD"
+          }
+        },
+        "bonus": {
+          "label": "Bonus de sauvegarde",
+          "hint": "Bonus ajouté à tous les jets de sauvegarde effectués via cette activité."
+        },
+        "visible": {
+          "label": "Visible par tous",
+          "hint": "Affiche le bouton de jet dans le tchat pour tous les joueurs."
         }
       }
     },
@@ -3000,6 +3025,14 @@
       "tempHP": {
         "label": "Pv temp",
         "hint": "Accorde à la créature invoquée des points de vie temporaires, en remplaçant les points de vie temporaires existants."
+      },
+      "flat": {
+        "attack": {
+          "label": "Attaque au toucher fixe"
+        },
+        "save": {
+          "label": "DD de sauvegarde fixe"
+        }
       }
     },
     "SECTIONS": {
@@ -3034,7 +3067,8 @@
     "Warning": {
       "NoOwnership": "Vous devez être propriétaire de '{actor}' pour l'invoquer.",
       "NoProfile": "Impossible de trouver le profil d'invocation {profileId} sur '{item}'.",
-      "Wildcard": "Vous devez avoir le droit 'Utiliser le navigateur de fichiers' pour invoquer des créatures avec des illustrations génériques."
+      "Wildcard": "Vous devez avoir le droit 'Utiliser le navigateur de fichiers' pour invoquer des créatures avec des illustrations génériques.",
+      "PlaceTokens": "Erreur lors du placement des invocations dans la scène."
     },
     "Hint": "Invoquer une nouvelle créature sur la scène."
   },
@@ -3536,7 +3570,7 @@
         },
         "visible": {
           "label": "Visible par tous",
-          "hint": "Afficher le bouton de lancer dans le tchat pour tous les joueurs."
+          "hint": "Affiche le bouton de jet dans le tchat pour tous les joueurs."
         }
       }
     },
@@ -4613,7 +4647,9 @@
       "OnlyByRequest": "Les repos ne peuvent être effectuées qu'à la demande du MJ."
     },
     "Duration": {
-      "Label": "Durée"
+      "Label": "Durée",
+      "Hint": "Durée de temps à écouler pendant le repos.",
+      "UntilSunrise": "Repos jusqu'au lever du soleil"
     }
   },
   "DND5E.UNITS": {
@@ -4996,6 +5032,19 @@
       "cover": {
         "label": "Abri",
         "hint": "Abri fournie à l'équipage par cette aptitude du véhicule."
+      },
+      "enchant": {
+        "label": "Configuration de l'enchantement",
+        "items": {
+          "max": {
+            "label": "Limite d'objet",
+            "hint": "Formule pour le nombre maximum d'enchantements de ce type pouvant être actifs simultanément."
+          },
+          "period": {
+            "label": "Période de remplacement",
+            "hint": "À quelle fréquence les enchantements de ce type peuvent être réattribués à d'autres objets."
+          }
+        }
       }
     }
   },
@@ -5009,6 +5058,9 @@
     },
     "Other": {
       "label": "Autres options"
+    },
+    "Bloodied": {
+      "label": "Seuil En péril"
     }
   },
   "DND5E.HitPointsTempMaxHint": "Modification temporaire des PV maximum.",
@@ -5067,7 +5119,220 @@
       "Minimum": "Jet minimum"
     },
     "Section": "Jets de {label}",
-    "Status": "Statut"
+    "Status": "Statut",
+    "Bonus": "Bonus de jet",
+    "Description": {
+      "ability": "Caractéristique du jet",
+      "attack": {
+        "classification": "Classification de l'attaque",
+        "mode": "Mode d'attaque",
+        "type": "Type d'attaque"
+      },
+      "damage": {
+        "type": "Type de dégâts"
+      },
+      "proficient": "Maîtrisé",
+      "skill": "Compétence lancée",
+      "tool": "Outil lancé",
+      "type": "Type de jet"
+    },
+    "FIELDS": {
+      "rolls": {
+        "ability": {
+          "check": {
+            "bonus": {
+              "label": "Bonus global de test de caractéristique"
+            },
+            "max": {
+              "label": "Jet de test de caractéristique global maximum"
+            },
+            "min": {
+              "label": "Jet de test de caractéristique global minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage global aux tests de caractéristique"
+            },
+            "proficiency": {
+              "label": "Maîtrise globale des tests de caractéristique"
+            }
+          },
+          "label": "Modification des jets de caractéristique",
+          "save": {
+            "bonus": {
+              "label": "Bonus global de sauvegarde de caractéristique"
+            },
+            "max": {
+              "label": "Jet de sauvegarde de caractéristique global maximum"
+            },
+            "min": {
+              "label": "Jet de sauvegarde de caractéristique global minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage global aux sauvegardes de caractéristique"
+            },
+            "proficiency": {
+              "label": "Maîtrise globale des sauvegardes de caractéristique"
+            }
+          },
+          "skill": {
+            "bonus": {
+              "label": "Bonus global de test de compétence"
+            },
+            "max": {
+              "label": "Jet de test de compétence global maximum"
+            },
+            "min": {
+              "label": "Jet de test de compétence global minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage global aux tests de compétence"
+            },
+            "proficiency": {
+              "label": "Maîtrise globale des tests de compétence"
+            }
+          },
+          "tool": {
+            "bonus": {
+              "label": "Bonus global de test d'outil"
+            },
+            "max": {
+              "label": "Jet de test d'outil global maximum"
+            },
+            "min": {
+              "label": "Jet de test d'outil global minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage global aux tests d'outil"
+            },
+            "proficiency": {
+              "label": "Maîtrise globale des tests d'outil"
+            }
+          }
+        },
+        "attack": {
+          "bonus": {
+            "label": "Bonus d'attaque global"
+          },
+          "label": "Modification des jets d'attaque",
+          "max": {
+            "label": "Jet d'attaque global maximum"
+          },
+          "min": {
+            "label": "Jet d'attaque global minimum"
+          },
+          "mode": {
+            "label": "Mode Avantage global à l'attaque"
+          },
+          "msak": {
+            "bonus": {
+              "label": "Bonus d'attaque de sort au corps à corps"
+            },
+            "max": {
+              "label": "Jet d'attaque de sort au corps à corps maximum"
+            },
+            "min": {
+              "label": "Jet d'attaque de sort au corps à corps minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage à l'attaque de sort au corps à corps"
+            }
+          },
+          "mwak": {
+            "bonus": {
+              "label": "Bonus d'attaque d'arme au corps à corps"
+            },
+            "max": {
+              "label": "Jet d'attaque d'arme au corps à corps maximum"
+            },
+            "min": {
+              "label": "Jet d'attaque d'arme au corps à corps minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage à l'attaque d'arme au corps à corps"
+            }
+          },
+          "rsak": {
+            "bonus": {
+              "label": "Bonus d'attaque de sort à distance"
+            },
+            "max": {
+              "label": "Jet d'attaque de sort à distance maximum"
+            },
+            "min": {
+              "label": "Jet d'attaque de sort à distance minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage à l'attaque de sort à distance"
+            }
+          },
+          "rwak": {
+            "bonus": {
+              "label": "Bonus d'attaque d'arme à distance"
+            },
+            "max": {
+              "label": "Jet d'attaque d'arme à distance maximum"
+            },
+            "min": {
+              "label": "Jet d'attaque d'arme à distance minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage à l'attaque d'arme à distance"
+            }
+          }
+        },
+        "damage": {
+          "label": "Modification des jets de dégâts",
+          "msak": {
+            "bonus": {
+              "label": "Bonus de dégâts d'attaque de sort au corps à corps"
+            }
+          },
+          "mwak": {
+            "bonus": {
+              "label": "Bonus de dégâts d'attaque d'arme au corps à corps"
+            }
+          },
+          "rsak": {
+            "bonus": {
+              "label": "Bonus de dégâts d'attaque de sort à distance"
+            }
+          },
+          "rwak": {
+            "bonus": {
+              "label": "Bonus de dégâts d'attaque d'arme à distance"
+            }
+          }
+        }
+      }
+    },
+    "Formatter": {
+      "AdvantageMode": "Mode Avantage {name}",
+      "Bonus": "Bonus de jet de {name}",
+      "Maximum": "Jet de {name} maximum",
+      "Minimum": "Jet de {name} minimum",
+      "ModifierAbility": "Modificateur de caractéristique de {name}"
+    },
+    "Generic": {
+      "D20": {
+        "bonus": {
+          "label": "Bonus de jet"
+        },
+        "max": {
+          "label": "Jet maximum"
+        },
+        "min": {
+          "label": "Jet minimum"
+        },
+        "mode": {
+          "label": "Mode Avantage"
+        }
+      },
+      "Damage": {
+        "bonus": {
+          "label": "Bonus de dégâts"
+        }
+      }
+    }
   },
   "DND5E.SKILL": {
     "SECTIONS": {
@@ -5080,6 +5345,31 @@
         "Label": "Bonus de {label}",
         "Hint": "Ces bonus s'appliquent aux valeurs passifs et aux tests effectués avec {label}."
       }
+    },
+    "FIELDS": {
+      "skills": {
+        "element": {
+          "roll": {
+            "bonus": {
+              "label": "Bonus de test de compétence"
+            },
+            "max": {
+              "label": "Jet de test de compétence maximum"
+            },
+            "min": {
+              "label": "Jet de test de compétence minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage au test de compétence"
+            }
+          }
+        }
+      }
+    },
+    "Formatter": {
+      "CheckBonus": "Bonus de test de {name}",
+      "PassiveBonus": "Bonus de {name} passif",
+      "Proficiency": "Maîtrise de {name}"
     }
   },
   "DND5E.TOOL": {
@@ -5637,7 +5927,10 @@
       "Legendary": "Légendaire",
       "Rare": "Rare",
       "Uncommon": "Peu courant",
-      "VeryRare": "Très rare"
+      "VeryRare": "Très rare",
+      "Artifact": "Artéfact",
+      "Mundane": "Ordinaire",
+      "Varies": "Variable"
     }
   },
   "DND5E.Remaining": "Restant",
@@ -5840,7 +6133,20 @@
     "APPLYACTIVEEFFECT": {
       "FIELDS": {
         "effects": {
-          "label": "Effets"
+          "label": "Effets",
+          "hint": "Les effets appliqués aux tokens se trouvant dans la région."
+        },
+        "dispositions": {
+          "hint": "Si défini, applique les effets uniquement aux tokens ayant ces dispositions.",
+          "label": "Dispositions"
+        },
+        "sizes": {
+          "hint": "Si défini, applique les effets uniquement aux tokens de ces tailles.",
+          "label": "Tailles"
+        },
+        "types": {
+          "hint": "Si défini, applique les effets uniquement aux tokens de ces types de créature.",
+          "label": "Types"
         }
       }
     }
@@ -5862,7 +6168,9 @@
     "SpellList": "Fiche de listes de sorts D&D 5e",
     "Token": "Fiche de token D&D 5e",
     "Vehicle": "Fiche de véhicule D&D 5e",
-    "RollTable": "Fiche de table aléatoire D&D 5e"
+    "RollTable": "Fiche de table aléatoire D&D 5e",
+    "ActiveEffect": "Fiche d'effet actif D&D 5e",
+    "AdventureImporter": "Importateur d'aventure D&D 5e"
   },
   "DND5E.SkillRoll": "Test de {ability} ({skill})",
   "DND5E.SpellLevelSpell": "{level} ({n} Emplacements)",
@@ -5895,6 +6203,9 @@
       },
       "units": {
         "label": "Unité"
+      },
+      "multiplier": {
+        "label": "Multiplicateur de déplacement"
       }
     },
     "Hover": "Vol stationnaire",
@@ -6374,16 +6685,32 @@
     }
   },
   "DND5E.SplitStack": {
-    "Action": "Division"
+    "Action": "Division",
+    "Title": "Diviser la pile"
   },
   "DND5E.TABLEOFCONTENTS": {
     "FIELDS": {
       "type": {
         "label": "Type"
+      },
+      "order": {
+        "label": "Ordre"
+      },
+      "position": {
+        "label": "Position"
+      },
+      "showPages": {
+        "label": "Afficher les pages"
+      },
+      "title": {
+        "label": "Titre personnalisé"
       }
     },
     "Type": {
       "Special": "Spécial"
+    },
+    "Action": {
+      "Configure": "Configurer la table des matières"
     }
   },
   "DND5E.TELEPORT": {
@@ -6504,5 +6831,53 @@
     "Warning": {
       "NoLandingSurface": "{name} ne peut pas chuter, il n'y a aucune surface en dessous."
     }
-  }
+  },
+  "DND5E.FILTER": {
+    "Action": {
+      "Edit": "Modifier les filtres"
+    },
+    "Empty": "Aucun filtre",
+    "Invalid": "Filtre invalide",
+    "Operator": {
+      "And": "et",
+      "Not": "non",
+      "Or": "ou"
+    }
+  },
+  "DND5E.FlagsRemarkableAthleteHintLegacy": "Demi-maîtrise (arrondie au supérieur) aux tests de caractéristique physique et à l'Initiative.",
+  "DND5E.IdentifierCustom": "Identifiant personnalisé",
+  "DND5E.INITIATIVE": {
+    "FIELDS": {
+      "attributes": {
+        "init": {
+          "roll": {
+            "bonus": {
+              "label": "Bonus d'Initiative"
+            },
+            "max": {
+              "label": "Jet d'Initiative maximum"
+            },
+            "min": {
+              "label": "Jet d'Initiative minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage à l'Initiative"
+            }
+          }
+        }
+      }
+    }
+  },
+  "DND5E.PIETY": {
+    "Configure": "Configurer la Piété",
+    "Label": "Piété",
+    "FIELDS": {
+      "value": {
+        "label": "Valeur de Piété",
+        "hint": "Valeur de Piété actuelle de ce personnage."
+      }
+    }
+  },
+  "DND5E.RollModifiers": "Modificateurs",
+  "DND5E.SubclassOf": "Sous-classe de {class}"
 }
