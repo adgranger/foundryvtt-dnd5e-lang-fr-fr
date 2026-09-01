@@ -3342,7 +3342,9 @@
         "Label": "Anneau",
         "Counted": {
           "one": "anneau",
-          "other": "anneaux"
+          "other": "anneaux",
+          "oneSized": "{sizes} anneau",
+          "otherSized": "{number} anneaux {sizes}"
         }
       }
     },
@@ -3384,7 +3386,8 @@
     "NoneSelected": "Aucun token sélectionné",
     "NoneTargeted": "Aucun token ciblé",
     "Selected": "Sélectionné",
-    "Targeted": "Ciblé"
+    "Targeted": "Ciblé",
+    "NoTargets": "Aucune cible"
   },
   "DND5E.ToggleDescription": "Basculer la description",
   "DND5E.ToolArtisans": "Outils d'artisan",
@@ -3548,7 +3551,8 @@
       },
       "Never": "Jamais",
       "Special": "Spécial",
-      "Time": "Durée"
+      "Time": "Durée",
+      "Empty": "Aucune récupération spécifiée. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour ajouter des périodes de récupération."
     }
   },
   "DND5E.UTILITY": {
@@ -3594,7 +3598,43 @@
         }
       },
       "damage": {
-        "hint": "Dés de dégâts intrinsèques de l'arme. Le modificateur de caractéristique et les éventuelles dégâts supplémentaires seront fournis automatiquement lors de l'attaque."
+        "hint": "Dés de dégâts intrinsèques de l'arme. Le modificateur de caractéristique et les éventuelles dégâts supplémentaires seront fournis automatiquement lors de l'attaque.",
+        "base": {
+          "bonus": {
+            "label": "Bonus de dégâts de base"
+          },
+          "custom": {
+            "enabled": {
+              "label": "Utiliser une formule de dégâts de base personnalisée"
+            },
+            "formula": {
+              "label": "Formule de dégâts de base personnalisée"
+            }
+          },
+          "denomination": {
+            "label": "Dé de dégâts de base"
+          },
+          "number": {
+            "label": "Nombre de dés de dégâts de base"
+          },
+          "scaling": {
+            "formula": {
+              "label": "Formule de mise à l'échelle des dégâts de base"
+            },
+            "mode": {
+              "label": "Mode de mise à l'échelle des dégâts de base"
+            },
+            "number": {
+              "label": "Valeur de mise à l'échelle des dégâts de base"
+            }
+          },
+          "types": {
+            "label": "Types de dégâts de base"
+          }
+        },
+        "bonus": {
+          "label": "Bonus de dégâts"
+        }
       },
       "mastery": {
         "label": "Botte",
@@ -5383,6 +5423,30 @@
         "Hint": "Ces bonus s’appliquent aux tests effectués avec n’importe quel outil."
       },
       "Details": "Détails {label}"
+    },
+    "FIELDS": {
+      "tools": {
+        "element": {
+          "roll": {
+            "bonus": {
+              "label": "Bonus de test d'outil"
+            },
+            "max": {
+              "label": "Jet de test d'outil maximum"
+            },
+            "min": {
+              "label": "Jet de test d'outil minimum"
+            },
+            "mode": {
+              "label": "Mode Avantage au test d'outil"
+            }
+          }
+        }
+      }
+    },
+    "Formatter": {
+      "CheckBonus": "Bonus de test de {name}",
+      "Proficiency": "Maîtrise de {name}"
     }
   },
   "DND5E.TraitDMPlural.one": "Modification des dégâts",
@@ -5688,10 +5752,15 @@
           "label": "Mode",
           "hint": "Définit comment les modifications de la transformation sont déterminées.",
           "Direct": "Profils des créatures (par lien direct)",
-          "CR": "Profils des créatures (par facteur de puissance)"
+          "CR": "Profils des créatures (par facteur de puissance)",
+          "Form": "Sélectionner une forme"
         },
         "preset": {
           "label": "Préréglage"
+        },
+        "formless": {
+          "hint": "Permet à la créature de retirer toutes ses formes et de revenir à un état par défaut.",
+          "label": "Sans forme"
         }
       }
     },
@@ -5864,7 +5933,8 @@
       "OriginalActor": "Aucun acteur original trouvé avec l'ID '{reference}'.",
       "SourceActor": "Aucun acteur trouvé pour la transformation."
     },
-    "Hint": "Modifier un acteur en utilisant les statistiques d'un autre."
+    "Hint": "Modifier un acteur en utilisant les statistiques d'un autre.",
+    "NoForm": "Aucune forme"
   },
   "SOURCE.BOOK.SRD52": "Document de Référence Système 5.2",
   "DND5E.JOURNALENTRY": {
@@ -6707,10 +6777,26 @@
       }
     },
     "Type": {
-      "Special": "Spécial"
+      "Special": "Spécial",
+      "Appendix": "Annexe",
+      "Chapter": "Chapitre",
+      "Header": "En-tête"
     },
     "Action": {
       "Configure": "Configurer la table des matières"
+    },
+    "HiddenPages": "Pages masquées",
+    "HideAllPages": "Masquer toutes les pages",
+    "JournalEntry": "Entrée de journal",
+    "NoFolder": "Aucun dossier",
+    "Special": {
+      "After": "Après {chapter}",
+      "End": "Fin de la table des matières"
+    },
+    "Title": "Table des matières",
+    "Warning": {
+      "DuplicateHeader": "Une seule entrée peut être définie avec le type En-tête.",
+      "DuplicatePosition": "Chaque chapitre et annexe doit avoir une valeur de position unique."
     }
   },
   "DND5E.TELEPORT": {
@@ -6720,14 +6806,36 @@
     "SECTIONS": {
       "Teleport": "Téléportation"
     },
-    "Title": "Téléportation"
+    "Title": "Téléportation",
+    "FIELDS": {
+      "teleport": {
+        "label": "Distance",
+        "hint": "Définit la distance maximale de téléportation.",
+        "override": {
+          "label": "Surcharger",
+          "hint": "Remplace la portée normale de l'activité et définit manuellement la distance maximale de téléportation."
+        },
+        "units": {
+          "label": "Unité de distance"
+        },
+        "value": {
+          "label": "Distance maximale"
+        }
+      }
+    },
+    "Hint": "Téléporte un token vers une destination choisie.",
+    "Warning": {
+      "InvalidDistance": "La téléportation ne peut pas être utilisée dans des scènes sans unités de déplacement prises en charge."
+    }
   },
   "EDITOR.DND5E.Inserts": {
     "Attack": "Jet d'attaque",
     "Check": "Test de caractéristique",
     "Damage": "Dégâts",
     "Healing": "Soins",
-    "Save": "Jet de sauvegarde"
+    "Save": "Jet de sauvegarde",
+    "Advice": "Conseil général",
+    "Award": "Récompense"
   },
   "DOCUMENT.Activity": "Activité",
   "DOCUMENT.Advancement": "Progression",
@@ -6879,5 +6987,20 @@
     }
   },
   "DND5E.RollModifiers": "Modificateurs",
-  "DND5E.SubclassOf": "Sous-classe de {class}"
+  "DND5E.SubclassOf": "Sous-classe de {class}",
+  "DND5E.TOKEN": {
+    "Attribute": {
+      "Label": "Token : {attribute}",
+      "LightBrightRadius": "Rayon de lumière vive",
+      "LightDimRadius": "Rayon de lumière faible"
+    },
+    "LockScale": {
+      "Hint": "Empêche l'application d'un ajustement d'échelle au token si la taille de l'Acteur est Petite.",
+      "Label": "Verrouiller l'échelle"
+    },
+    "LockSize": {
+      "Hint": "Déverrouiller pour saisir manuellement les dimensions de ce token, et empêcher leur ajustement automatique en fonction de la taille de la créature.",
+      "Label": "Verrouiller la taille"
+    }
+  }
 }
