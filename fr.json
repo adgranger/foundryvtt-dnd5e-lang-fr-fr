@@ -3959,6 +3959,22 @@
         "All": "Utiliser la valeur pour tout le monde",
         "NPCs": "Utiliser la valeur pour les PNJ du MJ",
         "None": "Toujours lancer l'initiative"
+      },
+      "AutoApplyDowned": {
+        "Name": "Application automatique de Mise à terre",
+        "Hint": "Marque automatiquement une créature comme Morte ou Inconsciente lorsqu'elle est réduite à 0 PV en combat. Les PNJ mineurs sont marqués Morts. Les PNJ importants et les PJ sont d'abord marqués Inconscients, puis Morts en cas d'échec à trois jets de sauvegarde contre la mort.",
+        "None": "Jamais",
+        "DeadOnly": "Pour les PNJ (mort uniquement)",
+        "NPCs": "Pour les PNJ (mort et inconscient)",
+        "All": "Toujours"
+      },
+      "InitiativeGroupCombatants": {
+        "Hint": "Regroupe les combattants ayant la même valeur d'Initiative dans le suivi de rencontre.",
+        "Name": "Grouper les combattants"
+      },
+      "InitiativeGroupRoll": {
+        "Name": "Un seul jet par créature",
+        "Hint": "Utilise le même jet d'Initiative pour des créatures identiques."
       }
     },
     "CRITICAL": {
@@ -4050,6 +4066,14 @@
       "AllowRests": {
         "Hint": "Permet aux joueurs de se reposer directement depuis la feuille de leur personnage. Lorsque cette option est désactivée, les joueurs ne peuvent se reposer que lorsque le MJ en fait la demande depuis la feuille de groupe.",
         "Name": "Autoriser les repos individuels"
+      },
+      "AllowDamage": {
+        "Hint": "Autorise les joueurs à appliquer des dégâts aux tokens qu'ils possèdent.",
+        "Name": "Autoriser l'application des dégâts par les joueurs"
+      },
+      "AllowEffects": {
+        "Hint": "Autorise les joueurs à utiliser la barre d'application des effets lorsqu'un Acteur qu'ils possèdent est la cible d'un effet.",
+        "Name": "Autoriser l'application des effets par les joueurs"
       }
     },
     "AUTOMATION": {
@@ -4059,15 +4083,51 @@
         "Full": "Complète",
         "NoBlocking": "Partielle",
         "None": "Aucune"
+      },
+      "Autosize": {
+        "Hint": "Ajuste automatiquement les dimensions et l'échelle d'un token en fonction de sa catégorie de taille.",
+        "Name": "Synchroniser la taille du token"
+      },
+      "Falling": {
+        "Name": "Désactiver l'automatisation des chutes",
+        "Hint": "Ne suit pas l'état de chute des tokens."
+      },
+      "SenseVision": {
+        "Name": "Synchroniser les sens avec la vision du token",
+        "Hint": "Configure automatiquement la portée de vision, le mode de vision et les modes de détection du token en fonction des sens de l'Acteur.",
+        "Notice": "La vision et la détection sont synchronisées avec les {senses} de cet Acteur.",
+        "Senses": "sens"
       }
     },
     "CHATLOG": {
       "Options": {
-        "light": "Clair"
-      }
+        "light": "Clair",
+        "blank": "Défaut",
+        "dark": "Sombre"
+      },
+      "Hint": "Spécifie un thème pour le tchat. Par défaut, celui-ci hérite du thème de l'application.",
+      "Name": "Thème du tchat"
     },
     "CONDITIONS": {
       "Name": "États"
+    },
+    "ENCOUNTERS": {
+      "Name": "Rencontres",
+      "EncounterPlacementBehavior": {
+        "Name": "Options de placement",
+        "Hint": "Détermine si les membres d'une rencontre sont ajoutés au combat lors de leur placement sur une scène.",
+        "CreateCombatants": "Ajouter au combat",
+        "None": "Ne rien faire",
+        "RollInitiative": "Ajouter au combat et lancer l'Initiative"
+      }
+    },
+    "PIETY": {
+      "Hint": "Active le suivi optionnel de la Piété pour les personnages joueurs.",
+      "Name": "Valeur de Piété"
+    },
+    "SUMMARIZECHAT": {
+      "Hint": "Ajoute certains résultats sous forme de résumés plutôt que sous forme de cartes de tchat complètes.",
+      "Name": "Cartes de tchat résumées"
     }
   },
   "SIDEBAR.SortModePriority": "Trier par priorité",
@@ -6835,7 +6895,21 @@
     "Healing": "Soins",
     "Save": "Jet de sauvegarde",
     "Advice": "Conseil général",
-    "Award": "Récompense"
+    "Award": "Récompense",
+    "EnrichersGroup": "Enrichisseurs D&D",
+    "FloatLeft": "Aligner à gauche",
+    "FloatRight": "Aligner à droite",
+    "Group": "Blocs D&D",
+    "HabitatTreasure": "Habitat et trésor",
+    "Item": "Objet",
+    "Lookup": "Recherche",
+    "Narrative": "Narration",
+    "Notable": "Notable",
+    "Quest": "Quête",
+    "Quote": "Citation en exergue",
+    "Reference": "Référence",
+    "Skill": "Test de compétence",
+    "VTTAdvice": "Conseil VTT"
   },
   "DOCUMENT.Activity": "Activité",
   "DOCUMENT.Advancement": "Progression",
@@ -7002,5 +7076,23 @@
       "Hint": "Déverrouiller pour saisir manuellement les dimensions de ce token, et empêcher leur ajustement automatique en fonction de la taille de la créature.",
       "Label": "Verrouiller la taille"
     }
-  }
+  },
+  "KEYBINDINGS.DND5E.OpenCompendiumBrowser": "Ouvrir le navigateur de compendium",
+  "KEYBINDINGS.DND5E.ToggleSheetMode": "Basculer le mode de fiche",
+  "MIGRATION.DND5E": {
+    "Compendium": {
+      "Failed": "Échec de la migration du compendium {compendium}.",
+      "Migrate": "Migration du compendium {compendium} vers la version {version}.",
+      "Refresh": "Actualisation du compendium {compendium}."
+    },
+    "World": {
+      "Begin": "Application de la migration du système D&D 5e vers la version {version}. Veuillez patienter et ne pas fermer votre jeu ni éteindre votre serveur.",
+      "Complete": "Migration du système D&D 5e vers la version {version} terminée !"
+    },
+    "Warning": {
+      "VersionTooOld": "Vos données du système D&D 5e proviennent d'une version de Foundry trop ancienne et ne peuvent pas être migrées de manière fiable vers la dernière version. Le processus va être tenté, mais des erreurs peuvent survenir."
+    }
+  },
+  "SETTINGS.5eNoExhaustionN": "Désactiver l'automatisation de l'épuisement",
+  "SETTINGS.5eNoExhaustionL": "Désactive l'automatisation des effets d'épuisement par le système."
 }
