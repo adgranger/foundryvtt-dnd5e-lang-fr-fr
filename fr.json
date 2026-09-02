@@ -85,7 +85,7 @@
   "DND5E.AbilitySaveConfigure": "Jets de sauvegarde de {ability}",
   "DND5E.AbilityCheckConfigure": "Tests de caractéristique de {ability}",
   "DND5E.AbilityCheckConfigurationHint": "Configurer les jets bonus.",
-  "DND5E.AbilityConfigurationHint": "Configurer le bonus de Maîtrise sur les jets de sauvegarde de caractéristique, le bonus des jets de sauvegarde et les jets bonus.",
+  "DND5E.AbilityConfigurationHint": "Configure la maîtrise des jets de sauvegarde de caractéristique, les bonus des jets de sauvegarde et les bonus de test.",
   "DND5E.AbilityCheckGlobalBonusHint": "Ce bonus s'applique à tous les tests de caractéristiques effectués par cet acteur.",
   "DND5E.Action": "Action",
   "DND5E.ActionAbbr": "A",
@@ -537,6 +537,10 @@
           "list": {
             "hint": "Seuls les sorts figurant dans ces listes sont autorisés.",
             "label": "Listes de sorts"
+          },
+          "school": {
+            "hint": "N'autorise que les sorts de ces écoles.",
+            "label": "Écoles de magie"
           }
         },
         "type": {
@@ -560,7 +564,8 @@
         "SpellLevelAvailable": "Seuls les sorts de niveau {level} ou inférieur peuvent être choisis pour cette progression.",
         "SpellLevelSpecific": "Seuls les sorts de niveau {level} peuvent être choisis pour cette progression.",
         "MaxSelected": "Aucun autre objet ne peut être sélectionné. Décochez les objets avant d'en sélectionner d'autres.",
-        "SpellList": "Seuls les sorts disponibles dans la liste des sorts {lists} peuvent être choisis pour cette Progression."
+        "SpellList": "Seuls les sorts disponibles dans la liste des sorts {lists} peuvent être choisis pour cette Progression.",
+        "SpellSchool": "Seuls les sorts de l'école de {schools} peuvent être choisis pour cette progression."
       },
       "DropHint": "Déposez des objets ici pour les ajouter à la liste pouvant être sélectionnée avec cette progression.",
       "Action": {
@@ -5830,7 +5835,7 @@
           "Label": "Maîtrise de l'équipement"
         },
         "Resistances": {
-          "Label": "Résistance aux dégâts"
+          "Label": "Résistances aux dégâts"
         },
         "TempHP": {
           "Label": "Pv temp"
@@ -6881,7 +6886,8 @@
     "Warning": {
       "JournalMissing": "L'entrée de journal « {id} » est introuvable pour l'affichage de {adventure}.",
       "SceneMissing": "La scène « {id} » est introuvable pour l'activation de {adventure}."
-    }
+    },
+    "Options": "Options d'aventure"
   },
   "DND5E.AttributeScores": "Valeurs de caractéristiques",
   "DND5E.BaseItem": "Objet de base",
@@ -7054,32 +7060,112 @@
     },
     "Damage": {
       "Resistance": {
-        "one": "Résistance aux dégâts"
+        "one": "Résistance aux dégâts",
+        "other": "Résistances aux dégâts",
+        "title": "Résistances aux dégâts"
+      },
+      "Immunity": {
+        "one": "Immunité aux dégâts",
+        "other": "Immunités aux dégâts",
+        "title": "Immunités aux dégâts"
+      },
+      "Modification": {
+        "one": "Modification des dégâts",
+        "other": "Modifications des dégâts",
+        "title": "Modification des dégâts"
+      },
+      "Vulnerability": {
+        "one": "Vulnérabilité aux dégâts",
+        "other": "Vulnérabilités aux dégâts",
+        "title": "Vulnérabilités aux dégâts"
       }
     },
     "Generic": {
       "other": "Traits",
-      "title": "Traits"
+      "title": "Traits",
+      "one": "Trait"
     },
     "Language": {
       "other": "Langues",
-      "title": "Langues"
+      "title": "Langues",
+      "one": "Langue"
     },
     "Save": {
       "other": "Maîtrise des jets de sauvegarde",
-      "title": "Maîtrise des jets de sauvegarde"
+      "title": "Maîtrise des jets de sauvegarde",
+      "one": "Maîtrise des jets de sauvegarde"
     },
     "Skill": {
       "other": "Maîtrises de compétence",
-      "title": "Maîtrises de compétence"
+      "title": "Maîtrises de compétence",
+      "one": "Maîtrise de compétence"
     },
     "Tool": {
       "other": "Maîtrise d'outils",
-      "title": "Maîtrise d'outils"
+      "title": "Maîtrise d'outils",
+      "one": "Maîtrise d'outils"
     },
     "Weapon": {
       "other": "Maîtrises d'arme",
-      "title": "Maîtrises d'arme"
-    }
+      "title": "Maîtrises d'arme",
+      "one": "Maîtrise des armes"
+    },
+    "Action": {
+      "Configure": "Configurer {trait}"
+    },
+    "All": "Tous les {category}",
+    "ArmorLegacy": {
+      "one": "Maîtrise des armures",
+      "other": "Maîtrises des armures",
+      "title": "Maîtrises des armures"
+    },
+    "Condition": {
+      "Immunity": {
+        "one": "Immunité aux états",
+        "other": "Immunités aux états",
+        "title": "Immunités aux états"
+      }
+    },
+    "Choose": {
+      "AnyCounted": "{count} au choix parmi : {type}",
+      "AnyUncounted": "n'importe quel(le) {type}",
+      "List": "{count} au choix parmi : {list}",
+      "Other": "{count} autre(s) parmi {type}",
+      "Wrapper": "Choisissez {choices}"
+    },
+    "Chosen": "Traits choisis"
+  },
+  "DND5E.WELCOME": {
+    "Button": "Écran d'accueil",
+    "Message": {
+      "Bugs": "<p>Vous avez rencontré un bug ? Obtenez de l'aide de la communauté sur le <a href=\"{discord}\">Discord officiel</a> ou signalez-le sur le <a href=\"{issues}\">gestionnaire de tickets</a> du système.</p>",
+      "Changes": "<p>Découvrez les <a href=\"{changes}\">changements</a> apportés par la dernière version.</p>",
+      "Content": "<p>Rendez-vous dans l'onglet <strong>Contenu officiel</strong> pour voir quels ouvrages D&D 5e sont disponibles et les activer dans ce monde.</p>",
+      "Documentation": "<p>Consultez le <a href=\"{wiki}\">Wiki de documentation</a> pour des informations détaillées sur l'utilisation du système.</p>",
+      "Introduction": "<p>Bienvenue dans le système de jeu officiel pour <strong>Dungeons & Dragons Cinquième Édition</strong>.</p>",
+      "MoreContent": "<p>Trouvez davantage de contenu Dungeons & Dragons Cinquième Édition sur le <a href=\"{marketplace}\">Marketplace officiel de Foundry VTT</a>.</p>"
+    },
+    "Module": {
+      "Enabled": "Activé",
+      "NotInstalled": "Non installé"
+    },
+    "Section": {
+      "adventures": "Aventures",
+      "core": "Manuels de base",
+      "expanded": "Manuels étendus",
+      "more": "Contenu supplémentaire"
+    },
+    "Settings": {
+      "Label": "Paramètres",
+      "Metric": {
+        "Hint": "Passe aux unités métriques par défaut pour les distances, poids et volumes.",
+        "Label": "Utiliser le système métrique"
+      }
+    },
+    "Tab": {
+      "main": "Bienvenue",
+      "modules": "Contenu officiel"
+    },
+    "Title": "Bienvenue dans D&D 5e"
   }
 }
