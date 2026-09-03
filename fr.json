@@ -650,6 +650,9 @@
       },
       "Action": {
         "CopyFormula": "Copier la formule"
+      },
+      "Warning": {
+        "DuplicateIdentifier": "Plusieurs valeurs d'échelle partagent l'identifiant {identifier}."
       }
     },
     "Size": {
@@ -1765,6 +1768,10 @@
         "value": {
           "label": "Valeur de durée",
           "hint": "Valeur de la durée dans les unités spécifiées, si applicable."
+        },
+        "expiry": {
+          "label": "Événement d'expiration",
+          "hint": "Événement déclenchant la fin de l'utilisation."
         }
       }
     }
@@ -1877,11 +1884,22 @@
       "Label": "Changement",
       "Title": "{effect} — Changement n°{number}",
       "Group": {
-        "Rules": "Règles"
+        "Rules": "Règles",
+        "Custom": "Personnalisé",
+        "Standard": "Standard"
       },
       "Type": {
         "Bonus": {
           "Label": "Bonus"
+        },
+        "Advantage": {
+          "Label": "Mode Avantage"
+        },
+        "Maximum": {
+          "Label": "Jet maximum"
+        },
+        "Minimum": {
+          "Label": "Jet minimum"
         }
       }
     },
@@ -1905,6 +1923,38 @@
     },
     "Suppressed": {
       "Hint": "L'objet source doit être équipé ou harmonisé pour activer ces effets"
+    },
+    "AttributeKeyTooltip": "Pour obtenir la liste des clés courantes et de leurs valeurs autorisées, consultez <a href=\"{url}\">le wiki</a>.",
+    "Expired": "Expiré",
+    "Expiry": {
+      "Abbreviation": {
+        "End": "Fin",
+        "Start": "Début"
+      },
+      "Group": {
+        "General": "Général",
+        "Specific": "Spécifique"
+      },
+      "Type": {
+        "LongRest": "Fin d'un Repos long",
+        "ShortRest": "Fin d'un Repos court",
+        "SourceEnd": "Fin du prochain tour de la source",
+        "SourceStart": "Début du prochain tour de la source",
+        "TargetEnd": "Fin du prochain tour de la cible",
+        "TargetStart": "Début du prochain tour de la cible",
+        "YourEnd": "Fin de votre prochain tour",
+        "YourStart": "Début de votre prochain tour"
+      }
+    },
+    "FIELDS": {
+      "statuses": {
+        "label": "États",
+        "hint": "Tant qu'elle est affectée par cet effet actif, la cible sera considérée comme ayant ces états supplémentaires."
+      }
+    },
+    "Warning": {
+      "RollCondition": "Les conditions d'effet ne peuvent pas référencer des propriétés « roll. ». Déplacez cette condition dans les modifications individuelles pour que l'effet soit appliqué.",
+      "StatusCondition": "Les effets qui accordent des états ne peuvent pas également être conditionnés par des états. Déplacez cette condition dans les modifications individuelles pour que l'effet soit appliqué."
     }
   },
   "DND5E.ENCHANT": {
@@ -4954,6 +5004,10 @@
       "properties": {
         "label": "Propriétés du conteneur"
       }
+    },
+    "UnidentifiedContentsWarning": {
+      "Title": "Conteneur non identifié",
+      "Message": "Ce conteneur n'est pas identifié. Tout ce que vous y ajouterez restera caché tant qu'il ne sera pas identifié. Continuer ?"
     }
   },
   "DND5E.CHATMESSAGE": {
@@ -5961,7 +6015,8 @@
       "Special": "Spécial",
       "StealthDisadvantage": "Désavantage de Discrétion",
       "Sidekick": "Comparses",
-      "Gear": "Équipement"
+      "Gear": "Équipement",
+      "UnidentifiedContents": "Masquer le contenu non identifié"
     },
     "SECTIONS": {
       "Activities": "Activités",
