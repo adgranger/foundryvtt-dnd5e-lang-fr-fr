@@ -127,7 +127,12 @@
     },
     "Antitoxin": {
       "name": "Antidote",
-      "description": "<p>Une créature qui boit le liquide de cette fiole reçoit l'avantage aux jets de sauvegarde contre le poison pendant 1 heure. Il n'octroie aucun bénéfice aux morts-vivants ou aux artificiels.</p>"
+      "description": "<p>Une créature qui boit le liquide de cette fiole reçoit l'avantage aux jets de sauvegarde contre le poison pendant 1 heure. Il n'octroie aucun bénéfice aux morts-vivants ou aux artificiels.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Apparatus of the Crab": {
       "name": "Submersible du Crabe",
@@ -2505,15 +2510,38 @@
     },
     "Oil of Etherealness": {
       "name": "Huile éthérée",
-      "description": "<p>Des bulles se forment sur la paroi extérieure de ce récipient rempli d'une huile grisâtre et trouble, et s'évaporent rapidement. L'huile peut couvrir une créature de taille M ou inférieure, ainsi que tout l'équipement qu'elle porte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-dessus de M). L'application de l'huile prend 10 minutes. La créature ointe reçoit l'effet du sort @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{forme éthérée} pendant 1 heure.</p>"
+      "description": "<p>Des bulles se forment sur la paroi extérieure de ce récipient rempli d'une huile grisâtre et trouble, et s'évaporent rapidement. L'huile peut couvrir une créature de taille M ou inférieure, ainsi que tout l'équipement qu'elle porte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-dessus de M). L'application de l'huile prend 10 minutes. La créature ointe reçoit l'effet du sort @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{forme éthérée} pendant 1 heure.</p>",
+      "activities": {
+        "Apply Oil": {
+          "name": "Appliquer de l'huile"
+        }
+      },
+      "effects": {
+        "Etherealness": {
+          "name": "Forme éthérée"
+        }
+      }
     },
     "Oil of Sharpness": {
       "name": "Huile d'affûtage",
-      "description": "<p>Dans cette huile incolore et gélatineuse scintillent de minuscules paillettes d'argent. Cette huile permet d'enduire la lame d'une arme tranchante ou perforante ou des munitions tranchantes ou perforantes (jusqu'à 5 projectiles). L'application de l'huile prend 1 minute. Pendant 1 heure, chaque objet oint devient magique et octroie un bonus de +3 aux jets d'attaque et de dégâts correspondants.</p>"
+      "description": "<p>Dans cette huile incolore et gélatineuse scintillent de minuscules paillettes d'argent. Cette huile permet d'enduire la lame d'une arme tranchante ou perforante ou des munitions tranchantes ou perforantes (jusqu'à 5 projectiles). L'application de l'huile prend 1 minute. Pendant 1 heure, chaque objet oint devient magique et octroie un bonus de +3 aux jets d'attaque et de dégâts correspondants.</p>",
+      "activities": {
+        "Apply Oil to Weapon": {
+          "name": "Appliquer de l'huile sur une arme"
+        },
+        "Apply Oil to Ammunition": {
+          "name": "Appliquer de l'huile sur un projectile"
+        }
+      }
     },
     "Oil of Slipperiness": {
       "name": "Huile d'insaisissabilité",
-      "description": "<p>Cet onguent noir et gluant, épais et lourd dans son récipient, s'écoule pourtant très vite. L'huile peut couvrir une créature de taille M ou inférieure, ainsi que tout l'équipement qu'elle porte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-dessus de M). L'application de l'huile prend 10 minutes. La créature ointe reçoit l'effet du sort @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{liberté de mouvement} pendant 8 heures.</p><p>Au lieu de cela, l'huile peut être versée au sol au prix d'une action, auquel cas elle couvre un carré de 3 m d'arête et duplique l'effet du sort @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{graisse} dans cette zone pendant 8 heures.</p>"
+      "description": "<p>Cet onguent noir et gluant, épais et lourd dans son récipient, s'écoule pourtant très vite. L'huile peut couvrir une créature de taille M ou inférieure, ainsi que tout l'équipement qu'elle porte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-dessus de M). L'application de l'huile prend 10 minutes. La créature ointe reçoit l'effet du sort @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{liberté de mouvement} pendant 8 heures.</p><p>Au lieu de cela, l'huile peut être versée au sol au prix d'une action, auquel cas elle couvre un carré de 3 m d'arête et duplique l'effet du sort @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{graisse} dans cette zone pendant 8 heures.</p>",
+      "activities": {
+        "Apply Oil": {
+          "name": "Appliquer de l'huile"
+        }
+      }
     },
     "Orb": {
       "name": "Orbe",
@@ -2590,7 +2618,12 @@
     },
     "Philter of Love": {
       "name": "Philtre d'amour",
-      "description": "<p>La première fois que vous voyez une créature dans les 10 minutes après avoir bu ce philtre, vous devenez charmé par cette créature pendant 1 heure. Si cette créature est d'une espèce et d'un genre qui vous attirent en temps normal, vous la considérez comme l'objet de votre amour sincère tant que vous êtes charmé. Le liquide rosé et effervescent de cette potion contient une imperceptible bulle en forme de cœur.</p>"
+      "description": "<p>La première fois que vous voyez une créature dans les 10 minutes après avoir bu ce philtre, vous devenez charmé par cette créature pendant 1 heure. Si cette créature est d'une espèce et d'un genre qui vous attirent en temps normal, vous la considérez comme l'objet de votre amour sincère tant que vous êtes charmé. Le liquide rosé et effervescent de cette potion contient une imperceptible bulle en forme de cœur.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Pike": {
       "name": "Pique",
@@ -2688,91 +2721,267 @@
     },
     "Potion of Acid Resistance": {
       "name": "Potion de résistance à l'acide",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type acide pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type acide pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Acid Resistance": {
+          "name": "Résistance à l'acide"
+        }
+      }
     },
     "Potion of Animal Friendship": {
       "name": "Potion d'amitié avec les animaux",
-      "description": "<p>Lorsque vous buvez cette potion, vous pouvez lancer le sort @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{amitié avec les animaux } (DD de sauvegarde 13) à volonté pendant 1 heure. Agiter ce liquide trouble permet de distinguer les menus objets qui y flottent : écaille de poisson, langue de colibri, griffe de chat, poil d'écureuil.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous pouvez lancer le sort @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{amitié avec les animaux } (DD de sauvegarde 13) à volonté pendant 1 heure. Agiter ce liquide trouble permet de distinguer les menus objets qui y flottent : écaille de poisson, langue de colibri, griffe de chat, poil d'écureuil.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Clairvoyance": {
       "name": "Potion de clairvoyance",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.cg50KpBkBdPK6vPL]{clairvoyance}. Le globe oculaire qui flotte dans ce liquide jaunâtre disparaît quand la potion est ouverte.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.cg50KpBkBdPK6vPL]{clairvoyance}. Le globe oculaire qui flotte dans ce liquide jaunâtre disparaît quand la potion est ouverte.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Climbing": {
       "name": "Potion d'escalade",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez une vitesse d'escalade égale à votre vitesse au sol pendant 1 heure. Pendant cette heure, vous êtes avantagé aux tests de Force (Athlétisme) effectués pour l'escalade. La potion est divisée en nappes brunes, argentées et grises évoquant des strates dans la roche. Ces couleurs ne se mélangent pas, même quand on secoue la bouteille.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez une vitesse d'escalade égale à votre vitesse au sol pendant 1 heure. Pendant cette heure, vous êtes avantagé aux tests de Force (Athlétisme) effectués pour l'escalade. La potion est divisée en nappes brunes, argentées et grises évoquant des strates dans la roche. Ces couleurs ne se mélangent pas, même quand on secoue la bouteille.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Cloud Giant Strength": {
       "name": "Potion de force de géant des nuages",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 27 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 27 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Cloud Giant Strength": {
+          "name": "Force de géant des nuages"
+        }
+      }
     },
     "Potion of Cold Resistance": {
       "name": "Potion de résistance au froid",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type froid pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type froid pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Cold Resistance": {
+          "name": "Résistance au froid"
+        }
+      }
     },
     "Potion of Diminution": {
       "name": "Potion de diminution",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet « rapetissement » du sort @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{agrandissement/rapetissement} pendant 1d4 heures (aucune concentration requise). La partie rouge du liquide de la potion se contracte continuellement en une boule minuscule, puis se dilate pour colorer le fluide incolore qui l'entoure. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet « rapetissement » du sort @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{agrandissement/rapetissement} pendant 1d4 heures (aucune concentration requise). La partie rouge du liquide de la potion se contracte continuellement en une boule minuscule, puis se dilate pour colorer le fluide incolore qui l'entoure. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Fire Giant Strength": {
       "name": "Potion de force de géant du feu",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 25 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 25 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Fire Giant Strength": {
+          "name": "Force de géant du feu"
+        }
+      }
     },
     "Potion of Fire Resistance": {
       "name": "Potion de résistance au feu",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type feu pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type feu pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Fire Resistance": {
+          "name": "Résistance au feu",
+          "description": "<p>Vous bénéficiez de la résistance aux dégâts de feu.</p>"
+        }
+      }
     },
     "Potion of Flying": {
       "name": "Potion de vol",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez une vitesse de vol égale à votre vitesse au sol pendant 1 heure et pouvez évoluer en vol stationnaire. Si vous êtes en vol au moment où la potion cesse de faire effet, vous tombez si vous ne disposez d'aucun autre moyen de vous maintenir dans les airs. Le liquide translucide de cette potion flotte dans la partie supérieure du récipient, troublé par des impuretés blanches.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez une vitesse de vol égale à votre vitesse au sol pendant 1 heure et pouvez évoluer en vol stationnaire. Si vous êtes en vol au moment où la potion cesse de faire effet, vous tombez si vous ne disposez d'aucun autre moyen de vous maintenir dans les airs. Le liquide translucide de cette potion flotte dans la partie supérieure du récipient, troublé par des impuretés blanches.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Force Resistance": {
       "name": "Potion de résistance à la force",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type force pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type force pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Force Resistance": {
+          "name": "Résistance à la force"
+        }
+      }
     },
     "Potion of Frost Giant Strength": {
       "name": "Potion de force de géant du givre",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 23 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 23 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Frost Giant Strength": {
+          "name": "Force de géant du givre"
+        }
+      }
     },
     "Potion of Gaseous Form": {
       "name": "Potion de forme gazeuse",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz]{forme gazeuse} pendant 1 heure (aucune concentration requise) ou jusqu'à ce que vous mettiez fin à cet effet par une action bonus. Le récipient de cette potion semble contenir du brouillard dont la fluidité est cependant celle de l'eau.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz]{forme gazeuse} pendant 1 heure (aucune concentration requise) ou jusqu'à ce que vous mettiez fin à cet effet par une action bonus. Le récipient de cette potion semble contenir du brouillard dont la fluidité est cependant celle de l'eau.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Gaseous Form": {
+          "name": "Forme gazeuse"
+        }
+      }
     },
     "Potion of Greater Healing": {
       "name": "Potion de guérison importante",
-      "description": "<p>Vous récupérez 4d4 + 4 points de vie en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>"
+      "description": "<p>Vous récupérez [[/healing]] en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Growth": {
       "name": "Potion d'agrandissement",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{agrandissement/rapetissement} pendant 1d4 heures (aucune concentration requise). La partie rouge du liquide de la potion se dilate continuellement depuis une boule, colorant le liquide incolore, puis se contracte. Le processus ne s'interrompt pas même quand on secoue la bouteille.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet « agrandissement » du sort @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{agrandissement/rapetissement} pendant 1d4 heures (aucune concentration requise). La partie rouge du liquide de la potion se dilate continuellement depuis une boule, colorant le liquide incolore, puis se contracte. Le processus ne s'interrompt pas même quand on secoue la bouteille.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Healing": {
       "name": "Potion de guérison",
-      "description": "<p>Vous récupérez 2d4 + 2 points de vie en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>"
+      "description": "<p>Vous récupérez [[/healing]] en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Heroism": {
       "name": "Potion d'héroïsme",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent pendant 1 heure. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{bénédiction} (aucune concentration requise). Cette potion bleue bouillonne et fume comme si elle était en ébullition.</p><section class=\"secret foundry-note\" id=\"secret-bF4l2V0GJ0rrbVZK\"><p><strong>Note Foundry</strong></p><p>Le bouton Autre formule peut être utilisé pour lancer le bonus de 1d4 reçu de Bénédiction.</p></section>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent pendant 1 heure. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{bénédiction} (aucune concentration requise). Cette potion bleue bouillonne et fume comme si elle était en ébullition.</p><section class=\"secret foundry-note\" id=\"secret-bF4l2V0GJ0rrbVZK\"><p><strong>Note Foundry</strong></p><p>Le bouton Autre formule peut être utilisé pour lancer le bonus de 1d4 reçu de Bénédiction.</p></section>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Blessed": {
+          "name": "Béni"
+        }
+      }
     },
     "Potion of Hill Giant Strength": {
       "name": "Potion de force de géant des collines",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 21 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 21 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Hill Giant Strength": {
+          "name": "Force de géant des collines"
+        }
+      }
     },
     "Potion of Invisibility": {
       "name": "Potion d'invisibilité",
-      "description": "<p>Le récipient de cette potion paraît vide, tout en donnant étrangement l'impression de contenir un liquide. Lorsque vous la buvez, vous devenez invisible pendant 1 heure. Tout ce que vous portez est invisible comme vous. L'effet prend fin prématurément si vous effectuez une attaque ou lancez un sort.</p>"
+      "description": "<p>Le récipient de cette potion paraît vide, tout en donnant étrangement l'impression de contenir un liquide. Lorsque vous la buvez, vous devenez invisible pendant 1 heure. Tout ce que vous portez est invisible comme vous. L'effet prend fin prématurément si vous effectuez une attaque ou lancez un sort.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Invisibility": {
+          "name": "Invisibilité"
+        }
+      }
     },
     "Potion of Lightning Resistance": {
       "name": "Potion de résistance à la foudre",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type foudre pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type foudre pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Lightning Resistance": {
+          "name": "Résistance à la foudre"
+        }
+      }
     },
     "Potion of Mind Reading": {
       "name": "Potion de lecture des pensées",
-      "description": "<p>Lorsque vous buvez cette potion, vous bénéficiez de l'effet du sort @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{détection des pensées} (DD de sauvegarde 13). Dans le liquide dense et pourpre de la potion flotte un nuage ovoïde et rose.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous bénéficiez de l'effet du sort @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{détection des pensées} (DD de sauvegarde 13). Dans le liquide dense et pourpre de la potion flotte un nuage ovoïde et rose.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Necrotic Resistance": {
       "name": "Potion de résistance nécrotiques",
-      "description": "<p><em>TheLa potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type nécrotiques pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>TheLa potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type nécrotiques pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Necrotic Resistance": {
+          "name": "Résistance nécrotique"
+        }
+      }
     },
     "Potion of Poison": {
       "name": "Potion toxique",
@@ -2780,43 +2989,123 @@
     },
     "Potion of Poison Resistance": {
       "name": "Potion de résistance au poison",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type poison pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type poison pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Poison Resistance": {
+          "name": "Résistance au poison"
+        }
+      }
     },
     "Potion of Psychic Resistance": {
       "name": "Potion de résistance psychiques",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type psychiques pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type psychiques pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Psychic Resistance": {
+          "name": "Résistance psychique"
+        }
+      }
     },
     "Potion of Radiant Resistance": {
       "name": "Potion de résistance radiants",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type radiants pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type radiants pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Radiant Resistance": {
+          "name": "Résistance radiante"
+        }
+      }
     },
     "Potion of Speed": {
       "name": "Potion de vitesse",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.Szvk5FEVQW3uhJi5]{hâte} pendant 1 minute (aucune concentration requise). Le liquide jaune de la potion est strié de noir et tourbillonne tout seul.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.Szvk5FEVQW3uhJi5]{hâte} pendant 1 minute (aucune concentration requise). Le liquide jaune de la potion est strié de noir et tourbillonne tout seul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Stone Giant Strength": {
       "name": "Potion de force de géant des pierres",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 23 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 23 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Stone Giant Strength": {
+          "name": "Force de géant des pierres"
+        }
+      }
     },
     "Potion of Storm Giant Strength": {
       "name": "Potion de force de géant des tempêtes",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 29 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>"
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 29 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Storm Giant Strength": {
+          "name": "Force de géant des tempêtes"
+        }
+      }
     },
     "Potion of Superior Healing": {
       "name": "Potion de guérison supérieure",
-      "description": "<p>Vous récupérez 8d4 + 8 points de vie en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>"
+      "description": "<p>Vous récupérez [[/healing]] en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Supreme Healing": {
       "name": "Potion de guérison suprême",
-      "description": "<p>Vous récupérez 10d4 + 20 points de vie en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>"
+      "description": "<p>Vous récupérez [[/healing]] en buvant cette potion. Son liquide rouge étincelle lorsqu'on l'agite.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potion of Thunder Resistance": {
       "name": "Potion de résistance au tonnerre",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type tonnerre pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>"
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type tonnerre pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      },
+      "effects": {
+        "Thunder Resistance": {
+          "name": "Résistance au tonnerre"
+        }
+      }
     },
     "Potion of Water Breathing": {
       "name": "Potion de respiration aquatique",
-      "description": "<p>Vous pouvez respirer sous l'eau pendant 1 heure après avoir bu cette potion. Ce liquide vert laiteux, dans lequel flotte une bulle aux allures de méduse, dégage des senteurs marines.</p>"
+      "description": "<p>Vous pouvez respirer sous l'eau pendant 1 heure après avoir bu cette potion. Ce liquide vert laiteux, dans lequel flotte une bulle aux allures de méduse, dégage des senteurs marines.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
     },
     "Potter's Tools": {
       "name": "Outils de potier",
@@ -4282,15 +4571,15 @@
     },
     "Wand of the War Mage +1": {
       "name": "Baguette du mage de guerre +1",
-      "description": "<p><em>Baguette (harmonisation requise avec un incantateur)</em></p><p>Tant que vous la tenez, vous recevez aux jets d'attaque de sort un bonus de +1. Par ailleurs, vous ne tenez pas compte des abris partiels lorsque vous effectuez une attaque de sort.</p>"
+      "description": "<p><em>Baguette (harmonisation requise avec un incantateur)</em></p><p>Tant que vous la tenez, vous recevez aux jets d'attaque de sort un bonus de +1. Par ailleurs, vous ne tenez pas compte des &reference[half cover]{abris partiels} lorsque vous effectuez une attaque de sort.</p>"
     },
     "Wand of the War Mage +2": {
       "name": "Baguette du mage de guerre +2",
-      "description": "<p><em>Baguette (harmonisation requise avec un incantateur)</em></p><p>Tant que vous la tenez, vous recevez aux jets d'attaque de sort un bonus de +2. Par ailleurs, vous ne tenez pas compte des abris partiels lorsque vous effectuez une attaque de sort.</p>"
+      "description": "<p><em>Baguette (harmonisation requise avec un incantateur)</em></p><p>Tant que vous la tenez, vous recevez aux jets d'attaque de sort un bonus de +2. Par ailleurs, vous ne tenez pas compte des &reference[half cover]{abris partiels} lorsque vous effectuez une attaque de sort.</p>"
     },
     "Wand of the War Mage +3": {
       "name": "Baguette du mage de guerre +3",
-      "description": "<p><em>Baguette (harmonisation requise avec un incantateur)</em></p><p>Tant que vous la tenez, vous recevez aux jets d'attaque de sort un bonus de +3. Par ailleurs, vous ne tenez pas compte des abris partiels lorsque vous effectuez une attaque de sort.</p>"
+      "description": "<p><em>Baguette (harmonisation requise avec un incantateur)</em></p><p>Tant que vous la tenez, vous recevez aux jets d'attaque de sort un bonus de +3. Par ailleurs, vous ne tenez pas compte des &reference[half cover]{abris partiels} lorsque vous effectuez une attaque de sort.</p>"
     },
     "War Pick": {
       "name": "Pic de guerre",
@@ -4391,6 +4680,23 @@
     "oRrNK2H2vcN4Kp74": {
       "name": "Corde en chanvre (15 m)",
       "description": "<p>Toute corde, qu'elle soit en chanvre ou en soie, est dotée de 2 points de vie et se rompt sur un test de Force DD 17.</p>"
+    },
+    "Uv0ilmzbWvqmlCVH": {
+      "name": "Outre",
+      "description": "<p>Une peau de cuir cousue dans une peau fermée qui peut contenir jusqu'à 2 litres de liquide. Elle pèse 2,5 kg lorsqu'elle est pleine.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Boire"
+        }
+      }
+    },
+    "f4w4GxBi0nYXmhX4": {
+      "name": "Rations",
+      "description": "<p>Les rations consistent en des vivres adaptés aux longs voyages, notamment de la viande séchée, des biscuits, noix, noisettes et autres fruits secs.</p>"
+    },
+    "kj5DNiBKasYWyuj6": {
+      "name": "Accessoires de déguisement",
+      "description": "<p>Cette pochette de maquillage, de teintures et d'accessoires vous permet d'altérer votre apparence physique. La maîtrise de ces accessoires vous permet d'ajouter votre bonus de maîtrise à tout test de caractéristique visant à créer un déguisement visuel.</p>"
     }
   }
 }
