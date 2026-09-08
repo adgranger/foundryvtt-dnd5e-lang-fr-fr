@@ -312,12 +312,6 @@
         "Create Aura": {
           "name": "Create Aura"
         }
-      },
-      "effects": {
-        "Aura of Life": {
-          "name": "Aura of Life",
-          "description": "<p>While in the aura, you and your allies have Resistance to Necrotic damage, and your Hit Point maximums can’t be reduced. If an ally with 0 Hit Points starts its turn in the aura, that ally regains [[/healing 1 type=healing]]{1 Hit Point}.</p>"
-        }
       }
     },
     "Awaken": {
@@ -1097,7 +1091,7 @@
       "effects": {
         "Trance State": {
           "name": "Trance State",
-          "description": "<p><span style=\"font-family:Signika, sans-serif\">While in the trance, the messenger is Incapacitated and has a Speed of 0.</span></p>"
+          "description": "<p><span style=\"font-family:'Signika, sans-serif'\">While in the trance, the messenger is Incapacitated and has a Speed of 0.</span></p>"
         }
       }
     },
@@ -1429,12 +1423,12 @@
     },
     "Flesh to Stone": {
       "name": "Flesh to Stone",
-      "description": "<p>You attempt to turn one creature that you can see within range into stone. The target makes a Constitution saving throw. On a failed save, it has the &amp;Reference[Restrained apply=false] condition for the duration. On a successful save, its Speed is 0 until the start of your next turn. Constructs automatically succeed on the save.</p><p>A Restrained target makes another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the &amp;Reference[Petrified] condition for the duration. The successes and failures needn't be consecutive; keep track of both until the target collects three of a kind.</p><p>If you maintain your Concentration on this spell for the entire possible duration, the target is Petrified until the condition is ended by <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{Greater Restoration}</em> or similar magic.</p>",
+      "description": "<p>You attempt to turn one creature that you can see within range into stone. The target makes a Constitution saving throw. On a failed save, it has the &amp;Reference[Restrained apply=false] condition for the duration. On a successful save, its Speed is 0 until the start of your next turn. Constructs automatically succeed on the save.</p><p>A Restrained target makes another Constitution saving throw at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the &amp;Reference[Petrified] condition for the duration. The successes and failures needn't be consecutive; keep track of both until the target collects three of a kind.</p><p>If you maintain your Concentration on this spell for the entire possible duration, the target is Petrified until the condition is ended by <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGreaterRes]{Greater Restoration}</em> or similar magic.</p>",
       "materials": "a cockatrice feather",
       "effects": {
         "Turning to Stone": {
           "name": "Turning to Stone",
-          "description": "<p>A &amp;Reference[Restrained apply=false] target makes another [[/save ability=con format=long]] at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the &amp;Reference[Petrified] condition for the duration. </p>"
+          "description": "<p>A &amp;Reference[Restrained apply=false] target makes another [[/save ability=con format=long]] at the end of each of its turns. If it successfully saves against this spell three times, the spell ends. If it fails its saves three times, it is turned to stone and has the &amp;Reference[Petrified] condition for the duration.</p>"
         },
         "Unable to Move": {
           "name": "Unable to Move",
@@ -1591,7 +1585,7 @@
     },
     "Giant Insect": {
       "name": "Giant Insect",
-      "description": "<p>You summon a giant centipede, spider, or wasp (chosen when you cast the spell). It manifests in an unoccupied space you can see within range and uses the <strong>@UUID[Compendium.dnd5e.actors24.Actor.phbmobGiantInsec]{Giant Insect}</strong> stat block. The form you choose determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.</p><p>The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the &amp;Reference[Dodge] action and uses its movement to avoid danger.</p><p><strong>Using a Higher-Level Spell Slot.</strong> Use the spell slot's level for the spell's level in the stat block.</p><section class=\"fvtt advice\" style=\"margin:0.5rem;padding:0.5rem\"><article><p>In addition to the noted usage of the spell's level in the insect's Traits and Actions, the following attributes are also affected.</p><table><caption>Giant Insect</caption><tbody><tr><td><strong>AC</strong></td><td>11 + the spell's level</td></tr><tr><td><strong>HP</strong></td><td>30 + 10 for each spell level above 4</td></tr><tr><td><strong>Speed</strong></td><td>40 ft., Climb 40 ft., Fly 40 ft. (Wasp only)</td></tr><tr><td><strong>PB</strong></td><td>equals your Proficiency Bonus</td></tr></tbody></table></article></section>"
+      "description": "<p>You summon a giant centipede, spider, or wasp (chosen when you cast the spell). It manifests in an unoccupied space you can see within range and uses the <strong>@UUID[Compendium.dnd5e.actors24.Actor.phbmobGiantInsec]{Giant Insect}</strong> stat block. The form you choose determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.</p><p>The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the &amp;Reference[Dodge] action and uses its movement to avoid danger.</p><p><strong>Using a Higher-Level Spell Slot.</strong> Use the spell slot's level for the spell's level in the stat block.</p><p>@Embed[Compendium.dnd5e.actors24.Actor.phbmobGiantInsec statblock caption=false]</p>"
     },
     "Glibness": {
       "name": "Glibness",
@@ -1725,7 +1719,7 @@
       "effects": {
         "Guiding Bolt": {
           "name": "Guiding Bolt",
-          "description": "<p><span style=\"font-family:Signika, sans-serif\">The next attack roll made against the target before the end of your next turn has Advantage.</span></p>"
+          "description": "<p>The next attack roll made against the target before the end of your next turn has Advantage.</p>"
         }
       }
     },
@@ -1763,7 +1757,7 @@
       "effects": {
         "Hasted": {
           "name": "Hasted",
-          "description": "<p>Until the spell ends, the target’s Speed is doubled, it gains a +2 bonus to Armor Class, it has Advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used to take only the Attack (one attack only), Dash, Disengage, Hide, or Utilize action.</p><p>When the spell ends, the target is Incapacitated and has a Speed of 0 until the end of its next turn, as a @UUID[Compendium.dnd5e.spells24.Item.phbsplHaste00000.ActiveEffect.S5XcFawnnNHO8bUr]{wave of lethargy} washes over it.</p>"
+          "description": "<p>Until the spell ends, the target’s Speed is doubled, it gains a +2 bonus to Armor Class, it has Advantage on Dexterity saving throws, and it gains an additional action on each of its turns. That action can be used to take only the Attack (one attack only), Dash, Disengage, Hide, or Utilize action.</p><p>When the spell ends, the target is Incapacitated and has a Speed of 0 until the end of its next turn, as a @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHaste00000.ActiveEffect.S5XcFawnnNHO8bUr]{wave of lethargy} washes over it.</p>"
         },
         "Lethargy": {
           "name": "Lethargy",
@@ -2067,7 +2061,7 @@
     },
     "Irresistible Dance": {
       "name": "Irresistible Dance",
-      "description": "<p>One creature that you can see within range must make a Wisdom saving throw. On a successful save, the target dances comically until the end of its next turn, during which it must spend all its movement to dance in place.</p><p>On a failed save, the target has the Charmed condition for the duration. While Charmed, the target dances comically, must use all its movement to dance in place, and has Disadvantage on Dexterity saving throws and attack rolls, and other creatures have Advantage on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success.</p>",
+      "description": "<p>One creature that you can see within range must make a Wisdom saving throw. On a successful save, the target dances comically until the end of its next turn, during which it must spend all its movement to dance in place.</p><p>On a failed save, the target has the &amp;Reference[Charmed apply=false] condition for the duration. While Charmed, the target dances comically, must use all its movement to dance in place, and has Disadvantage on Dexterity saving throws and attack rolls, and other creatures have Advantage on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success.</p>",
       "effects": {
         "Irresistible Dance": {
           "name": "Irresistible Dance",
@@ -2172,12 +2166,12 @@
     },
     "Magic Jar": {
       "name": "Magic Jar",
-      "description": "<p>Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's Material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or take &amp;Reference[Reaction]{Reactions}. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a Humanoid's body.</p><p>You can attempt to possess any Humanoid within 100 feet of you that you can see (creatures warded by a <em>@UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{Protection from Evil and Good}</em> or <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicCircl]{Magic Circle}</em> spell can't be possessed). The target makes a Charisma saving throw. On a failed save, your soul enters the target's body, and the target's soul becomes trapped in the container. On a successful save, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.</p><p>Once you possess a creature's body, you control it. Your Hit Points, Hit Point Dice, Strength, Dexterity, Constitution, Speed, and senses are replaced by the creature's. You otherwise keep your game statistics.</p><p>Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move and it is Incapacitated.</p><p>While possessing a body, you can take a Magic action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.</p><p>If the container is destroyed or the spell ends, your soul returns to your body. If your body is more than 100 feet away from you or if your body is dead, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.</p><p>When the spell ends, the container is destroyed.</p>",
-      "target": "container used for the Material component",
+      "description": "<p>Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's Material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or take &amp;Reference[Reaction]{Reactions}. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a Humanoid's body.</p><p>You can attempt to possess any Humanoid within 100 feet of you that you can see (creatures warded by a <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbEvilAndGoodPr]{Protection from Evil and Good}</em> or <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicCircl]{Magic Circle}</em> spell can't be possessed). The target makes a Charisma saving throw. On a failed save, your soul enters the target's body, and the target's soul becomes trapped in the container. On a successful save, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.</p><p>Once you possess a creature's body, you control it. Your Hit Points, Hit Point Dice, Strength, Dexterity, Constitution, Speed, and senses are replaced by the creature's. You otherwise keep your game statistics.</p><p>Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move and it is Incapacitated.</p><p>While possessing a body, you can take a Magic action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.</p><p>If the container is destroyed or the spell ends, your soul returns to your body. If your body is more than 100 feet away from you or if your body is dead, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.</p><p>When the spell ends, the container is destroyed.</p>",
+      "target": "and the container used as the Material component",
       "materials": "a gem, crystal, or reliquary worth 500+ GP",
       "activities": {
-        "Transfer Soul": {
-          "name": "Transfer Soul"
+        "Cast and Transfer Soul": {
+          "name": "Cast and Transfer Soul"
         },
         "Possess Humanoid": {
           "name": "Possess Humanoid",
@@ -2764,7 +2758,12 @@
     },
     "Ray of Sickness": {
       "name": "Ray of Sickness",
-      "description": "<p>You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the &amp;Reference[poisoned] condition until the end of your next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 1.</p>"
+      "description": "<p>You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 2d8 Poison damage and has the &amp;Reference[poisoned apply=false] condition until the end of your next turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 1.</p>",
+      "effects": {
+        "Poisoned": {
+          "name": "Poisoned"
+        }
+      }
     },
     "Regenerate": {
       "name": "Regenerate",
@@ -3063,7 +3062,7 @@
     },
     "Shield": {
       "name": "Shield",
-      "description": "<p>An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{Magic Missile}</em>.</p>",
+      "description": "<p>An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMagicMissi]{Magic Missile}</em>.</p>",
       "condition": "when you are hit by an attack roll or targeted by the Magic Missile spell",
       "effects": {
         "Imperceptible Barrier": {
@@ -3147,10 +3146,9 @@
     "Silence": {
       "name": "Silence",
       "description": "<p>For the duration, no sound can be created within or pass through a 20-foot-radius Sphere centered on a point you choose within range. Any creature or object entirely inside the Sphere has Immunity to Thunder damage, and creatures have the &amp;Reference[deafened apply=false] condition while entirely inside it. Casting a spell that includes a Verbal component is impossible there.</p>",
-      "effects": {
-        "Silenced": {
-          "name": "Silenced",
-          "description": "<p>Any creature or object entirely inside the Sphere has Immunity to Thunder damage, and creatures have the Deafened condition while entirely inside it. Casting a spell that includes a Verbal component is impossible there.</p>"
+      "activities": {
+        "Cast": {
+          "name": "Cast"
         }
       }
     },
@@ -3250,7 +3248,7 @@
     },
     "Spike Growth": {
       "name": "Spike Growth",
-      "description": "<p>The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes Difficult Terrain for the duration. When a creature moves into or within the area, it takes [[/damage 2d4 type=piercing]] damage for every 5 feet it travels.</p><p>The transformation of the ground is camouflaged to look natural. Any creature that can't see the area when the spell is cast must take a Search action and succeed on a [[/check ability=wis skill=prc dc=@attributes.spell.dc]] or [[/check ability=wis skill=sur dc=@attributes.spell.dc]] check against your spell save DC to recognize the terrain as hazardous before entering it.</p>",
+      "description": "<p>The ground in a 20-foot-radius Sphere centered on a point within range sprouts hard spikes and thorns. The area becomes &amp;Reference[Difficult Terrain] for the duration. When a creature moves into or within the area, it takes [[/damage 2d4 type=piercing]] damage for every 5 feet it travels.</p><p>The transformation of the ground is camouflaged to look natural. Any creature that can't see the area when the spell is cast must take a Search action and succeed on a [[/check ability=wis skill=prc dc=@attributes.spell.dc]] or [[/check ability=wis skill=sur dc=@attributes.spell.dc]] check against your spell save DC to recognize the terrain as hazardous before entering it.</p>",
       "materials": "seven thorns"
     },
     "Spirit Guardians": {
@@ -3258,11 +3256,8 @@
       "description": "<p>Protective spirits flit around you in a 15-foot Emanation for the duration. If you are good or neutral, their spectral form appears angelic or fey (your choice). If you are evil, they appear fiendish.</p><p>When you cast this spell, you can designate creatures to be unaffected by it. Any other creature's Speed is halved in the Emanation, and whenever the Emanation enters a creature's space and whenever a creature enters the Emanation or ends its turn there, the creature must make a Wisdom saving throw. On a failed save, the creature takes 3d8 Radiant damage (if you are good or neutral) or 3d8 Necrotic damage (if you are evil). On a successful save, the creature takes half as much damage. A creature makes this save only once per turn.</p><p><strong>Using a Higher-Level Spell Slot.</strong> The damage increases by 1d8 for each spell slot level above 3.</p>",
       "materials": "a prayer scroll",
       "activities": {
-        "Emanation Save": {
-          "name": "Emanation Save"
-        },
-        "Cast": {
-          "name": "Cast"
+        "Cast and Save": {
+          "name": "Cast and Save"
         }
       },
       "effects": {
@@ -3278,7 +3273,7 @@
     },
     "Starry Wisp": {
       "name": "Starry Wisp",
-      "description": "<p>You launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 Radiant damage, and until the end of your next turn, it emits Dim Light in a 10-foot radius and can't benefit from the &amp;Reference[Invisible] condition.</p><p><strong>Cantrip Upgrade.</strong> The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).</p>",
+      "description": "<p>You launch a mote of light at one creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d8 Radiant damage, and until the end of your next turn, it emits Dim Light in a 10-foot radius and can't benefit from the &amp;Reference[Invisible apply=false] condition.</p><p><strong>Cantrip Upgrade.</strong> The damage increases by 1d8 when you reach levels 5 (2d8), 11 (3d8), and 17 (4d8).</p>",
       "effects": {
         "Illuminated": {
           "name": "Illuminated",
@@ -3472,7 +3467,7 @@
     },
     "Teleport": {
       "name": "Teleport",
-      "description": "<p>This spell instantly transports you and up to eight willing creatures that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be Large or smaller, and it can't be held or carried by an unwilling creature.</p><p>The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls [[/gmr 1d100]] and consults the Teleportation Outcome table and the explanations after it.</p><details><summary><strong>@UUID[Compendium.dnd5e.tables24.RollTable.phbsplTeleportMi]{Teleportation Outcome}</strong></summary><table><thead><tr><td>Familiarity</td><td>Mishap</td><td>Similar Area</td><td>Off Target</td><td>On Target</td></tr></thead><tbody><tr><td>Permanent circle</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Linked object</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Very familiar</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>Seen casually</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>Viewed once or described</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>False destination</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>Familiarity.</strong> Here are the meanings of the terms in the table's Familiarity column:</p><ul><li>\"Permanent circle\" means a permanent teleportation circle whose sigil sequence you know.</li><li>\"Linked object\" means you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library.</li><li>\"Very familiar\" is a place you have visited often, a place you have carefully studied, or a place you can see when you cast the spell.</li><li>\"Seen casually\" is a place you have seen more than once but with which you aren't very familiar.</li><li>\"Viewed once or described\" is a place you have seen once, possibly using magic, or a place you know through someone else's description, perhaps from a map.</li><li>\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a location that no longer exists.</li></ul><p><strong>Mishap.</strong> The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes [[/damage 3d10 type=force]] damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).</p><p><strong>Similar Area.</strong> You and your group (or the target object) appear in a different area that's visually or thematically similar to the target area. You appear in the closest similar place. If you are heading for your home laboratory, for example, you might appear in another person's laboratory in the same city.</p><p><strong>Off Target.</strong> You and your group (or the target object) appear [[/r 2d12]] miles away from the destination in a random direction. Roll [[/r 1d8]] for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.</p><p><strong>On Target.</strong> You and your group (or the target object) appear where you intended.</p>",
+      "description": "<p>This spell instantly transports you and up to eight willing creatures that you can see within range, or a single object that you can see within range, to a destination you select. If you target an object, it must be Large or smaller, and it can't be held or carried by an unwilling creature.</p><p>The destination you choose must be known to you, and it must be on the same plane of existence as you. Your familiarity with the destination determines whether you arrive there successfully. The DM rolls [[/gmr 1d100]] and consults the Teleportation Outcome table and the explanations after it.</p><details><summary><strong>@UUID[Compendium.dnd-players-handbook.tables.RollTable.phbsplTeleportMi]{Teleportation Outcome}</strong></summary><table><thead><tr><td>Familiarity</td><td>Mishap</td><td>Similar Area</td><td>Off Target</td><td>On Target</td></tr></thead><tbody><tr><td>Permanent circle</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Linked object</td><td>—</td><td>—</td><td>—</td><td>01–00</td></tr><tr><td>Very familiar</td><td>01–05</td><td>06–13</td><td>14–24</td><td>25–00</td></tr><tr><td>Seen casually</td><td>01–33</td><td>34–43</td><td>44–53</td><td>54–00</td></tr><tr><td>Viewed once or described</td><td>01–43</td><td>44–53</td><td>54–73</td><td>74–00</td></tr><tr><td>False destination</td><td>01–50</td><td>51–00</td><td>—</td><td>—</td></tr></tbody></table></details><p><strong>Familiarity.</strong> Here are the meanings of the terms in the table's Familiarity column:</p><ul><li>\"Permanent circle\" means a permanent teleportation circle whose sigil sequence you know.</li><li>\"Linked object\" means you possess an object taken from the desired destination within the last six months, such as a book from a wizard's library.</li><li>\"Very familiar\" is a place you have visited often, a place you have carefully studied, or a place you can see when you cast the spell.</li><li>\"Seen casually\" is a place you have seen more than once but with which you aren't very familiar.</li><li>\"Viewed once or described\" is a place you have seen once, possibly using magic, or a place you know through someone else's description, perhaps from a map.</li><li>\"False destination\" is a place that doesn't exist. Perhaps you tried to scry an enemy's sanctum but instead viewed an illusion, or you are attempting to teleport to a location that no longer exists.</li></ul><p><strong>Mishap.</strong> The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes [[/damage 3d10 type=force]] damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).</p><p><strong>Similar Area.</strong> You and your group (or the target object) appear in a different area that's visually or thematically similar to the target area. You appear in the closest similar place. If you are heading for your home laboratory, for example, you might appear in another person's laboratory in the same city.</p><p><strong>Off Target.</strong> You and your group (or the target object) appear [[/r 2d12]] miles away from the destination in a random direction. Roll [[/r 1d8]] for the direction: 1, east; 2, southeast; 3, south; 4, southwest; 5, west; 6, northwest; 7, north; or 8, northeast.</p><p><strong>On Target.</strong> You and your group (or the target object) appear where you intended.</p>",
       "target": "you and up to eight creatures or one object"
     },
     "Teleportation Circle": {

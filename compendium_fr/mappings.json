@@ -104,9 +104,9 @@
       "converter": "structured",
       "cardinality": "many",
       "container": "keyed",
-      "keys": ["_id", "title"],
+      "keys": ["_id", "name"],
       "mapping": {
-        "title": "title",
+        "name": "name",
         "hint": "hint",
         "_variants": [
           {
@@ -176,9 +176,22 @@
     }
   },
   "Scene": {
+    "navName": "navName",
+    "levels": {
+      "path": "levels",
+      "converter": "nameCollection"
+    },
     "grid": {
       "path": "grid",
       "converter": "imperialToMetric"
+    },
+    "gridlessGrid": {
+      "path": "gridlessGrid",
+      "converter": "imperialToMetric"
+    },
+    "lights": {
+      "path": "lights",
+      "converter": "lights"
     },
     "deltaTokens": {
       "path": "tokens",

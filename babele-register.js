@@ -10,6 +10,7 @@ Hooks.once("babele.init", (babele) => {
 	});
 
 	babele.registerConverters({
+		"lights": Converters.lights(),
 		"tokens": Converters.tokens(),
 		"alignment": Converters.alignment(),
 		"planarSubtype": Converters.planarSubtype(),
@@ -265,6 +266,21 @@ export class Converters {
 		return pages;
 	}
 
+	static lights() {
+		return (lights) => Converters._lights(lights);
+	}
+
+	static _lights(lights) {
+		if (!Array.isArray(lights)) return lights;
+
+		return lights.map(light => {
+			if (!light?.config) return light;
+			return foundry.utils.mergeObject(light, {
+				config: Converters._imperialToMetric(light.config)
+			}, { inplace: false });
+		});
+	}
+
 	static tokens() {
         return (tokens, translations, data, tc, runtime = {}) => Converters._tokens(tokens, translations, data, tc, runtime);
     }
@@ -273,7 +289,8 @@ export class Converters {
         tokens.map(token => {
             return foundry.utils.mergeObject(token, {
                 light: Converters._imperialToMetric(token.light),
-                sight: Converters._imperialToMetric(token.sight)
+                sight: Converters._imperialToMetric(token.sight),
+				detectionModes: Converters._imperialToMetric(token.detectionModes)
             });
         });
 
@@ -402,7 +419,7 @@ export class Converters {
 						change.value = Converters.footsToMeters(value);
 					}
 				}
-				if (["system.range.value", "system.range.long"].includes(change.key)) {
+				if (["system.range.value", "system.range.long", "system.traits.languages.communication.telepathy.value"].includes(change.key)) {
 					if (parseInt(value)) {
 						change.value = Converters.footsToMeters(value);
 					} else {
@@ -533,6 +550,16 @@ export var tableResultRangeToSort = {
 	//Ring of Resistance
 	"tBgNOJLPOTZIo5FT": [5, 5], "sqeqHhdqB5PtK9qT": [2, 2], "SGy7SaxIbTR5rfiX": [3, 3], "ngvsB3agtiHUCGtz": [4, 4],
 	//SRD 5.2
+	//Mysterious Deck: 13 Cards
+	"v5WZsl3D7AcVp8kv": [41, 48], "imEKznlZEE0rSsLx": [49, 56], "Tzf8H1DJyFsmBqaN": [1, 8], "AEVEm8pwZd8HZEaf": [17, 24], "H6PRkRifUyITp5Ph": [9, 16],
+	"q7k0kww4KOcCQh8Z": [57, 64], "7h9jMXFIxBKzjivk": [85, 92], "EiuOGVBwrd5dzY1O": [69, 76], "sT9ULq3ZPnBuh0AY": [25, 32], "ckQqX5zhGyji2SBo": [33, 40],
+	"XoGa3OMCvqVJ1iUS": [77, 84], "oRpNqb5LQrTBwcdV": [93, 100], "xzCuVY29JwIHHgbB": [65, 68],
+	//Mysterious Deck: 22 Cards
+	"k0SXf6JEb7Eairsz": [21, 25], "APmmNA5Z3jQQG2U0": [30, 33], "JT3pbm7yJ23CiCqT": [43, 46], "JIVjZDR7dWYLBJi4": [69, 73], "kGl8BbIhwg7Ptesu": [47, 50],
+	"dG8deoNGQdNwnJRf": [51, 54], "GUJztKPsgSVX7R39": [55, 59], "trQNDzdEF19fadQK": [6, 10], "D9Z08jw6cnu1UMjo": [16, 20], "bEMGelUnEQGCNIch": [11, 15],
+	"sxKB8VQEBh0roKnc": [60, 64], "1HtTelpxxOAc4vID": [34, 37], "9isSpLlYLL5h2Aoa": [87, 90], "nIAzWt9uXY5U3kSz": [74, 77], "nvT66fqxT99k5jKd": [96, 100],
+	"DAzY7u6xTitMeoB6": [26, 29], "petFp3KELvvag9R3": [38, 42], "WN6avNTrKLMyCRVD": [82, 86], "xVsjx6HCackwxQ1O": [78, 81], "rMJiKI5wApRiSebO": [91, 95],
+	"93Y3C0JT1dJtoFwW": [65, 68],
 	//Ammunition of Slaying: Creature Type
 	"7gOENkePCrW02UwC": [11, 15], "bBzSzzTMgsRu2p9m": [16, 20], "5IAfN2gE45YNRnH5": [21, 25], "x7mSfJ8AjeVv3NRI": [46, 55],
 	"w8UkRFQNaRdjewAd": [56, 65], "NfUynzHOgrEO5mmb": [66, 70], "x3ELDvpdCuJRDeDg": [71, 75], "evZ08L9NQb1evYe9": [81, 90],
@@ -551,18 +578,27 @@ export var tableResultRangeToSort = {
 	"s07bwP0mZ7VjthM5": [82, 83], "qPWo77BQmkdMAG2C": [84, 85], "mk8RnOBZMpdVvsCH": [86, 86], "QORMgdB0pFnRQhBA": [87, 88],
 	"uwaotDWieh3D6R5g": [89, 90], "JdQs70UnIA9AiqbE": [91, 91], "ENAbwd5BuTe2MSlN": [92, 92], "VqMOV26INyDc0A6O": [93, 94],
 	"FNCHezQEOJoukpBO": [95, 95], "Rg4S4iYh5EZtrE39": [96, 98], "Q2qN5Nx2eUTi61RL": [99, 99], "8FK8zuLGc0tDJm4p": [100, 100],
+	//Feather Tokens
+	"woWPcAMvykC0hSse": [86, 100], "uN2o6j8HCqjDSxin": [61, 75], "07qegfRyfFxCLRcu": [46, 60], "PfCCS7GgUYI9rf5G": [21, 45], "PdtTtSFdX9kIcD1O": [76, 85],
 	//Necklace of Prayer Beads Type
 	"rO4l6hUX4STCaLnr": [11, 16], "AYyoSc0yTxndZKvK": [17, 20], "rLL2e4XBcPzZ10so": [7, 8], "EIMC5cl350CzhRLU": [9, 9], "b0h1ljFd14vqLQSO": [10, 10],
 	//Potion of Resistance Type
 	"3oIOBK8BgRYfKafk": [5, 5], "XKHBRiYlsavqLLeO": [2, 2], "RNYLvvsXg3HisLPS": [3, 3], "yp10YxYVnVXwyUlZ": [4, 4],
 	//Reincarnated Species
-	"Ym4LPQm1DMZ3iUBH": [8, 8], "9FtTDJCOwnD97SOu": [5, 5], "RI73kNpd5iAababR": [6, 6], "6L3KbE75ugKNdbhg": [7, 7],
-	"8g4dm4vqB60zPWw5": [3, 3], "ncs8GLvSuavCJAqf": [4, 4],
+	"Ym4LPQm1DMZ3iUBH": [8, 8], "9FtTDJCOwnD97SOu": [5, 5], "RI73kNpd5iAababR": [6, 6],
+	"6L3KbE75ugKNdbhg": [7, 7], "8g4dm4vqB60zPWw5": [3, 3], "ncs8GLvSuavCJAqf": [4, 4],
 	//Ring of Resistance: Damage Type and Gemstone
 	"xnFb80dWJtRoNx7k": [5, 5], "e0N3YSm0uveQ1gWw": [2, 2], "97EfeVQ5Nh5wQhtY": [3, 3], "J3sfMzhF6UTSGgGq": [4, 4],
 	//Sub-Languages Table
 	"pyVRbUOfHAgtAvnf": [9, 9], "LoCbKgBhdONPEPVB": [1, 1], "0uKZmKF7znJNVuzU": [10, 11], "llH2J2NFDJ7eTCim": [2, 3],
 	"ldceHBQUUr4q4wxq": [4, 4], "K6WzOtBKakv6WBWo": [5, 5], "8jwF2ojzhkWpRtUw": [6, 6], "b0CKmtsTQ7J2GBz0": [7, 8],
 	//Teleport Mishap
-	"KShVQqILsbEKwNQ1": [54, 100]
+	"KShVQqILsbEKwNQ1": [54, 100],
+	//Deck of Illusions
+	"puCLY8CovjPcAHsR": [34, 36], "5A0gdVZp1RJ7kHGz": [1, 3], "9JjUzTXBg0YpHTV4": [4, 6], "3N6LHyqypWCulkAS": [7, 9], "aavJ9cIok4gO4dpR": [10, 12],
+	"zzuZN7Cma4EawVwM": [13, 15], "EBzG2RJaf4XU5pY4": [25, 27], "q9xiE7m5VLdmBR5I": [52, 54], "rPXPnYkewTkeNGMC": [37, 39], "6DiPdPHH1udqptb8": [43, 45],
+	"ql3nntZZ7VK6ihSL": [46, 48], "sJmnRnsu66XzyZCi": [55, 57], "Jcvm2ZmszPFY2Okl": [58, 60], "El0rFvUPS47tTY3D": [19, 21], "4NCSDc0ymCJ9Wmkf": [22, 24],
+	"K7uYqee6btAO3aGK": [76, 78], "XndgbB9hILAd946i": [28, 30], "lR1wCwCy9IcdW5VY": [67, 69], "F1rP3n27aAUn7ekR": [16, 18], "dkNG6ImYh80SPas0": [31, 33],
+	"PYc4DmzV4Qf9873j": [61, 63], "fXuD1hSPLqt3doLb": [70, 72], "YtZUrk6uPcbm36hL": [64, 66], "LyKKtLVk4RDgX6el": [40, 42], "ycJZ5CXizivL1Nbr": [73, 75],
+	"3Bs89X7k7Ovm5M9O": [79, 81], "bHClgrl0sIZnTkJk": [82, 84]
 };

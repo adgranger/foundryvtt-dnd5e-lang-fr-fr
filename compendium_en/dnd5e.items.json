@@ -26,7 +26,7 @@
     },
     "Acid (vial)": {
       "name": "Acid (vial)",
-      "description": "<p>As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</p>",
+      "description": "<p>As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to [[lookup @labels.description.range activity=6wCdPWZTzKh8mN0m]], shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.</p>",
       "activities": {
         "attack": {
           "chatFlavor": "improvised weapon"
@@ -67,19 +67,31 @@
     },
     "Alchemist's Fire": {
       "name": "Alchemist's Fire",
-      "description": "<p>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.</p>",
+      "description": "<p>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to [[lookup @labels.description.range activity=fEkrHFEJKXhIwljC]], shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.</p>",
+      "uname": "Unidentified Flask",
+      "udescription": "<p>A flask of sticky, adhesive fluid.</p>",
       "activities": {
         "attack": {
           "chatFlavor": "improvised weapon"
-        },
-        "save": {
-          "chatFlavor": "improvised weapon"
+        }
+      },
+      "effects": {
+        "Covered in Alchemist's Fire": {
+          "name": "Covered in Alchemist's Fire",
+          "description": "<p>You are covered in Alchemist's Fire, and take [[/damage 1d4 fire]] damage at the start of each of your turns. You can end this damage by using your action to make a [[/check 10 dex]] check to extinguish the flames.</p>"
         }
       }
     },
     "Alchemist's Supplies": {
       "name": "Alchemist's Supplies",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in alchemy.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in alchemy.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "uname": "Unidentified Alchemist's Supplies",
+      "udescription": "<p>These special tools include the items needed to pursue a craft or trade in alchemy.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Alchemy Jug": {
       "name": "Alchemy Jug",
@@ -130,7 +142,19 @@
     },
     "Antitoxin": {
       "name": "Antitoxin",
-      "description": "<p>A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.</p>"
+      "description": "<p>A creature that drinks this vial of liquid gains advantage on saving throws against poison for [[lookup @labels.duration activity=aSEhgvHgQF5LiEsf]]. It confers no benefit to undead or constructs.</p>",
+      "uname": "Unidentified Potion",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Antitoxin Protection": {
+          "name": "Antitoxin Protection",
+          "description": "<p>You have advantage on saving throws against poison.</p>"
+        }
+      }
     },
     "Apparatus of the Crab": {
       "name": "Apparatus of the Crab",
@@ -207,7 +231,12 @@
     },
     "Bagpipes": {
       "name": "Bagpipes",
-      "description": "<p>A set of bagpipes to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A set of bagpipes to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Ball Bearings": {
       "name": "Ball Bearings",
@@ -482,7 +511,12 @@
     },
     "Brewer's Supplies": {
       "name": "Brewer's Supplies",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in brewing.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in brewing.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Bronze Horn of Valhalla": {
       "name": "Bronze Horn of Valhalla",
@@ -515,7 +549,12 @@
     },
     "Calligrapher's Supplies": {
       "name": "Calligrapher's Supplies",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in calligraphy.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in calligraphy.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Caltrops": {
       "name": "Caltrops",
@@ -535,7 +574,14 @@
     },
     "Carpenter's Tools": {
       "name": "Carpenter's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in carpentry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in carpentry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "uname": "Unidentified Carpenter's Tools",
+      "udescription": "<p>These special tools include the items needed to pursue a craft or trade in carpentry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Carpet of Flying (3x5)": {
       "name": "Carpet of Flying (3x5)",
@@ -575,7 +621,12 @@
     },
     "Cartographer's Tools": {
       "name": "Cartographer's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in cartography.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in cartography.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Censer": {
       "name": "Censer",
@@ -640,7 +691,13 @@
     },
     "Chess Set": {
       "name": "Chess Set",
-      "description": "<p>This item is a complete set of chess pieces and board. The board can also be used for variations of draughts and checkers.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>"
+      "description": "<p>This item is a complete set of chess pieces and board. The board can also be used for variations of draughts and checkers.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>",
+      "uname": "Unidentified Chess Set",
+      "activities": {
+        "Play Game": {
+          "name": "Play Game"
+        }
+      }
     },
     "Chest": {
       "name": "Chest",
@@ -725,7 +782,14 @@
     },
     "Cobbler's Tools": {
       "name": "Cobbler's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in cobblery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in cobblery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "uname": "Unidentified Cobbler's Tools",
+      "udescription": "<p>These special tools include the items needed to pursue a craft or trade in cobblery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Common Clothes": {
       "name": "Common Clothes",
@@ -737,7 +801,12 @@
     },
     "Cook's Utensils": {
       "name": "Cook's Utensils",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in cookery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in cookery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Costume Clothes": {
       "name": "Costume Clothes",
@@ -916,7 +985,14 @@
     },
     "Dice Set": {
       "name": "Dice Set",
-      "description": "<p>This item encompasses a wide range of dice, both straight and weighted.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>"
+      "description": "<p>This item encompasses a wide range of dice, both straight and weighted.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>",
+      "uname": "Unidentified Dice Set",
+      "udescription": "<p>This item encompasses a wide range of dice, both straight and weighted.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>",
+      "activities": {
+        "Play Game": {
+          "name": "Play Game"
+        }
+      }
     },
     "Dimensional Shackles": {
       "name": "Dimensional Shackles",
@@ -933,7 +1009,12 @@
     },
     "Disguise Kit": {
       "name": "Disguise Kit",
-      "description": "<p>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</p>"
+      "description": "<p>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Dragon Scale Mail": {
       "name": "Dragon Scale Mail",
@@ -986,11 +1067,21 @@
     },
     "Drum": {
       "name": "Drum",
-      "description": "<p>A drum, of any variety, to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A drum, of any variety, to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Dulcimer": {
       "name": "Dulcimer",
-      "description": "<p>A dulcimer to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A dulcimer to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Dungeoneer's Pack": {
       "name": "Dungeoneer's Pack",
@@ -1115,7 +1206,12 @@
     },
     "Feed": {
       "name": "Feed",
-      "description": "<p>Standard feed suitable for a mount or other animal, often consisting of grains or hay.</p>"
+      "description": "<p>Standard feed suitable for a mount or other animal, often consisting of grains or hay.</p>",
+      "activities": {
+        "Eat": {
+          "name": "Eat"
+        }
+      }
     },
     "Figurine of Wondrous Power (Bronze Griffon)": {
       "name": "Figurine of Wondrous Power (Bronze Griffon)",
@@ -1237,6 +1333,7 @@
     "Flask of Holy Water": {
       "name": "Flask of Holy Water",
       "description": "<p>As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged Attack against a target creature, treating the holy water as an Improvised Weapon. If the target is a fiend or Undead, it takes 2d6 radiant damage. A Cleric or Paladin may create holy water by performing a Special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.</p>",
+      "uname": "Unidentified Flask of Water",
       "activities": {
         "attack": {
           "condition": "Target must be a fiend or undead."
@@ -1245,7 +1342,12 @@
     },
     "Flute": {
       "name": "Flute",
-      "description": "<p>A lute to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A flute to evoke awe, wonder, or fear in your audience.</p><p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency.</p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Folding Boat": {
       "name": "Folding Boat",
@@ -1253,7 +1355,12 @@
     },
     "Forgery Kit": {
       "name": "Forgery Kit",
-      "description": "<p>This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.</p>"
+      "description": "<p>This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Frost Brand Greatsword": {
       "name": "Frost Brand Greatsword",
@@ -1405,7 +1512,12 @@
     },
     "Glassblower's Tools": {
       "name": "Glassblower's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in glassblowing.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in glassblowing.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Gloves of Missile Snaring": {
       "name": "Gloves of Missile Snaring",
@@ -1693,7 +1805,12 @@
     },
     "Herbalism Kit": {
       "name": "Herbalism Kit",
-      "description": "<p>This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing.</p>"
+      "description": "<p>This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Hide Armor": {
       "name": "Hide Armor",
@@ -1766,7 +1883,12 @@
     },
     "Horn": {
       "name": "Horn",
-      "description": "<p>A horn, of any variety, to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A horn, of any variety, to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Horn of Blasting": {
       "name": "Horn of Blasting",
@@ -1968,7 +2090,12 @@
     },
     "Jeweler's Tools": {
       "name": "Jeweler's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in jewelry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in jewelry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Jug": {
       "name": "Jug",
@@ -2024,7 +2151,12 @@
     },
     "Leatherworker's Tools": {
       "name": "Leatherworker's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in leatherworking.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in leatherworking.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Light Crossbow": {
       "name": "Light Crossbow",
@@ -2156,11 +2288,21 @@
     },
     "Lute": {
       "name": "Lute",
-      "description": "<p>A lute to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A lute to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Lyre": {
       "name": "Lyre",
-      "description": "<p>A lyre to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A lyre to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Mace": {
       "name": "Mace",
@@ -2275,7 +2417,12 @@
     },
     "Mason's Tools": {
       "name": "Mason's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in masonry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in masonry.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Maul": {
       "name": "Maul",
@@ -2372,7 +2519,12 @@
     },
     "Navigator's Tools": {
       "name": "Navigator's Tools",
-      "description": "<p>This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.</p>"
+      "description": "<p>This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Necklace of Adaptation": {
       "name": "Necklace of Adaptation",
@@ -2508,20 +2660,70 @@
     },
     "Oil of Etherealness": {
       "name": "Oil of Etherealness",
-      "description": "<p><em>Beads of this cloudy gray oil form on the outside of its container and quickly evaporate.  </em></p>\n<p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium).  Applying the oil takes 10 minutes.  The affected creature then gains the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{Etherealness} spell for 1 hour.</p>",
+      "description": "<p><em>Beads of this cloudy gray oil form on the outside of its container and quickly evaporate.</em></p><p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes [[lookup @labels.activation activity=xb8qrLDAQhKFA9MD]]. The affected creature then gains the effect of the @UUID[Compendium.dnd5e.spells.Item.PQuEgKyCdovOvhqN]{etherealness} spell for [[lookup @labels.duration activity=xb8qrLDAQhKFA9MD]].</p>",
+      "uname": "Unidentified Oil",
+      "udescription": "<p>Beads of this cloudy gray oil form on the outside of its container and quickly evaporate.</p>",
       "activities": {
-        "utility": {
-          "condition": "Medium or smaller creature. Takes 10 minutes to apply."
+        "Apply Oil": {
+          "name": "Apply Oil"
+        }
+      },
+      "effects": {
+        "Etherealness": {
+          "name": "Etherealness",
+          "description": "<p>You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss this effect. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can't see anything more than 60 feet away.</p><p>While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can't perceive you and can't interact with you, unless a special ability or magic has given them the ability to do so.</p><p>You ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.</p><p>When this effect ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved.</p>"
         }
       }
     },
     "Oil of Sharpness": {
       "name": "Oil of Sharpness",
-      "description": "<p><em>This clear, gelatinous oil sparkles with tiny, ultrathin silver shards. </em></p>\n<p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil takes 1 minute. For 1 hour, the coated item is magical and has a +3 bonus to attack and damage rolls.</p>"
+      "description": "<p><em>This clear, gelatinous oil sparkles with tiny, ultrathin silver shards.</em></p><p>The oil can coat one slashing or piercing weapon or up to 5 pieces of slashing or piercing ammunition. Applying the oil takes [[lookup @labels.activation activity=cT06cj9LC81wNski]]. For [[lookup @labels.duration activity=cT06cj9LC81wNski]], the coated item is magical and has a +3 bonus to attack and damage rolls.</p>",
+      "uname": "Unidentified Oil",
+      "udescription": "<p>This clear, gelatinous oil sparkles with tiny, ultrathin silver shards.</p>",
+      "activities": {
+        "Apply Oil to Weapon": {
+          "name": "Apply Oil to Weapon"
+        },
+        "Apply Oil to Ammunition": {
+          "name": "Apply Oil to Ammunition"
+        }
+      },
+      "effects": {
+        "Oil of Sharpness: Weapon": {
+          "name": "Oil of Sharpness: Weapon",
+          "description": "<p>For the duration, this weapon is magical and has a +3 bonus to attack and damage rolls.</p>",
+          "changes": {
+            "1": "{} <p><strong>Oil of Sharpness.</strong> For the duration, this weapon is magical and has a +3 bonus to attack and damage rolls.</p>"
+          }
+        },
+        "Oil of Sharpness: Ammunition": {
+          "name": "Oil of Sharpness: Ammunition",
+          "description": "<p>For the duration, this piece of ammunition is magical and has a +3 bonus to attack and damage rolls.</p>",
+          "changes": {
+            "1": "{} <p><strong>Oil of Sharpness.</strong> For the duration, this piece of ammunition is magical and has a +3 bonus to attack and damage rolls.</p>"
+          }
+        }
+      }
     },
     "Oil of Slipperiness": {
       "name": "Oil of Slipperiness",
-      "description": "<p><em>This sticky black unguent is thick and heavy in the container, but it flows quickly when poured. </em></p>\n<p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium).  Applying the oil takes 10 minutes.  The affected creature then gains the effect of a @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{Freedom of Movement} spell for 8 hours.</p>\n<p>Alternatively, the oil can be poured on the ground as an action, where it covers a 10‑foot square, duplicating the effect of the @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{Grease} spell in that area for 8 hours.</p>"
+      "description": "<p><em>This sticky black unguent is thick and heavy in the container, but it flows quickly when poured.</em></p><p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes [[lookup @labels.activation activity=OMSMC85UR5All9Vz]]. The affected creature then gains the effect of a @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{Freedom of Movement} spell for [[lookup @labels.duration activity=OMSMC85UR5All9Vz]].</p><p>Alternatively, the oil can be poured on the ground as an action, where it covers a 10‑foot square, duplicating the effect of the @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{Grease} spell in that area for 8 hours.</p>",
+      "uname": "Unidentified Oil",
+      "udescription": "<p>This sticky black unguent is thick and heavy in the container, but it flows quickly when poured.</p>",
+      "activities": {
+        "Apply Oil": {
+          "name": "Apply Oil"
+        },
+        "Pour Oil Out": {
+          "name": "Pour Oil Out"
+        }
+      },
+      "effects": {
+        "Alchemical Slipperiness": {
+          "name": "Alchemical Slipperiness",
+          "description": "<p>Your movement is unaffected by &amp;reference[difficult terrain], and spells and other magical effects can neither reduce your speed nor cause you to be &amp;reference[Paralyzed apply=false] or &amp;reference[Restrained apply=false].</p><p>You can also spend 5 feet of Movement to automatically escape from nonmagical restraints, such as Manacles or a creature that has you &amp;reference[Grappled apply=false]. Finally, being Underwater imposes no penalties on your movement or attacks.</p>"
+        }
+      }
     },
     "Orb": {
       "name": "Orb",
@@ -2557,11 +2759,21 @@
     },
     "Painter's Supplies": {
       "name": "Painter's Supplies",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in painting.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in painting.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Pan Flute": {
       "name": "Pan Flute",
-      "description": "<p>A set of panpipes to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A set of panpipes to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Paper": {
       "name": "Paper",
@@ -2598,7 +2810,20 @@
     },
     "Philter of Love": {
       "name": "Philter of Love",
-      "description": "<p><em>This potion's rose-hued, effervescent liquid contains one easy-to-miss bubble shaped like a heart.</em></p>\n<p>The next time you see a creature within 10 minutes after drinking this philter, you become charmed by that creature for 1 hour. If the creature is of a species and gender you are normally attracted to, you regard it as your true love while you are charmed.</p>\n<p> </p>"
+      "description": "<p><em>This potion's rose-hued, effervescent liquid contains one easy-to-miss bubble shaped like a heart.</em></p><p>The next time you see a creature within 10 minutes after drinking this philter, you become &amp;reference[charmed] by that creature for [[lookup @labels.duration activity=PQa875kavCObYkw7]]. If the creature is of a species and gender you are normally attracted to, you regard it as your true love while you are charmed.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's rose-hued, effervescent liquid contains one easy-to-miss bubble shaped like a heart.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemical Love": {
+          "name": "Alchemical Love",
+          "description": "<p>You become &amp;reference[charmed apply=false] for 1 hour by the first creature you see within 10 minutes after drinking this potion. If the creature is of a species and gender you are normally attracted to, you regard it as your true love while you are charmed.</p>"
+        }
+      }
     },
     "Pike": {
       "name": "Pike",
@@ -2676,11 +2901,23 @@
     },
     "Playing Cards Set": {
       "name": "Playing Cards Set",
-      "description": "<p>This item encompasses a wide range of playing card types, both unmarked and marked.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>"
+      "description": "<p>This item encompasses a wide range of playing card types, both unmarked and marked.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>",
+      "uname": "Unidentified Playing Cards Set",
+      "udescription": "<p>This item encompasses a wide range of playing card types, both unmarked and marked.</p>\n<p>If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency.</p>",
+      "activities": {
+        "Play Game": {
+          "name": "Play Game"
+        }
+      }
     },
     "Poisoner's Kit": {
       "name": "Poisoner's Kit",
-      "description": "<p>A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons.</p>"
+      "description": "<p>A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Pole": {
       "name": "Pole",
@@ -2696,101 +2933,365 @@
     },
     "Potion of Acid Resistance": {
       "name": "Potion of Acid Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Acidic type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to acid damage for [[lookup @labels.duration activity=bo78O7W2RFsL6v3I]].</p><section id=\"secret-E2GV78Rq05t85x7n\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Acid Resistance": {
+          "name": "Acid Resistance",
+          "description": "<p>You have resistance to acid damage.</p>"
+        }
+      }
     },
     "Potion of Animal Friendship": {
       "name": "Potion of Animal Friendship",
-      "description": "<p><em>Agitating this muddy liquid brings little bits into view: a fish scale, hummingbird tongue, a cat claw, or a squirrel hair.</em></p>\n<p>When you drink this potion, you can cast the @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{Animal Friendship}  spell (save DC 13) for 1 hour at will.</p>",
+      "description": "<p><em>Agitating this muddy liquid brings little bits into view: a fish scale, hummingbird tongue, a cat claw, or a squirrel hair.</em></p><p>When you drink this potion, you can cast the @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{animal friendship} spell (save DC 13) for [[lookup @labels.duration activity=f3MtbdmZa35oIm67]] at will.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>Agitating this muddy liquid brings little bits into view: a fish scale, hummingbird tongue, a cat claw, or a squirrel hair.</p>",
       "activities": {
-        "save": {
-          "condition": "Beast must have an Intelligence of 3 or lower."
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Animal Friend": {
+          "name": "Animal Friend",
+          "description": "<p>For the duration, you can cast the @UUID[Compendium.dnd5e.spells.Item.hDOENzjuj5WpLq7B]{Animal Friendship} (save DC 13) spell at will.</p>"
         }
       }
     },
     "Potion of Clairvoyance": {
       "name": "Potion of Clairvoyance",
-      "description": "<p><em>An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.</em></p>\n<p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.cg50KpBkBdPK6vPL]{Clairvoyance} spell.</p>"
+      "description": "<p><em>An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.</em></p><p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.cg50KpBkBdPK6vPL]{clairvoyance} spell.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>An eyeball bobs in this yellowish liquid but vanishes when the potion is opened.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemical Clairvoyance": {
+          "name": "Alchemical Clairvoyance",
+          "description": "<p>You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can't be attacked or otherwise interacted with.</p><p>Choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As your action, you can switch between seeing and hearing.</p><p>A creature that can see the sensor (such as a creature benefiting from @UUID[Compendium.dnd5e.spells.Item.DQzlB5Y3k791W5bH]{see invisibility} or &amp;reference[truesight]) sees a luminous, intangible orb about the size of your fist.</p>"
+        }
+      }
     },
     "Potion of Climbing": {
       "name": "Potion of Climbing",
-      "description": "<p><em>The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.</em></p>\n<p>When you drink this potion, you gain a climbing speed equal to your walking speed for 1 hour. During this time, you have advantage on Strength (Athletics) checks you make to climb. </p>"
+      "description": "<p><em>The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.</em></p><p>When you drink this potion, you gain a climbing speed equal to your walking speed for [[lookup @labels.duration activity=tbj9v3KiTzZwBX2E]]. During this time, you have advantage on Strength (Athletics) checks you make to climb.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is separated into brown, silver, and gray layers resembling bands of stone. Shaking the bottle fails to mix the colors.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemically Enhanced Climbing": {
+          "name": "Alchemically Enhanced Climbing",
+          "description": "<p>For the duration, you gain a climbing speed equal to your walking speed and have advantage on Strength (Athletics) checks you make to climb.</p>"
+        }
+      }
     },
     "Potion of Cloud Giant Strength": {
       "name": "Potion of Cloud Giant Strength",
-      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.</em></p>\n<p>When you drink this potion, your Strength score changes to 27 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score.</p>\n<p> </p>"
+      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a cloud giant.</em></p><p>When you drink this potion, your Strength score changes to 27 for [[lookup @labels.duration activity=eEzkwNoMj0HJmmKn]]. The potion has no effect on you if your Strength is equal to or greater than that score.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's transparent liquid has floating in it a sliver of fingernail.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Cloud Giant Strength": {
+          "name": "Cloud Giant Strength",
+          "description": "<p>Your Strength score changes to 27 for the duration. This has no effect on you if your Strength is equal to or greater than 27.</p>"
+        }
+      }
     },
     "Potion of Cold Resistance": {
       "name": "Potion of Cold Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Cold type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to cold damage for [[lookup @labels.duration activity=4nxLtrnFMNAK4ysZ]].</p><section id=\"secret-KmZbaeHrxYjAmOdL\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Cold Resistance": {
+          "name": "Cold Resistance",
+          "description": "<p>You have resistance to cold damage.</p>"
+        }
+      }
     },
     "Potion of Diminution": {
       "name": "Potion of Diminution",
-      "description": "<p><em>The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.  Shaking the bottle fails to interrupt this process.</em></p>\n<p>When you drink this potion, you gain the \"reduce\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} spell for 1d4 hours (no concentration required). </p>\n<p> </p>\n<p> </p>\n<p> </p>"
+      "description": "<p><em>The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.</em></p><p>When you drink this potion, you gain the \"reduce\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{enlarge/reduce} spell for 1d4 hours (no concentration required).</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it. Shaking the bottle fails to interrupt this process.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemically Reduced": {
+          "name": "Alchemically Reduced",
+          "description": "<p>Your size is halved in all dimensions, and your weight is reduced to one-eighth of normal. This reduction decreases your size by one category—from Medium to Small, for example. Until the effect ends, you also has disadvantage on Strength Checks and Strength Saving Throws.</p><p>Your Weapons also shrink to match your new size. While these Weapons are reduced, your attacks with them deal 1d4 less damage (this can't reduce the damage below 1).</p>"
+        }
+      }
     },
     "Potion of Fire Giant Strength": {
       "name": "Potion of Fire Giant Strength",
-      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.</em></p>\n<p>When you drink this potion, your Strength score changes to 25 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score.</p>\n<p> </p>"
+      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a fire giant.</em></p><p>When you drink this potion, your Strength score changes to 25 for [[lookup @labels.duration activity=xT9Z6NFEEUFhxy1P]]. The potion has no effect on you if your Strength is equal to or greater than that score.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's transparent liquid has floating in it a sliver of fingernail.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Fire Giant Strength": {
+          "name": "Fire Giant Strength",
+          "description": "<p>Your Strength score changes to 25 for the duration. This has no effect on you if your Strength is equal to or greater than 25.</p>"
+        }
+      }
     },
     "Potion of Fire Resistance": {
       "name": "Potion of Fire Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Fire type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to fire damage for [[lookup @labels.duration activity=qkJxETJ3791U09MR]].</p><section id=\"secret-vs12uqzX6R92PN4m\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Fire Resistance": {
+          "name": "Fire Resistance",
+          "description": "<p>You have resistance to fire damage.</p>"
+        }
+      }
     },
     "Potion of Flying": {
       "name": "Potion of Flying",
-      "description": "<p><em>This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.</em></p>\n<p>When you drink this potion, you gain a flying speed equal to your walking speed for 1 hour and can hover. If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft. </p>\n<p> </p>\n<p> </p>",
+      "description": "<p><em>This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.</em></p><p>When you drink this potion, you gain a flying speed equal to your walking speed for [[lookup @labels.duration activity=dQ5KoAo9EfRNjkIg]] and can hover. If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's clear liquid floats at the top of its container and has cloudy white impurities drifting in it.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
       "effects": {
-        "Flying": {
-          "name": "Flying"
+        "Alchemical Flight": {
+          "name": "Alchemical Flight",
+          "description": "<p>For the duration, you gain a flying speed equal to your walking speed and can hover. If you're in the air when the potion wears off, you fall unless you have some other means of staying aloft.</p>"
         }
       }
     },
     "Potion of Force Resistance": {
       "name": "Potion of Force Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Force type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to force damage for [[lookup @labels.duration activity=WBQEjgocMEcDWwnO]].</p><section id=\"secret-aaBe78rBtxdOfhNn\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Force Resistance": {
+          "name": "Force Resistance",
+          "description": "<p>You have resistance to force damage.</p>"
+        }
+      }
     },
     "Potion of Frost Giant Strength": {
       "name": "Potion of Frost Giant Strength",
-      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.</em></p>\n<p>When you drink this potion, your Strength score changes to 23 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score.</p>\n<p> </p>"
+      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a frost giant.</em></p><p>When you drink this potion, your Strength score changes to 23 for [[lookup @labels.duration activity=pE7C9XIq67aoCkGp]]. The potion has no effect on you if your Strength is equal to or greater than that score.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's transparent liquid has floating in it a sliver of fingernail.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Frost Giant Strength": {
+          "name": "Frost Giant Strength",
+          "description": "<p>Your Strength score changes to 23 for the duration. This has no effect on you if your Strength is equal to or greater than 23.</p>"
+        }
+      }
     },
     "Potion of Gaseous Form": {
       "name": "Potion of Gaseous Form",
-      "description": "<p><em>This potion's container seems to hold fog that moves and pours like water.</em></p>\n<p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz]{Gaseous Form} spell for 1 hour (no concentration required) or until you end the effect as a bonus action. </p>\n<p> </p>"
+      "description": "<p><em>This potion's container seems to hold fog that moves and pours like water.</em></p><p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz]{gaseous form} spell for [[lookup @labels.duration activity=CvPLbEm6AY14aSst]] (no concentration required) or until you end the effect as a bonus action.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's container seems to hold fog that moves and pours like water.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Gaseous Form": {
+          "name": "Gaseous Form",
+          "description": "<p>You have been transformed, along with everything you are wearing and carrying, into a misty cloud for the duration. This effect ends if you drop to 0 hit points.</p><p>While in this form, your only method of movement is a flying speed of 10 feet. You can enter and occupy the space of another creature. You have resistance to nonmagical damage, and you have advantage on Strength, Dexterity, and Constitution saving throws. You can pass through small holes, narrow openings, and even mere cracks, though you treat liquids as though they were solid surfaces. You can't fall and remain hovering in the air even when &amp;reference[stunned apply=false] or otherwise &amp;reference[incapacitated apply=false].</p><p>While in the form of a misty cloud, you can't talk or manipulate objects, and any objects you were carrying or holding can't be dropped, used, or otherwise interacted with. You can't attack or cast spells.</p>"
+        }
+      }
     },
     "Potion of Greater Healing": {
       "name": "Potion of Greater Healing",
-      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p><p>You regain 4d4+4 hit points when you drink this potion.</p>"
+      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p><p>You regain [[/healing]] when you drink this potion.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion's red liquid glimmers when agitated.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      }
     },
     "Potion of Growth": {
       "name": "Potion of Growth",
-      "description": "<p><em>The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts.  Shaking the bottle fails to interrupt this process.</em></p>\n<p>When you drink this potion, you gain the \"enlarge\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} spell for 1d4 hours (no concentration required).</p>"
+      "description": "<p><em>The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.</em></p><p>When you drink this potion, you gain the \"enlarge\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{enlarge/reduce} spell for 1d4 hours (no concentration required).</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The red in the potion's liquid continuously expands from a tiny bead to color the clear liquid around it and then contracts. Shaking the bottle fails to interrupt this process.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemically Enlarged": {
+          "name": "Alchemically Enlarged",
+          "description": "<p>Your size doubles in all dimensions, and your weight is multiplied by eight. This growth increases your size by one category—from Medium to Large, for example. If there isn't enough room for you to double its size, you attain the maximum possible size in the space available. You also have advantage on Strength Checks and Strength Saving Throws.</p><p>Your Weapons also grow to match your new size. While these Weapons are enlarged, your attacks with them deal 1d4 extra damage.</p>"
+        }
+      }
     },
     "Potion of Healing": {
       "name": "Potion of Healing",
-      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p><p>You regain 2d4+2 hit points when you drink this potion.</p>"
+      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p><p>You regain [[/healing]] when you drink this potion.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion's red liquid glimmers when agitated.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      }
     },
     "Potion of Heroism": {
       "name": "Potion of Heroism",
-      "description": "<p><em>This blue potion bubbles and steams as if boiling.</em></p><p>For 1 hour after drinking it, you gain 10 temporary hit points that last for 1 hour. For the same duration, you are under the effect of the @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{Bless} spell (no concentration required)</p><section class=\"secret foundry-note\" id=\"secret-bF4l2V0GJ0rrbVZK\"><p><strong>Foundry Note</strong></p><p>The Other Formula button can be used to roll the bonus 1d4 received from Bless.</p></section>"
+      "description": "<p><em>This blue potion bubbles and steams as if boiling.</em></p><p>For [[lookup @labels.duration activity=HXZpxqQDRfm5EL0r]] after drinking it, you gain 10 temporary hit points that last for [[lookup @labels.duration activity=HXZpxqQDRfm5EL0r]]. For the same duration, you are under the effect of the @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{bless} spell (no concentration required)</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This blue potion bubbles and steams as if boiling.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Blessed": {
+          "name": "Blessed",
+          "description": "<p>For the duration, whenever you make an attack roll or a saving throw, you can roll 1d4 and add the number rolled to the attack roll or saving throw.</p>"
+        }
+      }
     },
     "Potion of Hill Giant Strength": {
       "name": "Potion of Hill Giant Strength",
-      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.</em></p>\n<p>When you drink this potion, your Strength score changes to 21 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score.</p>\n<p> </p>"
+      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a hill giant.</em></p><p>When you drink this potion, your Strength score changes to 21 for [[lookup @labels.duration activity=UDIImot28uvAlkHv]]. The potion has no effect on you if your Strength is equal to or greater than that score.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's transparent liquid has floating in it a sliver of fingernail.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Hill Giant Strength": {
+          "name": "Hill Giant Strength",
+          "description": "<p>Your Strength score changes to 21 for the duration. This has no effect on you if your Strength is equal to or greater than 21.</p>"
+        }
+      }
     },
     "Potion of Invisibility": {
       "name": "Potion of Invisibility",
-      "description": "<p><em>This potion's container looks empty but feels as though it holds liquid. </em></p>\n<p>When you drink it, you become invisible for 1 hour. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.</p>\n<p> </p>"
+      "description": "<p><em>This potion's container looks empty but feels as though it holds liquid.</em></p><p>When you drink it, you become &amp;reference[invisible] for [[lookup @labels.duration activity=V2JumDYJgM7ktIzw]]. Anything you wear or carry is invisible with you. The effect ends early if you attack or cast a spell.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's container looks empty but feels as though it holds liquid.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Invisibility": {
+          "name": "Invisibility",
+          "description": "<p>For the duration, you are &amp;reference[invisible apply=false]. Anything you wear or carry is invisible with you. This effect ends early if you attack or cast a spell.</p>"
+        }
+      }
     },
     "Potion of Lightning Resistance": {
       "name": "Potion of Lightning Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Lightning type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to lightning damage for [[lookup @labels.duration activity=pKltvikkvHLlLjXo]].</p><section id=\"secret-hGgZvWraAwH7ge8U\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Lightning Resistance": {
+          "name": "Lightning Resistance",
+          "description": "<p>You have resistance to lightning damage.</p>"
+        }
+      }
     },
     "Potion of Mind Reading": {
       "name": "Potion of Mind Reading",
-      "description": "<p><em>The potion's dense, purple liquid has an ovoid cloud of pink floating in it.</em></p>\n<p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 13). </p>"
+      "description": "<p><em>The potion's dense, purple liquid has an ovoid cloud of pink floating in it.</em></p><p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{detect thoughts} spell (save DC 13).</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion's dense, purple liquid has an ovoid cloud of pink floating in it.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemical Mind Reading": {
+          "name": "Alchemical Mind Reading",
+          "description": "<p>For the duration, you can read the thoughts of certain creatures. When you drink this potion and as your action on each turn until the effect ends, you can focus your mind on any one creature that you can see within 30 feet of you. If the creature you choose has an Intelligence of 3 or lower or doesn't speak any language, the creature is unaffected.</p><p>You initially learn the surface thoughts of the creature—what is most on its mind in that moment. As an action, you can either shift your attention to another creature's thoughts or attempt to probe deeper into the same creature's mind. If you probe deeper, the target must make a [[/save wis 13]] saving throw. If it fails, you gain insight into its reasoning (if any), its emotional state, and something that looms large in its mind (such as something it worries over, loves, or hates). If it succeeds, the effect ends. Either way, the target knows that you are probing into its mind, and unless you shift your attention to another creature's thoughts, the creature can use its action on its turn to make an Intelligence check contested by your Intelligence check; if it succeeds, the effect ends.</p><p>Questions verbally directed at the target creature naturally shape the course of its thoughts, so this effect is particularly effective as part of an interrogation.</p><p>You can also use this effect to detect the presence of thinking creatures you can't see. When you drink the potion or as your action during the duration, you can search for thoughts within 30 feet of you. Theis effect can penetrate barriers, but 2 feet of rock, 2 inches of any metal other than lead, or a thin sheet of lead blocks you. You can't detect a creature with an Intelligence of 3 or lower or one that doesn't speak any language.</p><p>Once you detect the presence of a creature in this way, you can read its thoughts for the rest of the duration as described above, even if you can't see it, but it must still be within range.</p>"
+        }
+      }
     },
     "Potion of Necrotic Resistance": {
       "name": "Potion of Necrotic Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Necrotic type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to necrotic damage for [[lookup @labels.duration activity=CYyNHqO1SdtnOY8t]].</p><section id=\"secret-pkDMfde7TkXiyLYD\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Necrotic Resistance": {
+          "name": "Necrotic Resistance",
+          "description": "<p>You have resistance to necrotic damage.</p>"
+        }
+      }
     },
     "Potion of Poison": {
       "name": "Potion of Poison",
@@ -2798,47 +3299,170 @@
     },
     "Potion of Poison Resistance": {
       "name": "Potion of Poison Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Poison type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to poison damage for [[lookup @labels.duration activity=AqP9tNv6zZ2N6PLi]].</p><section id=\"secret-bqCNFf2zrQ0N0kKC\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Poison Resistance": {
+          "name": "Poison Resistance",
+          "description": "<p>You have resistance to poison damage.</p>"
+        }
+      }
     },
     "Potion of Psychic Resistance": {
       "name": "Potion of Psychic Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Psychic type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to psychic damage for [[lookup @labels.duration activity=of7MLaNWoYfQedkv]].</p><section id=\"secret-BCZFMmzfFNU0IIhw\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Psychic Resistance": {
+          "name": "Psychic Resistance",
+          "description": "<p>You have resistance to psychic damage.</p>"
+        }
+      }
     },
     "Potion of Radiant Resistance": {
       "name": "Potion of Radiant Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Radiant type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to radiant damage for [[lookup @labels.duration activity=y2q1JJGZ4PCRK6VZ]].</p><section id=\"secret-UdU2gEVdjQRqLLCP\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Radiant Resistance": {
+          "name": "Radiant Resistance",
+          "description": "<p>You have resistance to radiant damage.</p>"
+        }
+      }
     },
     "Potion of Speed": {
       "name": "Potion of Speed",
-      "description": "<p><em>The potion's yellow fluid is streaked with black and swirls on its own.</em></p>\n<p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.Szvk5FEVQW3uhJi5]{Haste} spell for 1 minute (no concentration required).</p>\n<p> </p>"
+      "description": "<p><em>The potion's yellow fluid is streaked with black and swirls on its own.</em></p><p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.Szvk5FEVQW3uhJi5]{haste} spell for [[lookup @labels.duration activity=Hy33WqORkn5GhlSZ]] (no concentration required).</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion's yellow fluid is streaked with black and swirls on its own.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Hastened": {
+          "name": "Hastened",
+          "description": "<p>For the duration, your speed is doubled, you gain a +2 bonus to AC, have advantage on Dexterity Saving Throws, and gain an additional action on each of your turns. This action can be used only to take the &amp;reference[Attack] (one weapon attack only), &amp;reference[Dash], &amp;reference[Disengage], &amp;reference[Hide], or &amp;reference[Use an Object] action.</p>"
+        }
+      }
     },
     "Potion of Stone Giant Strength": {
       "name": "Potion of Stone Giant Strength",
-      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.</em></p>\n<p>When you drink this potion, your Strength score changes to 23 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score.</p>\n<p> </p>"
+      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a stone giant.</em></p><p>When you drink this potion, your Strength score changes to 23 for [[lookup @labels.duration activity=0S5O1JqFRIlf9gik]]. The potion has no effect on you if your Strength is equal to or greater than that score.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's transparent liquid has floating in it a sliver of fingernail.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Stone Giant Strength": {
+          "name": "Stone Giant Strength",
+          "description": "<p>Your Strength score changes to 23 for the duration. This has no effect on you if your Strength is equal to or greater than 23.</p>"
+        }
+      }
     },
     "Potion of Storm Giant Strength": {
       "name": "Potion of Storm Giant Strength",
-      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a giant of the appropriate type.</em></p>\n<p>When you drink this potion, your Strength score changes to 29 for 1 hour.  The potion has no effect on you if your Strength is equal to or greater than that score.</p>\n<p> </p>"
+      "description": "<p><em>This potion's transparent liquid has floating in it a sliver of fingernail from a storm giant.</em></p><p>When you drink this potion, your Strength score changes to 29 for [[lookup @labels.duration activity=2cOOq5vkw0u763Px]]. The potion has no effect on you if your Strength is equal to or greater than that score.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>This potion's transparent liquid has floating in it a sliver of fingernail.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Storm Giant Strength": {
+          "name": "Storm Giant Strength",
+          "description": "<p>Your Strength score changes to 29 for the duration. This has no effect on you if your Strength is equal to or greater than 29.</p>"
+        }
+      }
     },
     "Potion of Superior Healing": {
       "name": "Potion of Superior Healing",
-      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p>\n<p>You regain 8d4+8 hit points when you drink this potion.</p>"
+      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p><p>You regain [[/healing]] when you drink this potion.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion's red liquid glimmers when agitated.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      }
     },
     "Potion of Supreme Healing": {
       "name": "Potion of Supreme Healing",
-      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p>\n<p>You regain 10d4+20 hit points when you drink this potion.</p>"
+      "description": "<p><em>The potion's red liquid glimmers when agitated.</em></p><p>You regain [[/healing]] when you drink this potion.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion's red liquid glimmers when agitated.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      }
     },
     "Potion of Thunder Resistance": {
       "name": "Potion of Thunder Resistance",
-      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Thunder type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>"
+      "description": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p><p>When you drink this potion, you gain resistance to thunder damage for [[lookup @labels.duration activity=sphH4mVrVY0W7Plg]].</p><section id=\"secret-Y18F2aGMVSA64GXJ\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p></section>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>The potion is a plain indescriminate color and smells slightly foul.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Thunder Resistance": {
+          "name": "Thunder Resistance",
+          "description": "<p>You have resistance to thunder damage.</p>"
+        }
+      }
     },
     "Potion of Water Breathing": {
       "name": "Potion of Water Breathing",
-      "description": "<p><em>Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.</em></p>\n<p>You can breathe underwater for 1 hour after drinking this potion. </p>\n<p> </p>"
+      "description": "<p><em>Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.</em></p><p>You can breathe underwater for [[lookup @labels.duration activity=nAaV0R1Qxq5syAlT]] after drinking this potion.</p>",
+      "uname": "Unidentified Potion",
+      "udescription": "<p>Its cloudy green fluid smells of the sea and has a jellyfish-like bubble floating in it.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      },
+      "effects": {
+        "Alchemical Water Breathing": {
+          "name": "Alchemical Water Breathing",
+          "description": "<p>You can breathe underwater for the duration.</p>"
+        }
+      }
     },
     "Potter's Tools": {
       "name": "Potter's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in pottery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in pottery.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Pouch": {
       "name": "Pouch",
@@ -2929,9 +3553,12 @@
     },
     "Restorative Ointment": {
       "name": "Restorative Ointment",
-      "description": "<p><em>Wondrous item</em></p><p>This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.</p><p>As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains 2d8 + 2 hit points, ceases to be poisoned, and is cured of any disease.</p><section class=\"secret foundry-note\" id=\"secret-hzyPBoWppRXYnf9A\"><p><strong>Foundry Note</strong></p><p>The 5 charges reflect the maximum number of doses possible. Similarly, the guide price of 600 gp is calculated at 120 gp per dose. Adjust both as required.</p></section>",
+      "description": "<p>This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.</p><p>As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains [[/healing activity=gRkokZZM4WWwqjEu]], ceases to be &amp;reference[poisoned apply=false], and is cured of any disease.</p><section id=\"secret-hzyPBoWppRXYnf9A\" class=\"secret foundry-note\"><p><strong>Foundry Note</strong></p><p>The 5 charges reflect the maximum number of doses possible. Similarly, the guide price of 600 gp is calculated at 120 gp per dose. Adjust both as required.</p></section>",
+      "uname": "Unidentified Mixture",
+      "udescription": "<p>This glass jar, 3 inches in diameter, contains 1d4 + 1 doses of a thick mixture that smells faintly of aloe. The jar and its contents weigh 1/2 pound.</p>",
       "activities": {
-        "heal": {
+        "Apply Ointment": {
+          "name": "Apply Ointment",
           "condition": "The ointment needs to be swallowed or applied to the skin."
         }
       }
@@ -3439,7 +4066,14 @@
     },
     "Shawm": {
       "name": "Shawm",
-      "description": "<p>A shawm to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A shawm to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "uname": "Unidentified Shawm",
+      "udescription": "<p>A shawm to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Shield": {
       "name": "Shield",
@@ -3616,7 +4250,12 @@
     },
     "Smith's Tools": {
       "name": "Smith's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in smithing.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in smithing.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Soap": {
       "name": "Soap",
@@ -3649,43 +4288,63 @@
     },
     "Spell Scroll 1st Level": {
       "name": "Spell Scroll 1st Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 11 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 13<br /><strong>Attack Bonus</strong>: +5.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 11 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 11 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 13<br /><strong>Attack Bonus</strong>: +5.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 11 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 2nd Level": {
       "name": "Spell Scroll 2nd Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 12 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 13<br /><strong>Attack Bonus</strong>: +5.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 12 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p><p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 12 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p><p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p><p><strong>Save DC</strong>: 13<br><strong>Attack Bonus</strong>: +5.</p><p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 12 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 3rd Level": {
       "name": "Spell Scroll 3rd Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 13 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 15<br /><strong>Attack Bonus</strong>: +7.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 13 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 13 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 15<br /><strong>Attack Bonus</strong>: +7.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 13 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 4th Level": {
       "name": "Spell Scroll 4th Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 14 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 15<br /><strong>Attack Bonus</strong>: +7.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 14 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 14 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 15<br /><strong>Attack Bonus</strong>: +7.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 14 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 5th Level": {
       "name": "Spell Scroll 5th Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 15 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 17<br /><strong>Attack Bonus</strong>: +9.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 15 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 15 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 17<br /><strong>Attack Bonus</strong>: +9.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 15 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 6th Level": {
       "name": "Spell Scroll 6th Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 16 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 17<br /><strong>Attack Bonus</strong>: +9.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 16 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 16 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 17<br /><strong>Attack Bonus</strong>: +9.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 16 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 7th Level": {
       "name": "Spell Scroll 7th Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 17 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 18<br /><strong>Attack Bonus</strong>: +10.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 17 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 17 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 18<br /><strong>Attack Bonus</strong>: +10.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 17 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 8th Level": {
       "name": "Spell Scroll 8th Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 18 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 18<br /><strong>Attack Bonus</strong>: +10.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 18 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 18 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 18<br /><strong>Attack Bonus</strong>: +10.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 18 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll 9th Level": {
       "name": "Spell Scroll 9th Level",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 19 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 19<br /><strong>Attack Bonus</strong>: +11.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 19 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 19 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 19<br /><strong>Attack Bonus</strong>: +11.</p>\n<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on a DC 19 Intelligence (Arcana) check. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spell Scroll Cantrip": {
       "name": "Spell Scroll Cantrip",
-      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>\n<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 10 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p>\n<p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p>\n<p><strong>Save DC</strong>: 13<br /><strong>Attack Bonus</strong>: +5.</p>"
+      "description": "<p>A spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p><p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make a DC 10 ability check using your spellcasting ability to determine whether you cast it successfully. On a failed check, the spell disappears from the scroll with no other effect.</p><p>The level of the spell on the scroll determines the spell's saving throw DC and attack bonus, as well as the scroll's rarity.</p><p><strong>Save DC</strong>: 13<br><strong>Attack Bonus</strong>: +5.</p>",
+      "uname": "Unidentified Scroll",
+      "udescription": "<p>This spell scroll bears the words of a single spell, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible.</p>"
     },
     "Spellbook": {
       "name": "Spellbook",
@@ -3940,7 +4599,12 @@
     },
     "Thieves' Tools": {
       "name": "Thieves' Tools",
-      "description": "<p>This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.</p>"
+      "description": "<p>This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Tinderbox": {
       "name": "Tinderbox",
@@ -3948,7 +4612,12 @@
     },
     "Tinker's Tools": {
       "name": "Tinker's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in tinkering.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in tinkering.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Tome of Clear Thought": {
       "name": "Tome of Clear Thought",
@@ -4032,6 +4701,15 @@
     "Universal Solvent": {
       "name": "Universal Solvent",
       "description": "<p><em>Wondrous item</em></p>\n<p>This tube holds milky liquid with a strong alcohol smell. You can use an action to pour the contents of the tube onto a surface within reach. The liquid instantly dissolves up to 1 square foot of adhesive it touches, including Sovereign Glue.</p>"
+    },
+    "Uv0ilmzbWvqmlCVH": {
+      "name": "Waterskin",
+      "description": "<p>A leather hide sewn into an enclosed skin which can contain up to 4 pints of liquid. It weighs 5 pounds when full; a pint of water is approximately 1 pound.</p>",
+      "activities": {
+        "Drink": {
+          "name": "Drink"
+        }
+      }
     },
     "Vestments": {
       "name": "Vestments",
@@ -4187,7 +4865,12 @@
     },
     "Viol": {
       "name": "Viol",
-      "description": "<p>A viol to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>"
+      "description": "<p>A viol to evoke awe, wonder, or fear in your audience.</p>\n<p>If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency. </p>",
+      "activities": {
+        "Play Instrument": {
+          "name": "Play Instrument"
+        }
+      }
     },
     "Vorpal Greatsword": {
       "name": "Vorpal Greatsword",
@@ -4207,16 +4890,19 @@
     },
     "Wand of Binding": {
       "name": "Wand of Binding",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p><p><strong>Spells</strong>. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).</p><p><strong>Assisted Escape</strong>. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.</p>",
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p><p><strong>Spells</strong>. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC [[lookup @spell.challenge.save activity=yAh2VKsLWwGagH4w]]): @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).</p><p><strong>Assisted Escape</strong>. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being &amp;reference[paralyzed apply=false] or &amp;reference[restrained apply=false], or you can expend 1 charge and gain advantage on any check you make to escape a &amp;reference[grappled apply=false]{Grapple}.</p>",
+      "uname": "Unidentified Wand",
       "activities": {
         "Assisted Escape": {
-          "name": "Assisted Escape"
+          "name": "Assisted Escape",
+          "condition": "When you make a saving throw to avoid being &reference[paralyzed apply=false], &reference[restrained apply=false], or when you attempt to escape a &reference[grappled apply=false]{Grapple}."
         }
       }
     },
     "Wand of Enemy Detection": {
       "name": "Wand of Enemy Detection",
-      "description": "<p><em>Wand (requires attunement)</em></p><p>This wand has 7 charges. While holding it, you can use an action and expend 1 charge to speak its command word. For the next minute, you know the direction of the nearest creature hostile to you within 60 feet, but not its distance from you. The wand can sense the presence of hostile creatures that are ethereal, invisible, disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "description": "<p><em>Wand (requires attunement)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action and expend 1 charge to speak its command word. For the next [[lookup @labels.duration activity=8rw7aoQH53r3yP40]], you know the direction of the nearest creature hostile to you within [[lookup @labels.description.range activity=8rw7aoQH53r3yP40]], but not its distance from you. The wand can sense the presence of hostile creatures that are ethereal, &amp;reference[invisible apply=false], disguised, or hidden, as well as those in plain sight. The effect ends if you stop holding the wand.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand",
       "activities": {
         "Detect Enemy": {
           "name": "Detect Enemy"
@@ -4225,45 +4911,65 @@
     },
     "Wand of Fear": {
       "name": "Wand of Fear",
-      "description": "<p><em>Wand (requires attunement)</em></p><p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p><p><strong>Command</strong>. While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command} spell (save DC 15).</p><p><strong>Cone of Fear</strong>. While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a 60-foot cone of amber light. Each creature in the cone must succeed on a DC 15 Wisdom saving throw or become &amp;reference[frightened] of you for 1 minute. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the Dodge action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.</p>",
+      "description": "<p><em>Wand (requires attunement)</em></p><p>This wand has [[lookup @item.uses.max]] charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p><p><strong>Command</strong>. While holding the wand, you can use an action to expend 1 charge and command another creature to flee or grovel, as with the @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{Command} spell (save DC [[lookup @spell.challenge.save activity=J1oQUVbZNLMFnm4f]]).</p><p><strong>Cone of Fear</strong>. While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a [[lookup @labels.description.template activity=zj1bSgRYmMvM3xaO]] of amber light. Each creature in the cone must succeed on a [[/save activity=zj1bSgRYmMvM3xaO]] saving throw or become &amp;reference[frightened] of you for [[lookup @labels.duration activity=zj1bSgRYmMvM3xaO]]. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the &amp;reference[Dash] action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the &amp;reference[Dodge] action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.</p>",
+      "uname": "Unidentified Wand",
       "activities": {
         "Cone of Fear": {
           "name": "Cone of Fear"
+        }
+      },
+      "effects": {
+        "Terrified": {
+          "name": "Terrified",
+          "description": "<p>You are &amp;reference[frightened apply=false] of the wand's wielder for the duration. While frightened in this way, you must spend your turns trying to move as far away as you can, and you can't willingly move to a space within 30 feet of the creature that frightened you.</p><p>You also can't take reactions. For your action, you can use only the &amp;reference[dash] action or try to escape from an effect that prevents you from moving. If you have nowhere you can move, you can use the &amp;reference[dodge] action.</p><p>At the end of each of your turns, you can repeat the saving throw, ending the effect on yourself on a success.</p>"
         }
       }
     },
     "Wand of Fireballs": {
       "name": "Wand of Fireballs",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>"
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.ztgcdrWPshKRpFd0]{Fireball} spell (save DC [[lookup @spell.challenge.save activity=iBdnsohqpy6cLAm8]]) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand"
     },
     "Wand of Lightning Bolts": {
       "name": "Wand of Lightning Bolts",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.IyikgTEOTv701jgQ]{Lightning Bolt} spell (save DC 15) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>"
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.IyikgTEOTv701jgQ]{Lightning Bolt} spell (save DC [[lookup @spell.challenge.save activity=1eOjR7lfMEA3xTt2]]) from it. For 1 charge, you cast the 3rd-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand"
     },
     "Wand of Magic Detection": {
       "name": "Wand of Magic Detection",
-      "description": "<p><em>Wand</em></p><p>This wand has 3 charges. While holding it, you can expend 1 charge as an action to cast the @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic} spell from it. The wand regains 1d3 expended charges daily at dawn.</p>"
+      "description": "<p><em>Wand</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can expend 1 charge as an action to cast the @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic} spell from it. The wand regains 1d3 expended charges daily at dawn.</p>",
+      "uname": "Unidentified Wand"
     },
     "Wand of Magic Missiles": {
       "name": "Wand of Magic Missiles",
-      "description": "<p><em>Wand</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile} spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>"
+      "description": "<p><em>Wand</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile} spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand"
     },
     "Wand of Paralysis": {
       "name": "Wand of Paralysis",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cause a thin blue ray to streak from the tip toward a creature you can see within 60 feet of you. The target must succeed on a DC 15 Constitution saving throw or be paralyzed for 1 minute. At the end of each of the target's turns, it can repeat the saving throw, ending the effect on itself on a success.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 of its charges to cause a thin blue ray to streak from the tip toward [[lookup @labels.description.affects activity=Nz0tgKO1NqwN8vhb]] you can see within [[lookup @labels.description.range activity=Nz0tgKO1NqwN8vhb]] of you. The target must succeed on a [[/save]] saving throw or be &amp;reference[paralyzed] for [[lookup @labels.duration activity=Nz0tgKO1NqwN8vhb]]. At the end of each of the target's turns, it can repeat the saving throw, ending the effect on itself on a success.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand",
+      "activities": {
+        "Paralyzing Beam": {
+          "name": "Paralyzing Beam"
+        }
+      },
       "effects": {
         "Paralysis": {
-          "name": "Paralysis"
+          "name": "Paralysis",
+          "description": "<p>You are &amp;reference[paralyzed apply=false] for the duration.</p><p>At the end of each of your turns, you can repeat the saving throw, ending the effect on yourself on a success.</p>"
         }
       }
     },
     "Wand of Polymorph": {
       "name": "Wand of Polymorph",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.04nMsTWkIFvkbXlY]{Polymorph} spell (save DC 15) from it.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>"
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.04nMsTWkIFvkbXlY]{Polymorph} spell (save DC [[lookup @spell.challenge.save activity=NGoTVneu5RYDoqnb]]) from it.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand"
     },
     "Wand of Secrets": {
       "name": "Wand of Secrets",
-      "description": "<p><em>Wand</em></p><p>The wand has 3 charges. While holding it, you can use an action to expend 1 of its charges, and if a secret door or trap is within 30 feet of you, the wand pulses and points at the one nearest to you. The wand regains 1d3 expended charges daily at dawn.</p>",
+      "description": "<p><em>Wand</em></p><p>The wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 of its charges, and if a secret door or trap is within [[lookup @target.template.size activity=6BGlNewJFiu476l8]] feet of you, the wand pulses and points at the one nearest to you. The wand regains 1d3 expended charges daily at dawn.</p>",
+      "uname": "Unidentified Wand",
       "activities": {
         "Detect Secret": {
           "name": "Detect Secret"
@@ -4272,11 +4978,13 @@
     },
     "Wand of Web": {
       "name": "Wand of Web",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.UJJu9c2UvCzVljiP]{Web} spell (save DC 15) from it.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>"
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.UJJu9c2UvCzVljiP]{Web} spell (save DC 15) from it.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "uname": "Unidentified Wand"
     },
     "Wand of Wonder": {
       "name": "Wand of Wonder",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has 7 charges. While holding it, you can use an action to expend 1 of its charges and choose a target within 120 feet of you. The target can be a creature, an object, or a point in space. Roll on the @UUID[Compendium.dnd5e.tables.RollTable.X03rbSjVcNNJNqa8]{Wand of Wonder} table to discover what happens.</p><p>If the effect causes you to cast a spell from the wand, the spell's save DC is 15. If the spell normally has a range expressed in feet, its range becomes 120 feet if it isn't already. If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the GM randomly determines which ones are affected.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed.</p>",
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>This wand has [[lookup @item.uses.max]] charges. While holding it, you can use an action to expend 1 of its charges and choose a target within [[lookup @labels.description.range activity=J8RHNvGM7pmoqBNJ]] of you. The target can be a creature, an object, or a point in space. Roll on the @UUID[Compendium.dnd5e.tables.RollTable.X03rbSjVcNNJNqa8]{Wand of Wonder} table to discover what happens.</p><p>If the effect causes you to cast a spell from the wand, the spell's save DC is 15. If the spell normally has a range expressed in feet, its range becomes 120 feet if it isn't already. If an effect covers an area, you must center the spell on and include the target. If an effect has multiple possible subjects, the GM randomly determines which ones are affected.</p><p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into dust and is destroyed.</p>",
+      "uname": "Unidentified Wand",
       "activities": {
         "Slow (1–5)": {
           "name": "Slow (1–5)"
@@ -4304,33 +5012,42 @@
         },
         "Invisibility (80–84)": {
           "name": "Invisibility (80–84)"
+        },
+        "Point Wand at Target": {
+          "name": "Point Wand at Target"
         }
       }
     },
     "Wand of the War Mage +1": {
       "name": "Wand of the War Mage +1",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>While holding this wand, you gain a bonus to spell attack rolls of +1. In addition, you ignore half cover when making a spell attack.</p>",
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>While holding this wand, you gain a bonus to spell attack rolls of +1. In addition, you ignore &amp;reference[half cover] when making a spell attack.</p>",
+      "uname": "Unidentified Wand",
       "effects": {
-        "Wand of the War Mage +1": {
-          "name": "Wand of the War Mage +1"
+        "War Mage's Accuracy +1": {
+          "name": "War Mage's Accuracy +1",
+          "description": "<p>You gain a +1 bonus to spell attack rolls and ignore &amp;reference[half cover] when making a spell attack roll.</p>"
         }
       }
     },
     "Wand of the War Mage +2": {
       "name": "Wand of the War Mage +2",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>While holding this wand, you gain a bonus to spell attack rolls of +2. In addition, you ignore half cover when making a spell attack.</p>",
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>While holding this wand, you gain a bonus to spell attack rolls of +2. In addition, you ignore &amp;reference[half cover] when making a spell attack.</p>",
+      "uname": "Unidentified Wand",
       "effects": {
-        "Wand of the War Mage +2": {
-          "name": "Wand of the War Mage +2"
+        "War Mage's Accuracy +2": {
+          "name": "War Mage's Accuracy +2",
+          "description": "<p>You gain a +2 bonus to spell attack rolls and ignore &amp;reference[half cover] when making a spell attack roll.</p>"
         }
       }
     },
     "Wand of the War Mage +3": {
       "name": "Wand of the War Mage +3",
-      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>While holding this wand, you gain a bonus to spell attack rolls of +3. In addition, you ignore half cover when making a spell attack.</p>",
+      "description": "<p><em>Wand (requires attunement by a spellcaster)</em></p><p>While holding this wand, you gain a bonus to spell attack rolls of +3. In addition, you ignore &amp;reference[half cover] when making a spell attack.</p>",
+      "uname": "Unidentified Wand",
       "effects": {
-        "Wand of the War Mage +3": {
-          "name": "Wand of the War Mage +3"
+        "War Mage's Accuracy +3": {
+          "name": "War Mage's Accuracy +3",
+          "description": "<p>You gain a +3 bonus to spell attack rolls and ignore &amp;reference[half cover] when making a spell attack roll.</p>"
         }
       }
     },
@@ -4372,7 +5089,12 @@
     },
     "Weaver's Tools": {
       "name": "Weaver's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in weaving.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in weaving.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Well of Many Worlds": {
       "name": "Well of Many Worlds",
@@ -4412,7 +5134,12 @@
     },
     "Woodcarver's Tools": {
       "name": "Woodcarver's Tools",
-      "description": "<p>These special tools include the items needed to pursue a craft or trade in woodcarving.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>"
+      "description": "<p>These special tools include the items needed to pursue a craft or trade in woodcarving.</p>\n<p>Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency.</p>",
+      "activities": {
+        "Use Tools": {
+          "name": "Use Tools"
+        }
+      }
     },
     "Wooden Staff": {
       "name": "Wooden Staff",
@@ -4425,6 +5152,19 @@
     "bDZFQqLQE73cFB8c": {
       "name": "Hempen Rope (50 ft.)",
       "description": "<p>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</p>"
+    },
+    "f4w4GxBi0nYXmhX4": {
+      "name": "Rations",
+      "description": "<p>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</p>",
+      "activities": {
+        "Eat": {
+          "name": "Eat"
+        }
+      }
+    },
+    "kj5DNiBKasYWyuj6": {
+      "name": "Disguise Kit",
+      "description": "<p>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</p>"
     },
     "oRrNK2H2vcN4Kp74": {
       "name": "Hempen Rope (50 ft.)",
