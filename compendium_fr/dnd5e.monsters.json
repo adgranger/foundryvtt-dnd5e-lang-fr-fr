@@ -28,15 +28,7 @@
         },
         "Detect": {
           "name": "Détection",
-          "description": "<p>L’[[lookup @name]] effectue un test de Sagesse (Perception).</p>",
-          "activities": {
-            "check": {
-              "chatFlavor": "L'aboleth concentre son regard !"
-            },
-            "utility": {
-              "chatFlavor": "L'aboleth concentre son regard !"
-            }
-          }
+          "description": "<p>L’[[lookup @name]] effectue un test de Sagesse (Perception).</p>"
         },
         "Tail Swipe": {
           "name": "Balayage caudal",
@@ -822,15 +814,7 @@
         "Whirlwind": {
           "name": "Tourbillon",
           "description": "<p>Chaque créature prise dans l'espace de l'élémentaire effectue un jet de sauvegarde de [[/save]]. En cas d'échec, une cible subit 15 ([[/damage]]{3d8 + 2}) dégâts contondants et se retrouve projetée à 6 m de l'élémentaire, dans une direction aléatoire, pour finir à terre. Si une cible projetée ainsi entre en collision avec un obstacle (comme un mur ou le sol), elle subit 3 ([[/damage activity=dnd5eactivity000]]{1d6}) dégâts contondants par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de [[/save activity=k9fqQYuxbnT3pwT3]] sous peine de subir les mêmes dégâts d'impact et de se retrouver à terre.</p><p>Si le jet de sauvegarde est réussi, la cible subit la moitié des dégâts contondants et n'est ni projetée ni jetée à terre.</p>",
-          "chat": "<p>[[lookup @name]] utilise Tourbillon.</p>",
-          "activities": {
-            "Object Damage": {
-              "name": "Dégâts d'obstacle"
-            },
-            "Creature Save": {
-              "name": "Sauvegarde de la créature"
-            }
-          }
+          "chat": "<p>[[lookup @name]] utilise Tourbillon.</p>"
         }
       },
       "habitat": "Montagne",
@@ -1530,14 +1514,6 @@
             "Third Roar": {
               "name": "Troisième rugissement"
             }
-          },
-          "effects": {
-            "Frightened": {
-              "name": "Effrayé"
-            },
-            "Deafened, Frightened, & Paralyzed": {
-              "name": "Assourdi, Effrayé et Paralysé"
-            }
           }
         },
         "Claw Attack": {
@@ -1905,11 +1881,6 @@
         },
         "Sneak Attack": {
           "name": "Attaque sournoise",
-          "activities": {
-            "damage": {
-              "condition": "une fois par tour"
-            }
-          },
           "description": "<p>Une fois par tour, l'assassin inflige 14 ([[/damage]]{4d6}) dégâts supplémentaires lorsqu'il touche une cible avec une attaque d'arme alors qu'il avait l'avantage au jet d'attaque, ou lorsque sa cible se trouve dans un rayon de 1,50 m d'un allié non neutralisé de l'assassin et qu'il n'était lui-même pas désavantagé au jet d'attaque.</p>"
         },
         "Multiattack": {
@@ -1960,8 +1931,7 @@
         },
         "False Appearance": {
           "name": "Faux-semblant",
-          "description": "<p>Tant que l’arbuste reste immobile, on ne peut le distinguer d’un arbuste ordinaire.</p>",
-          "requirements": "Arbuste éveillé"
+          "description": "<p>Tant que l’arbuste reste immobile, on ne peut le distinguer d’un arbuste ordinaire.</p>"
         }
       },
       "languages": "une langue connue de son créateur",
@@ -2029,8 +1999,7 @@
       "items": {
         "Pack Tactics": {
           "name": "Tactique de meute",
-          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’il cible, le [[lookup @name]] est<strong> avantagé</strong> au jet d’attaque correspondant.</p>",
-          "requirements": "Babouin"
+          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’il cible, le [[lookup @name]] est<strong> avantagé</strong> au jet d’attaque correspondant.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -2047,15 +2016,7 @@
         "Keen Smell": {
           "name": "Odorat aiguisé",
           "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’odorat.</p>",
-          "requirements": "Blaireau",
-          "activities": {
-            "check": {
-              "chatFlavor": "Le blaireau renifle les alentours !"
-            },
-            "utility": {
-              "chatFlavor": "Le blaireau renifle les alentours !"
-            }
-          }
+          "requirements": "Blaireau"
         },
         "Bite": {
           "name": "Morsure",
@@ -2072,11 +2033,6 @@
         "Death Throes": {
           "name": "Spasmes d'agonie",
           "description": "<p>Quand le balor meurt, il explose. Chaque créature dans un rayon de 9 m effectue un jet de sauvegarde de [[/save]] et subit 70 ([[/damage]]{20d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite. L'explosion embrase les objets inflammables de la zone qui ne sont portés par personne et détruit les armes du balor.</p>",
-          "activities": {
-            "save": {
-              "condition": "à la mort"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Spasmes d’agonie.</p>"
         },
         "Fire Aura": {
@@ -2174,10 +2130,6 @@
           "name": "Peau barbelée",
           "description": "<p>Au début de chacun de ses tours, le diable barbelé inflige 5 ([[/damage]]{1d10}) dégâts perforants à toute créature qui l'agrippe.</p>"
         },
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir.</p>"
-        },
         "Magic Resistance": {
           "name": "Résistance à la magie",
           "description": "<p>Le diable est<strong> avantagé</strong> aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
@@ -2227,13 +2179,11 @@
       "items": {
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>La [[lookup @name]] ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>",
-          "requirements": "Chauve-souris"
+          "description": "<p>La [[lookup @name]] ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>"
         },
         "Keen Hearing": {
           "name": "Ouïe aiguisée",
-          "description": "<p>La [[lookup @name]] est<strong> avantagée</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe.</p>",
-          "requirements": "Chauve-souris"
+          "description": "<p>La [[lookup @name]] est<strong> avantagée</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -2247,10 +2197,6 @@
     "Bearded Devil": {
       "name": "Diable barbu",
       "items": {
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir.</p>"
-        },
         "Magic Resistance": {
           "name": "Résistance à la magie",
           "description": "<p>Le diable est<strong> avantagé</strong> aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
@@ -2438,15 +2384,7 @@
       "items": {
         "Keen Sight": {
           "name": "Vue aiguisée",
-          "description": "<p>Le faucon est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue.</p>",
-          "activities": {
-            "check": {
-              "chatFlavor": "Le faucon concentre son regard !"
-            },
-            "utility": {
-              "chatFlavor": "Le faucon concentre son regard !"
-            }
-          }
+          "description": "<p>Le faucon est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
         },
         "Pack Tactics": {
           "name": "Tactique de meute",
@@ -2681,16 +2619,7 @@
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’odorat.</p>",
-          "requirements": "Chat",
-          "activities": {
-            "check": {
-              "chatFlavor": "Le chat lève la tête et renifle l'air."
-            },
-            "utility": {
-              "chatFlavor": "Le chat lève la tête et renifle l'air."
-            }
-          }
+          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’odorat.</p>"
         }
       },
       "habitat": "Prairie",
@@ -2739,10 +2668,6 @@
           "name": "Masque bouleversant",
           "description": "<p>Lorsqu'une créature que le diable voit commence son tour dans un rayon de 9 m de celui-ci, le diable peut se donner l'apparence illusoire d'un proche défunt de la créature ou d'un de ses ennemis jurés. Si la créature voit le diable, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être effrayée jusqu'à la fin de son tour.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Masque bouleversant.</p>"
-        },
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir du diable.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -3051,29 +2976,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 8 ([[/damage]]{1d6 + 5}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 24 heures. Jusqu'à la fin de l'empoisonnement, la cible est &Reference[unconscious apply=false]{inconsciente}. Une autre créature peut consacrer une action à réveiller la cible énergiquement.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>",
-          "effects": {
-            "Poisoned": {
-              "name": "Empoisonné",
-              "description": "<p>Jusqu'à la fin de l'empoisonnement, la cible est inconsciente. Une autre créature peut consacrer une action à réveiller la cible énergiquement.</p>"
-            }
-          }
+          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
         },
         "Constrict": {
           "name": "Constriction",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature de taille M ou inférieure. [[/damage extended]] et la cible est agrippée (évasion DD 15). Tant que la cible est agrippée, elle est entravée et la constriction ne peut pas s'appliquer à une autre cible.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Constriction.</p>",
-          "effects": {
-            "Restrained": {
-              "name": "Entravé",
-              "description": "<p>Tant que la cible est agrippée, elle est entravée.</p>"
-            }
-          },
-          "activities": {
-            "Escape Check": {
-              "name": "Test d'évasion"
-            }
-          }
+          "chat": "<p>[[lookup @name]] attaque avec Constriction.</p>"
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -3305,12 +3213,7 @@
         "Crush": {
           "name": "Écrasement",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts contondants, et la mante obscure se fixe à la cible. Si la cible est de taille M ou inférieure et si la mante obscure a l'avantage au jet d'attaque, cette dernière se fixe en engloutissant la tête de la cible, qui se retrouve &Reference[blinded]{aveuglée} et incapable de respirer tant que la mante obscure reste ainsi fixée.</p><p>Tant qu'elle est fixée à la cible, la mante obscure ne peut attaquer que cette créature mais elle est avantagée à ses jets d'attaque contre elle. La vitesse de la mante obscure passe aussi à 0, elle ne peut profiter d'aucun bonus en vitesse, mais elle suit les déplacements de la cible.</p><p>Une créature peut détacher la mante obscure en réussissant un test de Force (Athlétisme) DD 13 au prix d'une action. À son tour, la mante obscure peut se détacher de la cible en y consacrant 1,50 m de déplacement.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Écrasement.</p>",
-          "activities": {
-            "Detach": {
-              "name": "Détacher"
-            }
-          }
+          "chat": "<p>La [[lookup @name]] attaque avec Écrasement.</p>"
         },
         "Darkness Aura": {
           "name": "Aura de ténèbres",
@@ -3497,12 +3400,7 @@
         "Create Whirlwind": {
           "name": "Création de tourbillon",
           "description": "<p>Un cylindre d'air tourbillonnant, de 1,50 m de rayon et 9 m de haut, se forme en un point que le djinn voit dans un rayon de 36 m. Le tourbillon persiste aussi longtemps que le djinn maintient sa concentration (comme pour un sort). Toute créature autre que le djinn qui pénètre dans le tourbillon doit réussir un jet de sauvegarde de [[/save]] sous peine d'être entravée par les turbulences. Le djinn peut déplacer le tourbillon d'un maximum de 18 m au prix d'une action ; les créatures entravées par l'effet sont déplacées avec lui. Le tourbillon prend fin si le djinn le perd de vue.</p><p>Une créature peut consacrer son action à libérer une créature entravée par le tourbillon (éventuellement elle-même), ce qui nécessite de réussir un test de [[/check]]. En cas de réussite, la créature n'est plus entravée et se déplace dans l'espace extérieur au tourbillon le plus proche.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Création de tourbillon.</p>",
-          "activities": {
-            "Escape": {
-              "name": "Se libérer"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] utilise Création de tourbillon.</p>"
         },
         "Conjure Air Elemental": {
           "name": "Invocation d’élémentaire de l’air",
@@ -3901,14 +3799,6 @@
         "Fey Charm": {
           "name": "Charme féerique",
           "description": "<p>La dryade cible un humanoïde ou une bête qu'elle voit dans un rayon de 9 m. Si la cible voit la dryade, elle doit réussir un jet de sauvegarde de[[/save]] sous peine d'être magiquement &Reference[charmed]{charmée}. Ainsi charmée, la créature considère la dryade comme une amie fidèle qu'elle doit écouter et protéger. Bien que la cible ne soit pas sous le contrôle de la dryade, elle accorde la plus grande considération à tout ce qu'elle lui demande et à tout ce qu'elle fait.</p><p>Chaque fois que la dryade ou l'un de ses alliés nuit directement à la cible, celle-ci peut réitérer le jet de sauvegarde et met un terme à l'effet sur elle-même en cas de réussite. Sans cela, l'effet dure 24 heures sauf si la dryade meurt, se trouve sur un plan d'existence différent de celui de la cible ou met un terme à l'effet par une action bonus. Si la cible réussit l'un de ces JS, elle est immunisée contre le Charme féerique de la dryade pendant 24 heures.</p><p>La dryade ne peut pas avoir simultanément plus d'un humanoïde ou plus de trois bêtes sous son charme.</p>",
-          "activities": {
-            "utility": {
-              "condition": "un humanoïde ou une bête"
-            },
-            "save": {
-              "condition": "un humanoïde ou une bête"
-            }
-          },
           "chat": "<p>La [[lookup @name]] utilise Charme féerique.</p>"
         },
         "Entangle": {
@@ -3974,22 +3864,12 @@
         "War Pick": {
           "name": "Pic de guerre",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts perforants, ou 11 ([[/damage average activity=efBWBI6TxtxVoljw]]{2d8 + 2}) dégâts perforants si agrandi.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Pic de guerre.</p>",
-          "activities": {
-            "Attack (enlarged)": {
-              "name": "Attaquer (agrandi)"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] attaque avec Pic de guerre.</p>"
         },
         "Javelin": {
           "name": "Javeline",
           "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 9/36 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants, ou 9 ([[/damage average activity=qmX3Tp3KYUdZPgB1]]{2d6 + 2}) dégâts perforants si agrandi.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Javeline.</p>",
-          "activities": {
-            "Attack (enlarged)": {
-              "name": "Attaquer (agrandi)"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] attaque avec Javeline.</p>"
         },
         "Invisibility": {
           "name": "Invisibilité",
@@ -4007,11 +3887,6 @@
         "Death Burst": {
           "name": "Explosion finale",
           "description": "<p>Lorsque le méphite meurt, il explose dans une déflagration de poussière. Chaque créature dans un rayon de 1,50 m de lui doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} pendant 1 minute. Une créature aveuglée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "activities": {
-            "save": {
-              "condition": "à la mort"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "Innate Spellcasting": {
@@ -4042,8 +3917,7 @@
       "items": {
         "Keen Sight": {
           "name": "Vue aiguisée",
-          "description": "<p>L’[[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue.</p>",
-          "requirements": "Aigle"
+          "description": "<p>L’[[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
         },
         "Talons": {
           "name": "Serres",
@@ -4271,12 +4145,7 @@
         "Web": {
           "name": "Toile d'araignée",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/18 m, une créature de taille G ou inférieure. <em>Touché :</em> La créature est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la créature entravée peut effectuer un test de [[/check]] et se libère de la toile en cas de réussite. Cet effet prend également fin si la toile est détruite. La toile est dotée d'une CA de 10, de 5 points de vie, de l'immunité contre les dégâts contondants, psychiques et de poison, et de la vulnérabilité aux dégâts de feu.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>",
-          "activities": {
-            "Escape Web": {
-              "name": "Se libérer de la toile"
-            }
-          }
+          "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>"
         }
       },
       "habitat": "Forêt",
@@ -4412,8 +4281,7 @@
       "items": {
         "Flyby": {
           "name": "Repli aérien",
-          "description": "<p>Le serpent ne provoque pas d’attaque d’opportunité lorsqu’il quitte la zone d’allonge d’un ennemi en volant.</p>",
-          "requirements": "Chouette"
+          "description": "<p>Le serpent ne provoque pas d’attaque d’opportunité lorsqu’il quitte la zone d’allonge d’un ennemi en volant.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -4454,8 +4322,7 @@
         },
         "Standing Leap": {
           "name": "Saut sans élan",
-          "description": "<p>Les sauts en longueur de la [[lookup @name]] peuvent atteindre 3 m et ses sauts en hauteur 1,50 m, avec ou sans élan.</p>",
-          "requirements": "Grenouille"
+          "description": "<p>Les sauts en longueur de la [[lookup @name]] peuvent atteindre 3 m et ses sauts en hauteur 1,50 m, avec ou sans élan.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -4516,12 +4383,7 @@
         "Ooze Cube": {
           "name": "Cube de vase",
           "description": "<p>Le cube occupe l'intégralité de son espace. D'autres créatures peuvent entrer dans cet espace, mais ce faisant, elles se soumettent à l'Enveloppement du cube en étant désavantagées au jet de sauvegarde.</p><p>Les créatures prises dans le cube restent visibles mais disposent d'un abri total.</p><p>Une créature située dans un rayon de 1,50 m du cube peut consacrer une action à extraire une créature ou un objet qui s'y trouve. Pour ce faire, elle doit réussir un test de Force DD 12 et subit 10 (3d6) dégâts d'acide quelle que soit l'issue de la tentative.</p><p>Le cube ne peut contenir qu'une seule créature de taille G ou un maximum de quatre créatures de taille M ou inférieure.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Cube de vase.</p>",
-          "activities": {
-            "Rescue": {
-              "name": "Secourir"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] utilise Cube de vase.</p>"
         },
         "Transparent": {
           "name": "Transparent",
@@ -4844,8 +4706,7 @@
         },
         "Illumination": {
           "name": "Illumination",
-          "description": "<p>Le scarabée projette une lumière vive sur un rayon de 3 m et une lumière faible sur 3 m de plus.</p>",
-          "requirements": "Scarabée de feu"
+          "description": "<p>Le scarabée projette une lumière vive sur un rayon de 3 m et une lumière faible sur 3 m de plus.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -4885,7 +4746,6 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si la chèvre se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de Coup de bélier au même tour, elle lui inflige 5 ([[/damage]]{2d4}) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "requirements": "Chèvre",
           "chat": "<p>La [[lookup @name]] utilise Charge.</p>"
         },
         "Sure-Footed": {
@@ -4938,13 +4798,11 @@
         },
         "Underwater Camouflage": {
           "name": "Camouflage subaquatique",
-          "description": "<p>La pieuvre est<strong> avantagée</strong> aux tests de Dextérité (Discrétion) effectués sous l’eau.</p>",
-          "requirements": "Pieuvre"
+          "description": "<p>La pieuvre est<strong> avantagée</strong> aux tests de Dextérité (Discrétion) effectués sous l’eau.</p>"
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>La pieuvre ne peut respirer que sous l’eau.</p>",
-          "requirements": "Pieuvre"
+          "description": "<p>La pieuvre ne peut respirer que sous l’eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
@@ -4965,8 +4823,7 @@
       "items": {
         "Flyby": {
           "name": "Repli aérien",
-          "description": "<p>La chouette ne provoque pas d’attaque d’opportunité lorsqu’elle quitte la zone d’allonge d’un ennemi en volant.</p>",
-          "requirements": "Chouette"
+          "description": "<p>La chouette ne provoque pas d’attaque d’opportunité lorsqu’elle quitte la zone d’allonge d’un ennemi en volant.</p>"
         },
         "Keen Hearing and Sight": {
           "name": "Ouïe et vue aiguisées",
@@ -5350,27 +5207,12 @@
         "Shield Bash": {
           "name": "Coup de bouclier",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 9 ([[/damage]]{2d4 + 4}) dégâts contondants. Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Coup de bouclier.</p>",
-          "effects": {
-            "Prone": {
-              "name": "À terre"
-            }
-          },
-          "activities": {
-            "save": {
-              "condition": "Au touché"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] attaque avec Coup de bouclier.</p>"
         },
         "Parry": {
           "name": "Parade",
           "description": "<p>Le gladiateur ajoute 3 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Parade.</p>",
-          "activities": {
-            "utility": {
-              "condition": "lorsqu'une attaque de corps à corps censée toucher cette créature"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] utilise Parade.</p>"
         }
       },
       "languages": "une au choix (généralement le commun)",
@@ -5422,8 +5264,7 @@
         },
         "Sure-Footed": {
           "name": "Pied sûr",
-          "description": "<p>La [[lookup @name]] est<strong> avantagée</strong> aux jets de sauvegarde de Force et de Dextérité contre les effets censés la jeter &Reference[prone].</p>",
-          "requirements": "Chèvre"
+          "description": "<p>La [[lookup @name]] est<strong> avantagée</strong> aux jets de sauvegarde de Force et de Dextérité contre les effets censés la jeter &Reference[prone].</p>"
         },
         "Ram": {
           "name": "Coup de bélier",
@@ -5988,8 +5829,7 @@
       "items": {
         "Keen Sight": {
           "name": "Vue aiguisée",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue.</p>",
-          "requirements": "Faucon"
+          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
         },
         "Talons": {
           "name": "Serres",
@@ -6156,10 +5996,6 @@
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts perforants.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Fourche.</p>"
         },
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir du diable.</p>"
-        },
         "Magic Resistance": {
           "name": "Résistance à la magie",
           "description": "<p>Le diable est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
@@ -6240,8 +6076,7 @@
       "items": {
         "Pack Tactics": {
           "name": "Tactique de meute",
-          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’elle cible, la [[lookup @name]] est<strong> avantagée</strong> au jet d’attaque correspondant.</p>",
-          "requirements": "Hyène"
+          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’elle cible, la [[lookup @name]] est<strong> avantagée</strong> au jet d’attaque correspondant.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -6260,10 +6095,6 @@
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d6 + 5}) dégâts perforants plus 10 ([[/damage]]{3d6}) dégâts de froid.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir du diable.</p>"
-        },
         "Magic Resistance": {
           "name": "Résistance à la magie",
           "description": "<p>Le diable est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
@@ -6271,15 +6102,6 @@
         "Wall of Ice": {
           "name": "Mur de glace",
           "description": "<p>Le diable forme magiquement une paroi de glace opaque sur une surface solide qu'il voit dans un rayon de 18 m. Le mur, épais de 30 cm, peut atteindre jusqu'à 9 m de long et 3 m de hauteur, ou bien se présenter comme un dôme hémisphérique d'un diamètre maximal de 6 m.</p><p>À l'apparition du mur, toute créature située dans son espace en est expulsée par le chemin le plus court. La créature choisit de quel côté du mur elle termine, sauf si elle est neutralisée. Elle effectue alors un jet de sauvegarde de [[/save]] et subit 35 ([[/damage]]{10d6}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p>Le mur persiste pendant 1 minute, mais disparaît si le diable meurt ou est neutralisé. On peut endommager le mur et y faire une brèche ; chaque section de 3 m de côté est dotée d'une CA de 5, de 30 points de vie, de la vulnérabilité aux dégâts de feu et de l'immunité contre les dégâts d'acide, de froid, nécrotiques, psychiques et de poison. Une section détruite laisse une nappe d'air glacial dans l'espace qu'elle occupait. Chaque fois qu'une créature termine un tour durant lequel elle a traversé cette nappe, volontairement ou non, elle effectue un jet de sauvegarde de [[/save activity=1sgpSnbxz7JYshd3]] et subit 17 ([[/damage activity=1sgpSnbxz7JYshd3]]{5d6}) dégâts de froid en cas d'échec, la moitié en cas de réussite. La nappe d'air se dissipe quand le reste du mur disparaît.</p>",
-          "activities": {
-            "Create Wall": {
-              "name": "Créer un mur",
-              "condition": "une surface solide qu'il voit dans un rayon de 18 m."
-            },
-            "Pass Through Wall": {
-              "name": "Passer à travers le mur"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Mur de glace.</p>"
         },
         "Tail": {
@@ -6306,11 +6128,6 @@
         "Death Burst": {
           "name": "Explosion finale",
           "description": "<p>Lorsque le méphite meurt, il explose en éclats de glace acérés. Toute créature située dans un rayon de 1,50 m du monstre effectue un jet de sauvegarde de [[/save]] et subit 4([[/damage]]{1d8}) dégâts tranchants en cas d'échec, la moitié en cas de réussite.</p>",
-          "activities": {
-            "save": {
-              "condition": "à la mort"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "False Appearance": {
@@ -6345,10 +6162,6 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le [[lookup @name]] peut consacrer son action à se métamorphoser en bête sous forme de rat (vitesse 6 m), de corbeau (6 m, vol 18 m) ou d’araignée (6 m, escalade 6 m) ou à reprendre sa forme véritable. Son profil reste le même sous les deux formes, en dehors du changement de vitesse indiqué. Rien de ce qu’il porte n’est transformé. S’il meurt, il reprend sa forme véritable.</p>"
-        },
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir du diablotin.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -6441,13 +6254,11 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe ou l’odorat.</p>",
-          "requirements": "Chacal"
+          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe ou l’odorat.</p>"
         },
         "Pack Tactics": {
           "name": "Tactique de meute",
-          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’il cible, le [[lookup @name]] est<strong> avantagé</strong> au jet d’attaque correspondant.</p>",
-          "requirements": "Chacal"
+          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’il cible, le [[lookup @name]] est<strong> avantagé</strong> au jet d’attaque correspondant.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -6571,12 +6382,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure agrippée par le kraken, elle est engloutie et n'est plus agrippée. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du kraken et subit 42 (12d6) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le kraken subit 50 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 25 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins de lui. Si le kraken meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
-          "activities": {
-            "Swallowed Damage": {
-              "name": "Dégâts engloutis"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Tentacle": {
           "name": "Tentacule",
@@ -6680,15 +6486,9 @@
     "Lemure": {
       "name": "Lémure",
       "items": {
-        "Devil's Sight": {
-          "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir du lémure.</p>",
-          "requirements": "Lémure"
-        },
         "Hellish Rejuvenation": {
           "name": "Reconstitution infernale",
           "description": "<p>Un lémure qui meurt dans les Neuf Enfers revient à la vie avec tous ses points de vie en [[/r 1d10]] jours, sauf s'il a été tué par une créature d'alignement bon affectée par le sort bénédiction ou si ses restes sont aspergés d'eau bénite.</p>",
-          "requirements": "Lémure",
           "chat": "<p>Le [[lookup @name]] utilise Reconstitution infernale.</p>"
         },
         "Fist": {
@@ -7074,11 +6874,6 @@
         "Death Burst": {
           "name": "Explosion finale",
           "description": "<p>Lorsque le méphite meurt, il explose dans une déflagration de lave. Toute créature située dans un rayon de 1,50 m du monstre effectue un jet de sauvegarde de [[/save]] et subit 7 ([[/damage]]{2d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "activities": {
-            "save": {
-              "condition": "à la mort"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "False Appearance": {
@@ -7110,11 +6905,6 @@
         "Death Burst": {
           "name": "Explosion finale",
           "description": "<p>Quand le magmatique meurt, il explose dans une déflagration de flammes et de lave. Toute créature située dans un rayon de 3 m du monstre effectue un jet de sauvegarde de [[/save]] et subit 7 ([[/damage]]{2d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite. Les objets inflammables de la zone qui ne sont portés par personne prennent feu.</p>",
-          "activities": {
-            "save": {
-              "condition": "à la mort"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "Ignited Illumination": {
@@ -7369,7 +7159,6 @@
         },
         "Reckless": {
           "name": "Téméraire",
-          "chat": "<p>Le [[lookup @name]] utilise Téméraire.</p>",
           "description": "<p>Au début de son tour, le minotaure peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>"
         },
         "Greataxe": {
@@ -7606,7 +7395,6 @@
         },
         "Teleport": {
           "name": "Téléportation",
-          "chat": "<p>Le [[lookup @name]] utilise Téléportation.</p>",
           "description": "<p>Le nalfeshnie se téléporte magiquement d'un maximum de 36 m avec tout l'équipement qu'il porte dans un espace inoccupé qu'il voit.</p>"
         }
       },
@@ -7686,7 +7474,6 @@
         },
         "Ethereal Stride": {
           "name": "Chevauchée éthérée",
-          "chat": "<p>L'[[lookup @name]] utilise Chevauchée éthérée.</p>",
           "description": "<p>L'horriflamme et un maximum de trois créatures consentantes dans un rayon de 1,50 m d'elle accèdent magiquement au Plan Éthéré depuis le Plan Matériel, ou inversement.</p>"
         }
       },
@@ -7818,15 +7605,7 @@
         "Glaive": {
           "name": "Coutille",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts tranchants, ou 9 ([[/damage activity=aKQQjgpq0XwCcMGK]]{1d10 + 4}) dégâts tranchants quand l'oni est de taille M ou P.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Coutille.</p>",
-          "activities": {
-            "Attack (large)": {
-              "name": "Attaquer (G)"
-            },
-            "Attack (small)": {
-              "name": "Attaquer (P)"
-            }
-          }
+          "chat": "<p>L'[[lookup @name]] attaque avec Coutille.</p>"
         },
         "Claw (Oni Form Only)": {
           "name": "Griffe (forme d’oni uniquement)",
@@ -8527,8 +8306,7 @@
       "items": {
         "Keen Smell": {
           "name": "Odorat aiguisé",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’odo[[lookup @name]].</p>",
-          "requirements": "Rat"
+          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir l’odo[[lookup @name]].</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8544,8 +8322,7 @@
       "items": {
         "Mimicry": {
           "name": "Imitation",
-          "description": "<p>Le [[lookup @name]] peut imiter des bruits simples qu’il a entendus, comme le murmure d’une personne, les pleurs d’un nourrisson ou les jacasseries d’un animal. Une créature qui entend les sons émis se rend compte qu’il s’agit d’imitations si elle réussit un test de Sagesse (Intuition) DD 10.</p>",
-          "requirements": "Corbeau"
+          "description": "<p>Le [[lookup @name]] peut imiter des bruits simples qu’il a entendus, comme le murmure d’une personne, les pleurs d’un nourrisson ou les jacasseries d’un animal. Une créature qui entend les sons émis se rend compte qu’il s’agit d’imitations si elle réussit un test de Sagesse (Intuition) DD 10.</p>"
         },
         "Beak": {
           "name": "Bec",
@@ -8807,8 +8584,7 @@
         },
         "Limited Amphibiousness": {
           "name": "Amphibiose partielle",
-          "description": "<p>Capable de respirer aussi bien sous l’eau qu’à l’air libre, le [[lookup @name]] doit s’immerger dans l’eau au moins une fois toutes les 4 heures sous peine de s’asphyxier.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Amphibiose partielle.</p>"
+          "description": "<p>Capable de respirer aussi bien sous l’eau qu’à l’air libre, le [[lookup @name]] doit s’immerger dans l’eau au moins une fois toutes les 4 heures sous peine de s’asphyxier.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -8975,16 +8751,7 @@
         "Shadow Stealth": {
           "name": "Discrétion dans les ombres",
           "description": "<p>Tant qu’elle se trouve dans une zone de lumière faible ou de ténèbres, l’[[lookup @name]] peut entreprendre l’action Se cacher par une action bonus.</p>",
-          "activities": {
-            "utility": {
-              "condition": "Dans des ténèbres ou une lumière faible"
-            }
-          },
           "chat": "<p>L'[[lookup @name]] utilise Discrétion dans les ombres.</p>"
-        },
-        "Sunlight Weakness": {
-          "name": "Morsure du soleil",
-          "description": "<p>Exposée à la lumière vive du soleil, l'ombre est désavantagée aux jets d'attaque, tests de caractéristique et jets de sauvegarde.</p>"
         },
         "Strength Drain": {
           "name": "Ponction de force",
@@ -9417,11 +9184,6 @@
         "Death Burst": {
           "name": "Explosion finale",
           "description": "<p>Lorsque le méphite meurt, il explose dans une déflagration de vapeurs brûlantes. Chaque créature dans un rayon de 1,50 m du monstre doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 4 ([[/damage]]{1d8}) dégâts de feu.</p>",
-          "activities": {
-            "save": {
-              "condition": "à la mort"
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "Innate Spellcasting": {
@@ -9610,23 +9372,12 @@
               "name": "Charmé",
               "description": "<p>La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon.</p><p>Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l'effet en cas de réussite. Si la cible réussit son JS contre l'effet ou si celui-ci prend fin, elle devient immunisée contre le Charme de ce fiélon pendant 24 heures.</p>"
             }
-          },
-          "activities": {
-            "save": {
-              "target": "Humanoïde"
-            }
           }
         },
         "Draining Kiss": {
           "name": "Baiser dévitalisant",
           "description": "<p>Le fiélon échange un baiser avec une créature charmée par lui ou consentante. La cible effectue un jet de sauvegarde de [[/save]] contre cette magie et subit 32 ([[/damage]]{5d10 + 5}) dégâts psychiques en cas d'échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>",
-          "requirements": "Cible une créature charmée ou consentante",
-          "activities": {
-            "save": {
-              "target": "créature charmée ou consentante"
-            }
-          }
+          "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>"
         },
         "Etherealness": {
           "name": "Forme éthérée",
@@ -9651,18 +9402,15 @@
         },
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour une chauve-souris de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour une chauve-souris de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
         },
         "Keen Hearing": {
           "name": "Ouïe aiguisée",
-          "description": "<p>La nuée est<strong> avantagée</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée est<strong> avantagée</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe.</p>"
         },
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>La nuée ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -9672,8 +9420,7 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
         },
         "Bites": {
           "name": "Morsures",
@@ -9689,8 +9436,7 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
         },
         "Bites": {
           "name": "Morsures",
@@ -9706,8 +9452,7 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
         },
         "Bites": {
           "name": "Morsures",
@@ -9723,8 +9468,7 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un serpent de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un serpent de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
         },
         "Bites": {
           "name": "Morsures",
@@ -9828,8 +9572,7 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
-          "requirements": "Chauves-souris"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
         },
         "Bites": {
           "name": "Morsures",
@@ -10141,7 +9884,6 @@
         },
         "Healing Touch": {
           "name": "Contact curatif",
-          "chat": "<p>La [[lookup @name]] utilise Contact curatif.</p>",
           "description": "<p>La licorne touche physiquement une autre créature avec sa corne. La cible récupère magiquement 11 ([[/heal]]{2d8 + 2}) points de vie. De plus, ce contact élimine toutes les maladies et neutralise tous les poisons qui affectent la cible.</p>"
         },
         "Teleport": {
@@ -10415,13 +10157,11 @@
       "items": {
         "Keen Sight and Smell": {
           "name": "Odorat et vue aiguisés",
-          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue ou l’odorat.</p>",
-          "requirements": "Vautour"
+          "description": "<p>Le [[lookup @name]] est<strong> avantagé</strong> aux tests de Sagesse (Perception) qui font intervenir la vue ou l’odorat.</p>"
         },
         "Pack Tactics": {
           "name": "Tactique de meute",
-          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’il cible, le [[lookup @name]] est<strong> avantagé</strong> au jet d’attaque correspondant.</p>",
-          "requirements": "Vautour"
+          "description": "<p>Quand au moins un de ses alliés non &Reference[incapacitated] se situe dans un rayon de 1,50 m de la créature qu’il cible, le [[lookup @name]] est<strong> avantagé</strong> au jet d’attaque correspondant.</p>"
         },
         "Beak": {
           "name": "Bec",
@@ -10484,12 +10224,7 @@
         "Whelm": {
           "name": "Déluge",
           "description": "<p>Chaque créature prise dans l'espace de l'élémentaire effectue un [[/save]]. En cas d'échec, elle subit 13 ([[/damage]]{2d8 + 4}) dégâts contondants. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée} (évasion DD 14). Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de respirer sauf si elle en a la faculté dans l'eau. Si elle réussit son jet de sauvegarde, la cible est repoussée de l'espace de l'élémentaire. L'élémentaire peut agripper simultanément une créature de taille G ou un maximum de deux créatures de taille M ou inférieure. Au début de chacun des tours de l'élémentaire, toute créature agrippée par lui subit 13 ([[/damage]]{2d8 + 4}) dégâts contondants. Une créature située dans un rayon de 1,50 m de l'élémentaire peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de [[/check]].</p>",
-          "chat": "<p>[[lookup @name]] utilise Déluge.</p>",
-          "activities": {
-            "Pull Out": {
-              "name": "S'extraire"
-            }
-          }
+          "chat": "<p>[[lookup @name]] utilise Déluge.</p>"
         }
       },
       "habitat": "Sous-marin",
@@ -10500,8 +10235,7 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>La [[lookup @name]] est<strong> avantagée</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe ou l’odorat.</p>",
-          "requirements": "Belette"
+          "description": "<p>La [[lookup @name]] est<strong> avantagée</strong> aux tests de Sagesse (Perception) qui font intervenir l’ouïe ou l’odorat.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10644,12 +10378,7 @@
               "name": "À terre"
             }
           },
-          "requirements": "Forme de tigre ou hybride",
-          "activities": {
-            "save": {
-              "condition": "se déplace de 4,50 m et touche avec une attaque de Griffe"
-            }
-          }
+          "requirements": "Forme de tigre ou hybride"
         },
         "Multiattack (Humanoid or Hybrid Form Only)": {
           "name": "Attaques multiples (forme humanoïde ou hybride uniquement)",
@@ -10776,12 +10505,7 @@
         "Consume Life": {
           "name": "Festin d'essence vitale",
           "description": "<p>Par une action bonus, le feu follet peut cibler une créature qu'il voit dans un rayon de 1,50 m, à condition qu'elle ait 0 point de vie et soit toujours vivante. La cible doit réussir un jet de sauvegarde de Constitution DD 10 contre cette magie sous peine de mourir. Si elle meurt, le feu follet récupère 10 (3d6) points de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Festin d’essence vitale.</p>",
-          "activities": {
-            "heal": {
-              "condition": "si la cible meurt"
-            }
-          }
+          "chat": "<p>Le [[lookup @name]] utilise Festin d’essence vitale.</p>"
         },
         "Ephemeral": {
           "name": "Fugace",
@@ -11034,12 +10758,10 @@
           "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu",
-              "condition": "Le souffle doit être chargé"
+              "name": "Souffle de feu"
             },
             "Sleep Breath": {
-              "name": "Souffle soporifique",
-              "condition": "Le souffle doit être chargé"
+              "name": "Souffle soporifique"
             }
           }
         },
@@ -11287,11 +11009,6 @@
         "Cold Breath": {
           "name": "Souffle glacial",
           "description": "<p>Le dragon exhale un cône de 9 m de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]], et subit 45 ([[/damage]]{10d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
-          "activities": {
-            "save": {
-              "chatFlavor": "Le dragon exhale son souffle mortel."
-            }
-          },
           "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
         },
         "Ice Walk": {
