@@ -46,7 +46,7 @@
         },
         "Probing Telepathy": {
           "name": "Télépathie inquisitrice",
-          "description": "<p>Si une créature communique par télépathie avec l’[[lookup @name]], ce dernier a conscience des désirs profonds de la créature à condition de la voir.</p>"
+          "description": "<p>Si une créature communique par télépathie avec le [[lookup @name lowercase]]{monstre}, ce dernier a conscience des désirs profonds de la créature à condition de la voir.</p>"
         },
         "Tentacle": {
           "name": "Tentacule",
@@ -60,7 +60,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>L’[[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -150,15 +150,20 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Acid Breath": {
           "name": "Souffle d'acide",
@@ -210,7 +215,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -219,7 +229,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -270,7 +280,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -279,7 +294,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -311,6 +326,11 @@
             "Sleep Breath": {
               "name": "Souffle soporifique"
             }
+          },
+          "effects": {
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
           }
         }
       },
@@ -322,7 +342,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -331,7 +351,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -350,7 +370,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -398,7 +423,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -422,7 +447,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -434,6 +464,11 @@
             },
             "Slowing Breath": {
               "name": "Souffle engourdissant"
+            }
+          },
+          "effects": {
+            "Slowed": {
+              "name": "Ralenti"
             }
           }
         },
@@ -466,11 +501,11 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -494,7 +529,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -506,6 +546,11 @@
             },
             "Weakening Breath": {
               "name": "Souffle affaiblissant"
+            }
+          },
+          "effects": {
+            "Weakened": {
+              "name": "Affaibli"
             }
           }
         },
@@ -542,11 +587,11 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -570,7 +615,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Poison Breath": {
           "name": "Souffle empoisonné",
@@ -606,7 +656,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -615,7 +665,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Fire Breath": {
           "name": "Souffle de feu",
@@ -666,7 +721,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -690,7 +745,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -700,6 +760,11 @@
             "Cold Breath": {
               "name": "Souffle glacial"
             },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          },
+          "effects": {
             "Paralyzing Breath": {
               "name": "Souffle paralysant"
             }
@@ -758,7 +823,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Ice Walk": {
           "name": "Marche sur la glace",
@@ -771,7 +841,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -800,7 +870,12 @@
       "items": {
         "Air Form": {
           "name": "Corps d'air",
-          "description": "<p>L’élémentaire peut entrer dans l’espace d’une créature hostile et s’y arrêter. Il peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>"
+          "description": "<p>L’élémentaire peut entrer dans l’espace d’une créature hostile et s’y arrêter. Il peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>",
+          "effects": {
+            "Air Form": {
+              "name": "Corps d'air"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -825,11 +900,11 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -853,7 +928,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Acid Breath": {
           "name": "Souffle d'acide",
@@ -886,7 +966,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -915,7 +995,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -944,7 +1029,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -963,7 +1048,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Tail": {
           "name": "Queue",
@@ -978,6 +1068,11 @@
             "Fire Breath": {
               "name": "Souffle de feu"
             },
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
+          },
+          "effects": {
             "Sleep Breath": {
               "name": "Souffle soporifique"
             }
@@ -1013,11 +1108,11 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1041,7 +1136,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -1091,7 +1191,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -1111,7 +1211,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -1145,6 +1250,11 @@
             "Slowing Breath": {
               "name": "Souffle engourdissant"
             }
+          },
+          "effects": {
+            "Slowed": {
+              "name": "Ralenti"
+            }
           }
         }
       },
@@ -1155,11 +1265,11 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1183,7 +1293,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -1195,6 +1310,11 @@
             },
             "Weakening Breath": {
               "name": "Souffle affaiblissant"
+            }
+          },
+          "effects": {
+            "Weakened": {
+              "name": "Affaibli"
             }
           }
         },
@@ -1228,11 +1348,11 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1256,7 +1376,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Poison Breath": {
           "name": "Souffle empoisonné",
@@ -1306,7 +1431,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Fire Breath": {
           "name": "Souffle de feu",
@@ -1315,7 +1445,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1348,7 +1478,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1372,7 +1502,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>[[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -1382,6 +1517,11 @@
             "Cold Breath": {
               "name": "Souffle glacial"
             },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          },
+          "effects": {
             "Paralyzing Breath": {
               "name": "Souffle paralysant"
             }
@@ -1439,7 +1579,12 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par le dragon dans un rayon de 36 m de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante du dragon pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Ice Walk": {
           "name": "Marche sur la glace",
@@ -1452,7 +1597,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1526,7 +1671,12 @@
         },
         "Cast a Spell": {
           "name": "Incantation",
-          "description": "<p>Le sphinx lance un sort de sa liste de sorts préparés, en dépensant un emplacement si nécessaire.</p>"
+          "description": "<p>Le sphinx lance un sort de sa liste de sorts préparés, en dépensant un emplacement si nécessaire.</p>",
+          "activities": {
+            "Cast Spell": {
+              "name": "Lancer un sort"
+            }
+          }
         },
         "Sacred Flame": {
           "name": "Flamme sacrée",
@@ -1593,6 +1743,9 @@
           "name": "Festin des héros",
           "description": "<p>Un grand festin se matérialise à votre incantation, garni de mets et de boissons fabuleux. Il faut 1 heure pour ingérer ce festin, tous les plats disparaissant à l’issue de cet intervalle. Les bénéfices ne se font pas sentir avant la fin de l’heure. Choisissez jusqu’à douze créatures qui peuvent participer au banquet.</p><p>Une créature qui a figuré parmi les convives reçoit plusieurs bénéfices. Elle est guérie de toute maladie et tout empoisonnement, se retrouve immunisée contre le poison et l’état &Reference[frightened], et effectue tous ses jets de sauvegarde de Sagesse avec l<strong>’avantage</strong>. Son maximum de points de vie augmente en outre de 2d10 et elle reçoit le même nombre de points de vie. Ces bénéfices persistent pendant 24 heures.</p>",
           "materials": "un vase incrusté de gemmes d'une valeur minimale de 1 000 po, que le sort détruit"
+        },
+        "Legendary Actions": {
+          "name": "Actions Légendaires"
         }
       },
       "languages": "sphinx",
@@ -1609,7 +1762,7 @@
         },
         "False Appearance": {
           "name": "Faux-semblant",
-          "description": "<p>Tant que l’armure reste immobile, on ne peut la distinguer d’une armure normale.</p>"
+          "description": "<p>Tant que le [[lookup @name lowercase]]{monstre} reste immobile, on ne peut la distinguer d'une armure normale.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1889,12 +2042,22 @@
         },
         "Shortsword": {
           "name": "Épée courte",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 +3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=dnd5eactivity100]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>"
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 +3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=dnd5eactivity100]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Light Crossbow": {
           "name": "Arbalète légère",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 24/96 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=qt3tGFCRiYgaiWQ3]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Arbalète légère.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Arbalète légère.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "languages": "deux autres au choix",
@@ -1907,7 +2070,12 @@
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
           "description": "<p>L'avatar peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Déplacement intangible.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Déplacement intangible.</p>",
+          "effects": {
+            "Incorporeal Movement": {
+              "name": "Déplacement intangible"
+            }
+          }
         },
         "Turn Immunity": {
           "name": "Immunité contre le renvoi",
@@ -2038,7 +2206,12 @@
         "Fire Aura": {
           "name": "Aura de feu",
           "description": "<p>Au début de chacun des tours du balor, chaque créature dans un rayon de 1,50 m de lui subit 10 ([[/damage]]{3d6}) dégâts de feu, et les objets inflammables de la zone qui ne sont portés par personne s'embrasent. Une créature qui touche le balor, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit 10 ([[/damage]]{3d6}) dégâts de feu.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Aura de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Aura de feu.</p>",
+          "activities": {
+            "Start of Turn Damage": {
+              "name": "Dégâts de début de tour"
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -2152,6 +2325,9 @@
           "name": "Jet de flammes",
           "description": "<p><em>Attaque de sort à distance :</em> [[/attack]], portée 45 m, une cible. <em>Touché :</em> 10 ([[/damage]]{3d6}) dégâts de feu. Si la cible est un objet inflammable qui n'est porté par personne, elle prend également feu.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Jet de flammes.</p>"
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable",
@@ -2179,7 +2355,12 @@
       "items": {
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>La [[lookup @name]] ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>"
+          "description": "<p>La [[lookup @name]] ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>",
+          "effects": {
+            "Echolocation": {
+              "name": "Écholocalisation"
+            }
+          }
         },
         "Keen Hearing": {
           "name": "Ouïe aiguisée",
@@ -2208,7 +2389,12 @@
         "Beard": {
           "name": "Barbe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Ainsi empoisonnée, la cible ne peut pas récupérer de points de vie. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Barbe.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Barbe.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Glaive": {
           "name": "Coutille",
@@ -2218,6 +2404,9 @@
         "Multiattack": {
           "name": "Attaques multiples",
           "description": "<p>Le diable effectue deux attaques : une de [[/item .ndwCjJFBLTujojCl]]{Barbe} et une de [[/item .RgZ4lGrNf9AaIyrG]]{Coutille}.</p>"
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable",
@@ -2248,7 +2437,12 @@
         "Swallow": {
           "name": "Engloutissement",
           "description": "<p>Le béhir effectue une attaque de Morsure contre une cible de taille M ou inférieure qu'il agrippe. Si l'attaque touche, la cible est engloutie et n'est plus agrippée. La cible engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du béhir et subit 21 (6d6) dégâts d'acide au début de chacun des tours du monstre. Le béhir ne peut pas engloutir plus d'une créature à la fois.</p><p>Si le béhir subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 14 à la fin du tour concerné sous peine de régurgiter la créature, qui se retrouve à terre dans un espace situé à 3 m ou moins du monstre. Si le béhir meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -2263,11 +2457,14 @@
         },
         "Reckless": {
           "name": "Téméraire",
-          "description": "<p>Au début de son tour, le berserker peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>",
+          "description": "<p>Au début de son tour, le [[lookup @name lowercase]]{monstre} peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>",
           "effects": {
             "Reckless": {
               "name": "Téméraire",
               "description": "<p>Les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>"
+            },
+            "mc0qfRRq1rZXrJbi": {
+              "name": "Téméraire"
             }
           }
         },
@@ -2317,7 +2514,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -2448,7 +2645,12 @@
         "Sting": {
           "name": "Dard",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d8 + 4}) dégâts perforants plus 17 ([[/damage]]{5d6}) dégâts de poison, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Devil Sight": {
           "name": "Vision du diable",
@@ -2485,6 +2687,11 @@
             "Sleep Breath": {
               "name": "Souffle soporifique"
             }
+          },
+          "effects": {
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
           }
         }
       },
@@ -2495,7 +2702,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -2557,7 +2764,7 @@
         },
         "Brute": {
           "name": "Brutalité",
-          "description": "<p>Lorsque le [[lookup @name]] touche sa cible avec une arme de corps à corps, il lui inflige un dé supplémentaire de dégâts (inclus dans l’attaque).</p>"
+          "description": "<p>Lorsque le [[lookup @name lowercase]]{monstre} touche sa cible avec une arme de corps à corps, il lui inflige un dé supplémentaire de dégâts (inclus dans l'attaque).</p>"
         },
         "Hide Armor": {
           "name": "Armure de peaux",
@@ -2667,7 +2874,12 @@
         "Unnerving Mask": {
           "name": "Masque bouleversant",
           "description": "<p>Lorsqu'une créature que le diable voit commence son tour dans un rayon de 9 m de celui-ci, le diable peut se donner l'apparence illusoire d'un proche défunt de la créature ou d'un de ses ennemis jurés. Si la créature voit le diable, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être effrayée jusqu'à la fin de son tour.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Masque bouleversant.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Masque bouleversant.</p>",
+          "activities": {
+            "Create Illusion": {
+              "name": "Créer une illusion"
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -2680,7 +2892,15 @@
         "Animate Chains": {
           "name": "Chaînes animées",
           "description": "<p>Un maximum de quatre chaînes visibles du diable dans un rayon de 18 m se dotent magiquement de barbelures tranchantes et s’animent sous le contrôle du diable, à condition qu’elles ne soient portées par personne. Chacune de ces chaînes animées est un objet doté d’une CA de 20, de 20 points de vie, de la résistance aux dégâts perforants et de l’immunité contre les dégâts psychiques et de tonnerre. Lorsque le diable recourt à Attaques multiples à son tour, il peut se servir de chacune de ces chaînes animées pour effectuer une attaque de Chaîne supplémentaire. Une chaîne animée peut agripper individuellement une créature, mais ne peut pas effectuer d’attaques quand elle agrippe. Une chaîne animée redevient inerte si elle tombe à 0 point de vie, ou si le diable est &Reference[incapacitated] ou mort.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Chaînes animées.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Chaînes animées.</p>",
+          "activities": {
+            "Animate Chains": {
+              "name": "Chaînes animées"
+            }
+          }
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable",
@@ -2729,11 +2949,16 @@
         "Tentacles": {
           "name": "Tentacules",
           "description": "<p>Une créature agrippée par le cthuul doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Jusqu'à la fin de l'empoisonnement, la cible est &Reference[paralyzed]{paralysée}. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Tentacules.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Tentacules.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -2768,7 +2993,17 @@
         "Berserk": {
           "name": "Folie furieuse",
           "description": "<p>Chaque fois que le golem commence son tour avec 60 points de vie ou moins, lancez un [[/r d6]]. Sur un résultat de 6, il devient fou. À chacun de ses tours tant qu'il est dans cet état, le golem attaque la créature la plus proche qu'il voit. Si aucune créature n'est assez proche pour qu'il puisse se déplacer et l'attaquer, le golem s'en prend à un objet, de préférence plus petit que lui. Une fois le golem fou furieux, il continue d'agir ainsi jusqu'à ce qu'il soit détruit ou qu'il ait récupéré tous ses points de vie.</p>",
-          "chat": "<p>[[lookup @name]] utilise Folie furieuse.</p>"
+          "chat": "<p>[[lookup @name]] utilise Folie furieuse.</p>",
+          "activities": {
+            "Go Berserk": {
+              "roll": "Test Folie furieuse"
+            }
+          },
+          "effects": {
+            "Berserk": {
+              "name": "Folie furieuse"
+            }
+          }
         },
         "Immutable Form": {
           "name": "Forme immuable",
@@ -2800,7 +3035,7 @@
         },
         "Damage Transfer": {
           "name": "Transfert de dégâts",
-          "description": "<p>Tant qu’il est fixé sur une créature, le [[lookup @name]] ne subit que la moitié des dégâts qu’on lui inflige (arrondir à l’inférieur) et la créature subit l’autre moitié.</p>"
+          "description": "<p>Tant qu'il est fixé sur une créature, le [[lookup @name lowercase]]{monstre} ne subit que la moitié des dégâts qu'on lui inflige (arrondir à l'inférieur) et la créature subit l'autre moitié.</p>"
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -2965,6 +3200,11 @@
             "Slowing Breath": {
               "name": "Souffle engourdissant"
             }
+          },
+          "effects": {
+            "Slowed": {
+              "name": "Ralenti"
+            }
           }
         }
       },
@@ -2976,7 +3216,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 8 ([[/damage]]{1d6 + 5}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 24 heures. Jusqu'à la fin de l'empoisonnement, la cible est &Reference[unconscious apply=false]{inconsciente}. Une autre créature peut consacrer une action à réveiller la cible énergiquement.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Constrict": {
           "name": "Constriction",
@@ -3082,7 +3327,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         }
       },
       "habitat": "Côtier",
@@ -3204,7 +3449,12 @@
       "items": {
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>La [[lookup @name]] ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>"
+          "description": "<p>La [[lookup @name]] ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>",
+          "effects": {
+            "Echolocation": {
+              "name": "Écholocalisation"
+            }
+          }
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -3218,7 +3468,12 @@
         "Darkness Aura": {
           "name": "Aura de ténèbres",
           "description": "<p>Des ténèbres magiques de 4,50 m de rayon émanent de la [[lookup @name]], se déplacent avec elle et contournent les angles. Ces ténèbres persistent tant que la [[lookup @name]] maintient sa concentration (comme pour un sort), jusqu’à un maximum de 10 minutes. La vision dans le noir ne perce pas ces ténèbres et aucune lumière naturelle ne peut les chasser. Si tout ou partie de ces ténèbres chevauche la zone d’effet d’une lumière créée par un sort du 2e niveau ou inférieur, l’effet qui produit cette lueur est dissipé.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Aura de ténèbres.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Aura de ténèbres.</p>",
+          "effects": {
+            "Darkness Aura": {
+              "name": "Aura de ténèbres"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -3271,7 +3526,17 @@
         "Poisoned Dart": {
           "name": "Fléchette empoisonnée",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/36 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Fléchette empoisonnée.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Fléchette empoisonnée.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          },
+          "effects": {
+            "Poisoned": {
+              "name": "Empoisonné"
+            }
+          }
         },
         "Nondetection": {
           "name": "Antidétection",
@@ -3382,7 +3647,7 @@
       "items": {
         "Elemental Demise": {
           "name": "Trépas élémentaire",
-          "description": "<p>Si le [[lookup @name]] meurt, son corps se désintègre en douce brise pour ne laisser dans son sillage que l’équipement qu’il portait.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} meurt, son corps se désintègre en douce brise pour ne laisser dans son sillage que l'équipement qu'il portait.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -3491,7 +3756,12 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le doppelganger peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Change Appearance": {
+              "name": "Changement d'aspect"
+            }
+          }
         }
       },
       "subtype": "Métamorphe",
@@ -3515,7 +3785,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]]-tortue peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -3564,7 +3834,12 @@
         "Fetid Cloud": {
           "name": "Nuage fétide",
           "description": "<p>Un immonde nuage de vapeurs vertes et toxiques s'étend sur un rayon de 3 m autour du dretch. Le gaz contourne les angles et sa zone est à visibilité réduite. Il persiste pendant 1 minute, mais prend fin si un vent fort le disperse. Une créature qui commence son tour dans cette zone doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'au début de son tour suivant. Tant qu'elle est ainsi empoisonnée, la cible ne peut jouer aucune réaction et n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Nuage fétide.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Nuage fétide.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "subtype": "Démon",
@@ -3654,7 +3929,12 @@
         "Hand Crossbow": {
           "name": "Arbalète de poing",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/36 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde échoue d'au moins 5, la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière. Elle reprend conscience si elle subit des dégâts ou si une autre créature consacre une action à la secouer.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Arbalète de poing.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Arbalète de poing.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Chain Shirt": {
           "name": "Chemise de mailles",
@@ -3799,7 +4079,12 @@
         "Fey Charm": {
           "name": "Charme féerique",
           "description": "<p>La dryade cible un humanoïde ou une bête qu'elle voit dans un rayon de 9 m. Si la cible voit la dryade, elle doit réussir un jet de sauvegarde de[[/save]] sous peine d'être magiquement &Reference[charmed]{charmée}. Ainsi charmée, la créature considère la dryade comme une amie fidèle qu'elle doit écouter et protéger. Bien que la cible ne soit pas sous le contrôle de la dryade, elle accorde la plus grande considération à tout ce qu'elle lui demande et à tout ce qu'elle fait.</p><p>Chaque fois que la dryade ou l'un de ses alliés nuit directement à la cible, celle-ci peut réitérer le jet de sauvegarde et met un terme à l'effet sur elle-même en cas de réussite. Sans cela, l'effet dure 24 heures sauf si la dryade meurt, se trouve sur un plan d'existence différent de celui de la cible ou met un terme à l'effet par une action bonus. Si la cible réussit l'un de ces JS, elle est immunisée contre le Charme féerique de la dryade pendant 24 heures.</p><p>La dryade ne peut pas avoir simultanément plus d'un humanoïde ou plus de trois bêtes sous son charme.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Charme féerique.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Charme féerique.</p>",
+          "effects": {
+            "Fey Charm": {
+              "name": "Charme féerique"
+            }
+          }
         },
         "Entangle": {
           "name": "Enchevêtrement",
@@ -3859,7 +4144,12 @@
         },
         "Enlarge": {
           "name": "Agrandissement",
-          "description": "<p>Pendant 1 minute, le [[lookup @name]] augmente magiquement sa taille, ainsi que celle de tout ce qu’il porte. Ainsi agrandi, le [[lookup @name]] est de taille G, double ses dés de dégâts sur les attaques d’arme basées sur la Force (incluses dans les attaques) et elle est<strong> avantagé</strong> aux tests de Force et aux jets de sauvegarde de Force. Si le [[lookup @name]] n’a pas la place pour devenir de taille G, il atteint la taille maximale possible en fonction de l’espace disponible.</p>"
+          "description": "<p>Pendant 1 minute, le [[lookup @name]] augmente magiquement sa taille, ainsi que celle de tout ce qu’il porte. Ainsi agrandi, le [[lookup @name]] est de taille G, double ses dés de dégâts sur les attaques d’arme basées sur la Force (incluses dans les attaques) et elle est<strong> avantagé</strong> aux tests de Force et aux jets de sauvegarde de Force. Si le [[lookup @name]] n’a pas la place pour devenir de taille G, il atteint la taille maximale possible en fonction de l’espace disponible.</p>",
+          "effects": {
+            "Enlarged": {
+              "name": "Agrandissement"
+            }
+          }
         },
         "War Pick": {
           "name": "Pic de guerre",
@@ -3874,7 +4164,17 @@
         "Invisibility": {
           "name": "Invisibilité",
           "description": "<p>Pendant un maximum de 1 heure, le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque, qu’il lance un sort, qu’il recoure à Agrandissement ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
+          "activities": {
+            "Become Invisible": {
+              "name": "Devenir invisible"
+            }
+          },
+          "effects": {
+            "Invisible": {
+              "name": "Invisible"
+            }
+          }
         }
       },
       "subtype": "Nain",
@@ -3937,7 +4237,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>L’élémentaire inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -4103,7 +4403,12 @@
         "Longbow": {
           "name": "Arc long",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 45/180 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts perforants plus 13 ([[/damage]]{3d8}) dégâts de poison, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. L'empoisonnement persiste jusqu'à ce que le sort restauration partielle ou une magie comparable l'élimine.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Arc long.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Arc long.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -4122,7 +4427,7 @@
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu’il est en contact avec une toile, l’[[lookup @name]] connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
+          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -4135,7 +4440,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. La créature ciblée doit réussir un jet de sauvegarde de Constitution DD 11 sous peine d'être empoisonnée pendant 1 minute. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Claws": {
           "name": "Griffes",
@@ -4160,7 +4470,7 @@
         },
         "Wakeful": {
           "name": "Sommeil léger",
-          "description": "<p>Quand l’une des têtes de l’[[lookup @name]] dort, l’autre reste éveillée.</p>"
+          "description": "<p>Quand l'une des têtes du [[lookup @name lowercase]]{monstre} dort, l'autre reste éveillée.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -4186,7 +4496,12 @@
         "Fire Form": {
           "name": "Corps de feu",
           "description": "<p>L'élémentaire peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir se faufiler. Une créature qui touche l'élémentaire, que ce soit directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit 5 ([[/damage]]{1d10}) dégâts de feu. De plus, l'élémentaire peut entrer dans l'espace d'une créature hostile et s'y arrêter. La première fois d'un tour qu'il entre dans l'espace d'une créature, celle-ci subit 5 ([[/damage]]{1d10}) dégâts de feu et s'embrase ; tant que personne n'a consacré une action à étouffer les flammes, la cible subit 5 ([[/damage]]{1d10}) dégâts de feu au début de chacun de ses tours.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Corps de feu.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Corps de feu.</p>",
+          "effects": {
+            "Fire Form": {
+              "name": "Corps de feu"
+            }
+          }
         },
         "Illumination": {
           "name": "Illumination",
@@ -4240,12 +4555,27 @@
         "Berserk": {
           "name": "Folie furieuse",
           "description": "<p>Chaque fois que le golem commence son tour avec 40 points de vie ou moins, lancez un [[/r d6]]. Sur un résultat de 6, il devient fou. À chacun de ses tours tant qu'il est dans cet état, le golem attaque la créature la plus proche qu'il voit. Si aucune créature n'est assez proche pour qu'il puisse se déplacer et l'attaquer, le golem s'en prend à un objet, de préférence plus petit que lui. Une fois le golem fou furieux, il continue d'agir ainsi jusqu'à ce qu'il soit détruit ou qu'il ait récupéré tous ses points de vie.</p><p>Le créateur du golem, s'il se trouve dans un rayon de 18 m de l'artificiel fou furieux, peut tenter de l'apaiser par des paroles fermes et convaincantes. Pour ce faire, le golem doit entendre son créateur qui doit consacrer une action à effectuer un test de [[/check]]. Si le test est réussi, la folie destructrice du golem cesse. S'il subit des dégâts alors qu'il a toujours 40 points de vie ou moins, le golem risque de sombrer à nouveau dans sa folie furieuse.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Folie furieuse.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Folie furieuse.</p>",
+          "activities": {
+            "Go Berserk": {
+              "roll": "Test Folie furieuse"
+            }
+          },
+          "effects": {
+            "Berserk": {
+              "name": "Folie furieuse"
+            }
+          }
         },
         "Aversion of Fire": {
           "name": "Aversion du feu",
           "description": "<p>Si le golem subit des dégâts de feu, il est désavantagé aux jets d'attaque et tests de caractéristique jusqu'à la fin de son tour suivant.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Aversion du feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Aversion du feu.</p>",
+          "effects": {
+            "Aversion of Fire": {
+              "name": "Aversion du feu"
+            }
+          }
         },
         "Immutable Form": {
           "name": "Forme immuable",
@@ -4318,7 +4648,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -4403,6 +4733,11 @@
             "Escape Check": {
               "name": "Test d'évasion"
             }
+          },
+          "effects": {
+            "Engulfed": {
+              "name": "Englouti"
+            }
           }
         }
       },
@@ -4430,7 +4765,12 @@
         "Claws": {
           "name": "Griffes",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être paralysée pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>",
+          "effects": {
+            "Paralysis": {
+              "name": "Paralysie"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -4446,7 +4786,12 @@
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
           "description": "<p>Le fantôme peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>",
+          "effects": {
+            "Incorporeal Movement": {
+              "name": "Déplacement intangible"
+            }
+          }
         },
         "Withering Touch": {
           "name": "Contact flétrissant",
@@ -4483,7 +4828,12 @@
         "Claws": {
           "name": "Griffes",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un elfe ou un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être paralysée pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>",
+          "effects": {
+            "Paralysis": {
+              "name": "Paralysie"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -4540,7 +4890,12 @@
       "items": {
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>La chauve-souris ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>"
+          "description": "<p>La chauve-souris ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>",
+          "effects": {
+            "Echolocation": {
+              "name": "Écholocalisation"
+            }
+          }
         },
         "Keen Hearing": {
           "name": "Ouïe aiguisée",
@@ -4583,7 +4938,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -4611,7 +4971,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le crabe peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Claw": {
           "name": "Pince",
@@ -4720,7 +5080,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La grenouille peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -4734,7 +5094,12 @@
         "Swallow": {
           "name": "Engloutissement",
           "description": "<p>La grenouille effectue une attaque de Morsure contre une cible de taille P ou inférieure qu'elle agrippe. Si l'attaque touche, la cible est également engloutie et n'est plus agrippée. La cible engloutie est &Reference[blinded]{aveuglée} et &Reference[restrained]{entravée}, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur de la grenouille et subit 5 ([[/damage]]{2d4}) dégâts d'acide au début de chacun des tours de la grenouille. La grenouille ne peut pas engloutir plus d'une cible à la fois.</p><p>Si la grenouille meurt, la créature engloutie n'est plus entravée par elle et peut s'en extraire en dépensant 1,50 m de déplacement pour se retrouver &Reference[prone]{à terre} près du cadavre.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Engloutissement.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Engloutissement.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -4802,12 +5167,17 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>La pieuvre ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
           "description": "<p>Un nuage d’encre de 6 m de rayon entoure la pieuvre si elle est sous l’eau. La zone est à visibilité nulle pendant 1 minute, mais un courant important peut disperser le nuage. Après avoir libéré son encre, la pieuvre peut entreprendre l’action Foncer par une action bonus.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Nuage d’encre.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Nuage d’encre.</p>",
+          "activities": {
+            "Dash": {
+              "name": "Pointe"
+            }
+          }
         },
         "Tentacles": {
           "name": "Tentacules",
@@ -4845,7 +5215,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d4 + 4}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -4906,7 +5281,12 @@
         "Sting": {
           "name": "Dard",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 22 ([[/damage activity=dnd5eactivity100]]{4d10}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Désert",
@@ -4922,7 +5302,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>L’hippocampe ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Ram": {
           "name": "Coup de bélier",
@@ -4942,7 +5322,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -4962,7 +5342,7 @@
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu’elle reste au contact d’une toile, l’araignée connaît la position exacte de toute autre créature en contact avec la même toile.</p>"
+          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -4971,7 +5351,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] ; elle subit 9 ([[/damage activity=dnd5eactivity100]]{2d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l’état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Web": {
           "name": "Toile d'araignée",
@@ -4987,7 +5372,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le crapaud peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -5001,7 +5386,12 @@
         "Swallow": {
           "name": "Engloutissement",
           "description": "<p>Le crapaud effectue une attaque de Morsure contre une cible de taille M ou inférieure qu'il agrippe. Si l'attaque touche, la cible est également engloutie et n'est plus agrippée. La cible engloutie est &Reference[blinded]{aveuglée} et &Reference[restrained]{entravée}, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du crapaud et subit 10 ([[/damage]]{3d6}) dégâts d'acide au début de chacun des tours du crapaud. Le crapaud ne peut pas engloutir plus d'une cible à la fois. Si le crapaud meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 1,50 m de déplacement pour se retrouver &Reference[prone]{à terre} près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -5043,7 +5433,12 @@
         "Sting": {
           "name": "Dard",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Dard.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Dard.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -5075,11 +5470,16 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 7 ([[/damage activity=dnd5eactivity100]]{2d6}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu’elle reste au contact d’une toile, l’araignée connaît la position exacte de toute autre créature en contact avec la même toile.</p>"
+          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -5095,12 +5495,22 @@
         "Aberrant Ground": {
           "name": "Sol aberrant",
           "description": "<p>Le sol dans un rayon de 3 m du babélien se présente comme une pâte qui constitue un terrain difficile. Toute créature qui commence son tour dans cette zone doit réussir un jet de sauvegarde de [[/save]] sous peine de voir sa vitesse réduite à 0 jusqu'au début de son tour suivant.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Sol aberrant.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Sol aberrant.</p>",
+          "effects": {
+            "Aberrant Ground": {
+              "name": "Sol aberrant"
+            }
+          }
         },
         "Gibbering": {
           "name": "Charabia",
           "description": "<p>Le babélien bredouille de façon incohérente tant qu'il voit une créature et qu'il n’est pas &Reference[incapacitated]{neutralisé}. Toute créature qui commence son tour dans un rayon de 6 m du monstre et entend son charabia effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature ne peut pas jouer de réaction jusqu'au début de son tour suivant et elle lance un [[/r d8]] pour déterminer ce qu'elle fait pour le tour. Sur un résultat de 1 à 4, elle ne fait rien. De 5 à 6, la créature n'entreprend pas d'action ni d'action bonus et consacre tout son déplacement dans une direction aléatoire. De 7 à 8, la créature effectue une attaque de corps à corps contre une créature déterminée aléatoirement à portée d'allonge (elle ne fait rien si une telle attaque n'est pas possible).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charabia.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charabia.</p>",
+          "effects": {
+            "Gibbering": {
+              "name": "Charabia"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -5114,7 +5524,12 @@
         "Blinding Spittle": {
           "name": "Crachat aveuglant",
           "description": "<p>Le babélien expectore un amas chimique en un point qu'il voit dans un rayon de 4,50 m. L'amas explose à l'impact dans un éclat de lumière aveuglante. Chaque créature située dans un rayon de 1,50 m de l'éclat doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} jusqu'à la fin du tour suivant du babélien.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Crachat aveuglant.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Crachat aveuglant.</p>",
+          "effects": {
+            "Blinding Spittle": {
+              "name": "Crachat aveuglant"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -5193,7 +5608,7 @@
         },
         "Brute": {
           "name": "Brutalité",
-          "description": "<p>Lorsque le [[lookup @name]] touche avec un arme de corps à corps, il inflige un dé supplémentaire de dégâts (inclus dans l’attaque).</p><p></p>"
+          "description": "<p>Lorsque le [[lookup @name lowercase]]{monstre} touche sa cible avec une arme de corps à corps, il lui inflige un dé supplémentaire de dégâts (inclus dans l'attaque).</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -5288,7 +5703,15 @@
         },
         "Nimble Escape": {
           "name": "Fuite agile",
-          "description": "<p>Le [[lookup @name]] peut entreprendre l’action Se cacher ou Se désengager par une action bonus à chacun de ses tours.</p>"
+          "description": "<p>Le [[lookup @name]] peut entreprendre l’action Se cacher ou Se désengager par une action bonus à chacun de ses tours.</p>",
+          "activities": {
+            "Hide": {
+              "name": "Furtivité"
+            },
+            "Disengage": {
+              "name": "Désengagement"
+            }
+          }
         },
         "Scimitar": {
           "name": "Cimeterre",
@@ -5310,7 +5733,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -5327,6 +5750,11 @@
             },
             "Weakening Breath": {
               "name": "Souffle affaiblissant"
+            }
+          },
+          "effects": {
+            "Weakened": {
+              "name": "Affaibli"
             }
           }
         }
@@ -5401,7 +5829,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -5411,7 +5839,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La guenaude peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -5434,7 +5862,17 @@
         "Invisible Passage": {
           "name": "Passage dans l'invisible",
           "description": "<p>La guenaude devient magiquement &Reference[invisible] jusqu’à ce qu’elle attaque ou que sa concentration soit rompue (comme pour un sort). Tant qu’elle est invisible, elle ne laisse aucune trace physique de son passage, si bien que seule la magie peut la pister. Tout l’équipement porté par elle est invisible.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Passage dans l’invisible.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Passage dans l’invisible.</p>",
+          "activities": {
+            "Become Invisible": {
+              "name": "Devenir invisible"
+            }
+          },
+          "effects": {
+            "Invisible Passage": {
+              "name": "Passage dans l'invisible"
+            }
+          }
         },
         "Dancing Lights": {
           "name": "Lumières dansantes",
@@ -5567,12 +6005,22 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 8 ([[/damage]]{1d8 + 4}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 45 ([[/damage activity=dnd5eactivity100]]{10d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Spit Poison": {
           "name": "Crachat empoisonné",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 4,50/9 m, une créature. <em>Touché :</em> La cible effectue un jet de sauvegarde de [[/save]] et subit 45 ([[/damage]]{10d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Crachat empoisonné.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Crachat empoisonné.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Mending": {
           "name": "Réparation",
@@ -5681,7 +6129,12 @@
         },
         "Cast a Spell": {
           "name": "Incantation",
-          "description": "<p>La sphinge lance un sort de sa liste de sorts préparés, en dépensant un emplacement si nécessaire.</p>"
+          "description": "<p>La sphinge lance un sort de sa liste de sorts préparés, en dépensant un emplacement si nécessaire.</p>",
+          "activities": {
+            "Cast Spell": {
+              "name": "Lancer un sort"
+            }
+          }
         },
         "Mage Hand": {
           "name": "Main du mage",
@@ -5756,6 +6209,9 @@
           "name": "Mythes et légendes",
           "description": "<p>Vous nommez ou décrivez une personne, un lieu ou un objet. Le sort vous fait prendre brièvement conscience d’un fait important concernant l’élément mentionné. Cette bribe de savoir peut consister en des connaissances actuelles, des histoires oubliées du passé, voire quelque secret toujours resté méconnu. Si l’élément mentionné n’a rien de légendaire, vous n’obtenez aucune information. Plus vous en savez déjà sur l’élément, plus précises et détaillées seront les informations transmises.</p><p>Les détails reçus sont exacts, mais parfois formulés figurativement. Si vous avez par exemple une mystérieuse hache magique en main, le sort pourrait vous livrer les informations suivantes : « Gare au scélérat dont la main touche la hache, car son manche suffit à entailler les perfides. Seul un véritable Enfant de la pierre, fidèle de Moradin, peut révéler les vrais pouvoirs de la hache, à condition de porter Rudnogg sur les lèvres. »</p>",
           "materials": "de l'encens d'une valeur minimale de 250 po, que le sort détruit, et quatre lamelles d'ivoire d'une valeur minimale de 50 po chacune"
+        },
+        "Legendary Actions": {
+          "name": "Actions Légendaires"
         }
       },
       "languages": "sphinx",
@@ -5875,7 +6331,12 @@
         "Stench": {
           "name": "Puanteur",
           "description": "<p>Une créature qui commence son tour dans un rayon de 3 m de l'hezrou doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'au début de son tour suivant. Si le jet de sauvegarde est réussi, elle est immunisée contre la puanteur de l'hezrou pendant 24 heures.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Puanteur.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Puanteur.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -5978,11 +6439,21 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Si le jet de sauvegarde échoue d'au moins 5, l'empoisonnement dure en fait 5 ([[/r 1d10]]) minutes et la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          },
+          "effects": {
+            "Poisoned": {
+              "name": "Empoisonné"
+            }
+          }
         },
         "Telepathic Bond": {
           "name": "Lien télépathique",
-          "description": "<p>Tant que son maître et lui sont sur le même plan d’existence, l’[[lookup @name]] peut communiquer magiquement ce qu’il perçoit à son maître et les deux peuvent converser par télépathie.</p>"
+          "description": "<p>Tant que son maître et lui sont sur le même plan d'existence, le [[lookup @name lowercase]]{monstre} peut communiquer magiquement ce qu'il perçoit à son maître et les deux peuvent converser par télépathie.</p>"
         }
       },
       "languages": "comprend les langues de son créateur, mais ne parle pas",
@@ -6013,6 +6484,9 @@
           "name": "Jet de flammes",
           "description": "<p><em>Attaque de sort à distance :</em> [[/attack]], portée 45 m, une cible. <em>Touché :</em> 14 ([[/damage]]{4d6}) dégâts de feu. Si la cible est un objet inflammable qui n'est porté par personne, elle prend également feu.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Jet de flammes.</p>"
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable",
@@ -6027,7 +6501,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -6102,7 +6576,15 @@
         "Wall of Ice": {
           "name": "Mur de glace",
           "description": "<p>Le diable forme magiquement une paroi de glace opaque sur une surface solide qu'il voit dans un rayon de 18 m. Le mur, épais de 30 cm, peut atteindre jusqu'à 9 m de long et 3 m de hauteur, ou bien se présenter comme un dôme hémisphérique d'un diamètre maximal de 6 m.</p><p>À l'apparition du mur, toute créature située dans son espace en est expulsée par le chemin le plus court. La créature choisit de quel côté du mur elle termine, sauf si elle est neutralisée. Elle effectue alors un jet de sauvegarde de [[/save]] et subit 35 ([[/damage]]{10d6}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p>Le mur persiste pendant 1 minute, mais disparaît si le diable meurt ou est neutralisé. On peut endommager le mur et y faire une brèche ; chaque section de 3 m de côté est dotée d'une CA de 5, de 30 points de vie, de la vulnérabilité aux dégâts de feu et de l'immunité contre les dégâts d'acide, de froid, nécrotiques, psychiques et de poison. Une section détruite laisse une nappe d'air glacial dans l'espace qu'elle occupait. Chaque fois qu'une créature termine un tour durant lequel elle a traversé cette nappe, volontairement ou non, elle effectue un jet de sauvegarde de [[/save activity=1sgpSnbxz7JYshd3]] et subit 17 ([[/damage activity=1sgpSnbxz7JYshd3]]{5d6}) dégâts de froid en cas d'échec, la moitié en cas de réussite. La nappe d'air se dissipe quand le reste du mur disparaît.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Mur de glace.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Mur de glace.</p>",
+          "activities": {
+            "Create Wall of Ice": {
+              "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
+            },
+            "Create Dome of Ice": {
+              "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
+            }
+          }
         },
         "Tail": {
           "name": "Queue",
@@ -6117,6 +6599,9 @@
         "Multiattack": {
           "name": "Attaques multiples",
           "description": "<p>Le diable effectue trois attaques : une de [[/item .DV4KS0OE541vGOtI]]{Morsure}, une de [[/item .E6iXljYXLdQyfk1l]]{Griffes} et une de [[/item .AQ551xglVn90BdwU]]{Queue}.</p>"
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable",
@@ -6161,7 +6646,16 @@
       "items": {
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>Le [[lookup @name]] peut consacrer son action à se métamorphoser en bête sous forme de rat (vitesse 6 m), de corbeau (6 m, vol 18 m) ou d’araignée (6 m, escalade 6 m) ou à reprendre sa forme véritable. Son profil reste le même sous les deux formes, en dehors du changement de vitesse indiqué. Rien de ce qu’il porte n’est transformé. S’il meurt, il reprend sa forme véritable.</p>"
+          "description": "<p>Le [[lookup @name]] peut consacrer son action à se métamorphoser en bête sous forme de rat (vitesse 6 m), de corbeau (6 m, vol 18 m) ou d’araignée (6 m, escalade 6 m) ou à reprendre sa forme véritable. Son profil reste le même sous les deux formes, en dehors du changement de vitesse indiqué. Rien de ce qu’il porte n’est transformé. S’il meurt, il reprend sa forme véritable.</p>",
+          "activities": {
+            "Shapeshift": {
+              "profiles": {
+                "Rat": "Rat",
+                "Raven": "Corbeau",
+                "Spider": "Araignée"
+              }
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -6170,12 +6664,25 @@
         "Invisibility": {
           "name": "Invisibilité",
           "description": "<p>Le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
+          "activities": {
+            "Become Invisible": {
+              "name": "Devenir invisible"
+            }
+          },
+          "effects": {
+            "Invisibility": {
+              "name": "Invisibilité"
+            }
+          }
         },
         "Sting (Bite in Beast Form)": {
           "name": "Dard (Morsure sous forme de bête)",
           "chat": "<p>Le diablotin attaque avec son Dard. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5([[/damage]]{1d4 + 3}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>"
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable, Métamorphe",
@@ -6191,7 +6698,12 @@
         },
         "Invisibility": {
           "name": "Invisibilité",
-          "description": "<p>Le traqueur est &Reference[invisible].</p>"
+          "description": "<p>Le traqueur est &Reference[invisible].</p>",
+          "effects": {
+            "Invisibility": {
+              "name": "Invisibilité"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -6274,7 +6786,12 @@
       "items": {
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>L’[[lookup @name]] ne peut pas recourir à sa vision aveugle quand il est &Reference[deafened].</p>"
+          "description": "<p>L’[[lookup @name]] ne peut pas recourir à sa vision aveugle quand il est &Reference[deafened].</p>",
+          "effects": {
+            "Echolocation": {
+              "name": "Écholocalisation"
+            }
+          }
         },
         "Hold Breath": {
           "name": "Apnée",
@@ -6316,7 +6833,12 @@
         },
         "Leadership": {
           "name": "Commandement",
-          "description": "<p>Pendant 1 minute, le [[lookup @name]] peut prononcer une instruction ou mise en garde spéciale chaque fois qu’une créature non hostile qu’il voit dans un rayon de 9 m effectue un jet d’attaque ou un jet de sauvegarde. La créature peut alors ajouter un d4 à son jet, à condition d’entendre le [[lookup @name]] et de le comprendre. Une même créature ne peut profiter que d’un seul dé de Comman- dement à la fois. Cet effet prend fin si le [[lookup @name]] est &Reference[incapacitated].</p><p></p>"
+          "description": "<p>Pendant 1 minute, le [[lookup @name]] peut prononcer une instruction ou mise en garde spéciale chaque fois qu’une créature non hostile qu’il voit dans un rayon de 9 m effectue un jet d’attaque ou un jet de sauvegarde. La créature peut alors ajouter un d4 à son jet, à condition d’entendre le [[lookup @name]] et de le comprendre. Une même créature ne peut profiter que d’un seul dé de Comman- dement à la fois. Cet effet prend fin si le [[lookup @name]] est &Reference[incapacitated].</p><p></p>",
+          "effects": {
+            "Leadership": {
+              "name": "Commandement"
+            }
+          }
         },
         "Parry": {
           "name": "Parade",
@@ -6364,7 +6886,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Freedom of Movement": {
           "name": "Liberté de mouvement",
@@ -6373,7 +6895,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>Le [[lookup @name]] inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -6382,7 +6904,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure agrippée par le kraken, elle est engloutie et n'est plus agrippée. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du kraken et subit 42 (12d6) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le kraken subit 50 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 25 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins de lui. Si le kraken meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         },
         "Tentacle": {
           "name": "Tentacule",
@@ -6415,7 +6942,12 @@
         },
         "OKGAJSxcW9xQiwyj": {
           "name": "Tempête foudroyante",
-          "description": "<p>Le kraken recourt à [[/item .wVCkpBj5omvdfaMm]]{Tempête foudroyante}.</p>"
+          "description": "<p>Le kraken recourt à [[/item .wVCkpBj5omvdfaMm]]{Tempête foudroyante}.</p>",
+          "activities": {
+            "Call Lightning": {
+              "name": "Appel de la foudre"
+            }
+          }
         }
       },
       "subtype": "Titan",
@@ -6446,7 +6978,12 @@
         "Intoxicating Touch": {
           "name": "Contact enivrant",
           "description": "<p><em>Attaque de sort au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> La cible est magiquement maudite pendant 1 heure. Tant que la malédiction persiste, la cible est désavantagée aux jets de sauvegarde de Sagesse et à tous les tests de caractéristique.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Contact enivrant.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Contact enivrant.</p>",
+          "effects": {
+            "Intoxicating Touch": {
+              "name": "Contact enivrant"
+            }
+          }
         },
         "Major Image": {
           "name": "Image majeure",
@@ -6495,6 +7032,9 @@
           "name": "Poing",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 2 ([[/damage]]{1d4}) dégâts contondants.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Poing.</p>"
+        },
+        "Devil Sight": {
+          "name": "Vision du diable"
         }
       },
       "subtype": "Diable",
@@ -6515,7 +7055,12 @@
         "Frightening Gaze": {
           "name": "Regard horrifique",
           "description": "<p>La liche fixe son regard sur une créature qu'elle voit dans un rayon de 3 m. La cible doit réussir un jet de sauvegarde de Sagesse DD 18 contre cette magie sous peine d'être effrayée pendant 1 minute. La cible effrayée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la cible réussit la sauvegarde ou quand l'effet prend fin sur elle, elle est immunisée contre le Regard horrifique de la liche pendant 24 heures.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Regard horrifique.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Regard horrifique.</p>",
+          "effects": {
+            "Frightening Gaze": {
+              "name": "Regard horrifique"
+            }
+          }
         },
         "Disrupt Life": {
           "name": "Trouble vital",
@@ -6524,7 +7069,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si la [[lookup @name]] rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Rejuvenation": {
           "name": "Reconstitution",
@@ -6668,7 +7213,12 @@
         "KDSrdpdFPDKnh80y": {
           "description": "<p><em>Attaque de sort au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 10 ([[/damage]]{3d6}) dégâts de froid. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[paralyzed]{paralysée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "name": "Contact paralysant",
-          "chat": "<p>La liche attaque avec son Contact paralysant. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
+          "chat": "<p>La liche attaque avec son Contact paralysant. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "effects": {
+            "Paralysis": {
+              "name": "Paralysie"
+            }
+          }
         }
       },
       "languages": "5 autres langues",
@@ -6909,7 +7459,15 @@
         },
         "Ignited Illumination": {
           "name": "Illumination embrasée",
-          "description": "<p>Par une action bonus, le magmatique peut s'embraser ou éteindre ses flammes. Embrasé, le magmatique produit une lumière vive sur un rayon de 3 m et une lumière faible sur 3 m de plus.</p>"
+          "description": "<p>Par une action bonus, le magmatique peut s'embraser ou éteindre ses flammes. Embrasé, le magmatique produit une lumière vive sur un rayon de 3 m et une lumière faible sur 3 m de plus.</p>",
+          "effects": {
+            "Ablaze": {
+              "name": "Nimbée de flammes"
+            },
+            "Ignited Illumination": {
+              "name": "Illumination embrasée"
+            }
+          }
         },
         "Touch": {
           "name": "Contact",
@@ -7003,7 +7561,12 @@
         "Teleport": {
           "name": "Téléportation",
           "chat": "<p>La [[lookup @name]] utilise Téléportation.</p>",
-          "description": "<p>La marilith se téléporte magiquement d'un maximum de 36 m avec tout l'équipement qu'elle porte dans un espace inoccupé qu'elle voit.</p>"
+          "description": "<p>La marilith se téléporte magiquement d'un maximum de 36 m avec tout l'équipement qu'elle porte dans un espace inoccupé qu'elle voit.</p>",
+          "activities": {
+            "Teleport": {
+              "name": "Téléportation"
+            }
+          }
         },
         "Parry": {
           "name": "Parade",
@@ -7067,7 +7630,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le thalasséen peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Spear": {
           "name": "Lance",
@@ -7084,7 +7647,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -7159,7 +7722,12 @@
         },
         "Reckless": {
           "name": "Téméraire",
-          "description": "<p>Au début de son tour, le minotaure peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>"
+          "description": "<p>Au début de son tour, le [[lookup @name lowercase]]{monstre} peut s'octroyer l'avantage à tous ses jets d'attaque d'arme de corps à corps du tour, auquel cas tous les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>",
+          "effects": {
+            "Reckless": {
+              "name": "Téméraire"
+            }
+          }
         },
         "Greataxe": {
           "name": "Hache à deux mains",
@@ -7233,7 +7801,12 @@
         "Dreadful Glare": {
           "name": "Regard effroyable",
           "description": "<p>La momie cible une créature qu'elle voit dans un rayon de 18 m. Si la cible voit la momie, elle doit réussir un jet de sauvegarde de Sagesse DD 11 contre cette magie sous peine d'être effrayée jusqu'à la fin du tour suivant de la momie.</p><p>Si le jet de sauvegarde échoue de 5 ou plus, la cible est paralysée pour la même durée. Une cible qui se sauvegarde est immunisée contre le Regard effroyable de toutes les momies (mais pas des momies augustes) pendant 24 heures.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Regard effroyable.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Regard effroyable.</p>",
+          "effects": {
+            "Frightening Gaze": {
+              "name": "Regard horrifique"
+            }
+          }
         }
       },
       "languages": "celles qu'elle parlait de son vivant",
@@ -7282,7 +7855,12 @@
         "Dreadful Glare": {
           "name": "Regard effroyable",
           "description": "<p>La momie auguste cible une créature qu'elle voit dans un rayon de 18 m. Si la cible voit la momie auguste, elle doit réussir un jet de sauvegarde de Sagesse DD 16 contre cette magie sous peine d'être effrayée jusqu'à la fin du tour suivant de la momie.</p><p>Si le jet de sauvegarde échoue de 5 ou plus, la cible est paralysée pour la même durée. Une cible qui se sauvegarde est immunisée contre le Regard effroyable de toutes les momies et momies augustes pendant 24 heures.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Regard effroyable.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Regard effroyable.</p>",
+          "effects": {
+            "Frightening Gaze": {
+              "name": "Regard horrifique"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -7391,7 +7969,12 @@
         "Horror Nimbus": {
           "name": "Halo d'épouvante",
           "description": "<p>Le nalfeshnie projette magiquement une lumière multicolore qui scintille. Toute créature dans un rayon de 4,50 m du nalfeshnie, si elle voit la lumière, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre le Halo d'épouvante du nalfeshnie pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Halo d’épouvante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Halo d’épouvante.</p>",
+          "effects": {
+            "Horror Nimbus": {
+              "name": "Halo d'épouvante"
+            }
+          }
         },
         "Teleport": {
           "name": "Téléportation",
@@ -7424,7 +8007,12 @@
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>La guenaude se transforme magiquement en humanoïde féminin de taille M ou P de son choix, ou retrouve sa forme véritable. Son profil reste le même sous les deux formes. Rien de ce qu'elle porte n'est transformé. Elle reprend sa forme véritable si elle meurt.</p>"
+          "description": "<p>La guenaude se transforme magiquement en humanoïde féminin de taille M ou P de son choix, ou retrouve sa forme véritable. Son profil reste le même sous les deux formes. Rien de ce qu'elle porte n'est transformé. Elle reprend sa forme véritable si elle meurt.</p>",
+          "activities": {
+            "Transform": {
+              "name": "Transformer"
+            }
+          }
         },
         "Etherealness": {
           "name": "Forme éthérée",
@@ -7547,12 +8135,17 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>La [[lookup @name]] ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
           "description": "<p>Un nuage d’encre de 1,50 m de rayon entoure la [[lookup @name]] si elle est sous l’eau. La zone est à visibilité nulle pendant 1 minute, mais un courant important peut disperser le nuage. Après avoir libéré son encre, la [[lookup @name]] peut entreprendre l’action Foncer par une action bonus.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Nuage d’encre.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Nuage d’encre.</p>",
+          "activities": {
+            "Dash": {
+              "name": "Pointe"
+            }
+          }
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -7623,7 +8216,12 @@
         "Regeneration": {
           "name": "Régénération",
           "description": "<p>Au début de son tour, s'il a au moins 1 point de vie, l'oni récupère 10 points de vie.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Régénération.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Régénération.</p>",
+          "activities": {
+            "Regenerate": {
+              "name": "Régénération"
+            }
+          }
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -7631,7 +8229,12 @@
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>L'oni se transforme magiquement en humanoïde de taille M ou P de son choix, ou en géant de taille G, ou retrouve sa forme véritable. Hormis sa catégorie de taille, son profil reste le même, quelle que soit sa forme. La seule pièce d'équipement qui se transforme aussi est sa coutille, qui rapetisse pour qu'il puisse la manier sous forme humanoïde. Si l'oni meurt, il retrouve sa forme véritable et sa coutille reprend sa taille normale.</p>"
+          "description": "<p>L'oni se transforme magiquement en humanoïde de taille M ou P de son choix, ou en géant de taille G, ou retrouve sa forme véritable. Hormis sa catégorie de taille, son profil reste le même, quelle que soit sa forme. La seule pièce d'équipement qui se transforme aussi est sa coutille, qui rapetisse pour qu'il puisse la manier sous forme humanoïde. Si l'oni meurt, il retrouve sa forme véritable et sa coutille reprend sa taille normale.</p>",
+          "activities": {
+            "Transform": {
+              "name": "Transformer"
+            }
+          }
         },
         "Darkness": {
           "name": "Ténèbres",
@@ -7675,7 +8278,7 @@
         },
         "Aggressive": {
           "name": "Agressivité",
-          "description": "<p>Par une action bonus, l’[[lookup @name]] peut se déplacer de sa vitesse ou moins vers une créature hostile qu’il voit.</p>"
+          "description": "<p>Par une action bonus, le [[lookup @name lowercase]]{monstre} peut se déplacer de sa vitesse ou moins vers une créature hostile qu'il voit.</p>"
         },
         "Greataxe": {
           "name": "Hache à deux mains",
@@ -7812,7 +8415,7 @@
       "items": {
         "Ethereal Jaunt": {
           "name": "Saut éthéré",
-          "description": "<p>Par une action bonus, l'araignée peut passer magiquement du Plan Matériel au Plan Éthéré, ou inversement.</p>"
+          "description": "<p>Par une action bonus, le [[lookup @name lowercase]]{monstre} peut passer magiquement du Plan Matériel au Plan Éthéré, ou inversement.</p>"
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -7825,7 +8428,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d10 +2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 18 ([[/damage activity=dnd5eactivity100]]{4d8}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -7858,7 +8466,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 22 ([[/damage]]{4d6 + 8}) dégâts perforants. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. Ainsi empoisonnée, elle ne peut pas récupérer de points de vie et subit 21 ([[/damage activity=dnd5eactivity100]]{6d6}) dégâts de poison au début de chacun de ses tours. La cible empoisonnée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Claw": {
           "name": "Griffe",
@@ -7999,7 +8612,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> [[/damage]]{1} dégât perforant et la cible effectue un jet de sauvegarde de [[/save]], et subit 5 ([[/damage 2d4 poison]]{2d4}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -8135,7 +8753,12 @@
         "Sting": {
           "name": "Dard",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde est raté d'au moins 5, la cible tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "languages": "ne parle pas",
@@ -8155,12 +8778,22 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure, elle doit réussir un jet de sauvegarde de Dextérité DD 19 sous peine d'être engloutie par le ver. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du ver et subit 21 (6d6) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le ver subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 21 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins de lui. Si le ver meurt, les créatures englouties ne sont plus entravées par lui et peuvent s'en extraire en dépensant 6 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         },
         "Tail Stinger": {
           "name": "Dard caudal",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de Constitution DD 19 et subit 42 (12d6) dégâts de poison supplémentaires en cas d’échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Dard caudal.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Dard caudal.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Souterrain"
@@ -8171,17 +8804,39 @@
         "Invisibility": {
           "name": "Invisibilité",
           "description": "<p>Le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque ou recoure à Frayeur, ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
+          "activities": {
+            "Become Invisible": {
+              "name": "Devenir invisible"
+            }
+          },
+          "effects": {
+            "Invisibility": {
+              "name": "Invisibilité"
+            }
+          }
         },
         "Claw (Bite in Beast Form)": {
           "name": "Griffes (Morsure sous forme de bête)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d4 + 3}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 5 ([[/damage activity=dnd5eactivity100]]{2d4}) dégâts de poison et d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffes (Morsure sous forme de bête).</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Griffes (Morsure sous forme de bête).</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le quasit peut consacrer son action à se métamorphoser en bête sous forme de chauve-souris (vitesse 3 m, vol 12 m), de mille-pattes (12 m, escalade 12 m) ou de crapaud (12 m, nage 12 m) ou à reprendre sa forme véritable. Son profil reste le même sous les deux formes, en dehors du changement de vitesse indiqué. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Shapeshift": {
+              "profiles": {
+                "Bat": "Chauve-souris"
+              }
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -8205,7 +8860,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le [[lookup @name]] ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8358,7 +9013,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8385,7 +9040,12 @@
         "Swallow": {
           "name": "Engloutissement",
           "description": "<p>Le remorhaz effectue une attaque de Morsure contre une créature de taille M ou inférieure qu'il agrippe. Si l'attaque touche, la cible subit les dégâts de la Morsure, est engloutie et n'est plus agrippée. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du remorhaz et subit 21 (6d6) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le remorhaz subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 15 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins de lui. Si le remorhaz meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Engloutissement.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         }
       },
       "habitat": "Arctique",
@@ -8706,7 +9366,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La guenaude peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Horrific Appearance": {
           "name": "Apparence terrifiante",
@@ -8736,7 +9396,7 @@
       "items": {
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>L’[[lookup @name]] ne peut respirer que sous l’eau.</p>"
+          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -8751,12 +9411,20 @@
         "Shadow Stealth": {
           "name": "Discrétion dans les ombres",
           "description": "<p>Tant qu’elle se trouve dans une zone de lumière faible ou de ténèbres, l’[[lookup @name]] peut entreprendre l’action Se cacher par une action bonus.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Discrétion dans les ombres.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Discrétion dans les ombres.</p>",
+          "activities": {
+            "Hide": {
+              "name": "Furtivité"
+            }
+          }
         },
         "Strength Drain": {
           "name": "Ponction de force",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la valeur de Force de la cible est réduite de [[/r 1d4]]. La cible meurt si cette réduction porte sa Force à 0. Sans cela, la réduction persiste jusqu'à ce que la cible termine un repos court ou long.</p><p>Quand un humanoïde non mauvais meurt de cette attaque, une nouvelle ombre émerge de sa dépouille [[/r 1d4]] heures plus tard.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Ponction de force.</p>"
+        },
+        "Sunlight Sensitivity": {
+          "name": "Sensibilité au soleil"
         }
       },
       "habitat": "Souterrain",
@@ -8776,7 +9444,12 @@
         "Engulf": {
           "name": "Enveloppement",
           "description": "<p>Le tertre errant enveloppe une créature de taille M ou inférieure qu'il agrippe. La cible enveloppée est aveuglée, entravée et incapable de respirer, et doit réussir un jet de sauvegarde de Constitution DD 14 au début de chacun des tours du tertre, sous peine de subir 13 (2d8 + 4) dégâts contondants.</p><p>Lorsque le tertre se déplace, la cible enveloppée l'accompagne. Le tertre ne peut pas envelopper plus d'une créature à la fois.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Enveloppement.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Enveloppement.</p>",
+          "effects": {
+            "Engulfed": {
+              "name": "Englouti"
+            }
+          }
         },
         "Slam": {
           "name": "Coup",
@@ -8799,7 +9472,12 @@
         "Regeneration": {
           "name": "Régénération",
           "description": "<p>Le garde animé récupère [[/heal]]{10} points de vie au début de son tour s'il lui reste au moins 1 point de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>",
+          "activities": {
+            "Regenerate": {
+              "name": "Régénération"
+            }
+          }
         },
         "Spell Storing": {
           "name": "Stockage de sort",
@@ -8859,6 +9537,11 @@
             "Paralyzing Breath": {
               "name": "Souffle paralysant"
             }
+          },
+          "effects": {
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
           }
         }
       },
@@ -8897,7 +9580,17 @@
         "Flying Sword": {
           "name": "Épée volante",
           "description": "<p>Le solar lâche son épée à deux mains qui vient flotter magiquement en un espace inoccupé dans un rayon de 1,50 m de lui. S'il voit l'épée, le solar peut lui ordonner mentalement par une action bonus de voler sur un maximum de 15 m et d'effectuer une attaque contre une cible ou de revenir dans ses mains. Si l'épée volante est ciblée par un effet, on considère que le solar l'a en main. L'épée volante tombe si le solar meurt.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Épée volante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Épée volante.</p>",
+          "activities": {
+            "Enchant": {
+              "name": "Enchantement"
+            }
+          },
+          "effects": {
+            "Flying Sword": {
+              "name": "Épée volante"
+            }
+          }
         },
         "Healing Touch": {
           "name": "Contact curatif",
@@ -8923,7 +9616,12 @@
         "Slaying Longbow": {
           "name": "Arc long tueur",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 45/180 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts perforants plus 27 ([[/damage]]{6d8}) dégâts radiants. Si la cible est une créature dotée de 100 points de vie ou moins, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de mourir.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Arc long tueur.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Arc long tueur.</p>",
+          "activities": {
+            "Slaying Save": {
+              "name": "Sauvegarde tueur"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -8992,7 +9690,12 @@
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
           "description": "<p>Le spectre peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>",
+          "effects": {
+            "Incorporeal Movement": {
+              "name": "Déplacement intangible"
+            }
+          }
         },
         "Life Drain": {
           "name": "Absorption de vie",
@@ -9018,11 +9721,16 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 2 ([[/damage activity=dnd5eactivity100]]{1d4}) dégâts de poison.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu’elle reste au contact d’une toile, l’[[lookup @name]] connaît la position exacte de toute autre créature en contact avec la même toile.</p>"
+          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -9037,7 +9745,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de Constitution DD 13 et subit 31 (7d8) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         },
         "Rejuvenation": {
           "name": "Reconstitution",
@@ -9131,7 +9844,17 @@
         "Invisibility": {
           "name": "Invisibilité",
           "description": "<p>L’[[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque ou lance un sort, ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par l’[[lookup @name]] est invisible.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Invisibilité.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Invisibilité.</p>",
+          "activities": {
+            "Become Invisible": {
+              "name": "Devenir invisible"
+            }
+          },
+          "effects": {
+            "Invisibility": {
+              "name": "Invisibilité"
+            }
+          }
         },
         "Heart Sight": {
           "name": "Perception du for intérieur",
@@ -9147,7 +9870,18 @@
       "items": {
         "Cunning Action": {
           "name": "Ruse",
-          "description": "<p>À chacun de ses tours, l’[[lookup @name]] peut entreprendre l’action Foncer, Se cacher ou Se désengager par une action bonus.</p>"
+          "description": "<p>À chacun de ses tours, l’[[lookup @name]] peut entreprendre l’action Foncer, Se cacher ou Se désengager par une action bonus.</p>",
+          "activities": {
+            "Hide": {
+              "name": "Furtivité"
+            },
+            "Disengage": {
+              "name": "Désengagement"
+            },
+            "Dash": {
+              "name": "Pointe"
+            }
+          }
         },
         "Sneak Attack": {
           "name": "Attaque sournoise",
@@ -9272,7 +10006,12 @@
         "Slow": {
           "name": "Lenteur",
           "description": "<p>Le golem cible une ou plusieurs créatures qu'il voit dans un rayon de 3 m. Chaque cible effectue un jet de sauvegarde de [[/save]] contre sa magie. En cas d'échec, la cible ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, elle n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant 1 minute. Une cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le golem cible une ou plusieurs créatures qu'il voit dans un rayon de 3 m. Chaque cible effectue un jet de sauvegarde de <strong>Sagesse</strong> contre sa magie. Une cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
+          "chat": "<p>Le golem cible une ou plusieurs créatures qu'il voit dans un rayon de 3 m. Chaque cible effectue un jet de sauvegarde de <strong>Sagesse</strong> contre sa magie. Une cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "effects": {
+            "Slowed": {
+              "name": "Ralenti"
+            }
+          }
         }
       },
       "languages": "comprend les langues de son créateur, mais ne parle pas",
@@ -9287,7 +10026,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le géant peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Greatsword": {
           "name": "Épée à deux mains",
@@ -9372,6 +10111,11 @@
               "name": "Charmé",
               "description": "<p>La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon.</p><p>Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l'effet en cas de réussite. Si la cible réussit son JS contre l'effet ou si celui-ci prend fin, elle devient immunisée contre le Charme de ce fiélon pendant 24 heures.</p>"
             }
+          },
+          "activities": {
+            "Charm Target": {
+              "target": "Humanoïde"
+            }
           }
         },
         "Draining Kiss": {
@@ -9402,7 +10146,12 @@
         },
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour une chauve-souris de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour une chauve-souris de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Keen Hearing": {
           "name": "Ouïe aiguisée",
@@ -9410,7 +10159,12 @@
         },
         "Echolocation": {
           "name": "Écholocalisation",
-          "description": "<p>La nuée ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>"
+          "description": "<p>La nuée ne peut pas recourir à sa vision aveugle quand elle est &Reference[deafened].</p>",
+          "effects": {
+            "Echolocation": {
+              "name": "Écholocalisation"
+            }
+          }
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -9420,7 +10174,12 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
@@ -9436,7 +10195,12 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
@@ -9452,7 +10216,12 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
@@ -9468,12 +10237,22 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un serpent de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un serpent de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la nuée. <em>Touché :</em> 7 ([[/damage]]{2d6}) dégâts perforants, ou 3 ([[/damage 1d6 piercing]]{1d6}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins. La cible effectue un jet de sauvegarde de [[/save]] et subit 14 ([[/damage activity=dnd5eactivity100]]{4d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -9488,7 +10267,12 @@
         },
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un piranha de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un piranha de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
@@ -9512,7 +10296,12 @@
         },
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un rat de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un rat de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
@@ -9528,7 +10317,12 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un corbeau de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un corbeau de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Beaks": {
           "name": "Becs",
@@ -9544,7 +10338,12 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
@@ -9572,7 +10371,12 @@
       "items": {
         "Swarm": {
           "name": "Nuée",
-          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
+          "description": "<p>La nuée peut occuper l’espace d’une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La nuée ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
+          "effects": {
+            "Swarm": {
+              "name": "Nuée"
+            }
+          }
         },
         "Bites": {
           "name": "Morsures",
@@ -9588,7 +10392,7 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si La [[lookup @name]] rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -9597,11 +10401,16 @@
         "Reflective Carapace": {
           "name": "Carapace réfléchissante",
           "description": "<p>Chaque fois que la [[lookup @name]] est ciblée par le sort projectile magique, un sort de ligne ou un sort qui nécessite un jet d’attaque à distance, lancez un d6. Sur un résultat de 1 à 5, la [[lookup @name]] n’est pas affectée. Sur un 6, la [[lookup @name]] n’est pas affectée et l’effet est renvoyé vers l’incantateur, comme s’il émanait de la [[lookup @name]], si bien que le lanceur du sort en devient la cible.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Carapace réfléchissante.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Carapace réfléchissante.</p>",
+          "activities": {
+            "Reflect Spell": {
+              "name": "Renvoyer le sort"
+            }
+          }
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>La [[lookup @name]] inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>Le [[lookup @details.type.config.label lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9630,12 +10439,22 @@
         "Frightful Presence": {
           "name": "Présence terrifiante",
           "description": "<p>Chaque créature choisie par la tarasque dans un rayon de 36 m, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse DD 17 sous peine d'être effrayée pendant 1 minute.</p><p>Ainsi effrayée, la créature peut réitérer le JS à la fin de chacun de ses tours, avec désavantage si la tarasque est dans son champ de vision, et met un terme à l'effet sur elle-même en cas de réussite. Si la créature réussit son jet de sauvegarde ou si l'effet prend fin sur elle, elle devient immunisée contre la Présence terrifiante de la tarasque pendant 24 heures.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Présence terrifiante.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Présence terrifiante.</p>",
+          "effects": {
+            "Frightful Presence": {
+              "name": "Présence terrifiante"
+            }
+          }
         },
         "Swallow": {
           "name": "Engloutissement",
           "description": "<p>La tarasque effectue une attaque de Morsure contre une créature de taille G ou inférieure qu'elle agrippe. Si l'attaque touche, la cible subit les dégâts de la Morsure, est engloutie et n'est plus agrippée. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur de la tarasque et subit 56 (16d6) dégâts d'acide au début de chacun destours du monstre.</p><p>Si la tarasque subit 60 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, elle doit réussir un jet de sauvegarde de Constitution DD 20 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins d'elle. Si la tarasque meurt, les créatures englouties ne sont plus entravées par elle et peuvent s'en extraire en dépensant 9 m de déplacement pour se retrouver à terre près du cadavre.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Engloutissement.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Engloutissement.</p>",
+          "effects": {
+            "Swallowed": {
+              "name": "Engloutir"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -9733,7 +10552,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>Le [[lookup @name]] inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Slam": {
           "name": "Coup",
@@ -9821,7 +10640,12 @@
         "Regeneration": {
           "name": "Régénération",
           "description": "<p>Le troll récupère 10 points de vie au début de son tour. S'il subit des dégâts d'acide ou de feu, ce trait ne fonctionne pas au début de son tour suivant. Le troll ne meurt que s'il commence son tour à 0 pv et ne se régénère pas.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>",
+          "activities": {
+            "Regenerate": {
+              "name": "Régénération"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -9953,11 +10777,16 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Si le vampire n'est pas exposé aux rayons du soleil ni dans l'eau vive, il peut consacrer son action à se transformer en chauve-souris de taille TP ou en nuage de brume de taille M, ou à reprendre sa forme véritable.</p><p>Tant qu'il est sous forme de chauve-souris, le vampire ne peut pas parler, sa vitesse au sol est de 1,50 m et il dispose d'une vitesse de vol de 9 m. Son profil, outre sa catégorie de taille et sa vitesse, ne change pas. Tous les vêtements qu'il porte et les accessoires qui le parent se transforment avec lui, mais pas ce qu'il transporte. S'il meurt, il reprend sa forme véritable.</p><p>Tant qu'il est sous forme de brume, le vampire ne peut entreprendre aucune action, ni parler, ni manipuler d'objets. Il ne pèse rien, dispose d'une vitesse de vol de 6 m avec le vol stationnaire, peut pénétrer dans l'espace d'une créature hostile et même s'y arrêter. De plus, la brume peut se glisser dans tout espace suffisant pour laisser circuler l'air, sans devoir se faufiler, mais il ne peut pas traverser l'eau. Il est avantagé aux jets de sauvegarde de Force, Dextérité et Constitution, et immunisé contre tous les dégâts non magiques, en dehors de ceux que lui infligent les rayons du soleil.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "effects": {
+            "Bat": {
+              "name": "Chauve-souris"
+            }
+          }
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name]] rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
         },
         "Misty Escape": {
           "name": "Échappatoire brumeuse",
@@ -9967,7 +10796,12 @@
         "Regeneration": {
           "name": "Régénération",
           "description": "<p>Le vampire récupère 20 points de vie au début de chacun de ses tours s'il lui reste au moins 1 point de vie et à condition de n'être ni exposé aux rayons du soleil ni dans l'eau vive. S'il subit des dégâts radiants ou des dégâts infligés par de l'eau bénite, ce trait ne fonctionne pas au début de son tour suivant.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>",
+          "activities": {
+            "Regenerate": {
+              "name": "Régénération"
+            }
+          }
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -10049,7 +10883,12 @@
         "Regeneration": {
           "name": "Régénération",
           "description": "<p>Le vampire récupère 10 points de vie au début de chacun de ses tours s'il lui reste au moins 1 point de vie et à condition de n'être ni exposé aux rayons du soleil ni dans l'eau vive. S'il subit des dégâts radiants ou des dégâts infligés par de l'eau bénite, ce trait ne fonctionne pas au début de son tour suivant.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Régénération.</p>",
+          "activities": {
+            "Regenerate": {
+              "name": "Régénération"
+            }
+          }
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -10210,7 +11049,12 @@
         },
         "Water Form": {
           "name": "Corps d’eau",
-          "description": "<p>L’élémentaire peut entrer dans l’espace d’une créature hostile et s’y arrêter. Il peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>"
+          "description": "<p>L’élémentaire peut entrer dans l’espace d’une créature hostile et s’y arrêter. Il peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>",
+          "effects": {
+            "Water Form": {
+              "name": "Corps d'eau"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -10251,7 +11095,12 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>L’[[lookup @name]] peut consacrer son action à se transformer en hybride d’ours et d’humanoïde ou en ours de taille G, ou à reprendre sa forme véritable d’humanoïde. Hormis sa catégorie de taille et sa CA, son profil reste le même, quelle que soit sa forme.</p><p>Rien de ce qu’il porte n’est transformé. S’il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Change Form": {
+              "name": "Changer d'aspect"
+            }
+          }
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
@@ -10302,7 +11151,12 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le sanglier-garou peut consacrer son action à se transformer en hybride de sanglier et d'humanoïde ou en sanglier, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa CA, son profil reste le même quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Change Form": {
+              "name": "Changer d'aspect"
+            }
+          }
         },
         "Tusks (Boar or Hybrid Form Only)": {
           "name": "Défenses (forme de sanglier ou hybride uniquement)",
@@ -10326,7 +11180,17 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le rat-garou peut consacrer son action à se transformer en hybride de rat et d'humanoïde ou en rat géant, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Change Form": {
+              "name": "Changer d'aspect"
+            }
+          },
+          "effects": {
+            "Rat Form": {
+              "name": "Aspect d'un rat"
+            }
+          }
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
@@ -10363,7 +11227,12 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le tigre-garou peut consacrer son action à se transformer en hybride de tigre et d'humanoïde ou en tigre, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Change Form": {
+              "name": "Changer d'aspect"
+            }
+          }
         },
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
@@ -10436,7 +11305,12 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le loup-garou peut consacrer son action à se transformer en hybride de loup et d'humanoïde ou en loup, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa CA, son profil reste le même quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Change Form": {
+              "name": "Changer d'aspect"
+            }
+          }
         },
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
@@ -10492,7 +11366,12 @@
         "Life Drain": {
           "name": "Absorption de vie",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de Constitution DD 13, faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p><p>Un humanoïde tué par cette attaque se relève 24 heures plus tard comme zombi sous le contrôle du nécronte, sauf si l'humanoïde est ramené à la vie ou si son corps est détruit. Le nécronte ne peut ainsi contrôler plus de douze zombis à la fois.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Absorption de vie.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Absorption de vie.</p>",
+          "activities": {
+            "Raise Zombie": {
+              "name": "Relever un zombi"
+            }
+          }
         }
       },
       "languages": "celles qu'il parlait de son vivant",
@@ -10505,7 +11384,12 @@
         "Consume Life": {
           "name": "Festin d'essence vitale",
           "description": "<p>Par une action bonus, le feu follet peut cibler une créature qu'il voit dans un rayon de 1,50 m, à condition qu'elle ait 0 point de vie et soit toujours vivante. La cible doit réussir un jet de sauvegarde de Constitution DD 10 contre cette magie sous peine de mourir. Si elle meurt, le feu follet récupère 10 (3d6) points de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Festin d’essence vitale.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Festin d’essence vitale.</p>",
+          "activities": {
+            "Drain Life": {
+              "name": "Absorption de vie"
+            }
+          }
         },
         "Ephemeral": {
           "name": "Fugace",
@@ -10514,11 +11398,21 @@
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
           "description": "<p>Le feu follet peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>",
+          "effects": {
+            "Incorporeal Movement": {
+              "name": "Déplacement intangible"
+            }
+          }
         },
         "Variable Illumination": {
           "name": "Halo fluctuant",
-          "description": "<p>Le feu follet produit une lumière vive sur un rayon compris entre 1,50 m et 6 m, à sa convenance, et une lumière faible sur une distance supplémentaire équivalente. Il peut modifier ce rayon par une action bonus.</p>"
+          "description": "<p>Le feu follet produit une lumière vive sur un rayon compris entre 1,50 m et 6 m, à sa convenance, et une lumière faible sur une distance supplémentaire équivalente. Il peut modifier ce rayon par une action bonus.</p>",
+          "effects": {
+            "Variable Illumination": {
+              "name": "Halo fluctuant"
+            }
+          }
         },
         "Shock": {
           "name": "Décharge",
@@ -10528,7 +11422,17 @@
         "Invisibility": {
           "name": "Invisibilité",
           "description": "<p>Le [[lookup @name]] et son halo deviennent magiquement &Reference[invisible]s jusqu’à ce qu’il attaque ou recoure à Festin d’essence vitale, ou que sa concentration soit rompue (comme pour un sort).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
+          "activities": {
+            "Become Invisible": {
+              "name": "Devenir invisible"
+            }
+          },
+          "effects": {
+            "Invisible": {
+              "name": "Invisible"
+            }
+          }
         }
       },
       "languages": "celles qu'il parlait de son vivant",
@@ -10613,7 +11517,12 @@
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
           "description": "<p>L'âme-en-peine peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Elle subit 5 (1d10) dégâts de force si elle termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Déplacement intangible.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Déplacement intangible.</p>",
+          "effects": {
+            "Incorporeal Movement": {
+              "name": "Déplacement intangible"
+            }
+          }
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
@@ -10649,7 +11558,12 @@
         "Stinger": {
           "name": "Dard caudal",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts perforants. La cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=dnd5eactivity100]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>La vouivre attaque avec son Dard caudal. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>"
+          "chat": "<p>La vouivre attaque avec son Dard caudal. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>",
+          "activities": {
+            "Poison Save": {
+              "name": "Sauvegarde contre le poison"
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -10698,7 +11612,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10763,6 +11677,11 @@
             "Sleep Breath": {
               "name": "Souffle soporifique"
             }
+          },
+          "effects": {
+            "Sleep Breath": {
+              "name": "Souffle soporifique"
+            }
           }
         },
         "Claw": {
@@ -10783,7 +11702,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10840,6 +11759,11 @@
             "Slowing Breath": {
               "name": "Souffle engourdissant"
             }
+          },
+          "effects": {
+            "Slowed": {
+              "name": "Ralenti"
+            }
           }
         },
         "Multiattack": {
@@ -10855,7 +11779,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10872,6 +11796,11 @@
             },
             "Weakening Breath": {
               "name": "Souffle affaiblissant"
+            }
+          },
+          "effects": {
+            "Weakened": {
+              "name": "Affaibli"
             }
           }
         },
@@ -10893,7 +11822,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name]] peut respirer sous l’eau comme à l’air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10965,6 +11894,11 @@
             "Cold Breath": {
               "name": "Souffle glacial"
             },
+            "Paralyzing Breath": {
+              "name": "Souffle paralysant"
+            }
+          },
+          "effects": {
             "Paralyzing Breath": {
               "name": "Souffle paralysant"
             }
@@ -11040,6 +11974,76 @@
       "languages": "comprend les langues qu'il parlait de son vivant, mais ne parle pas",
       "habitat": "Urbain",
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
+    },
+    "Guardian of Faith": {
+      "name": "Gardien de la foi",
+      "description": "<p>@Embed[Compendium.dnd5e.spells24.Item.phbsplGuardianof caption=false]</p>",
+      "customType": "Gardien spectral",
+      "items": {
+        "Guarded Area": {
+          "name": "Zone protégée",
+          "activities": {
+            "Consume Damage Pool": {
+              "name": "Consommer la réserve de dégâts"
+            }
+          }
+        }
+      }
+    },
+    "Huge Animated Object": {
+      "name": "Objet animé TG",
+      "tokenName": "Objet animé",
+      "languages": "Comprend les langues que vous connaissez",
+      "items": {
+        "Slam": {
+          "name": "Coup",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+        }
+      }
+    },
+    "Large Animated Object": {
+      "name": "Objet animé G",
+      "tokenName": "Objet animé",
+      "languages": "Comprend les langues que vous connaissez",
+      "items": {
+        "Slam": {
+          "name": "Coup",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+        }
+      }
+    },
+    "Medium Animated Object": {
+      "name": "Objet animé M",
+      "tokenName": "Objet animé",
+      "languages": "Comprend les langues que vous connaissez",
+      "items": {
+        "Slam": {
+          "name": "Coup",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+        }
+      }
+    },
+    "Small Animated Object": {
+      "name": "Objet animé P",
+      "tokenName": "Objet animé",
+      "languages": "Comprend les langues que vous connaissez",
+      "items": {
+        "Slam": {
+          "name": "Coup",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+        }
+      }
+    },
+    "Tiny Animated Object": {
+      "name": "Objet animé TP",
+      "tokenName": "Objet animé",
+      "languages": "Comprend les langues que vous connaissez",
+      "items": {
+        "Slam": {
+          "name": "Coup",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
+        }
+      }
     }
   }
 }
