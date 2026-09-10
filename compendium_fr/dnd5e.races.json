@@ -181,7 +181,8 @@
       "requirements": "Halfelin",
       "effects": {
         "Lucky": {
-          "name": "Chanceux"
+          "name": "Chanceux",
+          "description": "<p>Lorsque vous obtenez un 1 sur le d20 d'un jet d'attaque, d'un test de caractéristique ou d'un jet de sauvegarde, vous pouvez relancer ce dé, auquel cas c'est le second résultat qui s'applique.</p>"
         }
       }
     },
@@ -191,7 +192,8 @@
       "requirements": "Halfelin pied-léger",
       "activities": {
         "Hide": {
-          "name": "Se cacher"
+          "name": "Se cacher",
+          "condition": "Lorsque vous êtes derrière une créature dont la catégorie de taille est d'au moins un cran supérieure à la vôtre."
         }
       }
     },
@@ -232,7 +234,13 @@
     "Stonecunning": {
       "name": "Connaissance de la pierre",
       "description": "<p>Chaque fois que vous effectuez un test d'Intelligence (Histoire) lié aux origines d'un travail de maçonnerie, on considère que vous avez la maîtrise de la compétence Histoire et vous appliquez le double de votre bonus de maîtrise au test, au lieu du simple bonus.</p>",
-      "requirements": "Nain"
+      "requirements": "Nain",
+      "activities": {
+        "Inspect Stonework": {
+          "name": "Inspecter la maçonnerie",
+          "condition": "Chaque fois que vous effectuez un test d'Intelligence (Histoire) lié aux origines d'un travail de maçonnerie."
+        }
+      }
     },
     "Tiefling": {
       "name": "Tieffelin",
@@ -256,7 +264,8 @@
       "requirements": "Gnome des roches",
       "activities": {
         "Create Clockwork Device": {
-          "condition": "Dépenser 10 po de matériaux"
+          "condition": "Dépenser 10 po de matériaux",
+          "name": "Créer un mécanisme"
         }
       }
     },
@@ -270,12 +279,111 @@
       "requirements": "Nain des collines",
       "effects": {
         "Dwarven Toughness": {
-          "name": "Ténacité naine"
+          "name": "Ténacité naine",
+          "description": "<p>Votre maximum de points de vie augmente de 1, et augmente encore de 1 chaque fois que vous gagnez un niveau.</p>"
+        }
+      },
+      "description": "<p>Votre maximum de points de vie augmente de 1, et augmente encore de 1 chaque fois que vous gagnez un niveau.</p>"
+    },
+    "White Breath Weapon": {
+      "requirements": "Drakéide blanc",
+      "name": "Souffle blanc",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de froid destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=UfqpCyzg92yGFfcu]] dans un [[lookup @labels.description.template activity=UfqpCyzg92yGFfcu]] effectue un jet de sauvegarde de Constitution. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de froid en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "activities": {
+        "Exhale Ice": {
+          "name": "Exhaler de la glace"
         }
       }
     },
-    "White Breath Weapon": {
-      "requirements": "Drakéide blanc"
+    "Black Breath Weapon": {
+      "name": "Souffle noir",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague d'acide destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=3wS5okipznjpPaz7]] dans une [[lookup @labels.description.template activity=3wS5okipznjpPaz7]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts d'acide en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide noir",
+      "activities": {
+        "Exhale Acid": {
+          "name": "Exhaler de l'acide"
+        }
+      }
+    },
+    "Blue Breath Weapon": {
+      "name": "Souffle bleu",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de foudre destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=KZuPd4j1zCchLdpG]] dans une [[lookup @labels.description.template activity=KZuPd4j1zCchLdpG]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de foudre en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide bleu",
+      "activities": {
+        "Exhale Lightning": {
+          "name": "Exhaler de la foudre"
+        }
+      }
+    },
+    "Brass Breath Weapon": {
+      "name": "Souffle d'airain",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de feu destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=diXwO2o5iKi43BuQ]] dans une [[lookup @labels.description.template activity=diXwO2o5iKi43BuQ]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de feu en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide d'airain",
+      "activities": {
+        "Exhale Fire": {
+          "name": "Exhaler du feu"
+        }
+      }
+    },
+    "Bronze Breath Weapon": {
+      "name": "Souffle de bronze",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de foudre destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=8pjVqSAPbp1tIUOC]] dans une [[lookup @labels.description.template activity=8pjVqSAPbp1tIUOC]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de foudre en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide de bronze",
+      "activities": {
+        "Exhale Lightning": {
+          "name": "Exhaler de la foudre"
+        }
+      }
+    },
+    "Copper Breath Weapon": {
+      "name": "Souffle de cuivre",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague d'acide destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=0jWiwjnybl6uMXhX]] dans une [[lookup @labels.description.template activity=0jWiwjnybl6uMXhX]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts d'acide en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide de cuivre",
+      "activities": {
+        "Exhale Acid": {
+          "name": "Exhaler de l'acide"
+        }
+      }
+    },
+    "Gold Breath Weapon": {
+      "name": "Souffle d'or",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de feu destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=auRpWnbzenXjFwAV]] dans un [[lookup @labels.description.template activity=auRpWnbzenXjFwAV]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de feu en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide d'or",
+      "activities": {
+        "Exhale Fire": {
+          "name": "Exhaler du feu"
+        }
+      }
+    },
+    "Green Breath Weapon": {
+      "name": "Souffle vert",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de poison destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=EIereai1ZidTPdTz]] dans un [[lookup @labels.description.template activity=EIereai1ZidTPdTz]] effectue un jet de sauvegarde de Constitution. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de poison en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide vert",
+      "activities": {
+        "Exhale Poison": {
+          "name": "Exhaler du poison"
+        }
+      }
+    },
+    "Red Breath Weapon": {
+      "name": "Souffle rouge",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de feu destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=tLsJBLGn86jkFLTI]] dans un [[lookup @labels.description.template activity=tLsJBLGn86jkFLTI]] effectue un jet de sauvegarde de Dextérité. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de feu en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide rouge",
+      "activities": {
+        "Exhale Fire": {
+          "name": "Exhaler du feu"
+        }
+      }
+    },
+    "Silver Breath Weapon": {
+      "name": "Souffle d'argent",
+      "description": "<p>Vous pouvez consacrer votre action à exhaler une vague de froid destructrice.</p><p>Quand vous utilisez votre souffle, [[lookup @labels.description.affects activity=5er9HWdiUUdQFych]] dans un [[lookup @labels.description.template activity=5er9HWdiUUdQFych]] effectue un jet de sauvegarde de Constitution. Le DD du jet de sauvegarde contre ce souffle est égal à 8 + votre modificateur de Constitution + votre bonus de maîtrise. Une créature subit 2d6 dégâts de froid en cas d'échec, la moitié en cas de réussite. La quantité de dégâts passe à 3d6 au niveau 6, à 4d6 au niveau 11 et à 5d6 au niveau 16.</p><p>Une fois votre souffle utilisé, vous ne pouvez plus y recourir avant d'avoir terminé un repos court ou long.</p>",
+      "requirements": "Drakéide d'argent",
+      "activities": {
+        "Exhale Ice": {
+          "name": "Exhaler de la glace"
+        }
+      }
     }
   }
 }
