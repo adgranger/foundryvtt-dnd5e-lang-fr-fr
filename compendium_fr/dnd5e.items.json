@@ -2933,7 +2933,7 @@
     },
     "Potion of Acid Resistance": {
       "name": "Potion de résistance à l'acide",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type acide pendant [[lookup @labels.duration activity=bo78O7W2RFsL6v3I]].</p><section id=\"secret-E2GV78Rq05t85x7n\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts d'acide pendant [[lookup @labels.duration activity=bo78O7W2RFsL6v3I]].</p><section id=\"secret-E2GV78Rq05t85x7n\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3009,14 +3009,16 @@
       },
       "effects": {
         "Cloud Giant Strength": {
-          "name": "Force de géant des nuages"
+          "name": "Force de géant des nuages",
+          "description": "<p>Votre valeur de Force passe à 27 pour toute la durée. Si votre Force est déjà supérieure ou égale à 27, cela n'a aucun effet sur vous.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Une rognure d'ongle flotte dans le liquide limpide de cette potion.</p>"
     },
     "Potion of Cold Resistance": {
       "name": "Potion de résistance au froid",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type froid pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de froid pendant [[lookup @labels.duration activity=4nxLtrnFMNAK4ysZ]].</p><section id=\"secret-KmZbaeHrxYjAmOdL\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3024,10 +3026,12 @@
       },
       "effects": {
         "Cold Resistance": {
-          "name": "Résistance au froid"
+          "name": "Résistance au froid",
+          "description": "<p>Vous bénéficiez de la résistance aux dégâts de froid.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Diminution": {
       "name": "Potion de diminution",
@@ -3037,11 +3041,18 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La partie rouge du liquide de la potion se contracte continuellement en une boule minuscule, puis se dilate pour colorer le fluide incolore qui l'entoure. Le processus ne s'interrompt pas, même quand on secoue la bouteille.</p>",
+      "effects": {
+        "Alchemically Reduced": {
+          "name": "Réduction alchimique",
+          "description": "<p>Votre taille est réduite de moitié dans toutes les dimensions et votre poids n'est plus qu'un huitième de la normale. Ce rapetissement diminue votre catégorie de taille d'un cran : de M à P, par exemple. Jusqu'à la fin du sort, vous êtes désavantagé aux tests de Force et aux jets de sauvegarde de Force. Vos armes s'adaptent aussi à vos nouvelles dimensions. Tant que vos armes sont ainsi sous-dimensionnées, vos attaques infligent 1d4 dégâts de moins (ce qui ne peut réduire les dégâts en dessous de 1).</p>"
+        }
+      }
     },
     "Potion of Fire Giant Strength": {
       "name": "Potion de force de géant du feu",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 25 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 25 pendant [[lookup @labels.duration activity=xT9Z6NFEEUFhxy1P]]. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du feu flotte dans le liquide limpide de cette potion.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3049,14 +3060,16 @@
       },
       "effects": {
         "Fire Giant Strength": {
-          "name": "Force de géant du feu"
+          "name": "Force de géant du feu",
+          "description": "<p>Votre valeur de Force passe à 25 pour toute la durée. Si votre Force est déjà supérieure ou égale à 25, cela n'a aucun effet sur vous.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Une rognure d'ongle flotte dans le liquide limpide de cette potion.</p>"
     },
     "Potion of Fire Resistance": {
       "name": "Potion de résistance au feu",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type feu pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de feu pendant [[lookup @labels.duration activity=qkJxETJ3791U09MR]].</p><section id=\"secret-vs12uqzX6R92PN4m\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3068,21 +3081,29 @@
           "description": "<p>Vous bénéficiez de la résistance aux dégâts de feu.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Flying": {
       "name": "Potion de vol",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez une vitesse de vol égale à votre vitesse au sol pendant 1 heure et pouvez évoluer en vol stationnaire. Si vous êtes en vol au moment où la potion cesse de faire effet, vous tombez si vous ne disposez d'aucun autre moyen de vous maintenir dans les airs. Le liquide translucide de cette potion flotte dans la partie supérieure du récipient, troublé par des impuretés blanches.</p>",
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez une vitesse de vol égale à votre vitesse au sol pendant [[lookup @labels.duration activity=dQ5KoAo9EfRNjkIg]] et pouvez évoluer en vol stationnaire. Si vous êtes en vol au moment où la potion cesse de faire effet, vous tombez si vous ne disposez d'aucun autre moyen de vous maintenir dans les airs. Le liquide translucide de cette potion flotte dans la partie supérieure du récipient, troublé par des impuretés blanches.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le liquide translucide de cette potion flotte dans la partie supérieure du récipient, troublé par des impuretés blanches.</p>",
+      "effects": {
+        "Alchemical Flight": {
+          "name": "Vol alchimique",
+          "description": "<p>Pour toute la durée, vous recevez une vitesse de vol égale à votre vitesse au sol et pouvez évoluer en vol stationnaire. Si vous êtes en vol au moment où la potion cesse de faire effet, vous tombez si vous ne disposez d'aucun autre moyen de vous maintenir dans les airs.</p>"
+        }
+      }
     },
     "Potion of Force Resistance": {
       "name": "Potion de résistance à la force",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type force pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de force pendant [[lookup @labels.duration activity=WBQEjgocMEcDWwnO]].</p><section id=\"secret-aaBe78rBtxdOfhNn\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3090,14 +3111,16 @@
       },
       "effects": {
         "Force Resistance": {
-          "name": "Résistance à la force"
+          "name": "Résistance à la force",
+          "description": "<p>Vous bénéficiez de la résistance aux dégâts de force.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Frost Giant Strength": {
       "name": "Potion de force de géant du givre",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 23 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 23 pendant [[lookup @labels.duration activity=pE7C9XIq67aoCkGp]]. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du givre flotte dans le liquide limpide de cette potion.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3105,14 +3128,16 @@
       },
       "effects": {
         "Frost Giant Strength": {
-          "name": "Force de géant du givre"
+          "name": "Force de géant du givre",
+          "description": "<p>Votre valeur de Force passe à 23 pour toute la durée. Si votre Force est déjà supérieure ou égale à 23, cela n'a aucun effet sur vous.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Une rognure d'ongle flotte dans le liquide limpide de cette potion.</p>"
     },
     "Potion of Gaseous Form": {
       "name": "Potion de forme gazeuse",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz]{forme gazeuse} pendant 1 heure (aucune concentration requise) ou jusqu'à ce que vous mettiez fin à cet effet par une action bonus. Le récipient de cette potion semble contenir du brouillard dont la fluidité est cependant celle de l'eau.</p>",
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.2IWiZAJtOGDoKjiz]{forme gazeuse} pendant [[lookup @labels.duration activity=CvPLbEm6AY14aSst]] (aucune concentration requise) ou jusqu'à ce que vous mettiez fin à cet effet par une action bonus. Le récipient de cette potion semble contenir du brouillard dont la fluidité est cependant celle de l'eau.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3120,10 +3145,12 @@
       },
       "effects": {
         "Gaseous Form": {
-          "name": "Forme gazeuse"
+          "name": "Forme gazeuse",
+          "description": "<p>Vous avez été transformé pour toute la durée, ainsi que tout ce que vous portez, en nuage de brume. Cet effet prend fin si vous tombez à 0 point de vie.</p><p>Sous cette forme, vous n'avez qu'un seul mode de déplacement : une vitesse de vol de 3 m. Vous pouvez pénétrer dans l'espace d'une autre créature et l'occuper. Vous avez la résistance aux dégâts non magiques et bénéficiez de l'avantage aux jets de sauvegarde de Force, Dextérité et Constitution. Vous pouvez vous glisser dans de petits orifices et les ouvertures les plus étroites, y compris une simple lézarde, mais les liquides sont traités dans votre cas comme des surfaces solides. Vous ne pouvez pas tomber et restez en vol stationnaire, même si vous êtes &reference[stunned apply=false]{étourdi} ou &reference[incapacitated apply=false]{neutralisé}.</p><p>Tant que vous restez sous forme de brume, vous ne pouvez ni parler ni manipuler d'objets, et il vous est impossible de lâcher, d'utiliser tout ce que vous portez ou d'interagir avec. Vous ne pouvez ni attaquer ni lancer de sort.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le récipient de cette potion semble contenir du brouillard dont la fluidité est cependant celle de l'eau.</p>"
     },
     "Potion of Greater Healing": {
       "name": "Potion de guérison importante",
@@ -3133,7 +3160,8 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le liquide rouge de la potion étincelle lorsqu'on l'agite.</p>"
     },
     "Potion of Growth": {
       "name": "Potion d'agrandissement",
@@ -3143,7 +3171,14 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La partie rouge du liquide de la potion se dilate continuellement depuis une boule, colorant le liquide incolore, puis se contracte. Le processus ne s'interrompt pas même quand on secoue la bouteille.</p>",
+      "effects": {
+        "Alchemically Enlarged": {
+          "name": "Agrandissement alchimique",
+          "description": "<p>Vous doublez de taille dans toutes les dimensions et votre poids est multiplié par huit. Cette croissance augmente votre catégorie de taille d'un cran : de M à G, par exemple. S'il n'y a pas assez de place pour que vous doubliez de taille, vous grandissez dans les limites de l'espace disponible. Jusqu'à la fin du sort, vous êtes avantagé aux tests de Force et aux jets de sauvegarde de Force. Vos armes s'adaptent aussi à vos nouvelles dimensions. Tant que vos armes sont ainsi surdimensionnées, vos attaques infligent 1d4 dégâts supplémentaires.</p>"
+        }
+      }
     },
     "Potion of Healing": {
       "name": "Potion de guérison",
@@ -3153,11 +3188,12 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le liquide rouge de la potion étincelle lorsqu'on l'agite.</p>"
     },
     "Potion of Heroism": {
       "name": "Potion d'héroïsme",
-      "description": "<p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent pendant 1 heure. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{bénédiction} (aucune concentration requise). Cette potion bleue bouillonne et fume comme si elle était en ébullition.</p><section class=\"secret foundry-note\" id=\"secret-bF4l2V0GJ0rrbVZK\"><p><strong>Note Foundry</strong></p><p>Le bouton Autre formule peut être utilisé pour lancer le bonus de 1d4 reçu de Bénédiction.</p></section>",
+      "description": "<p>Lorsque vous buvez cette potion, vous recevez 10 points de vie temporaires qui persistent pendant [[lookup @labels.duration activity=HXZpxqQDRfm5EL0r]]. Pendant cette heure, vous êtes sous l'effet du sort @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{bénédiction} (aucune concentration requise). Cette potion bleue bouillonne et fume comme si elle était en ébullition.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3165,14 +3201,16 @@
       },
       "effects": {
         "Blessed": {
-          "name": "Béni"
+          "name": "Béni",
+          "description": "<p>Pour toute la durée, chaque fois que vous effectuez un jet d'attaque ou un jet de sauvegarde, vous pouvez lancer un d4 et en ajouter le résultat au jet d'attaque ou jet de sauvegarde.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Cette potion bleue bouillonne et fume comme si elle était en ébullition.</p>"
     },
     "Potion of Hill Giant Strength": {
       "name": "Potion de force de géant des collines",
-      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 21 pendant 1 heure. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant du type concerné flotte dans le liquide limpide de cette potion.</p>",
+      "description": "<p>Lorsque vous buvez cette potion, votre valeur de Force passe à 21 pendant [[lookup @labels.duration activity=UDIImot28uvAlkHv]]. Si votre Force est déjà supérieure ou égale à la valeur octroyée par la potion, celle-ci n'a aucun effet sur vous.</p><p>Une rognure d'ongle d'un géant des collines flotte dans le liquide limpide de cette potion.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3180,14 +3218,16 @@
       },
       "effects": {
         "Hill Giant Strength": {
-          "name": "Force de géant des collines"
+          "name": "Force de géant des collines",
+          "description": "<p>Votre valeur de Force passe à 21 pour toute la durée. Si votre Force est déjà supérieure ou égale à 21, cela n'a aucun effet sur vous.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Une rognure d'ongle flotte dans le liquide limpide de cette potion.</p>"
     },
     "Potion of Invisibility": {
       "name": "Potion d'invisibilité",
-      "description": "<p>Le récipient de cette potion paraît vide, tout en donnant étrangement l'impression de contenir un liquide. Lorsque vous la buvez, vous devenez invisible pendant 1 heure. Tout ce que vous portez est invisible comme vous. L'effet prend fin prématurément si vous effectuez une attaque ou lancez un sort.</p>",
+      "description": "<p>Le récipient de cette potion paraît vide, tout en donnant étrangement l'impression de contenir un liquide. Lorsque vous la buvez, vous devenez &reference[invisible]{invisible} pendant [[lookup @labels.duration activity=V2JumDYJgM7ktIzw]]. Tout ce que vous portez est invisible comme vous. L'effet prend fin prématurément si vous effectuez une attaque ou lancez un sort.</p>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3195,14 +3235,16 @@
       },
       "effects": {
         "Invisibility": {
-          "name": "Invisibilité"
+          "name": "Invisibilité",
+          "description": "<p>Pour toute la durée, vous êtes &reference[invisible apply=false]{invisible}. Tout ce que vous portez est invisible comme vous. Cet effet prend fin prématurément si vous effectuez une attaque ou lancez un sort.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le récipient de cette potion paraît vide, tout en donnant étrangement l'impression de contenir un liquide.</p>"
     },
     "Potion of Lightning Resistance": {
       "name": "Potion de résistance à la foudre",
-      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type foudre pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "description": "<p><em>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de foudre pendant [[lookup @labels.duration activity=pKltvikkvHLlLjXo]].</p><section id=\"secret-hGgZvWraAwH7ge8U\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3210,10 +3252,12 @@
       },
       "effects": {
         "Lightning Resistance": {
-          "name": "Résistance à la foudre"
+          "name": "Résistance à la foudre",
+          "description": "<p>Vous bénéficiez de la résistance aux dégâts de foudre.</p>"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Mind Reading": {
       "name": "Potion de lecture des pensées",
@@ -3223,11 +3267,18 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Dans le liquide dense et pourpre de la potion flotte un nuage ovoïde et rose.</p>",
+      "effects": {
+        "Alchemical Mind Reading": {
+          "name": "Lecture des pensées alchimique",
+          "description": "<p>Pour toute la durée, vous pouvez lire les pensées de certaines créatures. Lorsque vous buvez cette potion et au prix d'une action à chacun de vos tours jusqu'à la fin de l'effet, vous pouvez focaliser votre esprit sur une créature que vous voyez dans un rayon de 9 m. Si la créature que vous choisissez est dotée d'une Intelligence de 3 ou moins, ou si elle ne parle aucune langue, elle n'est pas affectée.</p><p>Au départ, vous recevez les pensées superficielles de la créature ; ce qui occupe son esprit sur le moment. Au prix d'une action, vous pouvez porter votre attention sur les pensées d'une autre créature ou tenter de sonder davantage l'esprit de la même créature. Si vous optez pour cette seconde option, la cible effectue un jet de sauvegarde de [[/save wis 13]]. En cas d'échec, vous commencez à saisir comment elle raisonne (le cas échéant), vous percevez son état émotionnel et ce qui l'anime ou la tracasse de manière plus globale (une angoisse, une passion ou une haine, par exemple). En cas de réussite, l'effet prend fin. Dans les deux cas, la cible sait que vous sondez son esprit. De plus et à moins que vous reportiez votre attention sur les pensées d'une autre créature, la cible peut consacrer son action pour effectuer un test d'Intelligence opposé au vôtre ; si elle l'emporte, l'effet prend fin.</p><p>Les questions adressées verbalement à la créature influent forcément sur ses pensées, si bien que cet effet s'avère particulièrement efficace dans le cadre d'un interrogatoire.</p><p>Vous pouvez aussi vous en servir pour détecter la présence de créatures pensantes que vous ne voyez pas. Lorsque vous buvez cette potion ou au prix de votre action tant que l'effet persiste, vous pouvez prospecter la présence de pensées dans un rayon de 9 m. L'effet perce la plupart des obstacles, mais 60 cm de pierre, 5 cm de métal (ou une simple feuille dans le cas du plomb) suffisent à le bloquer. Vous ne détectez pas la présence d'une créature dont l'Intelligence est inférieure à 4 ou qui ne parle aucune langue.</p><p>Une fois que vous avez ainsi détecté la présence d'une créature, vous pouvez lire ses pensées jusqu'à la fin de l'effet comme détaillé ci-dessus, même si vous ne la voyez pas, à condition qu'elle reste à portée.</p>"
+        }
+      }
     },
     "Potion of Necrotic Resistance": {
       "name": "Potion de résistance nécrotiques",
-      "description": "<p><em>TheLa potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts de type nécrotiques pendant 1 heure.</p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p>",
+      "description": "<p><em>TheLa potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</em></p><p>Lorsque vous buvez cette potion, vous recevez la résistance aux dégâts nécrotiques pendant [[lookup @labels.duration activity=CYyNHqO1SdtnOY8t]].</p><section id=\"secret-pkDMfde7TkXiyLYD\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour les autres potions de résistance, faites un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion de résistance}.</p></section>",
       "activities": {
         "Drink": {
           "name": "Boire"
@@ -3238,7 +3289,8 @@
           "name": "Résistance nécrotique"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Poison": {
       "name": "Potion toxique",
@@ -3257,7 +3309,8 @@
           "name": "Résistance au poison"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Psychic Resistance": {
       "name": "Potion de résistance psychiques",
@@ -3272,7 +3325,8 @@
           "name": "Résistance psychique"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Radiant Resistance": {
       "name": "Potion de résistance radiants",
@@ -3287,7 +3341,8 @@
           "name": "Résistance radiante"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Speed": {
       "name": "Potion de vitesse",
@@ -3312,7 +3367,8 @@
           "name": "Force de géant des pierres"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Une rognure d'ongle flotte dans le liquide limpide de cette potion.</p>"
     },
     "Potion of Storm Giant Strength": {
       "name": "Potion de force de géant des tempêtes",
@@ -3327,7 +3383,8 @@
           "name": "Force de géant des tempêtes"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Une rognure d'ongle flotte dans le liquide limpide de cette potion.</p>"
     },
     "Potion of Superior Healing": {
       "name": "Potion de guérison supérieure",
@@ -3337,7 +3394,8 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le liquide rouge de la potion étincelle lorsqu'on l'agite.</p>"
     },
     "Potion of Supreme Healing": {
       "name": "Potion de guérison suprême",
@@ -3347,7 +3405,8 @@
           "name": "Boire"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>Le liquide rouge de la potion étincelle lorsqu'on l'agite.</p>"
     },
     "Potion of Thunder Resistance": {
       "name": "Potion de résistance au tonnerre",
@@ -3362,7 +3421,8 @@
           "name": "Résistance au tonnerre"
         }
       },
-      "uname": "Potion non identifiée"
+      "uname": "Potion non identifiée",
+      "udescription": "<p>La potion est d'une couleur unie et indécise et dégage une légère odeur nauséabonde.</p>"
     },
     "Potion of Water Breathing": {
       "name": "Potion de respiration aquatique",
