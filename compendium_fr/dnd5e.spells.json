@@ -249,11 +249,23 @@
         "Antipathy": {
           "name": "Aversion",
           "description": "<p>Ainsi effrayée par la cible, la créature doit consacrer son déplacement à se rendre à l’endroit sûr le plus proche d’où elle ne voit pas la cible. Si la créature se retrouve à plus de 18 m de la cible et qu’elle ne la voit plus, elle n’est plus effrayée, mais le redevient dès qu’elle voit à nouveau la cible ou retourne dans ce rayon.</p>"
+        },
+        "Aura of Antipathy": {
+          "name": "Aura d'aversion",
+          "description": "<p>Vous êtes investi d'une aura d'aversion.</p><p>Cet enchantement provoque chez les créatures de la catégorie désignée par l'incantateur un besoin impérieux de quitter la zone et d'éviter la cible. Lorsqu'une telle créature voit la cible ou l'approche de 18 m ou moins, elle doit réussir un jet de sauvegarde de Sagesse sous peine d'être &Reference[frightened]{effrayée}. La créature reste effrayée tant qu'elle voit la cible ou reste dans un rayon de 18 m d'elle.</p><p>Ainsi effrayée par vous, la créature doit consacrer son déplacement à se rendre à l'endroit sûr le plus proche d'où elle ne peut pas vous voir. Si la créature se retrouve à plus de 18 m de vous et qu'elle ne vous voit plus, elle n'est plus effrayée, mais le redevient dès qu'elle recouvre votre vue ou se retrouve dans un rayon de 18 m de vous.</p><p><strong>Mettre fin à l'effet.</strong> Une créature affectée qui termine son tour au-delà de 18 m de vous et sans pouvoir vous voir effectue un jet de sauvegarde de Sagesse. En cas de réussite, la créature n'est plus affectée par vous et comprend que ce sentiment de répulsion ou d'attirance était d'origine magique. Par ailleurs, une créature affectée par le sort a droit à un nouveau jet de sauvegarde de Sagesse toutes les 24 heures, tant que le sort persiste.</p>"
+        },
+        "Aura of Sympathy": {
+          "name": "Aura d'attirance",
+          "description": "<p>Vous êtes investi d'une aura d'attirance.</p><p>Cet enchantement provoque chez les créatures désignées une envie pressante de s'approcher de vous tant qu'elles sont dans un rayon de 18 m de vous ou peuvent vous voir. Lorsqu'une telle créature vous voit ou se retrouve à 18 m ou moins de vous, elle doit réussir un jet de sauvegarde de Sagesse sous peine de devoir, à chacun de ses tours, consacrer son déplacement à pénétrer dans la zone ou à se retrouver à portée d'allonge de la cible. Une fois que la créature s'est exécutée, elle ne peut plus s'éloigner volontairement de vous.</p><p>Si vous infligez des dégâts ou nuisez d'une autre manière à une créature affectée, cette dernière peut effectuer un jet de sauvegarde de Sagesse pour mettre un terme à l'effet, comme décrit ci-après.</p><p><strong>Mettre fin à l'effet.</strong> Une créature affectée qui termine son tour au-delà de 18 m de vous et sans pouvoir vous voir effectue un jet de sauvegarde de Sagesse. En cas de réussite, la créature n'est plus affectée par vous et comprend que ce sentiment de répulsion ou d'attirance était d'origine magique. Par ailleurs, une créature affectée par le sort a droit à un nouveau jet de sauvegarde de Sagesse toutes les 24 heures, tant que le sort persiste.</p>"
         }
       },
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "End Effect Save": {
+          "name": "Sauvegarde : fin de l'effet",
+          "condition": "Lorsqu'une créature affectée termine son tour au-delà de 18 m de la cible et sans pouvoir la voir, ou si la cible inflige des dégâts ou nuit d'une autre manière à une créature affectée."
         }
       }
     },
@@ -265,7 +277,12 @@
     "Arcane Hand": {
       "name": "Main arcanique",
       "description": "<p>Vous créez une main de taille G faite d'énergies translucides chatoyantes. Elle apparaît dans un espace inoccupé que vous voyez à portée. La main persiste pendant toute la durée du sort et se déplace sous votre contrôle, en reproduisant les mouvements de votre propre main.</p><p>La main est un objet doté d'une CA de 20 et de points de vie égaux à votre maximum de points de vie. Si elle tombe à 0 point de vie, le sort prend fin. Elle dispose d'une Force de 26 (+8) et d'une Dextérité de 10 (+0). La main ne remplit pas son espace.</p><p>À l'incantation du sort, ainsi que par une action bonus à vos tours suivants, vous pouvez déplacer la main d'un maximum de 18 m puis lui faire produire l'un des effets suivants :</p><p><em><strong>Main agrippeuse.</strong></em> La main tente d'agripper une créature de taille TG ou inférieure située dans un rayon de 1,50 m d'elle. Vous recourez à la valeur de Force de la main pour résoudre cette lutte. Si la cible est de taille M ou inférieure, vous avez l'avantage au test. Tant que la main agrippe la cible, vous pouvez la lui faire broyer par une action bonus. Dans ce cas, la cible subit des dégâts contondants égaux à 2d6 + votre modificateur de caractéristique d'incantation.</p><p><em><strong>Main impérieuse.</strong></em> La main tente de pousser une créature située dans un rayon de 1,50 m d'elle, dans la direction de votre choix. Effectuez un test de Force de la main opposé à un test de Force (Athlétisme) de la cible. Si la cible est de taille M ou inférieure, vous avez l'avantage au test. Si vous l'emportez, la main repousse la cible d'un maximum de 1,50 m, plus 1,50 m multiplié par votre modificateur de caractéristique d'incantation. La main se déplace avec la cible pour rester dans un rayon de 1,50 m d'elle.</p><p><em><strong>Main interposée.</strong></em> La main s'interpose entre vous et la créature de votre choix jusqu'à ce que vous lui donniez un ordre différent. La main se déplace de manière à rester entre vous et la cible, ce qui vous confère un abri partiel contre celle-ci. La cible ne peut pas traverser l'espace de la main si sa valeur de Force est inférieure ou égale à celle de la main. Si sa valeur de Force est supérieure à celle de la main, la cible peut traverser l'espace de la main dans votre direction, sachant que cet espace constitue pour elle un terrain difficile.</p><p><em><strong>Poing serré.</strong></em> La main frappe une créature ou un objet situés dans un rayon de 1,50 m d'elle. Effectuez une attaque de sort au corps à corps, pour la main, mais avec votre profil. Si l'attaque touche, la cible subit 4d8 dégâts de force.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 6<sup>e</sup> niveau ou supérieur, les dégâts de l'option poing serré augmentent de 2d8 et ceux de main agrippeuse de 2d6 par niveau d'emplacement au-delà du 5<sup>e</sup>.</p>",
-      "materials": "une coquille d'œuf et un gant en peau de serpent"
+      "materials": "une coquille d'œuf et un gant en peau de serpent",
+      "activities": {
+        "Summon Hand": {
+          "name": "Invoquer une main"
+        }
+      }
     },
     "Arcane Lock": {
       "name": "Verrou magique",
@@ -280,7 +297,12 @@
     "Arcane Sword": {
       "name": "Épée arcanique",
       "description": "<p>Vous créez à portée une silhouette de force en forme d'épée qui flotte en vol stationnaire. Elle persiste pour toute la durée.</p><p>À l'apparition de l'épée, vous effectuez une attaque de sort au corps à corps contre la cible de votre choix dans un rayon de 1,50 m de l'épée. Si l'attaque touche, la cible subit 3d10 dégâts de force. Jusqu'à la fin du sort, vous pouvez par une action bonus à chacun de vos tours déplacer l'épée d'un maximum de 6 m vers un point que vous voyez et réitérer l'attaque, contre la même cible ou une autre.</p>",
-      "materials": "une épée miniature en platine au pommeau et à la poignée de cuivre et de zinc, d'une valeur de 250 po"
+      "materials": "une épée miniature en platine au pommeau et à la poignée de cuivre et de zinc, d'une valeur de 250 po",
+      "activities": {
+        "Move Sword and Attack": {
+          "name": "Déplacer l'épée et attaquer"
+        }
+      }
     },
     "Arcanist's Magic Aura": {
       "name": "Aura magique de l'arcaniste",
@@ -289,6 +311,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "False Aura": {
+          "name": "Aura factice",
+          "description": "<p>La manière dont vous vous manifestez aux sorts et effets magiques qui perçoivent les auras magiques, tels que @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{détection de la magie}, a été modifiée. Vous paraissez magique, ordinaire, ou votre aura magique a été altérée de sorte que vous sembliez appartenir à une école de magie spécifique choisie par l'incantateur.</p>"
+        },
+        "Mask": {
+          "name": "Masque",
+          "description": "<p>La manière dont vous vous manifestez aux sorts et effets magiques qui détectent le type de créature, tels que la Perception divine du paladin ou le déclencheur du sort @UUID[Compendium.dnd5e.spells.Item.B2kbmgbA2WQR00kx]{symbole}, a été modifiée. Les sorts et effets magiques vous considèrent comme si vous étiez une créature d'un type ou d'un alignement spécifique choisi par l'incantateur.</p>"
         }
       }
     },
@@ -319,6 +351,25 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Awaken Plant": {
+          "name": "Éveiller une plante"
+        },
+        "Awaken Beast": {
+          "name": "Éveiller une bête"
+        }
+      },
+      "effects": {
+        "Awakened Friendliness": {
+          "name": "Amitié éveillée",
+          "description": "<p>Vous êtes &reference[charmed apply=false]{charmé} par l'incantateur pendant 30 jours, ou jusqu'à ce que l'incantateur ou l'un de ses compagnons vous nuise directement. Quand l'état charmé prend fin, vous décidez si vous restez amical envers eux.</p>"
+        },
+        "Awakened": {
+          "name": "Éveillé",
+          "description": "<p>Vous avez été éveillé. Vous acquérez une Intelligence de 10. Vous recevez également la faculté de parler une langue que connaît l'incantateur. Si vous êtes une plante, vous recevez la capacité de déplacer vos racines, pédoncules, lianes ou autres appendices, et bénéficiez de sens comparables à ceux d'un humain.</p>",
+          "changes": {
+            "0": ";Une langue connue de l'incantateur qui vous a éveillé;"
+          }
         }
       }
     },
@@ -349,7 +400,8 @@
       },
       "effects": {
         "Banished": {
-          "name": "Banni"
+          "name": "Banni",
+          "description": "<p>La cible originaire de ce plan est bannie vers un demi-plan qui ne présente pas de danger et est neutralisée pour la durée.</p><p>Vous avez été banni vers un demi-plan qui ne présente pas de danger. Tant que vous y restez, vous êtes &reference[incapacitated apply=false]{neutralisé}. Vous y demeurez jusqu'à la fin du sort, après quoi vous réapparaissez dans l'espace que vous aviez quitté ou dans l'espace inoccupé le plus proche si celui-ci n'est plus libre.</p>"
         }
       }
     },
@@ -359,7 +411,8 @@
       "materials": "une poignée d'écorce de chêne",
       "effects": {
         "Barkskin": {
-          "name": "Peau d'écorce"
+          "name": "Peau d'écorce",
+          "description": "<p>Jusqu'à la fin du sort, votre peau présente un aspect rugueux qui rappelle l'écorce d'un arbre et votre CA ne peut être inférieure à 16 quelle que soit l'éventuelle armure que vous portez.</p>"
         }
       },
       "activities": {
@@ -432,12 +485,34 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Restraining Tentacles": {
+          "name": "Tentacules entravants",
+          "condition": "Lorsqu'une créature entre dans la zone pour la première fois d'un tour ou y commence son tour."
+        }
+      },
+      "effects": {
+        "Restrained by Black Tentacles": {
+          "name": "Entravé par les tentacules noirs",
+          "description": "<p>Vous êtes &reference[restrained apply=false]{entravé} par les tentacules jusqu'à la fin du sort ou jusqu'à ce que vous consacriez votre action à effectuer un test de [[/check Strength]] ou de [[/check Dexterity]] (à votre convenance) assorti du DD de sauvegarde des sorts de l'incantateur pour vous libérer. En cas de réussite, vous vous libérez des tentacules.</p>"
         }
       }
     },
     "Blade Barrier": {
       "name": "Barrière de lames",
-      "description": "<p>Vous créez un mur vertical fait de lames d'énergie magique, qui tourbillonnent et tranchent comme des rasoirs. Le mur apparaît à portée et persiste pour toute la durée. Vous pouvez ainsi ériger un mur dont la hauteur n'excède pas 6 m et l'épaisseur 1,50 m ; pour le reste, vous avez le choix entre créer un mur droit long de 30 m au maximum ou un mur circulaire dont le diamètre ne dépasse pas 18 m. Le mur octroie un abri supérieur aux créatures situées derrière et son espace constitue un &reference[difficult terrain]{terrain difficile}.</p><p>Lorsqu'une créature entre dans la zone du mur pour la première fois d'un tour ou y commence son tour, elle effectue un jet de sauvegarde de Dextérité. En cas d'échec, elle subit 6d10 dégâts tranchants. En cas de réussite, la créature subit la moitié de ces dégâts.</p>"
+      "description": "<p>Vous créez un mur vertical fait de lames d'énergie magique, qui tourbillonnent et tranchent comme des rasoirs. Le mur apparaît à portée et persiste pour toute la durée. Vous pouvez ainsi ériger un mur dont la hauteur n'excède pas 6 m et l'épaisseur 1,50 m ; pour le reste, vous avez le choix entre créer un mur droit long de 30 m au maximum ou un mur circulaire dont le diamètre ne dépasse pas 18 m. Le mur octroie un abri supérieur aux créatures situées derrière et son espace constitue un &reference[difficult terrain]{terrain difficile}.</p><p>Lorsqu'une créature entre dans la zone du mur pour la première fois d'un tour ou y commence son tour, elle effectue un jet de sauvegarde de Dextérité. En cas d'échec, elle subit 6d10 dégâts tranchants. En cas de réussite, la créature subit la moitié de ces dégâts.</p>",
+      "activities": {
+        "Wall Contact Save": {
+          "name": "Sauvegarde : contact avec le mur",
+          "condition": "Lorsqu'une créature entre dans la zone du mur pour la première fois d'un tour ou y commence son tour."
+        },
+        "Conjure Blade Barrier (Wall)": {
+          "name": "Conjurer la barrière de lames (mur)"
+        },
+        "Conjure Blade Barrier (Ringed Wall)": {
+          "name": "Conjurer la barrière de lames (mur circulaire)"
+        }
+      }
     },
     "Bless": {
       "name": "Bénédiction",
@@ -489,6 +564,17 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Blink Check": {
+          "name": "Test de clignotement",
+          "roll": "Test de clignotement",
+          "condition": "Lorsque vous terminez votre tour alors que ce sort est actif."
+        }
+      },
+      "effects": {
+        "Blinked into the Ethereal Plane": {
+          "name": "Clignoté vers le Plan Éthéré",
+          "description": "<p>Vous avez clignoté vers le Plan Éthéré jusqu'au début de votre tour suivant.</p><p>Tant que vous êtes sur le Plan Éthéré, vous voyez et entendez ce qui se passe sur le plan d'où vous venez autour de votre position initiale, mais tout est nuances de gris et votre vision ne porte que sur 18 m. Seules les créatures du Plan Éthéré peuvent vous affecter, et réciproquement. Les créatures qui ne s'y trouvent pas ne vous perçoivent pas et ne peuvent interagir avec vous, à moins d'en avoir la faculté spéciale.</p>"
         }
       }
     },
@@ -502,7 +588,8 @@
       },
       "effects": {
         "Blur": {
-          "name": "Flou"
+          "name": "Flou",
+          "description": "<p>Votre corps devient flou, indistinct et vacillant pour tous ceux qui vous voient. Pour toute la durée, toutes les créatures sont désavantagées aux jets d'attaque contre vous. Un assaillant est immunisé contre cet effet s'il se passe du sens de la vue (s'il est doté de la &reference[blindsight]{vision aveugle}, par exemple) ou s'il perce automatiquement les illusions (ce que permet la &reference[truesight]{vision lucide}).</p>"
         }
       }
     },
@@ -512,6 +599,48 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Bonus Damage On Hit": {
+          "name": "Dégâts bonus au toucher",
+          "condition": "Lorsque vous touchez une créature avec une attaque d'arme avant la fin de ce sort."
+        }
+      },
+      "effects": {
+        "Branding Smite: 2nd Level": {
+          "name": "Châtiment révélateur : 2e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 2d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 3rd Level": {
+          "name": "Châtiment révélateur : 3e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 3d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 4th Level": {
+          "name": "Châtiment révélateur : 4e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 4d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 5th Level": {
+          "name": "Châtiment révélateur : 5e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 5d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 6th Level": {
+          "name": "Châtiment révélateur : 6e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 6d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 7th Level": {
+          "name": "Châtiment révélateur : 7e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 7d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 8th Level": {
+          "name": "Châtiment révélateur : 8e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 8d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Branding Smite: 9th Level": {
+          "name": "Châtiment révélateur : 9e niveau",
+          "description": "<p>La prochaine fois que vous touchez une créature avec une attaque d'arme avant la fin de ce sort, l'arme produit une intense lueur astrale en frappant sa cible. L'attaque inflige 9d6 dégâts radiants supplémentaires à la cible, qui devient visible si elle était &reference[invisible apply=false]{invisible} et émet une &reference[dim light]{lumière faible} sur un rayon de 1,50 m. Elle ne peut en outre pas devenir invisible jusqu'à la fin du sort.</p>"
+        },
+        "Smite Brand": {
+          "name": "Marque du châtiment",
+          "description": "<p>Pour toute la durée du sort, vous émettez une &reference[dim light]{lumière faible} sur un rayon de 1,50 m et ne pouvez pas devenir &reference[invisible apply=false]{invisible} jusqu'à la fin du sort.</p>"
         }
       }
     },
@@ -533,6 +662,9 @@
         },
         "Cast": {
           "name": "Incanter"
+        },
+        "Lightning Bolt (Pre-Existing Storm)": {
+          "name": "Éclair (orage préexistant)"
         }
       }
     },
@@ -546,7 +678,12 @@
       },
       "effects": {
         "Indifferent": {
-          "name": "Indifférent"
+          "name": "Indifférent",
+          "description": "<p>Vous avez été rendu indifférent à l'égard de créatures choisies par l'incantateur pour lesquelles vous étiez hostile. Cette indifférence prend fin si vous êtes attaqué ou blessé par un sort, ou si vous percevez que l'on fait du mal à l'un de vos amis. Quand le sort prend fin, vous redevenez hostile, à moins que le MJ en juge autrement.</p>"
+        },
+        "Suppressed Emotions": {
+          "name": "Émotions réprimées",
+          "description": "<p>Tout effet qui vous rend &reference[charmed apply=false]{charmé} ou &reference[frightened apply=false]{effrayé} est réprimé. Quand ce sort prend fin, tout effet ainsi réprimé reprend, à condition que sa durée n'ait pas expiré dans l'intervalle.</p>"
         }
       }
     },
@@ -626,6 +763,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Enter / Start of Turn Save": {
+          "name": "Sauvegarde : Entrée / début de tour",
+          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour."
         }
       }
     },
@@ -701,11 +842,19 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Command Creatures": {
+          "name": "Commander les créatures"
+        },
+        "Repeat Save (After Comand)": {
+          "name": "Réitérer la sauvegarde (après le commandement)",
+          "condition": "Après qu'une créature commandée par ce sort termine son déplacement."
         }
       },
       "effects": {
         "Compulsion": {
-          "name": "Compulsion"
+          "name": "Compulsion",
+          "description": "<p>Jusqu'à la fin du sort, l'incantateur peut consacrer une action bonus à chacun de ses tours à désigner une direction horizontale. Vous devez, à votre tour suivant, consacrer autant de votre déplacement que possible à vous déplacer dans cette direction. Vous pouvez entreprendre votre action avant de vous déplacer. Une fois que vous vous êtes déplacé de cette manière, vous pouvez réitérer le jet de sauvegarde de Sagesse pour tenter de mettre un terme à cet effet.</p><p>Vous n'êtes pas contraint de vous jeter dans un danger manifestement mortel, comme des flammes ou une fosse, mais vous provoquerez des &reference[opportunity attacks]{attaques d'opportunité} pour aller dans la direction imposée.</p>"
         }
       }
     },
@@ -726,21 +875,46 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Roll Confusion Table Result": {
+          "name": "Jet dans la table Confusion",
+          "condition": "Lorsqu'une créature affectée par ce sort commence son tour."
         }
       },
       "effects": {
         "Confused": {
-          "name": "Confus"
+          "name": "Confus",
+          "description": "<p>Ce sort assaille et vrille votre esprit, vous plonge dans le délire et vous pousse à des actes insensés.</p><p>Vous ne pouvez pas jouer de réaction et devez effectuer un jet dans la table @UUID[Compendium.dnd5e.tables.RollTable.LHEts1oDaDwcehuj]{Confusion} au début de chacun de vos tours pour déterminer votre comportement pour ce tour.</p><p>@embed[Compendium.dnd5e.tables.RollTable.LHEts1oDaDwcehuj inline rollable]{Confusion}</p>"
         }
       }
     },
     "Conjure Animals": {
       "name": "Invocation d'animaux",
-      "description": "<p>Vous convoquez des esprits féeriques qui prennent la forme de bêtes apparaissant en des espaces inoccupés que vous voyez à portée. Choisissez l'une des options suivantes concernant ce qui apparaît :</p><ul><li>Une bête d'un facteur de puissance de 2 ou moins</li><li>Deux bêtes d'un facteur de puissance de 1 ou moins</li><li>Quatre bêtes d'un facteur de puissance de 1/2 ou moins</li><li>Huit bêtes d'un facteur de puissance de 1/4 ou moins</li></ul><p>Chaque bête est aussi considérée comme une fée et elle disparaît quand elle tombe à 0 point de vie ou que le sort prend fin.</p><p>Les créatures convoquées sont amicales envers vous et vos compagnons. Jouez l'initiative pour le groupe qu'elles constituent, qui jouera donc ses propres tours. Elles obéissent à vos instructions verbales (pas d'action requise de votre part). Si vous ne leur ordonnez rien, elles se défendent contre les créatures hostiles, mais n'entreprennent par ailleurs pas d'action.</p><p>Le MJ dispose du profil des créatures.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par des emplacements de certains niveaux supérieurs, vous choisissez l'une des options de convocation mentionnées plus haut, mais davantage de créatures se présentent : le double avec un emplacement du 5<sup>e</sup> ou 6<sup>e</sup> niveau, le triple avec un emplacement du 7<sup>e</sup> ou 8<sup>e</sup> niveau, le quadruple avec un emplacement du 9<sup>e</sup> niveau.</p>"
+      "description": "<p>Vous convoquez des esprits féeriques qui prennent la forme de bêtes apparaissant en des espaces inoccupés que vous voyez à portée. Choisissez l'une des options suivantes concernant ce qui apparaît :</p><ul><li>Une bête d'un facteur de puissance de 2 ou moins</li><li>Deux bêtes d'un facteur de puissance de 1 ou moins</li><li>Quatre bêtes d'un facteur de puissance de 1/2 ou moins</li><li>Huit bêtes d'un facteur de puissance de 1/4 ou moins</li></ul><p>Chaque bête est aussi considérée comme une fée et elle disparaît quand elle tombe à 0 point de vie ou que le sort prend fin.</p><p>Les créatures convoquées sont amicales envers vous et vos compagnons. Jouez l'initiative pour le groupe qu'elles constituent, qui jouera donc ses propres tours. Elles obéissent à vos instructions verbales (pas d'action requise de votre part). Si vous ne leur ordonnez rien, elles se défendent contre les créatures hostiles, mais n'entreprennent par ailleurs pas d'action.</p><p>Le MJ dispose du profil des créatures.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par des emplacements de certains niveaux supérieurs, vous choisissez l'une des options de convocation mentionnées plus haut, mais davantage de créatures se présentent : le double avec un emplacement du 5<sup>e</sup> ou 6<sup>e</sup> niveau, le triple avec un emplacement du 7<sup>e</sup> ou 8<sup>e</sup> niveau, le quadruple avec un emplacement du 9<sup>e</sup> niveau.</p>",
+      "effects": {
+        "Conjured Animal": {
+          "name": "Animal convoqué",
+          "description": "<p>Vous avez été convoqué par le sort @UUID[Compendium.dnd5e.spells.Item.1Drt0SHxbEAHxprN]{invocation d'animaux}.</p>",
+          "changes": {
+            "0": "{} convoqué"
+          }
+        }
+      }
     },
     "Conjure Celestial": {
       "name": "Invocation de céleste",
-      "description": "<p>Vous convoquez un céleste d'un facteur de puissance de 4 ou moins, qui apparaît en un espace inoccupé que vous voyez à portée. Le céleste disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>Le céleste est amical envers vous et vos compagnons pour toute la durée. Jouez l'initiative pour le céleste, qui jouera donc ses propres tours. Il obéit à vos instructions verbales (pas d'action requise de votre part), tant qu'elles ne vont pas à l'encontre de son alignement. Si vous ne lui ordonnez rien, il se défend contre les créatures hostiles, mais n'entreprend par ailleurs pas d'action.</p><p>Le MJ dispose du profil du céleste.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 9<sup>e</sup> niveau, vous convoquez un céleste d'un facteur de puissance de 5 ou moins.</p>"
+      "description": "<p>Vous convoquez un céleste d'un facteur de puissance de 4 ou moins, qui apparaît en un espace inoccupé que vous voyez à portée. Le céleste disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>Le céleste est amical envers vous et vos compagnons pour toute la durée. Jouez l'initiative pour le céleste, qui jouera donc ses propres tours. Il obéit à vos instructions verbales (pas d'action requise de votre part), tant qu'elles ne vont pas à l'encontre de son alignement. Si vous ne lui ordonnez rien, il se défend contre les créatures hostiles, mais n'entreprend par ailleurs pas d'action.</p><p>Le MJ dispose du profil du céleste.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 9<sup>e</sup> niveau, vous convoquez un céleste d'un facteur de puissance de 5 ou moins.</p>",
+      "activities": {
+        "Summon Celestial": {
+          "name": "Convoquer un céleste"
+        }
+      },
+      "effects": {
+        "Summoned Celestial": {
+          "name": "Céleste convoqué",
+          "description": "<p>Vous avez été convoqué par le sort @UUID[Compendium.dnd5e.spells.Item.XT7nzJmVGgv73uaf]{invocation de céleste}.</p>"
+        }
+      }
     },
     "Conjure Elemental": {
       "name": "Invocation d'élémentaire",
@@ -754,20 +928,55 @@
         "Cast": {
           "name": "Incanter"
         }
+      },
+      "effects": {
+        "Controlled Elemental": {
+          "name": "Élémentaire contrôlé",
+          "description": "<p>Vous êtes sous le contrôle de l'incantateur tant qu'il maintient sa concentration sur ce sort. Si sa concentration est rompue, vous ne disparaissez pas. En revanche, il perd le contrôle sur vous, vous devenez hostile envers l'incantateur et ses compagnons, et vous disparaissez 1 heure après avoir été convoqué.</p>"
+        }
       }
     },
     "Conjure Fey": {
       "name": "Invocation de fée",
-      "description": "<p>Vous convoquez une créature féerique d'un facteur de puissance de 6 ou moins, ou un esprit féerique qui prend la forme d'une bête d'un facteur de puissance de 6 ou moins. La créature se présente dans un espace inoccupé que vous voyez à portée. La créature féerique disparaît quand elle tombe à 0 point de vie ou que le sort prend fin.</p><p>Elle est amicale envers vous et vos compagnons pour toute la durée. Jouez l'initiative pour la créature, qui jouera donc ses propres tours. Elle obéit à vos instructions verbales (pas d'action requise de votre part), tant qu'elles ne vont pas à l'encontre de son alignement. Si vous ne lui ordonnez rien, elle se défend contre les créatures hostiles, mais n'entreprend par ailleurs pas d'action.</p><p>Si votre concentration est rompue, la fée ne disparaît pas. En revanche, vous en perdez le contrôle, elle devient hostile envers vous et vos compagnons, et susceptible de vous attaquer. Vous ne pouvez révoquer une fée que vous ne contrôlez plus, qui disparaît 1 heure après avoir été convoquée.</p><p>Le MJ dispose du profil de la fée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 7<sup>e</sup> niveau ou supérieur, le facteur de puissance de la fée augmente de 1 par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>"
+      "description": "<p>Vous convoquez une créature féerique d'un facteur de puissance de 6 ou moins, ou un esprit féerique qui prend la forme d'une bête d'un facteur de puissance de 6 ou moins. La créature se présente dans un espace inoccupé que vous voyez à portée. La créature féerique disparaît quand elle tombe à 0 point de vie ou que le sort prend fin.</p><p>Elle est amicale envers vous et vos compagnons pour toute la durée. Jouez l'initiative pour la créature, qui jouera donc ses propres tours. Elle obéit à vos instructions verbales (pas d'action requise de votre part), tant qu'elles ne vont pas à l'encontre de son alignement. Si vous ne lui ordonnez rien, elle se défend contre les créatures hostiles, mais n'entreprend par ailleurs pas d'action.</p><p>Si votre concentration est rompue, la fée ne disparaît pas. En revanche, vous en perdez le contrôle, elle devient hostile envers vous et vos compagnons, et susceptible de vous attaquer. Vous ne pouvez révoquer une fée que vous ne contrôlez plus, qui disparaît 1 heure après avoir été convoquée.</p><p>Le MJ dispose du profil de la fée.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 7<sup>e</sup> niveau ou supérieur, le facteur de puissance de la fée augmente de 1 par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
+      "activities": {
+        "Summon Fey": {
+          "name": "Convoquer une fée"
+        }
+      },
+      "effects": {
+        "Controlled Fey": {
+          "name": "Fée contrôlée",
+          "description": "<p>Vous êtes sous le contrôle de l'incantateur tant qu'il maintient sa concentration sur ce sort. Si sa concentration est rompue, vous ne disparaissez pas. En revanche, il perd le contrôle sur vous, vous devenez hostile envers l'incantateur et ses compagnons, et vous disparaissez 1 heure après avoir été convoqué.</p>"
+        }
+      }
     },
     "Conjure Minor Elementals": {
       "name": "Invocation d'élémentaires mineurs",
-      "description": "<p>Vous convoquez des élémentaires qui apparaissent en des espaces inoccupés que vous voyez à portée. Choisissez l'une des options suivantes concernant ce qui apparaît :</p><ul><li><p>Un élémentaire d'un facteur de puissance de 2 ou moins</p></li><li><p>Deux élémentaires d'un facteur de puissance de 1 ou moins</p></li><li><p>Quatre élémentaires d'un facteur de puissance de 1/2 ou moins</p></li><li><p>Huit élémentaires d'un facteur de puissance de 1/4 ou moins</p></li></ul><p>Un élémentaire convoqué par ce sort disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>Les créatures convoquées sont amicales envers vous et vos compagnons. Jouez l'initiative pour le groupe qu'elles constituent, qui jouera donc ses propres tours. Elles obéissent à vos instructions verbales (pas d'action requise de votre part). Si vous ne leur ordonnez rien, elles se défendent contre les créatures hostiles, mais n'entreprennent par ailleurs pas d'action.</p><p>Le MJ dispose du profil des créatures.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par des emplacements de certains niveaux supérieurs, vous choisissez l'une des options de convocation mentionnées plus haut et davantage de créatures se présentent : le double avec un emplacement du 6<sup>e</sup> ou 7<sup>e</sup> niveau, le triple avec un emplacement du 8<sup>e</sup> ou 9<sup>e</sup> niveau.</p>"
+      "description": "<p>Vous convoquez des élémentaires qui apparaissent en des espaces inoccupés que vous voyez à portée. Choisissez l'une des options suivantes concernant ce qui apparaît :</p><ul><li><p>Un élémentaire d'un facteur de puissance de 2 ou moins</p></li><li><p>Deux élémentaires d'un facteur de puissance de 1 ou moins</p></li><li><p>Quatre élémentaires d'un facteur de puissance de 1/2 ou moins</p></li><li><p>Huit élémentaires d'un facteur de puissance de 1/4 ou moins</p></li></ul><p>Un élémentaire convoqué par ce sort disparaît quand il tombe à 0 point de vie ou que le sort prend fin.</p><p>Les créatures convoquées sont amicales envers vous et vos compagnons. Jouez l'initiative pour le groupe qu'elles constituent, qui jouera donc ses propres tours. Elles obéissent à vos instructions verbales (pas d'action requise de votre part). Si vous ne leur ordonnez rien, elles se défendent contre les créatures hostiles, mais n'entreprennent par ailleurs pas d'action.</p><p>Le MJ dispose du profil des créatures.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par des emplacements de certains niveaux supérieurs, vous choisissez l'une des options de convocation mentionnées plus haut et davantage de créatures se présentent : le double avec un emplacement du 6<sup>e</sup> ou 7<sup>e</sup> niveau, le triple avec un emplacement du 8<sup>e</sup> ou 9<sup>e</sup> niveau.</p>",
+      "effects": {
+        "Conjured Elemental": {
+          "name": "Élémentaire convoqué",
+          "description": "<p>Vous avez été convoqué par le sort @UUID[Compendium.dnd5e.spells.Item.KgEw3sDr39C6g8nY]{invocation d'élémentaires mineurs}.</p>",
+          "changes": {
+            "0": "{} convoqué"
+          }
+        }
+      }
     },
     "Conjure Woodland Beings": {
       "name": "Invocation d'êtres sylvestres",
       "description": "<p>Vous convoquez des fées qui apparaissent en des espaces inoccupés que vous voyez à portée. Choisissez l'une des options suivantes concernant ce qui apparaît :</p><ul><li>Une fée d'un facteur de puissance de 2 ou moins</li><li>Deux fées d'un facteur de puissance de 1 ou moins</li><li>Quatre fées d'un facteur de puissance de 1/2 ou moins</li><li>Huit fées d'un facteur de puissance de 1/4 ou moins</li></ul><p>Une créature convoquée disparaît quand elle tombe à 0 point de vie ou que le sort prend fin.</p><p>Les créatures convoquées sont amicales envers vous et vos compagnons. Jouez l'initiative pour le groupe qu'elles constituent, qui jouera donc ses propres tours. Elles obéissent à vos instructions verbales (pas d'action requise de votre part). Si vous ne leur ordonnez rien, elles se défendent contre les créatures hostiles, mais n'entreprennent par ailleurs pas d'action.</p><p>Le MJ dispose du profil des créatures.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par des emplacements de certains niveaux supérieurs, vous choisissez l'une des options de convocation mentionnées plus haut et davantage de créatures se présentent : le double avec un emplacement du 6<sup>e</sup> ou 7<sup>e</sup> niveau, le triple avec un emplacement du 8<sup>e</sup> ou 9<sup>e</sup> niveau.</p>",
-      "materials": "une baie de houx par créature convoquée"
+      "materials": "une baie de houx par créature convoquée",
+      "effects": {
+        "Conjured Woodland Being": {
+          "name": "Être sylvestre convoqué",
+          "description": "<p>Vous avez été convoqué par le sort @UUID[Compendium.dnd5e.spells.Item.dEfSELiY1eO3cpX9]{invocation d'êtres sylvestres}.</p>",
+          "changes": {
+            "0": "{} convoqué"
+          }
+        }
+      }
     },
     "Contact Other Plane": {
       "name": "Contact avec les plans",
@@ -775,6 +984,17 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Insanity": {
+          "name": "Folie",
+          "description": "<p>Entrer en contact avec une conscience extraplanaire vous a anéanti mentalement, vous laissant en plein délire. Tant que vous délirez, vous ne pouvez pas entreprendre d'action, ne comprenez pas ce que disent les autres créatures, ne pouvez pas lire et proférez des propos incohérents.</p><p>Le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} met un terme à cet effet s'il est lancé sur vous.</p>",
+          "changes": {
+            "0": ";Ne peut proférer que des propos incohérents",
+            "1": ";Ne peut pas lire",
+            "2": ";Ne comprend pas les langues"
+          }
         }
       }
     },
@@ -3750,6 +3970,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      }
+    },
+    "Conjured Flame Blade": {
+      "name": "Lame de feu convoquée",
+      "description": "<p>Créée par le sort @UUID[Compendium.dnd5e.spells.Item.Advtckpz1B733bu9]{lame de feu}.</p><p>La lame est comparable en taille et forme à un cimeterre. Elle persiste pour toute la durée. Si vous la lâchez, la lame disparaît, mais vous pouvez la faire réapparaître par une action bonus.</p><p>Vous pouvez consacrer votre action à effectuer une attaque de sort au corps à corps avec la lame ardente. Si l'attaque touche, la cible subit [[lookup @flags.world.flame-blade-damage]]{3d6} dégâts de feu.</p><p>La lame ardente projette une &reference[bright light]{lumière vive} sur un rayon de 3 m, et une &reference[dim light]{lumière faible} sur 3 m de plus.</p>",
+      "effects": {
+        "Flame Blade Illumination": {
+          "name": "Illumination de la lame de feu",
+          "description": "<p>La lame ardente projette une &reference[bright light]{lumière vive} sur un rayon de 3 m, et une &reference[dim light]{lumière faible} sur 3 m de plus.</p>"
         }
       }
     }
