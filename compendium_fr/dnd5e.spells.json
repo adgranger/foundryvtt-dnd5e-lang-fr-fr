@@ -988,7 +988,7 @@
       },
       "effects": {
         "Insanity": {
-          "name": "Folie",
+          "name": "Démence",
           "description": "<p>Entrer en contact avec une conscience extraplanaire vous a anéanti mentalement, vous laissant en plein délire. Tant que vous délirez, vous ne pouvez pas entreprendre d'action, ne comprenez pas ce que disent les autres créatures, ne pouvez pas lire et proférez des propos incohérents.</p><p>Le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} met un terme à cet effet s'il est lancé sur vous.</p>",
           "changes": {
             "0": ";Ne peut proférer que des propos incohérents",
@@ -3896,6 +3896,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Enfeeblement Save": {
+          "name": "Sauvegarde contre l'affaiblissement",
+          "condition": "Lorsque vous touchez une créature avec ce sort."
+        }
+      },
+      "effects": {
+        "Enfeebled": {
+          "name": "Affaibli",
+          "description": "<p>Jusqu'à la fin du sort, vous n'infligez que des dégâts réduits de moitié avec vos attaques d'arme basées sur la Force. À la fin de chacun de vos tours, vous pouvez effectuer un jet de sauvegarde de Constitution contre le sort. En cas de réussite, le sort prend fin.</p>"
         }
       }
     },
@@ -3925,7 +3935,8 @@
       },
       "effects": {
         "Regeneration": {
-          "name": "Régénération"
+          "name": "Régénération",
+          "description": "<p>Pour toute la durée du sort, la cible récupère [[/healing 1]] au début de chacun de ses tours ([[/healing 10]] par minute).</p><p>Les parties anatomiques sectionnées (doigts, jambes, queue, etc.) sont restaurées au bout de 2 minutes. Si vous disposez d'un membre ou appendice tranché et l'apposez contre la plaie, le sort le ressoude aussitôt.</p>"
         }
       }
     },
@@ -3956,6 +3967,12 @@
         "Cast": {
           "name": "Incanter"
         }
+      },
+      "effects": {
+        "Encased in Resilient Sphere": {
+          "name": "Enfermé dans une sphère résiliente",
+          "description": "<p>Vous avez été enfermé dans une sphère de force chatoyante.</p><p>Rien, ni les objets physiques, ni l'énergie, ni les autres effets de sort, ne peut franchir cette barrière dans un sens comme dans l'autre, mais vous pouvez respirer normalement dans la sphère. La sphère est immunisée contre tous les dégâts, et vous ou les objets à l'intérieur ne pouvez subir de dégâts des attaques et effets émanant de l'extérieur, pas plus que vous ne pouvez infliger de dégâts vers l'extérieur tant que vous êtes à l'intérieur.</p><p>La sphère, qui ne pèse rien, est juste assez grande pour vous contenir. Vous pouvez consacrer votre action à pousser sur les parois de la sphère et la faire rouler à concurrence de la moitié de votre vitesse. De même, d'autres créatures peuvent ramasser le globe et le déplacer.</p><p>Le sort @UUID[Compendium.dnd5e.spells.Item.HBHbOGKNVVprSlwn]{désintégration}, s'il cible le globe, le détruit sans risque pour ce qui se trouve à l'intérieur.</p>"
+        }
       }
     },
     "Resistance": {
@@ -3982,6 +3999,16 @@
         "Cast": {
           "name": "Incanter"
         }
+      },
+      "effects": {
+        "Resurrection Sickness": {
+          "name": "Mal de résurrection",
+          "description": "<p>Revenir d'entre les morts demeure une épreuve. Vous subissez un malus de -4 à tous vos jets d'attaque, jets de sauvegarde et tests de caractéristique. Chaque fois que vous terminez un repos long, ce malus diminue de 1, jusqu'à ce qu'il disparaisse.</p>"
+        },
+        "Magical Fatigue": {
+          "name": "Épuisement magique",
+          "description": "<p>Tant que vous n'avez pas terminé de repos long, vous ne pouvez plus lancer de sort et tous vos jets d'attaque, jets de sauvegarde et tests de caractéristique se font avec le désavantage.</p>"
+        }
       }
     },
     "Reverse Gravity": {
@@ -3991,13 +4018,21 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Grab Fixed Object Save": {
+          "name": "Sauvegarde pour saisir un objet fixé"
         }
       }
     },
     "Revivify": {
       "name": "Retour à la vie",
       "description": "<p>Vous touchez une créature morte dans la minute qui vient de s'écouler. La créature est ramenée à la vie avec 1 point de vie. Ce sort ne peut pas ramener à la vie une créature morte de vieillesse, pas plus qu'il ne restaure l'anatomie manquante.</p>",
-      "materials": "300 po de diamants, que le sort détruit"
+      "materials": "300 po de diamants, que le sort détruit",
+      "activities": {
+        "Revive Target": {
+          "name": "Ramener la cible à la vie"
+        }
+      }
     },
     "Rope Trick": {
       "name": "Corde enchantée",
@@ -4043,7 +4078,11 @@
       "description": "<p>Vous créez trois rayons de feu que vous projetez sur des cibles à portée. Vous pouvez cibler une seule cible ou plusieurs.</p><p>Effectuez une attaque de sort à distance pour chaque rayon. Une attaque qui touche sa cible lui inflige 2d6 dégâts de feu.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 3<sup>e</sup> niveau ou supérieur, vous créez un rayon supplémentaire par niveau d'emplacement au-delà du 2<sup>e</sup>.</p>",
       "activities": {
         "Cast": {
-          "name": "Incanter"
+          "name": "Incanter",
+          "roll": "Rayons créés"
+        },
+        "Scorching Ray Attack": {
+          "name": "Attaque de rayon ardent"
         }
       }
     },
@@ -4054,6 +4093,38 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Configure Knowledge of Target": {
+          "name": "Configurer la connaissance de la cible"
+        },
+        "Configure Connection of Target": {
+          "name": "Configurer le lien de la cible"
+        }
+      },
+      "effects": {
+        "Knowledge: Secondhand": {
+          "name": "Connaissance : Indirecte",
+          "description": "<p>Vous avez entendu parler de la cible que vous scrutez.</p>"
+        },
+        "Knowledge: Firsthand": {
+          "name": "Connaissance : Directe",
+          "description": "<p>Vous avez rencontré la cible que vous scrutez.</p>"
+        },
+        "Knowledge: Familiar": {
+          "name": "Connaissance : Familiarité",
+          "description": "<p>Vous connaissez bien la cible que vous scrutez.</p>"
+        },
+        "Connection: Likeness or Picture": {
+          "name": "Lien : Description ou image",
+          "description": "<p>Vous disposez d'une description ou d'une image de la cible que vous scrutez.</p>"
+        },
+        "Connection: Possession or Garment": {
+          "name": "Lien : Bien personnel ou vêtement",
+          "description": "<p>Vous disposez d'un bien personnel ou vêtement de la cible que vous scrutez.</p>"
+        },
+        "Connection: Body Part": {
+          "name": "Lien : Élément anatomique",
+          "description": "<p>Vous disposez d'un élément anatomique, d'une mèche de cheveux, d'une rognure d'ongle ou d'un élément similaire de la cible que vous scrutez.</p>"
         }
       }
     },
@@ -4068,7 +4139,12 @@
       },
       "effects": {
         "Secret Chest": {
-          "name": "Coffre secret"
+          "name": "Coffre secret",
+          "description": "<p>Ce coffre et son contenu sont cachés sur le Plan Éthéré. Vous pouvez consacrer une action à toucher la réplique utilisée pour lancer le sort afin de rappeler ce coffre, qui réapparaît au sol, en un espace inoccupé dans un rayon de 1,50 m de vous. Vous pouvez renvoyer le coffre sur le Plan Éthéré au prix d'une action, en touchant simultanément le coffre et la réplique.</p><p>Au bout de 60 jours, 5 % de risque s'accumulent chaque jour que les effets du sort prennent fin. Cet effet prend fin si vous relancez ce sort, si la réplique miniature est détruite ou si vous décidez de mettre un terme au sort au prix d'une action. Si le sort prend fin alors que le grand coffre se trouve sur le Plan Éthéré, il est irrémédiablement perdu.</p>",
+          "changes": {
+            "0": "{} <p><strong>Coffre secret.</strong> Ce coffre et son contenu sont cachés sur le Plan Éthéré. Vous pouvez consacrer une action à toucher la réplique utilisée pour lancer le sort afin de rappeler ce coffre, qui réapparaît au sol, en un espace inoccupé dans un rayon de 1,50 m de vous. Vous pouvez renvoyer le coffre sur le Plan Éthéré au prix d'une action, en touchant simultanément le coffre et la réplique.</p><p>Au bout de 60 jours, 5 % de risque s'accumulent chaque jour que les effets du sort prennent fin. Cet effet prend fin si vous relancez ce sort, si la réplique miniature est détruite ou si vous décidez de mettre un terme au sort au prix d'une action. Si le sort prend fin alors que le grand coffre se trouve sur le Plan Éthéré, il est irrémédiablement perdu.</p>",
+            "1": "{} secret"
+          }
         }
       }
     },
@@ -4083,7 +4159,8 @@
       },
       "effects": {
         "See Invisibility": {
-          "name": "Détection de l'invisibilité"
+          "name": "Détection de l'invisibilité",
+          "description": "<p>Pour toute la durée, vous voyez les créatures et objets &reference[invisible apply=false]{invisibles} comme s'ils étaient visibles, et vous percevez le Plan Éthéré. Les créatures et objets éthérés vous paraissent spectraux et translucides.</p>"
         }
       }
     },
@@ -4095,7 +4172,17 @@
           "name": "Incanter"
         },
         "Change Appearance": {
-          "name": "Changement d'aspect"
+          "name": "Changement d'aspect",
+          "condition": "Lorsque vous lancez ce sort."
+        },
+        "Investigate Disguise Check": {
+          "name": "Test d'investigation du déguisement"
+        }
+      },
+      "effects": {
+        "Seeming Disguise": {
+          "name": "Déguisement d'apparence trompeuse",
+          "description": "<p>Vous avez été déguisé par une illusion.</p><p>Le sort déguise votre apparence physique ainsi que vos vêtements, votre armure, vos armes et votre équipement. Vous pouvez paraître plus grand ou plus petit, à concurrence de 30 cm, et paraître plus mince ou plus corpulent. Votre configuration corporelle ne peut pas changer, ce qui contraint à opter pour une forme dotée de la même composition de membres. Pour le reste, les détails de l'illusion appartiennent à celui qui a lancé le sort. Le sort persiste pour toute la durée, sauf si celui qui l'a lancé consacre une action à le révoquer avant cela.</p><p>Les changements apportés par le sort ne résistent pas à un examen physique. Exemple : si le sort ajoute un chapeau à votre accoutrement, ce couvre-chef n'est pas tangible, si bien que quiconque cherche à le toucher ne sentira sous ses doigts que de l'air, votre crâne ou vos cheveux. Si ce sort vous fait paraître plus mince que la réalité, quelqu'un qui tend la main pour vous toucher vous heurtera plus tôt que prévu.</p><p>Une créature peut consacrer son action à vous inspecter en effectuant un test [[/check int inv]] assorti du DD de sauvegarde des sorts de celui qui a lancé le sort. En cas de réussite, elle se rend compte que vous êtes déguisé.</p>"
         }
       }
     },
@@ -4115,7 +4202,24 @@
       "materials": "de la poudre composée de poussière de diamant, d'émeraude, de rubis et de saphir, d'une valeur minimale de 5 000 po, que le sort détruit",
       "effects": {
         "Sequestered": {
-          "name": "Isolé"
+          "name": "Isolé",
+          "description": "<p>Grâce à ce sort, vous êtes caché, à l'abri des détections, pour toute la durée. Vous êtes &reference[Invisible apply=false]{invisible} et ne pouvez être ciblé par les sorts de divination ni perçu par les capteurs de scrutation engendrés par ces mêmes sorts.</p><p>Vous sombrez également dans un état d'animation suspendue. Le temps cesse de s'écouler en ce qui vous concerne et vous ne vieillissez pas.</p><p>Si les conditions fixées par celui qui a lancé le sort se réalisent, le sort prend fin prématurément.</p>"
+        },
+        "Sequestered Item": {
+          "name": "Objet dissimulé",
+          "description": "<p>Cet objet est @UUID[Compendium.dnd5e.spells.Item.wvLbtemkH8gyBpdc]{dissimulé}, et est &reference[Invisible apply=false]{invisible} et ne peut être ciblé par les sorts de divination ni perçu par les capteurs de scrutation engendrés par ces mêmes sorts.</p>",
+          "changes": {
+            "0": "{} dissimulé",
+            "1": "{} <p><strong>Dissimulé.</strong> Cet objet est @UUID[Compendium.dnd5e.spells.Item.wvLbtemkH8gyBpdc]{dissimulé}, et est &reference[Invisible apply=false]{invisible} et ne peut être ciblé par les sorts de divination ni perçu par les capteurs de scrutation engendrés par ces mêmes sorts.</p>"
+          }
+        }
+      },
+      "activities": {
+        "Sequester Item": {
+          "name": "Dissimuler un objet"
+        },
+        "Sequester Creature": {
+          "name": "Dissimuler une créature"
         }
       }
     },
@@ -4244,7 +4348,8 @@
       },
       "effects": {
         "Simulacrum": {
-          "name": "Simulacre"
+          "name": "Simulacre",
+          "description": "<p>Vous êtes un simulacre disposant de la moitié du maximum de points de vie de la créature dont vous êtes la réplique. Pour le reste, vous reprenez le profil de jeu de cette créature.</p><p>Vous êtes incapable d'apprendre ou de gagner en puissance, si bien que vous ne gagnez pas de niveaux ou d'autres facultés, et vous ne récupérez pas davantage les emplacements de sort que vous dépensez.</p><p>Si vous subissez des dégâts, vous pouvez être réparé dans un laboratoire d'alchimie en se servant d'herbes rares et de minéraux d'une valeur de 100 po par point de vie récupéré. Vous persistez jusqu'à ce que vous tombiez à 0 point de vie, après quoi vous retrouvez votre substance aqueuse et fondez aussitôt.</p><p>Si celui qui a lancé le sort le relance, vous êtes détruit.</p>"
         }
       }
     },
@@ -4274,7 +4379,12 @@
           "name": "Lancer un sort"
         },
         "Slippery Ice Save": {
-          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour."
+          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour.",
+          "name": "Sauvegarde contre le sol glissant"
+        },
+        "Maintain Concentration Save": {
+          "name": "Sauvegarde pour maintenir la concentration",
+          "condition": "Lorsqu'une créature concentrée entre dans la zone d'effet du sort pour la première fois d'un tour ou y commence son tour."
         }
       }
     },
@@ -4284,7 +4394,8 @@
       "materials": "une goutte de mélasse",
       "effects": {
         "Slowed": {
-          "name": "Ralenti"
+          "name": "Ralenti",
+          "description": "<p>Votre vitesse est réduite de moitié, vous subissez un malus de -2 à la CA et aux jets de sauvegarde de Dextérité, et vous ne pouvez pas jouer de réactions. À votre tour, vous pouvez entreprendre une action ou une action bonus, mais pas les deux. Quels que soient vos objets magiques et vos facultés, vous ne pouvez effectuer plus d'une attaque au corps à corps ou à distance à votre tour.</p>"
         }
       }
     },
@@ -4337,7 +4448,8 @@
       "materials": "une goutte de bitume et une araignée",
       "effects": {
         "Spider Climb": {
-          "name": "Pattes d'araignée"
+          "name": "Pattes d'araignée",
+          "description": "<p>Jusqu'à la fin du sort, vous recevez la capacité de vous déplacer dans toutes les directions le long des surfaces verticales, ainsi que sur les plafonds (la tête en bas), tout en gardant les mains libres. Vous recevez en outre une vitesse d'escalade égale à votre vitesse au sol.</p>"
         }
       },
       "activities": {
@@ -4353,6 +4465,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Traversal Damage": {
+          "name": "Dégâts de traversée",
+          "range": "Lorsqu'une créature pénètre dans la zone ou s'y déplace."
         }
       }
     },
@@ -4363,12 +4479,24 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Start of Turn / Enter Save": {
+          "name": "Sauvegarde : Début de tour / Entrée",
+          "condition": "Lorsqu'une créature entre dans la zone pour la première fois d'un tour ou y commence son tour."
         }
       }
     },
     "Spiritual Weapon": {
       "name": "Arme spirituelle",
-      "description": "<p>Vous créez une arme spectrale et flottante à portée, qui persiste pour toute la durée ou jusqu'à ce que vous relanciez ce sort. À l'incantation, vous pouvez effectuer une attaque de sort au corps à corps contre une créature située dans un rayon de 1,50 m de l'arme. Si l'attaque touche, la cible subit des dégâts de force égaux à 1d8 + votre modificateur de caractéristique d'incantation.</p><p>Par une action bonus, vous pouvez déplacer l'arme d'un maximum de 6 m et répéter l'attaque contre une créature située dans un rayon de 1,50 m de l'arme.</p><p>L'arme prend la forme de votre choix. Les clercs de divinités associées à une arme donnée (saint Cuthbert est par exemple connu pour sa masse d'armes et Thor pour son marteau) donnent l'aspect de cet objet à leur arme spirituelle.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 3<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d8 par tranche de deux niveaux d'emplacement au-delà du 2<sup>e</sup>.</p>"
+      "description": "<p>Vous créez une arme spectrale et flottante à portée, qui persiste pour toute la durée ou jusqu'à ce que vous relanciez ce sort. À l'incantation, vous pouvez effectuer une attaque de sort au corps à corps contre une créature située dans un rayon de 1,50 m de l'arme. Si l'attaque touche, la cible subit des dégâts de force égaux à 1d8 + votre modificateur de caractéristique d'incantation.</p><p>Par une action bonus, vous pouvez déplacer l'arme d'un maximum de 6 m et répéter l'attaque contre une créature située dans un rayon de 1,50 m de l'arme.</p><p>L'arme prend la forme de votre choix. Les clercs de divinités associées à une arme donnée (saint Cuthbert est par exemple connu pour sa masse d'armes et Thor pour son marteau) donnent l'aspect de cet objet à leur arme spirituelle.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 3<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d8 par tranche de deux niveaux d'emplacement au-delà du 2<sup>e</sup>.</p>",
+      "activities": {
+        "Conjure Spiritual Weapon": {
+          "name": "Invoquer une arme spirituelle"
+        },
+        "Move & Command Spiritual Weapon": {
+          "name": "Déplacer et commander l'arme spirituelle"
+        }
+      }
     },
     "Stinking Cloud": {
       "name": "Nuage nauséabond",
@@ -4377,6 +4505,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Stinking Cloud Save": {
+          "name": "Sauvegarde de nuage nauséabond",
+          "condition": "Lorsqu'une créature est intégralement prise dans le nuage au début de son tour."
+        }
+      },
+      "effects": {
+        "Retching and Reeling": {
+          "name": "Haut-le-cœur",
+          "description": "<p>Vous consacrez votre tour à lutter contre des haut-le-cœur provoqués par le nuage nauséabond.</p>"
         }
       }
     },
@@ -4412,13 +4550,47 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Round 2: Acid Rain": {
+          "name": "Round 2 : pluie acide",
+          "condition": "À votre tour."
+        },
+        "Round 3: Lightning Bolts": {
+          "condition": "À votre tour.",
+          "name": "Round 3 : éclairs"
+        },
+        "Round 4: Hailstones": {
+          "condition": "À votre tour.",
+          "name": "Round 4 : grêlons"
+        },
+        "Round 5 - 10: Gusts & Freezing Rain": {
+          "condition": "À votre tour.",
+          "name": "Round 5 à 10 : bourrasques et pluie glaciale"
+        }
+      },
+      "range": "vision",
+      "effects": {
+        "Deafening Boom": {
+          "name": "Fracas assourdissant",
+          "description": "<p>Vous êtes &reference[deafened apply=false]{assourdi} pendant 5 minutes.</p>"
         }
       }
     },
     "Suggestion": {
       "name": "Suggestion",
       "description": "<p>Vous suggérez une ligne de conduite (par une phrase ou deux) visant à influencer magiquement une créature que vous voyez à portée et qui vous entend et vous comprend. Les créatures qui ne peuvent pas être &reference[charmed apply=false]{charmées} sont immunisées contre cet effet. La suggestion doit être formulée de manière à paraître raisonnable. Demander à une créature de se poignarder, de se jeter sur un pieu, de s'immoler par les flammes ou d'exécuter quelque acte indubitablement dangereux pour elle met un terme au sort.</p><p>La cible effectue un jet de sauvegarde de Sagesse. En cas d'échec, elle se conforme de son mieux à la ligne de conduite énoncée. L'activité en question peut se prolonger pour toute la durée. S'il est possible de l'accomplir plus rapidement, le sort prend fin dès que le sujet a terminé ce qu'on lui a demandé.</p><p>Vous pouvez également spécifier les conditions qui déclencheront une activité spéciale avant la fin du sort. Exemple : vous pouvez suggérer à une chevalière de faire don de son destrier au premier mendiant qu'elle croisera. Si la situation ne se présente pas avant la fin du sort, l'activité n'est pas exécutée.</p><p>Si vous-même ou l'un de vos compagnons infligez des dégâts à la cible, le sort prend fin.</p>",
-      "materials": "une langue de serpent, et un peu de rayon de miel ou une goutte d'huile sucrée"
+      "materials": "une langue de serpent, et un peu de rayon de miel ou une goutte d'huile sucrée",
+      "activities": {
+        "Speak Suggestion": {
+          "name": "Formuler la suggestion"
+        }
+      },
+      "effects": {
+        "Suggested": {
+          "name": "Suggéré",
+          "description": "<p>Vous vous conformez de votre mieux à la ligne de conduite énoncée par l'incantateur. L'activité en question peut se prolonger pour toute la durée. S'il est possible de l'accomplir plus rapidement, le sort prend fin dès que vous terminez ce qu'on vous a demandé.</p>"
+        }
+      }
     },
     "Sunbeam": {
       "name": "Rayon de soleil",
@@ -4427,18 +4599,32 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Line of Radiance": {
+          "name": "Ligne de radiance"
         }
       },
       "effects": {
         "Sunbeam": {
-          "name": "Rayon de soleil"
+          "name": "Rayon de soleil",
+          "description": "<p>Vous pouvez produire un nouveau rayon radieux au prix d'une action à chacun de vos tours jusqu'à la fin de ce sort.</p><p>De plus, pour toute la durée, votre main brille d'un point de radiance. Elle émet une &reference[bright light]{lumière vive} sur un rayon de 9 m et une &reference[dim light]{lumière faible} sur 9 m de plus. Cette lumière est celle du soleil.</p>"
+        },
+        "Sunbeam Blindness": {
+          "name": "Cécité de rayon de soleil",
+          "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé} jusqu'au début du tour suivant de celui qui a lancé le sort.</p>"
         }
       }
     },
     "Sunburst": {
       "name": "Éclat du soleil",
       "description": "<p>La lumière du soleil brille soudain dans un rayon de 18 m, centré sur un point que vous choisissez à portée. Chaque créature prise dans cette lumière effectue un jet de sauvegarde de Constitution. En cas d'échec, elle subit 12d6 dégâts radiants et se retrouve &reference[Blinded]{aveuglée} pendant 1 minute. En cas de réussite, elle subit la moitié de ces dégâts et n'est pas aveuglée par le sort. Les morts-vivants et les vases sont désavantagés à ce jet de sauvegarde.</p><p>Une créature aveuglée par ce sort réitère le jet de sauvegarde de Constitution à la fin de chacun de ses tours. En cas de réussite, elle n'est plus aveuglée.</p><p>Le sort dissipe toutes les &reference[Darkness]{ténèbres} de la zone qui résultent d'un sort.</p>",
-      "materials": "des flammes et un morceau d'héliolite"
+      "materials": "des flammes et un morceau d'héliolite",
+      "effects": {
+        "Sunburst Blindness": {
+          "name": "Cécité d'éclat du soleil",
+          "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé} pendant 1 minute. Vous pouvez effectuer un autre jet de sauvegarde de Constitution à la fin de chacun de vos tours. En cas de réussite, vous n'êtes plus aveuglé.</p>"
+        }
+      }
     },
     "Symbol": {
       "name": "Symbole",
@@ -4447,23 +4633,73 @@
       "activities": {
         "Inscribe Glyph": {
           "name": "Inscrire un glyphe"
+        },
+        "Glyph Effect: Death": {
+          "name": "Effet du glyphe : Mort",
+          "condition": "Lorsque le glyphe est activé."
+        },
+        "Glyph Effect: Discord": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Discorde"
+        },
+        "Glyph Effect: Fear": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Terreur"
+        },
+        "Glyph Effect: Hopelessness": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Désespoir"
+        },
+        "Glyph Effect: Insanity": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Démence"
+        },
+        "Glyph Effect: Pain": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Douleur"
+        },
+        "Glyph Effect: Sleep": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Sommeil"
+        },
+        "Glyph Effect: Stunning": {
+          "condition": "Lorsque le glyphe est activé.",
+          "name": "Effet du glyphe : Étourdissement"
         }
       },
       "effects": {
         "Discord": {
-          "name": "Discorde"
+          "name": "Discorde",
+          "description": "<p>Vous vous chamaillez verbalement avec une autre créature pendant toute la durée. Tout ce temps, vous êtes incapable de communiquer de manière cohérente et vos jets d'attaque et tests de caractéristique s'effectuent avec le désavantage.</p>"
         },
         "Fear": {
-          "name": "Terreur"
+          "name": "Terreur",
+          "description": "<p>Vous êtes &Reference[Frightened apply=false]{effrayé} pendant toute la durée. Tant que vous êtes effrayé, vous lâchez tout ce que vous tenez et devez vous éloigner au minimum de 9 m du glyphe à chacun de vos tours si vous en avez la possibilité.</p>"
         },
         "Pain": {
-          "name": "Douleur"
+          "name": "Douleur",
+          "description": "<p>Vous êtes &reference[incapacitated apply=false]{neutralisé} par des douleurs insoutenables pendant toute la durée.</p>"
         },
         "Sleep": {
-          "name": "Sommeil"
+          "name": "Sommeil",
+          "description": "<p>Vous tombez &reference[unconcious apply=false]{inconscient} pendant toute la durée. Vous reprenez connaissance si vous subissez des dégâts ou si quelqu'un consacre une action à vous secouer ou à vous gifler.</p>"
         },
         "Stunned": {
-          "name": "Étourdi"
+          "name": "Étourdi",
+          "description": "<p>Vous êtes &reference[stunned apply=false]{étourdi} pendant toute la durée.</p>"
+        },
+        "Hopelessness": {
+          "name": "Désespoir",
+          "description": "<p>Vous êtes submergé par le désespoir pendant toute la durée. Tout ce temps, vous ne pouvez attaquer ni cibler quiconque avec des pouvoirs, sorts et autres effets magiques conçus pour nuire.</p>"
+        },
+        "Insanity": {
+          "name": "Démence",
+          "description": "<p>Vous êtes en proie à la démence pendant toute la durée. Vous ne pouvez entreprendre la moindre action, ne comprenez pas ce que disent les autres créatures, ne savez pas lire et ne pouvez que bredouiller des propos incohérents. Le MJ contrôle vos déplacements erratiques.</p>",
+          "changes": {
+            "0": ";Ne peut que bredouiller des propos incohérents",
+            "1": ";Ne sait pas lire",
+            "2": ";Ne comprend pas les langues"
+          }
         }
       }
     },
@@ -4473,6 +4709,12 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Manipulate Creature": {
+          "name": "Manipuler une créature"
+        },
+        "Manipulate Object": {
+          "name": "Manipuler un objet"
         }
       }
     },
