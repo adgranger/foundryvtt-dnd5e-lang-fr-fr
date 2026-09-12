@@ -2798,6 +2798,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Enter / End of Turn Save": {
+          "name": "Sauvegarde : Entrée / fin de tour",
+          "condition": "Lorsqu'une créature pénètre dans la zone du sort pour la première fois d'un tour ou qu'elle y termine son tour."
         }
       }
     },
@@ -2817,6 +2821,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Start of Turn / Enter Sphere Save": {
+          "name": "Sauvegarde : Début de tour / entrée dans la sphère",
+          "condition": "Lorsqu'une créature pénètre dans la zone du sort pour la première fois d'un tour ou qu'elle y termine son tour."
         }
       }
     },
@@ -2827,6 +2835,18 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Summon Marked Objects": {
+          "name": "Convoquer les objets marqués"
+        }
+      },
+      "effects": {
+        "Instant Summons Mark": {
+          "name": "Marque de convocation instantanée",
+          "description": "<p><strong>Convocations instantanées.</strong> Cet objet a été marqué par le sort @UUID[Compendium.dnd5e.spells.Item.SgrEKiC6dAtvy6Pz]{convocations instantanées} et peut être convoqué dans la main de l'incantateur, quelle que soit la distance qui les sépare, même sur un autre plan, lorsque son nom est prononcé et que le saphir correspondant est broyé, mettant fin au sort.</p><p>Si une autre créature porte l'objet, le fait de broyer le saphir ne le transporte pas jusqu'à l'incantateur, mais celui-ci apprend l'identité de la créature qui le possède, ainsi que sa position approximative du moment.</p><p>@UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{Dissipation de la magie} ou un effet comparable appliqués sur le saphir mettent un terme aux effets du sort.</p>",
+          "changes": {
+            "0": "{} <p><strong>Convocations instantanées.</strong> Cet objet a été marqué par le sort @UUID[Compendium.dnd5e.spells.Item.SgrEKiC6dAtvy6Pz]{convocations instantanées} et peut être convoqué dans la main de l'incantateur, quelle que soit la distance qui les sépare, même sur un autre plan, lorsque son nom est prononcé et que le saphir correspondant est broyé, mettant fin au sort.</p><p>Si une autre créature porte l'objet, le fait de broyer le saphir ne le transporte pas jusqu'à l'incantateur, mais celui-ci apprend l'identité de la créature qui le possède, ainsi que sa position approximative du moment.</p><p>@UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{Dissipation de la magie} ou un effet comparable appliqués sur le saphir mettent un terme aux effets du sort.</p>"
+          }
         }
       }
     },
@@ -2847,11 +2867,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "End Dance Save": {
+          "name": "Sauvegarde pour mettre fin à la danse",
+          "condition": "Lorsqu'une créature affectée par ce sort consacre une action à tenter d'y mettre fin."
         }
       },
       "effects": {
         "Irresistible Dance": {
-          "name": "Danse irrésistible"
+          "name": "Danse irrésistible",
+          "description": "<p>Vous entamez une danse grotesque sur place : vous tentez des claquettes et enchaînez les cabrioles plus ou moins rythmées pour toute la durée.</p><p>Vous devez consacrer tout votre déplacement à danser sans quitter votre espace, et vous êtes désavantagé aux jets de sauvegarde de Dextérité et aux jets d'attaque. Tant que vous êtes affecté par ce sort, les autres créatures sont avantagées à leurs jets d'attaque contre vous.</p><p>Au prix d'une action, vous pouvez effectuer un jet de sauvegarde de Sagesse pour reprendre le contrôle de vous-même. En cas de réussite, le sort prend fin.</p>"
         }
       }
     },
@@ -2910,7 +2935,8 @@
       },
       "effects": {
         "Levitating": {
-          "name": "En lévitation"
+          "name": "En lévitation",
+          "description": "<p>Vous êtes en lévitation. Vous ne pouvez vous déplacer qu'en prenant appui sur des objets et surfaces fixes à portée (murs, plafonds, etc.), comme si vous escaladiez. L'incantateur peut modifier votre altitude d'un maximum de 6 m vers le haut ou vers le bas, à son tour. Si vous êtes l'incantateur, vous pouvez vous déplacer ainsi dans le cadre de votre déplacement.</p>"
         }
       }
     },
@@ -3015,7 +3041,25 @@
     "Magic Circle": {
       "name": "Cercle magique",
       "description": "<p>Vous créez un cylindre d'énergies magiques, de 3 m de rayon et 6 m de haut, centré en un point du sol que vous voyez à portée. Des runes luisantes apparaissent sur toute surface comprise dans le cylindre, y compris le sol.</p><p>Choisissez un ou plusieurs types de créature parmi les suivants : célestes, élémentaires, fiélons, fées et morts-vivants. Le cercle affecte les créatures du ou des types retenus des façons suivantes :</p><ul><li><p>La créature ne peut pénétrer dans le cylindre de son plein gré sans recourir à des moyens magiques. Si la créature recourt à la téléportation ou au voyage interplanaire pour ce faire, elle doit d'abord réussir un jet de sauvegarde de Charisme.</p></li><li><p>La créature est désavantagée aux jets d'attaque contre les cibles situées dans le cylindre.</p></li><li><p>Les cibles situées dans le cylindre ne peuvent être &reference[Charmed apply=false]{charmées}, &reference[Frightened apply=false]{effrayées} ou possédées par la créature.</p></li></ul><p>À l'incantation du sort, vous pouvez décider d'inverser l'orientation de sa magie, c'est-à-dire en empêchant toute créature du ou des types retenus de quitter le cylindre et en protégeant les cibles qui se trouvent à l'extérieur.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 4<sup>e</sup> niveau ou supérieur, la durée augmente de 1 heure par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
-      "materials": "de l'eau bénite ou de la poudre de fer et d'argent d'une valeur minimale de 100 po, que le sort détruit"
+      "materials": "de l'eau bénite ou de la poudre de fer et d'argent d'une valeur minimale de 100 po, que le sort détruit",
+      "activities": {
+        "Cast Magic Circle": {
+          "name": "Incanter le cercle magique"
+        },
+        "Cast Inverted Magic Circle": {
+          "name": "Incanter le cercle magique inversé"
+        },
+        "Thwart Teleportation Save": {
+          "name": "Sauvegarde pour contrer la téléportation",
+          "condition": "Lorsqu'une créature ciblée par le cercle magique tente de recourir à la téléportation ou au voyage interplanaire pour y entrer ou en sortir."
+        }
+      },
+      "effects": {
+        "Magic Circle Protection": {
+          "name": "Protection du cercle magique",
+          "description": "<p>Tant que vous restez dans le @UUID[Compendium.dnd5e.spells.Item.y8A4HfTwd93ypdEz]{cercle magique}, vous ne pouvez être &reference[charmed apply=false]{charmé}, &reference[frightened apply=false]{effrayé} ou possédé par les créatures contre lesquelles le sort protège, et ces créatures sont désavantagées à leurs jets d'attaque contre vous.</p>"
+        }
+      }
     },
     "Magic Jar": {
       "name": "Possession",
@@ -3024,6 +3068,20 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Possess Creature": {
+          "name": "Posséder une créature",
+          "target": "humanoïde"
+        }
+      },
+      "effects": {
+        "Inhabiting Soul Jar": {
+          "name": "Occupation du récipient d'âme",
+          "description": "<p>Votre corps sombre en catatonie tandis que votre âme le quitte pour pénétrer dans le récipient ayant servi de composante matérielle. Tant que votre âme occupe ce contenant, vous restez conscient de l'environnement comme si vous occupiez l'espace du récipient. Vous ne pouvez pas vous déplacer ni jouer de réaction. La seule action que vous pouvez entreprendre consiste à projeter votre âme à une distance maximale de 30 m du récipient, soit en reprenant possession de votre corps (ce qui met un terme au sort) soit en tentant de posséder un autre corps humanoïde.</p><p>Vous pouvez tenter de posséder tout humanoïde dans un rayon de 30 m de vous, à condition de le voir (les créatures protégées par le sort @UUID[Compendium.dnd5e.spells.Item.y8A4HfTwd93ypdEz]{cercle magique} ou @UUID[Compendium.dnd5e.spells.Item.xmDBqZhRVrtLP8h2]{protection contre le mal et le bien} ne peuvent pas être possédées). La cible effectue un jet de sauvegarde de Charisme. En cas d'échec, votre âme se transporte dans le corps de la cible et l'âme de celle-ci se retrouve séquestrée dans le récipient. En cas de réussite, la cible résiste à votre tentative de possession et vous devez attendre 24 heures pour essayer à nouveau de la posséder.</p>"
+        },
+        "Magic Jar Possession": {
+          "name": "Possession",
+          "description": "<p>Votre corps a été possédé et votre âme s'est retrouvée séquestrée dans le récipient utilisé pour lancer ce sort. Votre âme peut percevoir l'environnement depuis le récipient en usant de vos propres sens, mais vous ne pouvez ni vous déplacer ni entreprendre la moindre action.</p><p>Si le corps hôte meurt alors que l'incantateur l'occupe, vous mourez.</p><p>Si le contenant est détruit ou que le sort prend fin, votre âme retrouve son corps s'il est vivant et dans un rayon de 30 m. Sans cela, vous mourez.</p>"
         }
       }
     },
@@ -3095,6 +3153,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Investigate Illusion Check": {
+          "name": "Test d'investigation de l'illusion"
         }
       }
     },
@@ -3155,7 +3216,18 @@
     },
     "Maze": {
       "name": "Dédale",
-      "description": "<p>Vous bannissez une créature que vous voyez à portée dans un demi-plan labyrinthique. La cible y reste pour toute la durée, à moins qu'elle n'en trouve la sortie.</p><p>La cible peut consacrer une action à tenter de s'évader. Ce faisant, elle effectue un test d'Intelligence DD 20. En cas de réussite, elle trouve effectivement la sortie et le sort prend fin (un @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf]{minotaure} ou un démon goristro réussit automatiquement ce test).</p><p>Lorsque le sort prend fin, la cible réapparaît dans l'espace qu'elle avait quitté ou, si celui-ci n'est plus libre, dans l'espace inoccupé le plus proche.</p>"
+      "description": "<p>Vous bannissez une créature que vous voyez à portée dans un demi-plan labyrinthique. La cible y reste pour toute la durée, à moins qu'elle n'en trouve la sortie.</p><p>La cible peut consacrer une action à tenter de s'évader. Ce faisant, elle effectue un test d'Intelligence DD 20. En cas de réussite, elle trouve effectivement la sortie et le sort prend fin (un @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf]{minotaure} ou un démon goristro réussit automatiquement ce test).</p><p>Lorsque le sort prend fin, la cible réapparaît dans l'espace qu'elle avait quitté ou, si celui-ci n'est plus libre, dans l'espace inoccupé le plus proche.</p>",
+      "activities": {
+        "Escape Labyrinth": {
+          "name": "Échapper au dédale"
+        }
+      },
+      "effects": {
+        "Banished to Maze": {
+          "name": "Banni dans le dédale",
+          "description": "<p>Vous avez été banni dans un demi-plan labyrinthique. Vous y restez pour toute la durée, à moins que vous n'en trouviez la sortie.</p><p>Vous pouvez consacrer votre action à tenter de vous évader. Ce faisant, vous effectuez un test [[/check 20 int]]. En cas de réussite, vous trouvez effectivement la sortie et le sort prend fin (un @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf]{minotaure} ou un démon goristro réussit automatiquement ce test).</p><p>Lorsque le sort prend fin, vous réapparaissez dans l'espace que vous aviez quitté ou, si celui-ci n'est plus libre, dans l'espace inoccupé le plus proche.</p>"
+        }
+      }
     },
     "Meld into Stone": {
       "name": "Fusion dans la pierre",
@@ -3163,6 +3235,20 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Partial Stone Destruction Damage": {
+          "name": "Dégâts de destruction partielle de la pierre",
+          "condition": "Lorsque la pierre dans laquelle vous avez fusionné est partiellement détruite pendant que vous y êtes fusionné."
+        },
+        "Complete Stone Destruction Damage": {
+          "name": "Dégâts de destruction totale de la pierre",
+          "condition": "Lorsque la pierre dans laquelle vous avez fusionné est complètement détruite pendant que vous y êtes fusionné."
+        }
+      },
+      "effects": {
+        "Melded into Stone": {
+          "name": "Fusionné dans la pierre",
+          "description": "<p>Vous vous êtes avancé dans un objet ou une surface de pierre suffisants pour accueillir l'intégralité de votre corps et fusionnez avec tout l'équipement que vous portez dans cette masse minérale pour toute la durée. Votre présence n'est aucunement visible ni détectable par des moyens non magiques.</p><p>Tant que vous fusionnez avec la pierre, vous ne voyez pas ce qui se passe à l'extérieur et tous vos tests de Sagesse (Perception) visant à entendre les bruits extérieurs sont désavantagés. Vous gardez la notion du temps et pouvez lancer des sorts sur vous-même tant que vous ne faites qu'un avec la pierre. Vous pouvez consacrer une partie de votre déplacement à émerger de la pierre à l'endroit par lequel vous l'avez intégrée, ce qui met fin au sort. Pour le reste, vous ne pouvez pas vous déplacer.</p><p>Les dommages physiques superficiels subis par la pierre ne vous font aucun mal, mais sa destruction partielle et toute altération de sa forme, si elles sont telles que vous n'y logez plus entièrement, vous éjectent de la pierre en vous infligeant 6d6 dégâts contondants. La destruction totale de la pierre (ou sa transmutation dans une autre matière) vous éjecte aussi, en vous infligeant [[/damage 50 bludgeoning]]. Lors de toute éjection, vous vous retrouvez &reference[prone]{à terre} dans l'espace inoccupé le plus proche de l'endroit par lequel vous aviez intégré la pierre.</p>"
         }
       }
     },
@@ -3205,7 +3291,8 @@
       },
       "effects": {
         "Mind Blank": {
-          "name": "Esprit impénétrable"
+          "name": "Esprit impénétrable",
+          "description": "<p>Jusqu'à la fin du sort, vous êtes immunisé contre les dégâts psychiques, contre les effets qui perçoivent ses émotions ou lisent ses pensées, contre les sorts de divination et contre l'état &reference[Charmed apply=false]{charmé}. Le sort contrarie même le sort @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{souhait} et les sorts ou effets de puissance équivalente employés pour affecter votre esprit ou se renseigner sur votre compte.</p>"
         }
       }
     },
@@ -3237,6 +3324,25 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Mirror Image Interception": {
+          "name": "Interception par image miroir",
+          "roll": "Test de destruction d'image miroir",
+          "condition": "Quand une créature vous cible avec une attaque pendant la durée de ce sort."
+        }
+      },
+      "effects": {
+        "Mirror Image 1": {
+          "name": "Image miroir 1",
+          "description": "<p>Vous disposez d'une réplique illusoire dans votre espace. Les répliques se déplacent avec vous et reproduisent vos actions en changeant constamment de position, si bien qu'il est impossible de savoir quelle version d'entre vous est réelle. Vous pouvez consacrer une action à révoquer les répliques.</p><p>Chaque fois qu'une créature vous cible avec une attaque avant la fin du sort, lancez un d20 pour déterminer si l'attaque cible en fait l'une de vos répliques.</p><p>La CA d'une réplique est de 10 + votre modificateur de Dextérité. Si une attaque touche une réplique, celle-ci est détruite. On ne peut détruire une réplique que par une attaque qui la touche. Elle est par ailleurs insensible à toute autre forme de dégâts et d'effets. Le sort prend fin quand les trois répliques sont détruites.</p><p>Une créature qui ne voit rien n'est pas affectée par ce sort, de même qu'une créature dotée d'une forme de vision autre, comme la &reference[blindsight]{vision aveugle}, ou capable de percer les illusions (avec la &reference[truesight]{vision lucide}, par exemple).</p>"
+        },
+        "Mirror Image 2": {
+          "name": "Image miroir 2",
+          "description": "<p>Vous disposez d'une réplique illusoire dans votre espace. Les répliques se déplacent avec vous et reproduisent vos actions en changeant constamment de position, si bien qu'il est impossible de savoir quelle version d'entre vous est réelle. Vous pouvez consacrer une action à révoquer les répliques.</p><p>Chaque fois qu'une créature vous cible avec une attaque avant la fin du sort, lancez un d20 pour déterminer si l'attaque cible en fait l'une de vos répliques.</p><p>La CA d'une réplique est de 10 + votre modificateur de Dextérité. Si une attaque touche une réplique, celle-ci est détruite. On ne peut détruire une réplique que par une attaque qui la touche. Elle est par ailleurs insensible à toute autre forme de dégâts et d'effets. Le sort prend fin quand les trois répliques sont détruites.</p><p>Une créature qui ne voit rien n'est pas affectée par ce sort, de même qu'une créature dotée d'une forme de vision autre, comme la &reference[blindsight]{vision aveugle}, ou capable de percer les illusions (avec la &reference[truesight]{vision lucide}, par exemple).</p>"
+        },
+        "Mirror Image 3": {
+          "name": "Image miroir 3",
+          "description": "<p>Vous disposez d'une réplique illusoire dans votre espace. Les répliques se déplacent avec vous et reproduisent vos actions en changeant constamment de position, si bien qu'il est impossible de savoir quelle version d'entre vous est réelle. Vous pouvez consacrer une action à révoquer les répliques.</p><p>Chaque fois qu'une créature vous cible avec une attaque avant la fin du sort, lancez un d20 pour déterminer si l'attaque cible en fait l'une de vos répliques.</p><p>La CA d'une réplique est de 10 + votre modificateur de Dextérité. Si une attaque touche une réplique, celle-ci est détruite. On ne peut détruire une réplique que par une attaque qui la touche. Elle est par ailleurs insensible à toute autre forme de dégâts et d'effets. Le sort prend fin quand les trois répliques sont détruites.</p><p>Une créature qui ne voit rien n'est pas affectée par ce sort, de même qu'une créature dotée d'une forme de vision autre, comme la &reference[blindsight]{vision aveugle}, ou capable de percer les illusions (avec la &reference[truesight]{vision lucide}, par exemple).</p>"
         }
       }
     },
@@ -3246,6 +3352,15 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Control Illusion": {
+          "name": "Contrôler l'illusion"
+        }
+      },
+      "effects": {
+        "Misleading": {
+          "name": "Doublement illusoire",
+          "description": "<p>Vous devenez &reference[Invisible apply=false]{invisible} et, dans le même temps, votre double illusoire se présente à l'endroit où vous vous tenez. Ce double persiste pour toute la durée, mais l'invisibilité prend fin si vous &reference[attack]{attaquez} ou &reference[cast a spell]{lancez un sort}.</p><p>Vous pouvez consacrer votre action à déplacer votre double à concurrence du double de votre vitesse et le faire bouger, parler et se comporter à votre guise.</p><p>Vous voyez et entendez comme si vous vous trouviez au même endroit que lui. À chacun de vos tours, par une action bonus, vous pouvez passer de ses sens aux vôtres et vice versa. Tant que vous percevez par ses sens, vous êtes &reference[Blinded apply=false]{aveuglé} et &reference[Deafened apply=false]{assourdi} vis-à-vis de votre propre environnement.</p>"
         }
       }
     },
@@ -3265,12 +3380,30 @@
         "Cast": {
           "name": "Incanter"
         }
+      },
+      "effects": {
+        "Modify Memory in Progress": {
+          "name": "Modification de mémoire en cours",
+          "description": "<p>Vous êtes &reference[charmed apply=false]{charmé}. Tant que vous êtes charmé, vous êtes &reference[incapacitated apply=false]{neutralisé} et n'avez pas conscience de votre environnement, mais vous entendez toujours celui qui a lancé le sort. Si vous subissez des dégâts ou êtes la cible d'un autre sort, ce sort prend fin et aucun de vos souvenirs n'est altéré.</p>"
+        }
       }
     },
     "Moonbeam": {
       "name": "Rayon de lune",
       "description": "<p>Un large rayon de lueur argentée ténue plonge sous forme d'un cylindre de 1,50 m de rayon et 12 m de haut, centré sur un point à portée. Jusqu'à la fin du sort, le cylindre est empli d'une &reference[dim light]{lumière faible}.</p><p>Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour, elle est assaillie de flammes spectrales qui calcinent les chairs et effectue un jet de sauvegarde de Constitution. Elle subit 2d10 dégâts radiants en cas d'échec, la moitié en cas de réussite.</p><p>Un métamorphe effectue ce jet de sauvegarde avec le désavantage. S'il le rate, il retrouve également aussitôt sa forme d'origine et ne peut pas adopter d'autre forme tant qu'il n'a pas quitté la lumière produite par le sort.</p><p>À chacun de vos tours suivant l'incantation du sort, vous pouvez consacrer une action à déplacer le rayon de 18 m dans la direction de votre choix.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 3<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 2<sup>e</sup>.</p>",
-      "materials": "plusieurs graines de cocculus et un morceau de feldspath opalin"
+      "materials": "plusieurs graines de cocculus et un morceau de feldspath opalin",
+      "activities": {
+        "Moonbeam Burn Save": {
+          "name": "Sauvegarde contre les flammes de rayon de lune",
+          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour."
+        },
+        "Conjure Moon Beam": {
+          "name": "Invoquer un rayon de lune"
+        },
+        "Move Moonbeam": {
+          "name": "Déplacer le rayon de lune"
+        }
+      }
     },
     "Move Earth": {
       "name": "Glissement de terrain",
@@ -3293,7 +3426,8 @@
       },
       "effects": {
         "Nondetection": {
-          "name": "Antidétection"
+          "name": "Antidétection",
+          "description": "<p>Pour toute la durée, vous êtes caché à la magie de divination. Vous ne pouvez pas être ciblé par quelque magie de divination que ce soit, ni perçu par des capteurs de @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{scrutation} magique.</p>"
         }
       }
     },
@@ -3308,7 +3442,8 @@
       },
       "effects": {
         "Pass without Trace": {
-          "name": "Passage sans trace"
+          "name": "Passage sans trace",
+          "description": "<p>Un voile d'ombres et de silence vous soustrait à la détection. Vous bénéficiez d'un bonus de +10 aux tests de Dextérité (Discrétion) et ne pouvez être pisté que par des moyens magiques. Vous ne laissez aucune trace de votre passage.</p>"
         }
       }
     },
@@ -3371,7 +3506,8 @@
       },
       "effects": {
         "Phantom Steed": {
-          "name": "Monture fantôme"
+          "name": "Monture fantôme",
+          "description": "<p>Vous disposez d'une vitesse de 30 m et pouvez parcourir 15 km en une heure, ou 19,5 km à allure rapide. Quand le sort prend fin, vous vous effacez progressivement en laissant à votre cavalier 1 minute pour en descendre.</p><p>Le sort prend fin si votre invocateur consacre une action à vous révoquer ou si vous subissez des dégâts.</p>"
         }
       }
     },
@@ -3422,11 +3558,31 @@
     "Plane Shift": {
       "name": "Changement de plan",
       "description": "<p>Vous et un maximum de huit créatures consentantes qui formez un cercle en vous tenant par la main êtes transportés sur un autre plan d'existence. Vous pouvez spécifier une destination en des termes généraux, comme la cité d'Airain sur le Plan Élémentaire du Feu ou le palais de Dispater sur la deuxième strate des Neuf Enfers, auquel cas vous apparaissez à destination ou à proximité. Si vous tentez d'accéder à la cité d'Airain, par exemple, vous pourriez arriver dans la rue de l'Acier, devant la porte des Cendres, ou bien contempler la ville depuis l'autre bout de la mer de Feu, à la discrétion du MJ.</p><p>Ou bien, si vous connaissez la séquence de runes d'un @UUID[Compendium.dnd5e.spells.Item.8aWtP5hcrmcEesBW]{cercle de téléportation} sur un autre plan d'existence, ce sort vous transporte directement dans le cercle. Si le cercle de téléportation est trop petit pour accueillir toutes les créatures transportées, elles apparaissent dans les espaces inoccupés les plus proches du cercle.</p><p>Vous pouvez recourir à ce sort pour bannir une créature non consentante vers un autre plan. Choisissez une créature à portée d'allonge et effectuez contre elle une attaque de sort au corps à corps. Si l'attaque touche, la créature effectue un jet de sauvegarde de Charisme. Si la créature rate son JS, elle est transportée en un lieu aléatoire du plan d'existence spécifié. Une créature ainsi bannie devra retrouver son chemin jusqu'à votre plan d'existence actuel par ses propres moyens.</p>",
-      "materials": "une badine métallique fourchue d'une valeur minimale de 250 po, accordée avec un plan d'existence donné"
+      "materials": "une badine métallique fourchue d'une valeur minimale de 250 po, accordée avec un plan d'existence donné",
+      "activities": {
+        "Cast: Planar Travel": {
+          "name": "Incanter : voyage planaire"
+        },
+        "Cast: Banishing Attack": {
+          "name": "Incanter : attaque de bannissement"
+        },
+        "Banish Save": {
+          "name": "Sauvegarde contre le bannissement",
+          "condition": "Quand une créature est touchée par une attaque de ce sort."
+        }
+      }
     },
     "Plant Growth": {
       "name": "Croissance végétale",
-      "description": "<p>Ce sort gorge de vitalité les plantes d'une zone donnée. Deux applications existent pour ce sort, selon que vous souhaitez octroyer des bénéfices immédiats ou durables.</p><p>Si vous lancez ce sort au prix d'une action, choisissez un point à portée. Toutes les plantes normales dans un rayon de 30 m centré sur ce point grossissent et grandissent. Une créature qui se déplace dans la zone doit dépenser le quadruple de déplacement pour toute distance parcourue.</p><p>Vous pouvez désigner une ou plusieurs zones de n'importe quelle taille dans la zone d'effet du sort pour qu'elles ne soient pas affectées.</p><p>Si l'incantation du sort dure 8 heures, vous fertilisez durablement la terre locale. Toutes les plantes dans un rayon de 750 m centré en un point à portée gagnent en fécondité pendant 1 an. Ces plantes produisent le double des apports alimentaires normaux lors des récoltes.</p>"
+      "description": "<p>Ce sort gorge de vitalité les plantes d'une zone donnée. Deux applications existent pour ce sort, selon que vous souhaitez octroyer des bénéfices immédiats ou durables.</p><p>Si vous lancez ce sort au prix d'une action, choisissez un point à portée. Toutes les plantes normales dans un rayon de 30 m centré sur ce point grossissent et grandissent. Une créature qui se déplace dans la zone doit dépenser le quadruple de déplacement pour toute distance parcourue.</p><p>Vous pouvez désigner une ou plusieurs zones de n'importe quelle taille dans la zone d'effet du sort pour qu'elles ne soient pas affectées.</p><p>Si l'incantation du sort dure 8 heures, vous fertilisez durablement la terre locale. Toutes les plantes dans un rayon de 750 m centré en un point à portée gagnent en fécondité pendant 1 an. Ces plantes produisent le double des apports alimentaires normaux lors des récoltes.</p>",
+      "activities": {
+        "Cast: Action": {
+          "name": "Incanter : Action"
+        },
+        "Cast: 8 Hours": {
+          "name": "Incanter : 8 heures"
+        }
+      }
     },
     "Poison Spray": {
       "name": "Bouffée de poison",
@@ -3471,6 +3627,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Repeat Save": {
+          "name": "Réitérer la sauvegarde",
+          "condition": "Lorsqu'une créature &reference[stunned apply=false]{étourdie} par ce sort termine son tour."
         }
       }
     },
@@ -3503,17 +3663,100 @@
         "Prismatic Spray (violet)": {
           "description": "<p>La cible est aveuglée. Elle effectue un jet de sauvegarde de Sagesse au début du tour suivant du lanceur de sorts. Une sauvegarde réussie met fin à la cécité. Si le JS est raté, la créature est transportée vers un autre plan d’existence et n’est plus aveuglée.</p>",
           "name": "Embruns prismatiques (violet)"
+        },
+        "Failed Petrification Save": {
+          "name": "Sauvegarde ratée contre la pétrification",
+          "description": "<p>Vous avez raté un jet de sauvegarde contre le rayon indigo. Si vous ratez trois de ces jets, vous êtes &reference[petrified]{pétrifié}.</p>"
+        },
+        "Successful Petrification Save": {
+          "name": "Sauvegarde réussie contre la pétrification",
+          "description": "<p>Vous avez réussi un jet de sauvegarde contre le rayon indigo.</p>"
+        },
+        "Violet Blindness": {
+          "name": "Cécité violette",
+          "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé}. Au début de votre tour suivant, vous effectuez un jet de sauvegarde de Sagesse. Une sauvegarde réussie met fin à la cécité. Si vous ratez le JS, vous êtes transporté vers un autre plan choisi par le MJ et n'êtes plus aveuglé.</p>"
         }
       },
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "1. Red Ray": {
+          "name": "1. Rayon rouge"
+        },
+        "2. Orange Ray": {
+          "name": "2. Rayon orange"
+        },
+        "3. Yellow Ray": {
+          "name": "3. Rayon jaune"
+        },
+        "4. Green Ray": {
+          "name": "4. Rayon vert"
+        },
+        "5. Blue Ray": {
+          "name": "5. Rayon bleu"
+        },
+        "6. Indigo Ray": {
+          "name": "6. Rayon indigo"
+        },
+        "7. Violet Ray": {
+          "name": "7. Rayon violet"
         }
       }
     },
     "Prismatic Wall": {
       "name": "Mur prismatique",
-      "description": "<p>Un plan multicolore de lueurs chatoyantes s'érige sous forme d'un mur vertical opaque centré sur un point que vous voyez à portée, avec les dimensions maximales suivantes : longueur 27 m, hauteur 9 m et épaisseur 2,5 cm. Vous pouvez au lieu de cela lui donner la forme d'une sphère d'un diamètre maximal de 9 m, centrée en un point que vous choisissez à portée. Le mur reste en place pour toute la durée. Si vous positionnez le mur de façon qu'il traverse un espace occupé par une créature, le sort échoue et votre action comme votre emplacement de sort sont gaspillés.</p><p>Le mur produit une lumière vive sur une distance de 30 m et une lumière faible sur 30 m de plus. Vous et les créatures que vous désignez à l'incantation du sort pouvez sans risque traverser le mur et rester à proximité. Si une autre créature qui voit le mur s'approche dans un rayon de 6 m de sa zone ou y commence son tour, elle doit réussir un jet de sauvegarde de Constitution sous peine d'être &reference[Blinded]{aveuglée} pendant 1 minute.</p><p>Le mur est constitué de sept couches, chacune d'une couleur différente. Lorsqu'une créature tente de pénétrer le mur ou de le traverser, elle le fait couche après couche jusqu'à toutes les avoir franchies. À mesure qu'elle traverse ou pénètre chaque couche, la créature effectue un jet de sauvegarde de Dextérité sous peine d'être affectée par les propriétés de cette couche, décrites ci-après.</p><p>On peut détruire le mur, couche par couche, de la rouge à la violette, par des moyens propres à chaque couche. Une fois qu'une couche est détruite, elle le reste pour toute la durée du sort. Un sceptre d'oblitération détruit un mur prismatique, mais un @UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{champ antimagie} est sans effet sur lui.</p><ol><li><p><em><strong>Rouge.</strong></em> La créature subit 10d6 dégâts de feu en cas d'échec, la moitié en cas de réussite. Tant que cette couche reste en place, les attaques à distance non magiques ne peuvent traverser le mur. La couche se détruit si on lui inflige au moins 25 dégâts de froid.</p></li><li><p><em><strong>Orange.</strong></em> La créature subit 10d6 dégâts d'acide en cas d'échec, la moitié en cas de réussite. Tant que cette couche reste en place, les attaques à distance magiques ne peuvent traverser le mur. La couche est détruite par un vent fort.</p></li><li><p><em><strong>Jaune.</strong></em> La créature subit 10d6 dégâts de foudre en cas d'échec, la moitié en cas de réussite. La couche se détruit si on lui inflige au moins 60 dégâts de force.</p></li><li><p><em><strong>Verte.</strong></em> La créature subit 10d6 dégâts de poison en cas d'échec, la moitié en cas de réussite. Le sort @UUID[Compendium.dnd5e.spells.Item.d9MwcXi7Il3HROXd]{passe-muraille}, ou autre sort de niveau supérieur ou égal capable d'ouvrir un portail sur une surface solide, détruit cette couche.</p></li><li><p><em><strong>Bleue.</strong></em> La créature subit 10d6 dégâts de froid en cas d'échec, la moitié en cas de réussite. La couche se détruit si on lui inflige au moins 25 dégâts de feu.</p></li><li><p><em><strong>Indigo.</strong></em> En cas d'échec, la créature est entravée. Elle effectue un jet de sauvegarde de Constitution à la fin de chacun de ses tours. Si elle se sauvegarde trois fois, le sort prend fin. Si elle rate son JS trois fois, elle subit l'état &reference[Petrified]{pétrifié} de manière permanente. Ces réussites et échecs n'ont pas besoin d'être consécutifs ; notez-les quelque part, jusqu'à ce que la créature atteigne un total de trois pour l'un ou l'autre.</p><p>Tant que cette couche reste en place, les sorts ne peuvent pas traverser le mur. La couche est détruite par la lumière vive que produit le sort @UUID[Compendium.dnd5e.spells.Item.BP3GCwa66IAw1yTG]{lumière du jour} ou un sort comparable de niveau supérieur ou égal.</p></li><li><p><em><strong>Violette.</strong></em> En cas d'échec, la créature est &reference[Blinded]{aveuglée}. Elle effectue un jet de sauvegarde de Sagesse au début de votre tour suivant. Une sauvegarde réussie met fin à la cécité. Si ce JS est raté, la créature est transportée vers un autre plan d'existence choisi par le MJ et n'est plus aveuglée. (En général, une créature qui se trouvait sur un plan qui n'était pas le sien est bannie sur son plan d'origine, tandis que les autres sont simplement envoyées sur le Plan Astral ou Éthéré.) La couche est détruite par le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ou tout sort comparable de niveau supérieur ou égal, capable de mettre un terme aux sorts et effets magiques.</p></li></ol>"
+      "description": "<p>Un plan multicolore de lueurs chatoyantes s'érige sous forme d'un mur vertical opaque centré sur un point que vous voyez à portée, avec les dimensions maximales suivantes : longueur 27 m, hauteur 9 m et épaisseur 2,5 cm. Vous pouvez au lieu de cela lui donner la forme d'une sphère d'un diamètre maximal de 9 m, centrée en un point que vous choisissez à portée. Le mur reste en place pour toute la durée. Si vous positionnez le mur de façon qu'il traverse un espace occupé par une créature, le sort échoue et votre action comme votre emplacement de sort sont gaspillés.</p><p>Le mur produit une lumière vive sur une distance de 30 m et une lumière faible sur 30 m de plus. Vous et les créatures que vous désignez à l'incantation du sort pouvez sans risque traverser le mur et rester à proximité. Si une autre créature qui voit le mur s'approche dans un rayon de 6 m de sa zone ou y commence son tour, elle doit réussir un jet de sauvegarde de Constitution sous peine d'être &reference[Blinded]{aveuglée} pendant 1 minute.</p><p>Le mur est constitué de sept couches, chacune d'une couleur différente. Lorsqu'une créature tente de pénétrer le mur ou de le traverser, elle le fait couche après couche jusqu'à toutes les avoir franchies. À mesure qu'elle traverse ou pénètre chaque couche, la créature effectue un jet de sauvegarde de Dextérité sous peine d'être affectée par les propriétés de cette couche, décrites ci-après.</p><p>On peut détruire le mur, couche par couche, de la rouge à la violette, par des moyens propres à chaque couche. Une fois qu'une couche est détruite, elle le reste pour toute la durée du sort. Un sceptre d'oblitération détruit un mur prismatique, mais un @UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{champ antimagie} est sans effet sur lui.</p><ol><li><p><em><strong>Rouge.</strong></em> La créature subit 10d6 dégâts de feu en cas d'échec, la moitié en cas de réussite. Tant que cette couche reste en place, les attaques à distance non magiques ne peuvent traverser le mur. La couche se détruit si on lui inflige au moins 25 dégâts de froid.</p></li><li><p><em><strong>Orange.</strong></em> La créature subit 10d6 dégâts d'acide en cas d'échec, la moitié en cas de réussite. Tant que cette couche reste en place, les attaques à distance magiques ne peuvent traverser le mur. La couche est détruite par un vent fort.</p></li><li><p><em><strong>Jaune.</strong></em> La créature subit 10d6 dégâts de foudre en cas d'échec, la moitié en cas de réussite. La couche se détruit si on lui inflige au moins 60 dégâts de force.</p></li><li><p><em><strong>Verte.</strong></em> La créature subit 10d6 dégâts de poison en cas d'échec, la moitié en cas de réussite. Le sort @UUID[Compendium.dnd5e.spells.Item.d9MwcXi7Il3HROXd]{passe-muraille}, ou autre sort de niveau supérieur ou égal capable d'ouvrir un portail sur une surface solide, détruit cette couche.</p></li><li><p><em><strong>Bleue.</strong></em> La créature subit 10d6 dégâts de froid en cas d'échec, la moitié en cas de réussite. La couche se détruit si on lui inflige au moins 25 dégâts de feu.</p></li><li><p><em><strong>Indigo.</strong></em> En cas d'échec, la créature est entravée. Elle effectue un jet de sauvegarde de Constitution à la fin de chacun de ses tours. Si elle se sauvegarde trois fois, le sort prend fin. Si elle rate son JS trois fois, elle subit l'état &reference[Petrified]{pétrifié} de manière permanente. Ces réussites et échecs n'ont pas besoin d'être consécutifs ; notez-les quelque part, jusqu'à ce que la créature atteigne un total de trois pour l'un ou l'autre.</p><p>Tant que cette couche reste en place, les sorts ne peuvent pas traverser le mur. La couche est détruite par la lumière vive que produit le sort @UUID[Compendium.dnd5e.spells.Item.BP3GCwa66IAw1yTG]{lumière du jour} ou un sort comparable de niveau supérieur ou égal.</p></li><li><p><em><strong>Violette.</strong></em> En cas d'échec, la créature est &reference[Blinded]{aveuglée}. Elle effectue un jet de sauvegarde de Sagesse au début de votre tour suivant. Une sauvegarde réussie met fin à la cécité. Si ce JS est raté, la créature est transportée vers un autre plan d'existence choisi par le MJ et n'est plus aveuglée. (En général, une créature qui se trouvait sur un plan qui n'était pas le sien est bannie sur son plan d'origine, tandis que les autres sont simplement envoyées sur le Plan Astral ou Éthéré.) La couche est détruite par le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ou tout sort comparable de niveau supérieur ou égal, capable de mettre un terme aux sorts et effets magiques.</p></li></ol>",
+      "activities": {
+        "Conjure Prismatic Wall": {
+          "name": "Invoquer un mur prismatique"
+        },
+        "Conjure Prismatic Sphere": {
+          "name": "Invoquer une sphère prismatique"
+        },
+        "Red Wall": {
+          "name": "Mur rouge",
+          "condition": "Lorsqu'une créature tente de traverser le mur."
+        },
+        "Orange Wall": {
+          "condition": "Lorsqu'une créature tente de traverser le mur.",
+          "name": "Mur orange"
+        },
+        "Yellow Wall": {
+          "condition": "Lorsqu'une créature tente de traverser le mur.",
+          "name": "Mur jaune"
+        },
+        "Green Wall": {
+          "condition": "Lorsqu'une créature tente de traverser le mur.",
+          "name": "Mur vert"
+        },
+        "Blue Wall": {
+          "condition": "Lorsqu'une créature tente de traverser le mur.",
+          "name": "Mur bleu"
+        },
+        "Indigo Wall": {
+          "condition": "Lorsqu'une créature tente de traverser le mur.",
+          "name": "Mur indigo"
+        },
+        "Violet Wall": {
+          "condition": "Lorsqu'une créature tente de traverser le mur.",
+          "name": "Mur violet"
+        }
+      },
+      "effects": {
+        "Failed Petrification Save": {
+          "name": "Sauvegarde ratée contre la pétrification",
+          "description": "<p>Vous avez raté un jet de sauvegarde contre le mur indigo. Si vous ratez trois de ces jets, vous êtes &reference[petrified]{pétrifié}.</p>"
+        },
+        "Successful Petrification Save": {
+          "name": "Sauvegarde réussie contre la pétrification",
+          "description": "<p>Vous avez réussi un jet de sauvegarde contre le mur indigo.</p>"
+        },
+        "Violet Blindness": {
+          "name": "Cécité violette",
+          "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé}. Au début de votre tour suivant, vous effectuez un jet de sauvegarde de Sagesse. Une sauvegarde réussie met fin à la cécité. Si vous ratez le JS, vous êtes transporté vers un autre plan choisi par le MJ et n'êtes plus aveuglé.</p>"
+        }
+      }
     },
     "Private Sanctum": {
       "name": "Sanctuaire privé",
@@ -3541,6 +3784,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Investigate Illusion Check": {
+          "name": "Test d'investigation de l'illusion"
         }
       }
     },
@@ -3551,6 +3797,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Investigate Illusion Check": {
+          "name": "Test d'investigation de l'illusion"
         }
       }
     },
@@ -3560,6 +3809,28 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Protection from Acid": {
+          "name": "Protection contre l'acide",
+          "description": "<p>Pour toute la durée, vous bénéficiez de la résistance aux dégâts d'acide.</p>"
+        },
+        "Protection from Cold": {
+          "name": "Protection contre le froid",
+          "description": "<p>Pour toute la durée, vous bénéficiez de la résistance aux dégâts de froid.</p>"
+        },
+        "Protection from Fire": {
+          "name": "Protection contre le feu",
+          "description": "<p>Pour toute la durée, vous bénéficiez de la résistance aux dégâts de feu.</p>"
+        },
+        "Protection from Lightning": {
+          "name": "Protection contre la foudre",
+          "description": "<p>Pour toute la durée, vous bénéficiez de la résistance aux dégâts de foudre.</p>"
+        },
+        "Protection from Thunder": {
+          "name": "Protection contre le tonnerre",
+          "description": "<p>Pour toute la durée, vous bénéficiez de la résistance aux dégâts de tonnerre.</p>"
         }
       }
     },
@@ -3610,6 +3881,12 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Resurrection Sickness": {
+          "name": "Mal de résurrection",
+          "description": "<p>Revenir d'entre les morts demeure une épreuve. Vous subissez un malus de -4 à tous vos jets d'attaque, jets de sauvegarde et tests de caractéristique. Chaque fois que vous terminez un repos long, ce malus diminue de 1, jusqu'à ce qu'il disparaisse.</p>"
         }
       }
     },
@@ -3995,6 +4272,9 @@
       "activities": {
         "Cast Spell": {
           "name": "Lancer un sort"
+        },
+        "Slippery Ice Save": {
+          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour."
         }
       }
     },
@@ -4564,6 +4844,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Enter Zone Save": {
+          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour."
         }
       }
     },
