@@ -42,7 +42,12 @@
         "Mucous Cloud": {
           "name": "Nuage muqueux",
           "description": "<p>Tant qu'il est sous l'eau, l'aboleth est entouré d'un mucus réactif. Une créature qui touche physiquement l'aboleth ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature est malade pendant [[/r 1d4]] heures. La créature malade ne peut respirer que sous l'eau.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Nuage muqueux.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Nuage muqueux.</p>",
+          "activities": {
+            "Disease Save": {
+              "name": "Sauvegarde contre la maladie"
+            }
+          }
         },
         "Probing Telepathy": {
           "name": "Télépathie inquisitrice",
@@ -51,7 +56,12 @@
         "Tentacle": {
           "name": "Tentacule",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d6 + 5}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être malade. Cette maladie est sans effet pendant 1 minute et toute magie capable de soigner les maladies l'élimine. Au bout de 1 minute, la peau de la créature malade devient translucide et visqueuse, la créature ne peut pas regagner de points de vie quand elle n'est pas sous l'eau et seuls le sort @UUID[Compendium.dnd5e.spells.Item.qcYitWoSMTnKkzM1]{guérison} ou les sorts du 6<sup>e</sup> niveau ou plus qui soignent les maladies peuvent éliminer cette affection. Lorsque la créature n'est pas immergée dans l'eau, elle subit [[/damage average 1d12 acid]] toutes les 10 minutes, à moins d'hydrater abondamment sa peau dans l'intervalle.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Tentacule.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Tentacule.</p>",
+          "activities": {
+            "Disease Save": {
+              "name": "Sauvegarde contre la maladie"
+            }
+          }
         },
         "Tail": {
           "name": "Queue",
@@ -60,7 +70,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -159,7 +169,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -168,7 +178,12 @@
         "Acid Breath": {
           "name": "Souffle d'acide",
           "description": "<p>Le dragon crache de l'acide sous forme d'une ligne de 18 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 54 ([[/damage]]{12d8}) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>",
+          "activities": {
+            "Exhale Acid": {
+              "name": "Exhaler de l'acide"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -234,7 +249,12 @@
         "Lightning Breath": {
           "name": "Souffle de foudre",
           "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 27 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 66 ([[/damage]]{12d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
+          "activities": {
+            "Exhale Lightning": {
+              "name": "Exhaler de la foudre"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -342,7 +362,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -501,7 +521,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -587,7 +607,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -625,7 +645,12 @@
         "Poison Breath": {
           "name": "Souffle empoisonné",
           "description": "<p>Le dragon crache des vapeurs toxiques sous forme d'un cône de 18 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 56 ([[/damage]]{16d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>",
+          "activities": {
+            "Exhale Poison": {
+              "name": "Exhaler du poison"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -675,7 +700,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le dragon crache des flammes sous forme d'un cône de 18 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 63 ([[/damage]]{18d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         },
         "Bite": {
           "name": "Morsure",
@@ -813,7 +843,12 @@
         "Cold Breath": {
           "name": "Souffle glacial",
           "description": "<p>Le dragon exhale un cône de 18 m de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 54 ([[/damage]]{12d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>",
+          "activities": {
+            "Exhale Ice": {
+              "name": "Exhaler de la glace"
+            }
+          }
         },
         "Detect": {
           "name": "Détection",
@@ -900,7 +935,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -938,7 +973,12 @@
         "Acid Breath": {
           "name": "Souffle d'acide",
           "description": "<p>Le dragon crache de l'acide sous forme d'une ligne de 27 m de long pour 3 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 67 ([[/damage]]{15d8}) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>",
+          "activities": {
+            "Exhale Acid": {
+              "name": "Exhaler de l'acide"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1005,7 +1045,12 @@
         "Lightning Breath": {
           "name": "Souffle de foudre",
           "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 36 m de long pour 3 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 88 ([[/damage]]{16d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
+          "activities": {
+            "Exhale Lightning": {
+              "name": "Exhaler de la foudre"
+            }
+          }
         },
         "Tail": {
           "name": "Queue",
@@ -1108,7 +1153,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -1265,7 +1310,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -1348,7 +1393,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -1386,7 +1431,12 @@
         "Poison Breath": {
           "name": "Souffle empoisonné",
           "description": "<p>Le dragon crache des vapeurs toxiques sous forme d'un cône de 27 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 77 ([[/damage]]{22d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>",
+          "activities": {
+            "Exhale Poison": {
+              "name": "Exhaler du poison"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1441,7 +1491,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le dragon crache des flammes sous forme d'un cône de 27 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 91 ([[/damage]]{26d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -1569,7 +1624,12 @@
         "Cold Breath": {
           "name": "Souffle glacial",
           "description": "<p>Le dragon exhale un cône de 27 m de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 72 ([[/damage]]{16d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>",
+          "activities": {
+            "Exhale Ice": {
+              "name": "Exhaler de la glace"
+            }
+          }
         },
         "Detect": {
           "name": "Détection",
@@ -2042,7 +2102,7 @@
         },
         "Shortsword": {
           "name": "Épée courte",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 +3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=dnd5eactivity100]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save activity=K4WCmn76MTQNDMpO]] et subit [[/damage average activity=K4WCmn76MTQNDMpO]] en cas d'échec, la moitié en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison"
@@ -2051,7 +2111,7 @@
         },
         "Light Crossbow": {
           "name": "Arbalète légère",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 24/96 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=qt3tGFCRiYgaiWQ3]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save activity=1veeOGXOGCLeTwbO]] et subit [[/damage average activity=1veeOGXOGCLeTwbO]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Arbalète légère.</p>",
           "activities": {
             "Poison Save": {
@@ -2432,7 +2492,12 @@
         "Lightning Breath": {
           "name": "Souffle de foudre",
           "description": "<p>Le béhir crache une ligne de foudre de 6 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de Dextérité DD 16, et subit 66 (12d10) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
+          "activities": {
+            "Exhale Lightning": {
+              "name": "Exhaler de la foudre"
+            }
+          }
         },
         "Swallow": {
           "name": "Engloutissement",
@@ -2510,11 +2575,16 @@
         "Acid Breath": {
           "name": "Souffle d'acide",
           "description": "<p>Le dragon crache de l'acide sous forme d'une ligne de 4,50 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 22 ([[/damage]]{5d8}) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>",
+          "activities": {
+            "Exhale Acid": {
+              "name": "Exhaler de l'acide"
+            }
+          }
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -2607,7 +2677,12 @@
         "Lightning Breath": {
           "name": "Souffle de foudre",
           "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 9 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 22 ([[/damage]]{4d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
+          "activities": {
+            "Exhale Lightning": {
+              "name": "Exhaler de la foudre"
+            }
+          }
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -2702,7 +2777,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -2922,7 +2997,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>La tête de dragon crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité DD 15 et subit 31 (7d8) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -2958,7 +3038,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -2984,7 +3064,12 @@
         "Haste": {
           "name": "Hâte",
           "description": "<p>Jusqu'à la fin de son tour suivant, le golem reçoit magiquement un bonus de +2 en CA, est avantagé aux jets de sauvegarde de Dextérité et peut effectuer son attaque de Coup par une action bonus.</p>",
-          "chat": "<p>[[lookup @name]] utilise Hâte.</p>"
+          "chat": "<p>[[lookup @name]] utilise Hâte.</p>",
+          "effects": {
+            "Hastened": {
+              "name": "Hâté"
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -3145,7 +3230,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de Constitution DD 11 contre la pétrification magique. En cas d'échec, la créature est entravée et commence à se transformer en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée pendant 24 heures.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Petrification Save": {
+              "name": "Sauvegarde de pétrification"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -3327,7 +3417,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         }
       },
       "habitat": "Côtier",
@@ -3484,8 +3574,13 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] contre la maladie, sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'à ce qu'elle en guérisse. Toutes les 24 heures après cela, la créature réitère le jet de sauvegarde, son maximum de points de vie se réduisant de 5 (1d10) en cas d'échec. Cette réduction persiste jusqu'à ce que la cible guérisse de la maladie. La créature meurt si la maladie réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=7RkSJfzdID9Ccqmn]] contre la maladie, sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'à ce qu'elle en guérisse. Toutes les 24 heures après cela, la créature réitère le jet de sauvegarde, son maximum de points de vie se réduisant de 5 (1d10) en cas d'échec. Cette réduction persiste jusqu'à ce que la cible guérisse de la maladie. La créature meurt si la maladie réduit son maximum de points de vie à 0.</p>",
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Disease Save": {
+              "name": "Sauvegarde contre la maladie"
+            }
+          }
         },
         "Two-Headed": {
           "name": "Bicéphale",
@@ -3785,7 +3880,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -3928,7 +4023,7 @@
         },
         "Hand Crossbow": {
           "name": "Arbalète de poing",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/36 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde échoue d'au moins 5, la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière. Elle reprend conscience si elle subit des dégâts ou si une autre créature consacre une action à la secouer.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save activity=k2VWbxuUXUpfkpoz]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde échoue d'au moins 5, la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière. Elle reprend conscience si elle subit des dégâts ou si une autre créature consacre une action à la secouer.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Arbalète de poing.</p>",
           "activities": {
             "Poison Save": {
@@ -3969,7 +4064,7 @@
         },
         "Quarterstaff": {
           "name": "Bâton de combat",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]] (+4 avec crosse des druides), allonge 1,50 m, une cible. <em>Touché :</em> 3 ([[/damage]]{1d6}) dégâts contondants, ou 4 ([[/damage twoHanded]]{1d8}) dégâts contondants si utilisé à deux mains, ou 6 ([[/damage activity=J8RgDbtkXvXUJDuD]]{1d8 + 2}) dégâts contondants avec @UUID[.udSiVp4nSrGBSvG1]{crosse des druides}.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] ou [[/damage twoHanded]] si utilisé à deux mains, ou [[/attack extended activity=hQCHzLhxJpg6id19]]. [[/damage extended activity=hQCHzLhxJpg6id19]] avec @UUID[.udSiVp4nSrGBSvG1]{crosse des druides}.</p>",
           "chat": "<p>Le druide attaque avec son Bâton de combat.</p>",
           "activities": {
             "Spellcasting Attack": {
@@ -4153,12 +4248,12 @@
         },
         "War Pick": {
           "name": "Pic de guerre",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts perforants, ou 11 ([[/damage average activity=efBWBI6TxtxVoljw]]{2d8 + 2}) dégâts perforants si agrandi.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage 1d8 + @abilities.str.mod piercing average extended]], ou [[/damage 2d8 + @abilities.str.mod piercing average]] si agrandi.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Pic de guerre.</p>"
         },
         "Javelin": {
           "name": "Javeline",
-          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 9/36 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants, ou 9 ([[/damage average activity=qmX3Tp3KYUdZPgB1]]{2d6 + 2}) dégâts perforants si agrandi.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage 1d6 + @abilities.str.mod piercing average extended]], ou [[/damage 2d6 + @abilities.str.mod piercing average]] si agrandi.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Javeline.</p>"
         },
         "Invisibility": {
@@ -4237,7 +4332,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>L'élémentaire inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -4454,7 +4549,7 @@
         },
         "Web": {
           "name": "Toile d'araignée",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/18 m, une créature de taille G ou inférieure. <em>Touché :</em> La créature est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la créature entravée peut effectuer un test de [[/check]] et se libère de la toile en cas de réussite. Cet effet prend également fin si la toile est détruite. La toile est dotée d'une CA de 10, de 5 points de vie, de l'immunité contre les dégâts contondants, psychiques et de poison, et de la vulnérabilité aux dégâts de feu.</p>",
+          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/18 m, une créature de taille G ou inférieure. <em>Touché :</em> La créature est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la créature entravée peut effectuer un test de [[/check activity=aELnqvc37WaAm0IG]] et se libère de la toile en cas de réussite. Cet effet prend également fin si la toile est détruite. La toile est dotée d'une CA de 10, de 5 points de vie, de l'immunité contre les dégâts contondants, psychiques et de poison, et de la vulnérabilité aux dégâts de feu.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>"
         }
       },
@@ -4517,7 +4612,7 @@
         },
         "Touch": {
           "name": "Contact",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts de feu. Si la cible est une créature ou un objet inflammable, elle s'embrase. Tant qu'aucune créature n'a consacré une action à étouffer le feu, la cible subit 5 ([[/damage activity=t6hyTO2lOgR3OWJQ]]{1d10}) dégâts de feu au début de chacun de ses tours.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature ou un objet inflammable, elle s'embrase. Tant qu'aucune créature n'a consacré une action à étouffer le feu, la cible subit [[/damage activity=dFEUCLc4Cmb2DETC average]] au début de chacun de ses tours.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Contact.</p>"
         }
       },
@@ -4648,7 +4743,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -4810,7 +4905,12 @@
         "Possession": {
           "name": "Possession",
           "description": "<p>Un humanoïde que le fantôme voit dans un rayon de 1,50 m doit réussir un jet de sauvegarde de Charisme DD 13 sous peine d'être possédé par le fantôme ; ce dernier disparaît alors et la cible, neutralisée, perd le contrôle de son corps. C'est désormais le fantôme qui en a le contrôle, mais la cible reste consciente.</p><p>Les attaques, sorts et autres effets ne peuvent pas cibler le fantôme, en dehors de ceux qui renvoient les morts-vivants. Il conserve son alignement, ses valeurs d'Intelligence, de Sagesse et de Charisme, et son immunité contre les états charmé et effrayé. Pour le reste, il reprend le profil de jeu de la cible possédée mais n'a accès ni à son savoir, ni à ses aptitudes de classe, ni à ses maîtrises.</p><p>La possession persiste jusqu'à ce que le corps tombe à 0 point de vie, que le fantôme y mette un terme par une action bonus ou qu'il soit renvoyé (ou encore chassé du corps par un effet tel que dissipation du mal et du bien). Quand la possession prend fin, le fantôme réapparaît en un espace inoccupé dans un rayon de 1,50 m du corps. Si elle réussit le jet de sauvegarde ou quand la possession prend fin, la cible devient immunisée contre la possession de ce fantôme pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Possession.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Possession.</p>",
+          "activities": {
+            "Possess Creature": {
+              "name": "Posséder une créature"
+            }
+          }
         }
       },
       "languages": "celles qu'il connaissait de son vivant",
@@ -4971,7 +5071,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Claw": {
           "name": "Pince",
@@ -5080,7 +5180,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -5167,7 +5267,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
@@ -5214,7 +5314,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d4 + 4}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=S1TZRRMFWCsEQWHy]] supplémentaires en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -5252,7 +5352,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de contracter une maladie. Tant qu'elle n'est pas guérie de la maladie, la cible ne peut pas récupérer de points de vie hormis par des moyens magiques, et son maximum de points de vie diminue de 3 (1d6) toutes les 24 heures. Si son maximum de points de vie tombe à 0 en raison de la maladie, la cible meurt.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Disease Save": {
+              "name": "Sauvegarde contre la maladie"
+            }
+          }
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
@@ -5280,7 +5385,7 @@
         },
         "Sting": {
           "name": "Dard",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 22 ([[/damage activity=dnd5eactivity100]]{4d10}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=GR0Tw9glqMrDk8Uh]] supplémentaires en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
           "activities": {
             "Poison Save": {
@@ -5302,7 +5407,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Ram": {
           "name": "Coup de bélier",
@@ -5322,7 +5427,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -5360,7 +5465,7 @@
         },
         "Web": {
           "name": "Toile d'araignée",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/18 m, une créature. <em>Touché :</em> La cible est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la cible entravée peut effectuer un test de [[/check]] et fait céder la toile en cas de réussite. L'effet prend fin également si la toile est attaquée et détruite (CA 10 ; 5 points de vie ; vulnérabilité aux dégâts de feu ; immunité contre les dégâts contondants, de poison et psychiques).</p>",
+          "description": "<p>[[/attack extended]]. <em>Touché :</em> La cible est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la cible entravée peut effectuer un test de [[/check activity=aELnqvc37WaAm0IG]] et fait céder la toile en cas de réussite. L'effet prend fin également si la toile est attaquée et détruite (CA 10 ; 5 points de vie ; vulnérabilité aux dégâts de feu ; immunité contre les dégâts contondants, de poison et psychiques).</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>"
         }
       },
@@ -5372,7 +5477,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -5733,7 +5838,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -5820,7 +5925,12 @@
         "Poison Breath": {
           "name": "Souffle empoisonné",
           "description": "<p>Le dragon crache des vapeurs toxiques sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 21 ([[/damage]]{6d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>",
+          "activities": {
+            "Exhale Poison": {
+              "name": "Exhaler du poison"
+            }
+          }
         },
         "Bite": {
           "name": "Morsure",
@@ -5829,7 +5939,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -5839,7 +5949,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -6004,7 +6114,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 8 ([[/damage]]{1d8 + 4}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] et subit 45 ([[/damage activity=dnd5eactivity100]]{10d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=Z2wqSwuJDKaRy2TA]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -6247,7 +6357,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le vétéran crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage]]{7d6}) dégâts de feu en cas d’échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         }
       },
       "subtype": "Humain",
@@ -6314,7 +6429,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le molosse crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 21 ([[/damage]]{6d6}) dégâts de feu en cas d’échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         }
       },
       "languages": "comprend l'infernal, mais ne parle pas",
@@ -6501,7 +6621,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -6583,6 +6703,9 @@
             },
             "Create Dome of Ice": {
               "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
+            },
+            "Pass Through Frigid Air Save": {
+              "condition": "Lorsqu'une créature traverse la nappe d'air glacial pour la première fois d'un tour."
             }
           }
         },
@@ -6679,7 +6802,7 @@
         "Sting (Bite in Beast Form)": {
           "name": "Dard (Morsure sous forme de bête)",
           "chat": "<p>Le diablotin attaque avec son Dard. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5([[/damage]]{1d4 + 3}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=hUmRNvmmpY5rJfVE]] en cas d'échec, la moitié en cas de réussite.</p>"
         },
         "Devil Sight": {
           "name": "Vision du diable"
@@ -6886,7 +7009,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Freedom of Movement": {
           "name": "Liberté de mouvement",
@@ -6895,7 +7018,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>L'élémentaire inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -7438,7 +7561,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le méphite exhale des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 7 ([[/damage]]{2d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         },
         "Heat Metal": {
           "name": "Métal brûlant",
@@ -7471,7 +7599,7 @@
         },
         "Touch": {
           "name": "Contact",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{2d6}) dégâts de feu. Si la cible est une créature ou un objet inflammable, elle s'embrase. Tant qu'aucune créature n'a consacré une action à étouffer le feu, la cible subit 3 ([[/damage average activity=Tv2pWtjFLchLGbMd]]{1d6}) dégâts de feu à la fin de chacun de ses tours.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature ou un objet inflammable, elle s'embrase. Tant qu'aucune créature n'a consacré une action à étouffer le feu, la cible subit [[/damage average activity=OuZcepCj3KXR6GNq]] à la fin de chacun de ses tours.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Contact.</p>"
         }
       },
@@ -7630,7 +7758,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Spear": {
           "name": "Lance",
@@ -7647,7 +7775,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -7806,6 +7934,11 @@
             "Frightening Gaze": {
               "name": "Regard horrifique"
             }
+          },
+          "activities": {
+            "Focus Gaze": {
+              "name": "Concentrer le regard"
+            }
           }
         }
       },
@@ -7859,6 +7992,11 @@
           "effects": {
             "Frightening Gaze": {
               "name": "Regard horrifique"
+            }
+          },
+          "activities": {
+            "Focus Gaze": {
+              "name": "Concentrer le regard"
             }
           }
         },
@@ -8135,7 +8273,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
@@ -8197,7 +8335,7 @@
         },
         "Glaive": {
           "name": "Coutille",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts tranchants, ou 9 ([[/damage activity=aKQQjgpq0XwCcMGK]]{1d10 + 4}) dégâts tranchants quand l'oni est de taille M ou P.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], ou [[/damage average activity=Rev09LWfUvsYkKwA]] quand l'oni est de taille M ou P.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Coutille.</p>"
         },
         "Claw (Oni Form Only)": {
@@ -8305,7 +8443,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d8 + 3}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] contre la maladie, sous peine d'être &Reference[poisoned apply=false]{empoisonnée} jusqu'à ce qu'elle en guérisse. Toutes les 24 heures après cela, la cible doit réitérer le jet de sauvegarde, son maximum de points de vie se réduisant de 5 ([[/r 1d10]]) en cas d'échec. La cible guérit de la maladie en cas de sauvegarde réussie. La cible meurt si la maladie réduit son maximum de points de vie à 0. Cette réduction du maximum de points de vie persiste jusqu'à ce que la cible guérisse de la maladie.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "Disease Save": {
+              "name": "Sauvegarde contre la maladie"
+            }
+          },
+          "effects": {
+            "Disease Save": {
+              "name": "Sauvegarde contre la maladie"
+            }
+          }
         },
         "Tentacle": {
           "name": "Tentacule",
@@ -8445,7 +8593,12 @@
         "Fear Aura": {
           "name": "Aura de terreur",
           "description": "<p>Toute créature hostile au diantrefosse qui commence son tour dans un rayon de 6 m de celui-ci effectue un jet de sauvegarde de [[/save]], sauf si le diable est neutralisé. En cas d'échec, la créature est &Reference[frightened]{effrayée} jusqu'au début de son tour suivant. Si son jet de sauvegarde est réussi, la créature est immunisée contre l'Aura de terreur du diantrefosse pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Aura de terreur.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Aura de terreur.</p>",
+          "effects": {
+            "Terrified": {
+              "name": "Terrifié"
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -8465,7 +8618,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 22 ([[/damage]]{4d6 + 8}) dégâts perforants. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. Ainsi empoisonnée, elle ne peut pas récupérer de points de vie et subit 21 ([[/damage activity=dnd5eactivity100]]{6d6}) dégâts de poison au début de chacun de ses tours. La cible empoisonnée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonnée}. Ainsi empoisonnée, elle ne peut pas récupérer de points de vie et subit [[/damage average activity=JtAxEJ6yXykPXhDf]] au début de chacun de ses tours. La cible empoisonnée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -8611,7 +8764,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> [[/damage]]{1} dégât perforant et la cible effectue un jet de sauvegarde de [[/save]], et subit 5 ([[/damage 2d4 poison]]{2d4}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]], et subit [[/damage average activity=A5RV1tH6Xm3ywQ1y]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -8787,7 +8940,7 @@
         },
         "Tail Stinger": {
           "name": "Dard caudal",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de Constitution DD 19 et subit 42 (12d6) dégâts de poison supplémentaires en cas d’échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save activity=IKUzECPGj8QbMFLo]] et subit [[/damage average activity=IKUzECPGj8QbMFLo]] supplémentaires en cas d’échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Dard caudal.</p>",
           "activities": {
             "Poison Save": {
@@ -8860,7 +9013,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8999,7 +9152,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le dragon crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage]]{7d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -9013,7 +9171,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -9324,7 +9482,7 @@
       "items": {
         "Sting": {
           "name": "Dard",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant et la cible effectue un jet de sauvegarde de [[/save]], et subit 4 ([[/damage 1d8 poison]]{1d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]], et subit [[/damage average activity=b0UbkEkjgaqHm8tR]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>"
         }
       },
@@ -9366,7 +9524,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Horrific Appearance": {
           "name": "Apparence terrifiante",
@@ -9381,7 +9539,12 @@
         "Death Glare": {
           "name": "Regard mortel",
           "description": "<p>La guenaude cible une créature &Reference[frightened]{effrayée} qu'elle voit dans un rayon de 9 m. Si la cible voit la guenaude, elle doit réussir un jet de sauvegarde de [[/save]] contre cette magie sous peine de tomber à 0 point de vie.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Regard mortel.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Regard mortel.</p>",
+          "activities": {
+            "Focus Gaze": {
+              "name": "Concentrer le regard"
+            }
+          }
         },
         "Illusory Appearance": {
           "name": "Apparence illusoire",
@@ -9396,7 +9559,7 @@
       "items": {
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le requin ne peut respirer que sous l'eau.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -9720,7 +9883,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 2 ([[/damage activity=dnd5eactivity100]]{1d4}) dégâts de poison.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=gJp39jB1DO0Q5LPK]].</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -10026,7 +10189,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Greatsword": {
           "name": "Épée à deux mains",
@@ -10552,7 +10715,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>L'élémentaire inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Slam": {
           "name": "Coup",
@@ -11333,7 +11496,12 @@
         "Cold Breath": {
           "name": "Souffle glacial",
           "description": "<p>Le dragon exhale un cône de 4,50 m de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 22 ([[/damage]]{5d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>",
+          "activities": {
+            "Exhale Ice": {
+              "name": "Exhaler de la glace"
+            }
+          }
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -11512,7 +11680,12 @@
         "Create Specter": {
           "name": "Création de spectre",
           "description": "<p>L’[[lookup @name]] cible un humanoïde dans un rayon de 3 m, qui a succombé depuis moins de 1 minute à une mort violente. L’esprit de la cible émerge comme spectre de l’espace de son cadavre ou dans l’espace inoccupé le plus proche. Le spectre est sous le contrôle de l’[[lookup @name]]. L’[[lookup @name]] ne peut ainsi contrôler plus de sept spectres à la fois.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Création de spectre.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Création de spectre.</p>",
+          "activities": {
+            "Raise Specter": {
+              "target": "humanoïde"
+            }
+          }
         },
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
@@ -11608,11 +11781,16 @@
         "Acid Breath": {
           "name": "Souffle d'acide",
           "description": "<p>Le dragon crache de l'acide sous forme d'une ligne de 9 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 49 ([[/damage]]{11d8}) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>",
+          "activities": {
+            "Exhale Acid": {
+              "name": "Exhaler de l'acide"
+            }
+          }
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -11648,7 +11826,12 @@
         "Lightning Breath": {
           "name": "Souffle de foudre",
           "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 18 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 55 ([[/damage]]{10d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
+          "activities": {
+            "Exhale Lightning": {
+              "name": "Exhaler de la foudre"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11702,7 +11885,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -11779,7 +11962,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -11822,7 +12005,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -11841,7 +12024,12 @@
         "Poison Breath": {
           "name": "Souffle empoisonné",
           "description": "<p>Le dragon crache des vapeurs toxiques sous forme d'un cône de 9 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 42 ([[/damage]]{12d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle empoisonné.</p>",
+          "activities": {
+            "Exhale Poison": {
+              "name": "Exhaler du poison"
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -11868,7 +12056,12 @@
         "Fire Breath": {
           "name": "Souffle de feu",
           "description": "<p>Le dragon crache des flammes sous forme d'un cône de 9 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit 56 ([[/damage]]{16d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle de feu.</p>",
+          "activities": {
+            "Exhale Fire": {
+              "name": "Exhaler du feu"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11943,7 +12136,12 @@
         "Cold Breath": {
           "name": "Souffle glacial",
           "description": "<p>Le dragon exhale un cône de 9 m de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]], et subit 45 ([[/damage]]{10d8}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Souffle glacial.</p>",
+          "activities": {
+            "Exhale Ice": {
+              "name": "Exhaler de la glace"
+            }
+          }
         },
         "Ice Walk": {
           "name": "Marche sur la glace",
