@@ -2710,10 +2710,12 @@
       "description": "<p>Cet onguent noir et gluant, épais et lourd dans son récipient, s'écoule pourtant très vite. L'huile peut couvrir une créature de taille M ou inférieure, ainsi que tout l'équipement qu'elle porte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-dessus de M). L'application de l'huile prend [[lookup @labels.activation activity=OMSMC85UR5All9Vz]]. La créature ointe reçoit l'effet du sort @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{liberté de mouvement} pendant [[lookup @labels.duration activity=OMSMC85UR5All9Vz]].</p><p>Au lieu de cela, l'huile peut être versée au sol au prix d'une action, auquel cas elle couvre un carré de 3 m d'arête et duplique l'effet du sort @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{graisse} dans cette zone pendant 8 heures.</p>",
       "activities": {
         "Apply Oil": {
-          "name": "Appliquer de l'huile"
+          "name": "Appliquer de l'huile",
+          "description": "<p>L'huile peut couvrir une créature de taille M ou inférieure, ainsi que tout l'équipement qu'elle porte (une fiole supplémentaire est nécessaire pour chaque catégorie de taille au-dessus de M). L'application de l'huile prend [[lookup @labels.activation activity=OMSMC85UR5All9Vz]]. La créature ointe reçoit l'effet du sort @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{liberté de mouvement} pendant [[lookup @labels.duration activity=OMSMC85UR5All9Vz]].</p>"
         },
         "Pour Oil Out": {
-          "name": "Verser l'huile"
+          "name": "Verser l'huile",
+          "description": "<p>Cette huile peut être versée au sol au prix d'une action, auquel cas elle couvre un carré de 3 m d'arête et duplique l'effet du sort @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{graisse} dans cette zone pendant 8 heures.</p>"
         }
       },
       "uname": "Huile non identifiée",
@@ -3559,7 +3561,8 @@
       "activities": {
         "Apply Ointment": {
           "name": "Appliquer le baume",
-          "condition": "Le baume doit être ingéré ou appliqué sur la peau."
+          "condition": "Le baume doit être ingéré ou appliqué sur la peau.",
+          "description": "<p>Au prix d'une action, on peut ingérer une dose de baume ou l'appliquer sur la peau. La créature qui la reçoit regagne [[/healing activity=gRkokZZM4WWwqjEu]], cesse d'être &reference[poisoned apply=false]{empoisonnée} et elle est guérie de toute forme de maladie.</p>"
         }
       }
     },
@@ -4881,7 +4884,8 @@
       "activities": {
         "Assisted Escape": {
           "name": "Évasion assistée",
-          "condition": "Lorsque vous effectuez un jet de sauvegarde pour éviter d'être &reference[paralyzed apply=false]{paralysé} ou &reference[restrained apply=false]{entravé}, ou lorsque vous tentez de ne plus être &reference[grappled apply=false]{agrippé}."
+          "condition": "Lorsque vous effectuez un jet de sauvegarde pour éviter d'être &reference[paralyzed apply=false]{paralysé} ou &reference[restrained apply=false]{entravé}, ou lorsque vous tentez de ne plus être &reference[grappled apply=false]{agrippé}.",
+          "description": "<p>Tant que vous tenez la baguette, vous pouvez jouer votre réaction et dépenser 1 charge à recevoir l'avantage sur un jet de sauvegarde que vous effectuez pour éviter d'être &reference[paralyzed apply=false]{paralysé} ou &reference[restrained apply=false]{entravé}, ou vous pouvez dépenser 1 charge et recevoir l'avantage sur n'importe quel test que vous effectuez pour ne plus être &reference[grappled apply=false]{agrippé}.</p>"
         }
       },
       "uname": "Baguette non identifiée"
@@ -4901,7 +4905,8 @@
       "description": "<p><em>Baguette (harmonisation requise)</em></p><p>Cette baguette dispose de [[lookup @item.uses.max]] charges pour les propriétés suivantes. Elle récupère quotidiennement 1d6 + 1 charges dépensées, à l'aube. Si vous dépensez la dernière charge, lancez un d20. Sur un résultat de 1, la baguette se réduit en cendres et elle est détruite.</p><p><em><strong>Cône de terreur.</strong></em> Tant que vous tenez la baguette, vous pouvez consacrer une action pour dépenser 2 charges. Elle émet alors une lumière ambrée dans un [[lookup @labels.description.template activity=zj1bSgRYmMvM3xaO lowercase]]. Chaque créature prise dans ce cône doit réussir un jet de sauvegarde de [[/save activity=zj1bSgRYmMvM3xaO]] sous peine d'être &reference[frightened]{effrayée} par vous pendant [[lookup @labels.duration activity=zj1bSgRYmMvM3xaO]]. Une créature ainsi effrayée doit consacrer ses tours de jeu à s'éloigner le plus possible de vous et ne peut volontairement se déplacer vers un espace situé à 9 m ou moins de vous. Elle ne peut en outre pas jouer de réaction. Comme action, elle ne peut entreprendre que &reference[Dash]{Foncer} ou tenter de se libérer d'un effet qui l'empêche de se déplacer. Si elle n'a nulle part où aller, elle peut entreprendre l'action &reference[Dodge]{Esquiver}. À la fin de chacun de ses tours, la créature peut réitérer le jet de sauvegarde et met un terme à l'effet sur elle-même en cas de réussite.</p><p><em><strong>Injonction.</strong></em> Tant que vous tenez la baguette, vous pouvez consacrer une action à dépenser 1 charge pour ordonner à une autre créature de ramper ou de fuir, comme avec le sort @UUID[Compendium.dnd5e.spells.Item.arzCrMRgcNiQuh43]{injonction} (DD de sauvegarde [[lookup @spell.challenge.save activity=J1oQUVbZNLMFnm4f]]).</p>",
       "activities": {
         "Cone of Fear": {
-          "name": "Cône de terreur"
+          "name": "Cône de terreur",
+          "description": "<p>Tant que vous tenez la baguette, vous pouvez consacrer une action pour dépenser 2 charges. Elle émet alors une lumière ambrée dans un [[lookup @labels.description.template activity=zj1bSgRYmMvM3xaO lowercase]]. Chaque créature prise dans ce cône doit réussir un jet de sauvegarde de [[/save activity=zj1bSgRYmMvM3xaO]] sous peine d'être &reference[frightened]{effrayée} par vous pendant [[lookup @labels.duration activity=zj1bSgRYmMvM3xaO]]. Une créature ainsi effrayée doit consacrer ses tours de jeu à s'éloigner le plus possible de vous et ne peut volontairement se déplacer vers un espace situé à 9 m ou moins de vous. Elle ne peut en outre pas jouer de réaction. Comme action, elle ne peut entreprendre que &reference[Dash]{Foncer} ou tenter de se libérer d'un effet qui l'empêche de se déplacer. Si elle n'a nulle part où aller, elle peut entreprendre l'action &reference[Dodge]{Esquiver}. À la fin de chacun de ses tours, la créature peut réitérer le jet de sauvegarde et met un terme à l'effet sur elle-même en cas de réussite.</p>"
         }
       },
       "uname": "Baguette non identifiée",
