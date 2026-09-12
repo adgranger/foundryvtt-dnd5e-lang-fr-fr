@@ -300,7 +300,8 @@
       "materials": "A miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp",
       "activities": {
         "Move Sword and Attack": {
-          "name": "Move Sword and Attack"
+          "name": "Move Sword and Attack",
+          "description": "<p>Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one.</p>"
         }
       }
     },
@@ -504,7 +505,8 @@
       "activities": {
         "Wall Contact Save": {
           "name": "Wall Contact Save",
-          "condition": "When a creature enters the wall's area for the first time on a turn or starts its turn there."
+          "condition": "When a creature enters the wall's area for the first time on a turn or starts its turn there.",
+          "description": "<p>When a creature enters the wall's area for the first time on a turn or starts its turn there, the creature must make a Dexterity saving throw. On a failed save, the creature takes 6d10 slashing damage. On a successful save, the creature takes half as much damage.</p>"
         },
         "Conjure Blade Barrier (Wall)": {
           "name": "Conjure Blade Barrier (Wall)"
@@ -565,7 +567,8 @@
         "Blink Check": {
           "name": "Blink Check",
           "roll": "Blink Check",
-          "condition": "When you end your turn while this spell is active."
+          "condition": "When you end your turn while this spell is active.",
+          "description": "<p>On a roll of 11 or higher, you vanish to the Ethereal Plane.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -763,7 +766,8 @@
       "activities": {
         "Enter / Start of Turn Save": {
           "name": "Enter / Start of Turn Save",
-          "condition": "When a creature enters the spell's area for the first time on a turn or starts its turn there."
+          "condition": "When a creature enters the spell's area for the first time on a turn or starts its turn there.",
+          "description": "<p>When a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 poison damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -878,7 +882,8 @@
         },
         "Roll Confusion Table Result": {
           "name": "Roll Confusion Table Result",
-          "condition": "When a creature affected by this spell starts their turn."
+          "condition": "When a creature affected by this spell starts their turn.",
+          "description": "<p>@embed[Compendium.dnd5e.tables.RollTable.LHEts1oDaDwcehuj inline rollable]{Confusion}</p>"
         }
       },
       "effects": {
@@ -1017,7 +1022,8 @@
         },
         "Disease Save": {
           "name": "Disease Save",
-          "condition": "At the end of each of the target's turns while they are incubating a disease."
+          "condition": "At the end of each of the target's turns while they are incubating a disease.",
+          "description": "<p>At the end of each of the target's turns, it must make a Constitution saving throw. After failing three of these saving throws, the disease's effects last for the duration, and the creature stops making these saves. After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends.</p><p>Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.</p>"
         },
         "Apply Disease": {
           "name": "Apply Disease",
@@ -1131,20 +1137,25 @@
       "materials": "A drop of water and a pinch of dust.",
       "activities": {
         "Flood": {
-          "name": "Flood"
+          "name": "Flood",
+          "description": "<p>You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land, instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.</p><p>The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.</p>"
         },
         "Part Water": {
-          "name": "Part Water"
+          "name": "Part Water",
+          "description": "<p>You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.</p>"
         },
         "Redirect Flow": {
-          "name": "Redirect Flow"
+          "name": "Redirect Flow",
+          "description": "<p>You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.</p>"
         },
         "Whirlpool": {
-          "name": "Whirlpool"
+          "name": "Whirlpool",
+          "description": "<p>This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.</p><p>When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.</p><p>The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.</p>"
         },
         "Whirlpool (Start of Turn Save)": {
           "name": "Whirlpool (Start of Turn Save)",
-          "condition": "When a creature enters the vortex for the first time on a turn or starts its turn there."
+          "condition": "When a creature enters the vortex for the first time on a turn or starts its turn there.",
+          "description": "<p>When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.</p><p>The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -1467,14 +1478,17 @@
       "materials": "Holy water or powdered silver and iron",
       "activities": {
         "Break Enchantment": {
-          "name": "Break Enchantment"
+          "name": "Break Enchantment",
+          "description": "<p>You touch a creature you can reach that is &amp;reference[Charmed apply=false], &amp;reference[Frightened apply=false], or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures.</p>"
         },
         "Dismissal Attack": {
-          "name": "Dismissal Attack"
+          "name": "Dismissal Attack",
+          "description": "<p>Make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn't there already). If they aren't on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild.</p>"
         },
         "Dismissal Save": {
           "name": "Dismissal Save",
-          "condition": "When a creature is hit by the Dismissal portion of this spell."
+          "condition": "When a creature is hit by the Dismissal portion of this spell.",
+          "description": "<p>The creature must succeed on a Charisma saving throw or be sent back to its home plane (if it isn't there already). If they aren't on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -1549,7 +1563,8 @@
           "name": "Command Creature"
         },
         "Assume Direct Control": {
-          "name": "Assume Direct Control"
+          "name": "Assume Direct Control",
+          "description": "<p>You take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p>"
         }
       },
       "effects": {
@@ -1579,7 +1594,8 @@
           "name": "Command Creature"
         },
         "Assume Direct Control": {
-          "name": "Assume Direct Control"
+          "name": "Assume Direct Control",
+          "description": "<p>You take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p>"
         }
       },
       "effects": {
@@ -1598,7 +1614,8 @@
       "description": "<p>You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be &amp;Reference[charmed] by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.</p><p>While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.</p><p>You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p><p>Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.</p>",
       "activities": {
         "Assume Direct Control": {
-          "name": "Assume Direct Control"
+          "name": "Assume Direct Control",
+          "description": "<p>You take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.</p>"
         },
         "Command Creature": {
           "name": "Command Creature"
@@ -1629,7 +1646,8 @@
       "materials": "A handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird",
       "activities": {
         "Nightmare Save": {
-          "name": "Nightmare Save"
+          "name": "Nightmare Save",
+          "description": "<p>You can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a Wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 3d6 psychic damage.</p><p>If you have a body part, lock of hair, clipping from a nail, or similar portion of the target's body, the target makes its saving throw with disadvantage.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -1655,18 +1673,22 @@
         },
         "Prone / Concentration Save": {
           "name": "Prone / Concentration Save",
-          "condition": "At the end of each of your turns."
+          "condition": "At the end of each of your turns.",
+          "description": "<p>When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked &amp;reference[prone].</p>"
         },
         "Open Fissures": {
           "name": "Open Fissures",
-          "condition": "At the start of next turn when you cast this spell."
+          "condition": "At the start of next turn when you cast this spell.",
+          "description": "<p>Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of [[/r 1d6 #Number of Fissures]] such fissures open in locations chosen by the DM. Each is 1d10 × 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.</p><p>A fissure that opens beneath a structure causes it to automatically collapse.</p>"
         },
         "Falling Debris": {
           "name": "Falling Debris",
-          "condition": "When a structure collapses while a creature is near it."
+          "condition": "When a structure collapses while a creature is near it.",
+          "description": "<p>A creature within half the distance of a collapsing structure's height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked &amp;reference[prone], and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall prone or become buried.</p>"
         },
         "Structure Damage": {
-          "name": "Structure Damage"
+          "name": "Structure Damage",
+          "description": "<p>The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 Hit Points, it collapses and potentially damages nearby creatures.</p>"
         }
       },
       "effects": {
@@ -2002,7 +2024,8 @@
         },
         "Raise Zombie": {
           "name": "Raise Zombie",
-          "condition": "When a humanoid is killed by this spell."
+          "condition": "When a humanoid is killed by this spell.",
+          "description": "<p>A humanoid killed by this spell rises at the start of your next turn as a @UUID[Compendium.dnd5e.monsters.Actor.NAISFPoNNgUCsEyW]{Zombie} that is permanently under your command, following your verbal orders to the best of its ability.</p>"
         }
       },
       "effects": {
@@ -2070,10 +2093,12 @@
       "materials": "Leaf of sumac",
       "activities": {
         "Evoke Flame Blade to Hand": {
-          "name": "Evoke Flame Blade to Hand"
+          "name": "Evoke Flame Blade to Hand",
+          "description": "<p>If you let go of the blade, it disappears, but you can evoke the blade again as a Bonus Action.</p>"
         },
         "Cast": {
-          "name": "Cast"
+          "name": "Cast",
+          "description": "<p>You evoke a fiery blade in your free hand. The blade is similar in size and shape to a Scimitar, and it lasts for the Duration. If you let go of the blade, it disappears, but you can evoke the blade again as a Bonus Action.</p>"
         }
       },
       "effects": {
@@ -2139,7 +2164,8 @@
         },
         "Petrification Save": {
           "name": "Petrification Save",
-          "condition": "At the end of each of the target's turns while they are incubating a disease."
+          "condition": "At the end of each of the target's turns while they are incubating a disease.",
+          "description": "<p>At the end of each of the target's turns, it must make a Constitution saving throw. After failing three of these saving throws, the disease's effects last for the duration, and the creature stops making these saves. After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends.</p><p>Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.</p>"
         }
       },
       "effects": {
@@ -2290,7 +2316,8 @@
         },
         "Summon Creature": {
           "name": "Summon Creature",
-          "condition": "When you cast this spell."
+          "condition": "When you cast this spell.",
+          "description": "<p>You can speak the name of a specific creature (a pseudonym, title, or nickname doesn't work). If that creature is on a plane other than the one you are on, the portal opens in the named creature's immediate vicinity and draws the creature through it to the nearest unoccupied space on your side of the portal. You gain no special power over the creature, and it is free to act as the DM deems appropriate. It might leave, Attack you, or help you.</p>"
         }
       }
     },
@@ -2365,11 +2392,13 @@
         },
         "Explosive Rune Save": {
           "name": "Explosive Rune Save",
-          "condition": "When the Glyph of Warding is triggered."
+          "condition": "When the Glyph of Warding is triggered.",
+          "description": "<p>When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.</p>"
         },
         "Activated Spell Glyph": {
           "name": "Activated Spell Glyph",
-          "condition": "When the Glyph of Warding is triggered."
+          "condition": "When the Glyph of Warding is triggered.",
+          "description": "<p>When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.</p>"
         }
       }
     },
@@ -2497,7 +2526,8 @@
         },
         "Hallow Effect Save": {
           "name": "Hallow Effect Save",
-          "condition": "When a creature designated by the spell enters the area for the first time on a turn or starts its turn there."
+          "condition": "When a creature designated by the spell enters the area for the first time on a turn or starts its turn there.",
+          "description": "<p>When a creature that would be affected enters the spell's area for the first time on a turn or starts its turn there, it can make a Charisma saving throw. On a success, the creature ignores the extra effect until it leaves the area.</p>"
         }
       },
       "effects": {
@@ -2691,7 +2721,8 @@
           "name": "Cast"
         },
         "Blinding Light": {
-          "name": "Blinding Light"
+          "name": "Blinding Light",
+          "description": "<p>When a fiend or an undead hits an affected creature with a melee attack, the aura flashes with brilliant light. The attacker must succeed on a Constitution saving throw or be &amp;reference[Blinded] until the spell ends.</p>"
         }
       },
       "effects": {
@@ -3061,7 +3092,8 @@
         },
         "Thwart Teleportation Save": {
           "name": "Thwart Teleportation Save",
-          "condition": "When a creature the Magic Circle protects against tries to use teleportation or interplanar travel to enter or leave it."
+          "condition": "When a creature the Magic Circle protects against tries to use teleportation or interplanar travel to enter or leave it.",
+          "description": "<p>The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.</p>"
         }
       },
       "effects": {
@@ -3081,6 +3113,7 @@
         },
         "Possess Creature": {
           "name": "Possess Creature",
+          "description": "<p>You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a @UUID[Compendium.dnd5e.spells.Item.xmDBqZhRVrtLP8h2]{Protection from Evil and Good} or @UUID[Compendium.dnd5e.spells.Item.y8A4HfTwd93ypdEz]{Magic Circle} spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.</p><p>Once you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.</p><p>Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.</p><p>While possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.</p>",
           "target": "humanoid"
         }
       },
@@ -3229,7 +3262,8 @@
       "description": "<p>You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.</p><p>The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf]{minotaur} or goristro demon automatically succeeds).</p><p>When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space.</p>",
       "activities": {
         "Escape Labyrinth": {
-          "name": "Escape Labyrinth"
+          "name": "Escape Labyrinth",
+          "description": "<p>The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf]{Minotaur} or Goristro demon automatically succeeds).</p>"
         }
       },
       "effects": {
@@ -3338,7 +3372,8 @@
         "Mirror Image Interception": {
           "name": "Mirror Image Interception",
           "roll": "Mirror Image Destruction Check",
-          "condition": "When a creature targets you with an attack during this spell's duration."
+          "condition": "When a creature targets you with an attack during this spell's duration.",
+          "description": "<p>Each time a creature targets you with an attack during the spell's duration, roll a 1d20 to determine whether the attack instead targets one of your duplicates.</p><p>If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.</p><h4><strong>Amount of Mirror Images:</strong> [[lookup @flags.world.mirror-image]]{0}</h4>"
         }
       },
       "effects": {
@@ -3574,7 +3609,8 @@
           "name": "Cast: Planar Travel"
         },
         "Cast: Banishing Attack": {
-          "name": "Cast: Banishing Attack"
+          "name": "Cast: Banishing Attack",
+          "description": "<p>You can use this spell to banish an unwilling creature to another plane. Choose a creature within your reach and make a melee spell attack against it. On a hit, the creature must make a Charisma saving throw. If the creature fails this save, it is transported to a random location on the plane of existence you specify. A creature so transported must find its own way back to your current plane of existence.</p>"
         },
         "Banish Save": {
           "name": "Banish Save",
@@ -3631,7 +3667,8 @@
       "activities": {
         "Repeat Save": {
           "name": "Repeat Save",
-          "condition": "When a creature &reference[stunned apply=false] by this spell ends their turn."
+          "condition": "When a creature &reference[stunned apply=false] by this spell ends their turn.",
+          "description": "<p>The stunned target must make a Constitution saving throw at the end of each of its turns. On a successful save, this stunning effect ends.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -3670,25 +3707,32 @@
           "name": "Cast"
         },
         "1. Red Ray": {
-          "name": "1. Red Ray"
+          "name": "1. Red Ray",
+          "description": "<p>The creature takes 10d6 fire damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "2. Orange Ray": {
-          "name": "2. Orange Ray"
+          "name": "2. Orange Ray",
+          "description": "<p>The creature takes 10d6 acid damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "3. Yellow Ray": {
-          "name": "3. Yellow Ray"
+          "name": "3. Yellow Ray",
+          "description": "<p>The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "4. Green Ray": {
-          "name": "4. Green Ray"
+          "name": "4. Green Ray",
+          "description": "<p>The creature takes 10d6 poison damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "5. Blue Ray": {
-          "name": "5. Blue Ray"
+          "name": "5. Blue Ray",
+          "description": "<p>The creature takes 10d6 cold damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "6. Indigo Ray": {
-          "name": "6. Indigo Ray"
+          "name": "6. Indigo Ray",
+          "description": "<p>On a failed save, the creature is &amp;reference[Restrained]. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the &amp;reference[Petrified] condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.</p>"
         },
         "7. Violet Ray": {
-          "name": "7. Violet Ray"
+          "name": "7. Violet Ray",
+          "description": "<p>On a failed save, the creature is &amp;reference[Blinded]. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of the DM's choosing and is no longer Blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)</p>"
         }
       },
       "effects": {
@@ -3726,31 +3770,38 @@
         },
         "Red Wall": {
           "name": "Red Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Red Wall</h4><p>The creature takes 10d6 fire damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Orange Wall": {
           "name": "Orange Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Orange Wall</h4><p>The creature takes 10d6 acid damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Yellow Wall": {
           "name": "Yellow Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Yellow Wall</h4><p>The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Green Wall": {
           "name": "Green Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Green Wall</h4><p>The creature takes 10d6 poison damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Blue Wall": {
           "name": "Blue Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Blue Wall</h4><p>The creature takes 10d6 cold damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Indigo Wall": {
           "name": "Indigo Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Indigo Wall</h4><p>On a failed save, the creature is &amp;reference[Restrained]. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the &amp;reference[Petrified] condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.</p>"
         },
         "Violet Wall": {
           "name": "Violet Wall",
-          "condition": "When a creature attempts to pass through the wall."
+          "condition": "When a creature attempts to pass through the wall.",
+          "description": "<p>When a creature attempts to reach into or pass through the wall, it does so one layer at a time through all the wall's layers. As it passes or reaches through each layer, the creature must make a Dexterity saving throw or be affected by that layer's properties as described below.</p><h4>Indigo Wall</h4><p>On a failed save, the creature is &amp;reference[Blinded]. It must then make a Wisdom saving throw at the start of your next turn. A successful save ends the blindness. If it fails that save, the creature is transported to another plane of the DM's choosing and is no longer Blinded. (Typically, a creature that is on a plane that isn't its home plane is banished home, while other creatures are usually cast into the Astral or Ethereal planes.)</p>"
         }
       },
       "effects": {
@@ -4027,7 +4078,8 @@
       "materials": "A lodestone and iron fillings",
       "activities": {
         "Grab Fixed Object Save": {
-          "name": "Grab Fixed Object Save"
+          "name": "Grab Fixed Object Save",
+          "description": "<p>A creature can make a Dexterity saving throw to grab onto a fixed object it can reach, thus avoiding the fall.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -4560,19 +4612,23 @@
       "range": "sight",
       "activities": {
         "Cast": {
-          "name": "Cast"
+          "name": "Cast",
+          "description": "<p>Each creature under the cloud (no more than 5,000 feet beneath the cloud) when it appears must make a Constitution saving throw. On a failed save, a creature takes 2d6 thunder damage and becomes &amp;reference[Deafened apply=false] for 5 minutes.</p>"
         },
         "Round 2: Acid Rain": {
           "name": "Round 2: Acid Rain",
-          "condition": "On your turn."
+          "condition": "On your turn.",
+          "description": "<p>Acidic rain falls from the cloud. Each creature and object under the cloud takes 1d6 acid damage.</p>"
         },
         "Round 3: Lightning Bolts": {
           "name": "Round 3: Lightning Bolts",
-          "condition": "On your turn."
+          "condition": "On your turn.",
+          "description": "<p>You call six bolts of lightning from the cloud to strike six creatures or objects of your choice beneath the cloud. A given creature or object can't be struck by more than one bolt. A struck creature must make a Dexterity saving throw. The creature takes 10d6 lightning damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Round 4: Hailstones": {
           "name": "Round 4: Hailstones",
-          "condition": "On your turn."
+          "condition": "On your turn.",
+          "description": "<p>Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage.</p>"
         },
         "Round 5 - 10: Gusts & Freezing Rain": {
           "name": "Round 5 - 10: Gusts & Freezing Rain",
@@ -4646,35 +4702,43 @@
         },
         "Glyph Effect: Death": {
           "name": "Glyph Effect: Death",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Death</h4><p>Each target must make a Constitution saving throw, taking 10d10 necrotic damage on a failed save, or half as much damage on a successful save.</p>"
         },
         "Glyph Effect: Discord": {
           "name": "Glyph Effect: Discord",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Discord</h4><p>Each target must make a Constitution saving throw. On a failed save, a target bickers and argues with other creatures for [[lookup @labels.duration activity=aQ5gGxhnROMnbUYo]]. During this time, it is incapable of meaningful communication and has disadvantage on attack rolls and ability checks.</p>"
         },
         "Glyph Effect: Fear": {
           "name": "Glyph Effect: Fear",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Fear</h4><p>Each target must make a Wisdom saving throw and becomes &amp;Reference[Frightened] for [[lookup @labels.duration activity=JpTNQO6B5su2lz7Q]] on a failed save. While Frightened, the target drops whatever it is holding and must move at least 30 feet away from the glyph on each of its turns, if able.</p>"
         },
         "Glyph Effect: Hopelessness": {
           "name": "Glyph Effect: Hopelessness",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Hopelessness</h4><p>Each target must make a Charisma saving throw. On a failed save, the target is overwhelmed with despair for [[lookup @labels.duration activity=EbNUoZmq2qyEIE75]]. During this time, it can't attack or target any creature with harmful abilities, spells, or other magical effects.</p>"
         },
         "Glyph Effect: Insanity": {
           "name": "Glyph Effect: Insanity",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Insanity</h4><p>Each target must make an Intelligence saving throw. On a failed save, the target is driven insane for [[lookup @labels.duration activity=l4wdQCsSrKaSzEnP]]. An insane creature can't take actions, can't understand what other creatures say, can't read, and speaks only in gibberish. The DM controls its movement, which is erratic.</p>"
         },
         "Glyph Effect: Pain": {
           "name": "Glyph Effect: Pain",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Pain</h4><p>Each target must make a Constitution saving throw and becomes &amp;Reference[Incapacitated] with excruciating pain for [[lookup @labels.duration activity=ileq899HQ5YZKEif]] on a failed save.</p>"
         },
         "Glyph Effect: Sleep": {
           "name": "Glyph Effect: Sleep",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Sleep</h4><p>Each target must make a Wisdom saving throw and falls &amp;Reference[Unconscious] for [[lookup @labels.duration activity=S48Cy0ZHIKduGUUD]] on a failed save. A creature awakens if it takes damage or if someone uses an action to shake or slap it awake.</p>"
         },
         "Glyph Effect: Stunning": {
           "name": "Glyph Effect: Stunning",
-          "condition": "When the glyph is triggered."
+          "condition": "When the glyph is triggered.",
+          "description": "<p>Once triggered, the glyph glows, filling a 60-foot-radius sphere with &amp;reference[dim light] for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.</p><h4>Stunning</h4><p>Each target must make a Wisdom saving throw and becomes &amp;Reference[Stunned] for [[lookup @labels.duration activity=SbxsIIBtx25GNijc]] on a failed save.</p>"
         }
       },
       "effects": {
@@ -4718,10 +4782,12 @@
       "description": "<p>You gain the ability to move or manipulate creatures or objects by thought. When you cast the spell, and as your action each round for the duration, you can exert your will on one creature or object that you can see within range, causing the appropriate effect below. You can affect the same target round after round, or choose a new one at any time. If you switch targets, the prior target is no longer affected by the spell.</p><p><strong>Creature</strong>. You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Strength check. If you win the contest, you move the creature up to 30 feet in any direction, including upward but not beyond the range of this spell. Until the end of your next turn, the creature is Restrained in your telekinetic grip. A creature lifted upward is suspended in mid-air.</p><p>On subsequent rounds, you can use your action to attempt to maintain your telekinetic grip on the creature by repeating the contest.</p><p><strong>Object</strong>. You can try to move an object that weighs up to 1,000 pounds. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction, but not beyond the range of this spell.</p><p>If the object is worn or carried by a creature, you must make an ability check with your Spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 30 feet in any direction but not beyond the range of this spell.</p><p>You can exert fine control on Objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial.</p>",
       "activities": {
         "Manipulate Creature": {
-          "name": "Manipulate Creature"
+          "name": "Manipulate Creature",
+          "description": "<p>You can try to move a Huge or smaller creature. Make an ability check with your spellcasting ability contested by the creature's Strength check. If you win the contest, you move the creature up to 30 feet in any direction, including upward but not beyond the range of this spell. Until the end of your next turn, the creature is &amp;reference[Restrained] in your telekinetic grip. A creature lifted upward is suspended in mid-air.</p><p>On subsequent rounds, you can use your action to attempt to maintain your telekinetic grip on the creature by repeating the contest.</p>"
         },
         "Manipulate Object": {
-          "name": "Manipulate Object"
+          "name": "Manipulate Object",
+          "description": "<p>You can try to move an object that weighs up to 1,000 pounds. If the object isn't being worn or carried, you automatically move it up to 30 feet in any direction, but not beyond the range of this spell.</p><p>If the object is worn or carried by a creature, you must make an ability check with your Spellcasting ability contested by that creature's Strength check. If you succeed, you pull the object away from that creature and can move it up to 30 feet in any direction but not beyond the range of this spell.</p><p>You can exert fine control on objects with your telekinetic grip, such as manipulating a simple tool, opening a door or a container, stowing or retrieving an item from an open container, or pouring the contents from a vial.</p>"
         },
         "Cast": {
           "name": "Cast"
@@ -4753,7 +4819,8 @@
         },
         "Mishap Damage": {
           "name": "Mishap Damage",
-          "condition": "When a mishap occurs."
+          "condition": "When a mishap occurs.",
+          "description": "<p>The spell's unpredictable magic results in a difficult journey. Each teleporting creature (or the target object) takes 3d10 force damage, and the DM rerolls on the table to see where you wind up (multiple mishaps can occur, dealing damage each time).</p>"
         }
       }
     },
@@ -4851,10 +4918,12 @@
           "name": "Cast"
         },
         "Creature to Creature": {
-          "name": "Creature to Creature"
+          "name": "Creature to Creature",
+          "description": "<p>You turn a creature into another kind of creature, the new form can be any kind you choose whose challenge rating is equal to or less than the target's (or its level, if the target doesn't have a Challenge rating). The target's game statistics, including mental Ability Scores, are replaced by the statistics of the new form. It retains its Alignment and personality.</p><p>The target assumes the hit points of its new form, and when it reverts to its normal form, the creature returns to the number of Hit Points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked &amp;reference[Unconscious apply=false].</p><p>The creature is limited in the Actions it can perform by the nature of its new form, and it can't speak, cast Spells, or take any other action that requires hands or speech, unless its new form is capable of such Actions.</p><p>The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its Equipment.</p>"
         },
         "Object into Creature": {
-          "name": "Object into Creature"
+          "name": "Object into Creature",
+          "description": "<p>You can turn an object into any kind of creature, as long as the creature's size is no larger than the object's size and the creature's Challenge rating is 9 or lower. The creature is friendly to you and your companions. It acts on each of your turns. You decide what action it takes and how it moves. The DM has the creature's Statistics and resolves all of its Actions and Movement.</p><p>If the spell becomes permanent, you no longer control the creature. It might remain friendly to you, depending on how you have treated it.</p>"
         }
       }
     },
@@ -4952,7 +5021,8 @@
         },
         "Wall Contact Damage": {
           "name": "Wall Contact Damage",
-          "condition": "When a creature ends their turn within 10 feet of the harmful sideof the wall or inside the wall."
+          "condition": "When a creature ends their turn within 10 feet of the harmful sideof the wall or inside the wall.",
+          "description": "<p>One side of the wall, selected by you when you cast this spell, deals 5d8 fire damage to each creature that ends its turn within 10 feet of that side or inside the wall. A creature takes the same damage when it enters the wall for the first time on a turn or ends its turn there. The other side of the wall deals no damage.</p>"
         }
       }
     },
@@ -4979,7 +5049,8 @@
         },
         "Frigid Air Damage": {
           "name": "Frigid Air Damage",
-          "condition": "When a creature moves through the sheet of frigid air for the first time on a turn."
+          "condition": "When a creature moves through the sheet of frigid air for the first time on a turn.",
+          "description": "<p>A creature moving through the sheet of frigid air for the first time on a turn must make a Constitution saving throw. That creature takes 5d6 cold damage on a failed save, or half as much damage on a successful one.</p>"
         },
         "Conjure Dome of Ice": {
           "name": "Conjure Dome of Ice"
@@ -5012,7 +5083,8 @@
         },
         "Wall Contact Damage": {
           "name": "Wall Contact Damage",
-          "condition": "When a creature moves through the wall on a turn or ends its turn there."
+          "condition": "When a creature moves through the wall on a turn or ends its turn there.",
+          "description": "<p>The first time a creature enters the wall on a turn or ends its turn there, the creature must make a Dexterity saving throw. It takes 7d8 slashing damage on a failed save, or half as much damage on a successful one.</p>"
         }
       }
     },
@@ -5097,7 +5169,8 @@
         },
         "End of Turn Save": {
           "name": "End of Turn Save",
-          "condition": "When a creature &reference[frightened apply=false] by this spell ends their turn."
+          "condition": "When a creature &reference[frightened apply=false] by this spell ends their turn.",
+          "description": "<p>At the end of each of the &amp;reference[Frightened apply=false] creature's turns, it must succeed on a Wisdom saving throw or take 4d10 psychic damage. On a successful save, the spell ends for that creature.</p>"
         }
       },
       "effects": {
@@ -5138,27 +5211,34 @@
       "description": "<p>Wish is the mightiest spell a mortal creature can cast. By simply speaking aloud, you can alter the very foundations of reality in accord with your desires.</p><p>The basic use of this spell is to duplicate any other spell of 8th level or lower. You don't need to meet any requirements in that spell, including costly Components. The spell simply takes effect.</p><p>Alternatively, you can create one of the following Effects of your choice:</p><ul><li><p>You create one object of up to 25,000 gp in value that isn't a magic item. The object can be no more than 300 feet in any dimension, and it appears in an unoccupied space you can see on the ground.</p></li><li><p>You allow up to twenty creatures that you can see to regain all hit points, and you end all Effects on them described in the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{greater restoration} spell.</p></li><li><p>You grant up to ten creatures that you can see resistance to a damage type you choose.</p></li><li><p>You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a lich's life drain attack.</p></li><li><p>You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a wish spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll.</p></li></ul><p>You might be able to achieve something beyond the scope of the above examples. State your wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might only be partly achieved, or you might suffer some unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly transport you to the presence of the item's current owner.</p><p>The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend Resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>",
       "activities": {
         "Replicate Spell (8th Level or Lower)": {
-          "name": "Replicate Spell (8th Level or Lower)"
+          "name": "Replicate Spell (8th Level or Lower)",
+          "description": "<p>You duplicate any other spell of 8th level or lower. You don't need to meet any requirements in that spell, including costly Components. The spell simply takes effect.</p>"
         },
         "Stressful Wish: Conjure Wealth": {
-          "name": "Stressful Wish: Conjure Wealth"
+          "name": "Stressful Wish: Conjure Wealth",
+          "description": "<p>You create one object of up to 25,000 gp in value that isn't a magic item. The object can be no more than 300 feet in any dimension, and it appears in an unoccupied space you can see on the ground.</p><p>After enduring that stress of casting this spell in this way, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>"
         },
         "Stressful Wish: Restore Health": {
-          "name": "Stressful Wish: Restore Health"
+          "name": "Stressful Wish: Restore Health",
+          "description": "<p>You allow up to twenty creatures that you can see to regain all hit points, and you end all Effects on them described in the @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{Greater Restoration} spell.</p><p>After enduring that stress of casting this spell in this way, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>"
         },
         "Stressful Wish: Bestow Resistance": {
-          "name": "Stressful Wish: Bestow Resistance"
+          "name": "Stressful Wish: Bestow Resistance",
+          "description": "<p>You grant up to ten creatures that you can see resistance to a damage type you choose.</p><p>After enduring that stress of casting this spell in this way, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>"
         },
         "ZFQAppQ4CwUu6G4E": {
-          "name": "Stressful Wish: Bestow Resistance"
+          "name": "Stressful Wish: Bestow Resistance",
+          "description": "<p>You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a lich's life drain attack.</p><p>After enduring that stress of casting this spell in this way, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>"
         },
         "Stressful Wish: Rewrite Events": {
-          "name": "Stressful Wish: Rewrite Events"
+          "name": "Stressful Wish: Rewrite Events",
+          "description": "<p>You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a wish spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll.</p><p>After enduring that stress of casting this spell in this way, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>"
         },
         "Wish Stress Effects": {
           "name": "Wish Stress Effects",
           "roll": "Future Wish Ability",
-          "chatFlavor": "On a result of a 1, you are unable to cast this spell ever again."
+          "chatFlavor": "On a result of a 1, you are unable to cast this spell ever again.",
+          "description": "<p>The stress of casting this spell to produce any effect other than duplicating another spell weakens you. After enduring that stress, each time you cast a spell until you finish a Long Rest, you take 1d10 necrotic damage per level of that spell. This damage can't be reduced or prevented in any way. In addition, your Strength drops to 3, if it isn't 3 or lower already, for 2d4 days. For each of those days that you spend Resting and doing nothing more than light activity, your remaining recovery time decreases by 2 days. Finally, there is a 33 percent chance that you are unable to cast wish ever again if you suffer this stress.</p>"
         }
       },
       "effects": {

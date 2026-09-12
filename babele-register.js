@@ -406,35 +406,36 @@ export class Converters {
 			"system.attributes.senses.blindsight", //Avant 5.3.0, à supprimer plus tard
 			"system.attributes.senses.darkvision", //Avant 5.3.0, à supprimer plus tard
 			"system.attributes.senses.tremorsense", //Avant 5.3.0, à supprimer plus tard
-			"system.attributes.senses.truesight" //Avant 5.3.0, à supprimer plus tard
+			"system.attributes.senses.truesight", //Avant 5.3.0, à supprimer plus tard
+			"token.light.dim",
+			"token.light.bright"
 		];
 
 		changes.forEach(change => {
-			if (change.mode != 1) {
-				const value = String(change.value ?? "");
-				if (movementSensesType.includes(change.key)) {
-					if (value.startsWith("+") || value.startsWith("-")) {
-						change.value = `${value[0]}${Converters.footsToMeters(value.substring(1))}`;
-					} else {
-						change.value = Converters.footsToMeters(value);
-					}
+			if (change.type === "multiply") return change;
+			
+			const value = String(change.value ?? "");
+			if (movementSensesType.includes(change.key)) {
+				if (value.startsWith("+") || value.startsWith("-")) {
+					change.value = `${value[0]}${Converters.footsToMeters(value.substring(1))}`;
+				} else {
+					change.value = Converters.footsToMeters(value);
 				}
-				if (["system.range.value", "system.range.long", "system.traits.languages.communication.telepathy.value"].includes(change.key)) {
-					if (parseInt(value)) {
-						change.value = Converters.footsToMeters(value);
-					} else {
-						const match = value.match(/^(.+?)\s*(\d+)(?:\s+(.*))?$/);
-						if (match) {
-							let [_, begin, numberStr, end] = match;
-							begin ??= "";
-							const convertedNumber = Converters.footsToMeters(numberStr);
-							end ??= "";
-							change.value = `${begin} ${convertedNumber} ${end}`;
-						}
+			}
+			if (["system.range.value", "system.range.long", "system.traits.languages.communication.telepathy.value"].includes(change.key)) {
+				if (parseInt(value)) {
+					change.value = Converters.footsToMeters(value);
+				} else {
+					const match = value.match(/^(.+?)\s*(\d+)(?:\s+(.*))?$/);
+					if (match) {
+						let [_, begin, numberStr, end] = match;
+						begin ??= "";
+						const convertedNumber = Converters.footsToMeters(numberStr);
+						end ??= "";
+						change.value = `${begin} ${convertedNumber} ${end}`;
 					}
 				}
 			}
-			return change;
 		});
 
 		if (!translations) return changes;

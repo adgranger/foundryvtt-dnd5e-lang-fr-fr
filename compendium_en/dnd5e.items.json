@@ -2712,10 +2712,12 @@
       "udescription": "<p>This sticky black unguent is thick and heavy in the container, but it flows quickly when poured.</p>",
       "activities": {
         "Apply Oil": {
-          "name": "Apply Oil"
+          "name": "Apply Oil",
+          "description": "<p>The oil can cover a Medium or smaller creature, along with the equipment it's wearing and carrying (one additional vial is required for each size category above Medium). Applying the oil takes [[lookup @labels.activation activity=OMSMC85UR5All9Vz]]. The affected creature then gains the effect of a @UUID[Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT]{Freedom of Movement} spell for [[lookup @labels.duration activity=OMSMC85UR5All9Vz]].</p>"
         },
         "Pour Oil Out": {
-          "name": "Pour Oil Out"
+          "name": "Pour Oil Out",
+          "description": "<p>This oil can be poured on the ground as an action, where it covers a 10‑foot square, duplicating the effect of the @UUID[Compendium.dnd5e.spells.Item.etgcR9wqmrhyZ0tx]{Grease} spell in that area for 8 hours.</p>"
         }
       },
       "effects": {
@@ -3559,7 +3561,8 @@
       "activities": {
         "Apply Ointment": {
           "name": "Apply Ointment",
-          "condition": "The ointment needs to be swallowed or applied to the skin."
+          "condition": "The ointment needs to be swallowed or applied to the skin.",
+          "description": "<p>As an action, one dose of the ointment can be swallowed or applied to the skin. The creature that receives it regains [[/healing activity=gRkokZZM4WWwqjEu]], ceases to be &amp;reference[poisoned apply=false], and is cured of any disease.</p>"
         }
       }
     },
@@ -4895,7 +4898,8 @@
       "activities": {
         "Assisted Escape": {
           "name": "Assisted Escape",
-          "condition": "When you make a saving throw to avoid being &reference[paralyzed apply=false], &reference[restrained apply=false], or when you attempt to escape a &reference[grappled apply=false]{Grapple}."
+          "condition": "When you make a saving throw to avoid being &reference[paralyzed apply=false], &reference[restrained apply=false], or when you attempt to escape a &reference[grappled apply=false]{Grapple}.",
+          "description": "<p>While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being &amp;reference[paralyzed apply=false] or &amp;reference[restrained apply=false], or you can expend 1 charge and gain advantage on any check you make to escape a &amp;reference[grappled apply=false]{Grapple}.</p>"
         }
       }
     },
@@ -4915,7 +4919,8 @@
       "uname": "Unidentified Wand",
       "activities": {
         "Cone of Fear": {
-          "name": "Cone of Fear"
+          "name": "Cone of Fear",
+          "description": "<p>While holding the wand, you can use an action to expend 2 charges, causing the wand's tip to emit a [[lookup @labels.description.template activity=zj1bSgRYmMvM3xaO]] of amber light. Each creature in the cone must succeed on a [[/save activity=zj1bSgRYmMvM3xaO]] saving throw or become &amp;reference[frightened] of you for [[lookup @labels.duration activity=zj1bSgRYmMvM3xaO]]. While it is frightened in this way, a creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the &amp;reference[Dash] action or try to escape from an effect that prevents it from moving. If it has nowhere it can move, the creature can use the &amp;reference[Dodge] action. At the end of each of its turns, a creature can repeat the saving throw, ending the effect on itself on a success.</p>"
         }
       },
       "effects": {
