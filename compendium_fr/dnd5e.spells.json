@@ -4729,7 +4729,8 @@
       },
       "effects": {
         "Telepathic Bond": {
-          "name": "Lien télépathique"
+          "name": "Lien télépathique",
+          "description": "<p>L'incantateur a forgé un lien télépathique avec vous, vous reliant psychiquement à tous les autres pour toute la durée.</p><p>Jusqu'à la fin du sort, vous pouvez communiquer par télépathie via le lien, que vous parliez ou non une même langue. La communication, possible quelle que soit la distance, ne s'étend toutefois pas d'un plan d'existence à l'autre.</p>"
         }
       }
     },
@@ -4739,6 +4740,10 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Mishap Damage": {
+          "name": "Dégâts d'incident",
+          "condition": "Lorsqu'un incident se produit."
         }
       }
     },
@@ -4775,7 +4780,8 @@
       "description": "<p>Vous mettez un bref coup d'arrêt à l'écoulement du temps, pour tout le monde sauf vous-même. Le temps s'arrête pour les autres créatures tandis que vous prenez 1d4 +1 tours d'affilée, durant lesquels vous pouvez entreprendre des actions et vous déplacer comme en temps normal.</p><p>Ce sort prend fin si l'une des actions que vous entreprenez durant l'intervalle, ou l'un des effets créés, affecte une créature autre que vous ou un objet porté par quelqu'un d'autre que vous. Il se termine également si vous vous déplacez en un lieu distant de plus de 300 m de l'endroit où vous l'avez lancé.</p>",
       "activities": {
         "Cast": {
-          "name": "Incanter"
+          "name": "Incanter",
+          "roll": "Durée d'arrêt du temps (rounds)"
         }
       }
     },
@@ -4802,7 +4808,9 @@
         "Speaking in Tongues": {
           "changes": {
             "0": ";toute langue parlée et tout langage des signes"
-          }
+          },
+          "name": "Don des langues",
+          "description": "<p>Vous avez gagné la faculté de comprendre toute langue parlée que vous entendez. De plus, lorsque vous parlez, toute créature qui connaît au moins une langue comprend ce que vous dites à condition de vous entendre.</p>"
         }
       }
     },
@@ -4831,6 +4839,12 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Creature to Creature": {
+          "name": "Créature en créature"
+        },
+        "Object into Creature": {
+          "name": "Objet en créature"
         }
       }
     },
@@ -4855,7 +4869,8 @@
       },
       "effects": {
         "True Seeing": {
-          "name": "Vision suprême"
+          "name": "Vision suprême",
+          "description": "<p>Vous avez la faculté de voir les choses telles qu'elles sont. Pour toute la durée, vous êtes doté de la &reference[truesight]{vision lucide}, détectez les passages secrets cachés par magie et percevez le Plan Éthéré, le tout sur une portée de 36 m.</p>"
         }
       }
     },
@@ -4893,6 +4908,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Vampiric Touch Attack": {
+          "name": "Attaque de caresse du vampire"
         }
       }
     },
@@ -4914,27 +4932,79 @@
     "Wall of Fire": {
       "name": "Mur de feu",
       "description": "<p>Vous créez un mur de flammes sur une surface solide à portée. Vous pouvez ainsi ériger un mur dont la hauteur n'excède pas 6 m et l'épaisseur 30 cm ; pour le reste, vous avez le choix entre un mur droit long d'un maximum de 18 m et un mur circulaire dont le diamètre ne dépasse pas 6 m. Ce mur opaque persiste pour toute la durée.</p><p>Quand le mur apparaît, chaque créature prise dans sa zone effectue un jet de sauvegarde de Dextérité. Elle subit 5d8 dégâts de feu en cas d'échec, la moitié en cas de réussite.</p><p>L'un des côtés du mur que vous choisissez à l'incantation du sort inflige 5d8 dégâts de feu à toute créature qui termine son tour à 3 m ou moins de ce côté ou dans le mur. Une créature qui pénètre dans le mur pour la première fois d'un tour ou qui y termine son tour subit ces mêmes dégâts. L'autre côté du mur n'inflige pas de dégâts.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 5<sup>e</sup> niveau ou supérieur, les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 4<sup>e</sup>.</p>",
-      "materials": "un petit morceau de phosphore"
+      "materials": "un petit morceau de phosphore",
+      "activities": {
+        "Conjure Wall of Fire": {
+          "name": "Invoquer un mur de feu"
+        },
+        "Conjure Ringed Wall of Fire": {
+          "name": "Invoquer un mur de feu circulaire"
+        },
+        "Wall Contact Damage": {
+          "name": "Dégâts de contact avec le mur",
+          "condition": "Lorsqu'une créature termine son tour à 3 m ou moins du côté nuisible du mur ou dans le mur."
+        }
+      }
     },
     "Wall of Force": {
       "name": "Mur de force",
       "description": "<p>Un mur de force invisible se matérialise en un point que vous choisissez à portée. Le mur se présente dans l'orientation de votre choix, horizontal ou vertical, voire complètement de biais. Il peut rester en suspension ou reposer sur une surface solide. Vous pouvez le façonner en dôme hémisphérique ou en sphère d'un rayon maximal de 3 m, ou en faire une surface plane composée de dix pans de 3 mètres sur 3. Chaque pan doit être contigu avec un autre. Quelle que soit sa forme, le mur est épais de 6 mm. Il persiste pour toute la durée. Si le mur traverse l'espace d'une créature à son apparition, la créature est repoussée d'un côté du mur ou de l'autre (vous choisissez lequel).</p><p>Rien ne peut franchir physiquement le mur. Il est immunisé contre tous les dégâts et insensible à @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie}. Le sort @UUID[Compendium.dnd5e.spells.Item.HBHbOGKNVVprSlwn]{désintégration} détruit en revanche le mur instantanément. Ce mur s'étend en outre sur le Plan Éthéré, ce qui empêche le voyage éthéré le traversant.</p>",
-      "materials": "une pincée de poudre obtenue en concassant une gemme limpide"
+      "materials": "une pincée de poudre obtenue en concassant une gemme limpide",
+      "activities": {
+        "Conjure Wall of Force": {
+          "name": "Invoquer un mur de force"
+        },
+        "Conjure Hemispherical Wall of Force": {
+          "name": "Invoquer un mur de force hémisphérique"
+        }
+      }
     },
     "Wall of Ice": {
       "name": "Mur de glace",
       "description": "<p>Vous créez un mur de glace sur une surface solide à portée. Vous pouvez le façonner en dôme hémisphérique ou en sphère d'un rayon maximal de 3 m, ou en faire une surface plane composée de dix pans de 3 mètres sur 3. Chaque pan doit être contigu avec un autre. Quelle que soit sa forme, le mur est épais de 30 cm et persiste pour toute la durée.</p><p>Si le mur traverse l'espace d'une créature à son apparition, la créature est repoussée d'un côté du mur ou de l'autre et effectue un jet de sauvegarde de Dextérité. Elle subit 10d6 dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p>Le mur est un objet que l'on peut endommager, ce qui permet d'y ouvrir une brèche. Il est doté d’une CA de 12, de 30 points de vie par section de 3 m de côté, et il est vulnérable aux dégâts de feu. Une section de 3 m de côté réduite à 0 point de vie est détruite et laisse une nappe d'air glacial dans l'espace qu'elle occupait. Une créature qui traverse une telle nappe pour la première fois d'un tour effectue un jet de sauvegarde de Constitution. Elle subit 5d6 dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 7<sup>e</sup> niveau ou supérieur, les dégâts infligés par le mur à son apparition augmentent de 2d6 et ceux de la nappe d'air glacial de 1d6 par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
-      "materials": "un fragment de quartz"
+      "materials": "un fragment de quartz",
+      "activities": {
+        "Conjure Wall of Ice": {
+          "name": "Invoquer un mur de glace"
+        },
+        "Frigid Air Damage": {
+          "name": "Dégâts d'air glacial",
+          "condition": "Lorsqu'une créature traverse la nappe d'air glacial pour la première fois d'un tour."
+        },
+        "Conjure Dome of Ice": {
+          "name": "Invoquer un dôme de glace"
+        }
+      }
     },
     "Wall of Stone": {
       "name": "Mur de pierre",
       "description": "<p>Un mur non magique de pierre solide se matérialise en un point que vous choisissez à portée. Le mur, épais de 15 cm, se compose de dix pans de 3 m sur 3. Chaque pan doit être contigu avec au moins un autre. Une autre option consiste à créer des pans de 3 m sur 6, épais de seulement 7,5 cm.</p><p>Si le mur traverse l'espace d'une créature à son apparition, la créature est repoussée d'un côté du mur ou de l'autre (vous choisissez lequel). Si une créature est censée se retrouver cernée par le mur de tous les côtés (ou par le mur et une autre surface solide), elle a droit à un jet de sauvegarde de Dextérité. En cas de réussite, elle peut jouer sa réaction pour se déplacer dans les limites de sa vitesse de manière à ne plus être séquestrée par le mur.</p><p>Le mur peut prendre toute forme de votre choix, mais il ne peut pas occuper le même espace que des créatures ou des objets. Il n'a pas besoin d'être vertical ni de reposer sur des fondations robustes. Il doit en revanche fusionner avec de la pierre existante, qui doit pouvoir le soutenir. Vous pouvez ainsi recourir à ce sort pour créer un pont qui enjambe un gouffre, ou un plan incliné.</p><p>Si le pont ainsi créé dépasse 6 m de long, vous devez réduire de moitié la taille de chaque pan de façon à l'étayer. Vous pouvez grossièrement façonner le mur pour produire des créneaux, remparts et autres.</p><p>Le mur est un objet de pierre que l'on peut endommager, ce qui permet d'y ouvrir une brèche. Chaque pan présente une CA de 15 et possède 30 points de vie par tranche de 2,5 cm d'épaisseur. Un pan réduit à 0 point de vie est détruit, ce qui peut en outre provoquer l'effondrement de pans contigus, à l'appréciation du MJ.</p><p>Si vous maintenez la concentration sur ce sort jusqu'au bout de sa durée maximale, le mur devient permanent, sans possibilité de le dissiper. Sans cela, il disparaît quand le sort prend fin.</p>",
-      "materials": "un petit bloc de granite"
+      "materials": "un petit bloc de granite",
+      "activities": {
+        "Conjure Wall of Stone (10 ft. x 10 ft. Panels)": {
+          "name": "Invoquer un mur de pierre (pans de 3 m sur 3)"
+        },
+        "Conjure Wall of Stone (10 ft. x 20 ft. Panels)": {
+          "name": "Invoquer un mur de pierre (pans de 3 m sur 6)"
+        }
+      }
     },
     "Wall of Thorns": {
       "name": "Mur d'épines",
       "description": "<p>Vous créez un mur fait d'un enchevêtrement végétal aussi souple que robuste, hérissé d'épines acérées. Le mur apparaît à portée sur une surface solide et persiste pour toute la durée. Vous pouvez ainsi ériger un mur dont l'épaisseur n'excède pas 1,50 m ; pour le reste, vous avez le choix entre un mur droit long d'un maximum de 18 m et haut de 3 m ou moins, et un mur circulaire dont le diamètre et la hauteur ne dépassent pas 6 m. Le mur bloque le champ de vision.</p><p>Quand le mur apparaît, chaque créature prise dans sa zone effectue un jet de sauvegarde de Dextérité. Elle subit 7d8 dégâts perforants en cas d'échec, la moitié en cas de réussite.</p><p>Une créature peut se déplacer à travers ces ronces, mais l'opération est lente et douloureuse. Toute distance parcourue à travers le mur lui coûte le quadruple en termes de déplacement. En outre, la première fois d'un tour qu'une créature pénètre dans le mur et quand elle y termine son tour, elle effectue un jet de sauvegarde de Dextérité. Elle subit 7d8 dégâts tranchants en cas d'échec, la moitié en cas de réussite.</p><p><em><strong>À plus haut niveau.</strong></em> Lorsque vous lancez ce sort par un emplacement du 7<sup>e</sup> niveau ou supérieur, les dégâts des deux types augmentent de 1d8 par niveau d'emplacement au-delà du 6<sup>e</sup>.</p>",
-      "materials": "une poignée d'épines"
+      "materials": "une poignée d'épines",
+      "activities": {
+        "Conjure Wall of Thorns": {
+          "name": "Invoquer un mur d'épines"
+        },
+        "Conjure Circular Wall of Thorns": {
+          "name": "Invoquer un mur d'épines circulaire"
+        },
+        "Wall Contact Damage": {
+          "name": "Dégâts de contact avec le mur",
+          "condition": "Lorsqu'une créature entre dans le mur pour la première fois d'un tour ou y termine son tour."
+        }
+      }
     },
     "Warding Bond": {
       "name": "Lien de protection",
@@ -4947,7 +5017,8 @@
       },
       "effects": {
         "Warding Bond": {
-          "name": "Lien de protection"
+          "name": "Lien de protection",
+          "description": "<p>Vous recevez un bonus de +1 à la CA et aux jets de sauvegarde, et êtes résistant à tous les dégâts. Par ailleurs, chaque fois que vous subissez des dégâts, celui qui a lancé le sort en subit autant. Le sort prend fin si celui qui a lancé le sort tombe à 0 point de vie ou si vous vous retrouvez distants de plus de 18 m. Il prend également fin s'il est relancé sur vous ou sur celui qui l'a lancé.</p>"
         }
       }
     },
@@ -4962,7 +5033,8 @@
       },
       "effects": {
         "Water Breathing": {
-          "name": "Respiration aquatique"
+          "name": "Respiration aquatique",
+          "description": "<p>Vous pouvez respirer sous l'eau jusqu'à la fin du sort. Vous conservez vos autres modes respiratoires.</p>"
         }
       }
     },
@@ -4977,14 +5049,34 @@
       },
       "effects": {
         "Water Walking": {
-          "name": "Marche sur l'onde"
+          "name": "Marche sur l'onde",
+          "description": "<p>Ce sort vous octroie la faculté de vous déplacer sur n'importe quelle surface liquide (eau, acide, boue, neige, sables mouvants et même lave) comme s'il s'agissait d'une surface solide ne présentant aucun risque (sur de la lave, vous vous exposez tout de même aux dégâts que peut engendrer la chaleur).</p><p>Si vous êtes immergé dans un liquide, le sort vous ramène à la surface au rythme de 18 m par round.</p>"
         }
       }
     },
     "Web": {
       "name": "Toile d'araignée",
       "description": "<p>Vous invoquez une masse gluante d'épais fils d'araignée entremêlés en un point que vous choisissez à portée. Pour toute la durée, cette toile remplit un cube de 6 m d'arête émanant du point choisi. Elle constitue un &reference[difficult terrain]{terrain difficile} et la &reference[lightly obscured]{visibilité est réduite} dans la zone.</p><p>Si les fils ne peuvent pas se fixer à deux volumes solides (comme des murs ou des arbres) et ne sont pas disposés en travers d'un sol, d'un mur ou d'un plafond, la toile s'effondre sur elle-même et le sort prend fin au début de votre tour suivant. Invoquée sur une surface plane, la toile présente une épaisseur de 1,50 m.</p><p>Chaque créature qui commence son tour dans la toile ou qui y pénètre à son tour de jeu effectue un jet de sauvegarde de Dextérité. En cas d'échec, la créature est &reference[Restrained]{entravée} tant qu'elle reste dans la toile et qu'elle ne s'en est pas libérée.</p><p>Une créature ainsi entravée peut consacrer son action à effectuer un test de Force assorti de votre DD de sauvegarde des sorts. En cas de réussite, elle n'est plus entravée.</p><p>La toile est inflammable. Tout cube de toile de 1,50 m d'arête exposé aux flammes brûle en 1 round et inflige 2d4 dégâts de feu à toute créature qui commence son tour dans les flammes.</p>",
-      "materials": "quelques filandres de toile d'araignée"
+      "materials": "quelques filandres de toile d'araignée",
+      "activities": {
+        "Conjure Webs": {
+          "name": "Invoquer des toiles d'araignée"
+        },
+        "Enter Web Save": {
+          "name": "Sauvegarde : Entrée dans la toile",
+          "range": "Lorsqu'une créature commence son tour dans la toile ou y pénètre à son tour de jeu."
+        },
+        "Burning Web Damage": {
+          "name": "Dégâts de toile enflammée",
+          "condition": "Lorsqu'une créature commence son tour dans un espace occupé par une toile enflammée."
+        }
+      },
+      "effects": {
+        "Restrained in Webs": {
+          "name": "Entravé dans une toile",
+          "description": "<p>Vous êtes &reference[restrained apply=false]{entravé} dans la toile jusqu'à ce que vous vous en libériez. Vous pouvez consacrer votre action à effectuer un test de Force assorti du DD de sauvegarde des sorts de celui qui a lancé le sort. En cas de réussite, vous n'êtes plus entravé.</p>"
+        }
+      }
     },
     "Weird": {
       "name": "Ennemi subconscient",
@@ -4994,12 +5086,14 @@
           "name": "Incanter"
         },
         "End of Turn Save": {
-          "name": "Sauvegarde de fin de tour"
+          "name": "Sauvegarde de fin de tour",
+          "condition": "Lorsqu'une créature &reference[frightened apply=false]{effrayée} par ce sort termine son tour."
         }
       },
       "effects": {
         "Weird": {
-          "name": "Ennemi subconscient"
+          "name": "Ennemi subconscient",
+          "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pour toute la durée. L'illusion touche à vos peurs les plus intimes, vos pires cauchemars se manifestant comme des menaces aussi immédiates qu'implacables.</p><p>À la fin de chacun de vos tours, vous devez réussir un jet de sauvegarde de Sagesse sous peine de subir 4d10 dégâts psychiques. En cas de réussite, le sort prend fin en ce qui vous concerne.</p>"
         }
       }
     },
@@ -5010,6 +5104,12 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Wind Walking": {
+          "name": "Vent divin",
+          "description": "<p>Vous adoptez une forme gazeuse pour toute la durée et apparaissez comme des volutes. Tant que vous êtes sous cette forme brumeuse, vous êtes doté d'une vitesse de vol de 90 m et bénéficiez de la résistance aux dégâts des armes non magiques. Les seules actions que vous pouvez entreprendre sous cette forme sont l'action &reference[Dash]{Foncer} et reprendre votre forme normale. Il vous faut 1 minute pour retrouver votre forme d'origine, intervalle durant lequel vous êtes &reference[Incapacitated apply=false]{neutralisé} et ne pouvez vous déplacer. Jusqu'à la fin du sort, vous pouvez également reprendre une forme gazeuse, transformation qui nécessite aussi 1 minute.</p><p>Si vous êtes sous forme gazeuse et en vol au moment où le sort prend fin, vous redescendez au rythme de 18 m par round pendant 1 minute, jusqu'à atterrir sans heurt. Si cette minute ne vous a pas suffi à toucher le sol, vous chutez de la distance restante.</p>"
         }
       }
     },
@@ -5028,46 +5128,89 @@
       "description": "<p>Souhait est le sort le plus puissant que puisse lancer un mortel. De votre seule voix, vous avez le pouvoir de chambouler les fondations mêmes de la réalité selon vos désirs.</p><p>L'utilisation standard du sort revient à reproduire le sort de votre choix du 8<sup>e</sup> niveau ou inférieur. Vous n'avez pas besoin de remplir les conditions habituelles du sort, y compris ses composantes coûteuses. Le sort prend tout simplement effet.</p><p>Une autre approche vous permet de produire l'un des effets suivants, au choix :</p><ul><li><p>Créer un objet non magique d'une valeur maximale de 25 000 po. Aucune des dimensions de l'objet ne peut dépasser 90 m et il apparaît au sol, en un espace inoccupé que vous voyez.</p></li><li><p>Permettre à un maximum de vingt créatures que vous voyez de récupérer tous leurs points de vie et mettre un terme à tous les effets qui les touchent parmi ceux décrits pour le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême}.</p></li><li><p>Octroyer la résistance au type de dégâts de votre choix à un maximum de dix créatures que vous voyez.</p></li><li><p>Octroyer l'immunité contre un sort (ou un effet magique) unique pendant 8 heures, à un maximum de dix créatures que vous voyez. Vous pourriez ainsi immuniser toute votre troupe contre l'attaque d'Absorption de vie d'une liche.</p></li><li><p>Modifier un événement récent en faisant rejouer un jet de dés intervenu au cours du dernier round (ce qui comprend votre dernier tour). La réalité s'adapte alors à ce nouveau résultat. Souhait peut ainsi annuler le jet de sauvegarde réussi d'un adversaire, le coup critique d'un ennemi ou le JS raté d’un allié. Vous pouvez décider que le jet se refasse avec avantage ou désavantage, et vous décidez en connaissance de cause lequel s'applique entre le jet d'origine et le nouveau.</p></li></ul><p>Les exemples précédents ne doivent pas vous contraindre dans l'utilisation du sort. Si vous avez une idée qui n'entre pas dans leur cadre, faites-en part à votre MJ, le plus précisément possible. Le MJ est alors seul juge de ce qui peut se passer : plus le souhait est ambitieux, plus il risque d'engendrer des incidents. Le sort pourrait tout simplement échouer, ou ne produire que partiellement l'effet désiré, ou vous pourriez connaître des imprévus fâcheux en raison d'une formulation hasardeuse. Si vous faites par exemple le souhait que votre grand ennemi meure, vous pourriez vous retrouver projeté dans l'avenir, à une époque où cet adversaire n'est effectivement plus en vie, mais votre héros quitterait du même coup la partie. De même, souhaiter mettre la main sur un objet magique légendaire ou un artefact pourrait vous transporter aussitôt face à l'actuel propriétaire.</p><p>Dès lors qu'il ne s'agit pas seulement de reproduire les effets d'un autre sort, lancer souhait est une véritable épreuve. Après une telle gageure, chaque fois que vous jetez un sort sans avoir terminé un repos long, vous subissez 1d10 dégâts nécrotiques par niveau du sort. Ces dégâts ne peuvent être réduits ni évités d'aucune manière. De plus, votre valeur de Force tombe à 3, si elle n'était pas déjà de 3 ou moins, pendant 2d4 jours. Chaque jour que vous passez alors à vous reposer en vous contentant de menues tâches déduit 2 jours de cette période de convalescence. Enfin, il y a 33 pour cent de risques pour que vous ne soyez plus jamais capable de relancer souhait.</p>",
       "effects": {
         "Acid Resistance": {
-          "name": "Résistance à l'acide"
+          "name": "Résistance à l'acide",
+          "description": "<p>Vous recevez la résistance aux dégâts d'acide.</p>"
         },
         "Bludgeoning Resistance": {
-          "name": "Résistance aux dégâts contondants"
+          "name": "Résistance aux dégâts contondants",
+          "description": "<p>Vous recevez la résistance aux dégâts contondants.</p>"
         },
         "Cold Resistance": {
-          "name": "Résistance au froid"
+          "name": "Résistance au froid",
+          "description": "<p>Vous recevez la résistance aux dégâts de froid.</p>"
         },
         "Fire Resistance": {
-          "name": "Résistance au feu"
+          "name": "Résistance au feu",
+          "description": "<p>Vous recevez la résistance aux dégâts de feu.</p>"
         },
         "Force Resistance": {
-          "name": "Résistance à la force"
+          "name": "Résistance à la force",
+          "description": "<p>Vous recevez la résistance aux dégâts de force.</p>"
         },
         "Lightning Resistance": {
-          "name": "Résistance à la foudre"
+          "name": "Résistance à la foudre",
+          "description": "<p>Vous recevez la résistance aux dégâts de foudre.</p>"
         },
         "Necrotic Resistance": {
-          "name": "Résistance nécrotique"
+          "name": "Résistance nécrotique",
+          "description": "<p>Vous recevez la résistance aux dégâts nécrotiques.</p>"
         },
         "Piercing Resistance": {
-          "name": "Résistance aux dégâts perforants"
+          "name": "Résistance aux dégâts perforants",
+          "description": "<p>Vous recevez la résistance aux dégâts perforants.</p>"
         },
         "Poison Resistance": {
-          "name": "Résistance au poison"
+          "name": "Résistance au poison",
+          "description": "<p>Vous recevez la résistance aux dégâts de poison.</p>"
         },
         "Psychic Resistance": {
-          "name": "Résistance psychique"
+          "name": "Résistance psychique",
+          "description": "<p>Vous recevez la résistance aux dégâts psychiques.</p>"
         },
         "Radiant Resistance": {
-          "name": "Résistance radiante"
+          "name": "Résistance radiante",
+          "description": "<p>Vous recevez la résistance aux dégâts radiants.</p>"
         },
         "Slashing Resistance": {
-          "name": "Résistance aux dégâts tranchants"
+          "name": "Résistance aux dégâts tranchants",
+          "description": "<p>Vous recevez la résistance aux dégâts tranchants.</p>"
         },
         "Thunder Resistance": {
-          "name": "Résistance au tonnerre"
+          "name": "Résistance au tonnerre",
+          "description": "<p>Vous recevez la résistance aux dégâts de tonnerre.</p>"
         },
         "Wish Stress": {
-          "name": "Épreuve de souhait"
+          "name": "Épreuve de souhait",
+          "description": "<p>Chaque fois que vous jetez un sort sans avoir terminé un repos long, vous subissez 1d10 dégâts nécrotiques par niveau du sort. Ces dégâts ne peuvent être réduits ni évités d'aucune manière.</p><p>De plus, votre valeur de Force tombe à 3, si elle n'était pas déjà de 3 ou moins, pendant 2d4 jours. Chaque jour que vous passez alors à vous reposer en vous contentant de menues tâches déduit 2 jours de cette période de convalescence.</p>"
+        },
+        "Ability Immunity": {
+          "name": "Immunité octroyée",
+          "description": "<p>Vous êtes immunisé contre un sort (ou un effet magique) unique pendant 8 heures.</p>"
+        }
+      },
+      "activities": {
+        "Replicate Spell (8th Level or Lower)": {
+          "name": "Reproduire un sort (8e niveau ou inférieur)"
+        },
+        "Stressful Wish: Conjure Wealth": {
+          "name": "Souhait éprouvant : invoquer la richesse"
+        },
+        "Stressful Wish: Restore Health": {
+          "name": "Souhait éprouvant : restaurer la santé"
+        },
+        "Stressful Wish: Bestow Resistance": {
+          "name": "Souhait éprouvant : octroyer la résistance"
+        },
+        "ZFQAppQ4CwUu6G4E": {
+          "name": "Souhait éprouvant : octroyer l'immunité"
+        },
+        "Stressful Wish: Rewrite Events": {
+          "name": "Souhait éprouvant : réécrire les événements"
+        },
+        "Wish Stress Effects": {
+          "name": "Effets du stress de souhait",
+          "roll": "Aptitude à relancer souhait",
+          "chatFlavor": "Sur un résultat de 1, vous ne pouvez plus jamais relancer ce sort."
         }
       }
     },
@@ -5088,7 +5231,8 @@
           "name": "Incanter"
         },
         "Enter Zone Save": {
-          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour."
+          "condition": "Lorsqu'une créature entre dans la zone du sort pour la première fois d'un tour ou y commence son tour.",
+          "name": "Sauvegarde : Entrée dans la zone"
         }
       }
     },
