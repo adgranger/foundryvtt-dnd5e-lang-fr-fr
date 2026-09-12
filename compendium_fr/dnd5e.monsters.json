@@ -2612,7 +2612,7 @@
         },
         "Pseudopod": {
           "name": "Pseudopode",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts contondants plus 18 ([[/damage]]{4d8}) dégâts d'acide. De plus, toute armure non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. De plus, toute armure non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p><section id=\"secret-EuthiTlnSJwRrtDQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.v6ZspnPr8G5hApkL.ActiveEffect.4U4SIb01ypbc6lzv]{Armure corrodée} à une armure, ce qui lui confère un malus cumulatif de -1 à la CA qu'elle offre à chaque fois que l'enchantement est appliqué.</p></section>",
           "chat": "<p>Le [[lookup @name]] attaque avec Pseudopode.</p>"
         },
         "Split": {
@@ -3058,7 +3058,7 @@
       "items": {
         "Slam": {
           "name": "Coup",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d10 + 5}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de point de vie est réduit d'autant que les dégâts subis. La cible meurt si cette attaque réduit son maximum de points de vie à 0. Cette réduction persiste jusqu'à ce qu'on l'élimine par le sort <em>restauration suprême</em> ou une magie équivalente.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de point de vie est réduit d'autant que les dégâts subis. La cible meurt si cette attaque réduit son maximum de points de vie à 0. Cette réduction persiste jusqu'à ce qu'on l'élimine par le sort <em>@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême}</em> ou une magie équivalente.</p>",
           "chat": "<p>[[lookup @name]] attaque avec Coup.</p>"
         },
         "Haste": {
@@ -3448,7 +3448,7 @@
         },
         "Dark Devotion": {
           "name": "Sombre dévotion",
-          "description": "<p>Le fanatique est avantagé aux jets de sauvegarde contre les états charmé et effrayé.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les états &reference[charmed apply=false]{charmé} et &reference[frightened apply=false]{effrayé}.</p>"
         },
         "Spellcasting": {
           "name": "Sorts",
@@ -4064,7 +4064,7 @@
         },
         "Quarterstaff": {
           "name": "Bâton de combat",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] ou [[/damage twoHanded]] si utilisé à deux mains, ou [[/attack extended activity=hQCHzLhxJpg6id19]]. [[/damage extended activity=hQCHzLhxJpg6id19]] avec @UUID[.udSiVp4nSrGBSvG1]{crosse des druides}.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] ou [[/damage average attackMode=twoHanded]] si utilisé à deux mains, ou [[/attack extended activity=hQCHzLhxJpg6id19]]. [[/damage extended activity=hQCHzLhxJpg6id19]] avec @UUID[.udSiVp4nSrGBSvG1]{crosse des druides}.</p>",
           "chat": "<p>Le druide attaque avec son Bâton de combat.</p>",
           "activities": {
             "Spellcasting Attack": {
@@ -4497,7 +4497,7 @@
         },
         "Longbow": {
           "name": "Arc long",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 45/180 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts perforants plus 13 ([[/damage]]{3d8}) dégâts de poison, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. L'empoisonnement persiste jusqu'à ce que le sort restauration partielle ou une magie comparable l'élimine.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. L'empoisonnement persiste jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{restauration partielle} ou une magie comparable l'élimine.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Arc long.</p>",
           "activities": {
             "Poison Save": {
@@ -5726,7 +5726,7 @@
         },
         "Shield Bash": {
           "name": "Coup de bouclier",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 9 ([[/damage]]{2d4 + 4}) dégâts contondants. Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Coup de bouclier.</p>"
         },
         "Parry": {
@@ -5911,7 +5911,7 @@
         },
         "Pseudopod": {
           "name": "Pseudopode",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts contondants plus 7 ([[/damage]]{2d6}) dégâts d'acide et toute armure métallique non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et toute armure métallique non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p><section id=\"secret-8JkOh4DLk4cb3dhN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.KO4qRywgiEQ3F004.ActiveEffect.SiRqKDm2qerReaj8]{Armure corrodée} à une armure, ce qui lui confère un malus cumulatif de -1 à la CA qu'elle offre à chaque fois que l'enchantement est appliqué.</p></section>",
           "chat": "<p>La [[lookup @name]] attaque avec Pseudopode.</p>"
         }
       },
@@ -6593,7 +6593,7 @@
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 10 ([[/damage]]{1d8 + 6}) dégâts perforants. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de perdre 10 (3d6) points de vie au début de chacun de ses tours en raison d'une plaie infernale. Chaque fois que le diable touche la cible victime d'une telle plaie avec cette attaque, les dégâts infligés par la plaie augmentent de 10 (3d6). Toute créature peut stopper l'hémorragie en réussissant un test de Sagesse (Médecine) DD 12, au prix d'une action. La plaie se referme aussi si la cible reçoit des soins magiques.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de perdre 10 (3d6) points de vie au début de chacun de ses tours en raison d'une plaie infernale. Chaque fois que le diable touche la cible victime d'une telle plaie avec cette attaque, les dégâts infligés par la plaie augmentent de 10 (3d6). Toute créature peut stopper l'hémorragie en réussissant un test de [[/check 12 wis med]], au prix d'une action. La plaie se referme aussi si la cible reçoit des soins magiques.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
         },
         "Multiattack": {
@@ -7793,7 +7793,7 @@
         },
         "Harpoon": {
           "name": "Harpon",
-          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts perforants. Si la cible est une créature de taille TG ou inférieure, elle doit remporter un test opposé de Force contre le merrow pour ne pas être repoussée de 6 m du merrow.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille TG ou inférieure, elle doit remporter un test opposé de Force contre le merrow pour ne pas être repoussée de 6 m du merrow.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Harpon.</p>"
         }
       },
@@ -7823,7 +7823,7 @@
         },
         "Pseudopod": {
           "name": "Pseudopode",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts contondants. Si la mimique est sous forme d'objet, la cible est soumise à son trait Engluage.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la mimique est sous forme d'objet, la cible est soumise à son trait @UUID[Compendium.dnd5e.monsters.Actor.hx240PG5r5qpRet3.Item.aPL8wE2ARwh9JFeX]{Engluage}.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Pseudopode.</p>"
         },
         "Bite": {
@@ -7923,7 +7923,7 @@
         },
         "Rotting Fist": {
           "name": "Poing putréfié",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de Constitution DD 12 sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort délivrance des malédictions ou une magie équivalente.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Poing putréfié.</p>"
         },
         "Dreadful Glare": {
@@ -7982,7 +7982,7 @@
         },
         "Rotting Fist": {
           "name": "Poing putréfié",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 14 ([[/damage]]{3d6 + 4}) dégâts contondants plus 21 ([[/damage]]{6d6}) dégâts nécrotiques. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 ([[/r 3d6]]) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort délivrance des malédictions ou une magie équivalente.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Poing putréfié.</p>"
         },
         "Dreadful Glare": {
@@ -8442,7 +8442,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d8 + 3}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] contre la maladie, sous peine d'être &Reference[poisoned apply=false]{empoisonnée} jusqu'à ce qu'elle en guérisse. Toutes les 24 heures après cela, la cible doit réitérer le jet de sauvegarde, son maximum de points de vie se réduisant de 5 ([[/r 1d10]]) en cas d'échec. La cible guérit de la maladie en cas de sauvegarde réussie. La cible meurt si la maladie réduit son maximum de points de vie à 0. Cette réduction du maximum de points de vie persiste jusqu'à ce que la cible guérisse de la maladie.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] contre la maladie, sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'à ce qu'elle en guérisse. Toutes les 24 heures après cela, la cible doit réitérer le jet de sauvegarde, son maximum de points de vie se réduisant de [[/damage maximum 1d10]]{5 (1d10)} en cas d'échec. La cible guérit de la maladie en cas de sauvegarde réussie. La cible meurt si la maladie réduit son maximum de points de vie à 0. Cette réduction du maximum de points de vie persiste jusqu'à ce que la cible guérisse de la maladie.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Disease Save": {
@@ -9041,7 +9041,7 @@
         },
         "Claw": {
           "name": "Griffe",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 9 ([[/damage]]{2d6 + 2}) dégâts tranchants et si la cible est une créature, elle est maudite. Cette malédiction magique prend effet dès que la cible prend un repos court ou long, son esprit étant assailli d'horribles songes et images. La cible maudite ne tire aucun bénéfice lorsqu'elle termine un repos court ou long. La malédiction persiste tant qu'elle n'est pas levée par délivrance des malédictions ou une magie équivalente.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et si la cible est une créature, elle est maudite. Cette malédiction magique prend effet dès que la cible prend un repos court ou long, son esprit étant assailli d'horribles songes et images. La cible maudite ne tire aucun bénéfice lorsqu'elle termine un repos court ou long. La malédiction persiste tant qu'elle n'est pas levée par @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
         },
         "Detect Thoughts": {
@@ -9583,7 +9583,7 @@
         },
         "Strength Drain": {
           "name": "Ponction de force",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], et la valeur de Force de la cible est réduite de [[/r 1d4]]. La cible meurt si cette réduction porte sa Force à 0. Sans cela, la réduction persiste jusqu'à ce que la cible termine un repos court ou long.</p><p>Quand un humanoïde non mauvais meurt de cette attaque, une nouvelle ombre émerge de sa dépouille [[/r 1d4]] heures plus tard.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la valeur de Force de la cible est réduite de [[/r 1d4]]. La cible meurt si cette réduction porte sa Force à 0. Sans cela, la réduction persiste jusqu'à ce que la cible termine un repos court ou long.</p><p>Quand un humanoïde non mauvais meurt de cette attaque, une nouvelle @UUID[Compendium.dnd5e.monsters.Actor.QGcQYZbVl4bWzi4E]{ombre} émerge de sa dépouille 1d4 heures plus tard.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Ponction de force.</p>"
         },
         "Sunlight Sensitivity": {
@@ -9802,12 +9802,12 @@
         },
         "Blinding Gaze": {
           "name": "Regard aveuglant",
-          "description": "<p>Le solar cible une créature qu'il voit dans un rayon de 9 m. Si la cible le voit, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded apply=false]{aveuglée} jusqu'à ce qu'une magie telle que le sort restauration partielle dissipe la cécité.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} cible [[lookup @labels.description.affects activity=fOKbYw2p3tXhOyn2]] qu'il voit dans un rayon de [[lookup @labels.description.range activity=fOKbYw2p3tXhOyn2]]. Si la cible le voit, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded apply=false]{aveuglée} jusqu'à ce qu'une magie telle que le sort @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{restauration partielle} dissipe la cécité.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Regard aveuglant.</p>",
           "effects": {
             "Blinded": {
               "name": "Aveuglé",
-              "description": "<p>La cible est aveuglée jusqu'à ce qu'une magie telle que le sort <em>restauration partielle</em> dissipe la cécité.</p>"
+              "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglée} jusqu'à ce qu'une magie telle que le sort @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{restauration partielle} dissipe la cécité.</p>"
             }
           }
         },
@@ -9862,7 +9862,7 @@
         },
         "Life Drain": {
           "name": "Absorption de vie",
-          "description": "<p><em>Attaque de sort au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 10 ([[/damage]]{3d6}) dégâts nécrotiques. La cible doit réussir un jet de sauvegarde de [[/save]], sans quoi son maximum de point de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la créature termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible doit réussir un jet de sauvegarde de [[/save]], sans quoi son maximum de point de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la créature termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Absorption de vie.</p>"
         },
         "Sunlight Sensitivity": {
@@ -9907,7 +9907,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de Constitution DD 13 et subit 31 (7d8) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save activity=q1kzQBmcMwK6GGVz]] et subit [[/damage average activity=q1kzQBmcMwK6GGVz]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -10126,7 +10126,7 @@
         },
         "Rock": {
           "name": "Rocher",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 18/72 m, une cible. <em>Touché :</em> 28 ([[/damage]]{4d10 + 6}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée à terre.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=GOn2YYbOxKVKqvwx]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Rocher.</p>"
         },
         "Rock Catching": {
@@ -10272,7 +10272,7 @@
           "effects": {
             "Charmed": {
               "name": "Charmé",
-              "description": "<p>La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon.</p><p>Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l'effet en cas de réussite. Si la cible réussit son JS contre l'effet ou si celui-ci prend fin, elle devient immunisée contre le Charme de ce fiélon pendant 24 heures.</p>"
+              "description": "<p>Vous êtes &reference[charmed apply=false]{charmé} et vous vous soumettez aux ordres verbaux et télépathiques du fiélon.</p><p>Vous pouvez réitérer le jet de sauvegarde si on vous fait du mal ou si vous recevez un ordre suicidaire, et met un terme à l'effet en cas de réussite.</p>"
             }
           },
           "activities": {
@@ -10596,7 +10596,7 @@
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 20 sous peine d'être jetée à terre.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Queue.</p>"
         },
         "Frightful Presence": {
@@ -11457,7 +11457,7 @@
         },
         "Spear (Humanoid Form Only)": {
           "name": "Lance (forme humanoïde uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m, une créature. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants, ou 6 ([[/damage twoHanded]]{1d8 + 2}) dégâts perforants si utilisée à deux mains dans le cadre d'une attaque de corps à corps.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], ou [[/damage average attackMode=twoHanded]] si utilisée à deux mains dans le cadre d'une attaque de corps à corps.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Lance (forme humanoïde uniquement).</p>"
         },
         "Claws (Hybrid Form Only)": {
@@ -11703,7 +11703,7 @@
         },
         "Life Drain": {
           "name": "Absorption de vie",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de Constitution DD 14, faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
           "chat": "<p>L'âme-en-peine attaque avec son Absorption de vie. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>.</p>"
         }
       },
@@ -11730,7 +11730,7 @@
         },
         "Stinger": {
           "name": "Dard caudal",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts perforants. La cible effectue un jet de sauvegarde de [[/save]] et subit 24 ([[/damage activity=dnd5eactivity100]]{7d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=5R4V2td9o9mrejmz]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>La vouivre attaque avec son Dard caudal. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>",
           "activities": {
             "Poison Save": {
@@ -12184,64 +12184,75 @@
             "Consume Damage Pool": {
               "name": "Consommer la réserve de dégâts"
             }
-          }
+          },
+          "description": "<p>Toute créature qui vous est hostile, quand elle entre dans un espace situé dans un rayon de 3 m du gardien pour la première fois d'un tour, effectue un jet de sauvegarde de Dextérité. Elle subit 20 dégâts radiants en cas d'échec, la moitié en cas de réussite. Le gardien disparaît après avoir infligé un total de 60 dégâts.</p><section id=\"secret-fNtHgg2PRmVbaDl5\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les utilisations limitées de cette aptitude sont proposées en option pour suivre le total des dégâts infligés par le gardien. De plus, l'activité <strong>Consommer la réserve de dégâts</strong> est configurée pour consommer des utilisations par incréments de 5 points de dégâts, une fois que les dégâts finaux ont été déterminés et appliqués.</p></section>"
         }
       }
     },
     "Huge Animated Object": {
       "name": "Objet animé TG",
       "tokenName": "Objet animé",
-      "languages": "Comprend les langues que vous connaissez",
+      "languages": "Comprend les langues que vous parlez",
       "items": {
         "Slam": {
           "name": "Coup",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
         }
-      }
+      },
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA caption=false]</p>",
+      "senses": "ne voit rien au-delà de ce rayon;"
     },
     "Large Animated Object": {
       "name": "Objet animé G",
       "tokenName": "Objet animé",
-      "languages": "Comprend les langues que vous connaissez",
+      "languages": "Comprend les langues que vous parlez",
       "items": {
         "Slam": {
           "name": "Coup",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
         }
-      }
+      },
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA caption=false]</p>",
+      "senses": "ne voit rien au-delà de ce rayon;"
     },
     "Medium Animated Object": {
       "name": "Objet animé M",
       "tokenName": "Objet animé",
-      "languages": "Comprend les langues que vous connaissez",
+      "languages": "Comprend les langues que vous parlez",
       "items": {
         "Slam": {
           "name": "Coup",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
         }
-      }
+      },
+      "senses": "ne voit rien au-delà de ce rayon;",
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA caption=false]</p>"
     },
     "Small Animated Object": {
       "name": "Objet animé P",
       "tokenName": "Objet animé",
-      "languages": "Comprend les langues que vous connaissez",
+      "languages": "Comprend les langues que vous parlez",
       "items": {
         "Slam": {
           "name": "Coup",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
         }
-      }
+      },
+      "senses": "ne voit rien au-delà de ce rayon;",
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA caption=false]</p>"
     },
     "Tiny Animated Object": {
       "name": "Objet animé TP",
       "tokenName": "Objet animé",
-      "languages": "Comprend les langues que vous connaissez",
+      "languages": "Comprend les langues que vous parlez",
       "items": {
         "Slam": {
           "name": "Coup",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>"
         }
-      }
+      },
+      "senses": "ne voit rien au-delà de ce rayon;",
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.ATo0Eb63TDtnu6iA caption=false]</p>"
     }
   }
 }
