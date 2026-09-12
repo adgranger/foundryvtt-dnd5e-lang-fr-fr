@@ -2352,6 +2352,14 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Explosive Rune Save": {
+          "name": "Sauvegarde contre les runes explosives",
+          "condition": "Lorsque le glyphe de garde est déclenché."
+        },
+        "Activated Spell Glyph": {
+          "name": "Glyphe à sort activé",
+          "condition": "Lorsque le glyphe de garde est déclenché."
         }
       }
     },
@@ -2401,7 +2409,16 @@
     },
     "Guardian of Faith": {
       "name": "Gardien de la foi",
-      "description": "<p>Un gardien spectral de taille G apparaît pour toute la durée et flotte en un espace inoccupé de votre choix parmi ceux que vous voyez à portée. Le gardien occupe cet espace et reste imperceptible, en dehors de son épée luisante et du bouclier frappé du symbole de votre divinité.</p><p>Toute créature qui vous est hostile, quand elle entre dans un espace situé dans un rayon de 3 m du gardien pour la première fois d'un tour, effectue un jet de sauvegarde de Dextérité. Elle subit 20 dégâts radiants en cas d'échec, la moitié en cas de réussite. Le gardien disparaît après avoir infligé un total de 60 dégâts.</p>"
+      "description": "<p>Un gardien spectral de taille G apparaît pour toute la durée et flotte en un espace inoccupé de votre choix parmi ceux que vous voyez à portée. Le gardien occupe cet espace et reste imperceptible, en dehors de son épée luisante et du bouclier frappé du symbole de votre divinité.</p><p>Toute créature qui vous est hostile, quand elle entre dans un espace situé dans un rayon de 3 m du gardien pour la première fois d'un tour, effectue un jet de sauvegarde de Dextérité. Elle subit 20 dégâts radiants en cas d'échec, la moitié en cas de réussite. Le gardien disparaît après avoir infligé un total de 60 dégâts.</p>",
+      "activities": {
+        "Summon Guardian of Faith": {
+          "name": "Convoquer le gardien de la foi"
+        },
+        "Guardian Strike Save": {
+          "name": "Sauvegarde contre la frappe du gardien",
+          "condition": "Lorsqu'une créature qui vous est hostile entre dans un espace situé dans un rayon de 3 m du gardien pour la première fois d'un tour."
+        }
+      }
     },
     "Guards and Wards": {
       "name": "Protections et sceaux",
@@ -2450,6 +2467,13 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Wind Blast Save": {
+          "name": "Sauvegarde contre le souffle du vent",
+          "condition": "Lorsqu'une créature commence son tour dans la ligne."
+        },
+        "Change Gust Direction": {
+          "name": "Changer la direction de la bourrasque"
         }
       }
     },
@@ -2460,6 +2484,16 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Hallow Effect Save": {
+          "name": "Sauvegarde contre l'effet de sanctification",
+          "condition": "Lorsqu'une créature désignée par le sort entre dans la zone pour la première fois d'un tour ou y commence son tour."
+        }
+      },
+      "effects": {
+        "Hallow Immunity": {
+          "name": "Immunité de sanctification",
+          "description": "<p>Vous êtes immunisé contre les effets que le sort sanctification produit dans cette zone, jusqu'à ce que vous la quittiez.</p>"
         }
       }
     },
@@ -2470,6 +2504,9 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Investigate Illusion Check": {
+          "name": "Test d'investigation de l'illusion"
         }
       }
     },
@@ -2489,6 +2526,12 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Hastened": {
+          "name": "Hâté",
+          "description": "<p>Jusqu'à la fin du sort, votre vitesse est doublé, votre CA reçoit un bonus de +2, vous êtes avantagé aux jets de sauvegarde de Dextérité et bénéficiez d'une action supplémentaire à chacun de vos tours. Cette action ne peut servir qu'à entreprendre l'action &reference[Attack]{Attaquer} (une seule attaque d'arme), &reference[Dash]{Foncer}, &reference[Hide]{Se cacher}, &reference[Disengage]{Se désengager} ou &reference[Use an Object]{Utiliser un objet}.</p>"
         }
       }
     },
@@ -2517,6 +2560,22 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Hold onto Object Save": {
+          "name": "Sauvegarde pour garder l'objet en main"
+        },
+        "Scorch Object": {
+          "name": "Brûler l'objet"
+        }
+      },
+      "effects": {
+        "Heated Metal Object": {
+          "name": "Objet métallique chauffé",
+          "description": "<p>Un objet manufacturé que vous portez, tel qu'une arme ou une armure métallique intermédiaire ou lourde, s'est mis à chauffer au rouge incandescent. Tant que vous êtes en contact physique avec l'objet, vous subissez des dégâts de feu.</p><p>Lorsque vous subissez ces dégâts, vous devez réussir un jet de sauvegarde de Constitution sous peine de lâcher l'objet, si vous en avez la possibilité. Si vous ne le lâchez pas, vous êtes désavantagé à vos jets d'attaque et tests de caractéristique jusqu'au début de votre tour suivant.</p>"
+        },
+        "Holding onto Heated Object": {
+          "name": "Objet chauffé en main",
+          "description": "<p>Vous êtes désavantagé à vos jets d'attaque et tests de caractéristique jusqu'au début du tour suivant de l'incantateur.</p>"
         }
       }
     },
@@ -2620,6 +2679,19 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        },
+        "Blinding Light": {
+          "name": "Lumière aveuglante"
+        }
+      },
+      "effects": {
+        "Bathing in Holy Aura": {
+          "name": "Baigné dans l'aura sacrée",
+          "description": "<p>Vous produisez une &reference[dim light]{lumière faible} sur un rayon de 1,50 m et êtes avantagé à tous vos jets de sauvegarde, tandis que les autres créatures sont désavantagées à leurs jets d'attaque contre vous jusqu'à la fin de ce sort.</p><p>De plus, lorsqu'un fiélon ou un mort-vivant vous touche avec une attaque de corps à corps, l'aura s'intensifie soudain d'une lumière éclatante. L'assaillant doit réussir un [[/save con]] sous peine d'être &reference[blinded]{aveuglé} jusqu'à la fin du sort.</p>"
+        },
+        "Blinded by Holy Aura": {
+          "name": "Aveuglé par l'aura sacrée",
+          "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé} pour toute la durée du sort.</p>"
         }
       }
     },
@@ -2695,6 +2767,28 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Imprisonment: Buried": {
+          "name": "Emprisonnement : Enterrement",
+          "description": "<p>Vous êtes emprisonné dans les entrailles de la terre, à l'intérieur d'une sphère de force magique juste assez grande pour vous contenir. Rien ne peut traverser la sphère et nulle créature ne peut se téléporter ou recourir au voyage planaire pour y entrer ou en sortir.</p><p>Ce sort peut prendre fin si les conditions fixées par l'incantateur à l'incantation sont remplies (si une condition a été fixée). Le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ne peut mettre un terme au sort que s'il est lancé au 9<sup>e</sup> niveau et s'il cible soit la prison, soit la composante spéciale utilisée pour créer celle-ci.</p>"
+        },
+        "Imprisonment: Chained": {
+          "name": "Emprisonnement : Chaînes",
+          "description": "<p>De lourdes chaînes, fermement ancrées au sol, vous retiennent. Vous êtes &reference[restrained apply=false]{entravé} jusqu'à la fin du sort et ne pouvez vous déplacer ni être déplacé par quelque moyen que ce soit jusqu'à ce moment.</p><p>Ce sort peut prendre fin si les conditions fixées par l'incantateur à l'incantation sont remplies (si une condition a été fixée). Le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ne peut mettre un terme au sort que s'il est lancé au 9<sup>e</sup> niveau et s'il cible soit la prison, soit la composante spéciale utilisée pour créer celle-ci.</p>"
+        },
+        "Imprisonment: Hedged Prison": {
+          "name": "Emprisonnement : Prison isolée",
+          "description": "<p>Vous avez été transporté dans un minuscule demi-plan protégé contre la téléportation et le voyage planaire. Ce demi-plan est un labyrinthe, une cage, une tour ou une autre structure confinée de forme comparable, au choix de l'incantateur.</p><p>Ce sort peut prendre fin si les conditions fixées par l'incantateur à l'incantation sont remplies (si une condition a été fixée). Le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ne peut mettre un terme au sort que s'il est lancé au 9<sup>e</sup> niveau et s'il cible soit la prison, soit la composante spéciale utilisée pour créer celle-ci.</p>"
+        },
+        "Imprisonment: Minimum Containment": {
+          "name": "Emprisonnement : Détention miniature",
+          "description": "<p>Vous avez été rapetissé jusqu'à mesurer 2,5 cm pour vous retrouver emprisonné dans une gemme ou un objet comparable. La lumière traverse normalement cette pierre (ce qui vous permet de voir à l'extérieur et aux autres créatures de voir à l'intérieur), mais rien d'autre ne peut y pénétrer, y compris par téléportation ou voyage planaire. On ne peut ni tailler ni briser la gemme tant que le sort reste actif.</p><p>Ce sort peut prendre fin si les conditions fixées par l'incantateur à l'incantation sont remplies (si une condition a été fixée). Le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ne peut mettre un terme au sort que s'il est lancé au 9<sup>e</sup> niveau et s'il cible soit la prison, soit la composante spéciale utilisée pour créer celle-ci.</p>"
+        },
+        "Imprisonment: Slumber": {
+          "name": "Emprisonnement : Léthargie",
+          "description": "<p>Vous êtes tombé endormi et rien ne peut vous réveiller.</p><p>Ce sort peut prendre fin si les conditions fixées par l'incantateur à l'incantation sont remplies (si une condition a été fixée). Le sort @UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie} ne peut mettre un terme au sort que s'il est lancé au 9<sup>e</sup> niveau et s'il cible soit la prison, soit la composante spéciale utilisée pour créer celle-ci.</p>"
         }
       }
     },
@@ -3300,6 +3394,28 @@
       "activities": {
         "Cast": {
           "name": "Incanter"
+        }
+      },
+      "effects": {
+        "Planar Binding: 5th Level": {
+          "name": "Entrave planaire : 5e niveau",
+          "description": "<p>Vous êtes soumis au service de l'incantateur pour toute la durée.</p><p>Vous devez suivre ses instructions de votre mieux. Il peut vous ordonner de l'accompagner à l'aventure, de garder un site ou de livrer un message. Vous obéissez à ses ordres à la lettre, mais si vous lui êtes hostile, vous pouvez chercher à interpréter ses directives à votre manière afin de servir vos propres desseins.</p><p>Si vous menez à bien toutes les instructions de l'incantateur avant la fin du sort, vous vous transportez auprès de lui pour faire votre rapport si vous êtes sur le même plan d'existence. S'il se trouve sur un plan différent, vous repartez vers le lieu où il vous a assujetti et y restez jusqu'à la fin du sort.</p>"
+        },
+        "Planar Binding: 6th Level": {
+          "name": "Entrave planaire : 6e niveau",
+          "description": "<p>Vous êtes soumis au service de l'incantateur pour toute la durée.</p><p>Vous devez suivre ses instructions de votre mieux. Il peut vous ordonner de l'accompagner à l'aventure, de garder un site ou de livrer un message. Vous obéissez à ses ordres à la lettre, mais si vous lui êtes hostile, vous pouvez chercher à interpréter ses directives à votre manière afin de servir vos propres desseins.</p><p>Si vous menez à bien toutes les instructions de l'incantateur avant la fin du sort, vous vous transportez auprès de lui pour faire votre rapport si vous êtes sur le même plan d'existence. S'il se trouve sur un plan différent, vous repartez vers le lieu où il vous a assujetti et y restez jusqu'à la fin du sort.</p>"
+        },
+        "Planar Binding: 7th Level": {
+          "name": "Entrave planaire : 7e niveau",
+          "description": "<p>Vous êtes soumis au service de l'incantateur pour toute la durée.</p><p>Vous devez suivre ses instructions de votre mieux. Il peut vous ordonner de l'accompagner à l'aventure, de garder un site ou de livrer un message. Vous obéissez à ses ordres à la lettre, mais si vous lui êtes hostile, vous pouvez chercher à interpréter ses directives à votre manière afin de servir vos propres desseins.</p><p>Si vous menez à bien toutes les instructions de l'incantateur avant la fin du sort, vous vous transportez auprès de lui pour faire votre rapport si vous êtes sur le même plan d'existence. S'il se trouve sur un plan différent, vous repartez vers le lieu où il vous a assujetti et y restez jusqu'à la fin du sort.</p>"
+        },
+        "Planar Binding: 8th Level": {
+          "name": "Entrave planaire : 8e niveau",
+          "description": "<p>Vous êtes soumis au service de l'incantateur pour toute la durée.</p><p>Vous devez suivre ses instructions de votre mieux. Il peut vous ordonner de l'accompagner à l'aventure, de garder un site ou de livrer un message. Vous obéissez à ses ordres à la lettre, mais si vous lui êtes hostile, vous pouvez chercher à interpréter ses directives à votre manière afin de servir vos propres desseins.</p><p>Si vous menez à bien toutes les instructions de l'incantateur avant la fin du sort, vous vous transportez auprès de lui pour faire votre rapport si vous êtes sur le même plan d'existence. S'il se trouve sur un plan différent, vous repartez vers le lieu où il vous a assujetti et y restez jusqu'à la fin du sort.</p>"
+        },
+        "Planar Binding: 9th Level": {
+          "name": "Entrave planaire : 9e niveau",
+          "description": "<p>Vous êtes soumis au service de l'incantateur pour toute la durée.</p><p>Vous devez suivre ses instructions de votre mieux. Il peut vous ordonner de l'accompagner à l'aventure, de garder un site ou de livrer un message. Vous obéissez à ses ordres à la lettre, mais si vous lui êtes hostile, vous pouvez chercher à interpréter ses directives à votre manière afin de servir vos propres desseins.</p><p>Si vous menez à bien toutes les instructions de l'incantateur avant la fin du sort, vous vous transportez auprès de lui pour faire votre rapport si vous êtes sur le même plan d'existence. S'il se trouve sur un plan différent, vous repartez vers le lieu où il vous a assujetti et y restez jusqu'à la fin du sort.</p>"
         }
       }
     },
