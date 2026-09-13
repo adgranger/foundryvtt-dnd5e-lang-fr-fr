@@ -2292,12 +2292,12 @@
         },
         "Longsword": {
           "name": "Épée longue",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 21 ([[/damage]]{3d8 + 8}) dégâts tranchants plus 13 ([[/damage]]{3d8}) dégâts de foudre. S'il obtient un coup critique, le balor lance trois fois les dés de dégâts au lieu de deux.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. S'il obtient un coup critique, le [[lookup @name lowercase]]{monstre} lance trois fois les dés de dégâts au lieu de deux.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Épée longue.</p>"
         },
         "Whip": {
           "name": "Fouet",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 9 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants plus 10 ([[/damage]]{3d6}) dégâts de feu, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être tirée d'un maximum de 7,50 m vers le balor.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être tirée d'un maximum de 7,50 m vers le [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Fouet.</p>"
         }
       },
@@ -2459,7 +2459,7 @@
         },
         "Glaive": {
           "name": "Coutille",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 8([[/damage]]{1d10 + 3}) dégâts tranchants. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de perdre 5 (1d10) points de vie au début de chacun de ses tours en raison d'une plaie infernale. Chaque fois que le diable touche la cible victime d'une telle plaie avec cette attaque, les dégâts infligés par la plaie augmentent de 5 (1d10). Toute créature peut stopper l'hémorragie en réussissant un test de Sagesse (Médecine) DD 12, au prix d'une action. La plaie se referme aussi si la cible reçoit des soins magiques.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de perdre 5 (1d10) points de vie au début de chacun de ses tours en raison d'une plaie infernale. Chaque fois que le [[lookup @name lowercase]]{monstre} touche la cible victime d'une telle plaie avec cette attaque, les dégâts infligés par la plaie augmentent de 5 (1d10). Toute créature peut stopper l'hémorragie en réussissant un test de [[/check 12 wis med]], au prix d'une action. La plaie se referme aussi si la cible reçoit des soins magiques.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Coutille.</p>"
         },
         "Multiattack": {
@@ -2487,8 +2487,8 @@
         },
         "Constrict": {
           "name": "Constriction",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille G ou inférieure. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts contondants plus 17 ([[/damage]]{2d10 + 6}) dégâts tranchants. La cible est &Reference[grappled]{agrippée} (évasion DD 16) si le béhir n'applique pas déjà sa constriction sur une créature, et la cible est &Reference[restrained]{entravée} tant qu'elle est agrippée.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Constriction.</p>"
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille G ou inférieure. [[/damage extended]]. La cible est &Reference[grappled]{agrippée} (évasion DD 16) si le [[lookup @name lowercase]]{monstre} n'applique pas déjà sa constriction sur une créature, et la cible est &reference[restrained]{entravée} tant qu'elle est agrippée.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée} si le [[lookup @name lowercase]]{monstre} n'applique pas déjà sa constriction sur une créature, et la cible est &reference[restrained]{entravée} tant qu'elle est agrippée.</p>"
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -2873,8 +2873,8 @@
         },
         "Deadly leap": {
           "name": "Saut meurtrier",
-          "description": "<p>Si la bulette effectue un saut d'au moins 4,50 m dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature.</p><p>Toute créature sur laquelle elle atterrit doit réussir un jet de sauvegarde de Dextérité ou de Force (à la convenance de la cible) DD 16 sous peine d'être jetée à terre et de subir 14 (3d6 + 4) dégâts contondants plus 14 (3d6 + 4) dégâts tranchants. En cas de réussite, la créature ne subit que la moitié de ces dégâts et ne tombe pas à terre ; elle est repoussée de 1,50 m de l'espace de la bulette dans l'espace inoccupé du choix de la créature. Si aucun espace inoccupé n'est à portée, la créature tombe en fait à terre dans l'espace de la bulette.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Saut meurtrier.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} effectue un saut d'au moins [[lookup @labels.description.range activity=1vGEpDSCHfEAoC4w]] dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature.</p><p>Toute créature sur laquelle elle atterrit doit réussir un jet de sauvegarde de [[/save activity=1vGEpDSCHfEAoC4w]] (à la convenance de la cible) sous peine d'être jetée &reference[prone]{à terre} et de subir [[/damage average activity=1vGEpDSCHfEAoC4w]]. En cas de réussite, la créature ne subit que la moitié de ces dégâts et ne tombe pas à terre ; elle est repoussée de 1,50 m de l'espace de la [[lookup @name lowercase]]{monstre} dans l'espace inoccupé du choix de la créature. Si aucun espace inoccupé n'est à portée, la créature tombe en fait &reference[prone]{à terre} dans l'espace de la [[lookup @name lowercase]]{monstre}.</p>",
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} effectue un saut d'au moins 4,50 m dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature. Toute créature sur laquelle elle atterrit doit effectuer un jet de sauvegarde de Dextérité ou de Force (à la convenance de la cible) sous peine d'être jetée &reference[prone]{à terre}.</p>"
         }
       },
       "habitat": "Montagne",
@@ -2944,7 +2944,7 @@
       "items": {
         "Chain": {
           "name": "Chaîne",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts tranchants. La cible est agrippée (évasion DD 14) si le diable n'agrippe pas déjà une créature. Tant que le diable l'agrippe, la cible est &Reference[restrained]{entravée} et subit 7 ([[/damage activity=7GprfdQsWbexe4iC]]{2d6}) dégâts perforants au début de chacun de ses tours.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible est &reference[grappled]{agrippée} (évasion DD 14) si le [[lookup @name lowercase]]{monstre} n'agrippe pas déjà une créature. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée} et subit [[/damage activity=D2oyIMFCCxoTivHb average]] au début de chacun de ses tours.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Chaîne.</p>"
         },
         "Unnerving Mask": {
@@ -3024,7 +3024,7 @@
       "items": {
         "Pincer": {
           "name": "Pince",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts contondants. La cible est &Reference[grappled]{agrippée} (évasion DD 14) s'il s'agit d'une créature de taille G ou inférieure et si le cthuul n'agrippe pas déjà deux autres créatures.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible est &Reference[grappled]{agrippée} (évasion DD 14) s'il s'agit d'une créature de taille G ou inférieure et si le [[lookup @name lowercase]]{monstre} n'agrippe pas déjà deux autres créatures.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Pince.</p>"
         },
         "Tentacles": {
@@ -3116,7 +3116,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts perforants et, si la cible est de taille G ou inférieure, le manteleur se fixe sur elle. Si le manteleur a l'avantage sur la cible, il s'ancre à sa tête et la cible est &Reference[blinded]{aveuglée} et incapable de &Reference[suffocation apply=false]{respirer} tant que le monstre reste ainsi fixé. Tant qu'il est fixé, le manteleur ne peut répéter cette attaque que contre la cible et son jet d'attaque est avantagé. Le manteleur peut se détacher de la cible en y consacrant 1,50 m de déplacement. Toute créature, y compris la cible, peut consacrer son action à détacher le manteleur, ce qui nécessite de réussir un test de Force DD 16.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et, si la cible est de taille G ou inférieure, le [[lookup @name lowercase]]{monstre} se fixe sur elle. Si le [[lookup @name lowercase]]{monstre} a l'avantage sur la cible, il s'ancre à sa tête et la cible est &Reference[blinded]{aveuglée} et incapable de &Reference[suffocation apply=false]{respirer} tant que le monstre reste ainsi fixé. Tant qu'il est fixé, le [[lookup @name lowercase]]{monstre} ne peut répéter cette attaque que contre la cible et son jet d'attaque est avantagé. Le [[lookup @name lowercase]]{monstre} peut se détacher de la cible en y consacrant 1,50 m de déplacement. Toute créature, y compris la cible, peut consacrer son action à détacher le [[lookup @name lowercase]]{monstre}, ce qui nécessite de réussir un test de [[/check]].</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Damage Transfer": {
@@ -3265,7 +3265,7 @@
         },
         "Constrict": {
           "name": "Constriction",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts contondants et la cible est &Reference[grappled]{agrippée} (évasion DD 14). Tant que la créature est agrippée, elle est &Reference[restrained]{entravée} et le serpent ne peut pas recourir à Constriction sur d'autres cibles.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 14). Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Constriction.</p>"
         }
       },
@@ -3429,7 +3429,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants et la cible est &Reference[grappled]{agrippée} (évasion DD 12). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le crocodile ne peut pas mordre d'autre cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 12). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Hold Breath": {
@@ -3553,7 +3553,7 @@
         },
         "Crush": {
           "name": "Écrasement",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts contondants, et la mante obscure se fixe à la cible. Si la cible est de taille M ou inférieure et si la mante obscure a l'avantage au jet d'attaque, cette dernière se fixe en engloutissant la tête de la cible, qui se retrouve &Reference[blinded]{aveuglée} et incapable de respirer tant que la mante obscure reste ainsi fixée.</p><p>Tant qu'elle est fixée à la cible, la mante obscure ne peut attaquer que cette créature mais elle est avantagée à ses jets d'attaque contre elle. La vitesse de la mante obscure passe aussi à 0, elle ne peut profiter d'aucun bonus en vitesse, mais elle suit les déplacements de la cible.</p><p>Une créature peut détacher la mante obscure en réussissant un test de Force (Athlétisme) DD 13 au prix d'une action. À son tour, la mante obscure peut se détacher de la cible en y consacrant 1,50 m de déplacement.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la [[lookup @name lowercase]]{monstre} se fixe à la cible. Si la cible est de taille M ou inférieure et si la [[lookup @name lowercase]]{monstre} a l'avantage au jet d'attaque, cette dernière se fixe en engloutissant la tête de la cible, qui se retrouve &reference[blinded]{aveuglée} et incapable de &reference[suffocating]{respirer} tant que la [[lookup @name lowercase]]{monstre} reste ainsi fixée.</p><p>Tant qu'elle est fixée à la cible, la [[lookup @name lowercase]]{monstre} ne peut attaquer que cette créature mais elle est avantagée à ses jets d'attaque contre elle. La vitesse de la [[lookup @name lowercase]]{monstre} passe aussi à 0, elle ne peut profiter d'aucun bonus en vitesse, mais elle suit les déplacements de la cible.</p><p>Une créature peut détacher la [[lookup @name lowercase]]{monstre} en réussissant un test de [[/check activity=D6cM30tTL0VfB4x1]] au prix d'une action. À son tour, la [[lookup @name lowercase]]{monstre} peut se détacher de la cible en y consacrant 1,50 m de déplacement.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Écrasement.</p>"
         },
         "Darkness Aura": {
@@ -5060,7 +5060,7 @@
         },
         "Constrict": {
           "name": "Constriction",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 13 ([[/damage]]{2d8 + 4}) dégâts contondants et la cible est &Reference[grappled]{agrippée} (évasion DD 16). Tant que la créature est agrippée, elle est &Reference[restrained]{entravée} et le serpent ne peut pas recourir à Constriction sur d'autres cibles.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 16). Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]] ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Constriction.</p>"
         }
       },
@@ -5076,7 +5076,7 @@
         },
         "Claw": {
           "name": "Pince",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts contondants, et la cible est &Reference[grappled]{agrippée} (évasion DD 11). Le crabe est doté de deux pinces, chacune ne pouvant agripper qu'une seule cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &Reference[grappled]{agrippée} (évasion DD 11). Le [[lookup @name lowercase]]{monstre} est doté de deux [[lookup @item.name lowercase]]s, chacune ne pouvant agripper qu'une seule cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
         }
       },
@@ -5189,7 +5189,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants et la cible est &Reference[grappled]{agrippée} (évasion DD 11). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et la grenouille ne peut pas mordre d'autre cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 11). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Swallow": {
@@ -5282,7 +5282,7 @@
         },
         "Tentacles": {
           "name": "Tentacules",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts contondants. Si la cible est une créature, elle est &Reference[grappled]{agrippée} (évasion DD 16). Tant que la pieuvre agrippe cette cible, celle-ci est &Reference[restrained]{entravée} et la pieuvre ne peut pas utiliser ses Tentacules contre d'autres cibles.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle est &Reference[grappled]{agrippée} (évasion DD 16). Tant que la [[lookup @name lowercase]]{monstre} agrippe cette cible, celle-ci est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} ne peut pas utiliser ses [[lookup @item.name]] contre d'autres cibles.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Tentacules.</p>"
         }
       },
@@ -5381,7 +5381,7 @@
         },
         "Claw": {
           "name": "Pince",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts contondants et la cible est &Reference[grappled]{agrippée} (évasion DD 12). Le scorpion est doté de deux pinces, chacune pouvant agripper une cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 12). Le [[lookup @name lowercase]]{monstre} est doté de deux [[lookup @item.name lowercase]]s, chacune pouvant agripper une cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
         },
         "Sting": {
@@ -5486,7 +5486,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants plus 5 ([[/damage]]{1d10}) dégâts de poison, et la cible est &Reference[grappled]{agrippée} (évasion DD 13). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le crapaud ne peut pas mordre d'autre cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &Reference[grappled]{agrippée} (évasion DD 13). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Swallow": {
@@ -5624,7 +5624,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 17 ([[/damage]]{5d6}) dégâts perforants. Si la cible est de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du babélien.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsures.</p>"
         },
         "Blinding Spittle": {
@@ -5658,7 +5658,7 @@
         },
         "Pincer": {
           "name": "Pince",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d10 + 5}) dégâts contondants. Si la cible est une créature de taille M ou inférieure, elle est agrippée (évasion DD 15). Le glabrezu est doté de deux pinces, chacune ne pouvant agripper qu'une cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille M ou inférieure, elle est &reference[grappled]{agrippée} (évasion DD 15). Le [[lookup @name lowercase]]{monstre} est doté de deux [[lookup @item.name lowercase]]s, chacune ne pouvant agripper qu'une cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Pince.</p>"
         },
         "Fist": {
@@ -7028,7 +7028,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure agrippée par le kraken, elle est engloutie et n'est plus agrippée. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du kraken et subit 42 (12d6) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le kraken subit 50 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 25 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins de lui. Si le kraken meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver à terre près du cadavre.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure &reference[grappled apply=false]{agrippée} par le [[lookup @name lowercase]]{monstre}, elle est engloutie et n'est plus agrippée. La créature engloutie est &reference[blinded]{aveuglée} et &reference[restrained]{entravée}, bénéficie d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur du [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=VTJvMyMKrJPYYlkL]] au début de chacun des tours du monstre.</p><p>Si le [[lookup @name lowercase]]{monstre} subit 50 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de [[/save activity=taaOeSxgB6hWSvep]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant &reference[prone]{à terre} dans un espace situé à 3 m ou moins de lui. Si le [[lookup @name lowercase]]{monstre} meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "effects": {
             "Swallowed": {
@@ -7038,7 +7038,7 @@
         },
         "Tentacle": {
           "name": "Tentacule",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 9 m, une cible. <em>Touché :</em> 20 ([[/damage]]{3d6 + 10}) dégâts contondants, et la cible est agrippée (évasion DD 18). Tant que le kraken l'agrippe, la cible est &Reference[restrained]{entravée}. Le kraken est doté de dix tentacules, chacun pouvant agripper une cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &reference[grappled]{agrippée} (évasion DD 18). Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}. Le [[lookup @name lowercase]]{monstre} est doté de dix [[lookup @item.name lowercase]]s, chacun pouvant agripper une cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Tentacule.</p>"
         },
         "Fling": {
@@ -8262,7 +8262,7 @@
       "items": {
         "Tentacles": {
           "name": "Tentacules",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> [[/damage]]{1} dégât contondant et la cible est &Reference[grappled]{agrippée} (évasion DD 10). Tant qu'elle agrippe cette cible, la pieuvre ne peut pas recourir à ses tentacules sur une autre cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 10). Tant qu'elle agrippe cette cible, la [[lookup @name lowercase]]{monstre} ne peut pas recourir à ses [[lookup @item.name lowercase]] sur une autre cible.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Tentacules.</p>"
         },
         "Hold Breath": {
@@ -8932,7 +8932,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure, elle doit réussir un jet de sauvegarde de Dextérité DD 19 sous peine d'être engloutie par le ver. La créature engloutie est aveuglée et entravée, bénéficie d'un abri total contre les attaques et effets émanant de l'extérieur du ver et subit 21 (6d6) dégâts d'acide au début de chacun des tours du monstre.</p><p>Si le ver subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de Constitution DD 21 à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins de lui. Si le ver meurt, les créatures englouties ne sont plus entravées par lui et peuvent s'en extraire en dépensant 6 m de déplacement pour se retrouver à terre près du cadavre.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure, elle doit réussir un jet de sauvegarde de [[/save activity=dnd5eactivity100]] sous peine d'être engloutie par le [[lookup @name lowercase]]{monstre}. La créature engloutie est &reference[blinded]{aveuglée} et &reference[restrained]{entravée}, bénéficie d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur du [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=5Ch92u8uWNihu5p1]] au début de chacun des tours du monstre.</p><p>Si le [[lookup @name lowercase]]{monstre} subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de [[/save activity=RtTQzkfIp3upqvoQ]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant &reference[prone]{à terre} dans un espace situé à 3 m ou moins de lui. Si le [[lookup @name lowercase]]{monstre} meurt, les créatures englouties ne sont plus entravées par lui et peuvent s'en extraire en dépensant 6 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "effects": {
             "Swallowed": {
@@ -9189,7 +9189,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 40 ([[/damage]]{6d10 + 7}) dégâts perforants plus 10 ([[/damage]]{3d6}) dégâts de feu. Si la cible est une créature, elle est agrippée (évasion DD 17). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le remorhaz ne peut pas mordre une autre cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle est &reference[grappled]{agrippée} (évasion DD 17). Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre une autre cible.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Heated Body": {
@@ -9258,7 +9258,7 @@
         },
         "Talons": {
           "name": "Serres",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 23 ([[/damage]]{4d6 + 9}) dégâts tranchants, et la cible est agrippée (évasion DD 19). Tant que le rukh agrippe cette cible, elle est &Reference[restrained]{entravée} et il ne peut pas utiliser ses Serres contre d'autres cibles.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &reference[grappled]{agrippée} (évasion DD 19). Tant que le [[lookup @name lowercase]]{monstre} agrippe cette cible, elle est &reference[restrained]{entravée} et il ne peut pas utiliser ses [[lookup @item.name lowercase]] contre d'autres cibles.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Serres.</p>"
         }
       },
@@ -9288,7 +9288,7 @@
         },
         "Tendril": {
           "name": "Filament",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 15 m, une créature. <em>Touché :</em> La cible est &Reference[grappled]{agrippée} (évasion DD 15). Tant que l'enlaceur l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force, et l'enlaceur ne peut pas se servir du même filament contre une autre cible.</p>",
+          "description": "<p>[[/attack extended]]. <em>Touché :</em> La cible est &Reference[grappled]{agrippée} (évasion DD 15). Tant que l'[[lookup @name lowercase]]{monstre} l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force, et l'[[lookup @name lowercase]]{monstre} ne peut pas se servir du même [[lookup @item.name lowercase]] contre une autre cible.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Filament.</p>"
         },
         "Reel": {
@@ -9322,7 +9322,7 @@
         },
         "Smother": {
           "name": "Étouffement",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille M ou inférieure. <em>Touché :</em> La créature est &Reference[grappled]{agrippée} (évasion DD 13). Tant que le tapis l'agrippe, la cible est &Reference[restrained]{entravée}, &Reference[blinded]{aveuglée} et risque l'asphyxie, et le tapis ne peut pas étouffer d'autre cible. De plus, au début de chacun de ses propres tours, la cible subit 10 ([[/damage]]{2d6 + 3}) dégâts contondants.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille M ou inférieure. <em>Touché :</em> La créature est &Reference[grappled]{agrippée} (évasion DD 13). Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained apply=false]{entravée}, &reference[blinded apply=false]{aveuglée} et risque l'&reference[suffocation apply=false]{asphyxie}, et le [[lookup @name lowercase]]{monstre} ne peut pas étouffer d'autre cible. De plus, au début de chacun de ses propres tours, la cible subit [[/damage average]].</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Étouffement.</p>"
         }
       },
@@ -9444,7 +9444,7 @@
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts contondants plus 7 ([[/damage]]{2d6}) dégâts de feu, et la cible est agrippée (évasion DD 14). Tant qu'elle est agrippée, la cible est entravée et la salamandre peut la toucher automatiquement avec sa Queue, sachant qu'elle ne peut pas effectuer d'attaque de Queue contre d'autres cibles.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &reference[grappled]{agrippée} (évasion DD 14). Tant qu'elle est agrippée, la cible est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} peut la toucher automatiquement avec sa [[lookup @item.name]], sachant qu'elle ne peut pas effectuer d'attaque de [[lookup @item.name]] contre d'autres cibles.</p>",
           "chat": "<p>La salamandre attaque avec sa Queue. La cible est agrippée. Tant qu'elle est agrippée, la cible est entravée et la salamandre peut la toucher automatiquement avec sa Queue, sachant qu'elle ne peut pas effectuer d'attaque de Queue contre d'autres cibles.</p>"
         }
       },
@@ -10107,7 +10107,7 @@
       "items": {
         "Blood Drain": {
           "name": "Succion du sang",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 5 ([[/damage]]{1d4 + 3}) dégâts perforants, et la strige se fixe à la cible. Ainsi fixée, la strige n'attaque plus. Au lieu de cela, au début de chacun de ses tours, l'hémorragie fait perdre 5 (1d4 + 3) points de vie à la cible.</p><p>La strige peut se détacher de la cible en y consacrant 1,50 m de déplacement. C'est ce qu'elle fait après avoir absorbé 10 points de vie à la cible ou l'avoir tuée. Toute créature, y compris la cible, peut consacrer son action à se débarrasser de la strige.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la [[lookup @name lowercase]]{monstre} se fixe à la cible. Ainsi fixée, la [[lookup @name lowercase]]{monstre} n'attaque plus. Au lieu de cela, au début de chacun de ses tours, l'hémorragie fait perdre 5 (1d4 + 3) points de vie à la cible.</p><p>La [[lookup @name lowercase]]{monstre} peut se détacher de la cible en y consacrant 1,50 m de déplacement. C'est ce qu'elle fait après avoir absorbé 10 points de vie à la cible ou l'avoir tuée. Toute créature, y compris la cible, peut consacrer son action à se débarrasser de la [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Succion du sang.</p>"
         }
       },
@@ -10311,7 +10311,7 @@
       "items": {
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la nuée. <em>Touché :</em> 5 ([[/damage]]{2d4}) dégâts perforants, ou 2 ([[/damage 1d4 piercing]]{1d4}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 2d4 piercing average]], ou [[/damage 1d4 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         },
         "Swarm": {
@@ -10353,7 +10353,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la nuée. <em>Touché :</em> 10 ([[/damage]]{4d4}) dégâts perforants, ou 5 ([[/damage 2d4 piercing]]{2d4}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la [[lookup @name lowercase]]{{nuée}. <em>Touché :</em> [[/damage 4d4 piercing average]], ou [[/damage 2d4 piercing average]] si la [[lookup @name lowercase]]{{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10374,7 +10374,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la nuée. <em>Touché :</em> 10 ([[/damage]]{4d4}) dégâts perforants, ou 5 ([[/damage 2d4 piercing]]{2d4}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p><p>Une créature réduite à 0 point de vie par une nuée de mille-pattes est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 4d4 piercing average]], ou [[/damage 2d4 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p><p>Une créature réduite à 0 point de vie par une [[lookup @name lowercase]]{nuée} est &reference[stable]{stabilisée}, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10395,7 +10395,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la nuée. <em>Touché :</em> 10 ([[/damage]]{4d4}) dégâts perforants, ou 5 ([[/damage 2d4 piercing]]{2d4}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 4d4 piercing average]], ou [[/damage 2d4 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>[[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10416,7 +10416,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la nuée. <em>Touché :</em> 7 ([[/damage]]{2d6}) dégâts perforants, ou 3 ([[/damage 1d6 piercing]]{1d6}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins. La cible effectue un jet de sauvegarde de [[/save]] et subit 14 ([[/damage activity=dnd5eactivity100]]{4d6}) dégâts de poison en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 2d6 piercing average]], ou [[/damage 1d6 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins. La cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=tT3v0krnAO2hA0hs]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>",
           "activities": {
             "Poison Save": {
@@ -10450,7 +10450,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la nuée. <em>Touché :</em> 14 ([[/damage]]{4d6}) dégâts perforants, ou 7 ([[/damage 2d6 piercing]]{2d6}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une créature dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 4d6 piercing average]], ou [[/damage 2d6 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10475,7 +10475,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la nuée. <em>Touché :</em> 7 ([[/damage]]{2d6} dégâts perforants, ou 3 ([[/damage 1d6 piercing]]{1d6}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 2d6 piercing average]], ou [[/damage 1d6 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10496,7 +10496,7 @@
         },
         "Beaks": {
           "name": "Becs",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 5 m, une cible dans l'espace de la nuée. <em>Touché :</em> 7 ([[/damage]]{2d6}) dégâts perforants, ou 3 ([[/damage 1d6 piercing]]{1d6}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 2d6 piercing average]], ou [[/damage 1d6 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>La nuée de corbeaux attaque avec leurs Becs.</p>"
         }
       },
@@ -10517,7 +10517,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la nuée. <em>Touché :</em> 10 ([[/damage]]{4d4}) dégâts perforants, ou 5 ([[/damage 2d4 piercing]]{2d4}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 4d4 piercing average]], ou [[/damage 2d4 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>[[lookup @name]] attaque avec Morsures.</p>"
         },
         "Spider Climb": {
@@ -10550,7 +10550,7 @@
         },
         "Bites": {
           "name": "Morsures",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la nuée. <em>Touché :</em> 10 ([[/damage]]{4d4}) dégâts perforants, ou 5 ([[/damage 2d4 piercing]]{2d4}) dégâts perforants si la nuée est à la moitié de son maximum de points de vie ou moins.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 0 m, une cible dans l'espace de la [[lookup @name lowercase]]{nuée}. <em>Touché :</em> [[/damage 4d4 piercing average]], ou [[/damage 2d4 piercing average]] si la [[lookup @name lowercase]]{nuée} est à la moitié de son maximum de points de vie ou moins.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsures.</p>"
         }
       },
@@ -10588,7 +10588,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 36 ([[/damage]]{4d12 + 10}) dégâts perforants. Si la cible est une créature, elle est agrippée (évasion DD 20). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et la tarasque ne peut pas mordre d'autre cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle est &reference[grappled]{agrippée} (évasion DD 20). Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Claw": {
@@ -10987,12 +10987,12 @@
         },
         "Unarmed Strike (Vampire Form Only)": {
           "name": "Attaque à mains nues (forme de vampire uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 8 ([[/damage]]{1d8 + 4}) dégâts contondants. Au lieu d'infliger des dégâts, le vampire peut agripper la cible (évasion DD 18).</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible (évasion DD 18).</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Attaque à mains nues (forme de vampire uniquement).</p>"
         },
         "Bite (Bat or Vampire Form Only)": {
           "name": "Morsure (forme de chauve-souris ou de vampire uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature consentante ou une créature agrippée par le vampire, &Reference[incapacitated]{neutralisée} ou &Reference[restrained]{entravée}. <em>Touché :</em> 7 ([[/damage]]{1d6 + 4}) dégâts perforants plus 10 ([[/damage]]{3d6}) dégâts nécrotiques. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis et le vampire récupère autant de points de vie que ce même montant. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0. Un humanoïde ainsi tué, puis enterré, se relève la nuit suivante comme vampirien sous le contrôle du vampire.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature consentante ou une créature &reference[grappled apply=false]{agrippée} par le [[lookup @name lowercase]]{monstre}, &reference[incapacitated apply=false]{neutralisée} ou &reference[restrained apply=false]{entravée}. [[/damage extended]]. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis et le [[lookup @name lowercase]]{monstre} récupère autant de points de vie que ce même montant. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0. Un humanoïde ainsi tué, puis enterré, se relève la nuit suivante comme @UUID[Compendium.dnd5e.monsters.Actor.zpaZb7I8alY32vWV]{vampirien} sous le contrôle du [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de chauve-souris ou de vampire uniquement).</p>",
           "activities": {
             "attack": {
@@ -11038,12 +11038,12 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature consentante ou une créature agrippée par le vampire, &Reference[incapacitated]{neutralisée} ou &Reference[restrained]{entravée}. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts perforants plus 7 ([[/damage]]{2d6}) dégâts nécrotiques. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis et le vampire récupère autant de points de vie que ce même montant. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature consentante ou une créature &reference[grappled apply=false]{agrippée} par le [[lookup @name lowercase]]{monstre}, &reference[incapacitated apply=false]{neutralisée} ou &reference[restrained apply=false]{entravée}. [[/damage extended]]. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis et le [[lookup @name lowercase]]{monstre} récupère autant de points de vie que ce même montant. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
         },
         "Claws": {
           "name": "Griffes",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. Au lieu d'infliger des dégâts, le vampire peut agripper la cible (évasion DD 13).</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible (évasion DD 13).</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Griffes.</p>"
         },
         "Multiattack": {
@@ -11540,7 +11540,7 @@
         },
         "Life Drain": {
           "name": "Absorption de vie",
-          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de Constitution DD 13, faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p><p>Un humanoïde tué par cette attaque se relève 24 heures plus tard comme zombi sous le contrôle du nécronte, sauf si l'humanoïde est ramené à la vie ou si son corps est détruit. Le nécronte ne peut ainsi contrôler plus de douze zombis à la fois.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p><p>Un humanoïde tué par cette attaque se relève 24 heures plus tard comme @UUID[Compendium.dnd5e.monsters.Actor.NAISFPoNNgUCsEyW]{zombi} sous le contrôle du [[lookup @name lowercase]]{monstre}, sauf si l'humanoïde est ramené à la vie ou si son corps est détruit. Le [[lookup @name lowercase]]{monstre} ne peut ainsi contrôler plus de douze zombis à la fois.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Absorption de vie.</p>",
           "activities": {
             "Raise Zombie": {
