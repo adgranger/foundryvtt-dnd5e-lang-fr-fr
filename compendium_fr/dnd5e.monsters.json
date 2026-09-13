@@ -2932,8 +2932,8 @@
         },
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si le centaure se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de pique au même tour, il lui inflige 10 (3d6) dégâts perforants supplémentaires.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.5kZNNWzZ6HrfKuWf.Item.uhqyN44IRWXixgxU]{pique} au même tour, il lui inflige [[/damage average]] supplémentaires.</p>",
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.5kZNNWzZ6HrfKuWf.Item.uhqyN44IRWXixgxU]{pique} au même tour, il lui inflige des dégâts supplémentaires.</p>"
         }
       },
       "habitat": "Prairie",
@@ -5211,8 +5211,8 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si la chèvre se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de Coup de bélier au même tour, elle lui inflige 5 ([[/damage]]{2d4}) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Charge.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.rjqk7ToMD8sGr3n4.Item.t8cKnWGtgVCfhW5v]{Coup de bélier} au même tour, elle lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.rjqk7ToMD8sGr3n4.Item.t8cKnWGtgVCfhW5v]{Coup de bélier} au même tour, elle lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
         },
         "Sure-Footed": {
           "name": "Pied sûr",
@@ -5382,7 +5382,7 @@
         "Claw": {
           "name": "Pince",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 12). Le [[lookup @name lowercase]]{monstre} est doté de deux [[lookup @item.name lowercase]]s, chacune pouvant agripper une cible.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}.</p>"
         },
         "Sting": {
           "name": "Dard",
@@ -5487,7 +5487,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &Reference[grappled]{agrippée} (évasion DD 13). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>"
         },
         "Swallow": {
           "name": "Engloutissement",
@@ -5600,8 +5600,8 @@
       "items": {
         "Aberrant Ground": {
           "name": "Sol aberrant",
-          "description": "<p>Le sol dans un rayon de 3 m du babélien se présente comme une pâte qui constitue un terrain difficile. Toute créature qui commence son tour dans cette zone doit réussir un jet de sauvegarde de [[/save]] sous peine de voir sa vitesse réduite à 0 jusqu'au début de son tour suivant.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Sol aberrant.</p>",
+          "description": "<p>Le sol dans un rayon de [[lookup @target.template.size activity=uNtJ0Zvj5SXxoaNm]] [[lookup @target.template.units activity=uNtJ0Zvj5SXxoaNm]] du [[lookup @name lowercase]]{monstre} se présente comme une pâte qui constitue un &reference[difficult terrain]{terrain difficile}. Toute créature qui commence son tour dans cette zone doit réussir un jet de sauvegarde de [[/save]] sous peine de voir sa vitesse réduite à 0 jusqu'au début de son tour suivant.</p>",
+          "chat": "<p>Le sol dans un rayon de [[lookup @target.template.size activity=uNtJ0Zvj5SXxoaNm]] [[lookup @target.template.units activity=uNtJ0Zvj5SXxoaNm]] du [[lookup @name lowercase]]{monstre} se présente comme une pâte qui constitue un &reference[difficult terrain]{terrain difficile}. Effectuer un jet de sauvegarde de Force.</p>",
           "effects": {
             "Aberrant Ground": {
               "name": "Sol aberrant"
@@ -5625,7 +5625,7 @@
         "Bites": {
           "name": "Morsures",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsures.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. Si la cible est de taille M ou inférieure, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
         },
         "Blinding Spittle": {
           "name": "Crachat aveuglant",
@@ -5659,7 +5659,7 @@
         "Pincer": {
           "name": "Pince",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille M ou inférieure, elle est &reference[grappled]{agrippée} (évasion DD 15). Le [[lookup @name lowercase]]{monstre} est doté de deux [[lookup @item.name lowercase]]s, chacune ne pouvant agripper qu'une cible.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Pince.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature de taille M ou inférieure, elle est &reference[grappled]{agrippée}.</p>"
         },
         "Fist": {
           "name": "Poing",
@@ -5728,7 +5728,7 @@
         "Shield Bash": {
           "name": "Coup de bouclier",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Coup de bouclier.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature de taille M ou inférieure, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
         },
         "Parry": {
           "name": "Parade",
@@ -5780,8 +5780,8 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si la chèvre se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de Coup de bélier au même tour, elle lui inflige 2 ([[/damage]]{1d4}) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Charge.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour, elle lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour, elle lui inflige des dégâts contondants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
         },
         "Sure-Footed": {
           "name": "Pied sûr",
@@ -6697,8 +6697,8 @@
         },
         "Wall of Ice": {
           "name": "Mur de glace",
-          "description": "<p>Le diable forme magiquement une paroi de glace opaque sur une surface solide qu'il voit dans un rayon de 18 m. Le mur, épais de 30 cm, peut atteindre jusqu'à 9 m de long et 3 m de hauteur, ou bien se présenter comme un dôme hémisphérique d'un diamètre maximal de 6 m.</p><p>À l'apparition du mur, toute créature située dans son espace en est expulsée par le chemin le plus court. La créature choisit de quel côté du mur elle termine, sauf si elle est neutralisée. Elle effectue alors un jet de sauvegarde de [[/save]] et subit 35 ([[/damage]]{10d6}) dégâts de froid en cas d'échec, la moitié en cas de réussite.</p><p>Le mur persiste pendant 1 minute, mais disparaît si le diable meurt ou est neutralisé. On peut endommager le mur et y faire une brèche ; chaque section de 3 m de côté est dotée d'une CA de 5, de 30 points de vie, de la vulnérabilité aux dégâts de feu et de l'immunité contre les dégâts d'acide, de froid, nécrotiques, psychiques et de poison. Une section détruite laisse une nappe d'air glacial dans l'espace qu'elle occupait. Chaque fois qu'une créature termine un tour durant lequel elle a traversé cette nappe, volontairement ou non, elle effectue un jet de sauvegarde de [[/save activity=1sgpSnbxz7JYshd3]] et subit 17 ([[/damage activity=1sgpSnbxz7JYshd3]]{5d6}) dégâts de froid en cas d'échec, la moitié en cas de réussite. La nappe d'air se dissipe quand le reste du mur disparaît.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Mur de glace.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} forme magiquement une paroi de glace opaque sur une surface solide qu'il voit dans un rayon de [[lookup @labels.description.range activity=epHS9JFnK0K3AOh0]]. Le mur, épais de 30 cm, peut atteindre jusqu'à 9 m de long et 3 m de hauteur, ou bien se présenter comme un dôme hémisphérique d'un diamètre maximal de 6 m.</p><p>À l'apparition du mur, toute créature située dans son espace en est expulsée par le chemin le plus court. La créature choisit de quel côté du mur elle termine, sauf si elle est &reference[incapacitated apply=false]{neutralisée}. Elle effectue alors un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p><p>Le mur persiste pendant [[lookup @labels.duration activity=epHS9JFnK0K3AOh0]], mais disparaît si le [[lookup @name lowercase]]{monstre} meurt ou est &reference[incapacitated apply=false]{neutralisé}. On peut endommager le mur et y faire une brèche ; chaque section de 3 m de côté est dotée d'une CA de 5, de 30 points de vie, de la vulnérabilité aux dégâts de feu et de l'immunité contre les dégâts d'acide, de froid, nécrotiques, psychiques et de poison. Une section détruite laisse une nappe d'air glacial dans l'espace qu'elle occupait. Chaque fois qu'une créature termine un tour durant lequel elle a traversé cette nappe, volontairement ou non, elle effectue un jet de sauvegarde de [[/save activity=qJljbNLNFhF1xbDV]] et subit [[/damage activity=qJljbNLNFhF1xbDV average]] en cas d'échec, la moitié en cas de réussite. La nappe d'air se dissipe quand le reste du mur disparaît.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} forme magiquement une paroi de glace opaque sur une surface solide qu'il voit dans un rayon de [[lookup @labels.description.range activity=epHS9JFnK0K3AOh0]]. Le mur, épais de 30 cm, peut atteindre jusqu'à 9 m de long et 3 m de hauteur, ou bien se présenter comme un dôme hémisphérique d'un diamètre maximal de 6 m. À l'apparition du mur, toute créature située dans son espace en est expulsée par le chemin le plus court. La créature choisit de quel côté du mur elle termine, sauf si elle est &reference[incapacitated apply=false]{neutralisée}. Elle effectue alors un jet de sauvegarde de Dextérité.</p><p>On peut endommager le mur et y faire une brèche. Une section détruite laisse une nappe d'air glacial dans l'espace qu'elle occupait. Chaque fois qu'une créature termine un tour durant lequel elle a traversé cette nappe, volontairement ou non, elle effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Create Wall of Ice": {
               "condition": "une surface solide qu'il peut voir dans un rayon de 18 mètres"
@@ -6788,8 +6788,8 @@
         },
         "Invisibility": {
           "name": "Invisibilité",
-          "description": "<p>Le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible} jusqu'à ce qu'il attaque ou que sa concentration soit rompue (comme pour un sort). Tout l'équipement porté par le [[lookup @name lowercase]]{monstre} est invisible.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible}. Tout l'équipement porté par le [[lookup @name lowercase]]{monstre} est invisible.</p>",
           "activities": {
             "Become Invisible": {
               "name": "Devenir invisible"
@@ -7015,8 +7015,8 @@
         },
         "Freedom of Movement": {
           "name": "Liberté de mouvement",
-          "description": "<p>Le [[lookup @name]] ne tient pas compte du terrain difficile et les effets magiques ne peuvent pas réduire sa vitesse ni lui imposer l’état &Reference[restrained]. Il peut s’extraire d’entraves non magiques et de l’état agrippé en y consacrant 1,50 m de déplacement.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Liberté de mouvement.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne tient pas compte du &reference[difficult terrain]{terrain difficile} et les effets magiques ne peuvent pas réduire sa vitesse ni lui imposer l'état &amp;reference[restrained apply=false]{entravé}. Il peut s'extraire d'entraves non magiques et de l'état &amp;reference[grappled apply=false]{agrippé} en y consacrant 1,50 m de déplacement.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} ne tient pas compte du &reference[difficult terrain]{terrain difficile} et les effets magiques ne peuvent pas réduire sa vitesse ni lui imposer l'état &amp;reference[restrained apply=false]{entravé}.</p>"
         },
         "Siege Monster": {
           "name": "Monstre de siège",
@@ -7029,7 +7029,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature de taille G ou inférieure &reference[grappled apply=false]{agrippée} par le [[lookup @name lowercase]]{monstre}, elle est engloutie et n'est plus agrippée. La créature engloutie est &reference[blinded]{aveuglée} et &reference[restrained]{entravée}, bénéficie d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur du [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=VTJvMyMKrJPYYlkL]] au début de chacun des tours du monstre.</p><p>Si le [[lookup @name lowercase]]{monstre} subit 50 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de [[/save activity=taaOeSxgB6hWSvep]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant &reference[prone]{à terre} dans un espace situé à 3 m ou moins de lui. Si le [[lookup @name lowercase]]{monstre} meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature de taille G ou inférieure &reference[grappled]{agrippée} par le [[lookup @name lowercase]]{monstre}, elle est engloutie et n'est plus agrippée.</p>",
           "effects": {
             "Swallowed": {
               "name": "Engloutir"
@@ -7039,12 +7039,12 @@
         "Tentacle": {
           "name": "Tentacule",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &reference[grappled]{agrippée} (évasion DD 18). Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}. Le [[lookup @name lowercase]]{monstre} est doté de dix [[lookup @item.name lowercase]]s, chacun pouvant agripper une cible.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Tentacule.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}. Le [[lookup @name lowercase]]{monstre} est doté de dix [[lookup @item.name lowercase]]s, chacun pouvant agripper une cible.</p>"
         },
         "Fling": {
           "name": "Projection",
-          "description": "<p>Le kraken projette un objet ou une créature de taille G ou inférieure qu'il agrippe, sur une distance maximale de 18 m et dans une direction aléatoire, et la cible se retrouve à terre.</p><p>Si une cible projetée ainsi entre en collision avec une surface solide, elle subit 3 (1d6) dégâts contondants par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de Dextérité DD 18 sous peine de subir les mêmes dégâts d'impact et de se retrouver à terre.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Projection.</p>"
+          "description": "<p>Le [[lookup @name lowercase]] projette un objet ou une créature de taille G ou inférieure qu'il &reference[grappled apply=false]{agrippe}, sur une distance maximale de [[lookup @labels.description.range activity=sJvtsq6W2RMb5ekp]] et dans une direction aléatoire, et la cible se retrouve &reference[prone]{à terre}.</p><p>Si une cible projetée ainsi entre en collision avec une surface solide, elle subit [[/damage average activity=sJvtsq6W2RMb5ekp]] par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de [[/save activity=POuIOxIPF4zYDksd]] sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} projette un objet ou une créature de taille G ou inférieure qu'il agrippe, sur une distance maximale de [[lookup @labels.description.range activity=sJvtsq6W2RMb5ekp]] et dans une direction aléatoire, et la cible se retrouve &reference[prone]{à terre}. Si la cible entre en collision avec une autre créature, cette dernière doit effectuer un jet de sauvegarde de Dextérité sous peine de subir les mêmes dégâts d'impact et de se retrouver à terre.</p>"
         },
         "Lightning Storm": {
           "name": "Tempête foudroyante",
@@ -7363,8 +7363,8 @@
         },
         "Pounce": {
           "name": "Bond agressif",
-          "description": "<p>Si le lion se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de Griffe au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le lion peut effectuer contre elle une attaque de Morsure par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Bond agressif.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.hjhERRzafCiFFVLA.Item.CHIayoaCAZj0GBkM]{Griffe} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .gKj1TlVfDhLp5WIk]]{Morsure} par une action bonus.</p>",
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.hjhERRzafCiFFVLA.Item.CHIayoaCAZj0GBkM]{Griffe} au même tour, la cible doit effectuer un jet de sauvegarde de Force.</p>"
         },
         "Running Leap": {
           "name": "Saut avec élan",
@@ -7685,8 +7685,8 @@
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts contondants. Si la cible est de taille M ou inférieure, elle est agrippée (évasion DD 19). Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et la marilith peut la toucher automatiquement avec sa Queue, sachant que la démone ne peut pas effectuer d'attaque de Queue contre d'autres cibles.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Queue.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est de taille M ou inférieure, elle est agrippée (évasion DD 19). Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et la marilith peut la toucher automatiquement avec sa Queue, sachant que la démone ne peut pas effectuer d'attaque de Queue contre d'autres cibles.</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est de taille M ou inférieure, elle est &reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} peut la toucher automatiquement avec sa Queue, sachant que la démone ne peut pas effectuer d'attaque de [[lookup @item.name]] contre d'autres cibles.</p>"
         },
         "Teleport": {
           "name": "Téléportation",
@@ -7812,8 +7812,8 @@
         },
         "Adhesive (Object Form Only)": {
           "name": "Engluage (forme d’objet uniquement)",
-          "description": "<p>La mimique adhère à tout ce qui la touche. Une créature de taille TG ou inférieure qui se retrouve ainsi collée à la mimique est également agrippée par elle (évasion DD 13). Les tests de caractéristique visant à s'extraire de cette prise sont désavantagés.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Engluage (forme d’objet uniquement).</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} adhère à tout ce qui la touche. Une créature de taille TG ou inférieure qui se retrouve ainsi collée à la [[lookup @name lowercase]]{monstre} est également &reference[grappled]{agrippée} par elle (évasion DD 13). Les tests de caractéristique visant à s'extraire de cette prise sont désavantagés.</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} adhère à tout ce qui la touche. Une créature de taille TG ou inférieure qui se retrouve ainsi collée à la [[lookup @name lowercase]]{monstre} est également &reference[grappled]{agrippée} par elle. Effectuer un test d'évasion avec le désavantage.</p>"
         },
         "False Appearance (Object Form Only)": {
           "name": "Faux-semblant (forme d’objet uniquement)",
@@ -8530,8 +8530,8 @@
         },
         "Pounce": {
           "name": "Bond agressif",
-          "description": "<p>Si la panthère se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de Griffe au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, la panthère peut effectuer contre elle une attaque de Morsure par une action bonus.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Bond agressif.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.AijNdqMurWxDxUSl.Item.t4bERcqBVDvjJ2gx]{Griffe} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, la [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .c7iYo6g3A6DP8V4w]]{Morsure} par une action bonus.</p>",
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.AijNdqMurWxDxUSl.Item.t4bERcqBVDvjJ2gx]{Griffe} au même tour, la cible doit effectuer un jet de sauvegarde de Force.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8621,7 +8621,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonnée}. Ainsi empoisonnée, elle ne peut pas récupérer de points de vie et subit [[/damage average activity=JtAxEJ6yXykPXhDf]] au début de chacun de ses tours. La cible empoisonnée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible doit réussir un jet de sauvegarde de Constitution sous peine d'être &reference[poisoned]{empoisonnée}. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison"
@@ -8958,8 +8958,8 @@
       "items": {
         "Invisibility": {
           "name": "Invisibilité",
-          "description": "<p>Le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque ou recoure à Frayeur, ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible} jusqu'à ce qu'il attaque ou recoure à @UUID[Compendium.dnd5e.monsters.Actor.bwtkdzavdNHISgp4.Item.1YhP86rTuRIXKFi2]{Frayeur}, ou que sa concentration soit rompue (comme pour un sort). Tout l'équipement porté par le [[lookup @name lowercase]]{monstre} est invisible.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible}. Tout l'équipement porté par le [[lookup @name lowercase]]{monstre} est invisible.</p>",
           "activities": {
             "Become Invisible": {
               "name": "Devenir invisible"
@@ -9190,7 +9190,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle est &reference[grappled]{agrippée} (évasion DD 17). Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre une autre cible.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle est &reference[grappled]{agrippée}. Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre une autre cible.</p>"
         },
         "Heated Body": {
           "name": "Corps surchauffé",
@@ -9259,7 +9259,7 @@
         "Talons": {
           "name": "Serres",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &reference[grappled]{agrippée} (évasion DD 19). Tant que le [[lookup @name lowercase]]{monstre} agrippe cette cible, elle est &reference[restrained]{entravée} et il ne peut pas utiliser ses [[lookup @item.name lowercase]] contre d'autres cibles.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Serres.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant que le [[lookup @name lowercase]]{monstre} agrippe cette cible, elle est &reference[restrained]{entravée} et il ne peut pas utiliser ses [[lookup @item.name lowercase]] contre d'autres cibles.</p>"
         }
       },
       "habitat": "Montagne",
@@ -9364,8 +9364,8 @@
         },
         "Pounce": {
           "name": "Bond agressif",
-          "description": "<p>Si le tigre se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de Griffe au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le tigre peut effectuer contre elle une attaque de Morsure par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Bond agressif.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .npiswgaiGzupcEmw]]{Morsure} par une action bonus.</p>",
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour, la cible doit effectuer un jet de sauvegarde de Force.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10687,8 +10687,8 @@
         },
         "Pounce": {
           "name": "Bond agressif",
-          "description": "<p>Si le tigre se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de Griffe au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le tigre peut effectuer contre elle une attaque de Morsure par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Bond agressif.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .YypXtXEL61FqWYOP]]{Morsure} par une action bonus.</p>",
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour, la cible doit effectuer un jet de sauvegarde de Force.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -10847,8 +10847,8 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si la licorne se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de Corne au même tour, elle lui inflige 9 ([[/damage]]{2d8}) dégâts perforants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Charge.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour, elle lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour, elle lui inflige des dégâts perforants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
