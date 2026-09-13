@@ -1818,7 +1818,7 @@
       "items": {
         "Antimagic Susceptibility": {
           "name": "Vulnérabilité à l'antimagie",
-          "description": "<p>L'armure est &Reference[incapacitated]{neutralisée} tant qu'elle se trouve dans un <em>champ antimagie</em>. Si elle est ciblée par <em>dissipation de la magie</em>, l'armure doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &Reference[unconscious]{inconsciente} pendant 1 minute.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est &reference[incapacitated apply=false]{neutralisée} tant qu'elle se trouve dans un <em>@UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{champ antimagie}</em>. Si elle est ciblée par <em>@UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie}</em>, l'[[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &reference[unconscious]{inconsciente} pendant 1 minute.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Vulnérabilité à l’antimagie.</p>"
         },
         "False Appearance": {
@@ -2399,7 +2399,7 @@
       "items": {
         "Petrifying Gaze": {
           "name": "Regard pétrifiant",
-          "description": "<p>Si une créature commence son tour dans un rayon de 9 m du basilic et que les deux se voient mutuellement, le basilic peut contraindre la créature à effectuer un jet de sauvegarde de Constitution DD 12 s'il n'est pas &Reference[incapacitated]{neutralisé}. En cas d'échec, la créature est &Reference[restrained]{entravée} et commence à se transformer magiquement en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée jusqu'à ce que le sort <em>restauration suprême</em> ou une magie comparable la libère.</p><p>Toute créature qui n'est pas surprise peut détourner le regard au début de son tour pour se soustraire au jet de sauvegarde. Ce faisant, la créature ne voit pas le basilic jusqu'au début de son tour suivant, moment auquel elle peut de nouveau détourner les yeux. Si la créature regarde le basilic entretemps, elle doit aussitôt effectuer le JS.</p><p>Si le basilic voit son reflet dans un rayon de 9 m et sous une lumière vive, il le prend pour un rival et se cible lui-même avec son regard.</p>",
+          "description": "<p>Si une créature commence son tour dans un rayon de 9 m du [[lookup @name lowercase]]{monstre} et que les deux se voient mutuellement, le [[lookup @name lowercase]]{monstre} peut contraindre la créature à effectuer un jet de sauvegarde de [[/save]] s'il n'est pas &reference[incapacitated apply=false]{neutralisé}. En cas d'échec, la créature est &reference[restrained]{entravée} et commence à se transformer magiquement en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est &reference[petrified]{pétrifiée} jusqu'à ce que le sort <em>@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême}</em> ou une magie comparable la libère.</p><p>Toute créature qui n'est pas &reference[surprise]{surprise} peut détourner le regard au début de son tour pour se soustraire au jet de sauvegarde. Ce faisant, la créature ne voit pas le [[lookup @name lowercase]]{monstre} jusqu'au début de son tour suivant, moment auquel elle peut de nouveau détourner les yeux. Si la créature regarde le [[lookup @name lowercase]]{monstre} entretemps, elle doit aussitôt effectuer le JS.</p><p>Si le [[lookup @name lowercase]]{monstre} voit son reflet dans un rayon de 9 m et sous une &reference[bright light]{lumière vive}, il le prend pour un rival et se cible lui-même avec son regard.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Regard pétrifiant.</p>"
         },
         "Bite": {
@@ -2604,8 +2604,13 @@
         },
         "Corrosive Form": {
           "name": "Masse corrosive",
-          "description": "<p>Une créature qui touche le pouding, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit 4 (1d8) dégâts d'acide. Toute arme non magique en métal ou en bois qui touche le pouding lors d'une attaque est aussitôt rongée.</p><p>Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal ou en bois qui touchent le pouding dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>Le pouding peut ronger le bois et le métal non magiques, au rythme de 5 cm d'épaisseur par round.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Masse corrosive.</p>"
+          "description": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit [[/damage average]]. Toute arme non magique en métal ou en bois qui touche le [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée.</p><p>Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal ou en bois qui touchent le [[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>Le [[lookup @name lowercase]]{monstre} peut ronger le bois et le métal non magiques, au rythme de 5 cm d'épaisseur par round.</p><section id=\"secret-JkTKDNe8rclkb2HO\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.wvlDMuDDdk7peoPa.ActiveEffect.dodLAz6LZ0KlsabM]{Arme corrodée} à une arme, ce qui lui confère un malus cumulatif de -1 aux jets de dégâts à chaque fois que l'enchantement est appliqué.</p></section>",
+          "chat": "<p>Le [[lookup @name]] utilise Masse corrosive.</p>",
+          "effects": {
+            "Corroded Weapon": {
+              "name": "Arme corrodée"
+            }
+          }
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -2614,7 +2619,12 @@
         "Pseudopod": {
           "name": "Pseudopode",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. De plus, toute armure non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p><section id=\"secret-EuthiTlnSJwRrtDQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.v6ZspnPr8G5hApkL.ActiveEffect.4U4SIb01ypbc6lzv]{Armure corrodée} à une armure, ce qui lui confère un malus cumulatif de -1 à la CA qu'elle offre à chaque fois que l'enchantement est appliqué.</p></section>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Pseudopode.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Pseudopode.</p>",
+          "effects": {
+            "Corroded Armor": {
+              "name": "Armure corrodée"
+            }
+          }
         },
         "Split": {
           "name": "Division",
@@ -5904,7 +5914,12 @@
         "Corrode Metal": {
           "name": "Corrosion du métal",
           "description": "<p>Toute arme non magique en métal qui touche la vase lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p><p>Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent la vase dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>La vase peut ronger le métal non magique, au rythme de 5 cm d'épaisseur par round.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Corrosion du métal (vase).</p>"
+          "chat": "<p>La [[lookup @name]] utilise Corrosion du métal (vase).</p>",
+          "effects": {
+            "Corroded Weapon": {
+              "name": "Arme corrodée"
+            }
+          }
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -5913,7 +5928,12 @@
         "Pseudopod": {
           "name": "Pseudopode",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et toute armure métallique non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p><section id=\"secret-8JkOh4DLk4cb3dhN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.KO4qRywgiEQ3F004.ActiveEffect.SiRqKDm2qerReaj8]{Armure corrodée} à une armure, ce qui lui confère un malus cumulatif de -1 à la CA qu'elle offre à chaque fois que l'enchantement est appliqué.</p></section>",
-          "chat": "<p>La [[lookup @name]] attaque avec Pseudopode.</p>"
+          "chat": "<p>La [[lookup @name]] attaque avec Pseudopode.</p>",
+          "effects": {
+            "Corroded Armor": {
+              "name": "Armure corrodée"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -7338,7 +7358,7 @@
         "KDSrdpdFPDKnh80y": {
           "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible doit réussir un jet de sauvegarde de [[/save activity=ViiNmmo2Hd9uvmFG]] sous peine d'être &Reference[paralyzed]{paralysée} pendant [[lookup @labels.duration activity=ViiNmmo2Hd9uvmFG]]. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "name": "Contact paralysant",
-          "chat": "<p>La liche attaque avec son Contact paralysant. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible doit effectuer un jet de sauvegarde de Constitution. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "effects": {
             "Paralysis": {
               "name": "Paralysie"
@@ -9289,12 +9309,12 @@
         "Tendril": {
           "name": "Filament",
           "description": "<p>[[/attack extended]]. <em>Touché :</em> La cible est &Reference[grappled]{agrippée} (évasion DD 15). Tant que l'[[lookup @name lowercase]]{monstre} l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force, et l'[[lookup @name lowercase]]{monstre} ne peut pas se servir du même [[lookup @item.name lowercase]] contre une autre cible.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Filament.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que l'[[lookup @name lowercase]]{monstre} l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force.</p>"
         },
         "Reel": {
           "name": "Traction",
-          "chat": "<p>L'[[lookup @name]] utilise Traction.</p>",
-          "description": "<p>L'enlaceur tire vers lui chaque créature agrippée, en ligne droite, d'un maximum de 7,50 m.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} tire vers lui chaque créature &reference[grappled apply=false]{agrippée}, en ligne droite, d'un maximum de 7,50 m.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} tire vers lui chaque créature &reference[grappled apply=false]{agrippée}, en ligne droite, d'un maximum de 7,50 m.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9323,7 +9343,7 @@
         "Smother": {
           "name": "Étouffement",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille M ou inférieure. <em>Touché :</em> La créature est &Reference[grappled]{agrippée} (évasion DD 13). Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained apply=false]{entravée}, &reference[blinded apply=false]{aveuglée} et risque l'&reference[suffocation apply=false]{asphyxie}, et le [[lookup @name lowercase]]{monstre} ne peut pas étouffer d'autre cible. De plus, au début de chacun de ses propres tours, la cible subit [[/damage average]].</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Étouffement.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque étouffante ! La créature est &Reference[grappled]{agrippée}. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}, &reference[blinded]{aveuglée} et risque l'&reference[suffocation apply=false]{asphyxie}, et le [[lookup @name lowercase]]{monstre} ne peut pas étouffer d'autre cible.</p>"
         }
       },
       "senses": "ne voit rien au-delà de ce rayon",
@@ -9339,7 +9359,12 @@
         "Rust Metal": {
           "name": "Corrosion du métal",
           "description": "<p>Toute arme non magique en métal qui touche l'oxydeur lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent l'oxydeur dans le cadre d'une attaque sont détruites après application des dégâts.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Corrosion du métal.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Corrosion du métal.</p>",
+          "effects": {
+            "Corroded Weapon": {
+              "name": "Arme corrodée"
+            }
+          }
         },
         "Bite": {
           "name": "Morsure",
@@ -9445,7 +9470,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible est &reference[grappled]{agrippée} (évasion DD 14). Tant qu'elle est agrippée, la cible est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} peut la toucher automatiquement avec sa [[lookup @item.name]], sachant qu'elle ne peut pas effectuer d'attaque de [[lookup @item.name]] contre d'autres cibles.</p>",
-          "chat": "<p>La salamandre attaque avec sa Queue. La cible est agrippée. Tant qu'elle est agrippée, la cible est entravée et la salamandre peut la toucher automatiquement avec sa Queue, sachant qu'elle ne peut pas effectuer d'attaque de Queue contre d'autres cibles.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est entravée et la [[lookup @name lowercase]]{monstre} peut la toucher automatiquement avec sa [[lookup @item.name]], sachant qu'elle ne peut pas effectuer d'attaque de [[lookup @item.name]] contre d'autres cibles.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -9608,8 +9633,8 @@
         },
         "Engulf": {
           "name": "Enveloppement",
-          "description": "<p>Le tertre errant enveloppe une créature de taille M ou inférieure qu'il agrippe. La cible enveloppée est aveuglée, entravée et incapable de respirer, et doit réussir un jet de sauvegarde de Constitution DD 14 au début de chacun des tours du tertre, sous peine de subir 13 (2d8 + 4) dégâts contondants.</p><p>Lorsque le tertre se déplace, la cible enveloppée l'accompagne. Le tertre ne peut pas envelopper plus d'une créature à la fois.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Enveloppement.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} enveloppe une créature de taille M ou inférieure qu'il &reference[grappled apply=false]{agrippe}. La cible enveloppée est &reference[blinded]{aveuglée}, &reference[restrained]{entravée} et incapable de respirer, et doit réussir un jet de sauvegarde de [[/save activity=qxYtQIpEbpMrFvVe]] au début de chacun des tours du [[lookup @name lowercase]]{monstre}, sous peine de subir [[/damage average activity=qxYtQIpEbpMrFvVe]].</p><p>Lorsque le [[lookup @name lowercase]]{monstre} se déplace, la cible enveloppée l'accompagne. Le [[lookup @name lowercase]]{monstre} ne peut pas envelopper plus d'une créature à la fois.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} enveloppe une créature de taille M ou inférieure qu'il &reference[grappled apply=false]{agrippe}. La cible enveloppée est &reference[blinded]{aveuglée}, &reference[restrained]{entravée} et incapable de respirer, et doit effectuer un jet de sauvegarde de Constitution au début de chacun des tours du [[lookup @name lowercase]]{monstre}. Lorsque le [[lookup @name lowercase]]{monstre} se déplace, la cible enveloppée l'accompagne.</p>",
           "effects": {
             "Engulfed": {
               "name": "Englouti"
@@ -9671,8 +9696,8 @@
       "items": {
         "Shriek": {
           "name": "Hurlement",
-          "description": "<p>Lorsqu’une lumière vive ou une créature se trouve dans un rayon de 9 m du [[lookup @name]], celui-ci pousse un hurlement audible à 90 m. Le [[lookup @name]] continue à hurler jusqu’à ce que la perturbation sorte du rayon et pendant 1d4 de ses tours après cela.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Hurlement.</p>"
+          "description": "<p>Lorsqu'une &reference[bright light]{lumière vive} ou une créature se trouve dans un rayon de [[lookup @labels.description.range activity=jlIOy920hBT6hxVd]] du [[lookup @name lowercase]]{monstre}, celui-ci pousse un hurlement audible à 90 m. Le [[lookup @name lowercase]]{monstre} continue à hurler jusqu'à ce que la perturbation sorte du rayon et pendant 1d4 de ses tours après cela.</p>",
+          "chat": "<p>Lorsqu'une &reference[bright light]{lumière vive} ou une créature se trouve dans un rayon de [[lookup @labels.description.range activity=jlIOy920hBT6hxVd]] du [[lookup @name lowercase]]{monstre}, celui-ci pousse un hurlement audible à 90 m.</p>"
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -9854,8 +9879,8 @@
       "items": {
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
-          "description": "<p>Le spectre peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}. Il subit [[/damage average]] s'il termine son tour à l'intérieur d'un objet.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}.</p>",
           "effects": {
             "Incorporeal Movement": {
               "name": "Déplacement intangible"
@@ -10129,7 +10154,7 @@
         "Rock": {
           "name": "Rocher",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=GOn2YYbOxKVKqvwx]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Rocher.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
         },
         "Rock Catching": {
           "name": "Réception de rocher",
@@ -10589,7 +10614,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle est &reference[grappled]{agrippée} (évasion DD 20). Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle est &reference[grappled]{agrippée}. Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et la [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>"
         },
         "Claw": {
           "name": "Griffe",
@@ -10604,7 +10629,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -10826,8 +10851,8 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 33 ([[/damage]]{4d12 + 7}) dégâts perforants. Si la cible est une créature de taille M ou inférieure, elle est &Reference[grappled]{agrippée} (évasion DD 17). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le tyrannosaure ne peut pas mordre d'autre cible.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille M ou inférieure, elle est &Reference[grappled]{agrippée} (évasion DD 17). Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le tyrannosaure ne peut pas mordre d'autre cible.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature de taille M ou inférieure, elle est &Reference[grappled]{agrippée}. Tant que la cible est agrippée, elle est &Reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas mordre d'autre cible.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -10988,7 +11013,7 @@
         "Unarmed Strike (Vampire Form Only)": {
           "name": "Attaque à mains nues (forme de vampire uniquement)",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible (évasion DD 18).</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Attaque à mains nues (forme de vampire uniquement).</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible.</p>"
         },
         "Bite (Bat or Vampire Form Only)": {
           "name": "Morsure (forme de chauve-souris ou de vampire uniquement)",
@@ -11044,7 +11069,7 @@
         "Claws": {
           "name": "Griffes",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible (évasion DD 13).</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11237,8 +11262,8 @@
         },
         "Whelm": {
           "name": "Déluge",
-          "description": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un [[/save]]. En cas d'échec, elle subit [[/damage average activity=wNdhnTTQQLAgCSv9]]. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée} (évasion DD 14). Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Si elle réussit son jet de sauvegarde, la cible est repoussée de l'espace de l'[[lookup @name lowercase]]{monstre}. L'[[lookup @name lowercase]]{monstre} peut agripper simultanément une créature de taille G ou un maximum de deux créatures de taille M ou inférieure. Au début de chacun des tours de l'[[lookup @name lowercase]]{monstre}, toute créature agrippée par lui subit [[/damage average activity=3Ed1FjdlOVvPPqS8]]. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de [[/check]].</p>",
-          "chat": "<p>[[lookup @name]] utilise Déluge.</p>"
+          "description": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de [[/save]]. En cas d'échec, elle subit [[/damage average activity=wNdhnTTQQLAgCSv9]]. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée} (évasion DD 14). Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Si elle réussit son jet de sauvegarde, la cible est repoussée de l'espace de l'[[lookup @name lowercase]]{monstre}. L'[[lookup @name lowercase]]{monstre} peut agripper simultanément une créature de taille G ou un maximum de deux créatures de taille M ou inférieure. Au début de chacun des tours de l'[[lookup @name lowercase]]{monstre}, toute créature agrippée par lui subit [[/damage average activity=3Ed1FjdlOVvPPqS8]]. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de [[/check]].</p>",
+          "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de Force.</p>"
         }
       },
       "habitat": "Sous-marin",
@@ -11410,8 +11435,8 @@
         },
         "Pounce (Tiger or Hybrid Form Only)": {
           "name": "Bond agressif (forme de tigre ou hybride uniquement)",
-          "description": "<p>Si le tigre-garou se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de [[/item .HPmjVRKpG08bgohb]]{Griffe} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le tigre-garou peut effectuer contre elle une attaque de [[/item .FOkSL18gU0Sli5ZA]]{Morsure} par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Bond agressif (forme de tigre ou hybride uniquement).</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de [[/item .HPmjVRKpG08bgohb]]{Griffe} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .FOkSL18gU0Sli5ZA]]{Morsure} par une action bonus.</p>",
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Griffe au même tour, la cible doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "effects": {
             "Prone": {
               "name": "À terre"
@@ -11572,8 +11597,8 @@
         },
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
-          "description": "<p>Le feu follet peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Déplacement intangible.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}. Il subit [[/damage average]] s'il termine son tour à l'intérieur d'un objet.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}.</p>",
           "effects": {
             "Incorporeal Movement": {
               "name": "Déplacement intangible"
@@ -11631,8 +11656,8 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 14 sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
         },
         "Cold Breath": {
           "name": "Souffle glacial",
@@ -11657,8 +11682,8 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{2d4 + 2}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
         }
       },
       "habitat": "Prairie",
@@ -11696,8 +11721,8 @@
         },
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
-          "description": "<p>L'âme-en-peine peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Elle subit 5 (1d10) dégâts de force si elle termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Déplacement intangible.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}. Elle subit [[/damage average]] si elle termine son tour à l'intérieur d'un objet.</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}.</p>",
           "effects": {
             "Incorporeal Movement": {
               "name": "Déplacement intangible"
