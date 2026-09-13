@@ -806,7 +806,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Detect": {
@@ -923,8 +923,8 @@
         },
         "Whirlwind": {
           "name": "Tourbillon",
-          "description": "<p>Chaque créature prise dans l'espace de l'élémentaire effectue un jet de sauvegarde de [[/save]]. En cas d'échec, une cible subit 15 ([[/damage]]{3d8 + 2}) dégâts contondants et se retrouve projetée à 6 m de l'élémentaire, dans une direction aléatoire, pour finir à terre. Si une cible projetée ainsi entre en collision avec un obstacle (comme un mur ou le sol), elle subit 3 ([[/damage activity=dnd5eactivity000]]{1d6}) dégâts contondants par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de [[/save activity=k9fqQYuxbnT3pwT3]] sous peine de subir les mêmes dégâts d'impact et de se retrouver à terre.</p><p>Si le jet de sauvegarde est réussi, la cible subit la moitié des dégâts contondants et n'est ni projetée ni jetée à terre.</p>",
-          "chat": "<p>[[lookup @name]] utilise Tourbillon.</p>"
+          "description": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de [[/save activity=O0oP6dlhQ4kdTAGU]]. En cas d'échec, une cible subit [[/damage average activity=O0oP6dlhQ4kdTAGU]] et se retrouve projetée à 6 m de l'[[lookup @name lowercase]]{monstre}, dans une direction aléatoire, pour finir &reference[prone]{à terre}. Si une cible projetée ainsi entre en collision avec un obstacle (comme un mur ou le sol), elle subit [[/damage activity=dnd5eactivity000 average]] par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de [[/save activity=k9fqQYuxbnT3pwT3]] sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p><p>Si le jet de sauvegarde est réussi, la cible subit la moitié des dégâts contondants et n'est ni projetée ni jetée à terre.</p>",
+          "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. En cas d'échec, une cible se retrouve projetée à 6 m de l'[[lookup @name lowercase]]{monstre}, dans une direction aléatoire, pour finir &reference[prone]{à terre}. Si la cible entre en collision avec une autre créature, cette dernière doit effectuer un jet de sauvegarde de Dextérité sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p>"
         }
       },
       "habitat": "Montagne",
@@ -1044,7 +1044,7 @@
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
-          "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 36 m de long pour 3 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 88 ([[/damage]]{16d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=GSQtl90Opu6WzZk4]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
           "activities": {
             "Exhale Lightning": {
@@ -1588,7 +1588,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Tail Attack": {
@@ -1805,7 +1805,8 @@
           "materials": "un vase incrusté de gemmes d'une valeur minimale de 1 000 po, que le sort détruit"
         },
         "Legendary Actions": {
-          "name": "Actions Légendaires"
+          "name": "Actions Légendaires",
+          "description": "<p>[[lookup @resources.legact.label]]</p>"
         }
       },
       "languages": "sphinx",
@@ -1842,12 +1843,12 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts tranchants plus 3 ([[/damage]]{1d6}) dégâts d'acide. Si la cible est une créature de taille G ou inférieure, elle est agrippée (évasion DD 13). Jusqu'à la fin de cette lutte, l'ankheg ne peut mordre que la créature agrippée, avec l'avantage pour les jets d'attaque correspondants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille G ou inférieure, elle est &reference[grappled]{agrippée} (évasion DD 13). Jusqu'à la fin de cette lutte, l'[[lookup @name lowercase]]{monstre} ne peut mordre que la créature agrippée, avec l'avantage pour les jets d'attaque correspondants.</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. En cas de réussite, la cible est &reference[grappled]{agrippée}.</p>"
         },
         "Acid Spray": {
           "name": "Aspersion acide",
-          "description": "<p>L'ankheg crache de l'acide sous forme d'une ligne de 9 m de long et 1,50 m de large, à condition qu'il ne soit pas en train d'agripper une créature. Chaque créature prise dans la ligne effectue un jet de sauvegarde de Dextérité DD 13, et subit 10 (3d6) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>L'ankheg crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=A4waeKIjLnBIJs9i]], à condition qu'il ne soit pas en train d'&reference[grappled apply=false]{agripper} une créature. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=A4waeKIjLnBIJs9i]], et subit [[/damage average activity=A4waeKIjLnBIJs9i]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Aspersion acide.</p>"
         }
       },
@@ -2129,8 +2130,8 @@
       "items": {
         "Incorporeal Movement": {
           "name": "Déplacement intangible",
-          "description": "<p>L'avatar peut traverser d'autres créatures et objets comme s'il s'agissait d'un terrain difficile. Il subit 5 (1d10) dégâts de force s'il termine son tour à l'intérieur d'un objet.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Déplacement intangible.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}. Il subit [[/damage average]] s'il termine son tour à l'intérieur d'un objet.</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut traverser d'autres créatures et objets comme s'il s'agissait d'un &reference[difficult terrain]{terrain difficile}.</p>",
           "effects": {
             "Incorporeal Movement": {
               "name": "Déplacement intangible"
@@ -2143,7 +2144,7 @@
         },
         "Reaping Scythe": {
           "name": "Faux tournoyante",
-          "description": "<p>L'avatar abat sa faux spectrale sur une créature située dans un rayon de 1,50 m de lui, et lui inflige 7 (1d8 + 3) dégâts tranchants plus 4 (1d8) dégâts nécrotiques.</p>",
+          "description": "<p>L'avatar abat sa faux spectrale sur une créature située dans un rayon de [[lookup @labels.description.range activity=bt778cosuDVj9HQu]] de lui, et lui inflige [[/damage average]].</p>",
           "chat": "<p>L'[[lookup @name]] utilise Faux tournoyante.</p>"
         }
       },
@@ -2448,7 +2449,7 @@
         },
         "Beard": {
           "name": "Barbe",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Ainsi empoisonnée, la cible ne peut pas récupérer de points de vie. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=otXVZOYTWnkMPkxs]]. Ainsi empoisonnée, la cible ne peut pas récupérer de points de vie. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Barbe.</p>",
           "activities": {
             "Poison Save": {
@@ -2491,7 +2492,7 @@
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
-          "description": "<p>Le béhir crache une ligne de foudre de 6 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de Dextérité DD 16, et subit 66 (12d10) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le béhir crache une [[lookup lowercase @labels.description.template activity=iG0MT0sZv95VBmZK]] de foudre. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]], et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
           "activities": {
             "Exhale Lightning": {
@@ -2676,7 +2677,7 @@
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
-          "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 9 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 22 ([[/damage]]{4d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le dragon crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=GSQtl90Opu6WzZk4]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
           "activities": {
             "Exhale Lightning": {
@@ -2996,7 +2997,7 @@
         },
         "Fire Breath": {
           "name": "Souffle de feu",
-          "description": "<p>La tête de dragon crache des flammes sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité DD 15 et subit 31 (7d8) dégâts de feu en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>La tête de dragon crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=hgZyMXNDniRUKwjz]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=hgZyMXNDniRUKwjz]] et subit [[/damage average activity=hgZyMXNDniRUKwjz]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] utilise Souffle de feu.</p>",
           "activities": {
             "Exhale Fire": {
@@ -3229,7 +3230,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de Constitution DD 11 contre la pétrification magique. En cas d'échec, la créature est entravée et commence à se transformer en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée pendant 24 heures.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] contre la &reference[petrified]{pétrification} magique. En cas d'échec, la créature est &reference[restrained]{entravée} et commence à se transformer en pierre. Elle doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin. En cas d'échec, la créature est pétrifiée pendant [[lookup @labels.duration activity=Q4A4M8mrHIRdX3JM]].</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Petrification Save": {
@@ -3620,7 +3621,7 @@
         },
         "Poisoned Dart": {
           "name": "Fléchette empoisonnée",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/36 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save activity=yYJMmbs4vnoxnf8U]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=yYJMmbs4vnoxnf8U]]. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Fléchette empoisonnée.</p>",
           "activities": {
             "Poison Save": {
@@ -3759,7 +3760,7 @@
         },
         "Create Whirlwind": {
           "name": "Création de tourbillon",
-          "description": "<p>Un cylindre d'air tourbillonnant, de 1,50 m de rayon et 9 m de haut, se forme en un point que le djinn voit dans un rayon de 36 m. Le tourbillon persiste aussi longtemps que le djinn maintient sa concentration (comme pour un sort). Toute créature autre que le djinn qui pénètre dans le tourbillon doit réussir un jet de sauvegarde de [[/save]] sous peine d'être entravée par les turbulences. Le djinn peut déplacer le tourbillon d'un maximum de 18 m au prix d'une action ; les créatures entravées par l'effet sont déplacées avec lui. Le tourbillon prend fin si le djinn le perd de vue.</p><p>Une créature peut consacrer son action à libérer une créature entravée par le tourbillon (éventuellement elle-même), ce qui nécessite de réussir un test de [[/check]]. En cas de réussite, la créature n'est plus entravée et se déplace dans l'espace extérieur au tourbillon le plus proche.</p>",
+          "description": "<p>Un [[lookup lowercase @labels.description.template activity=5QSOnuuVfbhaFcH4]] d'air tourbillonnant, se forme en un point que le djinn voit dans un rayon de [[lookup @labels.description.range activity=5QSOnuuVfbhaFcH4]]. Le tourbillon persiste aussi longtemps que le djinn maintient sa concentration (comme pour un sort). Toute créature autre que le djinn qui pénètre dans le tourbillon doit réussir un jet de sauvegarde de [[/save]] sous peine d'être entravée par les turbulences. Le djinn peut déplacer le tourbillon d'un maximum de [[lookup @labels.description.range activity=gtStP2vVpkp7MMw5]] au prix d'une action ; les créatures entravées par l'effet sont déplacées avec lui. Le tourbillon prend fin si le djinn le perd de vue.</p><p>Une créature peut consacrer son action à libérer une créature entravée par le tourbillon (éventuellement elle-même), ce qui nécessite de réussir un test de [[/check activity=LlBHDTeLFiSXeSPL]]. En cas de réussite, la créature n'est plus entravée et se déplace dans l'espace extérieur au tourbillon le plus proche.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Création de tourbillon.</p>"
         },
         "Conjure Air Elemental": {
@@ -4295,7 +4296,7 @@
         },
         "Blinding Breath": {
           "name": "Souffle aveuglant",
-          "description": "<p>Le méphite exhale de la poussière aveuglante sous forme d'un cône de 4,50 m. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} pendant 1 minute. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>Le méphite exhale de la poussière aveuglante sous forme d'un [[lookup lowercase @labels.description.template activity=DkJgrFw9xkTp7btO]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[blinded]{aveuglée} pendant [[lookup @labels.duration activity=DkJgrFw9xkTp7btO]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle aveuglant.</p>"
         },
         "Sleep": {
@@ -4534,7 +4535,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. La créature ciblée doit réussir un jet de sauvegarde de Constitution DD 11 sous peine d'être empoisonnée pendant 1 minute. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La créature ciblée doit réussir un jet de sauvegarde de [[/save activity=ujb7xiAX4hUtM8fe]] sous peine d'être &reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=ujb7xiAX4hUtM8fe]]. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -4859,7 +4860,7 @@
         },
         "Claws": {
           "name": "Griffes",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être paralysée pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant, elle doit réussir un jet de sauvegarde de [[/save activity=GKEI5W17dgV81huq]] sous peine d'être &reference[paralyzed]{paralysée} pendant [[lookup @labels.duration activity=GKEI5W17dgV81huq]]. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>",
           "effects": {
             "Paralysis": {
@@ -4927,7 +4928,7 @@
         },
         "Claws": {
           "name": "Griffes",
-          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un elfe ou un mort-vivant, elle doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être paralysée pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un elfe ou un mort-vivant, elle doit réussir un jet de sauvegarde de [[/save activity=eUhLoDYzWkXnIKKj]] sous peine d'être &reference[paralyzed]{paralysée} pendant [[lookup @labels.duration activity=eUhLoDYzWkXnIKKj]]. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Griffes.</p>",
           "effects": {
             "Paralysis": {
@@ -5037,7 +5038,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=RQqJ9wFgglGmzsYF]]. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant [[lookup @labels.duration activity=RQqJ9wFgglGmzsYF]], même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -5455,7 +5456,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts perforants, et la cible effectue un jet de sauvegarde de [[/save]] ; elle subit 9 ([[/damage activity=dnd5eactivity100]]{2d8}) dégâts de poison en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l’état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save]] ; elle subit [[/damage average activity=2AyYbFLKLbDLzP05]] en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est &reference[stable]{stabilisée}, mais subit l'état &reference[poisoned]{empoisonné} pendant [[lookup @labels.duration activity=2AyYbFLKLbDLzP05]], même après avoir récupéré des points de vie, et l'état &reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -5537,7 +5538,7 @@
       "items": {
         "Sting": {
           "name": "Dard",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage activity=dnd5eactivity100]]{3d6}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=ilzrXBsQAHEBhR5H]] supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &reference[poisoned]{empoisonné} pendant [[lookup @labels.duration activity=ilzrXBsQAHEBhR5H]], même après avoir récupéré des points de vie, et l'état &reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>La [[lookup @name]] attaque avec Dard.</p>",
           "activities": {
             "Poison Save": {
@@ -5574,7 +5575,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 7 ([[/damage activity=dnd5eactivity100]]{2d6}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=RDbtJIrHQobdffi4]] supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &reference[poisoned]{empoisonné} pendant [[lookup @labels.duration activity=RDbtJIrHQobdffi4]], même après avoir récupéré des points de vie, et l'état &reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -6321,7 +6322,8 @@
           "materials": "de l'encens d'une valeur minimale de 250 po, que le sort détruit, et quatre lamelles d'ivoire d'une valeur minimale de 50 po chacune"
         },
         "Legendary Actions": {
-          "name": "Actions Légendaires"
+          "name": "Actions Légendaires",
+          "description": "<p>[[lookup @resources.legact.label]]</p>"
         }
       },
       "languages": "sphinx",
@@ -6558,7 +6560,7 @@
       "items": {
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> [[/damage]]{1} dégât perforant, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Si le jet de sauvegarde échoue d'au moins 5, l'empoisonnement dure en fait 5 ([[/r 1d10]]) minutes et la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=aNFKGc5wFnOQijNd]]. Si le jet de sauvegarde échoue d'au moins 5, l'empoisonnement dure en fait 5 ([[/r 1d10]]) minutes et la cible est &Reference[unconscious]{inconsciente} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -7046,12 +7048,12 @@
         },
         "Lightning Storm": {
           "name": "Tempête foudroyante",
-          "description": "<p>Le kraken crée magiquement trois éclairs qui peuvent chacun frapper une cible que le kraken voit dans un rayon de 36 m. La cible effectue un jet de sauvegarde de Dextérité DD 23 et subit 22 (4d10) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le kraken crée magiquement trois éclairs qui peuvent chacun frapper une cible que le kraken voit dans un rayon de [[lookup @labels.description.range activity=TwlWJt0B9uRQsZta]]. La cible effectue un jet de sauvegarde de [[/save activity=TwlWJt0B9uRQsZta]] et subit [[/damage average activity=TwlWJt0B9uRQsZta]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Tempête foudroyante.</p>"
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Tentacle Attack or Fling": {
@@ -7210,7 +7212,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Mage Hand": {
@@ -7334,7 +7336,7 @@
           "materials": "une perle de verre ou de cristal qui se brise à la fin du sort"
         },
         "KDSrdpdFPDKnh80y": {
-          "description": "<p><em>Attaque de sort au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 10 ([[/damage]]{3d6}) dégâts de froid. La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[paralyzed]{paralysée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible doit réussir un jet de sauvegarde de [[/save activity=ViiNmmo2Hd9uvmFG]] sous peine d'être &Reference[paralyzed]{paralysée} pendant [[lookup @labels.duration activity=ViiNmmo2Hd9uvmFG]]. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "name": "Contact paralysant",
           "chat": "<p>La liche attaque avec son Contact paralysant. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "effects": {
@@ -7582,7 +7584,7 @@
       "items": {
         "Death Burst": {
           "name": "Explosion finale",
-          "description": "<p>Quand le magmatique meurt, il explose dans une déflagration de flammes et de lave. Toute créature située dans un rayon de 3 m du monstre effectue un jet de sauvegarde de [[/save]] et subit 7 ([[/damage]]{2d6}) dégâts de feu en cas d'échec, la moitié en cas de réussite. Les objets inflammables de la zone qui ne sont portés par personne prennent feu.</p>",
+          "description": "<p>Quand le [[lookup @name lowercase]]{monstre} meurt, il explose dans une déflagration de flammes et de lave. Toute créature située dans un rayon de [[lookup @target.template.size activity=A8WwxhIVtPyXk0DI]] [[lookup @target.template.units activity=A8WwxhIVtPyXk0DI]] du monstre effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite. Les objets inflammables de la zone qui ne sont portés par personne prennent feu.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "Ignited Illumination": {
@@ -8002,7 +8004,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Attack": {
@@ -8457,7 +8459,7 @@
         },
         "Tentacle": {
           "name": "Tentacule",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts contondants plus 4 ([[/damage]]{1d8}) dégâts perforants. Si la cible est de taille M ou inférieure, elle est &Reference[grappled apply=false]{agrippée} (évasion DD 13) et &Reference[restrained apply=false]{entravée} tant que le monstre l'agrippe. L'otyugh est doté de deux tentacules, chacun pouvant agripper une cible.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est de taille M ou inférieure, elle est &Reference[grappled apply=false]{agrippée} (évasion DD 13) et &Reference[restrained apply=false]{entravée} tant que le monstre l'agrippe. L'[[lookup @name lowercase]]{monstre} est doté de deux [[lookup @item.name lowercase]]s, chacun pouvant agripper une cible.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Tentacule.</p>"
         },
         "Tentacle Slam": {
@@ -8575,7 +8577,7 @@
         },
         "Bite": {
           "name": "Morsure",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{1d10 +2}) dégâts perforants et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir 18 ([[/damage activity=dnd5eactivity100]]{4d8}) dégâts de poison supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant 1 heure, même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=8tRw363NqNSEX3gA]] supplémentaires en cas d'échec, la moitié en cas de réussite. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant [[lookup @labels.duration activity=8tRw363NqNSEX3gA]], même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Morsure.</p>",
           "activities": {
             "Poison Save": {
@@ -8905,7 +8907,7 @@
         },
         "Sting": {
           "name": "Dard",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde est raté d'au moins 5, la cible tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=hcLz9GILmf8UvyVF]]. Si le jet de sauvegarde est raté d'au moins 5, la cible tombe &reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
           "activities": {
             "Poison Save": {
@@ -8971,7 +8973,7 @@
         },
         "Claw (Bite in Beast Form)": {
           "name": "Griffes (Morsure sous forme de bête)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d4 + 3}) dégâts perforants, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 5 ([[/damage activity=dnd5eactivity100]]{2d4}) dégâts de poison et d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save activity=YYGdywRW1up1nXSJ]] sous peine de subir [[/damage average activity=YYGdywRW1up1nXSJ]] et d'être &Reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=YYGdywRW1up1nXSJ]]. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] attaque avec Griffes (Morsure sous forme de bête).</p>",
           "activities": {
             "Poison Save": {
@@ -9996,7 +9998,7 @@
         },
         "Shortbow": {
           "name": "Arc court",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 12/48 m, une cible. <em>Touché :</em> [[/damage ]]{1} dégât perforant et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Si le jet de sauvegarde est raté d'au moins 5, la cible empoisonnée tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=vMfBrhdjnxaKy0Wn]]. Si le jet de sauvegarde est raté d'au moins 5, la cible empoisonnée tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
           "chat": "<p>L'[[lookup @name]] attaque avec Arc court.</p>"
         },
         "Longsword": {
@@ -10267,7 +10269,7 @@
         },
         "Charm": {
           "name": "Charme",
-          "description": "<p>Un humanoïde que le fiélon voit dans un rayon de 9 m doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[charmed]{charmé} magiquement pendant 1 jour. La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon. Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l'effet en cas de réussite. Si la cible réussit son JS contre l'effet ou si celui-ci prend fin, elle devient immunisée contre le Charme de ce fiélon pendant 24 heures.</p><p>Le fiélon ne peut pas avoir plus d'une cible ainsi charmée à la fois. S'il en charme une autre, l'effet prend fin sur la précédente cible.</p>",
+          "description": "<p>Un humanoïde que le fiélon voit dans un rayon de [[lookup @labels.description.range activity=ZFCUDfqONxiB5KBa]] doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[charmed]{charmé} magiquement pendant [[lookup @labels.duration activity=ZFCUDfqONxiB5KBa]]. La cible charmée se soumet aux ordres verbaux et télépathiques du fiélon. Elle peut réitérer le jet de sauvegarde si on lui fait du mal ou si elle reçoit un ordre suicidaire, et met un terme à l'effet en cas de réussite. Si la cible réussit son JS contre l'effet ou si celui-ci prend fin, elle devient immunisée contre le [[lookup @item.name]] de ce fiélon pendant 24 heures.</p><p>Le fiélon ne peut pas avoir plus d'une cible ainsi charmée à la fois. S'il en charme une autre, l'effet prend fin sur la précédente cible.</p>",
           "chat": "<p>La [[lookup @name]] utilise Charme.</p>",
           "effects": {
             "Charmed": {
@@ -10283,8 +10285,13 @@
         },
         "Draining Kiss": {
           "name": "Baiser dévitalisant",
-          "description": "<p>Le fiélon échange un baiser avec une créature charmée par lui ou consentante. La cible effectue un jet de sauvegarde de [[/save]] contre cette magie et subit 32 ([[/damage]]{5d10 + 5}) dégâts psychiques en cas d'échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>"
+          "description": "<p>Le fiélon échange un baiser avec une créature &reference[charmed apply=false]{charmée} par lui ou consentante. La cible effectue un jet de sauvegarde de [[/save activity=hczxJO21CcoyyyO7]] contre cette magie et subit [[/damage average activity=hczxJO21CcoyyyO7]] en cas d'échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p><section id=\"secret-o3d8RMpsTX8cJQ42\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez utiliser l'activité <em><strong>« Dégâts au maximum de points de vie »</strong></em> pour indiquer le montant de dégâts subis par une créature lors de cette attaque et réduire son maximum de points de vie en conséquence.</p></section>",
+          "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>",
+          "activities": {
+            "Maximum Hit Point Damage": {
+              "name": "Dégâts au maximum de points de vie"
+            }
+          }
         },
         "Etherealness": {
           "name": "Forme éthérée",
@@ -10621,7 +10628,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Attack": {
@@ -11005,7 +11012,7 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>Une créature légendaire peut entreprendre un certain nombre d’actions spéciales, appelées actions légendaires, en dehors de ses tours. Une seule option légendaire peut être utilisée à la fois, et uniquement à la fin du tour d’une autre créature. Une créature récupère les actions légendaires dépensées au début de son tour. Elle n’est pas tenue d’y recourir et ne peut s’en servir si elle est &Reference[incapacitated] ou incapable d’entreprendre une action. Si elle est surprise, elle doit attendre que son premier tour de combat soit passé pour y recourir.</p>",
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
           "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
         },
         "Move": {
@@ -11142,7 +11149,7 @@
         },
         "Spores": {
           "name": "Spores",
-          "description": "<p>Un nuage de spores toxiques s'étend sur un rayon de 4,50 m autour du vrock. Les spores contournent les angles. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. Ainsi empoisonnée, une cible subit 5 ([[/damage]]{1d10}) dégâts de poison au début de chacun de ses tours. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Verser le contenu d'une fiole d'eau bénite sur la cible met également fin à l'effet.</p>",
+          "description": "<p>Un nuage de spores toxiques s'étend sur un rayon de [[lookup @target.template.size activity=6NlNH6h0uxCCjmPL]] [[lookup @target.template.units activity=6NlNH6h0uxCCjmPL]] autour du vrock. Les spores contournent les angles. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. Ainsi empoisonnée, une cible subit [[/damage average]] au début de chacun de ses tours. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Verser le contenu d'une fiole d'@UUID[Compendium.dnd5e.items.Item.WPWszFTGzmdIuDRJ]{eau bénite} sur la cible met également fin à l'effet.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Spores.</p>"
         },
         "Stunning Screech": {
