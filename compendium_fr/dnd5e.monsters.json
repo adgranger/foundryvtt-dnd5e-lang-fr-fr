@@ -41,7 +41,7 @@
         },
         "Mucous Cloud": {
           "name": "Nuage muqueux",
-          "description": "<p>Tant qu'il est sous l'eau, l'aboleth est entouré d'un mucus réactif. Une créature qui touche physiquement l'aboleth ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature est malade pendant [[/r 1d4]] heures. La créature malade ne peut respirer que sous l'eau.</p>",
+          "description": "<p>Tant qu'il est sous l'eau, l'[[lookup @name lowercase]]{monstre} est entouré d'un mucus réactif. Une créature qui touche physiquement l'[[lookup @name lowercase]]{monstre} ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature est malade pendant [[/r 1d4]] heures. La créature malade ne peut respirer que sous l'eau.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Nuage muqueux.</p>",
           "activities": {
             "Disease Save": {
@@ -177,7 +177,7 @@
         },
         "Acid Breath": {
           "name": "Souffle d'acide",
-          "description": "<p>Le dragon crache de l'acide sous forme d'une ligne de 18 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 54 ([[/damage]]{12d8}) dégâts d'acide en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=t3MxfqSALI2iH4b2]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle d’acide.</p>",
           "activities": {
             "Exhale Acid": {
@@ -248,7 +248,7 @@
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
-          "description": "<p>Le dragon crache de la foudre sous forme d'une ligne de 27 m de long pour 1,50 m de large. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit 66 ([[/damage]]{12d10}) dégâts de foudre en cas d'échec, la moitié en cas de réussite.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=GSQtl90Opu6WzZk4]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Souffle de foudre.</p>",
           "activities": {
             "Exhale Lightning": {
@@ -905,7 +905,7 @@
       "items": {
         "Air Form": {
           "name": "Corps d'air",
-          "description": "<p>L’élémentaire peut entrer dans l’espace d’une créature hostile et s’y arrêter. Il peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut entrer dans l'espace d'une créature hostile et s'y arrêter. Il peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>",
           "effects": {
             "Air Form": {
               "name": "Corps d'air"
@@ -2600,7 +2600,7 @@
       "items": {
         "Amorphous": {
           "name": "Informe",
-          "description": "<p>Le pouding peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>"
         },
         "Corrosive Form": {
           "name": "Masse corrosive",
@@ -2740,7 +2740,7 @@
         },
         "Devil Sight": {
           "name": "Vision du diable",
-          "description": "<p>Les ténèbres magiques ne gênent en rien la vision dans le noir du diable.</p>"
+          "description": "<p>Les &reference[darkness]{ténèbres} magiques ne gênent en rien la vision dans le noir du [[lookup @name lowercase]]{monstre}.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -2879,7 +2879,7 @@
         },
         "Standing Leap": {
           "name": "Saut sans élan",
-          "description": "<p>Les sauts en longueur de la bulette peuvent atteindre 9 m et ses sauts en hauteur 4,50 m, avec ou sans élan.</p>"
+          "description": "<p>Les &reference[long jump]{sauts en longueur} de la [[lookup @name lowercase]]{monstre} peuvent atteindre 9 m et ses &reference[high jump]{sauts en hauteur} 4,50 m, avec ou sans élan.</p>"
         },
         "Deadly leap": {
           "name": "Saut meurtrier",
@@ -3088,7 +3088,7 @@
         },
         "Berserk": {
           "name": "Folie furieuse",
-          "description": "<p>Chaque fois que le golem commence son tour avec 60 points de vie ou moins, lancez un [[/r d6]]. Sur un résultat de 6, il devient fou. À chacun de ses tours tant qu'il est dans cet état, le golem attaque la créature la plus proche qu'il voit. Si aucune créature n'est assez proche pour qu'il puisse se déplacer et l'attaquer, le golem s'en prend à un objet, de préférence plus petit que lui. Une fois le golem fou furieux, il continue d'agir ainsi jusqu'à ce qu'il soit détruit ou qu'il ait récupéré tous ses points de vie.</p>",
+          "description": "<p>Chaque fois que le [[lookup @name lowercase]]{monstre} commence son tour avec 60 points de vie ou moins, lancez un [[/r d6]]. Sur un résultat de 6, il devient fou. À chacun de ses tours tant qu'il est dans cet état, le [[lookup @name lowercase]]{monstre} attaque la créature la plus proche qu'il voit. Si aucune créature n'est assez proche pour qu'il puisse se déplacer et l'attaquer, le [[lookup @name lowercase]]{monstre} s'en prend à un objet, de préférence plus petit que lui. Une fois le [[lookup @name lowercase]]{monstre} fou furieux, il continue d'agir ainsi jusqu'à ce qu'il soit détruit ou qu'il ait récupéré tous ses points de vie.</p>",
           "chat": "<p>[[lookup @name]] utilise Folie furieuse.</p>",
           "activities": {
             "Go Berserk": {
@@ -4269,7 +4269,7 @@
         },
         "Invisibility": {
           "name": "Invisibilité",
-          "description": "<p>Pendant un maximum de 1 heure, le [[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque, qu’il lance un sort, qu’il recoure à Agrandissement ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par le [[lookup @name]] est invisible.</p>",
+          "description": "<p>Pendant un maximum de [[lookup @labels.duration activity=1wj57M6m7yuqQhtN]], le [[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible} jusqu'à ce qu'il attaque, qu'il lance un sort, qu'il recoure à Agrandissement ou que sa concentration soit rompue (comme pour un sort). Tout l'équipement porté par le [[lookup @name lowercase]]{monstre} est invisible.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Invisibilité.</p>",
           "activities": {
             "Become Invisible": {
@@ -4292,7 +4292,7 @@
       "items": {
         "Death Burst": {
           "name": "Explosion finale",
-          "description": "<p>Lorsque le méphite meurt, il explose dans une déflagration de poussière. Chaque créature dans un rayon de 1,50 m de lui doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} pendant 1 minute. Une créature aveuglée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "description": "<p>Lorsque le [[lookup @name lowercase]]{monstre} meurt, il explose dans une déflagration de poussière. Chaque créature dans un rayon de [[lookup @target.template.size activity=xWXsJ4iFhpxEMroK]] [[lookup @target.template.units activity=xWXsJ4iFhpxEMroK]] de lui doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} pendant [[lookup @labels.duration activity=xWXsJ4iFhpxEMroK]]. Une créature aveuglée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Explosion finale.</p>"
         },
         "Innate Spellcasting": {
@@ -4601,7 +4601,7 @@
       "items": {
         "Fire Form": {
           "name": "Corps de feu",
-          "description": "<p>L'élémentaire peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir se faufiler. Une créature qui touche l'élémentaire, que ce soit directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit 5 ([[/damage]]{1d10}) dégâts de feu. De plus, l'élémentaire peut entrer dans l'espace d'une créature hostile et s'y arrêter. La première fois d'un tour qu'il entre dans l'espace d'une créature, celle-ci subit 5 ([[/damage]]{1d10}) dégâts de feu et s'embrase ; tant que personne n'a consacré une action à étouffer les flammes, la cible subit 5 ([[/damage]]{1d10}) dégâts de feu au début de chacun de ses tours.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}. Une créature qui touche l'[[lookup @name lowercase]]{monstre}, que ce soit directement ou avec une attaque de corps à corps alors qu'elle se trouve à [[lookup @labels.description.range activity=3xh7g2u2KGcjZSe4]] ou moins de lui, subit [[/damage average]]. De plus, l'[[lookup @name lowercase]]{monstre} peut entrer dans l'espace d'une créature hostile et s'y arrêter. La première fois d'un tour qu'il entre dans l'espace d'une créature, celle-ci subit [[/damage average]] et s'embrase ; tant que personne n'a consacré une action à étouffer les flammes, la cible subit [[/damage average]] au début de chacun de ses tours.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Corps de feu.</p>",
           "effects": {
             "Fire Form": {
@@ -4758,7 +4758,7 @@
         },
         "Standing Leap": {
           "name": "Saut sans élan",
-          "description": "<p>Les sauts en longueur de la [[lookup @name]] peuvent atteindre 3 m et ses sauts en hauteur 1,50 m, avec ou sans élan.</p>"
+          "description": "<p>Les &reference[long jump]{sauts en longueur} de la [[lookup @name lowercase]]{monstre} peuvent atteindre 3 m et ses &reference[high jump]{sauts en hauteur} 1,50 m, avec ou sans élan.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -4856,7 +4856,7 @@
       "items": {
         "Stench": {
           "name": "Puanteur",
-          "description": "<p>Toute créature qui commence son tour dans un rayon de 1,50 m de la blême doit réussir un jet de sauvegarde de Constitution DD 10 sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'au début de son tour suivant. Si le jet de sauvegarde est réussi, elle est immunisée contre la Puanteur de la blême pendant 24 heures.</p>",
+          "description": "<p>Toute créature qui commence son tour dans un rayon de [[lookup @target.template.size activity=6e3MrenfD7Q2nBLE]] [[lookup @target.template.units activity=6e3MrenfD7Q2nBLE]] de la [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonnée} jusqu'au début de son tour suivant. Si le jet de sauvegarde est réussi, elle est immunisée contre la [[lookup @item.name]] de la [[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
           "chat": "<p>La [[lookup @name]] utilise Puanteur.</p>"
         },
         "Turn Defiance": {
@@ -5195,7 +5195,7 @@
         },
         "Standing Leap": {
           "name": "Saut sans élan",
-          "description": "<p>Les sauts en longueur de la grenouille peuvent atteindre 6 m et ses sauts en hauteur 3 m, avec ou sans élan.</p>"
+          "description": "<p>Les &reference[long jump]{sauts en longueur} de la [[lookup @name lowercase]]{monstre} peuvent atteindre 6 m et ses &reference[high jump]{sauts en hauteur} 3 m, avec ou sans élan.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -5492,7 +5492,7 @@
         },
         "Standing Leap": {
           "name": "Saut sans élan",
-          "description": "<p>Les sauts en longueur du crapaud peuvent atteindre 6 m et ses sauts en hauteur 3 m, avec ou sans élan.</p>"
+          "description": "<p>Les &reference[long jump]{sauts en longueur} du [[lookup @name lowercase]]{monstre} peuvent atteindre 6 m et ses &reference[high jump]{sauts en hauteur} 3 m, avec ou sans élan.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -5639,7 +5639,7 @@
         },
         "Blinding Spittle": {
           "name": "Crachat aveuglant",
-          "description": "<p>Le babélien expectore un amas chimique en un point qu'il voit dans un rayon de 4,50 m. L'amas explose à l'impact dans un éclat de lumière aveuglante. Chaque créature située dans un rayon de 1,50 m de l'éclat doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[blinded]{aveuglée} jusqu'à la fin du tour suivant du babélien.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} expectore un amas chimique en un point qu'il voit dans un rayon de [[lookup @labels.description.range activity=lIu1LNYAMT8FLBjR]]. L'amas explose à l'impact dans un éclat de lumière aveuglante. Chaque créature située dans un rayon de 1,50 m de l'éclat doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[blinded apply=false]{aveuglée} jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Crachat aveuglant.</p>",
           "effects": {
             "Blinding Spittle": {
@@ -5909,7 +5909,7 @@
       "items": {
         "Amorphous": {
           "name": "Informe",
-          "description": "<p>La vase peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>"
         },
         "Corrode Metal": {
           "name": "Corrosion du métal",
@@ -5992,7 +5992,7 @@
         },
         "Invisible Passage": {
           "name": "Passage dans l'invisible",
-          "description": "<p>La guenaude devient magiquement &Reference[invisible] jusqu’à ce qu’elle attaque ou que sa concentration soit rompue (comme pour un sort). Tant qu’elle est invisible, elle ne laisse aucune trace physique de son passage, si bien que seule la magie peut la pister. Tout l’équipement porté par elle est invisible.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible} jusqu'à ce qu'elle attaque ou que sa concentration soit rompue (comme pour un sort). Tant qu'elle est invisible, elle ne laisse aucune trace physique de son passage, si bien que seule la magie peut la pister. Tout l'équipement porté par elle est invisible.</p>",
           "chat": "<p>La [[lookup @name]] utilise Passage dans l’invisible.</p>",
           "activities": {
             "Become Invisible": {
@@ -6472,7 +6472,7 @@
         },
         "Stench": {
           "name": "Puanteur",
-          "description": "<p>Une créature qui commence son tour dans un rayon de 3 m de l'hezrou doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'au début de son tour suivant. Si le jet de sauvegarde est réussi, elle est immunisée contre la puanteur de l'hezrou pendant 24 heures.</p>",
+          "description": "<p>Une créature qui commence son tour dans un rayon de [[lookup @labels.description.range activity=6R3a5EK9mkBX3oNR]] de l'[[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} jusqu'au début de son tour suivant. Si le jet de sauvegarde est réussi, elle est immunisée contre la [[lookup @item.name lowercase]] de l'[[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Puanteur.</p>",
           "activities": {
             "Poison Save": {
@@ -6853,7 +6853,7 @@
         },
         "Invisibility": {
           "name": "Invisibilité",
-          "description": "<p>Le traqueur est &Reference[invisible].</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est &reference[invisible apply=false]{invisible}.</p>",
           "effects": {
             "Invisibility": {
               "name": "Invisibilité"
@@ -7398,7 +7398,7 @@
         },
         "Running Leap": {
           "name": "Saut avec élan",
-          "description": "<p>Avec une prise d’élan de 3 m, le [[lookup @name]] peut franchir jusqu’à 7,50 m d’un saut en longueur.</p>"
+          "description": "<p>Avec une prise d'élan de 3 m, le [[lookup @name lowercase]]{monstre} peut franchir jusqu'à 7,50 m d'un &reference[long jump]{saut en longueur}.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -7982,7 +7982,7 @@
       "items": {
         "Blinding Dust": {
           "name": "Poussière aveuglante",
-          "description": "<p>Un tourbillon aveuglant de grains de sable et de poussière enveloppe magiquement la momie auguste. Chaque créature située dans un rayon de 1,50 m de la momie auguste doit réussir un jet de sauvegarde de Constitution DD 16 sous peine d'être aveuglée jusqu'à la fin du tour suivant du mort-vivant.</p>",
+          "description": "<p>Un tourbillon aveuglant de grains de sable et de poussière enveloppe magiquement la [[lookup @name lowercase]]{monstre}. Chaque créature située dans un rayon de [[lookup @target.template.size activity=zlgs7Urb6F9nnlIA]] [[lookup @target.template.units activity=zlgs7Urb6F9nnlIA]] de la [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[blinded]{aveuglée} jusqu'à la fin du tour suivant du mort-vivant.</p>",
           "chat": "<p>La [[lookup @name]] utilise Poussière aveuglante.</p>"
         },
         "Blasphemous Word": {
@@ -8271,7 +8271,7 @@
         },
         "Amorphous": {
           "name": "Informe",
-          "description": "<p>La gelée peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>"
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -9452,7 +9452,7 @@
         },
         "Shark Telepathy": {
           "name": "Télépathie avec les requins",
-          "description": "<p>Le sahuagin peut magiquement donner des instructions à tout requin dans un rayon de 36 m, par une forme limitée de télépathie.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut magiquement donner des instructions à tout requin dans un rayon de 36 m, par une forme limitée de &reference[telepathy]{télépathie}.</p>"
         }
       },
       "subtype": "Sahuagin",
@@ -9611,7 +9611,7 @@
       "items": {
         "Amorphous": {
           "name": "Informe",
-          "description": "<p>L’[[lookup @name]] peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>"
         },
         "Shadow Stealth": {
           "name": "Discrétion dans les ombres",
@@ -10051,7 +10051,7 @@
         },
         "Invisibility": {
           "name": "Invisibilité",
-          "description": "<p>L’[[lookup @name]] devient magiquement &Reference[invisible] jusqu’à ce qu’il attaque ou lance un sort, ou que sa concentration soit rompue (comme pour un sort). Tout l’équipement porté par l’[[lookup @name]] est invisible.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} devient magiquement &reference[invisible]{invisible} jusqu'à ce qu'il attaque ou lance un sort, ou que sa concentration soit rompue (comme pour un sort). Tout l'équipement porté par l'[[lookup @name lowercase]]{monstre} est invisible.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Invisibilité.</p>",
           "activities": {
             "Become Invisible": {
@@ -10989,7 +10989,7 @@
       "items": {
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>Si le vampire n'est pas exposé aux rayons du soleil ni dans l'eau vive, il peut consacrer son action à se transformer en chauve-souris de taille TP ou en nuage de brume de taille M, ou à reprendre sa forme véritable.</p><p>Tant qu'il est sous forme de chauve-souris, le vampire ne peut pas parler, sa vitesse au sol est de 1,50 m et il dispose d'une vitesse de vol de 9 m. Son profil, outre sa catégorie de taille et sa vitesse, ne change pas. Tous les vêtements qu'il porte et les accessoires qui le parent se transforment avec lui, mais pas ce qu'il transporte. S'il meurt, il reprend sa forme véritable.</p><p>Tant qu'il est sous forme de brume, le vampire ne peut entreprendre aucune action, ni parler, ni manipuler d'objets. Il ne pèse rien, dispose d'une vitesse de vol de 6 m avec le vol stationnaire, peut pénétrer dans l'espace d'une créature hostile et même s'y arrêter. De plus, la brume peut se glisser dans tout espace suffisant pour laisser circuler l'air, sans devoir se faufiler, mais il ne peut pas traverser l'eau. Il est avantagé aux jets de sauvegarde de Force, Dextérité et Constitution, et immunisé contre tous les dégâts non magiques, en dehors de ceux que lui infligent les rayons du soleil.</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} n'est pas exposé aux rayons du soleil ni dans l'eau vive, il peut consacrer son action à se transformer en chauve-souris de taille TP ou en nuage de brume de taille M, ou à reprendre sa forme véritable.</p><p>Tant qu'il est sous forme de chauve-souris, le [[lookup @name lowercase]]{monstre} ne peut pas parler, sa vitesse au sol est de 1,50 m et il dispose d'une vitesse de vol de 9 m. Son profil, outre sa catégorie de taille et sa vitesse, ne change pas. Tous les vêtements qu'il porte et les accessoires qui le parent se transforment avec lui, mais pas ce qu'il transporte. S'il meurt, il reprend sa forme véritable.</p><p>Tant qu'il est sous forme de brume, le [[lookup @name lowercase]]{monstre} ne peut entreprendre aucune action, ni parler, ni manipuler d'objets. Il ne pèse rien, dispose d'une vitesse de vol de 6 m avec le vol stationnaire, peut pénétrer dans l'espace d'une créature hostile et même s'y arrêter. De plus, la brume peut se glisser dans tout espace suffisant pour laisser circuler l'air, sans devoir &reference[squeezing]{se faufiler}, mais il ne peut pas traverser l'eau. Il est avantagé aux jets de sauvegarde de Force, Dextérité et Constitution, et immunisé contre tous les dégâts non magiques, en dehors de ceux que lui infligent les rayons du soleil.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
           "effects": {
             "Bat": {
@@ -11262,7 +11262,7 @@
         },
         "Water Form": {
           "name": "Corps d’eau",
-          "description": "<p>L’élémentaire peut entrer dans l’espace d’une créature hostile et s’y arrêter. Il peut se déplacer dans un espace étroit d’une largeur minimale de 2,5 cm sans même devoir se faufiler.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut entrer dans l’espace d'une créature hostile et s'y arrêter. Il peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>",
           "effects": {
             "Water Form": {
               "name": "Corps d'eau"
