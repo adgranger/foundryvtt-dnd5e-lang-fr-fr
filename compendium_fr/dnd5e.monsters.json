@@ -2708,7 +2708,7 @@
         },
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si le sanglier se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Défense au même tour, il lui inflige 3 ([[/damage]]{1d6}) dégâts tranchants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.lZR4lhNmYSf89s4Q.Item.ypnf9maxKh66ucMe]{Défense} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
         },
         "Relentless": {
@@ -2977,7 +2977,7 @@
         },
         "Animate Chains": {
           "name": "Chaînes animées",
-          "description": "<p>Un maximum de quatre chaînes visibles du diable dans un rayon de 18 m se dotent magiquement de barbelures tranchantes et s’animent sous le contrôle du diable, à condition qu’elles ne soient portées par personne. Chacune de ces chaînes animées est un objet doté d’une CA de 20, de 20 points de vie, de la résistance aux dégâts perforants et de l’immunité contre les dégâts psychiques et de tonnerre. Lorsque le diable recourt à Attaques multiples à son tour, il peut se servir de chacune de ces chaînes animées pour effectuer une attaque de Chaîne supplémentaire. Une chaîne animée peut agripper individuellement une créature, mais ne peut pas effectuer d’attaques quand elle agrippe. Une chaîne animée redevient inerte si elle tombe à 0 point de vie, ou si le diable est &Reference[incapacitated] ou mort.</p>",
+          "description": "<p>Un maximum de quatre chaînes visibles du [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=kRPVij49Rpa8sFnz]] se dotent magiquement de barbelures tranchantes et s'animent sous le contrôle du [[lookup @name lowercase]]{monstre}, à condition qu'elles ne soient portées par personne. Chacune de ces chaînes animées est un objet doté d'une CA de 20, de 20 points de vie, de la résistance aux dégâts perforants et de l'immunité contre les dégâts psychiques et de tonnerre. Lorsque le [[lookup @name lowercase]]{monstre} recourt à @UUID[Compendium.dnd5e.monsters.Actor.KtM6IV9I5l1MWUDk.Item.AGKUD82KJZaMKVRt]{Attaques multiples} à son tour, il peut se servir de chacune de ces chaînes animées pour effectuer une attaque de @UUID[Compendium.dnd5e.monsters.Actor.KtM6IV9I5l1MWUDk.Item.9SWi4zPVGsMD5l2Y]{Chaîne} supplémentaire. Une chaîne animée peut agripper individuellement une créature, mais ne peut pas effectuer d'attaques quand elle agrippe. Une chaîne animée redevient inerte si elle tombe à 0 point de vie, ou si le [[lookup @name lowercase]]{monstre} est &reference[incapacitated apply=false]{neutralisé} ou mort.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Chaînes animées.</p>",
           "activities": {
             "Animate Chains": {
@@ -3057,7 +3057,7 @@
         },
         "Sense Magic": {
           "name": "Perception de la magie",
-          "description": "<p>Le cthuul perçoit la magie dans un rayon de 36 m, à volonté. Ce trait fonctionne pour le reste comme le sort détection de la magie, même s'il n'est pas lui-même magique.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} perçoit la magie dans un rayon de 36 m, à volonté. Ce trait fonctionne pour le reste comme le sort @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{détection de la magie}, même s'il n'est pas lui-même magique.</p>"
         }
       },
       "languages": "comprend le profond, mais ne parle pas",
@@ -3074,7 +3074,7 @@
         },
         "Haste": {
           "name": "Hâte",
-          "description": "<p>Jusqu'à la fin de son tour suivant, le golem reçoit magiquement un bonus de +2 en CA, est avantagé aux jets de sauvegarde de Dextérité et peut effectuer son attaque de Coup par une action bonus.</p>",
+          "description": "<p>Jusqu'à la fin de son tour suivant, le [[lookup @name lowercase]]{monstre} reçoit magiquement un bonus de +2 en CA, est avantagé aux jets de sauvegarde de Dextérité et peut effectuer son attaque de @UUID[Compendium.dnd5e.monsters.Actor.YOqhbf8WsX0jH9Fu.Item.vEEJei0CNaNbfQ2w]{Coup} par une action bonus.</p>",
           "chat": "<p>[[lookup @name]] utilise Hâte.</p>",
           "effects": {
             "Hastened": {
@@ -3595,7 +3595,7 @@
         },
         "Two-Headed": {
           "name": "Bicéphale",
-          "description": "<p>Le chien est avantagé aux tests de Sagesse (Perception) et aux jets de sauvegarde contre les états assourdi, aveuglé, charmé, effrayé, étourdi et inconscient.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) et aux jets de sauvegarde contre les états &reference[deafened apply=false]{assourdi}, &reference[blinded apply=false]{aveuglé}, &reference[charmed apply=false]{charmé}, &reference[frightened apply=false]{effrayé}, &amp;reference[stunned apply=false]{étourdi} et &amp;reference[unconscious apply=false]{inconscient}.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -4436,7 +4436,7 @@
       "items": {
         "Trampling Charge": {
           "name": "Charge écrasante",
-          "description": "<p>Si l'éléphant se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de Coup de défense au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, l'éléphant peut effectuer contre elle une attaque de Piétinement par une action bonus.</p>",
+          "description": "<p>Si l'[[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.jLPhaBnMtAbB5dp1.Item.r6mBkCtL5j6Y6sBr]{Coup de défense} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, l'[[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .ZHBbc5K4n6sU17rC]]{Piétinement} par une action bonus.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Charge écrasante.</p>"
         },
         "Gore": {
@@ -4572,7 +4572,7 @@
       "items": {
         "Two Heads": {
           "name": "Bicéphale",
-          "description": "<p>L'ettin est avantagé aux tests de Sagesse (Perception) et aux jets de sauvegarde contre les états assourdi, aveuglé, charmé, effrayé, étourdi et inconscient.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) et aux jets de sauvegarde contre les états &amp;reference[deafened apply=false]{assourdi}, &reference[blinded apply=false]{aveuglé}, &reference[charmed apply=false]{charmé}, &reference[frightened apply=false]{effrayé}, &reference[stunned apply=false]{étourdi} et &amp;reference[unconscious apply=false]{inconscient}.</p>"
         },
         "Wakeful": {
           "name": "Sommeil léger",
@@ -4733,7 +4733,7 @@
       "items": {
         "Antimagic Susceptibility": {
           "name": "Vulnérabilité à l'antimagie",
-          "description": "<p>L'épée est &Reference[incapacitated]{neutralisée} tant qu'elle se trouve dans un <em>champ antimagie</em>. Si elle est ciblée par <em>dissipation de la magie</em>, l'épée doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &Reference[unconscious]{inconsciente} pendant 1 minute.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est &reference[incapacitated apply=false]{neutralisée} tant qu'elle se trouve dans un <em>@UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{champ antimagie}</em>. Si elle est ciblée par <em>@UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie}</em>, l'[[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &reference[unconscious]{inconsciente} pendant 1 minute.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Vulnérabilité à l’antimagie.</p>"
         },
         "False Appearance": {
@@ -4861,7 +4861,7 @@
         },
         "Turn Defiance": {
           "name": "Mépris du renvoi",
-          "description": "<p>La blême et toute goule dans un rayon de 9 m d'elle sont avantagées aux jets de sauvegarde contre les effets qui renvoient les morts-vivants.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} et toute @UUID[Compendium.dnd5e.monsters.Actor.OBujQLLPSmlJiZnL]{goule} dans un rayon de 9 m d'elle sont avantagées aux jets de sauvegarde contre les effets qui renvoient les morts-vivants.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -4910,12 +4910,12 @@
         },
         "Horrifying Visage": {
           "name": "Visage terrifiant",
-          "description": "<p>Toute créature non morte-vivante située dans un rayon de 18 m du fantôme, si elle voit celui-ci, doit réussir un jet de sauvegarde de Sagesse DD 13 sous peine d'être effrayée pendant 1 minute. Si le JS est raté d'au moins 5, la cible vieillit également de 1d4 x 10 ans.</p><p>Une cible effrayée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'état effrayé sur elle-même en cas de réussite. Si la cible réussit la sauvegarde ou que l'effet prend fin sur elle, elle est immunisée contre le Visage terrifiant de ce fantôme pendant 24 heures. Le vieillissement peut être inversé par le sort restauration suprême, à condition qu'il soit appliqué dans les 24 heures.</p>",
+          "description": "<p>Toute créature non morte-vivante située dans un rayon de [[lookup @target.template.size activity=LYjmuZ7QyGDPVBoT]] [[lookup @target.template.units activity=LYjmuZ7QyGDPVBoT]] du [[lookup @name lowercase]]{monstre}, si elle voit celui-ci, doit réussir un jet de sauvegarde de Sagesse DD 13 sous peine d'être &reference[frightened]{effrayée} pendant [[lookup @labels.duration activity=LYjmuZ7QyGDPVBoT]]. Si le JS est raté d'au moins 5, la cible vieillit également de [[/r 1d4 * 10 #Années de vieillissement.]]{1d4 x 10} ans.</p><p>Une cible effrayée peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'état effrayé sur elle-même en cas de réussite. Si la cible réussit la sauvegarde ou que l'effet prend fin sur elle, elle est immunisée contre le [[lookup @item.name]] de ce [[lookup @name lowercase]]{monstre} pendant 24 heures. Le vieillissement peut être inversé par le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême}, à condition qu'il soit appliqué dans les 24 heures.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Visage terrifiant.</p>"
         },
         "Possession": {
           "name": "Possession",
-          "description": "<p>Un humanoïde que le fantôme voit dans un rayon de 1,50 m doit réussir un jet de sauvegarde de Charisme DD 13 sous peine d'être possédé par le fantôme ; ce dernier disparaît alors et la cible, neutralisée, perd le contrôle de son corps. C'est désormais le fantôme qui en a le contrôle, mais la cible reste consciente.</p><p>Les attaques, sorts et autres effets ne peuvent pas cibler le fantôme, en dehors de ceux qui renvoient les morts-vivants. Il conserve son alignement, ses valeurs d'Intelligence, de Sagesse et de Charisme, et son immunité contre les états charmé et effrayé. Pour le reste, il reprend le profil de jeu de la cible possédée mais n'a accès ni à son savoir, ni à ses aptitudes de classe, ni à ses maîtrises.</p><p>La possession persiste jusqu'à ce que le corps tombe à 0 point de vie, que le fantôme y mette un terme par une action bonus ou qu'il soit renvoyé (ou encore chassé du corps par un effet tel que dissipation du mal et du bien). Quand la possession prend fin, le fantôme réapparaît en un espace inoccupé dans un rayon de 1,50 m du corps. Si elle réussit le jet de sauvegarde ou quand la possession prend fin, la cible devient immunisée contre la possession de ce fantôme pendant 24 heures.</p>",
+          "description": "<p>Un humanoïde que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @labels.description.range activity=WcBEt039Ueelll14]] doit réussir un jet de sauvegarde de [[/save activity=WcBEt039Ueelll14]] sous peine d'être possédé par le [[lookup @name lowercase]]{monstre} ; ce dernier disparaît alors et la cible, &reference[incapacitated]{neutralisée}, perd le contrôle de son corps. C'est désormais le [[lookup @name lowercase]]{monstre} qui en a le contrôle, mais la cible reste consciente.</p><p>Les attaques, sorts et autres effets ne peuvent pas cibler le [[lookup @name lowercase]]{monstre}, en dehors de ceux qui renvoient les morts-vivants. Il conserve son alignement, ses valeurs d'Intelligence, de Sagesse et de Charisme, et son immunité contre les états &reference[charmed apply=false]{charmé} et &reference[frightened apply=false]{effrayé}. Pour le reste, il reprend le profil de jeu de la cible possédée mais n'a accès ni à son savoir, ni à ses aptitudes de classe, ni à ses maîtrises.</p><p>La possession persiste jusqu'à ce que le corps tombe à 0 point de vie, que le [[lookup @name lowercase]]{monstre} y mette un terme par une action bonus ou qu'il soit renvoyé (ou encore chassé du corps par un effet tel que @UUID[Compendium.dnd5e.spells.Item.TkJ8Wtg1L7TZtspm]{dissipation du mal et du bien}). Quand la possession prend fin, le [[lookup @name lowercase]]{monstre} réapparaît en un espace inoccupé dans un rayon de 1,50 m du corps. Si elle réussit le jet de sauvegarde ou quand la possession prend fin, la cible devient immunisée contre la [[lookup @item.name lowercase]] de ce [[lookup @name lowercase]]{monstre} pendant 24 heures.</p><section id=\"secret-pRRBgjuEtpd4ZBdt\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'effet actif appliqué par l'activité <em><strong>« Posséder une créature »</strong></em> fait correspondre les caractéristiques mentales de la cible à celles du [[lookup @name lowercase]]{monstre} et lui confère une immunité contre les états charmé et effrayé, afin de représenter la possession de la cible par le [[lookup @name lowercase]]{monstre}.</p></section>",
           "chat": "<p>Le [[lookup @name]] utilise Possession.</p>",
           "activities": {
             "Possess Creature": {
@@ -5026,7 +5026,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si le sanglier se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Défense au même tour, il lui inflige 7 ([[/damage]]{2d6}) dégâts tranchants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.SsuCaF2fIEoDdFA3.Item.zHwaxxXcDz8AE8Bj]{Défense} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
         },
         "Relentless": {
@@ -5413,7 +5413,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si l'hippocampe se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de bélier au même tour, il lui inflige 7 ([[/damage]]{2d6}) dégâts contondants supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "description": "<p>Si l'[[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.c9XDGsTJRy9HUaxQ.Item.tTZCmbeeSHXXFZGJ]{Coup de bélier} au même tour, il lui inflige [[/damage average activity=fQJO3rGN8hBWzvpN]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=fQJO3rGN8hBWzvpN]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Charge.</p>"
         },
         "Water Breathing": {
@@ -5882,7 +5882,7 @@
       "items": {
         "Trampling Charge": {
           "name": "Charge écrasante",
-          "description": "<p>Si la gorgone se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de Coup de corne au même tour, la cible doit réussir un jet de sauvegarde de Force DD 16 sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, la gorgone peut effectuer contre elle une attaque de Sabots par une action bonus.</p>",
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.nZthq6WHLhcdu3te.Item.7DSbBzpS1e9lYxZx]{Coup de corne} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si la cible est à terre, la [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .O8oahxePfpHFYohz]]{Sabots} par une action bonus.</p>",
           "chat": "<p>La [[lookup @name]] utilise Charge écrasante.</p>"
         },
         "Gore": {
@@ -5897,7 +5897,7 @@
         },
         "Petrifying Breath": {
           "name": "Souffle pétrifiant",
-          "description": "<p>La gorgone exhale des vapeurs pétrifiantes sous forme d'un cône de 9 m. Chaque créature prise dans la zone effectue un jet de sauvegarde de Constitution DD 13.</p><p>En cas d'échec, la cible est entravée et commence à se transformer en pierre. Une cible ainsi entravée doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin sur elle. En cas d'échec, la créature est pétrifiée jusqu'à ce que le sort restauration suprême ou une magie comparable la libère.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} exhale des vapeurs pétrifiantes sous forme d'un [[lookup lowercase @labels.description.template activity=I95hdnCSX03wF7Er]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]].</p><p>En cas d'échec, la cible est &reference[restrained]{entravée} et commence à se transformer en pierre. Une cible ainsi entravée doit réitérer le jet de sauvegarde à la fin de son tour suivant. En cas de réussite, l'effet prend fin sur elle. En cas d'échec, la créature est &reference[petrified]{pétrifiée} jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie comparable la libère.</p>",
           "chat": "<p>La [[lookup @name]] utilise Souffle pétrifiant.</p>"
         }
       },
@@ -5913,7 +5913,7 @@
         },
         "Corrode Metal": {
           "name": "Corrosion du métal",
-          "description": "<p>Toute arme non magique en métal qui touche la vase lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p><p>Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent la vase dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>La vase peut ronger le métal non magique, au rythme de 5 cm d'épaisseur par round.</p>",
+          "description": "<p>Toute arme non magique en métal qui touche la [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p><p>Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent la [[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>La [[lookup @name lowercase]]{monstre} peut ronger le métal non magique, au rythme de 5 cm d'épaisseur par round.</p><section id=\"secret-3w7p9RfuLKPgT6FQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.uSay5J2sf9zXsabi.ActiveEffect.Khdj386syEL9V9OA]{Arme corrodée} à une arme, ce qui lui confère un malus cumulatif de -1 aux jets de dégâts à chaque fois que l'enchantement est appliqué.</p></section>",
           "chat": "<p>La [[lookup @name]] utilise Corrosion du métal (vase).</p>",
           "effects": {
             "Corroded Weapon": {
@@ -6125,7 +6125,7 @@
       "items": {
         "Rejuvenation": {
           "name": "Reconstitution",
-          "description": "<p>S'il meurt, le naga revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort souhait peut empêcher ce trait de fonctionner.</p>",
+          "description": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{souhait} peut empêcher ce trait de fonctionner.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Reconstitution.</p>"
         },
         "Spellcasting": {
@@ -6663,8 +6663,13 @@
         },
         "Multiple Heads": {
           "name": "Têtes multiples",
-          "description": "<p>L'hydre est dotée de cinq têtes. Tant qu'elle dispose de plus d'une tête, elle est avantagée aux jets de sauvegarde contre les états assourdi, aveuglé, charmé, effrayé, étourdi et inconscient.</p><p>Chaque fois que l'hydre subit au moins 25 dégâts dans un même tour, l'une de ses cinq têtes meurt. Si toutes ses têtes sont détruites, l'hydre meurt.</p><p>À la fin de son tour, deux têtes lui repoussent par tête morte depuis son tour précédent, sauf si elle a subi des dégâts de feu depuis. L'hydre récupère 10 points de vie pour chaque tête qui repousse ainsi.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Têtes multiples.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est dotée de cinq têtes. Tant qu'elle dispose de plus d'une tête, elle est avantagée aux jets de sauvegarde contre les états &reference[deafened apply=false]{assourdi}, &reference[blinded apply=false]{aveuglé}, &reference[charmed apply=false]{charmé}, &reference[frightened apply=false]{effrayé}, &amp;reference[stunned apply=false]{étourdi} et &reference[unconscious apply=false]{inconscient}.</p><p>Chaque fois que l'[[lookup @name lowercase]]{monstre} subit au moins 25 dégâts dans un même tour, l'une de ses cinq têtes meurt. Si toutes ses têtes sont détruites, l'[[lookup @name lowercase]]{monstre} meurt.</p><p>À la fin de son tour, deux têtes lui repoussent par tête morte depuis son tour précédent, sauf si elle a subi des dégâts de feu depuis. L'[[lookup @name lowercase]]{monstre} récupère [[/healing]] pour chaque tête qui repousse ainsi.</p><section id=\"secret-fb7Nmscdc6QqsOXy\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les têtes de l'[[lookup @name lowercase]]{monstre} peuvent être suivies via les effets actifs @UUID[Compendium.dnd5e.monsters.Actor.K4vsSlHqbBAHUDHY.Item.fsAeJDaI0a6sBeFk.ActiveEffect.jALTzc0GXXaDjFNQ]{Tête d'hydre} qui lui sont appliqués. Appliquez ou retirez cet effet chaque fois que l'[[lookup @name lowercase]]{monstre} fait repousser ou perd des têtes.</p></section>",
+          "chat": "<p>L'[[lookup @name]] utilise Têtes multiples.</p>",
+          "effects": {
+            "Hydra Head": {
+              "name": "Tête d'hydre"
+            }
+          }
         },
         "Reactive Heads": {
           "name": "Têtes réactives",
@@ -6685,7 +6690,12 @@
         }
       },
       "habitat": "Marécage",
-      "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
+      "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
+      "effects": {
+        "Hydra Head": {
+          "name": "Tête d'hydre"
+        }
+      }
     },
     "Hyena": {
       "name": "Hyène",
@@ -7170,7 +7180,7 @@
       "items": {
         "Hellish Rejuvenation": {
           "name": "Reconstitution infernale",
-          "description": "<p>Un lémure qui meurt dans les Neuf Enfers revient à la vie avec tous ses points de vie en [[/r 1d10]] jours, sauf s'il a été tué par une créature d'alignement bon affectée par le sort bénédiction ou si ses restes sont aspergés d'eau bénite.</p>",
+          "description": "<p>Un [[lookup @name lowercase]]{monstre} qui meurt dans les Neuf Enfers revient à la vie avec tous ses points de vie en [[/r 1d10 #Jours jusqu'à la résurrection du lémure.]] jours, sauf s'il a été tué par une créature d'alignement bon affectée par le sort @UUID[Compendium.dnd5e.spells.Item.8dzaICjGy6mTUaUr]{bénédiction} ou si ses restes sont aspergés d'@UUID[Compendium.dnd5e.items.Item.WPWszFTGzmdIuDRJ]{eau bénite}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Reconstitution infernale.</p>"
         },
         "Fist": {
@@ -7632,7 +7642,7 @@
       "items": {
         "Trampling Charge": {
           "name": "Charge écrasante",
-          "description": "<p>Si le mammouth se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de Coup de défense au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le mammouth peut effectuer contre elle une attaque de Piétinement par une action bonus.</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.MiYRAIHwm9It1in8.Item.S7i3GTdoo6tyc2wL]{Coup de défense} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .Hx541foatcQiMSZj]]{Piétinement} par une action bonus.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>"
         },
         "Gore": {
@@ -7749,7 +7759,7 @@
       "items": {
         "Petrifying Gaze": {
           "name": "Regard pétrifiant",
-          "description": "<p>Lorsqu'une créature qui voit les yeux de la méduse commence son tour dans un rayon de 9 m du monstre, ce dernier peut l'obliger à effectuer un jet de sauvegarde de Constitution DD 14, à condition de la voir et de ne pas être neutralisé. Si le jet de sauvegarde échoue d'au moins 5, la créature est aussitôt pétrifiée. Sinon, une créature qui rate le JS est entravée et commence à se transformer en pierre. La créature ainsi entravée doit réitérer le jet de sauvegarde à la fin de son tour suivant ; elle est pétrifiée en cas d'échec et met un terme à l'effet en cas de réussite. La pétrification persiste jusqu'à ce que la créature en soit affranchie par le sort restauration suprême ou une magie équivalente.</p><p>Sauf si elle est surprise, toute créature peut détourner le regard au début de son tour pour se soustraire au jet de sauvegarde. Ce faisant, la créature ne voit pas la méduse jusqu'au début de son tour suivant, moment auquel elle peut de nouveau détourner les yeux. Si la créature regarde la méduse entretemps, elle doit aussitôt effectuer le JS.</p><p>Si la méduse voit son reflet sur une surface polie située dans un rayon de 9 m d'elle et dans une zone de lumière vive, elle est affectée par son propre regard (en raison de sa malédiction).</p>",
+          "description": "<p>Lorsqu'une créature qui voit les yeux de la [[lookup @name lowercase]]{monstre} commence son tour dans un rayon de [[lookup @target.template.size activity=LoXmK0mBZ0hatvaU]] [[lookup @target.template.units activity=LoXmK0mBZ0hatvaU]] du monstre, ce dernier peut l'obliger à effectuer un jet de sauvegarde de [[/save activity=LoXmK0mBZ0hatvaU]], à condition de la voir et de ne pas être &reference[incapacitated apply=false]{neutralisé}. Si le jet de sauvegarde échoue d'au moins 5, la créature est aussitôt &reference[petrified]{pétrifiée}. Sinon, une créature qui rate le JS est &reference[restrained]{entravée} et commence à se transformer en pierre. La créature ainsi entravée doit réitérer le jet de sauvegarde à la fin de son tour suivant ; elle est &reference[petrified]{pétrifiée} en cas d'échec et met un terme à l'effet en cas de réussite. La pétrification persiste jusqu'à ce que la créature en soit affranchie par le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie équivalente.</p><p>Sauf si elle est &reference[surprise]{surprise}, toute créature peut détourner le regard au début de son tour pour se soustraire au jet de sauvegarde. Ce faisant, la créature ne voit pas la [[lookup @name lowercase]]{monstre} jusqu'au début de son tour suivant, moment auquel elle peut de nouveau détourner les yeux. Si la créature regarde la [[lookup @name lowercase]]{monstre} entretemps, elle doit aussitôt effectuer le JS.</p><p>Si la [[lookup @name lowercase]]{monstre} voit son reflet sur une surface polie située dans un rayon de 9 m d'elle et dans une zone de &reference[bright light]{lumière vive}, elle est affectée par son propre regard (en raison de sa malédiction).</p>",
           "chat": "<p>La [[lookup @name]] utilise Regard pétrifiant.</p>"
         },
         "Multiattack": {
@@ -7863,7 +7873,7 @@
       "items": {
         "Charge": {
           "name": "Charge",
-          "description": "<p>Si le minotaure se déplace d'au moins 3 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige 9 (2d8) dégâts perforants supplémentaires.</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 14 sous peine d'être repoussée d'un maximum 3 m et jetée à terre.</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 3 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf.Item.zTqVT0QztTuMOv0e]{Coup de corne} au même tour, il lui inflige [[/damage average]] supplémentaires.</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum 3 m et jetée &reference[prone]{à terre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
         },
         "Labyrinthine Recall": {
@@ -7977,7 +7987,7 @@
         },
         "Blasphemous Word": {
           "name": "Parole blasphématoire",
-          "description": "<p>La momie auguste prononce une parole blasphématoire. Toute créature autre qu'un mort-vivant dans un rayon de 3 m de la momie auguste, si elle entend cette parole magique, doit réussir un jet de sauvegarde de Constitution DD 16 sous peine d'être étourdie jusqu'à la fin du tour suivant de la momie auguste.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} prononce une parole blasphématoire. Toute créature autre qu'un mort-vivant dans un rayon de [[lookup @target.template.size activity=UR3pJCZj7UbuHzg2]] [[lookup @target.template.units activity=UR3pJCZj7UbuHzg2]] de la [[lookup @name lowercase]]{monstre}, si elle entend cette parole magique, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[stunned]{étourdie} jusqu'à la fin du tour suivant de la [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>La [[lookup @name]] utilise Parole blasphématoire.</p>"
         },
         "Channel Negative Energy": {
@@ -8033,7 +8043,7 @@
         },
         "Whirlwind of Sand": {
           "name": "Tourbillon de sable",
-          "description": "<p>La [[lookup @name]] se transforme magiquement en tourbillon de sable, se déplace de 18 m et reprend sa forme normale. Tant qu’elle est sous forme de tourbillon, la [[lookup @name]] est immunisée contre tous les dégâts et ne peut pas être agrippée, &Reference[restrained], &Reference[stunned], pétrifiée ou jetée &Reference[prone]. L’équipement porté par la [[lookup @name]] reste en sa possession tout du long.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} se transforme magiquement en tourbillon de sable, se déplace de 18 m et reprend sa forme normale. Tant qu'elle est sous forme de tourbillon, la [[lookup @name lowercase]]{monstre} est immunisée contre tous les dégâts et ne peut pas être &reference[grappled apply=false]{agrippée}, &reference[restrained apply=false]{entravé}, &reference[stunned apply=false]{étourdi}, &amp;reference[petrified apply=false]{pétrifiée} ou jetée &reference[prone apply=false]{à terre}. L'équipement porté par la [[lookup @name lowercase]]{monstre} reste en sa possession tout du long.</p>"
         },
         "Sacred Flame": {
           "name": "Flamme sacrée",
@@ -8484,7 +8494,7 @@
         },
         "Tentacle Slam": {
           "name": "Coup de tentacule",
-          "description": "<p>L'otyugh frappe la ou les créatures qu'il agrippe, l'une contre l'autre ou contre une surface solide. Chaque créature doit réussir un jet de sauvegarde de [[/save]] sous peine de subir 10 ([[/damage]]{2d6 + 3}) dégâts contondants et d'être &Reference[stunned apply=false]{étourdie} jusqu'à la fin du tour suivant de l'otyugh. En cas de sauvegarde réussie, la cible subit la moitié des dégâts contondants et n'est pas étourdie.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} frappe la ou les créatures qu'il &reference[grappled apply=false]{agrippe}, l'une contre l'autre ou contre une surface solide. Chaque créature doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être &Reference[stunned apply=false]{étourdie} jusqu'à la fin du tour suivant de l'[[lookup @name lowercase]]{monstre}. En cas de sauvegarde réussie, la cible subit la moitié des dégâts contondants et n'est pas étourdie.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Coup de tentacule.</p>"
         },
         "Multiattack": {
@@ -9358,7 +9368,7 @@
         },
         "Rust Metal": {
           "name": "Corrosion du métal",
-          "description": "<p>Toute arme non magique en métal qui touche l'oxydeur lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent l'oxydeur dans le cadre d'une attaque sont détruites après application des dégâts.</p>",
+          "description": "<p>Toute arme non magique en métal qui touche l'[[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent l'[[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><section id=\"secret-kf8c02ZiwU9vjF3Q\" class=\"secret\"><p><strong>Foundry Note</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt.ActiveEffect.iqyGcqOolg6tFCwC]{Arme corrodée} à une arme, ce qui lui confère un malus cumulatif de -1 aux jets de dégâts à chaque fois que l'enchantement est appliqué.</p></section>",
           "chat": "<p>L'[[lookup @name]] utilise Corrosion du métal.</p>",
           "effects": {
             "Corroded Weapon": {
@@ -9373,8 +9383,13 @@
         },
         "Antennae": {
           "name": "Antennes",
-          "description": "<p>L'oxydeur fait rouiller un objet non magique en métal ferreux qu'il voit dans un rayon de 1,50 m. Si l'objet n'est porté par personne, ce contact en détruit l'équivalent d'un cube de 30 cm d'arête. Si l'objet est porté par une créature, celle-ci peut effectuer un jet de sauvegarde de Dextérité DD 11 pour éviter le contact de l'oxydeur.</p><p>Si l'objet touché est une armure métallique ou un bouclier en métal que porte une créature, il subit un malus permanent et cumulatif de –1 à la CA qu'il procure. Les armures dont la CA est réduite à 10 et les boucliers dont le bonus tombe à +0 sont détruits. Si l'objet touché est une arme métallique tenue en main, elle s'oxyde selon les détails du trait Corrosion du métal.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Antennes.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} fait rouiller un objet non magique en métal ferreux qu'il voit dans un rayon de [[lookup @labels.description.range activity=4kalmKCyvd5GxuYh]]. Si l'objet n'est porté par personne, ce contact en détruit l'équivalent d'un cube de 30 cm d'arête. Si l'objet est porté par une créature, celle-ci peut effectuer un jet de sauvegarde de [[/save]] pour éviter le contact de l'[[lookup @name lowercase]]{monstre}.</p><p>Si l'objet touché est une armure métallique ou un bouclier en métal que porte une créature, il subit un malus permanent et cumulatif de –1 à la CA qu'il procure. Les armures dont la CA est réduite à 10 et les boucliers dont le bonus tombe à +0 sont détruits. Si l'objet touché est une arme métallique tenue en main, elle s'oxyde selon les détails du trait @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt]{Corrosion du métal}.</p><section id=\"secret-Z9VSdcLCUA4hKtGq\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt.ActiveEffect.iqyGcqOolg6tFCwC]{Arme corrodée} ou @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.yxwZ9AtLMKZ61sTz.ActiveEffect.pbQsiyOC531v0z64]{Armure corrodée} à une arme ou une armure, ce qui lui confère un malus cumulatif de -1 aux jets de dégâts ou à la CA qu'il procure chaque fois que l'enchantement est appliqué.</p></section>",
+          "chat": "<p>L'[[lookup @name]] utilise Antennes.</p>",
+          "effects": {
+            "Rusted Armor": {
+              "name": "Armure corrodée"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -9671,7 +9686,7 @@
         },
         "Spell Storing": {
           "name": "Stockage de sort",
-          "description": "<p>Un incantateur qui porte l’amulette du [[lookup @name]] peut stocker un sort du 4e niveau ou inférieur dans l’artificiel. Pour ce faire, le porteur doit lancer le sort sur le garde. Le sort n’a aucun effet immédiat, mais il est stocké dans le garde. Lorsque le porteur de l’amulette le lui ordonne ou qu’une situation prédéterminée par l’incantateur se présente, le [[lookup @name]] lance le sort stocké selon les critères définis par l’incantateur, sans la moindre composante. Quand le sort est ainsi lancé ou qu’un nouveau sort est stocké, celui qui était préalablement stocké ne l’est plus.</p>"
+          "description": "<p>Un incantateur qui porte l'amulette du [[lookup @name lowercase]]{monstre} peut stocker un sort du 4<sup>e</sup> niveau ou inférieur dans l'artificiel. Pour ce faire, le porteur doit lancer le sort sur le [[lookup @name lowercase]]{monstre}. Le sort n'a aucun effet immédiat, mais il est stocké dans le [[lookup @name lowercase]]{monstre}. Lorsque le porteur de l'amulette le lui ordonne ou qu'une situation prédéterminée par l'incantateur se présente, le [[lookup @name lowercase]]{monstre} lance le sort stocké selon les critères définis par l'incantateur, sans la moindre composante. Quand le sort est ainsi lancé ou qu'un nouveau sort est stocké, celui qui était préalablement stocké ne l'est plus.</p><section id=\"secret-tV5DEXXS3UxPSEI6\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ajoutez un sort dans l'activité Incanter de cette aptitude afin de permettre au [[lookup @name lowercase]]{monstre} de lancer le sort. Retirez ensuite le sort de l'activité.</p></section>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9769,11 +9784,14 @@
         },
         "Flying Sword": {
           "name": "Épée volante",
-          "description": "<p>Le solar lâche son épée à deux mains qui vient flotter magiquement en un espace inoccupé dans un rayon de 1,50 m de lui. S'il voit l'épée, le solar peut lui ordonner mentalement par une action bonus de voler sur un maximum de 15 m et d'effectuer une attaque contre une cible ou de revenir dans ses mains. Si l'épée volante est ciblée par un effet, on considère que le solar l'a en main. L'épée volante tombe si le solar meurt.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} lâche son épée à deux mains qui vient flotter magiquement en un espace inoccupé dans un rayon de 1,50 m de lui. S'il voit l'épée, le [[lookup @name lowercase]]{monstre} peut lui ordonner mentalement par une action bonus de voler sur un maximum de 15 m et d'effectuer une attaque contre une cible ou de revenir dans ses mains. Si l'épée volante est ciblée par un effet, on considère que le [[lookup @name lowercase]]{monstre} l'a en main. L'épée volante tombe si le [[lookup @name lowercase]]{monstre} meurt.</p><section id=\"secret-lQcPEreSKHWmYNO7\" class=\"secret\"><p>Foundry Note</p><p>Enchantez l'épée à deux mains du [[lookup @name lowercase]]{monstre} à l'aide de l'activité sur cette aptitude, lui octroyant une activité <em><strong>« Commander l'épée »</strong></em> pouvant être utilisée au prix d'une action bonus.</p></section>",
           "chat": "<p>Le [[lookup @name]] utilise Épée volante.</p>",
           "activities": {
             "Enchant": {
               "name": "Enchantement"
+            },
+            "Command Sword": {
+              "name": "Commander l'épée"
             }
           },
           "effects": {
@@ -11179,7 +11197,7 @@
         },
         "Stunning Screech": {
           "name": "Piaillement étourdissant",
-          "description": "<p>Le vrock pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être étourdie jusqu'à la fin du tour suivant du vrock.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[stunned]{étourdie} jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Piaillement étourdissant.</p>"
         }
       },
