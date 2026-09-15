@@ -28,12 +28,13 @@
         },
         "Detect": {
           "name": "Détection",
-          "description": "<p>L'[[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Swipe": {
           "name": "Balayage caudal",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .FwOZEwx7MPDq8Igu]]{Queue}.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Balayage caudal.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} frappe sa proie avec sa queue !</p>"
         },
         "Psychic Drain": {
           "name": "Succion psychique",
@@ -42,7 +43,7 @@
         "Mucous Cloud": {
           "name": "Nuage muqueux",
           "description": "<p>Tant qu'il est sous l'eau, l'[[lookup @name lowercase]]{monstre} est entouré d'un mucus réactif. Une créature qui touche physiquement l'[[lookup @name lowercase]]{monstre} ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature est malade pendant [[/r 1d4]] heures. La créature malade ne peut respirer que sous l'eau.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Nuage muqueux.</p>",
+          "chat": "<p>Tant qu'il est sous l'eau, l'[[lookup @name lowercase]]{monstre} est entouré d'un mucus réactif. Une créature qui touche physiquement l'[[lookup @name lowercase]]{monstre} ou avec une attaque de corps à corps en étant dans un rayon de 1,50 m de lui effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Disease Save": {
               "name": "Sauvegarde contre la maladie"
@@ -79,7 +80,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -188,22 +189,22 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .t9FrDQLVCU8x4obw]]{Queue}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         }
       },
       "habitat": "Marécage",
@@ -225,7 +226,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -240,7 +241,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -268,12 +269,12 @@
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .tPZA3sUmzXN6euE9]]{Queue}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Désert",
@@ -295,7 +296,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -310,7 +311,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -328,17 +329,17 @@
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .wpjVwZ9oJcl07bYG]]{Queue}.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle soporifique.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -404,7 +405,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de foudre.</strong> Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle répulsif.</strong> Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 18 m du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
               "name": "Souffle de foudre"
@@ -417,22 +418,22 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .pwUlwu2kJ7ed1Tij]]{Queue}.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Côtier",
@@ -477,7 +478,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle d'acide.</strong> Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle engourdissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
               "name": "Souffle d'acide"
@@ -495,22 +496,22 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .psMedm7VzByFIBBF]]{Queue}.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Colline",
@@ -559,7 +560,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle affaiblissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -581,22 +582,22 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .yC56dUP8RQ94wa5t]]{Queue}.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Prairie",
@@ -655,22 +656,22 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .1D08FAjBuD5BOnol]]{Queue}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Forêt",
@@ -725,22 +726,22 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .3AymdEL9N4S8M06R]]{Queue}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque de queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Montagne",
@@ -785,7 +786,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle glacial.</strong> Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle paralysant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
               "name": "Souffle glacial"
@@ -807,12 +808,12 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -821,7 +822,7 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Montagne",
@@ -853,7 +854,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -872,7 +873,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -894,7 +895,7 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Arctique",
@@ -983,12 +984,12 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1020,12 +1021,12 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Claw": {
           "name": "Griffe",
@@ -1108,7 +1109,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle soporifique.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -1130,12 +1131,12 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1191,7 +1192,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de foudre.</strong> Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle répulsif.</strong> Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 18 m du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
               "name": "Souffle de foudre"
@@ -1208,7 +1209,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1221,7 +1222,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         }
       },
       "habitat": "Côtier"
@@ -1232,7 +1233,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -1274,7 +1275,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1287,7 +1288,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle d'acide.</strong> Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle engourdissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
               "name": "Souffle d'acide"
@@ -1348,7 +1349,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle affaiblissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -1366,12 +1367,12 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1441,12 +1442,12 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1509,7 +1510,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1522,7 +1523,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         }
       },
       "habitat": "Montagne",
@@ -1567,7 +1568,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle glacial.</strong> Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle paralysant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
               "name": "Souffle glacial"
@@ -1589,7 +1590,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>[[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1598,12 +1599,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>[[lookup @name]] utilise Attaque d’ailes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>[[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         }
       },
       "habitat": "Montagne"
@@ -1634,7 +1635,7 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Détection.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1653,7 +1654,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -2209,7 +2210,7 @@
         "Heated Weapons": {
           "name": "Armes surchauffées",
           "description": "<p>Lorsque l'[[lookup @name lowercase]]{monstre} touche sa cible avec une attaque d'arme de corps à corps en métal, il lui inflige 3 (1d6) dégâts de feu supplémentaires (inclus dans l'attaque).</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Armes surchauffées.</p>"
+          "chat": "<p>Lorsque l'[[lookup @name lowercase]]{monstre} touche sa cible avec une attaque d'arme de corps à corps en métal, il lui inflige des dégâts de feu supplémentaires (inclus dans l'attaque).</p>"
         },
         "Illumination": {
           "name": "Illumination",
@@ -2765,7 +2766,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle soporifique.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -2798,7 +2799,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de foudre.</strong> Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle répulsif.</strong> Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 9 m du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
               "name": "Souffle de foudre"
@@ -3293,7 +3294,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle d'acide.</strong> Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle engourdissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
               "name": "Souffle d'acide"
@@ -5278,7 +5279,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
@@ -5418,7 +5419,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Ram": {
           "name": "Coup de bélier",
@@ -5458,7 +5459,7 @@
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
+          "description": "<p>Tant qu'elle reste au contact d'une toile, l'[[lookup @name lowercase]]{monstre} connaît la position exacte de toute autre créature en contact avec la même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -5488,7 +5489,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Standing Leap": {
           "name": "Saut sans élan",
@@ -5595,7 +5596,7 @@
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
+          "description": "<p>Tant qu'elle reste au contact d'une toile, l'[[lookup @name lowercase]]{monstre} connaît la position exacte de toute autre créature en contact avec la même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -5660,7 +5661,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le glabrezu est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -5724,7 +5725,7 @@
         },
         "Brute": {
           "name": "Brutalité",
-          "description": "<p>Lorsque le [[lookup @name lowercase]]{monstre} touche sa cible avec une arme de corps à corps, il lui inflige un dé supplémentaire de dégâts (inclus dans l'attaque).</p>"
+          "description": "<p>Lorsque le [[lookup @name lowercase]]{monstre} touche avec une arme de corps à corps, il inflige un dé supplémentaire de dégâts (inclus dans l'attaque).</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -5742,7 +5743,7 @@
         },
         "Parry": {
           "name": "Parade",
-          "description": "<p>Le gladiateur ajoute 3 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 3 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 3 à sa CA contre une attaque de corps à corps censée le toucher.</p>"
         }
       },
@@ -5859,7 +5860,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle affaiblissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -6053,7 +6054,7 @@
       "items": {
         "Keen Sight": {
           "name": "Vue aiguisée",
-          "description": "<p>Le griffon est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -6082,7 +6083,7 @@
         },
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le torve est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
         },
         "Stone Camouflage": {
           "name": "Camouflage dans la rocaille",
@@ -6260,7 +6261,7 @@
         },
         "Cast a Spell": {
           "name": "Incantation",
-          "description": "<p>La sphinge lance un sort de sa liste de sorts préparés, en dépensant un emplacement si nécessaire.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} lance un sort de sa liste de sorts préparés, en dépensant un emplacement si nécessaire.</p>",
           "activities": {
             "Cast Spell": {
               "name": "Lancer un sort"
@@ -6437,7 +6438,7 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le molosse est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
         },
         "Pack Tactics": {
           "name": "Tactique de meute",
@@ -6468,7 +6469,7 @@
       "items": {
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>L'hezrou est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Stench": {
           "name": "Puanteur",
@@ -6524,7 +6525,7 @@
       "items": {
         "Keen Sight": {
           "name": "Vue aiguisée",
-          "description": "<p>L'hippogriffe est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -6595,7 +6596,7 @@
         },
         "Telepathic Bond": {
           "name": "Lien télépathique",
-          "description": "<p>Tant que son maître et lui sont sur le même plan d'existence, le [[lookup @name lowercase]]{monstre} peut communiquer magiquement ce qu'il perçoit à son maître et les deux peuvent converser par télépathie.</p>"
+          "description": "<p>Tant que son maître et lui sont sur le même plan d'existence, l'[[lookup @name lowercase]]{monstre} peut communiquer magiquement ce qu'il perçoit à son maître et les deux peuvent converser par télépathie.</p>"
         }
       },
       "languages": "comprend les langues de son créateur, mais ne parle pas",
@@ -6611,7 +6612,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le diable est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Tail": {
           "name": "Queue",
@@ -6723,7 +6724,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le diable est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Wall of Ice": {
           "name": "Mur de glace",
@@ -6883,11 +6884,11 @@
         },
         "Immutable Form": {
           "name": "Forme immuable",
-          "description": "<p>Le golem est immunisé contre tout sort ou effet visant à en altérer la forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est immunisé contre tout sort ou effet visant à en altérer la forme.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le golem est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -6895,7 +6896,7 @@
         },
         "Multiattack": {
           "name": "Attaques multiples",
-          "description": "<p>Le golem effectue deux attaques de corps à corps.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue deux attaques de corps à corps.</p>"
         },
         "Slam": {
           "name": "Coup",
@@ -6997,7 +6998,7 @@
         },
         "Parry": {
           "name": "Parade",
-          "description": "<p>Le chevalier ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher.</p>"
         },
         "Brave": {
@@ -7015,7 +7016,7 @@
       "items": {
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
-          "description": "<p>Quand le kobold est exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
+          "description": "<p>Quand le [[lookup @name lowercase]]{monstre} est exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         },
         "Pack Tactics": {
           "name": "Tactique de meute",
@@ -7041,7 +7042,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Freedom of Movement": {
           "name": "Liberté de mouvement",
@@ -7050,7 +7051,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>L'élémentaire inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -7224,7 +7225,7 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>"
         },
         "Rejuvenation": {
           "name": "Reconstitution",
@@ -7430,11 +7431,11 @@
       "items": {
         "Hold Breath": {
           "name": "Apnée",
-          "description": "<p>Le saurial peut retenir son souffle pendant 15 minutes.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut retenir son souffle pendant 15 minutes.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
-          "description": "<p>Le saurial effectue deux attaques de corps à corps, chacune avec une arme différente.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue deux attaques de corps à corps, chacune avec une arme différente.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -7694,7 +7695,7 @@
       "items": {
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>La marilith est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -7721,7 +7722,7 @@
         "Teleport": {
           "name": "Téléportation",
           "chat": "<p>La [[lookup @name]] utilise Téléportation.</p>",
-          "description": "<p>La marilith se téléporte magiquement d'un maximum de 36 m avec tout l'équipement qu'elle porte dans un espace inoccupé qu'elle voit.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} se téléporte magiquement d'un maximum de 36 m avec tout l'équipement qu'elle porte dans un espace inoccupé qu'elle voit.</p>",
           "activities": {
             "Teleport": {
               "name": "Téléportation"
@@ -7730,7 +7731,7 @@
         },
         "Parry": {
           "name": "Parade",
-          "description": "<p>La marilith ajoute 5 à sa CA contre une attaque de corps à corps censée la toucher. Pour ce faire, la marilith doit voir l'assaillant et manier une arme de corps à corps.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} ajoute 5 à sa CA contre une attaque de corps à corps censée la toucher. Pour ce faire, la [[lookup @name lowercase]]{monstre} doit voir l'assaillant et manier une arme de corps à corps.</p>",
           "chat": "<p>La [[lookup @name]] utilise Parade.</p>"
         }
       },
@@ -7790,7 +7791,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Spear": {
           "name": "Lance",
@@ -7807,7 +7808,7 @@
       "items": {
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -7837,7 +7838,7 @@
       "items": {
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>La mimique peut consacrer son action à se métamorphoser en objet ou à reprendre sa « forme » véritable (une masse informe). Son profil reste le même sous les deux formes. Rien de ce qu'elle porte n'est transformé. Si elle meurt, elle reprend sa forme véritable.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut consacrer son action à se métamorphoser en objet ou à reprendre sa « forme » véritable (une masse informe). Son profil reste le même sous les deux formes. Rien de ce qu'elle porte n'est transformé. Si elle meurt, elle reprend sa forme véritable.</p>",
           "chat": "<p>La [[lookup @name]] utilise Métamorphe.</p>"
         },
         "Adhesive (Object Form Only)": {
@@ -7996,11 +7997,11 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>La momie auguste est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Rejuvenation": {
           "name": "Reconstitution",
-          "description": "<p>Une momie auguste détruite acquiert un nouveau corps en 24 heures si son cœur est resté intact, ce qui lui permet de récupérer tous ses points de vie et de reprendre ses activités. Le nouveau corps se présente dans un rayon de 1,50 m du cœur de la momie auguste.</p>",
+          "description": "<p>Une [[lookup @name lowercase]]{monstre} détruite acquiert un nouveau corps en 24 heures si son cœur est resté intact, ce qui lui permet de récupérer tous ses points de vie et de reprendre ses activités. Le nouveau corps se présente dans un rayon de 1,50 m du cœur de la [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>La [[lookup @name]] utilise Reconstitution.</p>"
         },
         "Spellcasting": {
@@ -8120,7 +8121,7 @@
       "items": {
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le nalfeshnie est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -8168,7 +8169,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>La guenaude est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Claws (Hag Form Only)": {
           "name": "Griffes (forme de guenaude uniquement)",
@@ -8177,7 +8178,7 @@
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>La guenaude se transforme magiquement en humanoïde féminin de taille M ou P de son choix, ou retrouve sa forme véritable. Son profil reste le même sous les deux formes. Rien de ce qu'elle porte n'est transformé. Elle reprend sa forme véritable si elle meurt.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde féminin de taille M ou P de son choix, ou retrouve sa forme véritable. Son profil reste le même sous les deux formes. Rien de ce qu'elle porte n'est transformé. Elle reprend sa forme véritable si elle meurt.</p>",
           "activities": {
             "Transform": {
               "name": "Transformer"
@@ -8275,7 +8276,7 @@
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
-          "description": "<p>La gelée peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
         },
         "Split": {
           "name": "Division",
@@ -8305,7 +8306,7 @@
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         },
         "Ink Cloud": {
           "name": "Nuage d'encre",
@@ -8351,7 +8352,7 @@
         },
         "Undead Fortitude": {
           "name": "Robustesse de la non-vie",
-          "description": "<p>Si des dégâts font tomber le zombi à 0 point de vie, il effectue un jet de sauvegarde de Constitution (DD égal à 5 + les dégâts subis), sauf en cas de dégâts radiants ou de coup critique. En cas de réussite, le zombi tombe en fait à 1 point de vie.</p>",
+          "description": "<p>Si des dégâts font tomber l'[[lookup @name lowercase]]{monstre} à 0 point de vie, il effectue un jet de sauvegarde de Constitution (DD égal à 5 + les dégâts subis), sauf en cas de dégâts radiants ou de coup critique. En cas de réussite, l'[[lookup @name lowercase]]{monstre} tombe en fait à 1 point de vie.</p>",
           "chat": "<p>L'[[lookup @name]] utilise Robustesse de la non-vie.</p>"
         }
       },
@@ -8395,11 +8396,11 @@
         },
         "Magic Weapons": {
           "name": "Armes magiques",
-          "description": "<p>Les attaques d'arme de l'oni sont magiques.</p>"
+          "description": "<p>Les attaques d'arme de l'[[lookup @name lowercase]]{monstre} sont magiques.</p>"
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>L'oni se transforme magiquement en humanoïde de taille M ou P de son choix, ou en géant de taille G, ou retrouve sa forme véritable. Hormis sa catégorie de taille, son profil reste le même, quelle que soit sa forme. La seule pièce d'équipement qui se transforme aussi est sa coutille, qui rapetisse pour qu'il puisse la manier sous forme humanoïde. Si l'oni meurt, il retrouve sa forme véritable et sa coutille reprend sa taille normale.</p>",
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde de taille M ou P de son choix, ou en géant de taille G, ou retrouve sa forme véritable. Hormis sa catégorie de taille, son profil reste le même, quelle que soit sa forme. La seule pièce d'équipement qui se transforme aussi est sa coutille, qui rapetisse pour qu'il puisse la manier sous forme humanoïde. Si l'[[lookup @name lowercase]]{monstre} meurt, il retrouve sa forme véritable et sa coutille reprend sa taille normale.</p>",
           "activities": {
             "Transform": {
               "name": "Transformer"
@@ -8448,7 +8449,7 @@
         },
         "Aggressive": {
           "name": "Agressivité",
-          "description": "<p>Par une action bonus, le [[lookup @name lowercase]]{monstre} peut se déplacer de sa vitesse ou moins vers une créature hostile qu'il voit.</p>"
+          "description": "<p>Par une action bonus, l'[[lookup @name lowercase]]{monstre} peut se déplacer de sa vitesse ou moins vers une créature hostile qu'il voit.</p>"
         },
         "Greataxe": {
           "name": "Hache à deux mains",
@@ -8470,7 +8471,7 @@
       "items": {
         "Limited Telepathy": {
           "name": "Télépathie limitée",
-          "description": "<p>L'otyugh peut transmettre magiquement des messages et images rudimentaires à toute créature située dans un rayon de 36 m qui comprend au moins une langue. Cette forme de télépathie ne permet pas à la créature destinataire de répondre télépathiquement.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} peut transmettre magiquement des messages et images rudimentaires à toute créature située dans un rayon de 36 m qui comprend au moins une langue. Cette forme de télépathie ne permet pas à la créature destinataire de répondre télépathiquement.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8531,7 +8532,7 @@
       "items": {
         "Keen Sight and Smell": {
           "name": "Odorat et vue aiguisés",
-          "description": "<p>Le hibours est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue ou l'odorat.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -8595,7 +8596,7 @@
       "items": {
         "Ethereal Jaunt": {
           "name": "Saut éthéré",
-          "description": "<p>Par une action bonus, le [[lookup @name lowercase]]{monstre} peut passer magiquement du Plan Matériel au Plan Éthéré, ou inversement.</p>"
+          "description": "<p>Par une action bonus, l'[[lookup @name lowercase]]{monstre} peut passer magiquement du Plan Matériel au Plan Éthéré, ou inversement.</p>"
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -8603,7 +8604,7 @@
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
-          "description": "<p>L'araignée n'est pas soumise aux contraintes de déplacement imposées par les toiles.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} n'est pas soumise aux contraintes de déplacement imposées par les toiles.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -8634,7 +8635,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le diantrefosse est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -8701,7 +8702,7 @@
       "items": {
         "Angelic Weapons": {
           "name": "Armes angéliques",
-          "description": "<p>Les attaques d'arme du planétar sont magiques. Lorsque le planétar touche sa cible avec une arme, celle-ci inflige 5d8 dégâts radiants supplémentaires (inclus dans l'attaque).</p>",
+          "description": "<p>Les attaques d'arme du [[lookup @name lowercase]]{monstre} sont magiques. Lorsque le [[lookup @name lowercase]]{monstre} touche sa cible avec une arme, celle-ci inflige 5d8 dégâts radiants supplémentaires (inclus dans l'attaque).</p>",
           "chat": "<p>Le [[lookup @name]] utilise Armes angéliques.</p>"
         },
         "Divine Awareness": {
@@ -8718,7 +8719,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le planétar est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -8954,7 +8955,7 @@
       "items": {
         "Tunneler": {
           "name": "Fouisseur",
-          "description": "<p>Le ver peut creuser à travers la roche à concurrence de la moitié de sa vitesse de fouissement, en laissant un tunnel de 3 m de diamètre dans son sillage.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut creuser à travers la roche à concurrence de la moitié de sa vitesse de fouissement, en laissant un tunnel de 3 m de diamètre dans son sillage.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9025,7 +9026,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le quasit est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Scare": {
           "name": "Frayeur",
@@ -9061,7 +9062,7 @@
       "items": {
         "Limited Magic Immunity": {
           "name": "Immunité limitée contre la magie",
-          "description": "<p>Le rakshasa ne peut être affecté ni détecté par des sorts du 6<sup>e</sup> niveau ou inférieur, sauf quand il le souhaite. Il est avantagé aux jets de sauvegarde contre tous les autres sorts et effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut être affecté ni détecté par des sorts du 6<sup>e</sup> niveau ou inférieur, sauf quand il le souhaite. Il est avantagé aux jets de sauvegarde contre tous les autres sorts et effets magiques.</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -9280,7 +9281,7 @@
         },
         "Keen Sight": {
           "name": "Vue aiguisée",
-          "description": "<p>Le rukh est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir la vue.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9364,7 +9365,7 @@
       "items": {
         "Iron Scent": {
           "name": "Perception du fer",
-          "description": "<p>L'oxydeur perçoit précisément à l'odeur la position de tout métal ferreux dans un rayon de 9 m.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} perçoit précisément à l'odeur la position de tout métal ferreux dans un rayon de 9 m.</p>"
         },
         "Rust Metal": {
           "name": "Corrosion du métal",
@@ -9470,7 +9471,7 @@
         },
         "Heated Weapons": {
           "name": "Armes surchauffées",
-          "description": "<p>Lorsque la salamandre touche sa cible avec une attaque d'arme de corps à corps en métal, elle lui inflige 3 (1d6) dégâts de feu supplémentaires (inclus dans l'attaque).</p>",
+          "description": "<p>Lorsque la [[lookup @name lowercase]]{monstre} touche sa cible avec une attaque d'arme de corps à corps en métal, elle lui inflige 3 (1d6) dégâts de feu supplémentaires (inclus dans l'attaque).</p>",
           "chat": "<p>La [[lookup @name]] utilise Armes surchauffées.</p>"
         },
         "Multiattack": {
@@ -9508,7 +9509,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le satyre est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Ram": {
           "name": "Coup de bélier",
@@ -9601,7 +9602,7 @@
       "items": {
         "Water Breathing": {
           "name": "Respiration aquatique",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} ne peut respirer que sous l'eau.</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -9640,7 +9641,7 @@
       "items": {
         "Lightning Absorption": {
           "name": "Absorption de la foudre",
-          "description": "<p>Chaque fois que le tertre errant est soumis à des dégâts de foudre, il ne subit aucun dégât et récupère en fait autant de points de vie que la moitié des dégâts de foudre ainsi évités.</p>"
+          "description": "<p>Chaque fois que le [[lookup @name lowercase]]{monstre} est soumis à des dégâts de foudre, il ne subit aucun dégât et récupère en fait autant de points de vie que la moitié des dégâts de foudre ainsi évités.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9671,7 +9672,7 @@
       "items": {
         "Bound": {
           "name": "Pacte magique",
-          "description": "<p>Le garde animé est magiquement lié à une amulette. Tant que le garde et son amulette sont sur le même plan d'existence, le porteur de l'amulette peut ordonner télépathiquement au garde de se rendre auprès de l'objet, l'artificiel ayant une notion précise de la distance qui le sépare de l'amulette et de sa direction. Si le garde se trouve dans un rayon de 18 m du porteur de l'amulette, la moitié des dégâts subis par le porteur (arrondis au supérieur) sont en fait transférés sur le garde.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est magiquement lié à une amulette. Tant que le [[lookup @name lowercase]]{monstre} et son amulette sont sur le même plan d'existence, le porteur de l'amulette peut ordonner télépathiquement au [[lookup @name lowercase]]{monstre} de se rendre auprès de l'objet, l'artificiel ayant une notion précise de la distance qui le sépare de l'amulette et de sa direction. Si le [[lookup @name lowercase]]{monstre} se trouve dans un rayon de 18 m du porteur de l'amulette, la moitié des dégâts subis par le porteur (arrondis au supérieur) sont en fait transférés sur le [[lookup @name lowercase]]{monstre}.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Pacte magique.</p>"
         },
         "Regeneration": {
@@ -9734,7 +9735,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle glacial.</strong> Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle paralysant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
               "name": "Souffle glacial"
@@ -9775,7 +9776,7 @@
       "items": {
         "Angelic Weapons": {
           "name": "Armes angéliques",
-          "description": "<p>Les attaques d'arme du solar sont magiques. Lorsque le solar touche sa cible avec une arme, celle-ci inflige 6d8 dégâts radiants supplémentaires (inclus dans l'attaque).</p>",
+          "description": "<p>Les attaques d'arme du [[lookup @name lowercase]]{monstre} sont magiques. Lorsque le [[lookup @name lowercase]]{monstre} touche sa cible avec une arme, celle-ci inflige 6d8 dégâts radiants supplémentaires (inclus dans l'attaque).</p>",
           "chat": "<p>Le [[lookup @name]] utilise Armes angéliques.</p>"
         },
         "Divine Awareness": {
@@ -9810,7 +9811,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le solar est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9912,7 +9913,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
-          "description": "<p>Exposé à la lumière du soleil, le spectre est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
+          "description": "<p>Exposé à la lumière du soleil, le [[lookup @name lowercase]]{monstre} est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         }
       },
       "languages": "comprend toutes les langues qu'il parlait de son vivant, mais ne parle pas",
@@ -9938,7 +9939,7 @@
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
-          "description": "<p>Tant qu'il est en contact avec une toile, le [[lookup @name lowercase]]{monstre} connaît la position exacte de toutes les créatures qui touchent cette même toile.</p>"
+          "description": "<p>Tant qu'elle reste au contact d'une toile, l'[[lookup @name lowercase]]{monstre} connaît la position exacte de toute autre créature en contact avec la même toile.</p>"
         },
         "Web Walker": {
           "name": "Marche dans les toiles",
@@ -10192,11 +10193,11 @@
       "items": {
         "Immutable Form": {
           "name": "Forme immuable",
-          "description": "<p>Le golem est immunisé contre tout sort ou effet visant à en altérer la forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est immunisé contre tout sort ou effet visant à en altérer la forme.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le golem est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -10234,7 +10235,7 @@
         },
         "Amphibious": {
           "name": "Amphibie",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut respirer sous l'eau comme à l'air libre.</p>"
         },
         "Greatsword": {
           "name": "Épée à deux mains",
@@ -10565,7 +10566,7 @@
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
-          "description": "<p>La nuée peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{nuée} peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
         },
         "Web Sense": {
           "name": "Perception sur les toiles",
@@ -10605,11 +10606,11 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si La [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>La tarasque est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Reflective Carapace": {
           "name": "Carapace réfléchissante",
@@ -10765,7 +10766,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>L'élémentaire inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Slam": {
           "name": "Coup",
@@ -10844,7 +10845,7 @@
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
-          "description": "<p>Le troll est avantagé aux tests de Sagesse (Perception) qui font intervenir l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'odorat.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -10899,7 +10900,7 @@
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>La licorne est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} est avantagée aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -11105,7 +11106,7 @@
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
-          "description": "<p>Le vampire peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut parcourir les parois les plus difficiles à escalader, y compris les plafonds, sans passer par un test de caractéristique.</p>"
         },
         "Vampire Weaknesses": {
           "name": "Faiblesses des vampires",
@@ -11174,7 +11175,7 @@
       "items": {
         "Magic Resistance": {
           "name": "Résistance à la magie",
-          "description": "<p>Le vrock est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux jets de sauvegarde contre les sorts et autres effets magiques.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11257,7 +11258,7 @@
       "items": {
         "Freeze": {
           "name": "Gel",
-          "description": "<p>Si l'élémentaire subit des dégâts de froid, il fige partiellement ; sa vitesse est réduite de 6 m jusqu'à la fin de son tour suivant.</p>",
+          "description": "<p>Si l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid, il fige partiellement ; sa vitesse est réduite de 6 m jusqu'à la fin de son tour suivant.</p>",
           "chat": "<p>[[lookup @name]] utilise Gel.</p>"
         },
         "Water Form": {
@@ -11317,7 +11318,7 @@
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
-          "description": "<p>L'ours-garou est avantagé aux tests de Sagesse (Perception) qui font intervenir l'odorat.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'odorat.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11358,7 +11359,7 @@
         },
         "Relentless": {
           "name": "Implacable",
-          "description": "<p>Si le sanglier-garou subit 14 dégâts ou moins censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} subit 14 dégâts ou moins censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>"
         },
         "Shapechanger": {
@@ -11392,7 +11393,7 @@
       "items": {
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>Le rat-garou peut consacrer son action à se transformer en hybride de rat et d'humanoïde ou en rat géant, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride de rat et d'humanoïde ou en rat géant, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
           "activities": {
             "Change Form": {
@@ -11407,7 +11408,7 @@
         },
         "Keen Smell": {
           "name": "Odorat aiguisé",
-          "description": "<p>Le rat-garou est avantagé aux tests de Sagesse (Perception) qui font intervenir l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'odorat.</p>"
         },
         "Multiattack (Humanoid or Hybrid Form Only)": {
           "name": "Attaques multiples (forme humanoïde ou hybride uniquement)",
@@ -11439,7 +11440,7 @@
       "items": {
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>Le tigre-garou peut consacrer son action à se transformer en hybride de tigre et d'humanoïde ou en tigre, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride de tigre et d'humanoïde ou en tigre, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
           "activities": {
             "Change Form": {
@@ -11449,7 +11450,7 @@
         },
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le tigre-garou est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
         },
         "Pounce (Tiger or Hybrid Form Only)": {
           "name": "Bond agressif (forme de tigre ou hybride uniquement)",
@@ -11517,7 +11518,7 @@
         },
         "Shapechanger": {
           "name": "Métamorphe",
-          "description": "<p>Le loup-garou peut consacrer son action à se transformer en hybride de loup et d'humanoïde ou en loup, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa CA, son profil reste le même quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride de loup et d'humanoïde ou en loup, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa CA, son profil reste le même quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
           "activities": {
             "Change Form": {
@@ -11527,7 +11528,7 @@
         },
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le loup-garou est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
         }
       },
       "subtype": "Humain, Métamorphe",
@@ -11565,7 +11566,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
-          "description": "<p>Exposé à la lumière du soleil, le nécronte est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
+          "description": "<p>Exposé à la lumière du soleil, le [[lookup @name lowercase]]{monstre} est désavantagé aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11662,7 +11663,7 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le loup est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
         },
         "Pack Tactics": {
           "name": "Tactique de meute",
@@ -11712,7 +11713,7 @@
       "items": {
         "Keen Hearing and Smell": {
           "name": "Odorat et ouïe aiguisés",
-          "description": "<p>Le worg est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} est avantagé aux tests de Sagesse (Perception) qui font intervenir l'ouïe ou l'odorat.</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -11749,7 +11750,7 @@
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
-          "description": "<p>Quand l'âme-en-peine est exposée à la lumière du soleil, elle est désavantagée aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
+          "description": "<p>Quand l'[[lookup @name lowercase]]{monstre} est exposée à la lumière du soleil, elle est désavantagée aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         },
         "Life Drain": {
           "name": "Absorption de vie",
@@ -11819,7 +11820,7 @@
         },
         "Treasure Sense": {
           "name": "Perception des trésors",
-          "description": "<p>Le xorn perçoit précisément à l'odeur la position des pierres et métaux précieux, comme les pièces d'or et les gemmes, dans un rayon de 18 m.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} perçoit précisément à l'odeur la position des pierres et métaux précieux, comme les pièces d'or et les gemmes, dans un rayon de 18 m.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -11902,7 +11903,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle soporifique.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -11945,7 +11946,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de foudre.</strong> Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle répulsif.</strong> Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 12 m du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
               "name": "Souffle de foudre"
@@ -11984,7 +11985,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle d'acide.</strong> Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle engourdissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
               "name": "Souffle d'acide"
@@ -12022,7 +12023,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle de feu.</strong> Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle affaiblissant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
               "name": "Souffle de feu"
@@ -12132,7 +12133,7 @@
         "Breath Weapons": {
           "name": "Souffles",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} recourt à l'un des souffles suivants :</p><p><strong>Souffle glacial.</strong> Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p><p><strong>Souffle paralysant.</strong> Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>[[lookup @name]] utilise Souffles.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
               "name": "Souffle glacial"
@@ -12215,7 +12216,7 @@
         },
         "Undead Fortitude": {
           "name": "Robustesse de la non-vie",
-          "description": "<p>Si des dégâts font tomber le zombi à 0 point de vie, il effectue un jet de sauvegarde de Constitution (DD égal à 5 + les dégâts subis), sauf en cas de dégâts radiants ou de coup critique. En cas de réussite, le zombi tombe en fait à 1 point de vie.</p>",
+          "description": "<p>Si des dégâts font tomber le [[lookup @name lowercase]]{monstre} à 0 point de vie, il effectue un jet de sauvegarde de Constitution (DD égal à 5 + les dégâts subis), sauf en cas de dégâts radiants ou de coup critique. En cas de réussite, le [[lookup @name lowercase]]{monstre} tombe en fait à 1 point de vie.</p>",
           "chat": "<p>Le [[lookup @name]] utilise Robustesse de la non-vie.</p>"
         }
       },
