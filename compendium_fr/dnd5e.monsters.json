@@ -40,7 +40,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>L'[[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Swipe": {
           "name": "Balayage caudal",
@@ -75,7 +80,8 @@
           },
           "effects": {
             "Aboleth Mucus": {
-              "name": "Mucus d'aboleth"
+              "name": "Mucus d'aboleth",
+              "description": "<p>Vous avez contracté une maladie réactive. Pendant les 1d4 heures suivantes, vous ne pouvez respirer que sous l'eau.</p>"
             }
           }
         },
@@ -89,7 +95,14 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Disease Save": {
-              "name": "Sauvegarde contre la maladie"
+              "name": "Sauvegarde contre la maladie",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          },
+          "effects": {
+            "Abolethic Disease": {
+              "name": "Maladie abolethique",
+              "description": "<p>Vous êtes malade. Cette maladie est sans effet pendant 1 minute et toute magie capable de soigner les maladies l'élimine. Au bout de 1 minute, votre peau devient translucide et visqueuse, vous ne pouvez pas regagner de points de vie quand vous n'êtes pas sous l'eau.</p><p>Seuls le sort @UUID[Compendium.dnd5e.spells.Item.qcYitWoSMTnKkzM1]{guérison} ou les sorts du 6<sup>e</sup> niveau ou plus qui soignent les maladies peuvent éliminer cette affection. Lorsque vous n'êtes pas immergé dans l'eau, vous subissez [[/damage 1d12 acid average]] toutes les 10 minutes, à moins d'hydrater abondamment votre peau dans l'intervalle.</p>"
             }
           }
         },
@@ -193,7 +206,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -203,7 +222,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Acid Breath": {
           "name": "Souffle d'acide",
@@ -233,12 +258,22 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         }
       },
       "habitat": "Marécage",
@@ -260,7 +295,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -268,7 +308,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -279,7 +325,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -313,7 +365,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Désert",
@@ -335,7 +392,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -343,7 +405,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -354,7 +422,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -378,7 +452,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -386,15 +465,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>"
             }
           },
           "effects": {
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Vous êtes &reference[unconcious apply=false]{inconscient} pendant 10 minutes. Cet effet prend fin pour vous si vous subissez des dégâts ou que quelqu'un consacre une action à vous réveiller.</p>"
             }
           }
         }
@@ -416,7 +498,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -438,13 +526,25 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -452,10 +552,12 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
-              "name": "Souffle de foudre"
+              "name": "Souffle de foudre",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Repulsion Breath": {
-              "name": "Souffle répulsif"
+              "name": "Souffle répulsif",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 18 m du [[lookup @name lowercase]]{monstre}.</p>"
             }
           }
         },
@@ -467,7 +569,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -482,7 +589,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Côtier",
@@ -493,7 +605,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -520,7 +638,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -530,15 +654,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
-              "name": "Souffle d'acide"
+              "name": "Souffle d'acide",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Slowing Breath": {
-              "name": "Souffle engourdissant"
+              "name": "Souffle engourdissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Slowed": {
-              "name": "Ralenti"
+              "name": "Ralenti",
+              "description": "<p>Vous êtes ralenti. Tant que vous êtes ralenti, vous ne pouvez pas jouer de réaction, votre vitesse est réduite de moitié et vous ne pouvez effectuer plus d'une attaque à votre tour. De plus, vous n'avez droit qu'à une action ou une action bonus lors de votre tour (pas les deux).</p><p>Ces effets persistent pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
@@ -550,7 +677,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -565,7 +697,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Colline",
@@ -580,7 +717,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -607,7 +750,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -617,21 +766,30 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Weakening Breath": {
-              "name": "Souffle affaiblissant"
+              "name": "Souffle affaiblissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Weakened": {
-              "name": "Affaibli"
+              "name": "Affaibli",
+              "description": "<p>Vous êtes affaibli. Tant que vous êtes affaibli, vous êtes désavantagé aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -641,7 +799,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -656,7 +819,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -671,7 +839,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -698,7 +872,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -720,7 +900,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -735,7 +920,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -746,7 +936,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -758,7 +954,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -795,7 +997,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -810,7 +1017,12 @@
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -821,7 +1033,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -848,7 +1066,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -858,21 +1082,30 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
-              "name": "Souffle glacial"
+              "name": "Souffle glacial",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Vous êtes &reference[paralyzed apply=false]{paralysé} pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -882,7 +1115,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -891,12 +1129,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -928,7 +1172,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -936,7 +1185,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -951,7 +1206,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -969,12 +1230,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         }
       },
       "habitat": "Arctique",
@@ -988,7 +1255,8 @@
           "description": "<p>L'[[lookup @name lowercase]]{monstre} peut entrer dans l'espace d'une créature hostile et s'y arrêter. Il peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>",
           "effects": {
             "Air Form": {
-              "name": "Corps d'air"
+              "name": "Corps d'air",
+              "description": "<p>Vous pouvez entrer dans l'espace d'une créature hostile et vous y arrêter. Vous pouvez vous déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{vous faufiler}.</p>"
             }
           }
         },
@@ -1004,7 +1272,18 @@
         "Whirlwind": {
           "name": "Tourbillon",
           "description": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de [[/save activity=O0oP6dlhQ4kdTAGU]]. En cas d'échec, une cible subit [[/damage average activity=O0oP6dlhQ4kdTAGU]] et se retrouve projetée à 6 m de l'[[lookup @name lowercase]]{monstre}, dans une direction aléatoire, pour finir &reference[prone]{à terre}. Si une cible projetée ainsi entre en collision avec un obstacle (comme un mur ou le sol), elle subit [[/damage activity=dnd5eactivity000 average]] par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de [[/save activity=k9fqQYuxbnT3pwT3]] sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p><p>Si le jet de sauvegarde est réussi, la cible subit la moitié des dégâts contondants et n'est ni projetée ni jetée à terre.</p>",
-          "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. En cas d'échec, une cible se retrouve projetée à 6 m de l'[[lookup @name lowercase]]{monstre}, dans une direction aléatoire, pour finir &reference[prone]{à terre}. Si la cible entre en collision avec une autre créature, cette dernière doit effectuer un jet de sauvegarde de Dextérité sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p>"
+          "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. En cas d'échec, une cible se retrouve projetée à 6 m de l'[[lookup @name lowercase]]{monstre}, dans une direction aléatoire, pour finir &reference[prone]{à terre}. Si la cible entre en collision avec une autre créature, cette dernière doit effectuer un jet de sauvegarde de Dextérité sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Creature Collision Save": {
+              "name": "Sauvegarde de collision de créature"
+            },
+            "Whirlwind Save": {
+              "name": "Sauvegarde Tourbillon"
+            },
+            "Object Collision Damage": {
+              "name": "Dégâts de collision avec un obstacle"
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -1019,7 +1298,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1046,7 +1331,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1068,7 +1359,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1077,11 +1373,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Marécage"
@@ -1091,7 +1394,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1110,7 +1419,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Claw": {
           "name": "Griffe",
@@ -1123,7 +1437,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1149,11 +1469,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Désert",
@@ -1164,7 +1491,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1186,7 +1519,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1201,21 +1540,30 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>"
             }
           },
           "effects": {
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Vous êtes &reference[unconcious apply=false]{inconscient} pendant 10 minutes. Cet effet prend fin pour vous si vous subissez des dégâts ou que quelqu'un consacre une action à vous réveiller.</p>"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1225,7 +1573,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1234,11 +1587,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Désert"
@@ -1252,7 +1612,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1279,7 +1645,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1289,16 +1661,24 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
-              "name": "Souffle de foudre"
+              "name": "Souffle de foudre",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Repulsion Breath": {
-              "name": "Souffle répulsif"
+              "name": "Souffle répulsif",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 18 m du [[lookup @name lowercase]]{monstre}.</p>"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1312,16 +1692,28 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         }
       },
       "habitat": "Côtier"
@@ -1336,7 +1728,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Bite": {
           "name": "Morsure",
@@ -1359,13 +1757,25 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1374,7 +1784,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1383,11 +1798,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -1395,15 +1817,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
-              "name": "Souffle d'acide"
+              "name": "Souffle d'acide",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Slowing Breath": {
-              "name": "Souffle engourdissant"
+              "name": "Souffle engourdissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Slowed": {
-              "name": "Ralenti"
+              "name": "Ralenti",
+              "description": "<p>Vous êtes ralenti. Tant que vous êtes ralenti, vous ne pouvez pas jouer de réaction, votre vitesse est réduite de moitié et vous ne pouvez effectuer plus d'une attaque à votre tour. De plus, vous n'avez droit qu'à une action ou une action bonus lors de votre tour (pas les deux).</p><p>Ces effets persistent pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         }
@@ -1419,7 +1844,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1446,7 +1877,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1456,15 +1893,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Weakening Breath": {
-              "name": "Souffle affaiblissant"
+              "name": "Souffle affaiblissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Weakened": {
-              "name": "Affaibli"
+              "name": "Affaibli",
+              "description": "<p>Vous êtes affaibli. Tant que vous êtes affaibli, vous êtes désavantagé aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
@@ -1476,7 +1916,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1485,15 +1930,28 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         }
       },
       "habitat": "Prairie"
@@ -1507,7 +1965,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1534,7 +1998,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1556,7 +2026,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1565,11 +2040,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Forêt",
@@ -1599,7 +2081,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1615,7 +2103,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1633,16 +2127,28 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -1653,7 +2159,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1680,7 +2192,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1690,21 +2208,30 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
-              "name": "Souffle glacial"
+              "name": "Souffle glacial",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Vous êtes &reference[paralyzed apply=false]{paralysé} pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
         "Change Shape": {
           "name": "Changement de forme",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} se transforme magiquement en humanoïde ou bête dont le facteur de puissance n'est pas supérieur au sien, ou retrouve sa forme véritable. S'il meurt, il reprend sa forme véritable. Tout l'équipement qu'il porte est absorbé ou porté par la nouvelle forme (à sa convenance).</p><p>Quelle que soit sa forme nouvelle, le [[lookup @name lowercase]]{monstre} conserve son alignement, ses points de vie, ses DV, sa faculté de parole, ses maîtrises, sa Résistance légendaire, ses actions d'antre et ses valeurs d'Intelligence, de Sagesse et de Charisme, ainsi que cette action. Son profil et ses facultés sont pour le reste remplacés par ceux de la nouvelle forme, à l'exception des éventuelles aptitudes de classe et actions légendaires de cette forme.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se transforme en humanoïde ou en bête !</p>",
+          "activities": {
+            "Change Shape into Humanoid or Beast": {
+              "name": "Changer de forme en humanoïde ou bête"
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1718,17 +2245,28 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          }
         },
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         }
       },
       "habitat": "Montagne"
@@ -1759,7 +2297,12 @@
         "Detect": {
           "name": "Détection",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue un test de Sagesse (Perception).</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} observe les environs…</p>",
+          "activities": {
+            "Look Around": {
+              "name": "Observer les environs"
+            }
+          }
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1767,7 +2310,13 @@
           "chat": "<p>Chaque créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]] de lui, si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante du dragon pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -1782,7 +2331,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1800,11 +2355,18 @@
             "Swing Tail": {
               "name": "Coup de queue"
             }
-          }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} frappe violemment son adversaire avec sa longue queue !</p>"
         },
         "Wing Attack": {
           "name": "Attaque d'ailes",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} bat violemment des ailes. Chaque créature dans un rayon de [[lookup @labels.description.range activity=4U3711rd7WmlJIhy]] du [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être jetée &Reference[prone]{à terre}. Le [[lookup @name lowercase]]{monstre} peut alors voler à concurrence de la moitié de sa vitesse de vol.</p>",
+          "activities": {
+            "Flap Wings": {
+              "name": "Battre des ailes"
+            }
+          },
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bat des ailes !</p>"
         }
       },
       "habitat": "Arctique",
@@ -1936,7 +2498,8 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>[[lookup @resources.legact.label]]</p>"
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         }
       },
       "languages": "sphinx",
@@ -2236,9 +2799,11 @@
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible effectue un jet de sauvegarde de [[/save activity=K4WCmn76MTQNDMpO]] et subit [[/damage average activity=K4WCmn76MTQNDMpO]] en cas d'échec, la moitié en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
-          }
+          },
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Light Crossbow": {
           "name": "Arbalète légère",
@@ -2246,7 +2811,8 @@
           "chat": "<p>L'[[lookup @name]] attaque avec Arbalète légère.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -2428,7 +2994,12 @@
         "Whip": {
           "name": "Fouet",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être tirée d'un maximum de 7,50 m vers le [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Force.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Force.</p>",
+          "activities": {
+            "Pull Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         }
       },
       "subtype": "Démon",
@@ -2479,7 +3050,8 @@
         },
         "Parry": {
           "name": "Parade",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher. Pour ce faire, il doit voir l'assaillant et manier une arme de corps à corps.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} ajoute 2 à sa CA contre une attaque de corps à corps censée le toucher.</p>"
         }
       },
       "subtype": "Toute race",
@@ -2584,14 +3156,20 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
         "Glaive": {
           "name": "Coutille",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de perdre 5 (1d10) points de vie au début de chacun de ses tours en raison d'une plaie infernale. Chaque fois que le [[lookup @name lowercase]]{monstre} touche la cible victime d'une telle plaie avec cette attaque, les dégâts infligés par la plaie augmentent de 5 (1d10). Toute créature peut stopper l'hémorragie en réussissant un test de [[/check 12 wis med]], au prix d'une action. La plaie se referme aussi si la cible reçoit des soins magiques.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle effectue un jet de sauvegarde de Constitution. Toute créature peut stopper l'hémorragie en réussissant un test de Sagesse (Médecine).</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle effectue un jet de sauvegarde de Constitution. Toute créature peut stopper l'hémorragie en réussissant un test de Sagesse (Médecine).</p>",
+          "activities": {
+            "Infernal Wound Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -2846,7 +3424,12 @@
         "Relentless": {
           "name": "Implacable",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} subit 7 dégâts ou moins censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
-          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} subit des dégâts censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>"
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} subit des dégâts censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -2866,7 +3449,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Dard. La cible doit réussir un jet de sauvegarde de Constitution. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -2900,15 +3484,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>"
             }
           },
           "effects": {
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Vous êtes &reference[unconcious apply=false]{inconscient} pendant 1 minute. Cet effet prend fin pour vous si vous subissez des dégâts ou que quelqu'un consacre une action à vous réveiller.</p>"
             }
           }
         }
@@ -2933,10 +3520,12 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
-              "name": "Souffle de foudre"
+              "name": "Souffle de foudre",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Repulsion Breath": {
-              "name": "Souffle répulsif"
+              "name": "Souffle répulsif",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 18 m du [[lookup @name lowercase]]{monstre}.</p>"
             }
           }
         }
@@ -3203,7 +3792,12 @@
         "Slam": {
           "name": "Coup",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de point de vie est réduit d'autant que les dégâts subis. La cible meurt si cette attaque réduit son maximum de points de vie à 0. Cette réduction persiste jusqu'à ce qu'on l'élimine par le sort <em>@UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême}</em> ou une magie équivalente.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Hit Point Reduction Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Haste": {
           "name": "Hâte",
@@ -3225,7 +3819,8 @@
           "chat": "<p>[[lookup @name]] utilise Folie furieuse.</p>",
           "activities": {
             "Go Berserk": {
-              "roll": "Test Folie furieuse"
+              "roll": "Test Folie furieuse",
+              "chatFlavor": "Sur un résultat de 1, le [[lookup @name lowercase]]{monstre} devient fou furieux."
             }
           },
           "effects": {
@@ -3290,7 +3885,12 @@
         },
         "Phantasms": {
           "name": "Fantasmagories",
-          "description": "<p>S'il n'est pas exposé à une &reference[bright light]{lumière vive}, le [[lookup @name lowercase]]{monstre} crée magiquement trois doubles illusoires de lui-même. Ces doubles se déplacent avec lui, reproduisent ses actions et échangent mutuellement de position, si bien qu'il est impossible de savoir où est le vrai [[lookup @name lowercase]]{monstre}. Si le [[lookup @name lowercase]]{monstre} se retrouve dans un zone de lumière vive, les doubles disparaissent. Chaque fois qu'une créature cible le [[lookup @name lowercase]]{monstre} avec une attaque ou un sort nuisible alors qu'il reste au moins un double, on détermine au hasard si l'attaque cible le [[lookup @name lowercase]]{monstre} ou l'un de ses doubles. Une créature qui ne voit rien ou se fie à d'autres sens que la vision n'est pas affectée par cet effet magique.</p><p>Chaque double reprend la CA du [[lookup @name lowercase]]{monstre} et ses jets de sauvegarde. Si une attaque touche un double ou si un double rate un jet de sauvegarde contre un effet qui inflige des dégâts, le double disparaît.</p>"
+          "description": "<p>S'il n'est pas exposé à une &reference[bright light]{lumière vive}, le [[lookup @name lowercase]]{monstre} crée magiquement trois doubles illusoires de lui-même. Ces doubles se déplacent avec lui, reproduisent ses actions et échangent mutuellement de position, si bien qu'il est impossible de savoir où est le vrai [[lookup @name lowercase]]{monstre}. Si le [[lookup @name lowercase]]{monstre} se retrouve dans un zone de lumière vive, les doubles disparaissent. Chaque fois qu'une créature cible le [[lookup @name lowercase]]{monstre} avec une attaque ou un sort nuisible alors qu'il reste au moins un double, on détermine au hasard si l'attaque cible le [[lookup @name lowercase]]{monstre} ou l'un de ses doubles. Une créature qui ne voit rien ou se fie à d'autres sens que la vision n'est pas affectée par cet effet magique.</p><p>Chaque double reprend la CA du [[lookup @name lowercase]]{monstre} et ses jets de sauvegarde. Si une attaque touche un double ou si un double rate un jet de sauvegarde contre un effet qui inflige des dégâts, le double disparaît.</p>",
+          "activities": {
+            "Duplicate Hit Check": {
+              "chatFlavor": "Sur un résultat de 1, le vrai [[lookup @name lowercase]]{monstre} est touché. Sur un résultat de 0, un double est touché."
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -3377,7 +3977,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution. En cas d'échec, elle doit réitérer le jet de sauvegarde à la fin de son tour suivant.</p>",
           "activities": {
             "Petrification Save": {
-              "name": "Sauvegarde de pétrification"
+              "name": "Sauvegarde de pétrification",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -3429,15 +4030,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
-              "name": "Souffle d'acide"
+              "name": "Souffle d'acide",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Slowing Breath": {
-              "name": "Souffle engourdissant"
+              "name": "Souffle engourdissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Slowed": {
-              "name": "Ralenti"
+              "name": "Ralenti",
+              "description": "<p>Vous êtes ralenti. Tant que vous êtes ralenti, vous ne pouvez pas jouer de réaction, votre vitesse est réduite de moitié et vous ne pouvez effectuer plus d'une attaque à votre tour. De plus, vous n'avez droit qu'à une action ou une action bonus lors de votre tour (pas les deux).</p><p>Ces effets persistent pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         }
@@ -3453,7 +4057,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -3722,7 +4327,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution. Toutes les 24 heures après cela, la créature réitère le jet de sauvegarde.</p>",
           "activities": {
             "Disease Save": {
-              "name": "Sauvegarde contre la maladie"
+              "name": "Sauvegarde contre la maladie",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -3768,7 +4374,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           },
           "effects": {
@@ -3875,7 +4482,13 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -3904,7 +4517,12 @@
         "Create Whirlwind": {
           "name": "Création de tourbillon",
           "description": "<p>Un [[lookup lowercase @labels.description.template activity=5QSOnuuVfbhaFcH4]] d'air tourbillonnant, se forme en un point que le djinn voit dans un rayon de [[lookup @labels.description.range activity=5QSOnuuVfbhaFcH4]]. Le tourbillon persiste aussi longtemps que le djinn maintient sa concentration (comme pour un sort). Toute créature autre que le djinn qui pénètre dans le tourbillon doit réussir un jet de sauvegarde de [[/save]] sous peine d'être entravée par les turbulences. Le djinn peut déplacer le tourbillon d'un maximum de [[lookup @labels.description.range activity=gtStP2vVpkp7MMw5]] au prix d'une action ; les créatures entravées par l'effet sont déplacées avec lui. Le tourbillon prend fin si le djinn le perd de vue.</p><p>Une créature peut consacrer son action à libérer une créature entravée par le tourbillon (éventuellement elle-même), ce qui nécessite de réussir un test de [[/check activity=LlBHDTeLFiSXeSPL]]. En cas de réussite, la créature n'est plus entravée et se déplace dans l'espace extérieur au tourbillon le plus proche.</p>",
-          "chat": "<p>Un [[lookup lowercase @labels.description.template activity=5QSOnuuVfbhaFcH4]] d'air tourbillonnant, se forme en un point que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @labels.description.range activity=5QSOnuuVfbhaFcH4]]. Toute créature autre que le [[lookup @name lowercase]]{monstre} qui pénètre dans le tourbillon doit effectuer un jet de sauvegarde de Force sous peine d'être &reference[restrained]{entravée} par les turbulences. Le [[lookup @name lowercase]]{monstre} peut déplacer le tourbillon d'un maximum de [[lookup @labels.description.range activity=gtStP2vVpkp7MMw5]] au prix d'une action ; les créatures entravées par l'effet sont déplacées avec lui.</p><p>Une créature peut consacrer son action à libérer une créature entravée par le tourbillon (éventuellement elle-même), ce qui nécessite de réussir un test de Force. En cas de réussite, la créature n'est plus entravée et se déplace dans l'espace extérieur au tourbillon le plus proche.</p>"
+          "chat": "<p>Un [[lookup lowercase @labels.description.template activity=5QSOnuuVfbhaFcH4]] d'air tourbillonnant, se forme en un point que le [[lookup @name lowercase]]{monstre} voit dans un rayon de [[lookup @labels.description.range activity=5QSOnuuVfbhaFcH4]]. Toute créature autre que le [[lookup @name lowercase]]{monstre} qui pénètre dans le tourbillon doit effectuer un jet de sauvegarde de Force sous peine d'être &reference[restrained]{entravée} par les turbulences. Le [[lookup @name lowercase]]{monstre} peut déplacer le tourbillon d'un maximum de [[lookup @labels.description.range activity=gtStP2vVpkp7MMw5]] au prix d'une action ; les créatures entravées par l'effet sont déplacées avec lui.</p><p>Une créature peut consacrer son action à libérer une créature entravée par le tourbillon (éventuellement elle-même), ce qui nécessite de réussir un test de Force. En cas de réussite, la créature n'est plus entravée et se déplace dans l'espace extérieur au tourbillon le plus proche.</p>",
+          "activities": {
+            "Whirlwind Save": {
+              "name": "Sauvegarde Tourbillon"
+            }
+          }
         },
         "Conjure Air Elemental": {
           "name": "Invocation d’élémentaire de l’air",
@@ -4043,12 +4661,24 @@
         "Tail": {
           "name": "Queue",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum de 3 m du dragon-tortue et d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum de 3 m du dragon-tortue et d'être jetée &Reference[prone]{à terre}.</p>"
+            }
+          }
         },
         "Steam Breath": {
           "name": "Souffle de vapeur",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale de la vapeur sous forme d'un [[lookup lowercase @labels.description.template activity=4P1o1KZZ4sUzsAOu]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite. Être immergé sous l'eau n'octroie pas la résistance à ces dégâts.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} exhale de la vapeur sous forme d'un [[lookup lowercase @labels.description.template activity=4P1o1KZZ4sUzsAOu]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} exhale de la vapeur sous forme d'un [[lookup lowercase @labels.description.template activity=4P1o1KZZ4sUzsAOu]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Exhale Steam": {
+              "name": "Exhaler de la vapeur"
+            }
+          }
         }
       },
       "habitat": "Sous-marin"
@@ -4171,7 +4801,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -4650,7 +5281,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -4687,7 +5319,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La créature ciblée effectue un jet de sauvegarde de Constitution. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -4802,7 +5435,8 @@
           "chat": "<p>Le [[lookup @name]] utilise Folie furieuse.</p>",
           "activities": {
             "Go Berserk": {
-              "roll": "Test Folie furieuse"
+              "roll": "Test Folie furieuse",
+              "chatFlavor": "Sur un résultat de 1, le [[lookup @name lowercase]]{monstre} devient fou furieux."
             }
           },
           "effects": {
@@ -5170,7 +5804,12 @@
         "Relentless": {
           "name": "Implacable",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} subit 10 dégâts ou moins censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer"
+            }
+          }
         },
         "Tusk": {
           "name": "Défense",
@@ -5190,7 +5829,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible doit réussir un jet de sauvegarde de Constitution sous peine de subir des dégâts de poison. Si ces dégâts de poison réduisent à 0 les points de vie de la cible, celle-ci est stabilisée, mais subit l'état &Reference[poisoned]{empoisonné} pendant [[lookup @labels.duration activity=RQqJ9wFgglGmzsYF]], même après avoir récupéré des points de vie, et l'état &Reference[paralyzed]{paralysé} tant qu'elle est empoisonnée de cette manière.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -5250,7 +5890,13 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible qui n'est pas agrippée par le crocodile. <em>Touché :</em> 14 ([[/damage]]{2d8 + 5}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Force.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Force.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         }
       },
       "habitat": "Marécage",
@@ -5467,7 +6113,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -5504,7 +6151,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Disease Save": {
-              "name": "Sauvegarde contre la maladie"
+              "name": "Sauvegarde contre la maladie",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -5538,7 +6186,8 @@
           "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -5608,7 +6257,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monster} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -5690,7 +6340,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -5727,7 +6378,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -5773,7 +6425,13 @@
         "Bites": {
           "name": "Morsures",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. Si la cible est de taille M ou inférieure, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. Si la cible est de taille M ou inférieure, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         },
         "Blinding Spittle": {
           "name": "Crachat aveuglant",
@@ -5876,7 +6534,13 @@
         "Shield Bash": {
           "name": "Coup de bouclier",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature de taille M ou inférieure, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature de taille M ou inférieure, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         },
         "Parry": {
           "name": "Parade",
@@ -6000,15 +6664,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Weakening Breath": {
-              "name": "Souffle affaiblissant"
+              "name": "Souffle affaiblissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Weakened": {
-              "name": "Affaibli"
+              "name": "Affaibli",
+              "description": "<p>Vous êtes affaibli. Tant que vous êtes affaibli, vous êtes désavantagé aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         }
@@ -6277,7 +6944,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -6287,7 +6955,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -6481,7 +7150,8 @@
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
-          "description": "<p>[[lookup @resources.legact.label]]</p>"
+          "description": "<p>[[lookup @resources.legact.label]]</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         }
       },
       "languages": "sphinx",
@@ -6754,7 +7424,12 @@
         "Tail": {
           "name": "Queue",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de perdre 10 (3d6) points de vie au début de chacun de ses tours en raison d'une plaie infernale. Chaque fois que le diable touche la cible victime d'une telle plaie avec cette attaque, les dégâts infligés par la plaie augmentent de 10 (3d6). Toute créature peut stopper l'hémorragie en réussissant un test de [[/check 12 wis med]], au prix d'une action. La plaie se referme aussi si la cible reçoit des soins magiques.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Infernal Wound Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -6974,7 +7649,12 @@
         "Sting (Bite in Beast Form)": {
           "name": "Dard (Morsure sous forme de bête)",
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
-          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=hUmRNvmmpY5rJfVE]] en cas d'échec, la moitié en cas de réussite.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=hUmRNvmmpY5rJfVE]] en cas d'échec, la moitié en cas de réussite.</p>",
+          "activities": {
+            "save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Devil Sight": {
           "name": "Vision du diable",
@@ -7215,7 +7895,12 @@
         "Fling": {
           "name": "Projection",
           "description": "<p>Le [[lookup @name lowercase]] projette un objet ou une créature de taille G ou inférieure qu'il &reference[grappled apply=false]{agrippe}, sur une distance maximale de [[lookup @labels.description.range activity=sJvtsq6W2RMb5ekp]] et dans une direction aléatoire, et la cible se retrouve &reference[prone]{à terre}.</p><p>Si une cible projetée ainsi entre en collision avec une surface solide, elle subit [[/damage average activity=sJvtsq6W2RMb5ekp]] par tranche de 3 m de projection. Si la cible entre en collision avec une autre créature, cette dernière doit réussir un jet de sauvegarde de [[/save activity=POuIOxIPF4zYDksd]] sous peine de subir les mêmes dégâts d'impact et de se retrouver &reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} projette un objet ou une créature de taille G ou inférieure qu'il agrippe, sur une distance maximale de [[lookup @labels.description.range activity=sJvtsq6W2RMb5ekp]] et dans une direction aléatoire, et la cible se retrouve &reference[prone]{à terre}. Si la cible entre en collision avec une autre créature, cette dernière doit effectuer un jet de sauvegarde de Dextérité sous peine de subir les mêmes dégâts d'impact et de se retrouver à terre.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} projette un objet ou une créature de taille G ou inférieure qu'il agrippe, sur une distance maximale de [[lookup @labels.description.range activity=sJvtsq6W2RMb5ekp]] et dans une direction aléatoire, et la cible se retrouve &reference[prone]{à terre}. Si la cible entre en collision avec une autre créature, cette dernière doit effectuer un jet de sauvegarde de Dextérité sous peine de subir les mêmes dégâts d'impact et de se retrouver à terre.</p>",
+          "activities": {
+            "Creature Collision Save": {
+              "name": "Sauvegarde de collision de créature"
+            }
+          }
         },
         "Lightning Storm": {
           "name": "Tempête foudroyante",
@@ -7357,6 +8042,11 @@
             "Frightening Gaze": {
               "name": "Regard horrifique"
             }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
+            }
           }
         },
         "Disrupt Life": {
@@ -7366,7 +8056,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si la [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si la [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Rejuvenation": {
           "name": "Reconstitution",
@@ -7515,6 +8211,11 @@
             "Paralysis": {
               "name": "Paralysie"
             }
+          },
+          "activities": {
+            "Paralysis Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
           }
         }
       },
@@ -7617,7 +8318,8 @@
         },
         "Dagger": {
           "name": "Dague",
-          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants.</p>"
+          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Fire Bolt": {
           "name": "Trait de feu",
@@ -7890,7 +8592,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>",
+          "activities": {
+            "save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -8016,7 +8723,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 3 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.pOPQU4UnR27zA0jf.Item.zTqVT0QztTuMOv0e]{Coup de corne} au même tour, il lui inflige [[/damage average]] supplémentaires.</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum 3 m et jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>",
+          "activities": {
+            "Prone Save": {
+              "name": "Sauvegarde À terre"
+            }
+          }
         },
         "Labyrinthine Recall": {
           "name": "Mémoire des labyrinthes",
@@ -8098,7 +8810,12 @@
         "Rotting Fist": {
           "name": "Poing putréfié",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>",
-          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Curse Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Dreadful Glare": {
           "name": "Regard effroyable",
@@ -8157,7 +8874,12 @@
         "Rotting Fist": {
           "name": "Poing putréfié",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être maudite par la putréfaction de momie. Une créature qui subit cette malédiction ne peut plus récupérer de points de vie, tandis que son maximum de points de vie diminue de 10 (3d6) toutes les 24 heures. Si la malédiction réduit le maximum de points de vie de la cible à 0, celle-ci meurt et son corps est réduit en poussière. Cette malédiction persiste jusqu'à ce qu'on l'élimine par le sort @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>",
-          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Curse Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Dreadful Glare": {
           "name": "Regard effroyable",
@@ -8620,7 +9342,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Disease Save": {
-              "name": "Sauvegarde contre la maladie"
+              "name": "Sauvegarde contre la maladie",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           },
           "effects": {
@@ -8753,7 +9476,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -8771,6 +9495,11 @@
           "effects": {
             "Terrified": {
               "name": "Terrifié"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -8942,7 +9671,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -9083,7 +9813,19 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être empoisonnée pendant 1 heure. Si le jet de sauvegarde est raté d'au moins 5, la cible tombe inconsciente pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>"
+            }
+          },
+          "effects": {
+            "Pseudodragon Poison": {
+              "name": "Poison du pseudodragon",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pendant 1 heure.</p>"
+            },
+            "Potent Pseudodragon Poison": {
+              "name": "Poison puissant du pseudodragon",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pendant 1 heure. Vous êtes également &reference[unconscious apply=false]{inconscient} pendant la même durée, mais vous vous réveillez si vous subissez des dégâts ou si une autre créature consacre une action à vous sortir énergiquement de votre sommeil.</p>"
             }
           }
         }
@@ -9118,7 +9860,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -9149,7 +9892,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -9568,7 +10312,8 @@
       "items": {
         "Spear": {
           "name": "Lance",
-          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m,une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants, ou 5 ([[/damage attackMode=twoHanded]]{1d8 + 1}) dégâts perforants si utilisée à deux mains dans le cadre d'une attaque de corps à corps.</p>"
+          "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m,une cible. <em>Touché :</em> 4 ([[/damage]]{1d6 + 1}) dégâts perforants, ou 5 ([[/damage attackMode=twoHanded]]{1d8 + 1}) dégâts perforants si utilisée à deux mains dans le cadre d'une attaque de corps à corps.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Bite": {
           "name": "Morsure",
@@ -9638,11 +10383,13 @@
       "items": {
         "Shortbow": {
           "name": "Arc court",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 24/96 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts perforants.</p>"
+          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 24/96 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts perforants.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Shortsword": {
           "name": "Épée courte",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts perforants.</p>"
+          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts perforants.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Leather Armor": {
           "name": "Armure de cuir",
@@ -9667,7 +10414,12 @@
         "Sting": {
           "name": "Dard",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]], et subit [[/damage average activity=b0UbkEkjgaqHm8tR]] en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         }
       },
       "habitat": "Désert",
@@ -9771,7 +10523,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Sunlight Sensitivity": {
-          "name": "Sensibilité au soleil"
+          "name": "Sensibilité au soleil",
+          "description": "<p>Quand l'[[lookup @name lowercase]]{monstre} est exposée à la lumière du soleil, elle est désavantagée aux jets d'attaque ainsi qu'aux tests de Sagesse (Perception) basés sur la vue.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -9879,15 +10632,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
-              "name": "Souffle glacial"
+              "name": "Souffle glacial",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Vous êtes &reference[paralyzed apply=false]{paralysé} pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         }
@@ -10050,7 +10806,12 @@
         "Life Drain": {
           "name": "Absorption de vie",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible doit réussir un jet de sauvegarde de [[/save]], sans quoi son maximum de point de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la créature termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Drain Maximum Hit Point Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
@@ -10098,7 +10859,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         },
@@ -10184,7 +10946,12 @@
         "Shortbow": {
           "name": "Arc court",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=vMfBrhdjnxaKy0Wn]]. Si le jet de sauvegarde est raté d'au moins 5, la cible empoisonnée tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
-          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>",
+          "activities": {
+            "save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         },
         "Longsword": {
           "name": "Épée longue",
@@ -10314,7 +11081,13 @@
         "Rock": {
           "name": "Rocher",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=GOn2YYbOxKVKqvwx]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         },
         "Rock Catching": {
           "name": "Réception de rocher",
@@ -10605,7 +11378,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{nuée} attaque avec un déluge de [[lookup @item.name]].</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -10747,7 +11521,13 @@
       "items": {
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si La [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si La [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, elle peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -10759,7 +11539,8 @@
           "chat": "<p>La [[lookup @name]] utilise Carapace réfléchissante.</p>",
           "activities": {
             "Reflect Spell": {
-              "name": "Renvoyer le sort"
+              "name": "Renvoyer le sort",
+              "chatFlavor": "Sur un résultat de 6, le sort est renvoyé vers l'incantateur."
             }
           }
         },
@@ -10789,7 +11570,13 @@
         "Tail": {
           "name": "Queue",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -10797,7 +11584,13 @@
           "chat": "<p>Chaque créature choisie par la [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=2VOmvThI0bGdUsMt]], si elle est consciente de sa présence, doit réussir un jet de sauvegarde de Sagesse. Une créature peut réitérer le JS à la fin de chacun de ses tours.</p>",
           "effects": {
             "Frightful Presence": {
-              "name": "Présence terrifiante"
+              "name": "Présence terrifiante",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé} pendant 1 minute.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite. Si vous réussissez votre jet de sauvegarde ou si l'effet prend fin sur vous, vous devenez immunisé contre la Présence terrifiante de la tarasque pendant 24 heures.</p>"
+            }
+          },
+          "activities": {
+            "Fear Save": {
+              "name": "Sauvegarde Effrayé"
             }
           }
         },
@@ -11141,7 +11934,13 @@
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
-          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>"
+          "description": "<p>Si le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde, il peut décider de le réussir tout de même.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} rate un jet de sauvegarde."
+            }
+          }
         },
         "Misty Escape": {
           "name": "Échappatoire brumeuse",
@@ -11412,7 +12211,8 @@
           "description": "<p>L'[[lookup @name lowercase]]{monstre} peut entrer dans l’espace d'une créature hostile et s'y arrêter. Il peut se déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{se faufiler}.</p>",
           "effects": {
             "Water Form": {
-              "name": "Corps d'eau"
+              "name": "Corps d'eau",
+              "description": "<p>Vous pouvez entrer dans l'espace d'une créature hostile et vous y arrêter. Vous pouvez vous déplacer dans un espace étroit d'une largeur minimale de 2,5 cm sans même devoir &reference[squeezing]{vous faufiler}.</p>"
             }
           }
         },
@@ -11506,7 +12306,12 @@
         "Relentless": {
           "name": "Implacable",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} subit 14 dégâts ou moins censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>",
+          "activities": {
+            "Persevere": {
+              "name": "Persévérer"
+            }
+          }
         },
         "Shapechanger": {
           "name": "Métamorphe",
@@ -11735,6 +12540,9 @@
           "activities": {
             "Raise Zombie": {
               "name": "Relever un zombi"
+            },
+            "Drain Maximum Hit Point Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -11822,7 +12630,13 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         },
         "Cold Breath": {
           "name": "Souffle glacial",
@@ -11848,7 +12662,13 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -11864,7 +12684,13 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle effectue un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Prone Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde À terre"
+            }
+          }
         }
       },
       "languages": "worg",
@@ -11901,7 +12727,12 @@
         "Life Drain": {
           "name": "Absorption de vie",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible doit effectuer un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible doit effectuer un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Drain Maximum Hit Point Save": {
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
+            }
+          }
         }
       },
       "languages": "celles qu'elle parlait de son vivant",
@@ -11931,7 +12762,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature est touchée par cette attaque."
             }
           }
         }
@@ -12052,15 +12884,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'une [[lookup lowercase @labels.description.template activity=NBdXGRF1vahbq4p8]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=NBdXGRF1vahbq4p8]] et subit [[/damage average activity=NBdXGRF1vahbq4p8]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs somnifères sous forme d'un [[lookup lowercase @labels.description.template activity=O02zuaLvAqtmgutQ]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=O02zuaLvAqtmgutQ]] sous peine de tomber &Reference[unconscious]{inconsciente} pendant [[lookup @labels.duration activity=O02zuaLvAqtmgutQ]]. Cet effet prend fin pour une créature si elle subit des dégâts ou que quelqu'un consacre une action à la réveiller.</p>"
             }
           },
           "effects": {
             "Sleep Breath": {
-              "name": "Souffle soporifique"
+              "name": "Souffle soporifique",
+              "description": "<p>Vous êtes &reference[unconcious apply=false]{inconscient} pendant 5 minutes. Cet effet prend fin pour vous si vous subissez des dégâts ou que quelqu'un consacre une action à vous réveiller.</p>"
             }
           }
         },
@@ -12095,10 +12930,12 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Lightning Breath": {
-              "name": "Souffle de foudre"
+              "name": "Souffle de foudre",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de la foudre sous forme d'une [[lookup lowercase @labels.description.template activity=w2CftR6CLr5PZ7zY]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=w2CftR6CLr5PZ7zY]] et subit [[/damage average activity=w2CftR6CLr5PZ7zY]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Repulsion Breath": {
-              "name": "Souffle répulsif"
+              "name": "Souffle répulsif",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des énergies répulsives sous forme d'un [[lookup lowercase @labels.description.template activity=YElWYv6C5UfhAu48]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=YElWYv6C5UfhAu48]]. En cas d'échec, la créature est repoussée de 18 m du [[lookup @name lowercase]]{monstre}.</p>"
             }
           }
         },
@@ -12134,15 +12971,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Acid Breath": {
-              "name": "Souffle d'acide"
+              "name": "Souffle d'acide",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache de l'acide sous forme d'une [[lookup lowercase @labels.description.template activity=zTWpuajI6meBb52D]]. Chaque créature prise dans la ligne effectue un jet de sauvegarde de [[/save activity=zTWpuajI6meBb52D]] et subit [[/damage average activity=zTWpuajI6meBb52D]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Slowing Breath": {
-              "name": "Souffle engourdissant"
+              "name": "Souffle engourdissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=CkPMajPOZWWj3gl0]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=CkPMajPOZWWj3gl0]]. En cas d'échec, la créature ne peut pas jouer de réaction, sa vitesse est réduite de moitié et elle ne peut effectuer plus d'une attaque à son tour. De plus, la créature n'a droit qu'à une action ou une action bonus lors de son tour (pas les deux). Ces effets persistent pendant [[lookup @labels.duration activity=CkPMajPOZWWj3gl0]]. La créature peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Slowed": {
-              "name": "Ralenti"
+              "name": "Ralenti",
+              "description": "<p>Vous êtes ralenti. Tant que vous êtes ralenti, vous ne pouvez pas jouer de réaction, votre vitesse est réduite de moitié et vous ne pouvez effectuer plus d'une attaque à votre tour. De plus, vous n'avez droit qu'à une action ou une action bonus lors de votre tour (pas les deux).</p><p>Ces effets persistent pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
@@ -12172,15 +13012,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Fire Breath": {
-              "name": "Souffle de feu"
+              "name": "Souffle de feu",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} crache des flammes sous forme d'un [[lookup lowercase @labels.description.template activity=o8fOmWWIqCYwGu3C]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=o8fOmWWIqCYwGu3C]] et subit [[/damage average activity=o8fOmWWIqCYwGu3C]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Weakening Breath": {
-              "name": "Souffle affaiblissant"
+              "name": "Souffle affaiblissant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs sous forme d'un [[lookup lowercase @labels.description.template activity=J4QhEMZOdsyIy2D6]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=J4QhEMZOdsyIy2D6]] sous peine d'être désavantagée aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant [[lookup @labels.duration activity=J4QhEMZOdsyIy2D6]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Weakened": {
-              "name": "Affaibli"
+              "name": "Affaibli",
+              "description": "<p>Vous êtes affaibli. Tant que vous êtes affaibli, vous êtes désavantagé aux jets d'attaque basés sur la Force, aux tests de Force et aux jets de sauvegarde de Force pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
@@ -12282,15 +13125,18 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} inspire !</p>",
           "activities": {
             "Cold Breath": {
-              "name": "Souffle glacial"
+              "name": "Souffle glacial",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]] de brume glaciale. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=U5F5qe2Hu0r0yHmk]] et subit [[/damage average activity=U5F5qe2Hu0r0yHmk]] en cas d'échec, la moitié en cas de réussite.</p>"
             },
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale des vapeurs paralysantes sous forme d'un [[lookup lowercase @labels.description.template activity=9gMvqjbgKK42uyzr]]. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save activity=9gMvqjbgKK42uyzr]] sous peine d'être paralysée pendant [[lookup @labels.duration activity=9gMvqjbgKK42uyzr]]. La créature peut réitérer ce jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
             }
           },
           "effects": {
             "Paralyzing Breath": {
-              "name": "Souffle paralysant"
+              "name": "Souffle paralysant",
+              "description": "<p>Vous êtes &reference[paralyzed apply=false]{paralysé} pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
