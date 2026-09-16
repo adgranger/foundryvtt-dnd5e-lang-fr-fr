@@ -3330,7 +3330,13 @@
         "Constrict": {
           "name": "Constriction",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille G ou inférieure. [[/damage extended]]. La cible est &Reference[grappled]{agrippée} (évasion DD 16) si le [[lookup @name lowercase]]{monstre} n'applique pas déjà sa constriction sur une créature, et la cible est &reference[restrained]{entravée} tant qu'elle est agrippée.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée} si le [[lookup @name lowercase]]{monstre} n'applique pas déjà sa constriction sur une créature, et la cible est &reference[restrained]{entravée} tant qu'elle est agrippée.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée} si le [[lookup @name lowercase]]{monstre} n'applique pas déjà sa constriction sur une créature, et la cible est &reference[restrained]{entravée} tant qu'elle est agrippée.</p>",
+          "effects": {
+            "Constricted": {
+              "name": "Constriction",
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 16). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé}.</p>"
+            }
+          }
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -3348,7 +3354,24 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>",
           "effects": {
             "Swallowed": {
-              "name": "Englouti"
+              "name": "Englouti",
+              "description": "<p>Vous avez été englouti par le béhir. Vous êtes &reference[blinded apply=false]{aveuglé}, &reference[restrained apply=false]{entravé}, et bénéficiez d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur du béhir.</p><p>Vous subissez également [[/damage average 6d6 acid]] au début de chacun des tours du béhir.</p><p>Si le béhir subit 30 dégâts ou plus lors d'un même tour de votre part, il doit réussir un jet de sauvegarde de Constitution sous peine de vous régurgiter, ce qui vous fait tomber &reference[prone]{à terre} dans un espace situé à 3 m ou moins du béhir. Si le béhir meurt, vous n'êtes plus entravé par lui et pouvez vous extraire du cadavre en dépensant 4,50 m de déplacement pour vous retrouver &reference[prone]{à terre}.</p>"
+            }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a englouti une créature.",
+              "description": "<p>La créature engloutie subit [[/damage average activity=JiBTCgEtAZs60k7R]] au début de chacun des tours du monstre.</p>"
+            },
+            "Swallow Creature": {
+              "name": "Engloutir une créature",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} touche une créature qu'il a &reference[grappled apply=false]{agrippée} avec sa @UUID[Compendium.dnd5e.monsters.Actor.x47ZnpHfYl0ptDM9.Item.4fNbTxkAFYHxDdJX]{Morsure}."
+            },
+            "Regurgitate Creature Save": {
+              "name": "Sauvegarde contre la régurgitation",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie.",
+              "description": "<p>Si le [[lookup @name lowercase]]{monstre} subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, il doit réussir un jet de sauvegarde de [[/save activity=2pCVkETAYg7qALRu]] à la fin du tour concerné sous peine de régurgiter la créature, qui se retrouve à terre dans un espace situé à 3 m ou moins du monstre. Si le [[lookup @name lowercase]]{monstre} meurt, la créature engloutie n'est plus entravée par lui et peut s'en extraire en dépensant 4,50 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>"
             }
           }
         }
@@ -3372,7 +3395,13 @@
               "description": "<p>Les jets d'attaque contre lui sont avantagés jusqu'au début de son tour suivant.</p>"
             },
             "mc0qfRRq1rZXrJbi": {
-              "name": "Téméraire"
+              "name": "Téméraire",
+              "description": "<p>Vous avez l'avantage à tous vos jets d'attaque d'arme de corps à corps pendant votre tour, mais les jets d'attaque contre vous sont avantagés jusqu'au début de votre tour suivant.</p>"
+            }
+          },
+          "activities": {
+            "Become Reckless": {
+              "name": "Devenir téméraire"
             }
           }
         },
@@ -3450,13 +3479,15 @@
           "chat": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit des dégâts d'acide. Toute arme non magique en métal ou en bois qui touche le [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée.</p>",
           "effects": {
             "Corroded Weapon": {
-              "name": "Arme corrodée"
+              "name": "Arme corrodée",
+              "description": "<p>Cette arme a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 aux jets de dégâts. Si ce malus atteint -5, l'arme est détruite.</p>"
             }
           },
           "activities": {
             "Contact Damage": {
               "name": "Dégâts de contact",
-              "condition": "Lorsqu'une créature touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui."
+              "condition": "Lorsqu'une créature touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui.",
+              "description": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit [[/damage average]]. Toute arme non magique en métal ou en bois qui touche le [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée.</p><p>Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal ou en bois qui touchent le [[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>Le [[lookup @name lowercase]]{monstre} peut ronger le bois et le métal non magiques, au rythme de 5 cm d'épaisseur par round.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.wvlDMuDDdk7peoPa.ActiveEffect.dodLAz6LZ0KlsabM]{{Arme corrodée}</p>"
             }
           }
         },
@@ -3470,14 +3501,35 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. De plus, toute armure non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure.</p>",
           "effects": {
             "Corroded Armor": {
-              "name": "Armure corrodée"
+              "name": "Armure corrodée",
+              "description": "<p>Cette armure a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p>"
             }
           }
         },
         "Split": {
           "name": "Division",
           "description": "<p>Quand un [[lookup @name lowercase]]{monstre} de taille M ou supérieure est soumis à des dégâts tranchants ou de foudre, il se scinde en deux nouveaux [[lookup @name lowercase]]{monstre}s s'il dispose d'au moins 10 points de vie. Chaque nouveau [[lookup @name lowercase]]{monstre} est doté de la moitié des points de vie de celui de départ, arrondie à l'inférieur. La catégorie de taille des nouveaux [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle du [[lookup @name lowercase]]{monstre} de départ.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se scinde en deux nouveaux [[lookup @name lowercase]]{monstre}s. La catégorie de taille des nouveaux [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle du [[lookup @name lowercase]]{monstre} de départ.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se scinde en deux nouveaux [[lookup @name lowercase]]{monstre}s. La catégorie de taille des nouveaux [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle du [[lookup @name lowercase]]{monstre} de départ.</p>",
+          "activities": {
+            "Split in Medium Puddings": {
+              "name": "Scinder en poudings de taille M",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} est soumis à des dégâts tranchants ou de foudre alors qu'il est de taille M ou supérieure."
+            },
+            "Split into Small Puddings": {
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} est soumis à des dégâts tranchants ou de foudre alors qu'il est de taille M ou supérieure.",
+              "name": "Scinder en poudings de taille P"
+            }
+          },
+          "effects": {
+            "Split Medium Puddings": {
+              "name": "Puddings scindés de taille M",
+              "description": "<p>Vous avez été créé par la scission d'un @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft]{pouding noir} de taille G en deux.</p>"
+            },
+            "Split Small Puddings": {
+              "name": "Puddings scindés de taille P",
+              "description": "<p>Vous avez été créé par la scission d'un @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft]{pouding noir} de taille M en deux.</p>"
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -3562,7 +3614,13 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.lZR4lhNmYSf89s4Q.Item.ypnf9maxKh66ucMe]{Défense} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.lZR4lhNmYSf89s4Q.Item.ypnf9maxKh66ucMe]{Défense} au même tour."
+            }
+          }
         },
         "Relentless": {
           "name": "Implacable",
@@ -3570,7 +3628,8 @@
           "chat": "<p>Si le [[lookup @name lowercase]]{monstre} subit des dégâts censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
           "activities": {
             "Persevere": {
-              "name": "Persévérer"
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{créature} subit 7 dégâts ou moins censés le réduire à 0 point de vie."
             }
           }
         }
@@ -3593,7 +3652,14 @@
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison",
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
+            }
+          },
+          "effects": {
+            "Bone Devil Poison": {
+              "name": "Poison du diable osseux",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pendant 1 minute. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
@@ -3713,7 +3779,8 @@
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} &reference[surprise]{surprend} une créature et la touche avec une attaque lors du premier round de combat, la cible subit [[/damage average]] dégâts supplémentaires.</p>",
           "activities": {
             "Bonus Damage": {
-              "name": "Dégâts bonus"
+              "name": "Dégâts bonus",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} &reference[surprise]{surprend} une créature et la touche avec une attaque lors du premier round de combat."
             }
           }
         },
@@ -3753,7 +3820,13 @@
         "Deadly leap": {
           "name": "Saut meurtrier",
           "description": "<p>Si la [[lookup @name lowercase]]{monstre} effectue un saut d'au moins [[lookup @labels.description.range activity=1vGEpDSCHfEAoC4w]] dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature.</p><p>Toute créature sur laquelle elle atterrit doit réussir un jet de sauvegarde de [[/save activity=1vGEpDSCHfEAoC4w]] (à la convenance de la cible) sous peine d'être jetée &reference[prone]{à terre} et de subir [[/damage average activity=1vGEpDSCHfEAoC4w]]. En cas de réussite, la créature ne subit que la moitié de ces dégâts et ne tombe pas à terre ; elle est repoussée de 1,50 m de l'espace de la [[lookup @name lowercase]]{monstre} dans l'espace inoccupé du choix de la créature. Si aucun espace inoccupé n'est à portée, la créature tombe en fait &reference[prone]{à terre} dans l'espace de la [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} effectue un saut d'au moins 4,50 m dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature. Toute créature sur laquelle elle atterrit doit effectuer un jet de sauvegarde de Dextérité ou de Force (à la convenance de la cible) sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} effectue un saut d'au moins 4,50 m dans le cadre de son déplacement, elle peut ensuite entreprendre cette action pour se réceptionner sur ses pattes en un espace comprenant au moins une créature. Toute créature sur laquelle elle atterrit doit effectuer un jet de sauvegarde de Dextérité ou de Force (à la convenance de la cible) sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Land on Feet": {
+              "name": "Retomber sur ses pattes",
+              "condition": "Si le [[lookup @name lowercase]]{monstre} effectue un saut d'au moins 4,50 m dans le cadre de son déplacement."
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -3812,7 +3885,13 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.5kZNNWzZ6HrfKuWf.Item.uhqyN44IRWXixgxU]{pique} au même tour, il lui inflige [[/damage average]] supplémentaires.</p>",
-          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.5kZNNWzZ6HrfKuWf.Item.uhqyN44IRWXixgxU]{pique} au même tour, il lui inflige des dégâts supplémentaires.</p>"
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.5kZNNWzZ6HrfKuWf.Item.uhqyN44IRWXixgxU]{pique} au même tour, il lui inflige des dégâts supplémentaires.</p>",
+          "activities": {
+            "Bonus Charge Damage": {
+              "name": "Dégâts bonus de charge",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 9 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.5kZNNWzZ6HrfKuWf.Item.uhqyN44IRWXixgxU]{pique} au même tour."
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -3824,7 +3903,20 @@
         "Chain": {
           "name": "Chaîne",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible est &reference[grappled]{agrippée} (évasion DD 14) si le [[lookup @name lowercase]]{monstre} n'agrippe pas déjà une créature. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée} et subit [[/damage activity=D2oyIMFCCxoTivHb average]] au début de chacun de ses tours.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée} si le [[lookup @name lowercase]]{monstre} n'agrippe pas déjà une créature. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée} si le [[lookup @name lowercase]]{monstre} n'agrippe pas déjà une créature. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}.</p>",
+          "activities": {
+            "Start of Turn Grapple Damage": {
+              "name": "Dégâts Agrippé au début du tour",
+              "condition": "Lorsqu'une créature &reference[grappled apply=false]{agrippée} par cette attaque commence son tour.",
+              "description": "<p>Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée} et subit [[/damage activity=D2oyIMFCCxoTivHb average]] au début de chacun de ses tours.</p>"
+            }
+          },
+          "effects": {
+            "Grappled by Chains": {
+              "name": "Agrippé par des chaînes",
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 14). Tant que vous êtes ainsi agrippé, vous êtes &reference[restrained apply=false]{entravé} et subissez [[/damage average 2d6 piercing average]] au début de chacun de vos tours.</p>"
+            }
+          }
         },
         "Unnerving Mask": {
           "name": "Masque bouleversant",
@@ -3832,7 +3924,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut se donner l'apparence illusoire d'un proche défunt de la créature ou d'un de ses ennemis jurés. Effectuer un jet de sauvegarde de Sagesse.</p>",
           "activities": {
             "Create Illusion": {
-              "name": "Créer une illusion"
+              "name": "Créer une illusion",
+              "condition": "Lorsqu'une créature que le [[lookup @name lowercase]]{monstre} voit commence son tour à portée de celui-ci."
             }
           }
         },
@@ -3851,6 +3944,12 @@
           "activities": {
             "Animate Chains": {
               "name": "Chaînes animées"
+            }
+          },
+          "effects": {
+            "Animated Chain": {
+              "name": "Chaîne animée",
+              "description": "<p>Vous avez animé une chaîne. La chaîne est un objet doté d'une CA de 20, de 20 points de vie, de la résistance aux dégâts perforants et de l'immunité contre les dégâts psychiques et de tonnerre.</p><p>Lorsque vous recourez à Attaques multiples à votre tour, vous pouvez vous servir de chacune de vos chaînes animées pour effectuer une attaque de Chaîne supplémentaire. Une chaîne animée peut &reference[grapple]{agripper} individuellement une créature, mais ne peut pas effectuer d'attaques quand elle agrippe.</p><p>Une chaîne animée redevient inerte si elle tombe à 0 point de vie, ou si vous êtes &reference[incapacitated apply=false]{neutralisé} ou mort.</p>"
             }
           }
         },
@@ -4163,7 +4262,12 @@
         "Constrict": {
           "name": "Constriction",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 14). Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]]{monstre} ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>",
+          "effects": {
+            "Constricted": {
+              "name": "Constriction"
+            }
+          }
         }
       },
       "habitat": "Sous-marin",
@@ -4218,7 +4322,12 @@
         "Constrict": {
           "name": "Constriction",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature de taille M ou inférieure. [[/damage extended]] et la cible est agrippée (évasion DD 15). Tant que la cible est agrippée, elle est entravée et la constriction ne peut pas s'appliquer à une autre cible.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et la [[lookup @item.name lowercase]] ne peut pas s'appliquer à une autre cible.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant que la cible est agrippée, elle est &reference[restrained]{entravée} et la [[lookup @item.name lowercase]] ne peut pas s'appliquer à une autre cible.</p>",
+          "effects": {
+            "Constricted": {
+              "name": "Constriction"
+            }
+          }
         },
         "Change Shape": {
           "name": "Changement de forme",
@@ -4756,7 +4865,8 @@
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} &reference[surprise]{surprend} une créature et la touche avec une attaque lors du premier round de combat, la cible subit [[/damage average]] dégâts supplémentaires.</p>",
           "activities": {
             "Bonus Damage": {
-              "name": "Dégâts bonus"
+              "name": "Dégâts bonus",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} &reference[surprise]{surprend} une créature et la touche avec une attaque lors du premier round de combat."
             }
           }
         },
@@ -5403,7 +5513,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.55PkbskG5iBZGrgR.Item.05Vs3AiPgtQkX84S]{Ramure} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Ramure au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Ramure au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Ram": {
           "name": "Ramure",
@@ -6001,7 +6116,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.SsuCaF2fIEoDdFA3.Item.zHwaxxXcDz8AE8Bj]{Défense} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Relentless": {
           "name": "Implacable",
@@ -6051,7 +6171,13 @@
         "Constrict": {
           "name": "Constriction",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible est &Reference[grappled]{agrippée} (évasion DD 16). Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]] ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]] ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que la créature est agrippée, elle est &reference[restrained]{entravée} et le [[lookup @name lowercase]] ne peut pas recourir à [[lookup @item.name]] sur d'autres cibles.</p>",
+          "effects": {
+            "Constricted": {
+              "name": "Constriction",
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 16). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé}.</p>"
+            }
+          }
         }
       },
       "habitat": "Sous-marin",
@@ -6136,7 +6262,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.hQt3qIahnB1Odb40.Item.epOt7fzXcBz9Hf0i]{Ramure} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.hQt3qIahnB1Odb40.Item.epOt7fzXcBz9Hf0i]{Ramure} au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.hQt3qIahnB1Odb40.Item.epOt7fzXcBz9Hf0i]{Ramure} au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Hooves": {
           "name": "Sabots",
@@ -6201,6 +6332,15 @@
             "Swallowed": {
               "name": "Englouti"
             }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} commence son tour alors qu'elle a englouti une créature."
+            },
+            "Swallow Creature": {
+              "name": "Engloutir une créature"
+            }
           }
         }
       },
@@ -6213,7 +6353,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.rjqk7ToMD8sGr3n4.Item.t8cKnWGtgVCfhW5v]{Coup de bélier} au même tour, elle lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.rjqk7ToMD8sGr3n4.Item.t8cKnWGtgVCfhW5v]{Coup de bélier} au même tour, elle lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.rjqk7ToMD8sGr3n4.Item.t8cKnWGtgVCfhW5v]{Coup de bélier} au même tour, elle lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Sure-Footed": {
           "name": "Pied sûr",
@@ -6408,7 +6553,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si l'[[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.c9XDGsTJRy9HUaxQ.Item.tTZCmbeeSHXXFZGJ]{Coup de bélier} au même tour, il lui inflige [[/damage average activity=fQJO3rGN8hBWzvpN]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=fQJO3rGN8hBWzvpN]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Charge.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Charge.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Water Breathing": {
           "name": "Respiration aquatique",
@@ -6506,6 +6656,15 @@
           "effects": {
             "Swallowed": {
               "name": "Englouti"
+            }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a englouti une créature."
+            },
+            "Swallow Creature": {
+              "name": "Engloutir une créature"
             }
           }
         }
@@ -6811,7 +6970,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour, elle lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour, elle lui inflige des dégâts contondants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>"
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour, elle lui inflige des dégâts contondants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Sure-Footed": {
           "name": "Pied sûr",
@@ -6948,7 +7112,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} ronge le métal.</p>",
           "effects": {
             "Corroded Weapon": {
-              "name": "Arme corrodée"
+              "name": "Arme corrodée",
+              "description": "<p>Cette arme a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 aux jets de dégâts. Si ce malus atteint -5, l'arme est détruite.</p>"
             }
           }
         },
@@ -6962,7 +7127,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monster} attaque avec son [[lookup @item.name]]. Toute armure métallique non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure.</p>",
           "effects": {
             "Corroded Armor": {
-              "name": "Armure corrodée"
+              "name": "Armure corrodée",
+              "description": "<p>Cette armure a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p>"
             }
           }
         }
@@ -8139,6 +8305,15 @@
             "Swallowed": {
               "name": "Englouti"
             }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a englouti une créature."
+            },
+            "Regurgitate Creature Save": {
+              "name": "Sauvegarde contre la régurgitation"
+            }
           }
         },
         "Tentacle": {
@@ -9022,6 +9197,9 @@
           "activities": {
             "Prone Save": {
               "name": "Sauvegarde À terre"
+            },
+            "Bonus Charge Damage": {
+              "name": "Dégâts bonus de charge"
             }
           }
         },
@@ -9035,6 +9213,11 @@
           "effects": {
             "Reckless": {
               "name": "Téméraire"
+            }
+          },
+          "activities": {
+            "Become Reckless": {
+              "name": "Devenir téméraire"
             }
           }
         },
@@ -9058,7 +9241,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 3 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.xple5bvGj42uGgdd.Item.3Fsct4zbAf7l47Lp]{Coup de corne} au même tour, il lui inflige [[/damage average]] supplémentaires.</p><p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum 3 m et jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Greataxe": {
           "name": "Hache à deux mains",
@@ -9455,7 +9643,15 @@
         "Split": {
           "name": "Division",
           "description": "<p>Quand une [[lookup @name lowercase]]{monstre} de taille M ou supérieure est soumise à des dégâts tranchants ou de foudre, elle se scinde en deux nouvelles [[lookup @name lowercase]]{monstre}s si elle dispose d'au moins 10 points de vie. Chaque nouvelle [[lookup @name lowercase]]{monstre} est dotée de la moitié des points de vie de la [[lookup @name lowercase]]{monstre} de départ, arrondie à l'inférieur. La catégorie de taille des nouvelles [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle de la [[lookup @name lowercase]]{monstre} de départ.</p>",
-          "chat": "<p>La [[lookup @name lowercase]]{monstre} se scinde en deux nouvelles [[lookup @name lowercase]]{monstre}s. La catégorie de taille des nouvelles [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle de la [[lookup @name lowercase]]{monstre} de départ.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} se scinde en deux nouvelles [[lookup @name lowercase]]{monstre}s. La catégorie de taille des nouvelles [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle de la [[lookup @name lowercase]]{monstre} de départ.</p>",
+          "activities": {
+            "Split in Medium Jellies": {
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} est soumise à des dégâts tranchants ou de foudre alors qu'elle est de taille M ou supérieure."
+            },
+            "Split into Small Jellies": {
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} est soumise à des dégâts tranchants ou de foudre alors qu'elle est de taille M ou supérieure."
+            }
+          }
         }
       },
       "habitat": "Souterrain",
@@ -10168,6 +10364,16 @@
             "Swallowed": {
               "name": "Englouti"
             }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a englouti une créature."
+            },
+            "Regurgitate Creature Save": {
+              "name": "Sauvegarde contre la régurgitation",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} subit 30 dégâts ou plus lors d'un même tour de la part d'une créature engloutie."
+            }
           }
         },
         "Tail Stinger": {
@@ -10448,6 +10654,15 @@
             "Swallowed": {
               "name": "Englouti"
             }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a englouti une créature."
+            },
+            "Swallow Creature": {
+              "name": "Engloutir une créature"
+            }
           }
         }
       },
@@ -10460,7 +10675,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.SBCe2BSa6opTS5M4.Item.uFv78t6CwySS1gio]{Coup de corne} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Si le rhinocéros se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée à terre.</p>"
+          "chat": "<p>Si le rhinocéros se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée à terre.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Gore": {
           "name": "Coup de corne",
@@ -10597,7 +10817,8 @@
           "chat": "<p>Toute arme non magique en métal qui touche l'[[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p>",
           "effects": {
             "Corroded Weapon": {
-              "name": "Arme corrodée"
+              "name": "Arme corrodée",
+              "description": "<p>Cette arme a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 aux jets de dégâts. Si ce malus atteint -5, l'arme est détruite.</p>"
             }
           }
         },
@@ -11971,11 +12192,25 @@
         },
         "Swallow": {
           "name": "Engloutissement",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .suUr7bJqBqE7xk2F]]{Morsure} contre une créature de taille G ou inférieure qu'elle &reference[grappling]{agrippe}. Si l'attaque touche, la cible subit les dégâts de la Morsure, est engloutie et n'est plus agrippée. La créature engloutie est &reference[blinded]{aveuglée} et &reference[restrained]{entravée}, bénéficie d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur de la [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=JiBTCgEtAZs60k7R]] au début de chacun destours du monstre.</p><p>Si la [[lookup @name lowercase]]{monstre} subit 60 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, elle doit réussir un jet de sauvegarde de [[/save activity=2pCVkETAYg7qALRu]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins d'elle. Si la [[lookup @name lowercase]]{monstre} meurt, les créatures englouties ne sont plus entravées par elle et peuvent s'en extraire en dépensant 9 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>",
+          "description": "<p>La [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .suUr7bJqBqE7xk2F]]{Morsure} contre une créature de taille G ou inférieure qu'elle &reference[grappling]{agrippe}. Si l'attaque touche, la cible subit les dégâts de la Morsure, est engloutie et n'est plus agrippée. La créature engloutie est &reference[blinded]{aveuglée} et &reference[restrained]{entravée}, bénéficie d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur de la [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=JiBTCgEtAZs60k7R]] au début de chacun des tours du monstre.</p><p>Si la [[lookup @name lowercase]]{monstre} subit 60 dégâts ou plus lors d'un même tour de la part d'une créature engloutie, elle doit réussir un jet de sauvegarde de [[/save activity=2pCVkETAYg7qALRu]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant à terre dans un espace situé à 3 m ou moins d'elle. Si la [[lookup @name lowercase]]{monstre} meurt, les créatures englouties ne sont plus entravées par elle et peuvent s'en extraire en dépensant 9 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>",
           "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>",
           "effects": {
             "Swallowed": {
               "name": "Englouti"
+            }
+          },
+          "activities": {
+            "Start of Turn Digestion Damage": {
+              "name": "Dégâts de digestion au début du tour",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} commence son tour alors qu'elle a englouti une créature.",
+              "description": "<p>La créature engloutie subit [[/damage average activity=JiBTCgEtAZs60k7R]] au début de chacun des tours du monstre.</p>"
+            },
+            "Swallow Creature": {
+              "name": "Engloutir une créature",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} touche une créature qu'elle a &reference[grappled apply=false]{agrippée} avec sa @UUID[Compendium.dnd5e.monsters.Actor.x47ZnpHfYl0ptDM9.Item.4fNbTxkAFYHxDdJX]{Morsure}."
+            },
+            "Regurgitate Creature Save": {
+              "name": "Sauvegarde contre la régurgitation"
             }
           }
         },
@@ -12216,7 +12451,12 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour, elle lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>",
-          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour, elle lui inflige des dégâts perforants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour, elle lui inflige des dégâts perforants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -12648,7 +12888,12 @@
         "Whelm": {
           "name": "Déluge",
           "description": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de [[/save]]. En cas d'échec, elle subit [[/damage average activity=wNdhnTTQQLAgCSv9]]. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée} (évasion DD 14). Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Si elle réussit son jet de sauvegarde, la cible est repoussée de l'espace de l'[[lookup @name lowercase]]{monstre}. L'[[lookup @name lowercase]]{monstre} peut agripper simultanément une créature de taille G ou un maximum de deux créatures de taille M ou inférieure. Au début de chacun des tours de l'[[lookup @name lowercase]]{monstre}, toute créature agrippée par lui subit [[/damage average activity=3Ed1FjdlOVvPPqS8]]. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de [[/check]].</p>",
-          "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de Force.</p>"
+          "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de Force.</p>",
+          "activities": {
+            "Start of Turn Grapple Damage": {
+              "name": "Dégâts Agrippé au début du tour"
+            }
+          }
         }
       },
       "habitat": "Sous-marin",
@@ -12717,7 +12962,12 @@
         "Charge (Boar or Hybrid Form Only)": {
           "name": "Charge (forme de sanglier ou hybride uniquement)",
           "description": "<p>Si le sanglier-garou se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec ses Défenses au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Si le sanglier-garou se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec ses Défenses au même tour, il lui inflige des <em>dégâts tranchants</em> supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>"
+          "chat": "<p>Si le sanglier-garou se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec ses Défenses au même tour, il lui inflige des <em>dégâts tranchants</em> supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
+          "activities": {
+            "Charge Save": {
+              "name": "Sauvegarde contre la charge"
+            }
+          }
         },
         "Multiattack (Humanoid or Hybrid Form Only)": {
           "name": "Attaques multiples (forme humanoïde ou hybride uniquement)",
