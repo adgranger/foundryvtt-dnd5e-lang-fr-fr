@@ -56,8 +56,8 @@
         },
         "Tentacle": {
           "name": "Tentacule",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d6 + 5}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être malade. Cette maladie est sans effet pendant 1 minute et toute magie capable de soigner les maladies l'élimine. Au bout de 1 minute, la peau de la créature malade devient translucide et visqueuse, la créature ne peut pas regagner de points de vie quand elle n'est pas sous l'eau et seuls le sort @UUID[Compendium.dnd5e.spells.Item.qcYitWoSMTnKkzM1]{guérison} ou les sorts du 6<sup>e</sup> niveau ou plus qui soignent les maladies peuvent éliminer cette affection. Lorsque la créature n'est pas immergée dans l'eau, elle subit [[/damage average 1d12 acid]] toutes les 10 minutes, à moins d'hydrater abondamment sa peau dans l'intervalle.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Tentacule.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être malade. Cette maladie est sans effet pendant 1 minute et toute magie capable de soigner les maladies l'élimine. Au bout de 1 minute, la peau de la créature malade devient translucide et visqueuse, la créature ne peut pas regagner de points de vie quand elle n'est pas sous l'eau et seuls le sort @UUID[Compendium.dnd5e.spells.Item.qcYitWoSMTnKkzM1]{guérison} ou les sorts du 6<sup>e</sup> niveau ou plus qui soignent les maladies peuvent éliminer cette affection. Lorsque la créature n'est pas immergée dans l'eau, elle subit [[/damage average 1d12 acid]] toutes les 10 minutes, à moins d'hydrater abondamment sa peau dans l'intervalle.</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Disease Save": {
               "name": "Sauvegarde contre la maladie"
@@ -66,8 +66,8 @@
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{3d6 + 5}) dégâts contondants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Queue.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Amphibious": {
           "name": "Amphibie",
@@ -97,7 +97,7 @@
         "Club": {
           "name": "Gourdin",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 2 ([[/damage]]{1d4}) dégâts contondants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Gourdin.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Light": {
           "name": "Lumière",
@@ -146,17 +146,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts perforants plus 4 ([[/damage]]{1d8}) dégâts d'acide.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -216,12 +216,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 18 ([[/damage]]{2d10 + 7}) dégâts perforants plus 5 ([[/damage]]{1d10}) dégâts de foudre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 14 ([[/damage]]{2d6 + 7}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Detect": {
           "name": "Détection",
@@ -264,7 +264,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d8 + 7}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -286,12 +286,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Detect": {
           "name": "Détection",
@@ -324,7 +324,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -368,7 +368,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 18 ([[/damage]]{2d10 + 7}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Legendary Resistance": {
           "name": "Résistance légendaire",
@@ -381,12 +381,12 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 14 ([[/damage]]{2d6 + 7}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 16 ([[/damage ]]{2d8 + 7}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -453,17 +453,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -535,17 +535,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -621,17 +621,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts perforants plus 7 ([[/damage]]{2d6}) dégâts de poison.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -711,17 +711,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants plus 7 ([[/damage]]{2d6}) dégâts de feu.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -761,17 +761,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -834,12 +834,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6})dégâts perforants plus 4 ([[/damage]]{1d8}) dégâts de froid.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Cold Breath": {
           "name": "Souffle glacial",
@@ -886,7 +886,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d8 + 6}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -920,7 +920,7 @@
         "Slam": {
           "name": "Coup",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 14 ([[/damage]]{2d8 + 5}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Coup.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Whirlwind": {
           "name": "Tourbillon",
@@ -949,17 +949,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants plus 9 ([[/damage]]{2d8}) dégâts d'acide.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1016,7 +1016,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 20 ([[/damage]]{2d10 + 9}) dégâts perforants plus 11 ([[/damage]]{2d10}) dégâts de foudre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -1031,7 +1031,7 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d6 + 9}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1056,7 +1056,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 18 ([[/damage]]{2d8 + 9}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1084,12 +1084,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1104,7 +1104,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -1167,17 +1167,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 20 ([[/damage]]{2d10 + 9}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d6 + 9}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 18 ([[/damage]]{2d8 + 9}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1242,17 +1242,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1324,17 +1324,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 21 ([[/damage]]{2d10 + 10}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d6 + 10}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d8 + 10}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1407,17 +1407,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants plus 10 ([[/damage]]{3d6}) dégâts de poison.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 22 ([[/damage]]{4d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1467,17 +1467,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 21 ([[/damage]]{2d10 + 10}) dégâts perforants plus 14 ([[/damage]]{4d6}) dégâts de feu.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d6 + 10}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d8 + 10}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1543,17 +1543,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 21 ([[/damage]]{2d10 + 10}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d6 + 10}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d8 + 10}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Frightful Presence": {
           "name": "Présence terrifiante",
@@ -1615,12 +1615,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 19 ([[/damage]]{2d10 + 8}) dégâts perforants plus 9 ([[/damage]]{2d8}) dégâts de froid.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Cold Breath": {
           "name": "Souffle glacial",
@@ -1667,7 +1667,7 @@
         "Tail": {
           "name": "Queue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 6 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d8 + 8}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail Attack": {
           "name": "Attaque de queue",
@@ -1686,7 +1686,7 @@
       "items": {
         "Inscrutable": {
           "name": "Insondable",
-          "description": "<p>Le sphinx est immunisé contre tout effet censé percevoir ses émotions ou lire ses pensées, ainsi que contre les sorts de divination dont il veut se prémunir. Les tests de Sagesse (Intuition) visant à percer ses intentions ou évaluer sa sincérité sont<strong> désavantagés</strong>.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} est immunisé contre tout effet censé percevoir ses émotions ou lire ses pensées, ainsi que contre les sorts de divination dont il veut se prémunir. Les tests de Sagesse (Intuition) visant à percer ses intentions ou évaluer sa sincérité sont désavantagés.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -1700,7 +1700,7 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -1832,8 +1832,8 @@
         },
         "Slam": {
           "name": "Coup",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts contondants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Coup.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} effectue une attaque de [[lookup @item.name]] !</p>"
         }
       },
       "senses": "ne voit rien au-delà de ce rayon",
@@ -1866,12 +1866,12 @@
         "Fist": {
           "name": "Poing",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Poing.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Rock": {
           "name": "Rocher",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 7,50/15 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Rocher.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         }
       },
       "habitat": "Forêt",
@@ -1931,7 +1931,7 @@
         "Dagger": {
           "name": "Dague",
           "description": "<p><em>Attaque d'arme au corps à corps ou à distance :</em> [[/attack]], allonge 1, portée 6/18 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Dague.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Fire Bolt": {
           "name": "Trait de feu",
@@ -2157,7 +2157,7 @@
         "Rake": {
           "name": "Ratissage",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 1 ([[/damage ]]{1d4 − 1}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Ratissage.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -2299,7 +2299,7 @@
         "Whip": {
           "name": "Fouet",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être tirée d'un maximum de 7,50 m vers le [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Fouet.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Force.</p>"
         }
       },
       "subtype": "Démon",
@@ -2591,7 +2591,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants plus 2 ([[/damage]]{1d4}) dégâts d’acide.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         }
       },
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>"
@@ -2606,7 +2606,7 @@
         "Corrosive Form": {
           "name": "Masse corrosive",
           "description": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit [[/damage average]]. Toute arme non magique en métal ou en bois qui touche le [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée.</p><p>Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal ou en bois qui touchent le [[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>Le [[lookup @name lowercase]]{monstre} peut ronger le bois et le métal non magiques, au rythme de 5 cm d'épaisseur par round.</p><section id=\"secret-JkTKDNe8rclkb2HO\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.NwQpeeaMxAC3fRft.Item.wvlDMuDDdk7peoPa.ActiveEffect.dodLAz6LZ0KlsabM]{Arme corrodée} à une arme, ce qui lui confère un malus cumulatif de -1 aux jets de dégâts à chaque fois que l'enchantement est appliqué.</p></section>",
-          "chat": "<p>Le [[lookup @name]] utilise Masse corrosive.</p>",
+          "chat": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit des dégâts d'acide. Toute arme non magique en métal ou en bois qui touche le [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée.</p>",
           "effects": {
             "Corroded Weapon": {
               "name": "Arme corrodée"
@@ -2629,8 +2629,8 @@
         },
         "Split": {
           "name": "Division",
-          "description": "<p>Quand un [[lookup @name lowercase]]{monstre} de taille M ou supérieure est soumis à des dégâts tranchants ou de foudre, il se scinde en deux nouveaux [[lookup @name lowercase]]{monstre}s s'il dispose d'au moins 10 points de vie. Chaque nouveau [[lookup @name lowercase]]{monstre} est doté de la moitié des points de vie de celui de départ, arrondie à l'inférieur. La catégorie de taille des nouveaux[[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle du [[lookup @name lowercase]]{monstre} de départ.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Division.</p>"
+          "description": "<p>Quand un [[lookup @name lowercase]]{monstre} de taille M ou supérieure est soumis à des dégâts tranchants ou de foudre, il se scinde en deux nouveaux [[lookup @name lowercase]]{monstre}s s'il dispose d'au moins 10 points de vie. Chaque nouveau [[lookup @name lowercase]]{monstre} est doté de la moitié des points de vie de celui de départ, arrondie à l'inférieur. La catégorie de taille des nouveaux [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle du [[lookup @name lowercase]]{monstre} de départ.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} se scinde en deux nouveaux [[lookup @name lowercase]]{monstre}s. La catégorie de taille des nouveaux [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle du [[lookup @name lowercase]]{monstre} de départ.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -2684,7 +2684,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 8 ([[/damage]]{1d10 + 3}) dégâts perforants plus 3 ([[/damage]]{1d6}) dégâts de foudre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -2715,7 +2715,7 @@
         "Relentless": {
           "name": "Implacable",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} subit 7 dégâts ou moins censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>"
+          "chat": "<p>Si le [[lookup @name lowercase]]{monstre} subit des dégâts censés le faire tomber à 0 point de vie, il se retrouve en fait à 1 point de vie.</p>"
         }
       },
       "habitat": "Prairie",
@@ -2731,8 +2731,8 @@
         },
         "Sting": {
           "name": "Dard",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d8 + 4}) dégâts perforants plus 17 ([[/damage]]{5d6}) dégâts de poison, et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
+          "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Dard. La cible doit réussir un jet de sauvegarde de Constitution. La cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison"
@@ -2761,7 +2761,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -2794,7 +2794,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 8 ([[/damage]]{1d10 + 3}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -2961,7 +2961,7 @@
         "Unnerving Mask": {
           "name": "Masque bouleversant",
           "description": "<p>Lorsqu'une créature que le [[lookup @name lowercase]]{monstre} voit commence son tour dans un rayon de 9 m de celui-ci, le [[lookup @name lowercase]]{monstre} peut se donner l'apparence illusoire d'un proche défunt de la créature ou d'un de ses ennemis jurés. Si la créature voit le [[lookup @name lowercase]]{monstre}, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[Frightened apply=false]{effrayée} jusqu'à la fin de son tour.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Masque bouleversant.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut se donner l'apparence illusoire d'un proche défunt de la créature ou d'un de ses ennemis jurés. Effectuer un jet de sauvegarde de Sagesse.</p>",
           "activities": {
             "Create Illusion": {
               "name": "Créer une illusion"
@@ -2979,7 +2979,7 @@
         "Animate Chains": {
           "name": "Chaînes animées",
           "description": "<p>Un maximum de quatre chaînes visibles du [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=kRPVij49Rpa8sFnz]] se dotent magiquement de barbelures tranchantes et s'animent sous le contrôle du [[lookup @name lowercase]]{monstre}, à condition qu'elles ne soient portées par personne. Chacune de ces chaînes animées est un objet doté d'une CA de 20, de 20 points de vie, de la résistance aux dégâts perforants et de l'immunité contre les dégâts psychiques et de tonnerre. Lorsque le [[lookup @name lowercase]]{monstre} recourt à @UUID[Compendium.dnd5e.monsters.Actor.KtM6IV9I5l1MWUDk.Item.AGKUD82KJZaMKVRt]{Attaques multiples} à son tour, il peut se servir de chacune de ces chaînes animées pour effectuer une attaque de @UUID[Compendium.dnd5e.monsters.Actor.KtM6IV9I5l1MWUDk.Item.9SWi4zPVGsMD5l2Y]{Chaîne} supplémentaire. Une chaîne animée peut agripper individuellement une créature, mais ne peut pas effectuer d'attaques quand elle agrippe. Une chaîne animée redevient inerte si elle tombe à 0 point de vie, ou si le [[lookup @name lowercase]]{monstre} est &reference[incapacitated apply=false]{neutralisé} ou mort.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Chaînes animées.</p>",
+          "chat": "<p>Un maximum de quatre chaînes visibles du [[lookup @name lowercase]]{monstre} dans un rayon de 18 m se dotent magiquement de barbelures tranchantes et s'animent sous le contrôle du [[lookup @name lowercase]]{monstre}, à condition qu'elles ne soient portées par personne.</p>",
           "activities": {
             "Animate Chains": {
               "name": "Chaînes animées"
@@ -3154,7 +3154,7 @@
         "Moan": {
           "name": "Lamentation",
           "description": "<p>Chaque créature dans un rayon de 18 m du [[lookup @name lowercase]]{monstre}, si elle l'entend se lamenter et n'est pas elle-même une aberration, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}. Si son jet de sauvegarde est réussi, la créature est immunisée contre la [[lookup @item.name lowercase]] du [[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Lamentation.</p>"
+          "chat": "<p>Chaque créature dans un rayon de 18 m du [[lookup @name lowercase]]{monstre}, si elle l'entend se lamenter et n'est pas elle-même une aberration, doit réussir un jet de sauvegarde de Sagesse.</p>"
         },
         "Phantasms": {
           "name": "Fantasmagories",
@@ -3289,7 +3289,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -3710,7 +3710,7 @@
         "Mace": {
           "name": "Masse d’armes",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d6 + 4}) dégâts contondants plus 18 ([[/damage]]{4d8}) dégâts radiants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Masse d’armes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Detect Evil and Good": {
           "name": "Détection du mal et du bien",
@@ -3863,7 +3863,7 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable.</p>",
           "activities": {
             "Change Appearance": {
               "name": "Changement d'aspect"
@@ -3901,17 +3901,17 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 26 ([[/damage]]{3d12 + 7}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d8 + 7}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 4,50 m, une cible. <em>Touché :</em> 26 ([[/damage]]{3d12 + 7}) dégâts contondants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum de 3 m du dragon-tortue et d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Queue.</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être repoussée d'un maximum de 3 m du dragon-tortue et d'être jetée &Reference[prone]{à terre}.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force.</p>"
         },
         "Steam Breath": {
           "name": "Souffle de vapeur",
@@ -4353,7 +4353,7 @@
         "Slam": {
           "name": "Coup",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 14 ([[/damage]]{2d8 + 5}) dégâts contondants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Coup.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         }
       },
       "habitat": "Souterrain",
@@ -4438,7 +4438,7 @@
         "Trampling Charge": {
           "name": "Charge écrasante",
           "description": "<p>Si l'[[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.jLPhaBnMtAbB5dp1.Item.r6mBkCtL5j6Y6sBr]{Coup de défense} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, l'[[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .ZHBbc5K4n6sU17rC]]{Piétinement} par une action bonus.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Charge écrasante.</p>"
+          "chat": "<p>Si l'éléphant se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de Coup de défense au même tour, la cible doit réussir un jet de sauvegarde de Force.</p>"
         },
         "Gore": {
           "name": "Coup de défense",
@@ -4497,7 +4497,7 @@
         "Parry": {
           "name": "Parade",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} ajoute 4 à sa CA contre une attaque de corps à corps censée la toucher. Pour ce faire, l'[[lookup @name lowercase]]{monstre} doit voir l'assaillant et manier une arme de corps à corps.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Parade.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} ajoute 4 à sa CA contre une attaque de corps à corps censée la toucher.</p>"
         },
         "Magic Resistance": {
           "name": "Résistance à la magie",
@@ -4562,7 +4562,7 @@
         "Web": {
           "name": "Toile d'araignée",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/18 m, une créature de taille G ou inférieure. <em>Touché :</em> La créature est &Reference[restrained]{entravée} par la toile. Au prix d'une action, la créature entravée peut effectuer un test de [[/check activity=aELnqvc37WaAm0IG]] et se libère de la toile en cas de réussite. Cet effet prend également fin si la toile est détruite. La toile est dotée d'une CA de 10, de 5 points de vie, de l'immunité contre les dégâts contondants, psychiques et de poison, et de la vulnérabilité aux dégâts de feu.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Toile d’araignée.</p>"
+          "chat": "<p>La cible est entravée par la toile. Au prix d'une action, la cible entravée peut effectuer un test de Force et se libère de la toile en cas de réussite.</p>"
         }
       },
       "habitat": "Forêt",
@@ -4586,7 +4586,7 @@
         "Battleaxe": {
           "name": "Hache d’armes",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 14 ([[/damage]]{2d8 + 5}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Hache d’armes.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Morningstar": {
           "name": "Morgenstern",
@@ -4625,7 +4625,7 @@
         "Touch": {
           "name": "Contact",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est une créature ou un objet inflammable, elle s'embrase. Tant qu'aucune créature n'a consacré une action à étouffer le feu, la cible subit [[/damage activity=dFEUCLc4Cmb2DETC average]] au début de chacun de ses tours.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Contact.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature ou un objet inflammable, elle s'embrase. Tant qu'aucune créature n'a consacré une action à étouffer le feu, la cible subit des dégâts de feu au début de chacun de ses tours.</p>"
         }
       },
       "habitat": "Désert",
@@ -4735,7 +4735,7 @@
         "Antimagic Susceptibility": {
           "name": "Vulnérabilité à l'antimagie",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} est &reference[incapacitated apply=false]{neutralisée} tant qu'elle se trouve dans un <em>@UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{champ antimagie}</em>. Si elle est ciblée par <em>@UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie}</em>, l'[[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &reference[unconscious]{inconsciente} pendant 1 minute.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Vulnérabilité à l’antimagie.</p>"
+          "chat": "<p>L'épée est neutralisée tant qu'elle se trouve dans un champ antimagie.</p>"
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -4744,7 +4744,7 @@
         "Longsword": {
           "name": "Épée longue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d8 + 1}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Épée longue.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque !</p>"
         }
       },
       "senses": "ne voit rien au-delà de ce rayon",
@@ -4835,7 +4835,7 @@
         "Engulf": {
           "name": "Enveloppement",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} se déplace dans les limites de sa vitesse. Ce faisant, il peut entrer dans les espaces de créatures de taille G ou inférieure. Chaque fois que le [[lookup @name lowercase]]{monstre} pénètre dans l'espace d'une créature, celle-ci effectue un jet de sauvegarde de [[/save activity=nGINyQKTsYq10OA0]].</p><p>En cas de réussite, la créature peut choisir d'être repoussée de 1,50 m, en arrière ou sur le côté du [[lookup @name lowercase]]{monstre}. Si elle refuse d'être repoussée, elle subit les mêmes conséquences que si elle avait raté le JS.</p><p>En cas d'échec, le [[lookup @name lowercase]]{monstre} pénètre dans l'espace de la créature, et celle-ci subit [[/damage average activity=nGINyQKTsYq10OA0]] et se retrouve enveloppée. Une créature enveloppée ne peut pas &reference[suffocating]{respirer}, est &reference[restrained]{entravée}, et subit [[/damage average activity=sDRiVB3bhk4S5XZI]] au début de chacun des tours du [[lookup @name lowercase]]{monstre}. Lorsque le [[lookup @name lowercase]]{monstre} se déplace, la créature enveloppée l'accompagne.</p><p>Une créature enveloppée peut tenter de s'extraire du [[lookup @name lowercase]]{monstre} au prix d'une action, en tentant un test de [[/check activity=LMPyxWOrUotM7OLs]]. En cas de réussite, elle se libère du [[lookup @name lowercase]]{monstre} et entre dans l'espace de son choix, dans un rayon de 1,50 m du monstre.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Enveloppement.</p>",
+          "chat": "<p>Chaque fois que le [[lookup @name lowercase]]{monstre} pénètre dans l'espace d'une créature, celle-ci effectue un jet de sauvegarde de Dextérité. En cas de réussite, la créature peut choisir d'être repoussée de 1,50 m, en arrière ou sur le côté du [[lookup @name lowercase]]{monstre}. Si elle refuse d'être repoussée, elle subit les mêmes conséquences que si elle avait raté le JS.</p>",
           "activities": {
             "Escape Check": {
               "name": "Test d'évasion"
@@ -5206,7 +5206,7 @@
         "Swallow": {
           "name": "Engloutissement",
           "description": "<p>La [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .VtuDa7NZ5Be8auQv]]{Morsure} contre une cible de taille P ou inférieure qu'elle &reference[grappling]{agrippe}. Si l'attaque touche, la cible est également engloutie et n'est plus agrippée. La cible engloutie est &reference[blinded]{aveuglée} et &reference[restrained]{entravée}, bénéficie d'un &reference[total cover]{abri total} contre les attaques et effets émanant de l'extérieur de la [[lookup @name lowercase]]{monstre} et subit [[/damage average activity=hjeShYMsNTvN1QF9]] au début de chacun des tours de la [[lookup @name lowercase]]{monstre}. La [[lookup @name lowercase]]{monstre} ne peut pas engloutir plus d'une cible à la fois.</p><p>Si la [[lookup @name lowercase]]{monstre} meurt, la créature engloutie n'est plus entravée par elle et peut s'en extraire en dépensant 1,50 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Engloutissement.</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son Engloutissement.</p>",
           "effects": {
             "Swallowed": {
               "name": "Engloutir"
@@ -5622,7 +5622,7 @@
         "Gibbering": {
           "name": "Charabia",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} bredouille de façon incohérente tant qu'il voit une créature et qu'il n’est pas &reference[incapacitated apply=false]{neutralisé}. Toute créature qui commence son tour dans un rayon de 6 m du monstre et entend son charabia effectue un jet de sauvegarde de [[/save]]. En cas d'échec, la créature ne peut pas jouer de réaction jusqu'au début de son tour suivant et elle lance un [[/r d8]] pour déterminer ce qu'elle fait pour le tour. Sur un résultat de 1 à 4, elle ne fait rien. De 5 à 6, la créature n'entreprend pas d'action ni d'action bonus et consacre tout son déplacement dans une direction aléatoire. De 7 à 8, la créature effectue une attaque de corps à corps contre une créature déterminée aléatoirement à portée d'allonge (elle ne fait rien si une telle attaque n'est pas possible).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charabia.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} bredouille de façon incohérente tant qu'il voit une créature. Toute créature qui commence son tour dans un rayon de 6 m du monstre et entend son charabia effectue un jet de sauvegarde de Sagesse.</p>",
           "effects": {
             "Gibbering": {
               "name": "Charabia"
@@ -5855,7 +5855,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 9 ([[/damage]]{1d10 + 4}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -5915,7 +5915,7 @@
         "Corrode Metal": {
           "name": "Corrosion du métal",
           "description": "<p>Toute arme non magique en métal qui touche la [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p><p>Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent la [[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>La [[lookup @name lowercase]]{monstre} peut ronger le métal non magique, au rythme de 5 cm d'épaisseur par round.</p><section id=\"secret-3w7p9RfuLKPgT6FQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer l'enchantement @UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.uSay5J2sf9zXsabi.ActiveEffect.Khdj386syEL9V9OA]{Arme corrodée} à une arme, ce qui lui confère un malus cumulatif de -1 aux jets de dégâts à chaque fois que l'enchantement est appliqué.</p></section>",
-          "chat": "<p>La [[lookup @name]] utilise Corrosion du métal (vase).</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} ronge le métal.</p>",
           "effects": {
             "Corroded Weapon": {
               "name": "Arme corrodée"
@@ -5957,7 +5957,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants plus 3 ([[/damage]]{1d6}) dégâts de poison.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Amphibious": {
           "name": "Amphibie",
@@ -6127,7 +6127,7 @@
         "Rejuvenation": {
           "name": "Reconstitution",
           "description": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{souhait} peut empêcher ce trait de fonctionner.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Reconstitution.</p>"
+          "chat": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie.</p>"
         },
         "Spellcasting": {
           "name": "Sorts",
@@ -6231,7 +6231,7 @@
       "items": {
         "Inscrutable": {
           "name": "Insondable",
-          "description": "<p>La sphinge est immunisée contre tout effet censé percevoir ses émotions ou lire ses pensées, ainsi que contre les sorts de divination dont elle veut se prémunir. Les tests de Sagesse (Intuition) visant à percer ses intentions ou évaluer sa sincérité sont<strong> désavantagés</strong>.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} est immunisée contre tout effet censé percevoir ses émotions ou lire ses pensées, ainsi que contre les sorts de divination dont elle veut se prémunir. Les tests de Sagesse (Intuition) visant à percer ses intentions ou évaluer sa sincérité sont désavantagés.</p>"
         },
         "Magic Weapons": {
           "name": "Armes magiques",
@@ -6365,17 +6365,17 @@
         "Longsword": {
           "name": "Épée longue",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts tranchants, ou 8 ([[/damage attackMode=twoHanded]]{1d10 + 3}) dégâts tranchants si utilisée à deux mains.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Épée longue.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Shortsword": {
           "name": "Épée courte",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Épée courte.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Heavy Crossbow": {
           "name": "Arbalète lourde",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 30/120 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d10 + 1}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Arbalète lourde.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Fire Breath": {
           "name": "Souffle de feu",
@@ -6834,7 +6834,7 @@
         },
         "Sting (Bite in Beast Form)": {
           "name": "Dard (Morsure sous forme de bête)",
-          "chat": "<p>Le diablotin attaque avec son Dard. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et la cible effectue un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average activity=hUmRNvmmpY5rJfVE]] en cas d'échec, la moitié en cas de réussite.</p>"
         },
         "Devil Sight": {
@@ -6850,7 +6850,7 @@
         "Faultless Tracker": {
           "name": "Traqueur infaillible",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} se voit désigner une proie par la créature qui l'a convoqué. Il sait dans quelle direction et à quelle distance se trouve sa proie, tant qu'ils sont tous deux sur le même plan d'existence. Le [[lookup @name lowercase]]{monstre} sait également où se trouve son convocateur.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Traqueur infaillible.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} sait dans quelle direction et à quelle distance se trouve sa proie, tant qu'ils sont tous deux sur le même plan d'existence.</p>"
         },
         "Invisibility": {
           "name": "Invisibilité",
@@ -7085,7 +7085,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name]]{monster} peut entreprendre 3 actions légendaires.</p>"
         },
         "Tentacle Attack or Fling": {
           "name": "Attaque de Tentacule ou Projection",
@@ -7244,7 +7244,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Mage Hand": {
           "name": "Main du mage",
@@ -7732,7 +7732,7 @@
         "Parry": {
           "name": "Parade",
           "description": "<p>La [[lookup @name lowercase]]{monstre} ajoute 5 à sa CA contre une attaque de corps à corps censée la toucher. Pour ce faire, la [[lookup @name lowercase]]{monstre} doit voir l'assaillant et manier une arme de corps à corps.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Parade.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} ajoute 5 à sa CA contre une attaque de corps à corps censée la toucher.</p>"
         }
       },
       "subtype": "Démon",
@@ -8036,7 +8036,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Attack": {
           "name": "Attaque",
@@ -8281,7 +8281,7 @@
         "Split": {
           "name": "Division",
           "description": "<p>Quand une [[lookup @name lowercase]]{monstre} de taille M ou supérieure est soumise à des dégâts tranchants ou de foudre, elle se scinde en deux nouvelles [[lookup @name lowercase]]{monstre}s si elle dispose d'au moins 10 points de vie. Chaque nouvelle [[lookup @name lowercase]]{monstre} est dotée de la moitié des points de vie de la [[lookup @name lowercase]]{monstre} de départ, arrondie à l'inférieur. La catégorie de taille des nouvelles [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle de la [[lookup @name lowercase]]{monstre} de départ.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Division.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} se scinde en deux nouvelles [[lookup @name lowercase]]{monstre}s. La catégorie de taille des nouvelles [[lookup @name lowercase]]{monstre}s est d'un cran inférieure à celle de la [[lookup @name lowercase]]{monstre} de départ.</p>"
         }
       },
       "habitat": "Souterrain",
@@ -8374,7 +8374,7 @@
         "Claw (Oni Form Only)": {
           "name": "Griffe (forme d’oni uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 8 ([[/damage]]{1d8 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Griffe (forme d’oni uniquement).</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Innate Spellcasting": {
           "name": "Sorts innés",
@@ -8667,7 +8667,7 @@
         "Mace": {
           "name": "Masse d’armes",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d6 + 8}) dégâts contondants plus 21 ([[/damage]]{6d6}) dégâts de feu.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Masse d’armes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Tail": {
           "name": "Queue",
@@ -8865,7 +8865,7 @@
         "Mace": {
           "name": "Masse d’armes",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 3 ([[/damage]]{1d6}) dégâts contondants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Masse d’armes.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Sacred Flame": {
           "name": "Flamme sacrée",
@@ -8934,12 +8934,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Sting": {
           "name": "Dard",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonnée} pendant [[lookup @labels.duration activity=hcLz9GILmf8UvyVF]]. Si le jet de sauvegarde est raté d'au moins 5, la cible tombe &reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Dard.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison"
@@ -9180,7 +9180,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 9 ([[/damage]]{1d10 + 4}) dégâts perforants plus 3 ([[/damage]]{1d6}) dégâts de feu.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Fire Breath": {
           "name": "Souffle de feu",
@@ -9226,7 +9226,7 @@
         "Heated Body": {
           "name": "Corps surchauffé",
           "description": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit [[/damage average]].</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Corps surchauffé.</p>"
+          "chat": "<p>Une créature qui touche le [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins de lui, subit des dégâts de feu.</p>"
         },
         "Swallow": {
           "name": "Engloutissement",
@@ -9248,7 +9248,7 @@
         "Charge": {
           "name": "Charge",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.SBCe2BSa6opTS5M4.Item.uFv78t6CwySS1gio]{Coup de corne} au même tour, il lui inflige [[/damage average]] supplémentaires. Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge.</p>"
+          "chat": "<p>Si le rhinocéros se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée à terre.</p>"
         },
         "Gore": {
           "name": "Coup de corne",
@@ -9301,12 +9301,12 @@
       "items": {
         "False Appearance": {
           "name": "Faux-semblant",
-          "description": "<p>Tant que l’[[lookup @name]] reste immobile, on ne peut le distinguer d’une formation minérale, telle qu’une stalagmite ordinaire.</p>"
+          "description": "<p>Tant que l'[[lookup @name lowercase]]{monstre} reste immobile, on ne peut le distinguer d'une formation minérale, telle qu'une stalagmite ordinaire.</p>"
         },
         "Grasping Tendrils": {
           "name": "Filaments collants",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} peut se doter d'un maximum de six filaments. Chaque filament peut être attaqué (CA 20 ; 10 points de vie ; immunité contre les dégâts psychiques et de poison).</p><p>La destruction d'un filament n'inflige aucun dégât à l'[[lookup @name lowercase]]{monstre}, qui peut en faire pousser un nouveau à son tour suivant. Une créature peut aussi consacrer une action à rompre un filament, ce qui nécessite de réussir un test de [[/check]].</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Filaments collants.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut se doter d'un maximum de six filaments. Chaque filament peut être attaqué. Une créature peut aussi consacrer une action à rompre un filament, ce qui nécessite de réussir un test de Force.</p>"
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -9341,7 +9341,7 @@
         "Antimagic Susceptibility": {
           "name": "Vulnérabilité à l'antimagie",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} est &reference[incapacitated apply=false]{neutralisé} tant qu'il se trouve dans un <em>@UUID[Compendium.dnd5e.spells.Item.Eon0jzGzQRNluTPQ]{champ antimagie}</em>. S'il est ciblé par <em>@UUID[Compendium.dnd5e.spells.Item.15Fa6q1nH27XfbR8]{dissipation de la magie}</em>, le [[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de Constitution contre le DD de sauvegarde des sorts de l'incantateur sous peine de tomber &reference[unconscious]{inconscient} pendant 1 minute.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Vulnérabilité à l’antimagie.</p>"
+          "chat": "<p>Le tapis est neutralisé tant qu'il se trouve dans un champ antimagie.</p>"
         },
         "Damage Transfer": {
           "name": "Transfert de dégâts",
@@ -9467,12 +9467,12 @@
         "Heated Body": {
           "name": "Corps surchauffé",
           "description": "<p>Une créature qui touche la [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins d'elle, subit [[/damage average]].</p>",
-          "chat": "<p>La [[lookup @name]] utilise Corps surchauffé.</p>"
+          "chat": "<p>Une créature qui touche la [[lookup @name lowercase]]{monstre}, directement ou avec une attaque de corps à corps alors qu'elle se trouve à 1,50 m ou moins d'elle, subit des dégâts de feu.</p>"
         },
         "Heated Weapons": {
           "name": "Armes surchauffées",
           "description": "<p>Lorsque la [[lookup @name lowercase]]{monstre} touche sa cible avec une attaque d'arme de corps à corps en métal, elle lui inflige 3 (1d6) dégâts de feu supplémentaires (inclus dans l'attaque).</p>",
-          "chat": "<p>La [[lookup @name]] utilise Armes surchauffées.</p>"
+          "chat": "<p>Lorsque la [[lookup @name lowercase]]{monstre} touche sa cible avec une attaque d'arme de corps à corps en métal, elle lui inflige des dégâts de feu supplémentaires (inclus dans l'attaque).</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -9730,7 +9730,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 9 ([[/damage]]{1d10 + 4}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -9777,7 +9777,7 @@
         "Angelic Weapons": {
           "name": "Armes angéliques",
           "description": "<p>Les attaques d'arme du [[lookup @name lowercase]]{monstre} sont magiques. Lorsque le [[lookup @name lowercase]]{monstre} touche sa cible avec une arme, celle-ci inflige 6d8 dégâts radiants supplémentaires (inclus dans l'attaque).</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Armes angéliques.</p>"
+          "chat": "<p>Les attaques d'arme du solar sont magiques. Lorsque le solar touche sa cible avec une arme, celle-ci inflige des dégâts radiants supplémentaires (inclus dans l'attaque).</p>"
         },
         "Divine Awareness": {
           "name": "Vigilance divine",
@@ -9835,7 +9835,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Teleport": {
           "name": "Téléportation",
@@ -9964,7 +9964,7 @@
         "Rejuvenation": {
           "name": "Reconstitution",
           "description": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{souhait} peut empêcher ce trait de fonctionner.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Reconstitution.</p>"
+          "chat": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie.</p>"
         },
         "Spellcasting": {
           "name": "Sorts",
@@ -10309,7 +10309,7 @@
         "Claw (Fiend Form Only)": {
           "name": "Griffe (forme fiélonne uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts tranchants.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Griffe (forme fiélonne uniquement).</p>"
+          "chat": "<p>Le fiélon attaque avec sa [[lookup @item.name]].</p>"
         },
         "Charm": {
           "name": "Charme",
@@ -10330,7 +10330,7 @@
         "Draining Kiss": {
           "name": "Baiser dévitalisant",
           "description": "<p>Le fiélon échange un baiser avec une créature &reference[charmed apply=false]{charmée} par lui ou consentante. La cible effectue un jet de sauvegarde de [[/save activity=hczxJO21CcoyyyO7]] contre cette magie et subit [[/damage average activity=hczxJO21CcoyyyO7]] en cas d'échec, la moitié en cas de réussite. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p><section id=\"secret-o3d8RMpsTX8cJQ42\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez utiliser l'activité <em><strong>« Dégâts au maximum de points de vie »</strong></em> pour indiquer le montant de dégâts subis par une créature lors de cette attaque et réduire son maximum de points de vie en conséquence.</p></section>",
-          "chat": "<p>La [[lookup @name]] utilise Baiser dévitalisant.</p>",
+          "chat": "<p>La cible effectue un jet de sauvegarde de Constitution contre cette magie.</p>",
           "activities": {
             "Maximum Hit Point Damage": {
               "name": "Dégâts au maximum de points de vie"
@@ -10624,7 +10624,7 @@
         },
         "Siege Monster": {
           "name": "Monstre de siège",
-          "description": "<p>Le [[lookup @details.type.config.label lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} inflige des dégâts doublés aux objets et aux structures.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -10673,7 +10673,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Attack": {
           "name": "Attaque",
@@ -10715,7 +10715,7 @@
         "Mace": {
           "name": "Masse d’armes",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Masse d’armes.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         }
       },
       "languages": "une au choix (généralement le commun)",
@@ -10932,7 +10932,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>La [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Shimmering Shield": {
           "name": "Protection scintillante",
@@ -10991,7 +10991,7 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} n'est pas exposé aux rayons du soleil ni dans l'eau vive, il peut consacrer son action à se transformer en chauve-souris de taille TP ou en nuage de brume de taille M, ou à reprendre sa forme véritable.</p><p>Tant qu'il est sous forme de chauve-souris, le [[lookup @name lowercase]]{monstre} ne peut pas parler, sa vitesse au sol est de 1,50 m et il dispose d'une vitesse de vol de 9 m. Son profil, outre sa catégorie de taille et sa vitesse, ne change pas. Tous les vêtements qu'il porte et les accessoires qui le parent se transforment avec lui, mais pas ce qu'il transporte. S'il meurt, il reprend sa forme véritable.</p><p>Tant qu'il est sous forme de brume, le [[lookup @name lowercase]]{monstre} ne peut entreprendre aucune action, ni parler, ni manipuler d'objets. Il ne pèse rien, dispose d'une vitesse de vol de 6 m avec le vol stationnaire, peut pénétrer dans l'espace d'une créature hostile et même s'y arrêter. De plus, la brume peut se glisser dans tout espace suffisant pour laisser circuler l'air, sans devoir &reference[squeezing]{se faufiler}, mais il ne peut pas traverser l'eau. Il est avantagé aux jets de sauvegarde de Force, Dextérité et Constitution, et immunisé contre tous les dégâts non magiques, en dehors de ceux que lui infligent les rayons du soleil.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer ou à reprendre sa forme véritable.</p>",
           "effects": {
             "Bat": {
               "name": "Chauve-souris"
@@ -11057,7 +11057,7 @@
         "Legendary Actions": {
           "name": "Actions légendaires",
           "description": "<p>[[lookup @resources.legact.label]]</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Actions légendaires.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut entreprendre [[lookup @resources.legact.max]] actions légendaires.</p>"
         },
         "Move": {
           "name": "Déplacement",
@@ -11155,7 +11155,7 @@
         "Rotting Touch": {
           "name": "Contact putréfiant",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une créature. <em>Touché :</em> 4 ([[/damage]]{1d8}) dégâts nécrotiques.</p>",
-          "chat": "<p>La [[lookup @name]] attaque avec Contact putréfiant.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son Contact putréfiant.</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11199,7 +11199,7 @@
         "Stunning Screech": {
           "name": "Piaillement étourdissant",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[stunned]{étourdie} jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Piaillement étourdissant.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit effectuer un jet de sauvegarde de Constitution.</p>"
         }
       },
       "subtype": "Démon",
@@ -11259,7 +11259,7 @@
         "Freeze": {
           "name": "Gel",
           "description": "<p>Si l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid, il fige partiellement ; sa vitesse est réduite de 6 m jusqu'à la fin de son tour suivant.</p>",
-          "chat": "<p>[[lookup @name]] utilise Gel.</p>"
+          "chat": "<p>Si l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid, il fige partiellement.</p>"
         },
         "Water Form": {
           "name": "Corps d’eau",
@@ -11277,7 +11277,7 @@
         "Slam": {
           "name": "Coup",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d8 + 4}) dégâts contondants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Coup.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>"
         },
         "Whelm": {
           "name": "Déluge",
@@ -11309,7 +11309,7 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride d'ours et d'humanoïde ou en ours de taille G, ou à reprendre sa forme véritable d'humanoïde. Hormis sa catégorie de taille et sa CA, son profil reste le même, quelle que soit sa forme.</p><p>Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Métamorphe.</p>",
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer ou à reprendre sa forme véritable.</p>",
           "activities": {
             "Change Form": {
               "name": "Changer d'aspect"
@@ -11327,17 +11327,17 @@
         "Bite (Bear or Hybrid Form Only)": {
           "name": "Morsure (forme d’ours ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts perforants. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (ours-garou).</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Morsure (forme d’ours ou hybride uniquement).</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>"
         },
         "Claw (Bear or Hybrid Form Only)": {
           "name": "Griffe (forme d’ours ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d8 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Griffe (forme d’ours ou hybride uniquement).</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa Griffe.</p>"
         },
         "Greataxe (Humanoid or Hybrid Form Only)": {
           "name": "Hache à deux mains (forme humanoïde ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{1d12 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>L'[[lookup @name]] attaque avec Hache à deux mains (forme humanoïde ou hybride uniquement).</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa Hache à deux mains.</p>"
         }
       },
       "subtype": "Humain, Métamorphe",
@@ -11374,13 +11374,13 @@
         },
         "Tusks (Boar or Hybrid Form Only)": {
           "name": "Défenses (forme de sanglier ou hybride uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts tranchants. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (sanglier).</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Défenses (forme de sanglier ou hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (sanglier).</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses Défenses. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>"
         },
         "Maul (Humanoid or Hybrid Form Only)": {
           "name": "Maillet d’armes (forme humanoïde ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 10 ([[/damage]]{2d6 + 3}) dégâts contondants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Maillet d’armes (forme humanoïde ou hybride uniquement).</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Maillet d'armes.</p>"
         }
       },
       "subtype": "Humain, Métamorphe",
@@ -11394,7 +11394,7 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride de rat et d'humanoïde ou en rat géant, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer ou à reprendre sa forme véritable.</p>",
           "activities": {
             "Change Form": {
               "name": "Changer d'aspect"
@@ -11416,18 +11416,18 @@
         },
         "Bite (Rat or Hybrid Form Only)": {
           "name": "Morsure (formes de rat et hybride uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 4 ([[/damage]]{1d4 + 2}) dégâts perforants. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (rat-garou).</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure (formes de rat et hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (rat-garou).</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>"
         },
         "Hand Crossbow (Humanoid or Hybrid Form Only)": {
           "name": "Arbalète de poing (forme humanoïde ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 9/36 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Arbalète de poing (forme humanoïde ou hybride uniquement).</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Arbalète de poing.</p>"
         },
         "Shortsword (Humanoid or Hybrid Form Only)": {
           "name": "Épée courte (forme humanoïde ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 5 ([[/damage]]{1d6 + 2}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Épée courte (forme humanoïde ou hybride uniquement).</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Épée courte.</p>"
         }
       },
       "subtype": "Humain, Métamorphe",
@@ -11441,7 +11441,7 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride de tigre et d'humanoïde ou en tigre, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa taille, son profil reste le même, quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer ou à reprendre sa forme véritable.</p>",
           "activities": {
             "Change Form": {
               "name": "Changer d'aspect"
@@ -11470,23 +11470,23 @@
         },
         "Bite (Tiger or Hybrid Form Only)": {
           "name": "Morsure (forme de tigre ou hybride uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 8 ([[/damage]]{1d10 + 3}) dégâts perforants. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (tigre-garou).</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de tigre ou hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (tigre-garou).</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>"
         },
         "Claw (Tiger or Hybrid Form Only)": {
           "name": "Griffe (forme de tigre ou hybride uniquement)",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d8 + 3}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe (forme de tigre ou hybride uniquement).</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Griffe.</p>"
         },
         "Scimitar (Humanoid or Hybrid Form Only)": {
           "name": "Cimeterre (forme humanoïde ou hybride uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d6 + 3}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Cimeterre (forme humanoïde ou hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Cimeterre.</p>"
         },
         "Longbow (Humanoid or Hybrid Form Only)": {
           "name": "Arc long (forme humanoïde ou hybride uniquement)",
-          "description": "<p><em>Attaque d'arme à distance :</em> [[/attack]], portée 45/180 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Arc long (forme humanoïde ou hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son Arc long.</p>"
         }
       },
       "subtype": "Humain, Métamorphe",
@@ -11499,8 +11499,8 @@
       "items": {
         "Bite (Wolf or Hybrid Form Only)": {
           "name": "Morsure (forme de loup ou hybride uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 6 ([[/damage]]{1d8 + 2}) dégâts perforants. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (loup-garou).</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure (forme de loup ou hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]]. Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (loup-garou).</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>"
         },
         "Multiattack (Humanoid or Hybrid Form Only)": {
           "name": "Attaques multiples (forme humanoïde ou hybride uniquement)",
@@ -11513,13 +11513,13 @@
         },
         "Claws (Hybrid Form Only)": {
           "name": "Griffes (forme hybride uniquement)",
-          "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature. <em>Touché :</em> 7 ([[/damage]]{2d4 + 2}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffes (forme hybride uniquement).</p>"
+          "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses Griffes.</p>"
         },
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer en hybride de loup et d'humanoïde ou en loup, ou à reprendre sa forme véritable d'humanoïde. En dehors de sa CA, son profil reste le même quelle que soit la forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Métamorphe.</p>",
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} peut consacrer son action à se transformer ou à reprendre sa forme véritable.</p>",
           "activities": {
             "Change Form": {
               "name": "Changer d'aspect"
@@ -11542,7 +11542,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 7 ([[/damage]]{1d10 + 2}) dégâts perforants plus 2 ([[/damage]]{1d4}) dégâts de froid.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Cold Breath": {
           "name": "Souffle glacial",
@@ -11731,7 +11731,7 @@
         "Create Specter": {
           "name": "Création de spectre",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} cible un humanoïde dans un rayon de 3 m, qui a succombé depuis moins de 1 minute à une mort violente. L'esprit de la cible émerge comme @UUID[Compendium.dnd5e.monsters.Actor.PuPo4H4Dcxigf0fY]{spectre} de l'espace de son cadavre ou dans l'espace inoccupé le plus proche. Le spectre est sous le contrôle de l'[[lookup @name lowercase]]{monstre}. L'[[lookup @name lowercase]]{monstre} ne peut ainsi contrôler plus de sept spectres à la fois.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Création de spectre.</p>",
+          "chat": "<p>L'esprit de la cible émerge comme spectre de l'espace de son cadavre ou dans l'espace inoccupé le plus proche.</p>",
           "activities": {
             "Raise Specter": {
               "target": "humanoïde"
@@ -11755,7 +11755,7 @@
         "Life Drain": {
           "name": "Absorption de vie",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p><p>La cible doit réussir un jet de sauvegarde de [[/save]], faute de quoi son maximum de points de vie est réduit d'autant que les dégâts subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>L'âme-en-peine attaque avec son Absorption de vie. La cible doit effectuer un jet de sauvegarde de <strong>Constitution</strong>.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible doit effectuer un jet de sauvegarde de Constitution.</p>"
         }
       },
       "languages": "celles qu'elle parlait de son vivant",
@@ -11782,7 +11782,7 @@
         "Stinger": {
           "name": "Dard caudal",
           "description": "<p>[[/attack extended]]. [[/damage extended]]. La cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=5R4V2td9o9mrejmz]] en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>La vouivre attaque avec son Dard caudal. La cible effectue un jet de sauvegarde de <strong>Constitution</strong>.</p>",
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison"
@@ -11846,12 +11846,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts perforants plus 4 ([[/damage]]{1d8}) dégâts d'acide.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11867,12 +11867,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d10 + 5}) dégâts perforants plus 5 ([[/damage]]{1d10}) dégâts de foudre.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d6 + 5}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Lightning Breath": {
           "name": "Souffle de foudre",
@@ -11898,7 +11898,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -11921,7 +11921,7 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11941,7 +11941,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 16 ([[/damage]]{2d10 + 5}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -11959,7 +11959,7 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 12 ([[/damage]]{2d6 + 5}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11975,12 +11975,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts perforants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -12018,7 +12018,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -12041,7 +12041,7 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -12061,12 +12061,12 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 15 ([[/damage]]{2d10 + 4}) dégâts perforants plus 7 ([[/damage]]{2d6}) dégâts de poison.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 11 ([[/damage]]{2d6 + 4}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -12097,12 +12097,12 @@
               "chatFlavor": "Le dragon referme ses puissantes mâchoires !"
             }
           },
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Fire Breath": {
           "name": "Souffle de feu",
@@ -12128,7 +12128,7 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 3 m, une cible. <em>Touché :</em> 17 ([[/damage]]{2d10 + 6}) dégâts perforants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Breath Weapons": {
           "name": "Souffles",
@@ -12151,7 +12151,7 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une cible. <em>Touché :</em> 13 ([[/damage]]{2d6 + 6}) dégâts tranchants.</p>",
-          "chat": "<p>[[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -12172,7 +12172,7 @@
               "chatFlavor": "Le dragon ouvre sa large gueule pour mordre son ennemi."
             }
           },
-          "chat": "<p>Le [[lookup @name]] attaque avec Morsure.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Claw": {
           "name": "Griffe",
@@ -12182,7 +12182,7 @@
               "chatFlavor": "Le dragon frappe avec l'une de ses griffes."
             }
           },
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
         },
         "Cold Breath": {
           "name": "Souffle glacial",
