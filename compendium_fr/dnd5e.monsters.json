@@ -7220,7 +7220,8 @@
           "chat": "<p>Le sol dans un rayon de [[lookup @target.template.size activity=uNtJ0Zvj5SXxoaNm]] [[lookup @target.template.units activity=uNtJ0Zvj5SXxoaNm]] du [[lookup @name lowercase]]{monstre} se présente comme une pâte qui constitue un &reference[difficult terrain]{terrain difficile}. Effectuer un jet de sauvegarde de Force.</p>",
           "effects": {
             "Aberrant Ground": {
-              "name": "Sol aberrant"
+              "name": "Sol aberrant",
+              "description": "<p>Votre vitesse de déplacement est réduite à 0 jusqu'au début de votre tour suivant.</p>"
             }
           },
           "activities": {
@@ -7235,7 +7236,14 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} bredouille de façon incohérente tant qu'il voit une créature. Toute créature qui commence son tour dans un rayon de 6 m du monstre et entend son charabia effectue un jet de sauvegarde de Sagesse.</p>",
           "effects": {
             "Gibbering": {
-              "name": "Charabia"
+              "name": "Charabia",
+              "description": "<p>Vous ne pouvez pas jouer de réaction jusqu'au début de votre tour suivant et devez lancer un [[/r d8]] pour déterminer ce que vous faites pour le tour.</p><p>Sur un résultat de 1 à 4, vous ne faites rien. De 5 à 6, vous n'entreprenez pas d'action ni d'action bonus et consacrez tout votre déplacement dans une direction aléatoire. De 7 à 8, vous effectuez une attaque de corps à corps contre une créature déterminée aléatoirement à portée d'allonge (vous ne faites rien si une telle attaque n'est pas possible).</p>"
+            }
+          },
+          "activities": {
+            "Gibbering Save": {
+              "name": "Sauvegarde contre le charabia",
+              "condition": "Lorsqu'une créature commence son tour à portée du [[lookup @name lowercase]]{monstre} et entend son charabia."
             }
           }
         },
@@ -7250,7 +7258,8 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si elle est tuée par ces dégâts, la cible est absorbée dans la masse du [[lookup @name lowercase]]{monstre}.</p>"
             }
           }
         },
@@ -7260,7 +7269,13 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} expectore un amas chimique en un point qu'il voit dans un rayon de [[lookup @labels.description.range activity=lIu1LNYAMT8FLBjR]]. L'amas explose à l'impact dans un éclat de lumière aveuglante. Chaque créature située dans un rayon de 1,50 m de l'éclat doit effectuer un jet de sauvegarde de Dextérité.</p>",
           "effects": {
             "Blinding Spittle": {
-              "name": "Crachat aveuglant"
+              "name": "Crachat aveuglant",
+              "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglé} jusqu'à la fin du tour suivant du babélien.</p>"
+            }
+          },
+          "activities": {
+            "Spit Chemical Glob": {
+              "name": "Cracher un amas chimique"
             }
           }
         }
@@ -7365,7 +7380,8 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature de taille M ou inférieure, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>"
             }
           }
         },
@@ -7401,7 +7417,8 @@
           "description": "<p>Après que le [[lookup @name lowercase]]{monstre} a fait tomber une créature à 0 point de vie avec une attaque de corps à corps à son tour, il peut entreprendre une action bonus pour se déplacer à concurrence de la moitié de sa vitesse et effectuer une attaque de [[/item .fVB2xcZ4wVwiqEYf]]{Morsure}.</p>",
           "activities": {
             "Rush Prey": {
-              "name": "Se ruer sur une proie"
+              "name": "Se ruer sur une proie",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} fait tomber une créature à 0 point de vie avec une attaque de corps à corps à son tour."
             }
           }
         },
@@ -7434,7 +7451,8 @@
           "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour, elle lui inflige des dégâts contondants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &Reference[prone]{à terre}.</p>",
           "activities": {
             "Charge Save": {
-              "name": "Sauvegarde contre la charge"
+              "name": "Sauvegarde contre la charge",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.y8sRU8Ks2lcrGsaf.Item.I3ioyE4CVHPLGGy7]{Coup de bélier} au même tour."
             }
           }
         },
@@ -7531,7 +7549,13 @@
         "Trampling Charge": {
           "name": "Charge écrasante",
           "description": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.nZthq6WHLhcdu3te.Item.7DSbBzpS1e9lYxZx]{Coup de corne} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si la cible est à terre, la [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .O8oahxePfpHFYohz]]{Sabots} par une action bonus.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Charge écrasante.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Charge écrasante.</p>",
+          "activities": {
+            "Trample Save": {
+              "name": "Sauvegarde contre le piétinement",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.nZthq6WHLhcdu3te.Item.7DSbBzpS1e9lYxZx]{Coup de corne} au même tour."
+            }
+          }
         },
         "Gore": {
           "name": "Coup de corne",
@@ -7549,10 +7573,17 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} exhale des vapeurs pétrifiantes sous forme d'un [[lookup lowercase @labels.description.template activity=I95hdnCSX03wF7Er]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Constitution.</p>",
           "effects": {
             "Petrifying": {
-              "name": "Pétrification"
+              "name": "Pétrification",
+              "description": "<p>Vous êtes &reference[restrained apply=false]{entravé} tandis que vous commencez à vous transformer en pierre. Vous devez réitérer le jet de sauvegarde à la fin de votre tour suivant.</p><p>En cas de réussite, l'effet prend fin. En cas d'échec, vous êtes @UUID[Compendium.dnd5e.monsters.Actor.nZthq6WHLhcdu3te.Item.5tEnGK28Rd4nHnwM.ActiveEffect.PtowAW8SWftie1x8]{pétrifié} jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie comparable vous libère.</p>"
             },
             "Fully Petrified": {
-              "description": "<p>Vous êtes &reference[petrified apply=false]{pétrifié} jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie comparable vous libère.</p>"
+              "description": "<p>Vous êtes &reference[petrified apply=false]{pétrifié} jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie comparable vous libère.</p>",
+              "name": "Entièrement pétrifié"
+            }
+          },
+          "activities": {
+            "Exhale Petrifying Gas": {
+              "name": "Exhaler des vapeurs pétrifiantes"
             }
           }
         }
@@ -7576,6 +7607,13 @@
               "name": "Arme corrodée",
               "description": "<p>Cette arme a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 aux jets de dégâts. Si ce malus atteint -5, l'arme est détruite.</p>"
             }
+          },
+          "activities": {
+            "Corrode Weapon": {
+              "name": "Corroder l'arme",
+              "condition": "Lorsqu'une arme non magique en métal touche la [[lookup @name lowercase]]{monstre}.",
+              "description": "<p>Toute arme non magique en métal qui touche la [[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts.</p><p>Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent la [[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>La [[lookup @name lowercase]]{monstre} peut ronger le métal non magique, au rythme de 5 cm d'épaisseur par round.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.uSay5J2sf9zXsabi.ActiveEffect.Khdj386syEL9V9OA]{Arme corrodée}</p>"
+            }
           }
         },
         "False Appearance": {
@@ -7590,6 +7628,11 @@
             "Corroded Armor": {
               "name": "Armure corrodée",
               "description": "<p>Cette armure a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p>"
+            }
+          },
+          "activities": {
+            "attack": {
+              "description": "<p>Toute armure métallique non magique portée par la cible est partiellement rongée, subissant un malus permanent et cumulatif de -1 à la CA qu'elle procure. L'armure est détruite si ce malus réduit sa CA à 10.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.fqbFYtbtkrL53FOC.Item.KO4qRywgiEQ3F004.ActiveEffect.SiRqKDm2qerReaj8]{Armure corrodée}</p>"
             }
           }
         }
@@ -7646,7 +7689,15 @@
         },
         "Illusory Appearance": {
           "name": "Apparence illusoire",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} se pare, ainsi que tout ce qu'elle porte, d'une illusion magique qui lui donne l'aspect d'une autre créature de taille équivalente et de forme humanoïde. L'illusion prend fin si la [[lookup @name lowercase]]{monstre} meurt ou consacre une action bonus à y mettre un terme.</p><p>Les changements apportés par cet effet ne résistent pas à un examen physique. Ainsi, la [[lookup @name lowercase]]{monstre} pourrait donner un aspect lisse à sa peau, mais quiconque touche sa chair ne sentira que verrues et rugosités.</p><p>Sans cela, une créature doit consacrer une action à examiner visuellement l'illusion et réussir un test d'[[/check activity=kV9ZxzkLNTRogVW9]] pour se rendre compte que la [[lookup @name lowercase]]{monstre} est déguisée.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} se pare, ainsi que tout ce qu'elle porte, d'une illusion magique qui lui donne l'aspect d'une autre créature de taille équivalente et de forme humanoïde. L'illusion prend fin si la [[lookup @name lowercase]]{monstre} meurt ou consacre une action bonus à y mettre un terme.</p><p>Les changements apportés par cet effet ne résistent pas à un examen physique. Ainsi, la [[lookup @name lowercase]]{monstre} pourrait donner un aspect lisse à sa peau, mais quiconque touche sa chair ne sentira que verrues et rugosités.</p><p>Sans cela, une créature doit consacrer une action à examiner visuellement l'illusion et réussir un test d'[[/check activity=kV9ZxzkLNTRogVW9]] pour se rendre compte que la [[lookup @name lowercase]]{monstre} est déguisée.</p>",
+          "activities": {
+            "Don Illusory Appearance": {
+              "name": "Revêtir une apparence illusoire"
+            },
+            "Investigate": {
+              "name": "Examiner"
+            }
+          }
         },
         "Invisible Passage": {
           "name": "Passage dans l'invisible",
@@ -7659,7 +7710,8 @@
           },
           "effects": {
             "Invisible Passage": {
-              "name": "Passage dans l'invisible"
+              "name": "Passage dans l'invisible",
+              "description": "<p>Vous êtes &reference[invisible apply=false]{invisible} jusqu'à ce que vous attaquiez, lanciez un sort, ou que votre concentration soit rompue (comme pour un sort). Tant que vous êtes invisible, vous ne laissez aucune trace physique de votre passage, si bien que seule la magie peut vous pister. Tout l'équipement porté par vous devient invisible avec vous.</p>"
             }
           }
         },
@@ -7784,7 +7836,13 @@
         "Rejuvenation": {
           "name": "Reconstitution",
           "description": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{souhait} peut empêcher ce trait de fonctionner.</p>",
-          "chat": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie.</p>"
+          "chat": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie.</p>",
+          "activities": {
+            "utility": {
+              "roll": "Jours avant la résurrection",
+              "condition": "Quand le [[lookup @name lowercase]]{monstre} meurt."
+            }
+          }
         },
         "Spellcasting": {
           "name": "Sorts",
@@ -7798,7 +7856,8 @@
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison",
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=Z2wqSwuJDKaRy2TA]] en cas d'échec, la moitié en cas de réussite.</p>"
             }
           }
         },
@@ -8082,7 +8141,21 @@
         "Luring Song": {
           "name": "Chant captivant",
           "description": "<p>La [[lookup @name lowercase]]{monstre} entonne une mélodie magique. Chaque humanoïde et géant dans un rayon de [[lookup @target.template.size activity=SStRaAbx3AgLlBAU]] [[lookup @target.template.units activity=SStRaAbx3AgLlBAU]] de la [[lookup @name lowercase]]{monstre}, s'il entend le chant, doit réussir un jet de sauvegarde de [[/save activity=SStRaAbx3AgLlBAU]] sous peine d'être &reference[charmed]{charmé} jusqu'à la fin du chant. La [[lookup @name lowercase]]{monstre} doit à chacun de ses tours suivants consacrer une action bonus à prolonger la mélodie. Elle peut cesser de chanter à tout moment. Le chant prend fin si la [[lookup @name lowercase]]{monstre} est &amp;reference[incapacitated apply=false]{neutralisée}.</p><p>Tant qu'elle est charmée par la [[lookup @name lowercase]]{monstre}, la cible est &reference[incapacitated]{neutralisée} et n'est pas sujette aux chants des autres [[lookup @name lowercase]]{monstre}s. Si la cible charmée se trouve à plus de 1,50 m de la [[lookup @name lowercase]]{monstre}, elle doit à son tour consacrer son déplacement pour se rapprocher de la [[lookup @name lowercase]]{monstre} par le chemin le plus direct, afin de terminer dans un rayon de 1,50 m du monstre. Elle ne cherche pas à éviter les &reference[opportunity attacks]{attaques d'opportunité}, mais si elle doit traverser un terrain dangereux (comme une fosse de lave) elle peut réitérer le JS, même chose chaque fois qu'elle subit des dégâts d'une source autre que la [[lookup @name lowercase]]{monstre}. Une cible charmée peut aussi réitérer le JS à la fin de chacun de ses tours. En cas de réussite, l'effet prend fin en ce qui la concerne.</p><p>Une cible qui se sauvegarde est immunisée contre le chant de cette [[lookup @name lowercase]]{monstre} pendant 24 heures.</p>",
-          "chat": "<p>La [[lookup @name lowercase]]{monstre} entonne une mélodie magique. Chaque humanoïde et géant dans un rayon de [[lookup @target.template.size activity=SStRaAbx3AgLlBAU]] [[lookup @target.template.units activity=SStRaAbx3AgLlBAU]] de la [[lookup @name lowercase]]{monstre}, s'il entend le chant, doit effectuer un jet de sauvegarde de Sagesse. Une cible peut aussi réitérer le JS à la fin de chacun de ses tours.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} entonne une mélodie magique. Chaque humanoïde et géant dans un rayon de [[lookup @target.template.size activity=SStRaAbx3AgLlBAU]] [[lookup @target.template.units activity=SStRaAbx3AgLlBAU]] de la [[lookup @name lowercase]]{monstre}, s'il entend le chant, doit effectuer un jet de sauvegarde de Sagesse. Une cible peut aussi réitérer le JS à la fin de chacun de ses tours.</p>",
+          "activities": {
+            "Sing Luring Song": {
+              "name": "Entonner le chant captivant"
+            },
+            "Continue Song": {
+              "name": "Prolonger le chant"
+            }
+          },
+          "effects": {
+            "Charmed by Song": {
+              "name": "Charmé par le chant",
+              "description": "<p>Vous êtes &reference[charmed apply=false]{charmé}. Tant que vous êtes charmé, vous êtes &reference[incapacitated apply=false]{neutralisé} et n'êtes pas sujet aux chants des autres harpies.</p><p>Si vous vous trouvez à plus de 1,50 m de la harpie, vous devez à votre tour consacrer votre déplacement pour vous rapprocher de la harpie par le chemin le plus direct, afin de terminer dans un rayon de 1,50 m d'elle. Vous ne cherchez pas à éviter les &reference[opportunity attacks]{attaques d'opportunité}, mais si vous devez traverser un terrain dangereux (comme une fosse de lave) vous pouvez réitérer le jet de sauvegarde, même chose chaque fois que vous subissez des dégâts d'une source autre que la harpie. Vous pouvez aussi réitérer le jet de sauvegarde à la fin de chacun de vos tours. En cas de réussite, l'effet prend fin en ce qui vous concerne.</p>"
+            }
+          }
         }
       },
       "habitat": "Montagne",
@@ -8147,12 +8220,14 @@
           "chat": "<p>Une créature qui commence son tour dans un rayon de [[lookup @labels.description.range activity=6R3a5EK9mkBX3oNR]] de l'[[lookup @name lowercase]]{monstre} doit réussir un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Poison Save": {
-              "name": "Sauvegarde contre le poison"
+              "name": "Sauvegarde contre le poison",
+              "condition": "Lorsqu'une créature commence son tour à portée de l'[[lookup @name lowercase]]{monstre}."
             }
           },
           "effects": {
             "Stench Poisoning": {
-              "name": "Empoisonnement par la puanteur"
+              "name": "Empoisonnement par la puanteur",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} jusqu'au début de votre tour suivant.</p>"
             }
           }
         },
@@ -8229,7 +8304,8 @@
           "chat": "<p>Le [[lookup @name]] utilise Avantage martial.</p>",
           "activities": {
             "Bonus Damage": {
-              "name": "Dégâts bonus"
+              "name": "Dégâts bonus",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} touche avec une attaque d'arme une créature qui se trouve dans un rayon de 1,50 m d'un allié non &reference[incapacitated apply=false]{neutralisé} du [[lookup @name lowercase]]{monstre}."
             }
           }
         },
@@ -8270,7 +8346,12 @@
           },
           "effects": {
             "Poisoned": {
-              "name": "Empoisonné"
+              "name": "Empoisonné",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pendant 1 minute.</p>"
+            },
+            "Poisoned & Unconscious": {
+              "name": "Empoisonné et Inconscient",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pendant 1 minute. Tant que vous êtes ainsi empoisonné, vous êtes &reference[unconscious apply=false]{inconscient}.</p>"
             }
           }
         },
@@ -8300,7 +8381,19 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature autre qu'un mort-vivant ou un artificiel, elle effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Infernal Wound Save": {
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde contre la plaie infernale",
+              "description": "<p>Si vous êtes une créature autre qu'un mort-vivant ou un artificiel, vous devez réussir un jet de sauvegarde de [[/save]] sous peine de perdre 10 (3d6) points de vie au début de chacun de vos tours en raison d'une @UUID[Compendium.dnd5e.monsters.Actor.MADGs8pWMVyyFOf1.Item.VpvOoT7mbR0XNZiL.ActiveEffect.rkqCY7JoNgMp3P7H]{plaie infernale profonde}.</p>"
+            },
+            "Infernal Wound Damage": {
+              "name": "Dégâts de la plaie infernale",
+              "condition": "Lorsqu'une créature affligée d'une @UUID[Compendium.dnd5e.monsters.Actor.MADGs8pWMVyyFOf1.Item.VpvOoT7mbR0XNZiL.ActiveEffect.rkqCY7JoNgMp3P7H]{plaie infernale profonde} commence son tour."
+            }
+          },
+          "effects": {
+            "Deep Infernal Wound": {
+              "name": "Plaie infernale profonde",
+              "description": "<p>Vous avez été affligé d'une plaie infernale profonde. Vous perdez [[/damage 3d6 average]] points de vie au début de chacun de vos tours pour chaque plaie infernale profonde dont vous êtes affligé.</p><p>Toute créature peut stopper l'hémorragie en réussissant un test de [[/check 12 wis med]], au prix d'une action. La plaie se referme aussi si vous recevez des soins magiques.</p>"
             }
           }
         },
@@ -8354,7 +8447,15 @@
           "chat": "<p>L'[[lookup @name]] utilise Têtes multiples.</p>",
           "effects": {
             "Hydra Head": {
-              "name": "Tête d'hydre"
+              "name": "Tête d'hydre",
+              "description": "<p>Vous avez une tête vivante. Vous mourez si vous perdez toutes vos têtes.</p>"
+            }
+          },
+          "activities": {
+            "Regrow Heads & Regenerate": {
+              "name": "Faire repousser des têtes et se régénérer",
+              "condition": "Si l'[[lookup @name lowercase]]{monstre} a perdu une ou plusieurs têtes.",
+              "description": "<p>À la fin de son tour, il fait repousser deux têtes par tête morte depuis son tour précédent, sauf s'il a subi des dégâts de feu depuis. L'[[lookup @name lowercase]]{monstre} récupère [[/healing]] pour chaque tête qui repousse ainsi.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.K4vsSlHqbBAHUDHY.Item.fsAeJDaI0a6sBeFk.ActiveEffect.jALTzc0GXXaDjFNQ]{Tête d'hydre}</p>"
             }
           }
         },
@@ -8380,7 +8481,8 @@
       "description": "<p><em>Illustration du token par <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
       "effects": {
         "Hydra Head": {
-          "name": "Tête d'hydre"
+          "name": "Tête d'hydre",
+          "description": "<p>Vous avez une tête vivante. Vous mourez si vous perdez toutes vos têtes.</p>"
         }
       }
     },
@@ -9416,7 +9518,12 @@
         "Trampling Charge": {
           "name": "Charge écrasante",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.MiYRAIHwm9It1in8.Item.S7i3GTdoo6tyc2wL]{Coup de défense} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .Hx541foatcQiMSZj]]{Piétinement} par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>",
+          "activities": {
+            "Trample Save": {
+              "name": "Sauvegarde contre le piétinement"
+            }
+          }
         },
         "Gore": {
           "name": "Coup de défense",
@@ -9555,7 +9662,8 @@
               "name": "Pétrification"
             },
             "Fully Petrified": {
-              "description": "<p>Vous êtes &reference[petrified apply=false]{pétrifié} jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie comparable vous libère.</p>"
+              "description": "<p>Vous êtes &reference[petrified apply=false]{pétrifié} jusqu'à ce que le sort @UUID[Compendium.dnd5e.spells.Item.WzvJ7G3cqvIubsLk]{restauration suprême} ou une magie comparable vous libère.</p>",
+              "name": "Entièrement pétrifié"
             }
           }
         },
@@ -11977,7 +12085,13 @@
         "Rejuvenation": {
           "name": "Reconstitution",
           "description": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie. Seul le sort @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{souhait} peut empêcher ce trait de fonctionner.</p>",
-          "chat": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie.</p>"
+          "chat": "<p>S'il meurt, le [[lookup @name lowercase]]{monstre} revient à la vie en 1d6 jours et récupère tous ses points de vie.</p>",
+          "activities": {
+            "utility": {
+              "roll": "Jours avant la résurrection",
+              "condition": "Quand le [[lookup @name lowercase]]{monstre} meurt."
+            }
+          }
         },
         "Spellcasting": {
           "name": "Sorts",
@@ -12925,7 +13039,12 @@
         "Trampling Charge": {
           "name": "Charge écrasante",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.e5IQxSJO7ySEDdSH.Item.h5lGnMKW65NWIi2W]{Coup de corne} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une attaque de [[/item .6UWSefP0BqnmYwAz]]{Piétinement} par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>",
+          "activities": {
+            "Trample Save": {
+              "name": "Sauvegarde contre le piétinement"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -13388,7 +13507,12 @@
         "Trampling Charge": {
           "name": "Charge écrasante",
           "description": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.T1xZTDCGuvMBSq8d.Item.7MiLYgDyM2Rm3nEb]{Sabots} au même tour, la cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}. Si la cible est à terre, le [[lookup @name lowercase]]{monstre} peut effectuer contre elle une autre attaque de [[/item .7MiLYgDyM2Rm3nEb]]{Sabots} par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>",
+          "activities": {
+            "Trample Save": {
+              "name": "Sauvegarde contre le piétinement"
+            }
+          }
         },
         "Hooves": {
           "name": "Sabots",
