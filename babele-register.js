@@ -1,5 +1,8 @@
 import { registerCustomEnrichersFr } from "./enrichers-fr.mjs";
 import NPCDataFr from "./npc-embedded-fr.mjs";
+import { registerOfficialContentFr } from "./official-content-fr.mjs";
+
+Hooks.once("init", () => registerOfficialContentFr());
 
 Hooks.once("babele.init", (babele) => {
 
