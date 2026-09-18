@@ -14431,7 +14431,12 @@
               "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
             },
             "Hybrid Form": {
-              "name": "Forme hybride"
+              "name": "Forme hybride",
+              "description": "<p>Vous vous êtes transformé en votre forme hybride, un hybride de sanglier et d'humanoïde.</p>"
+            },
+            "Boar Form": {
+              "name": "Forme de sanglier",
+              "description": "<p>Vous vous êtes transformé en votre forme de sanglier.</p>"
             }
           }
         },
@@ -14442,7 +14447,14 @@
           "activities": {
             "Curse Save": {
               "name": "Sauvegarde contre la malédiction",
-              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque.",
+              "description": "<p>Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (sanglier).</p>"
+            }
+          },
+          "effects": {
+            "Wereboar Lycanthropy": {
+              "name": "Lycanthropie (sanglier)",
+              "description": "<p>Vous êtes maudit par la lycanthropie (sanglier).</p>"
             }
           }
         },
@@ -14471,14 +14483,16 @@
           },
           "effects": {
             "Rat Form": {
-              "name": "Forme de rat"
+              "name": "Forme de rat",
+              "description": "<p>Vous vous êtes transformé en votre forme de rat.</p>"
             },
             "True Form": {
               "name": "Forme véritable",
               "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
             },
             "Hybrid Form": {
-              "name": "Forme hybride"
+              "name": "Forme hybride",
+              "description": "<p>Vous vous êtes transformé en votre forme hybride, un hybride de rat et d'humanoïde.</p>"
             }
           }
         },
@@ -14497,7 +14511,14 @@
           "activities": {
             "Curse Save": {
               "name": "Sauvegarde contre la malédiction",
-              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque.",
+              "description": "<p>Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (rat-garou).</p>"
+            }
+          },
+          "effects": {
+            "Wererat Lycanthropy": {
+              "name": "Lycanthropie (rat-garou)",
+              "description": "<p>Vous êtes maudit par la lycanthropie (rat-garou).</p>"
             }
           }
         },
@@ -14535,7 +14556,12 @@
               "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
             },
             "Hybrid Form": {
-              "name": "Forme hybride"
+              "name": "Forme hybride",
+              "description": "<p>Vous vous êtes transformé en votre forme hybride, un hybride de tigre et d'humanoïde.</p>"
+            },
+            "Tiger Form": {
+              "name": "Forme de tigre",
+              "description": "<p>Vous vous êtes transformé en votre forme de tigre.</p>"
             }
           }
         },
@@ -14555,7 +14581,8 @@
           "requirements": "Forme de tigre ou hybride",
           "activities": {
             "Pounce Save": {
-              "name": "Sauvegarde contre le bond agressif"
+              "name": "Sauvegarde contre le bond agressif",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 4,50 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.zIr3NaNF0mWz5Ahq.Item.HPmjVRKpG08bgohb]{Griffe} au même tour."
             }
           }
         },
@@ -14571,7 +14598,14 @@
           "activities": {
             "Curse Save": {
               "name": "Sauvegarde contre la malédiction",
-              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque.",
+              "description": "<p>Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (tigre-garou).</p>"
+            }
+          },
+          "effects": {
+            "Weretiger Lycanthropy": {
+              "name": "Lycanthropie (tigre-garou)",
+              "description": "<p>Vous êtes maudit par la lycanthropie (tigre-garou).</p>"
             }
           }
         },
@@ -14606,7 +14640,14 @@
           "activities": {
             "Curse Save": {
               "name": "Sauvegarde contre la malédiction",
-              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque.",
+              "description": "<p>Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (loup-garou).</p>"
+            }
+          },
+          "effects": {
+            "Werewolf Lycanthrope": {
+              "name": "Lycanthropie (loup-garou)",
+              "description": "<p>Vous êtes maudit par la lycanthropie (loup-garou).</p>"
             }
           }
         },
@@ -14639,7 +14680,12 @@
               "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
             },
             "Hybrid Form": {
-              "name": "Forme hybride"
+              "name": "Forme hybride",
+              "description": "<p>Vous vous êtes transformé en votre forme hybride, un hybride de loup et d'humanoïde.</p>"
+            },
+            "Wolf Form": {
+              "name": "Forme de loup",
+              "description": "<p>Vous vous êtes transformé en votre forme de loup.</p>"
             }
           }
         },
@@ -14705,10 +14751,13 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Raise Zombie": {
-              "name": "Relever un zombi"
+              "name": "Relever un zombi",
+              "condition": "Vingt-quatre heures après qu'un humanoïde a été tué par cette attaque.",
+              "description": "<p>Un humanoïde tué par cette attaque se relève 24 heures plus tard comme @UUID[Compendium.dnd5e.monsters.Actor.NAISFPoNNgUCsEyW]{zombi} sous le contrôle du [[lookup @name lowercase]]{monstre}, sauf si l'humanoïde est ramené à la vie ou si son corps est détruit. Le [[lookup @name lowercase]]{monstre} ne peut ainsi contrôler plus de douze zombis à la fois.</p>"
             },
             "Drain Maximum Hit Point Save": {
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde contre l'absorption de points de vie"
             }
           }
         }
@@ -14729,7 +14778,8 @@
               "name": "Absorption de vie"
             },
             "Regain Hit Points": {
-              "name": "Récupérer des points de vie"
+              "name": "Récupérer des points de vie",
+              "condition": "Lorsque la cible de cette aptitude meurt."
             }
           }
         },
@@ -14759,7 +14809,57 @@
           "description": "<p>Le [[lookup @name lowercase]]{monstre} produit une &reference[bright light]{lumière vive} sur un rayon compris entre 1,50 m et 6 m, à sa convenance, et une &reference[dim light]{lumière faible} sur une distance supplémentaire équivalente. Il peut modifier ce rayon par une action bonus.</p>",
           "effects": {
             "Variable Illumination": {
-              "name": "Halo fluctuant"
+              "name": "Halo fluctuant",
+              "description": "<p>Vous produisez une quantité variable de &reference[bright light]{lumière vive} et de &reference[dim light]{lumière faible}.</p>"
+            },
+            "Illumination: 5 Feet": {
+              "name": "Halo : 1,50 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 1,50 m et une &reference[dim light]{lumière faible} sur 1,50 m supplémentaires.</p>",
+              "changes": {
+                "0": "{} : 1,50 m"
+              }
+            },
+            "jsvurfLvY0q7oHU2": {
+              "name": "Halo : 1,50 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 1,50 m et une &reference[dim light]{lumière faible} sur 1,50 m supplémentaires.</p>"
+            },
+            "Illumination: 10 Feet": {
+              "name": "Halo : 3 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 3 m et une &reference[dim light]{lumière faible} sur 3 m supplémentaires.</p>"
+            },
+            "Illumination: 15 Feet": {
+              "name": "Halo : 4,50 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 4,50 m et une &reference[dim light]{lumière faible} sur 4,50 m supplémentaires.</p>"
+            },
+            "Illumination: 20 Feet": {
+              "name": "Halo : 6 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 6 m et une &reference[dim light]{lumière faible} sur 6 m supplémentaires.</p>"
+            },
+            "STtJx4sNGSIuzJ98": {
+              "name": "Halo : 3 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 3 m et une &reference[dim light]{lumière faible} sur 3 m supplémentaires.</p>",
+              "changes": {
+                "0": "{} : 3 m"
+              }
+            },
+            "nip3Iamy558qmNOV": {
+              "name": "Halo : 4,50 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 4,50 m et une &reference[dim light]{lumière faible} sur 4,50 m supplémentaires.</p>",
+              "changes": {
+                "0": "{} : 4,50 m"
+              }
+            },
+            "RntAZbrBNUpTiqt2": {
+              "name": "Halo : 6 m",
+              "description": "<p>Vous produisez une &reference[bright light]{lumière vive} sur un rayon de 6 m et une &reference[dim light]{lumière faible} sur 6 m supplémentaires.</p>",
+              "changes": {
+                "0": "{} : 6 m"
+              }
+            }
+          },
+          "activities": {
+            "Alter Illumination": {
+              "name": "Modifier son halo"
             }
           }
         },
@@ -14779,7 +14879,8 @@
           },
           "effects": {
             "Invisible": {
-              "name": "Invisible"
+              "name": "Invisible",
+              "description": "<p>Vous et votre halo devenez magiquement &reference[invisible apply=false]{invisibles} jusqu'à ce que vous attaquiez, recouriez à @UUID[Compendium.dnd5e.monsters.Actor.8KSVpQZyzius93ko.Item.RAnyTfj3CGaiGK3W]{Festin d'essence vitale}, ou que votre concentration soit rompue (comme pour un sort).</p>"
             }
           }
         }
@@ -14810,14 +14911,20 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>"
             }
           }
         },
         "Cold Breath": {
           "name": "Souffle glacial",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale une bouffée d'air glacial, sous forme d'un [[lookup lowercase @labels.description.template activity=4YgvBZjoO2Qd5OY3]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} exhale une bouffée d'air glacial, sous forme d'un [[lookup lowercase @labels.description.template activity=4YgvBZjoO2Qd5OY3]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} exhale une bouffée d'air glacial, sous forme d'un [[lookup lowercase @labels.description.template activity=4YgvBZjoO2Qd5OY3]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité.</p>",
+          "activities": {
+            "Exhale Freezing Wind": {
+              "name": "Exhaler un air glacial"
+            }
+          }
         }
       },
       "languages": "loup arctique",
@@ -14842,7 +14949,8 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>"
             }
           }
         }
@@ -14864,7 +14972,8 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &Reference[prone]{à terre}.</p>"
             }
           }
         }
@@ -14882,7 +14991,8 @@
           "chat": "<p>L'esprit de la cible émerge comme spectre de l'espace de son cadavre ou dans l'espace inoccupé le plus proche.</p>",
           "activities": {
             "Raise Specter": {
-              "target": "humanoïde"
+              "target": "humanoïde",
+              "name": "Relever un spectre"
             }
           }
         },
@@ -14913,7 +15023,8 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Drain Maximum Hit Point Save": {
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde contre l'absorption de points de vie"
             }
           }
         }
@@ -14946,7 +15057,8 @@
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison",
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=5R4V2td9o9mrejmz]] en cas d'échec, la moitié en cas de réussite.</p>"
             }
           }
         }
