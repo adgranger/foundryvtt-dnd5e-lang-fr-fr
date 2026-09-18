@@ -11269,7 +11269,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Si la cible est une créature de taille G ou inférieure, elle effectue un jet de sauvegarde de Dextérité.</p>",
           "effects": {
             "Swallowed": {
-              "name": "Englouti"
+              "name": "Englouti",
+              "description": "<p>Vous avez été englouti par le ver pourpre. Vous êtes &reference[blinded apply=false]{aveuglé}, &reference[restrained apply=false]{entravé}, et bénéficiez d'un &reference[total cover]{abri total} contre les attaques et autres effets émanant de l'extérieur du ver pourpre.</p><p>Vous subissez également [[/damage average 6d6 acid]] au début de chacun des tours du ver pourpre.</p><p>Si le ver pourpre subit 30 dégâts ou plus lors d'un même tour de votre part, il doit réussir un jet de sauvegarde de Constitution sous peine de vous régurgiter, vous laissant alors &reference[prone]{à terre} dans un espace situé à 3 m ou moins de lui. Si le ver pourpre meurt, vous n'êtes plus entravé par lui et pouvez vous en extraire en dépensant 6 m de déplacement pour vous retrouver &reference[prone]{à terre} près du cadavre.</p>"
             }
           },
           "activities": {
@@ -11295,7 +11296,8 @@
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison",
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible effectue un jet de sauvegarde de [[/save activity=IKUzECPGj8QbMFLo]] et subit [[/damage average activity=IKUzECPGj8QbMFLo]] supplémentaires en cas d'échec, la moitié en cas de réussite.</p>"
             }
           }
         }
@@ -11316,7 +11318,8 @@
           },
           "effects": {
             "Invisibility": {
-              "name": "Invisibilité"
+              "name": "Invisibilité",
+              "description": "<p>Vous êtes &reference[invisible]{invisible} jusqu'à ce que vous attaquiez ou recouriez à @UUID[Compendium.dnd5e.monsters.Actor.bwtkdzavdNHISgp4.Item.1YhP86rTuRIXKFi2]{Frayeur}, ou que votre concentration soit rompue (comme pour un sort). Tout l'équipement que vous portez est invisible également.</p>"
             }
           }
         },
@@ -11332,7 +11335,8 @@
           },
           "effects": {
             "Quasit Poison": {
-              "name": "Poison du quasit"
+              "name": "Poison du quasit",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné}.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
             }
           }
         },
@@ -11343,8 +11347,11 @@
           "activities": {
             "Shapeshift": {
               "profiles": {
-                "Bat": "Chauve-souris"
-              }
+                "Bat": "Chauve-souris",
+                "Centipede": "Mille-pattes",
+                "Toad": "Crapaud"
+              },
+              "name": "Changer d'aspect"
             }
           }
         },
@@ -11355,7 +11362,18 @@
         "Scare": {
           "name": "Frayeur",
           "description": "<p>Une créature choisie par le [[lookup @name lowercase]]{monstre} dans un rayon de [[lookup @labels.description.range activity=zQ8s6ZTP8J2d98cR]] de lui doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[frightened]{effrayée} pendant [[lookup @labels.duration activity=zQ8s6ZTP8J2d98cR]]. Ainsi effrayée, la cible peut réitérer le JS à la fin de chacun de ses tours, avec désavantage si le [[lookup @name lowercase]]{monstre} est dans son champ de vision, et met un terme à l'effet sur elle-même en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Frayeur.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Frayeur.</p>",
+          "activities": {
+            "Frighten Creature": {
+              "name": "Effrayer une créature"
+            }
+          },
+          "effects": {
+            "Scared": {
+              "name": "Effrayé",
+              "description": "<p>Vous êtes &reference[frightened apply=false]{effrayé}.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours, avec désavantage si le quasit est dans votre champ de vision, et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
+            }
+          }
         }
       },
       "subtype": "Démon, Métamorphe",
@@ -11399,7 +11417,13 @@
         "Claw": {
           "name": "Griffe",
           "description": "<p>[[/attack extended]]. [[/damage extended]] et si la cible est une créature, elle est maudite. Cette malédiction magique prend effet dès que la cible prend un repos court ou long, son esprit étant assailli d'horribles songes et images. La cible maudite ne tire aucun bénéfice lorsqu'elle termine un repos court ou long. La malédiction persiste tant qu'elle n'est pas levée par @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>",
-          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>"
+          "chat": "<p>Le [[lookup @name]] attaque avec Griffe.</p>",
+          "effects": {
+            "Rakshasa's Curse": {
+              "name": "Malédiction du rakshasa",
+              "description": "<p>Vous êtes maudit. Tant que vous êtes maudit, chaque fois que vous prenez un repos court ou long, votre esprit est assailli d'horribles songes et images. Vous ne tirez aucun bénéfice lorsque vous terminez un repos court ou long.</p><p>La malédiction persiste tant qu'elle n'est pas levée par @UUID[Compendium.dnd5e.spells.Item.XZhdgVK3cLoxNCQl]{délivrance des malédictions} ou une magie équivalente.</p>"
+            }
+          }
         },
         "Detect Thoughts": {
           "name": "Détection des pensées",
@@ -11570,7 +11594,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>",
           "effects": {
             "Swallowed": {
-              "name": "Englouti"
+              "name": "Englouti",
+              "description": "<p>Vous avez été englouti par le remorhaz. Vous êtes &reference[blinded apply=false]{aveuglé}, &reference[restrained apply=false]{entravé}, et bénéficiez d'un &reference[total cover]{abri total} contre les attaques et autres effets provenant de l'extérieur du remorhaz.</p><p>Vous subissez également [[/damage average 6d6 acid]] au début de chacun des tours du remorhaz.</p>"
             }
           },
           "activities": {
@@ -11579,7 +11604,8 @@
               "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a englouti une créature."
             },
             "Swallow Creature": {
-              "name": "Engloutir une créature"
+              "name": "Engloutir une créature",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} touche une créature qu'il a &reference[grappled apply=false]{agrippé} avec sa @UUID[Compendium.dnd5e.monsters.Actor.Ixo5shumxy4I9qyD.Item.lYSWskOMRCVLyWLZ]{Morsure}."
             }
           }
         }
@@ -11596,7 +11622,8 @@
           "chat": "<p>Si le rhinocéros se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de Coup de corne au même tour, il lui inflige des dégâts supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée à terre.</p>",
           "activities": {
             "Charge Save": {
-              "name": "Sauvegarde contre la charge"
+              "name": "Sauvegarde contre la charge",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.SBCe2BSa6opTS5M4.Item.uFv78t6CwySS1gio]{Coup de corne} au même tour."
             }
           }
         },
@@ -11643,7 +11670,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant que le [[lookup @name lowercase]]{monstre} agrippe cette cible, elle est &reference[restrained]{entravée} et il ne peut pas utiliser ses [[lookup @item.name lowercase]] contre d'autres cibles.</p>",
           "effects": {
             "Grappled by Talons": {
-              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 19). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé}.</p>"
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 19). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé}.</p>",
+              "name": "Agrippé par des serres"
             }
           }
         }
@@ -11661,7 +11689,13 @@
         "Grasping Tendrils": {
           "name": "Filaments collants",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} peut se doter d'un maximum de six filaments. Chaque filament peut être attaqué (CA 20 ; 10 points de vie ; immunité contre les dégâts psychiques et de poison).</p><p>La destruction d'un filament n'inflige aucun dégât à l'[[lookup @name lowercase]]{monstre}, qui peut en faire pousser un nouveau à son tour suivant. Une créature peut aussi consacrer une action à rompre un filament, ce qui nécessite de réussir un test de [[/check]].</p>",
-          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut se doter d'un maximum de six filaments. Chaque filament peut être attaqué. Une créature peut aussi consacrer une action à rompre un filament, ce qui nécessite de réussir un test de Force.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} peut se doter d'un maximum de six filaments. Chaque filament peut être attaqué. Une créature peut aussi consacrer une action à rompre un filament, ce qui nécessite de réussir un test de Force.</p>",
+          "activities": {
+            "Break Tendril Check": {
+              "name": "Test pour rompre un filament",
+              "condition": "Lorsqu'une créature consacre une action à rompre un des filaments du [[lookup @name lowercase]]{monstre}."
+            }
+          }
         },
         "Spider Climb": {
           "name": "Pattes d'araignée",
@@ -11675,12 +11709,23 @@
         "Tendril": {
           "name": "Filament",
           "description": "<p>[[/attack extended]]. <em>Touché :</em> La cible est &Reference[grappled]{agrippée} (évasion DD 15). Tant que l'[[lookup @name lowercase]]{monstre} l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force, et l'[[lookup @name lowercase]]{monstre} ne peut pas se servir du même [[lookup @item.name lowercase]] contre une autre cible.</p>",
-          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que l'[[lookup @name lowercase]]{monstre} l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force.</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible est &Reference[grappled]{agrippée}. Tant que l'[[lookup @name lowercase]]{monstre} l'agrippe, la cible est &Reference[restrained]{entravée} et désavantagée aux tests de Force et aux jets de sauvegarde de Force.</p>",
+          "effects": {
+            "Grappled by Tendril": {
+              "name": "Agrippé par un filament",
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 15). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé} et désavantagé aux tests de Force et aux jets de sauvegarde de Force.</p><p>Ce filament peut être attaqué (CA 20 ; 10 points de vie ; immunité contre les dégâts psychiques et de poison). La destruction d'un filament n'inflige aucun dégât à l'enlaceur. Une créature peut aussi consacrer une action à rompre un filament, ce qui nécessite de réussir un test de [[/check 15 str]].</p>"
+            }
+          }
         },
         "Reel": {
           "name": "Traction",
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} tire vers lui chaque créature &reference[grappled apply=false]{agrippée}, en ligne droite, d'un maximum de 7,50 m.</p>",
-          "description": "<p>L'[[lookup @name lowercase]]{monstre} tire vers lui chaque créature &reference[grappled apply=false]{agrippée}, en ligne droite, d'un maximum de 7,50 m.</p>"
+          "description": "<p>L'[[lookup @name lowercase]]{monstre} tire vers lui chaque créature &reference[grappled apply=false]{agrippée}, en ligne droite, d'un maximum de 7,50 m.</p>",
+          "activities": {
+            "Reel in Prey": {
+              "name": "Tirer sa proie"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -11712,7 +11757,13 @@
         },
         "Damage Transfer": {
           "name": "Transfert de dégâts",
-          "description": "<p>Tant qu'il &reference[grappling]{agrippe} une créature, le [[lookup @name lowercase]]{monstre} ne subit que la moitié des dégâts qu'on lui inflige et la créature &reference[grappled apply=false]{agrippée} subit l'autre moitié.</p>"
+          "description": "<p>Tant qu'il &reference[grappling]{agrippe} une créature, le [[lookup @name lowercase]]{monstre} ne subit que la moitié des dégâts qu'on lui inflige et la créature &reference[grappled apply=false]{agrippée} subit l'autre moitié.</p>",
+          "activities": {
+            "Transfer Damage": {
+              "name": "Transférer des dégâts",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} subit des dégâts tant qu'il &reference[grappling]{agrippe} une créature."
+            }
+          }
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -11721,7 +11772,19 @@
         "Smother": {
           "name": "Étouffement",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature de taille M ou inférieure. <em>Touché :</em> La créature est &Reference[grappled]{agrippée} (évasion DD 13). Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained apply=false]{entravée}, &reference[blinded apply=false]{aveuglée} et risque l'&reference[suffocation apply=false]{asphyxie}, et le [[lookup @name lowercase]]{monstre} ne peut pas étouffer d'autre cible. De plus, au début de chacun de ses propres tours, la cible subit [[/damage average]].</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque étouffante ! La créature est &Reference[grappled]{agrippée}. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}, &reference[blinded]{aveuglée} et risque l'&reference[suffocation apply=false]{asphyxie}, et le [[lookup @name lowercase]]{monstre} ne peut pas étouffer d'autre cible.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} effectue une attaque étouffante ! La créature est &Reference[grappled]{agrippée}. Tant que le [[lookup @name lowercase]]{monstre} l'agrippe, la cible est &reference[restrained]{entravée}, &reference[blinded]{aveuglée} et risque l'&reference[suffocation apply=false]{asphyxie}, et le [[lookup @name lowercase]]{monstre} ne peut pas étouffer d'autre cible.</p>",
+          "activities": {
+            "Smother Damage": {
+              "name": "Dégâts d'étouffement",
+              "condition": "Lorsqu'une créature étouffée par le [[lookup @name lowercase]]{monstre} commence son tour."
+            }
+          },
+          "effects": {
+            "Smothering Grapple": {
+              "name": "Prise étouffante",
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 13). Tant que dure cette prise, vous êtes &reference[restrained apply=false]{entravé}, &reference[blinded apply=false]{aveuglé} et risquez l'&reference[suffocation apply=false]{asphyxie}.</p><p>De plus, au début de chacun de vos tours, vous subissez [[/damage 2d6 + 3 bludgeoning average]].</p>"
+            }
+          }
         }
       },
       "senses": "ne voit rien au-delà de ce rayon",
@@ -11743,6 +11806,13 @@
               "name": "Arme corrodée",
               "description": "<p>Cette arme a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 aux jets de dégâts. Si ce malus atteint -5, l'arme est détruite.</p>"
             }
+          },
+          "activities": {
+            "Rust Weapon": {
+              "name": "Corroder une arme",
+              "condition": "Lorsqu'une arme non magique en métal touche l'[[lookup @name lowercase]]{monstre}.",
+              "description": "<p>Toute arme non magique en métal qui touche l'[[lookup @name lowercase]]{monstre} lors d'une attaque est aussitôt rongée. Après avoir infligé ses dégâts, l'arme subit un malus permanent et cumulatif de –1 aux jets de dégâts. Si ce malus atteint –5, l'arme est détruite. Les munitions non magiques en métal qui touchent l'[[lookup @name lowercase]]{monstre} dans le cadre d'une attaque sont détruites après application des dégâts.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt.ActiveEffect.iqyGcqOolg6tFCwC]{Arme corrodée}</p>"
+            }
           }
         },
         "Bite": {
@@ -11756,7 +11826,14 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} fait rouiller un objet en métal ferreux qu'il voit dans un rayon de [[lookup @labels.description.range activity=4kalmKCyvd5GxuYh]]. Si l'objet n'est porté par personne, ce contact en détruit l'équivalent d'un cube de 30 cm d'arête.</p>",
           "effects": {
             "Rusted Armor": {
-              "name": "Armure corrodée"
+              "name": "Armure corrodée",
+              "description": "<p>Cette armure a été rongée, ce qui lui confère un malus permanent et cumulatif de -1 à la CA qu'elle procure. Si ce malus réduit une armure à une CA de 10 ou fait tomber le bonus d'un bouclier à +0, elle est détruite.</p>"
+            }
+          },
+          "activities": {
+            "Avoid Rusting Save": {
+              "name": "Sauvegarde pour éviter la corrosion",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} fait rouiller un objet non magique en métal ferreux qu'il voit dans un rayon de 1,50 m. Si l'objet n'est porté par personne, ce contact en détruit l'équivalent d'un cube de 30 cm d'arête. Si l'objet est porté par une créature, celle-ci peut effectuer un jet de sauvegarde de [[/save]] pour éviter le contact du [[lookup @name lowercase]]{monstre}.</p><p>Si l'objet touché est une armure métallique ou un bouclier en métal que porte une créature, il subit un malus permanent et cumulatif de –1 à la CA qu'il procure. Les armures dont la CA est réduite à 10 et les boucliers dont le bonus tombe à +0 sont détruits. Si l'objet touché est une arme métallique tenue en main, elle s'oxyde selon les détails du trait @UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt]{Corrosion du métal}.</p><p>@UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.dobpPU4kb00zSkQt.ActiveEffect.iqyGcqOolg6tFCwC]{Arme corrodée}</p><p>@UUID[Compendium.dnd5e.monsters.Actor.WJsxqbHU28D64lWT.Item.yxwZ9AtLMKZ61sTz.ActiveEffect.pbQsiyOC531v0z64]{Armure corrodée}</p>"
             }
           }
         }
@@ -11777,7 +11854,8 @@
           "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour, la cible doit effectuer un jet de sauvegarde de Force.</p>",
           "activities": {
             "Pounce Save": {
-              "name": "Sauvegarde contre le bond agressif"
+              "name": "Sauvegarde contre le bond agressif",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.tYYoifu9teGLetVI.Item.I9zJprscDFYpwwJR]{Griffe} au même tour."
             }
           }
         },
@@ -11869,7 +11947,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. La cible est &reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est entravée et la [[lookup @name lowercase]]{monstre} peut la toucher automatiquement avec sa [[lookup @item.name]], sachant qu'elle ne peut pas effectuer d'attaque de [[lookup @item.name]] contre d'autres cibles.</p>",
           "effects": {
             "Grappled by Tail": {
-              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 14). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé}.</p>"
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 14). Tant que vous êtes ainsi agrippé, vous êtes également &reference[restrained apply=false]{entravé}.</p>",
+              "name": "Agrippé par une queue"
             }
           }
         }
@@ -11967,7 +12046,14 @@
           "chat": "<p>La [[lookup @name]] utilise Apparence terrifiante.</p>",
           "effects": {
             "Horrified": {
-              "name": "Terrifié"
+              "name": "Terrifié",
+              "description": "<p>Pour toute la durée, vous êtes &reference[frightened apply=false]{effrayé}. Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours, avec désavantage si la guenaude marine est dans votre champ de vision, et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
+            }
+          },
+          "activities": {
+            "Revealed True Form Save": {
+              "name": "Sauvegarde contre la forme véritable révélée",
+              "condition": "Lorsqu'une créature commence son tour dans un rayon de 9 m de la [[lookup @name lowercase]]{monstre} et la voit sous sa forme véritable."
             }
           }
         },
@@ -11988,7 +12074,15 @@
         },
         "Illusory Appearance": {
           "name": "Apparence illusoire",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} se pare, ainsi que tout ce qu'elle porte, d'une illusion magique qui lui donne l'aspect d'une créature très laide, de taille équivalente et de forme humanoïde. L'effet prend fin si la [[lookup @name lowercase]]{monstre} meurt ou consacre une action bonus à y mettre un terme.</p><p>Les changements apportés par cet effet ne résistent pas à un examen physique. Ainsi, la [[lookup @name lowercase]]{monstre} pourrait paraître dépourvue de griffes, mais quiconque touche sa main sentira qu'elle est bien griffue. Sans cela, une créature doit consacrer une action à examiner visuellement l'illusion et réussir un test d'[[/check activity=qwatGWOoJRpKLNtR]] pour se rendre compte que la [[lookup @name lowercase]]{monstre} est déguisée.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} se pare, ainsi que tout ce qu'elle porte, d'une illusion magique qui lui donne l'aspect d'une créature très laide, de taille équivalente et de forme humanoïde. L'effet prend fin si la [[lookup @name lowercase]]{monstre} meurt ou consacre une action bonus à y mettre un terme.</p><p>Les changements apportés par cet effet ne résistent pas à un examen physique. Ainsi, la [[lookup @name lowercase]]{monstre} pourrait paraître dépourvue de griffes, mais quiconque touche sa main sentira qu'elle est bien griffue. Sans cela, une créature doit consacrer une action à examiner visuellement l'illusion et réussir un test d'[[/check activity=qwatGWOoJRpKLNtR]] pour se rendre compte que la [[lookup @name lowercase]]{monstre} est déguisée.</p>",
+          "activities": {
+            "Investigate": {
+              "name": "Examiner"
+            },
+            "Don Illusory Appearance": {
+              "name": "Revêtir une apparence illusoire"
+            }
+          }
         }
       },
       "habitat": "Sous-marin",
@@ -12017,14 +12111,43 @@
           "chat": "<p>L'[[lookup @name]] utilise Discrétion dans les ombres.</p>",
           "activities": {
             "Hide": {
-              "name": "Se cacher"
+              "name": "Se cacher",
+              "condition": "Tant que l'[[lookup @name lowercase]]{monstre} se trouve dans une zone de &reference[dim light]{lumière faible} ou de ténèbres."
             }
           }
         },
         "Strength Drain": {
           "name": "Ponction de force",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la valeur de Force de la cible est réduite de [[/r 1d4]]. La cible meurt si cette réduction porte sa Force à 0. Sans cela, la réduction persiste jusqu'à ce que la cible termine un repos court ou long.</p><p>Quand un humanoïde non mauvais meurt de cette attaque, une nouvelle @UUID[Compendium.dnd5e.monsters.Actor.QGcQYZbVl4bWzi4E]{ombre} émerge de sa dépouille 1d4 heures plus tard.</p>",
-          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
+          "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>",
+          "activities": {
+            "attack": {
+              "description": "<p>La valeur de Force de la cible est réduite de [[/r 1d4]]. La cible meurt si cette réduction porte sa Force à 0. Sans cela, la réduction persiste jusqu'à ce que la cible termine un repos court ou long.</p><p>Quand un humanoïde non mauvais meurt de cette attaque, une nouvelle @UUID[Compendium.dnd5e.monsters.Actor.QGcQYZbVl4bWzi4E]{ombre} émerge de sa dépouille 1d4 heures plus tard.</p><h4>Force ponctionnée : [[1d4]]</h4>"
+            },
+            "Raise Shadow": {
+              "name": "Faire émerger une ombre",
+              "condition": "Lorsqu'un humanoïde non mauvais meurt de cette attaque.",
+              "description": "<p>Quand un humanoïde non mauvais meurt de cette attaque, une nouvelle @UUID[Compendium.dnd5e.monsters.Actor.QGcQYZbVl4bWzi4E]{ombre} émerge de sa dépouille 1d4 ([[1d4]]) heures plus tard.</p>"
+            }
+          },
+          "effects": {
+            "Strength Drain: 1": {
+              "name": "Ponction de force : 1",
+              "description": "<p>Votre valeur de Force est réduite de 1. Vous mourez si cette réduction porte votre Force à 0. Sans cela, la réduction persiste jusqu'à ce que vous terminiez un repos court ou long.</p>"
+            },
+            "Strength Drain: 2": {
+              "name": "Ponction de force : 2",
+              "description": "<p>Votre valeur de Force est réduite de 2. Vous mourez si cette réduction porte votre Force à 0. Sans cela, la réduction persiste jusqu'à ce que vous terminiez un repos court ou long.</p>"
+            },
+            "Strength Drain: 3": {
+              "name": "Ponction de force : 3",
+              "description": "<p>Votre valeur de Force est réduite de 3. Vous mourez si cette réduction porte votre Force à 0. Sans cela, la réduction persiste jusqu'à ce que vous terminiez un repos court ou long.</p>"
+            },
+            "Strength Drain: 4": {
+              "name": "Ponction de force : 4",
+              "description": "<p>Votre valeur de Force est réduite de 4. Vous mourez si cette réduction porte votre Force à 0. Sans cela, la réduction persiste jusqu'à ce que vous terminiez un repos court ou long.</p>"
+            }
+          }
         },
         "Sunlight Sensitivity": {
           "name": "Sensibilité au soleil",
@@ -12042,7 +12165,8 @@
           "description": "<p>Chaque fois que le [[lookup @name lowercase]]{monstre} est soumis à des dégâts de foudre, il ne subit aucun dégât et récupère en fait autant de points de vie que la moitié des dégâts de foudre ainsi évités.</p>",
           "activities": {
             "Regain Hit Points": {
-              "name": "Récupérer des points de vie"
+              "name": "Récupérer des points de vie",
+              "condition": "Chaque fois que le [[lookup @name lowercase]]{monstre} est soumis à des dégâts de foudre."
             }
           }
         },
@@ -12051,7 +12175,8 @@
           "description": "<p>Le [[lookup @name lowercase]]{monstre} effectue deux attaques de [[/item .lOIA9YKQU8xSx7Lj]]{Coup}. Si les deux attaques touchent une cible de taille M ou inférieure, celle-ci est &reference[grappled]{agrippée} (évasion DD 14) et le [[lookup @name lowercase]]{monstre} peut recourir son [[/item .N42BQALoCmeYphD1]]{Enveloppement}.</p>",
           "effects": {
             "Grappled by Slam": {
-              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 14).</p>"
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 14).</p>",
+              "name": "Agrippé par un coup"
             }
           }
         },
@@ -12061,12 +12186,17 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} enveloppe une créature de taille M ou inférieure qu'il &reference[grappled apply=false]{agrippe}. La cible enveloppée est &reference[blinded]{aveuglée}, &reference[restrained]{entravée} et incapable de respirer, et doit effectuer un jet de sauvegarde de Constitution au début de chacun des tours du [[lookup @name lowercase]]{monstre}. Lorsque le [[lookup @name lowercase]]{monstre} se déplace, la cible enveloppée l'accompagne.</p>",
           "effects": {
             "Engulfed": {
-              "name": "Englouti"
+              "name": "Englouti",
+              "description": "<p>Vous avez été enveloppé par le tertre errant. Vous êtes &reference[blinded apply=false]{aveuglé}, &reference[restrained apply=false]{entravé} et incapable de respirer, et vous devez réussir un jet de sauvegarde de Constitution au début de chacun des tours du tertre errant, sous peine de subir des dégâts contondants.</p><p>Lorsque le tertre errant se déplace, vous l'accompagnez.</p>"
             }
           },
           "activities": {
             "Start of Turn Engulf Damage": {
-              "name": "Dégâts d'enveloppement au début du tour"
+              "name": "Dégâts d'enveloppement au début du tour",
+              "description": "<p>Une créature enveloppée doit réussir un jet de sauvegarde de [[/save activity=qxYtQIpEbpMrFvVe]] au début de chacun des tours du [[lookup @name lowercase]]{monstre}, sous peine de subir [[/damage average activity=qxYtQIpEbpMrFvVe]].</p>"
+            },
+            "Engulf Creature": {
+              "name": "Envelopper une créature"
             }
           }
         },
@@ -12100,7 +12230,12 @@
         },
         "Spell Storing": {
           "name": "Stockage de sort",
-          "description": "<p>Un incantateur qui porte l'amulette du [[lookup @name lowercase]]{monstre} peut stocker un sort du 4<sup>e</sup> niveau ou inférieur dans l'artificiel. Pour ce faire, le porteur doit lancer le sort sur le [[lookup @name lowercase]]{monstre}. Le sort n'a aucun effet immédiat, mais il est stocké dans le [[lookup @name lowercase]]{monstre}. Lorsque le porteur de l'amulette le lui ordonne ou qu'une situation prédéterminée par l'incantateur se présente, le [[lookup @name lowercase]]{monstre} lance le sort stocké selon les critères définis par l'incantateur, sans la moindre composante. Quand le sort est ainsi lancé ou qu'un nouveau sort est stocké, celui qui était préalablement stocké ne l'est plus.</p><section id=\"secret-tV5DEXXS3UxPSEI6\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ajoutez un sort dans l'activité Incanter de cette aptitude afin de permettre au [[lookup @name lowercase]]{monstre} de lancer le sort. Retirez ensuite le sort de l'activité.</p></section>"
+          "description": "<p>Un incantateur qui porte l'amulette du [[lookup @name lowercase]]{monstre} peut stocker un sort du 4<sup>e</sup> niveau ou inférieur dans l'artificiel. Pour ce faire, le porteur doit lancer le sort sur le [[lookup @name lowercase]]{monstre}. Le sort n'a aucun effet immédiat, mais il est stocké dans le [[lookup @name lowercase]]{monstre}. Lorsque le porteur de l'amulette le lui ordonne ou qu'une situation prédéterminée par l'incantateur se présente, le [[lookup @name lowercase]]{monstre} lance le sort stocké selon les critères définis par l'incantateur, sans la moindre composante. Quand le sort est ainsi lancé ou qu'un nouveau sort est stocké, celui qui était préalablement stocké ne l'est plus.</p><section id=\"secret-tV5DEXXS3UxPSEI6\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ajoutez un sort dans l'activité Incanter de cette aptitude afin de permettre au [[lookup @name lowercase]]{monstre} de lancer le sort. Retirez ensuite le sort de l'activité.</p></section>",
+          "activities": {
+            "Stored Spell": {
+              "name": "Sort stocké"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -12113,7 +12248,13 @@
         },
         "Shield": {
           "name": "Bouclier",
-          "description": "<p>Quand une créature effectue une attaque contre le porteur de l'amulette, ce dernier se voit octroyer un bonus de +2 à la CA par le [[lookup @name lowercase]]{monstre} s'ils sont dans un rayon de 1,50 m l'un de l'autre.</p>"
+          "description": "<p>Quand une créature effectue une attaque contre le porteur de l'amulette, ce dernier se voit octroyer un bonus de +2 à la CA par le [[lookup @name lowercase]]{monstre} s'ils sont dans un rayon de 1,50 m l'un de l'autre.</p>",
+          "activities": {
+            "Guard Amulet Bearer": {
+              "name": "Protéger le porteur de l'amulette",
+              "condition": "Lorsqu'une créature effectue une attaque contre le porteur de l'amulette du [[lookup @name lowercase]]{monstre}."
+            }
+          }
         }
       },
       "languages": "comprend les ordres qu'on lui donne, quelle que soit la langue, mais ne parle pas",
@@ -12126,7 +12267,14 @@
         "Shriek": {
           "name": "Hurlement",
           "description": "<p>Lorsqu'une &reference[bright light]{lumière vive} ou une créature se trouve dans un rayon de [[lookup @labels.description.range activity=jlIOy920hBT6hxVd]] du [[lookup @name lowercase]]{monstre}, celui-ci pousse un hurlement audible à 90 m. Le [[lookup @name lowercase]]{monstre} continue à hurler jusqu'à ce que la perturbation sorte du rayon et pendant 1d4 de ses tours après cela.</p>",
-          "chat": "<p>Lorsqu'une &reference[bright light]{lumière vive} ou une créature se trouve dans un rayon de [[lookup @labels.description.range activity=jlIOy920hBT6hxVd]] du [[lookup @name lowercase]]{monstre}, celui-ci pousse un hurlement audible à 90 m.</p>"
+          "chat": "<p>Lorsqu'une &reference[bright light]{lumière vive} ou une créature se trouve dans un rayon de [[lookup @labels.description.range activity=jlIOy920hBT6hxVd]] du [[lookup @name lowercase]]{monstre}, celui-ci pousse un hurlement audible à 90 m.</p>",
+          "activities": {
+            "Emit Shriek": {
+              "name": "Pousser un hurlement",
+              "roll": "Durée du hurlement (rounds)",
+              "condition": "Lorsqu'une &reference[bright light]{lumière vive} ou une créature se trouve dans un rayon de 9 m du [[lookup @name lowercase]]{monstre}."
+            }
+          }
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -12208,12 +12356,16 @@
               "name": "Enchanter"
             },
             "Command Sword": {
-              "name": "Commander l'épée"
+              "name": "Commander l'épée",
+              "description": "<p>S'il voit l'épée, le [[lookup @name lowercase]]{monstre} peut lui ordonner mentalement par une action bonus de voler sur un maximum de 15 m et d'effectuer une attaque contre une cible ou de revenir dans ses mains.</p>"
             }
           },
           "effects": {
             "Flying Sword": {
-              "name": "Épée volante"
+              "name": "Épée volante",
+              "changes": {
+                "0": "{} (volant)"
+              }
             }
           }
         },
@@ -12249,7 +12401,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Si la cible est une créature dotée de 100 points de vie ou moins, elle effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Slaying Save": {
-              "name": "Sauvegarde tueur"
+              "name": "Sauvegarde tueur",
+              "condition": "Lorsqu'une créature dotée de 100 points de vie ou moins est touchée par cette attaque."
             }
           }
         },
@@ -12270,7 +12423,12 @@
         "Searing Burst": {
           "name": "Explosion brûlante",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} émet des énergies divines et magiques. Chaque créature de son choix dans un rayon de [[lookup @target.template.size activity=QE8HFlW0jsWaWwdx]] [[lookup @target.template.units activity=QE8HFlW0jsWaWwdx]] effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} émet des énergies divines et magiques. Chaque créature de son choix dans un rayon de [[lookup @target.template.size activity=QE8HFlW0jsWaWwdx]] [[lookup @target.template.units activity=QE8HFlW0jsWaWwdx]] effectue un jet de sauvegarde de Dextérité.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} émet des énergies divines et magiques. Chaque créature de son choix dans un rayon de [[lookup @target.template.size activity=QE8HFlW0jsWaWwdx]] [[lookup @target.template.units activity=QE8HFlW0jsWaWwdx]] effectue un jet de sauvegarde de Dextérité.</p>",
+          "activities": {
+            "Emit Divine Energy": {
+              "name": "Émettre des énergies divines"
+            }
+          }
         },
         "Blinding Gaze": {
           "name": "Regard aveuglant",
@@ -12280,6 +12438,11 @@
             "Blinded": {
               "name": "Aveuglé",
               "description": "<p>Vous êtes &reference[blinded apply=false]{aveuglée} jusqu'à ce qu'une magie telle que le sort @UUID[Compendium.dnd5e.spells.Item.F0GsG0SJzsIOacwV]{restauration partielle} dissipe la cécité.</p>"
+            }
+          },
+          "activities": {
+            "Blind Creature": {
+              "name": "Aveugler une créature"
             }
           }
         },
@@ -12345,7 +12508,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. La cible effectue un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Drain Maximum Hit Point Save": {
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "name": "Sauvegarde contre l'absorption de points de vie"
             }
           }
         },
@@ -12396,7 +12560,8 @@
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison",
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible effectue un jet de sauvegarde de [[/save activity=q1kzQBmcMwK6GGVz]] et subit [[/damage average activity=q1kzQBmcMwK6GGVz]] en cas d'échec, la moitié en cas de réussite.</p>"
             }
           }
         },
@@ -12491,12 +12656,18 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>",
           "activities": {
             "save": {
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 minute. Si le jet de sauvegarde est raté d'au moins 5, la cible empoisonnée tombe &Reference[unconscious]{inconsciente} pendant la même durée, mais se réveille si elle subit des dégâts dans l'intervalle ou si une autre créature consacre une action à la sortir énergiquement de son sommeil.</p>"
             }
           },
           "effects": {
             "Sprite's Poison": {
-              "name": "Poison de l'esprit follet"
+              "name": "Poison de l'esprit follet",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pour toute la durée.</p>"
+            },
+            "Sprite's Sleeping Poison": {
+              "name": "Poison soporifique de l'esprit follet",
+              "description": "<p>Vous êtes &reference[poisoned apply=false]{empoisonné} pour toute la durée. Tant que vous êtes empoisonné de cette manière, vous tombez &reference[unconscious apply=false]{inconscient} pendant la même durée, mais vous vous réveillez si vous subissez des dégâts ou si une autre créature consacre une action à vous sortir énergiquement de votre sommeil.</p>"
             }
           }
         },
@@ -12516,14 +12687,20 @@
           },
           "effects": {
             "Invisibility": {
-              "name": "Invisibilité"
+              "name": "Invisibilité",
+              "description": "<p>Vous êtes &reference[invisible]{invisible} jusqu'à ce que vous attaquiez, lanciez un sort, ou que votre concentration soit rompue (comme pour un sort). Tout l'équipement que vous portez est invisible également.</p>"
             }
           }
         },
         "Heart Sight": {
           "name": "Perception du for intérieur",
           "description": "<p>L'[[lookup @name lowercase]]{monstre} touche physiquement une créature pour s'informer magiquement de son affect du moment. Si la cible rate un jet de sauvegarde de [[/save]], l'[[lookup @name lowercase]]{monstre} apprend aussi son alignement. Célestes, fiélons et morts-vivants ratent automatiquement ce JS.</p>",
-          "chat": "<p>L'[[lookup @name]] utilise Perception du for intérieur.</p>"
+          "chat": "<p>L'[[lookup @name]] utilise Perception du for intérieur.</p>",
+          "activities": {
+            "Peer into Heart": {
+              "name": "Sonder le cœur"
+            }
+          }
         }
       },
       "habitat": "Forêt",
@@ -12603,7 +12780,12 @@
         "Steam Breath": {
           "name": "Souffle de vapeur",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} exhale de la vapeur brûlante sous forme d'un [[lookup lowercase @labels.description.template activity=oytDXenaNlnZuF5f]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de [[/save activity=oytDXenaNlnZuF5f]] et subit [[/damage average activity=oytDXenaNlnZuF5f]] en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} exhale de la vapeur brûlante sous forme d'un [[lookup lowercase @labels.description.template activity=oytDXenaNlnZuF5f]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} exhale de la vapeur brûlante sous forme d'un [[lookup lowercase @labels.description.template activity=oytDXenaNlnZuF5f]]. Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité.</p>",
+          "activities": {
+            "Exhale Steam": {
+              "name": "Exhaler de la vapeur"
+            }
+          }
         },
         "Blur": {
           "name": "Flou",
@@ -12619,7 +12801,19 @@
         "Blood Drain": {
           "name": "Succion du sang",
           "description": "<p>[[/attack extended]]. [[/damage extended]], et la [[lookup @name lowercase]]{monstre} se fixe à la cible. Ainsi fixée, la [[lookup @name lowercase]]{monstre} n'attaque plus. Au lieu de cela, au début de chacun de ses tours, l'hémorragie fait perdre 5 (1d4 + 3) points de vie à la cible.</p><p>La [[lookup @name lowercase]]{monstre} peut se détacher de la cible en y consacrant 1,50 m de déplacement. C'est ce qu'elle fait après avoir absorbé 10 points de vie à la cible ou l'avoir tuée. Toute créature, y compris la cible, peut consacrer son action à se débarrasser de la [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Toute créature, y compris la cible, peut consacrer son action à se débarrasser de la [[lookup @name lowercase]]{monstre}.</p>"
+          "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Toute créature, y compris la cible, peut consacrer son action à se débarrasser de la [[lookup @name lowercase]]{monstre}.</p>",
+          "activities": {
+            "Drain Blood (While Attached)": {
+              "name": "Sucer le sang (tant que fixée)",
+              "condition": "Tant que la [[lookup @name lowercase]]{monstre} est fixée à une créature."
+            }
+          },
+          "effects": {
+            "Attached Stirge": {
+              "name": "Strige fixée",
+              "description": "<p>La strige s'est fixée à vous et vous draine de votre sang.</p>"
+            }
+          }
         }
       },
       "habitat": "Prairie",
@@ -12644,14 +12838,21 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save activity=GOn2YYbOxKVKqvwx]] sous peine d'être jetée &reference[prone]{à terre}.</p>"
             }
           }
         },
         "Rock Catching": {
           "name": "Réception de rocher",
           "description": "<p>Si on lance un rocher ou un objet comparable sur le [[lookup @name lowercase]]{monstre}, ce dernier peut intercepter le projectile qui ne lui inflige alors aucun dégât contondant, à condition de réussir un jet de sauvegarde de [[/save]].</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Réception de rocher.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Réception de rocher.</p>",
+          "activities": {
+            "Catch Rock": {
+              "name": "Réceptionner un rocher",
+              "condition": "Lorsqu'on lance un rocher ou un objet comparable sur le [[lookup @name lowercase]]{monstre}."
+            }
+          }
         },
         "Stone Camouflage": {
           "name": "Camouflage dans la rocaille",
@@ -12691,7 +12892,13 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} cible une ou plusieurs créatures qu'il voit dans un rayon de [[lookup @labels.description.range activity=o1gVWezg9dluEi5a]]. Chaque cible effectue un jet de sauvegarde de Sagesse contre sa magie. Une cible peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
           "effects": {
             "Slowed": {
-              "name": "Ralenti"
+              "name": "Ralenti",
+              "description": "<p>Votre vitesse est réduite de moitié, vous subissez un malus de -2 à la CA et aux jets de sauvegarde de Dextérité, et vous ne pouvez pas utiliser de réaction. Lors de votre tour, vous ne pouvez utiliser qu'une action ou une action bonus, pas les deux.</p><p>Vous pouvez réitérer le jet de sauvegarde à la fin de chacun de vos tours et mettez un terme à l'effet sur vous-même en cas de réussite.</p>"
+            }
+          },
+          "activities": {
+            "Slow Creatures": {
+              "name": "Ralentir des créatures"
             }
           }
         }
@@ -12722,7 +12929,12 @@
         "Lightning Strike": {
           "name": "Frappe foudroyante",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} projette un éclair vers un point qu'il voit dans un rayon de [[lookup @labels.description.range activity=Y2GMAvtp4yB0QcvH]]. Chaque créature située dans un rayon de [[lookup @target.template.size activity=Y2GMAvtp4yB0QcvH]] [[lookup @target.template.units activity=Y2GMAvtp4yB0QcvH]] de ce point effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Chaque créature située dans un rayon de [[lookup @target.template.size activity=Y2GMAvtp4yB0QcvH]] [[lookup @target.template.units activity=Y2GMAvtp4yB0QcvH]] de ce point effectue un jet de sauvegarde de Dextérité.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]]. Chaque créature située dans un rayon de [[lookup @target.template.size activity=Y2GMAvtp4yB0QcvH]] [[lookup @target.template.units activity=Y2GMAvtp4yB0QcvH]] de ce point effectue un jet de sauvegarde de Dextérité.</p>",
+          "activities": {
+            "Hurl Lightning": {
+              "name": "Projeter un éclair"
+            }
+          }
         },
         "Multiattack": {
           "name": "Attaques multiples",
@@ -12777,7 +12989,12 @@
         "Shapechanger": {
           "name": "Métamorphe",
           "description": "<p>Le fiélon peut consacrer son action à se transformer en humanoïde de taille M ou P, ou à reprendre sa forme véritable. Sans ailes, le fiélon perd sa vitesse de vol. Hormis sa catégorie de taille et sa vitesse, son profil reste le même, quelle que soit sa forme. Rien de ce qu'il porte n'est transformé. S'il meurt, il reprend sa forme véritable.</p>",
-          "chat": "<p>La [[lookup @name]] utilise Métamorphe.</p>"
+          "chat": "<p>La [[lookup @name]] utilise Métamorphe.</p>",
+          "activities": {
+            "Shapeshift": {
+              "name": "Changer d'aspect"
+            }
+          }
         },
         "Claw (Fiend Form Only)": {
           "name": "Griffe (forme fiélonne uniquement)",
@@ -12796,7 +13013,8 @@
           },
           "activities": {
             "Charm Target": {
-              "target": "Humanoïde"
+              "target": "Humanoïde",
+              "name": "Charmer une cible"
             }
           }
         },
@@ -12806,7 +13024,12 @@
           "chat": "<p>La cible effectue un jet de sauvegarde de Constitution contre cette magie.</p>",
           "activities": {
             "Maximum Hit Point Damage": {
-              "name": "Dégâts au maximum de points de vie"
+              "name": "Dégâts au maximum de points de vie",
+              "condition": "Lorsqu'une créature subit des dégâts de cette aptitude."
+            },
+            "Kiss Creature": {
+              "name": "Embrasser une créature",
+              "target": "créature charmée ou consentante"
             }
           }
         },
@@ -12841,7 +13064,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour une chauve-souris de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -12870,7 +13094,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -12891,7 +13116,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -12901,7 +13127,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{nuée} attaque avec un déluge de [[lookup @item.name]].</p>",
           "effects": {
             "Stablizing Paralysis Poison": {
-              "name": "Poison paralysant stabilisant"
+              "name": "Poison paralysant stabilisant",
+              "description": "<p>Vous êtes &reference[stable]{stabilisé} mais subissez l'état &reference[poisoned apply=false]{empoisonné} pour toute la durée, même après avoir récupéré des points de vie. Tant que vous êtes ainsi empoisonné, vous êtes également &reference[paralyzed apply=false]{paralysé}.</p>"
             }
           }
         }
@@ -12917,7 +13144,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -12938,7 +13166,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un serpent de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -12949,7 +13178,8 @@
           "activities": {
             "Poison Save": {
               "name": "Sauvegarde contre le poison",
-              "condition": "Lorsqu'une créature est touchée par cette attaque."
+              "condition": "Lorsqu'une créature est touchée par cette attaque.",
+              "description": "<p>La cible effectue un jet de sauvegarde de [[/save]] et subit [[/damage average activity=tT3v0krnAO2hA0hs]] en cas d'échec, la moitié en cas de réussite.</p>"
             }
           }
         }
@@ -12969,7 +13199,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un piranha de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -12998,7 +13229,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un rat de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -13019,7 +13251,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un corbeau de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -13040,7 +13273,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -13073,7 +13307,8 @@
           "description": "<p>La [[lookup @name lowercase]]{nuée} peut occuper l'espace d'une autre créature et réciproquement, et elle peut se déplacer par toute ouverture assez large pour un insecte de taille TP. La [[lookup @name lowercase]]{nuée} ne peut ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>",
           "effects": {
             "Swarm": {
-              "name": "Nuée"
+              "name": "Nuée",
+              "description": "<p>Vous pouvez occuper l'espace d'une autre créature et réciproquement. Vous ne pouvez ni récupérer de points de vie ni recevoir de points de vie temporaires.</p>"
             }
           }
         },
@@ -13110,7 +13345,9 @@
           "activities": {
             "Reflect Spell": {
               "name": "Renvoyer le sort",
-              "chatFlavor": "Sur un résultat de 6, le sort est renvoyé vers l'incantateur."
+              "chatFlavor": "Sur un résultat de 6, le sort est renvoyé vers l'incantateur.",
+              "roll": "Test de renvoi de sort",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} est ciblée par le sort @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{projectile magique}, un sort de ligne ou un sort qui nécessite un jet d'attaque à distance."
             }
           }
         },
@@ -13150,7 +13387,8 @@
           "activities": {
             "Prone Save": {
               "condition": "Lorsqu'une créature est touchée par cette attaque.",
-              "name": "Sauvegarde À terre"
+              "name": "Sauvegarde À terre",
+              "description": "<p>Si la cible est une créature, elle doit réussir un jet de sauvegarde de [[/save]] sous peine d'être jetée &reference[prone]{à terre}.</p>"
             }
           }
         },
@@ -13176,7 +13414,8 @@
           "chat": "<p>La [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]].</p>",
           "effects": {
             "Swallowed": {
-              "name": "Englouti"
+              "name": "Englouti",
+              "description": "<p>Vous avez été englouti par la tarasque. Vous êtes &reference[blinded apply=false]{aveuglé}, &reference[restrained apply=false]{entravé}, et bénéficiez d'un &reference[total cover]{abri total} contre les attaques et autres effets provenant de l'extérieur de la tarasque.</p><p>Vous subissez également [[/damage average 16d6 acid]] au début de chacun des tours de la tarasque.</p><p>Si la tarasque subit 60 dégâts ou plus lors d'un même tour de votre part, elle doit réussir un jet de sauvegarde de Constitution sous peine de vous régurgiter, vous laissant alors &reference[prone]{à terre} dans un espace situé à 3 m ou moins d'elle. Si la tarasque meurt, vous n'êtes plus entravé par elle et pouvez vous en extraire en dépensant 9 m de déplacement pour vous retrouver &reference[prone]{à terre} près du cadavre.</p>"
             }
           },
           "activities": {
@@ -13190,7 +13429,9 @@
               "condition": "Lorsque la [[lookup @name lowercase]]{monstre} touche une créature qu'elle a &reference[grappled apply=false]{agrippée} avec sa @UUID[Compendium.dnd5e.monsters.Actor.x47ZnpHfYl0ptDM9.Item.4fNbTxkAFYHxDdJX]{Morsure}."
             },
             "Regurgitate Creature Save": {
-              "name": "Sauvegarde contre la régurgitation"
+              "name": "Sauvegarde contre la régurgitation",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} subit 60 dégâts ou plus lors d'un même tour de la part d'une créature engloutie.",
+              "description": "<p>Si la [[lookup @name lowercase]]{monstre} subit 60 dégâts ou plus lors d'un même tour de la part de la créature engloutie, elle doit réussir un jet de sauvegarde de [[/save activity=2pCVkETAYg7qALRu]] à la fin du tour concerné sous peine de régurgiter toutes les créatures englouties, chacune se retrouvant &reference[prone]{à terre} dans un espace situé à 3 m ou moins d'elle. Si la [[lookup @name lowercase]]{monstre} meurt, les créatures englouties ne sont plus entravées par elle et peuvent s'en extraire en dépensant 9 m de déplacement pour se retrouver &reference[prone]{à terre} près du cadavre.</p>"
             }
           }
         },
@@ -13219,7 +13460,12 @@
         },
         "Chomp": {
           "name": "Mastication",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .suUr7bJqBqE7xk2F]]{Morsure} ou recourt à son [[/item .7ycN6rrAEJQP3ZOs]]{Engloutissement}.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} effectue une attaque de [[/item .suUr7bJqBqE7xk2F]]{Morsure} ou recourt à son [[/item .7ycN6rrAEJQP3ZOs]]{Engloutissement}.</p>",
+          "activities": {
+            "Gnaw": {
+              "name": "Mordre"
+            }
+          }
         }
       },
       "subtype": "Titan",
@@ -13269,7 +13515,8 @@
           "chat": "<p>Si le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour, la cible doit effectuer un jet de sauvegarde de Force.</p>",
           "activities": {
             "Pounce Save": {
-              "name": "Sauvegarde contre le bond agressif"
+              "name": "Sauvegarde contre le bond agressif",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.FayqbnjBMszO6Pat.Item.7GCnVtakQo6iZyn7]{Griffe} au même tour."
             }
           }
         },
@@ -13293,7 +13540,21 @@
         "Animate Trees": {
           "name": "Animation des arbres",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} anime magiquement un ou deux arbres qu'il voit dans un rayon de [[lookup @labels.description.range activity=1SrLlYGeLgzdmSwc]]. Ces arbres reprennent le profil d'un [[lookup @name lowercase]]{monstre}, si ce n'est que leur valeur d'Intelligence et de Charisme est de 1, qu'ils ne parlent pas et qu'ils ne disposent que de l'option d'action de @UUID[Compendium.dnd5e.monsters.Actor.NB6wUgVqeOQtsQKu.Item.lisZZTaupqInGEi1]{Coup}.</p><p>Un arbre ainsi animé agit comme un allié du [[lookup @name lowercase]]{monstre}. Sauf s'il meurt avant, l'arbre reste animé pendant [[lookup @labels.duration activity=1SrLlYGeLgzdmSwc]], jusqu'à ce que le [[lookup @name lowercase]]{monstre} meure ou se trouve à plus de 36 m de lui ou que le [[lookup @name lowercase]]{monstre} consacre une action bonus à lui rendre son statut d'arbre inerte. L'arbre prend alors racine, si possible.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} anime magiquement un ou deux arbres qu'il voit dans un rayon de [[lookup @labels.description.range activity=1SrLlYGeLgzdmSwc]].</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} anime magiquement un ou deux arbres qu'il voit dans un rayon de [[lookup @labels.description.range activity=1SrLlYGeLgzdmSwc]].</p>",
+          "activities": {
+            "Summon Treants": {
+              "name": "Invoquer des sylvaniens"
+            }
+          },
+          "effects": {
+            "Animated Tree": {
+              "name": "Arbre animé",
+              "description": "<p>Vous avez le même profil qu'un sylvanien, si ce n'est que votre valeur d'Intelligence et de Charisme est de 1, que vous ne parlez pas et que vous ne disposez que de l'option d'action Coup.</p><p>Vous agissez comme un allié du sylvanien. Sauf si vous mourez avant, vous restez animé pendant 1 jour, jusqu'à ce que le sylvanien meure ou se trouve à plus de 36 m de vous, ou que le sylvanien consacre une action bonus à vous rendre votre statut d'arbre inerte. Vous prenez alors racine, si possible.</p>",
+              "changes": {
+                "0": "Sylvanien animé"
+              }
+            }
+          }
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -13366,7 +13627,8 @@
           "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>",
           "activities": {
             "Trample Save": {
-              "name": "Sauvegarde contre le piétinement"
+              "name": "Sauvegarde contre le piétinement",
+              "condition": "Le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.e5IQxSJO7ySEDdSH.Item.h5lGnMKW65NWIi2W]{Coup de corne} au même tour."
             }
           }
         }
@@ -13445,7 +13707,8 @@
           "chat": "<p>Si la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour, elle lui inflige des dégâts perforants supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
           "activities": {
             "Charge Save": {
-              "name": "Sauvegarde contre la charge"
+              "name": "Sauvegarde contre la charge",
+              "condition": "Lorsque la [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une cible qu'elle touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.G9PENY6nw0xRxCJW.Item.ORrGdhTLKLTKK3BH]{Corne} au même tour."
             }
           }
         },
@@ -13501,11 +13764,27 @@
         },
         "Shimmering Shield": {
           "name": "Protection scintillante",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} produit un champ magique et scintillant autour d'elle ou d'une autre créature qu'elle voit dans un rayon de [[lookup @labels.description.range activity=dnd5eactivity000]]. La cible reçoit un bonus de +2 à la CA jusqu'à la fin du tour suivant de la [[lookup @name lowercase]]{monstre}.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} produit un champ magique et scintillant autour d'elle ou d'une autre créature qu'elle voit dans un rayon de [[lookup @labels.description.range activity=dnd5eactivity000]]. La cible reçoit un bonus de +2 à la CA jusqu'à la fin du tour suivant de la [[lookup @name lowercase]]{monstre}.</p>",
+          "activities": {
+            "Ward Creature": {
+              "name": "Protéger une créature"
+            }
+          },
+          "effects": {
+            "Ward Creature": {
+              "name": "Protection scintillante",
+              "description": "<p>Un champ magique et scintillant s'est manifesté autour de vous. Vous recevez un bonus de +2 à la CA jusqu'à la fin du tour suivant de la licorne.</p>"
+            }
+          }
         },
         "Heal Self": {
           "name": "Soin personnel",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} récupère magiquement [[/healing average]].</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} récupère magiquement [[/healing average]].</p>",
+          "activities": {
+            "Close Wounds": {
+              "name": "Fermer des plaies"
+            }
+          }
         },
         "Detect Evil and Good": {
           "name": "Détection du mal et du bien",
@@ -13565,6 +13844,9 @@
           "effects": {
             "Bat": {
               "name": "Chauve-souris"
+            },
+            "Cloud of Mist": {
+              "name": "Nuage de brume"
             }
           }
         },
@@ -13599,7 +13881,17 @@
         },
         "Vampire Weaknesses": {
           "name": "Faiblesses des vampires",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} présente les points faibles suivants :</p><p><em>Allergie à l'eau vive.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=zTY3HiiTYj5yJ7Io]] s'il termine son tour dans l'eau vive.</p><p><em>Défense d'entrer.</em> Le [[lookup @name lowercase]]{monstre} ne peut pas entrer dans une habitation sans y avoir été invité par l'un de ses occupants.</p><p><em>Hypersensibilité au soleil.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=3lO6XvaimPKCB5te]] lorsqu'il commence son tour exposé au soleil. Exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de caractéristique.</p><p><em>Pieu dans le cœur.</em> Si on plante une arme perforante en bois dans le cœur du [[lookup @name lowercase]]{monstre} alors qu'il est &reference[incapacitated apply=false]{neutralisé} dans son refuge, il se retrouve paralysé tant que ce pieu n'a pas été retiré.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} présente les points faibles suivants :</p><p><em>Allergie à l'eau vive.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=zTY3HiiTYj5yJ7Io]] s'il termine son tour dans l'eau vive.</p><p><em>Défense d'entrer.</em> Le [[lookup @name lowercase]]{monstre} ne peut pas entrer dans une habitation sans y avoir été invité par l'un de ses occupants.</p><p><em>Hypersensibilité au soleil.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=3lO6XvaimPKCB5te]] lorsqu'il commence son tour exposé au soleil. Exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de caractéristique.</p><p><em>Pieu dans le cœur.</em> Si on plante une arme perforante en bois dans le cœur du [[lookup @name lowercase]]{monstre} alors qu'il est &reference[incapacitated apply=false]{neutralisé} dans son refuge, il se retrouve paralysé tant que ce pieu n'a pas été retiré.</p>",
+          "activities": {
+            "Running Water Damage": {
+              "name": "Dégâts de l'eau vive",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} termine son tour dans l'eau vive."
+            },
+            "Sunlight Hypersensitivity": {
+              "name": "Hypersensibilité au soleil",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour exposé au soleil."
+            }
+          }
         },
         "Multiattack (Vampire Form Only)": {
           "name": "Attaques multiples (forme de vampire uniquement)",
@@ -13611,7 +13903,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec son [[lookup @item.name]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible.</p>",
           "effects": {
             "Grappled by Unarmed Strike": {
-              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 18).</p>"
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 18).</p>",
+              "name": "Agrippé par l'attaque à mains nues"
             }
           }
         },
@@ -13622,6 +13915,20 @@
           "activities": {
             "attack": {
               "target": "une créature consentante ou une créature agrippée par le vampire, neutralisée ou entravée"
+            },
+            "Drain Maximum Hit Points (Target)": {
+              "name": "Ponction du maximum de points de vie (cible)",
+              "condition": "Lorsqu'une créature subit des dégâts nécrotiques de cette attaque.",
+              "description": "<p>Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>"
+            },
+            "Regain Hit Points (Vampire)": {
+              "condition": "Lorsqu'une créature subit des dégâts nécrotiques de cette attaque.",
+              "name": "Récupérer des points de vie (vampire)",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} récupère autant de points de vie que le montant de dégâts nécrotiques subis.</p>"
+            },
+            "Raise Vampire Spawn": {
+              "name": "Relever un vampirien",
+              "condition": "La nuit suivant la mort d'un humanoïde tué par cette attaque."
             }
           }
         },
@@ -13633,12 +13940,29 @@
             "Charm Creature": {
               "name": "Charmer une créature"
             }
+          },
+          "effects": {
+            "Vampiric Charm": {
+              "name": "Charme vampirique",
+              "description": "<p>Vous êtes &reference[charmed apply=false]{charmé} par le vampire. Vous considérez le vampire comme un ami fidèle que vous devez écouter et protéger. Bien que vous ne soyez pas sous le contrôle du vampire, vous accordez la plus grande considération à tout ce qu'il vous demande et tout ce qu'il fait, et vous constituez une cible consentante pour son attaque de Morsure.</p><p>Chaque fois que le vampire ou l'un de ses compagnons vous nuit directement, vous pouvez réitérer le jet de sauvegarde et mettez un terme à l'effet sur vous-même en cas de réussite. Sans cela, l'effet persiste pour toute la durée, sauf si le vampire est détruit, se trouve sur un plan d'existence différent du vôtre ou met un terme à l'effet par une action bonus.</p>"
+            }
           }
         },
         "Children of the Night": {
           "name": "Rejetons des ténèbres",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} appelle magiquement 2d4 @UUID[Compendium.dnd5e.monsters.Actor.PcZ0QjIG6bHpffp9]{nuées de chauves-souris} ou de @UUID[Compendium.dnd5e.monsters.Actor.8ihbbjkaOFTPbI73]{rats}, à condition que le soleil ne soit pas levé. S'il est en extérieur, le [[lookup @name lowercase]]{monstre} peut préférer appeler 3d6 @UUID[Compendium.dnd5e.monsters.Actor.yawTeS8u2FCfzzZH]{loups}. Les créatures appelées arrivent en 1d4 rounds ; elles se comportent comme des alliés du [[lookup @name lowercase]]{monstre} et obéissent à ses instructions verbales. Elles restent [[lookup @labels.duration activity=MEMqdbvq8fIu4T89]] mais disparaissent si le [[lookup @name lowercase]]{monstre} meurt, ou si ce dernier les révoque par une action bonus.</p>",
-          "chat": "<p>Le [[lookup @name]] utilise Rejetons des ténèbres.</p>"
+          "chat": "<p>Le [[lookup @name]] utilise Rejetons des ténèbres.</p>",
+          "activities": {
+            "Summon Beasts": {
+              "name": "Invoquer des bêtes",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} appelle magiquement 2d4 @UUID[Compendium.dnd5e.monsters.Actor.PcZ0QjIG6bHpffp9]{nuées de chauves-souris} ou de @UUID[Compendium.dnd5e.monsters.Actor.8ihbbjkaOFTPbI73]{rats}, à condition que le soleil ne soit pas levé. S'il est en extérieur, le [[lookup @name lowercase]]{monstre} peut préférer appeler 3d6 @UUID[Compendium.dnd5e.monsters.Actor.yawTeS8u2FCfzzZH]{loups}. Les créatures appelées arrivent en 1d4 rounds ; elles se comportent comme des alliés du [[lookup @name lowercase]]{monstre} et obéissent à ses instructions verbales. Elles restent [[lookup @labels.duration activity=MEMqdbvq8fIu4T89]] mais disparaissent si le [[lookup @name lowercase]]{monstre} meurt, ou si ce dernier les révoque par une action bonus.</p><h4>Rounds avant l'arrivée des bêtes : [[1d4]]</h4>",
+              "profiles": {
+                "Swarms of Bats": "Nuées de chauves-souris",
+                "Swarms of Rats": "Nuées de rats",
+                "Wolves": "Loups"
+              }
+            }
+          }
         },
         "Legendary Actions": {
           "name": "Actions légendaires",
@@ -13684,7 +14008,19 @@
         "Bite": {
           "name": "Morsure",
           "description": "<p><em>Attaque d'arme au corps à corps :</em> [[/attack]], allonge 1,50 m, une créature consentante ou une créature &reference[grappled apply=false]{agrippée} par le [[lookup @name lowercase]]{monstre}, &reference[incapacitated apply=false]{neutralisée} ou &reference[restrained apply=false]{entravée}. [[/damage extended]]. Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis et le [[lookup @name lowercase]]{monstre} récupère autant de points de vie que ce même montant. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa [[lookup @item.name]].</p>",
+          "activities": {
+            "Drain Maximum Hit Points (Target)": {
+              "name": "Ponction du maximum de points de vie (cible)",
+              "condition": "Lorsqu'une créature subit des dégâts nécrotiques de cette attaque.",
+              "description": "<p>Le maximum de points de vie de la cible est réduit d'un montant égal aux dégâts nécrotiques subis. Cette réduction persiste jusqu'à ce que la cible termine un repos long. La cible meurt si cet effet réduit son maximum de points de vie à 0.</p>"
+            },
+            "Regain Hit Points (Vampire)": {
+              "condition": "Lorsqu'une créature subit des dégâts nécrotiques de cette attaque.",
+              "name": "Récupérer des points de vie (vampire)",
+              "description": "<p>Le [[lookup @name lowercase]]{monstre} récupère autant de points de vie que le montant de dégâts nécrotiques subis.</p>"
+            }
+          }
         },
         "Claws": {
           "name": "Griffes",
@@ -13692,7 +14028,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses [[lookup @item.name]]. Au lieu d'infliger des dégâts, le [[lookup @name lowercase]]{monstre} peut &reference[grappled]{agripper} la cible.</p>",
           "effects": {
             "Grappled by Claws": {
-              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 13).</p>"
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 13).</p>",
+              "name": "Agrippé par des griffes"
             }
           }
         },
@@ -13716,7 +14053,17 @@
         },
         "Vampire Weaknesses": {
           "name": "Faiblesses des vampires",
-          "description": "<p>Le [[lookup @name lowercase]]{monstre} présente les points faibles suivants :</p><p><em>Allergie à l'eau vive.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=zTY3HiiTYj5yJ7Io]] s'il termine son tour dans l'eau vive.</p><p><em>Défense d'entrer.</em> Le [[lookup @name lowercase]]{monstre} ne peut pas entrer dans une habitation sans y avoir été invité par l'un de ses occupants.</p><p><em>Hypersensibilité au soleil.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=3lO6XvaimPKCB5te]] lorsqu'il commence son tour exposé au soleil. Exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de caractéristique.</p><p><em>Pieu dans le cœur.</em> Si on plante une arme perforante en bois dans le cœur du [[lookup @name lowercase]]{monstre} alors qu'il est &reference[incapacitated apply=false]{neutralisé} dans son refuge, il est aussitôt détruit.</p>"
+          "description": "<p>Le [[lookup @name lowercase]]{monstre} présente les points faibles suivants :</p><p><em>Allergie à l'eau vive.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=zTY3HiiTYj5yJ7Io]] s'il termine son tour dans l'eau vive.</p><p><em>Défense d'entrer.</em> Le [[lookup @name lowercase]]{monstre} ne peut pas entrer dans une habitation sans y avoir été invité par l'un de ses occupants.</p><p><em>Hypersensibilité au soleil.</em> Le [[lookup @name lowercase]]{monstre} subit [[/damage activity=3lO6XvaimPKCB5te]] lorsqu'il commence son tour exposé au soleil. Exposé à la lumière du soleil, il est désavantagé aux jets d'attaque ainsi qu'aux tests de caractéristique.</p><p><em>Pieu dans le cœur.</em> Si on plante une arme perforante en bois dans le cœur du [[lookup @name lowercase]]{monstre} alors qu'il est &reference[incapacitated apply=false]{neutralisé} dans son refuge, il est aussitôt détruit.</p>",
+          "activities": {
+            "Running Water Damage": {
+              "name": "Dégâts de l'eau vive",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} termine son tour dans l'eau vive."
+            },
+            "Sunlight Hypersensitivity": {
+              "name": "Hypersensibilité au soleil",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour exposé au soleil."
+            }
+          }
         }
       },
       "languages": "celles qu'il parlait de son vivant",
@@ -13765,7 +14112,12 @@
         },
         "Multiattack": {
           "name": "Attaques multiples",
-          "description": "<p>La [[lookup @name lowercase]]{monstre} effectue 1d4 attaques de [[/item .OEx9iy4HDipiYsPt]]{Contact putréfiant}.</p>"
+          "description": "<p>La [[lookup @name lowercase]]{monstre} effectue 1d4 attaques de [[/item .OEx9iy4HDipiYsPt]]{Contact putréfiant}.</p>",
+          "activities": {
+            "utility": {
+              "roll": "Attaques de contact putréfiant"
+            }
+          }
         },
         "False Appearance": {
           "name": "Faux-semblant",
@@ -13800,12 +14152,32 @@
         "Spores": {
           "name": "Spores",
           "description": "<p>Un nuage de spores toxiques s'étend sur un rayon de [[lookup @target.template.size activity=6NlNH6h0uxCCjmPL]] [[lookup @target.template.units activity=6NlNH6h0uxCCjmPL]] autour du vrock. Les spores contournent les angles. Chaque créature prise dans la zone doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée}. Ainsi empoisonnée, une cible subit [[/damage average]] au début de chacun de ses tours. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Verser le contenu d'une fiole d'@UUID[Compendium.dnd5e.items.Item.WPWszFTGzmdIuDRJ]{eau bénite} sur la cible met également fin à l'effet.</p>",
-          "chat": "<p>Un nuage de spores toxiques s'étend sur un rayon de [[lookup @target.template.size activity=6NlNH6h0uxCCjmPL]] [[lookup @target.template.units activity=6NlNH6h0uxCCjmPL]] autour du [[lookup @name lowercase]]{monstre}. Les spores contournent les angles. Chaque créature prise dans la zone doit effectuer un jet de sauvegarde de Constitution. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
+          "chat": "<p>Un nuage de spores toxiques s'étend sur un rayon de [[lookup @target.template.size activity=6NlNH6h0uxCCjmPL]] [[lookup @target.template.units activity=6NlNH6h0uxCCjmPL]] autour du [[lookup @name lowercase]]{monstre}. Les spores contournent les angles. Chaque créature prise dans la zone doit effectuer un jet de sauvegarde de Constitution. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>",
+          "activities": {
+            "Spread Spores": {
+              "name": "Répandre des spores"
+            },
+            "Start of Turn Poison Damage": {
+              "name": "Dégâts de poison au début du tour",
+              "condition": "Lorsqu'une créature est &reference[poisoned apply=false]{empoisonnée} par les spores du [[lookup @name lowercase]]{monstre}.",
+              "description": "<p>Tant qu'elle est &reference[poisoned apply=false]{empoisonnée} par ces spores, une cible subit [[/damage average]] au début de chacun de ses tours. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite. Verser le contenu d'une fiole d'@UUID[Compendium.dnd5e.equipment24.Item.nshr9PBVyB03T7wB]{eau bénite} sur la cible met également fin à l'effet.</p>"
+            }
+          },
+          "effects": {
+            "Spread Spores": {
+              "name": "Spores répandues"
+            }
+          }
         },
         "Stunning Screech": {
           "name": "Piaillement étourdissant",
           "description": "<p>Le [[lookup @name lowercase]]{monstre} pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[stunned]{étourdie} jusqu'à la fin du tour suivant du [[lookup @name lowercase]]{monstre}.</p>",
-          "chat": "<p>Le [[lookup @name lowercase]]{monstre} pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit effectuer un jet de sauvegarde de Constitution.</p>"
+          "chat": "<p>Le [[lookup @name lowercase]]{monstre} pousse un hurlement horrible. Chaque créature située dans un rayon de 6 m de lui, si elle l'entend et n'est pas un démon, doit effectuer un jet de sauvegarde de Constitution.</p>",
+          "activities": {
+            "Screech": {
+              "name": "Pousser un piaillement"
+            }
+          }
         }
       },
       "subtype": "Démon",
@@ -13840,7 +14212,8 @@
           "chat": "<p>Le [[lookup @name]] utilise Charge écrasante.</p>",
           "activities": {
             "Trample Save": {
-              "name": "Sauvegarde contre le piétinement"
+              "name": "Sauvegarde contre le piétinement",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 6 m en ligne droite vers une créature qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.T1xZTDCGuvMBSq8d.Item.7MiLYgDyM2Rm3nEb]{Sabots} au même tour."
             }
           }
         },
@@ -13870,7 +14243,19 @@
         "Freeze": {
           "name": "Gel",
           "description": "<p>Si l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid, il fige partiellement ; sa vitesse est réduite de 6 m jusqu'à la fin de son tour suivant.</p>",
-          "chat": "<p>Si l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid, il fige partiellement.</p>"
+          "chat": "<p>Si l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid, il fige partiellement.</p>",
+          "activities": {
+            "Partially Freeze": {
+              "name": "Figer partiellement",
+              "condition": "Lorsque l'[[lookup @name lowercase]]{monstre} subit des dégâts de froid."
+            }
+          },
+          "effects": {
+            "Partially Frozen": {
+              "name": "Partiellement figé",
+              "description": "<p>Vous avez été partiellement figé. Votre vitesse est réduite de 6 m jusqu'à la fin de votre tour suivant.</p>"
+            }
+          }
         },
         "Water Form": {
           "name": "Corps d'eau",
@@ -13897,7 +14282,20 @@
           "chat": "<p>Chaque créature prise dans l'espace de l'[[lookup @name lowercase]]{monstre} effectue un jet de sauvegarde de Force. Si elle est de taille G ou inférieure, elle est aussi &Reference[grappled]{agrippée}. Tant qu'elle est agrippée, la cible est &Reference[restrained]{entravée} et incapable de &reference[suffocating]{respirer} sauf si elle en a la faculté dans l'eau. Une créature située dans un rayon de 1,50 m de l'[[lookup @name lowercase]]{monstre} peut tenter d'en extraire une créature ou un objet au prix d'une action, ce qui nécessite de réussir un test de Force.</p>",
           "activities": {
             "Start of Turn Grapple Damage": {
-              "name": "Dégâts Agrippé au début du tour"
+              "name": "Dégâts Agrippé au début du tour",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} commence son tour alors qu'il a des créatures &reference[grappled apply=false]{agrippées} par cette aptitude."
+            },
+            "Pull Creature Out": {
+              "name": "Extraire une créature"
+            },
+            "Whelm Creatures": {
+              "name": "Engloutir des créatures"
+            }
+          },
+          "effects": {
+            "Whelmed": {
+              "name": "Englouti",
+              "description": "<p>Vous êtes &reference[grappled apply=false]{agrippé} (évasion DD 14). Tant que vous êtes ainsi agrippé, vous êtes &reference[restrained apply=false]{entravé} et incapable de &reference[suffocating]{respirer} sauf si vous en avez la faculté dans l'eau.</p><p>Au début de chacun des tours de l'élémentaire de l'eau, vous subissez [[/damage average 2d8 + 4 bludgeoning]]. Une créature située dans un rayon de 1,50 m de l'élémentaire de l'eau peut tenter de vous en extraire au prix d'une action, ce qui nécessite de réussir un test de [[/check 14 str]].</p>"
             }
           }
         }
@@ -13931,6 +14329,20 @@
             "Change Form": {
               "name": "Changer d'aspect"
             }
+          },
+          "effects": {
+            "True Form": {
+              "name": "Forme véritable",
+              "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
+            },
+            "Hybrid Form": {
+              "name": "Forme hybride",
+              "description": "<p>Vous vous êtes transformé en votre forme hybride, un hybride d'ours et d'humanoïde.</p>"
+            },
+            "Bear Form": {
+              "name": "Forme d'ours",
+              "description": "<p>Vous vous êtes transformé en votre forme d'ours.</p>"
+            }
           }
         },
         "Keen Smell": {
@@ -13947,7 +14359,15 @@
           "chat": "<p>L'[[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Curse Save": {
-              "name": "Sauvegarde contre la malédiction"
+              "name": "Sauvegarde contre la malédiction",
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque.",
+              "description": "<p>Si la cible est humanoïde, elle doit réussir un jet de sauvegarde de [[/save]] sous peine de subir la malédiction de la lycanthropie (ours-garou).</p>"
+            }
+          },
+          "effects": {
+            "Werebear Lycanthropy": {
+              "name": "Lycanthropie (ours-garou)",
+              "description": "<p>Vous êtes maudit par la lycanthropie (ours-garou).</p>"
             }
           }
         },
@@ -13976,7 +14396,8 @@
           "chat": "<p>Si le sanglier-garou se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec ses Défenses au même tour, il lui inflige des <em>dégâts tranchants</em> supplémentaires. Si la cible est une créature, elle doit effectuer un jet de sauvegarde de Force sous peine d'être jetée &reference[prone]{à terre}.</p>",
           "activities": {
             "Charge Save": {
-              "name": "Sauvegarde contre la charge"
+              "name": "Sauvegarde contre la charge",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} se déplace d'au moins 4,50 m en ligne droite vers une cible qu'il touche ensuite avec une attaque de @UUID[Compendium.dnd5e.monsters.Actor.J9hgSaZODGjrNl9B.Item.3TD2NpdjIDJxeLl9]{Défenses} au même tour."
             }
           }
         },
@@ -13990,7 +14411,8 @@
           "chat": "<p>Le [[lookup @name]] utilise Implacable.</p>",
           "activities": {
             "Persevere": {
-              "name": "Persévérer"
+              "name": "Persévérer",
+              "condition": "Lorsque le [[lookup @name lowercase]]{monstre} subit 14 dégâts ou moins censés le faire tomber à 0 point de vie."
             }
           }
         },
@@ -14002,6 +14424,15 @@
             "Change Form": {
               "name": "Changer d'aspect"
             }
+          },
+          "effects": {
+            "True Form": {
+              "name": "Forme véritable",
+              "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
+            },
+            "Hybrid Form": {
+              "name": "Forme hybride"
+            }
           }
         },
         "Tusks (Boar or Hybrid Form Only)": {
@@ -14010,7 +14441,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec ses Défenses. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Curse Save": {
-              "name": "Sauvegarde contre la malédiction"
+              "name": "Sauvegarde contre la malédiction",
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
             }
           }
         },
@@ -14040,6 +14472,13 @@
           "effects": {
             "Rat Form": {
               "name": "Forme de rat"
+            },
+            "True Form": {
+              "name": "Forme véritable",
+              "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
+            },
+            "Hybrid Form": {
+              "name": "Forme hybride"
             }
           }
         },
@@ -14057,7 +14496,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Curse Save": {
-              "name": "Sauvegarde contre la malédiction"
+              "name": "Sauvegarde contre la malédiction",
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
             }
           }
         },
@@ -14087,6 +14527,15 @@
           "activities": {
             "Change Form": {
               "name": "Changer d'aspect"
+            }
+          },
+          "effects": {
+            "True Form": {
+              "name": "Forme véritable",
+              "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
+            },
+            "Hybrid Form": {
+              "name": "Forme hybride"
             }
           }
         },
@@ -14121,7 +14570,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Curse Save": {
-              "name": "Sauvegarde contre la malédiction"
+              "name": "Sauvegarde contre la malédiction",
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
             }
           }
         },
@@ -14155,7 +14605,8 @@
           "chat": "<p>Le [[lookup @name lowercase]]{monstre} attaque avec sa Morsure. Si la cible est humanoïde, elle doit effectuer un jet de sauvegarde de Constitution.</p>",
           "activities": {
             "Curse Save": {
-              "name": "Sauvegarde contre la malédiction"
+              "name": "Sauvegarde contre la malédiction",
+              "condition": "Lorsqu'un humanoïde est touché par cette attaque."
             }
           }
         },
@@ -14180,6 +14631,15 @@
           "activities": {
             "Change Form": {
               "name": "Changer d'aspect"
+            }
+          },
+          "effects": {
+            "True Form": {
+              "name": "Forme véritable",
+              "description": "<p>Vous vous êtes transformé en votre forme véritable, qui est humanoïde.</p>"
+            },
+            "Hybrid Form": {
+              "name": "Forme hybride"
             }
           }
         },
