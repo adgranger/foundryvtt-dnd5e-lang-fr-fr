@@ -388,6 +388,8 @@ export class Converters {
 		};
 	}
 
+	static #convertedChanges = new WeakSet();
+
 	static effectsChanges() {
 		return (changes, translations) => Converters._effectsChanges(changes, translations);
 	}
@@ -408,11 +410,14 @@ export class Converters {
 			"system.attributes.senses.tremorsense", //Avant 5.3.0, à supprimer plus tard
 			"system.attributes.senses.truesight", //Avant 5.3.0, à supprimer plus tard
 			"token.light.dim",
-			"token.light.bright"
+			"token.light.bright",
+            "flags.world.wisp-illumination"
 		];
 
 		changes.forEach(change => {
 			if (change.type === "multiply") return change;
+			if (Converters.#convertedChanges.has(change)) return change;
+			Converters.#convertedChanges.add(change);
 			
 			const value = String(change.value ?? "");
 			if (movementSensesType.includes(change.key)) {
