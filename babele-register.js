@@ -103,7 +103,7 @@ export class Converters {
 			}
 			if (value?.speeds) {
 				converted.speeds = Object.fromEntries(
-					["air", "land", "water"].map(k => [k, conversion.converter(value.speeds[k])])
+					["air", "land", "water", "walk", "fly", "swim", "climb", "burrow"].map(k => [k, conversion.converter(value.speeds[k])])
 				);
 			}
 			const detectionModeKeys = new Set(["lightPerception", "basicSight", "seeAll", "feelTremor", "blindsight", "senseInvisibility", "seeInvisibility", "senseAll"]);
