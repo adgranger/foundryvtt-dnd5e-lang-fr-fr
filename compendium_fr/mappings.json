@@ -109,6 +109,10 @@
       "mapping": {
         "name": "name",
         "hint": "hint",
+        "identifier": {
+          "path": "configuration.identifier",
+          "converter": "advancementIdentifier"
+        },
         "_variants": [
           {
             "_when": { "path": "configuration.type", "equals": "distance" },

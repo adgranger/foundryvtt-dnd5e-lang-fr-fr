@@ -19,7 +19,8 @@ Hooks.once("babele.init", (babele) => {
 		"planarSubtype": Converters.planarSubtype(),
 		"effectsChanges": Converters.effectsChanges(),
 		"tableResultRange": Converters.tableResultRange(),
-		"imperialToMetric": Converters.imperialToMetric()
+		"imperialToMetric": Converters.imperialToMetric(),
+		"advancementIdentifier": Converters.advancementIdentifier()
 	});
 });
 
@@ -65,22 +66,17 @@ export class Converters {
     }
 
 	static _imperialToMetric(value, translation, data) {
-		const conversion = Converters.conversionInfo[value?.units ?? value?.template?.units ?? "ft"];
+		const conversion = Converters.conversionInfo[value?.units || value?.template?.units || "ft"];
 		const converted = {};
 		if (conversion) {
 			if (value?.value) converted.value = conversion.converter(value.value);
 			if (value?.long) converted.long = conversion.converter(value.long);
 			if (value?.reach) converted.reach = conversion.converter(value.reach);
 			if (value?.distance) converted.distance = conversion.converter(value.distance);
-			if (value?.burrow) converted.burrow = conversion.converter(value.burrow);
-			if (value?.climb) converted.climb = conversion.converter(value.climb);
-			if (value?.swim) converted.swim = conversion.converter(value.swim);
-			if (value?.walk) converted.walk = conversion.converter(value.walk);
-			if (value?.fly) converted.fly = conversion.converter(value.fly);
 			if (value?.bright) converted.bright = conversion.converter(value.bright);
 			if (value?.dim) converted.dim = conversion.converter(value.dim);
 			if (value?.range) converted.range = conversion.converter(value.range);
-			if (value?.units) converted.units = conversion.units;
+			if (value?.units !== undefined) converted.units = conversion.units;
 			if (value?.template) {
 				converted.template = {
 					...Object.fromEntries(
@@ -103,7 +99,8 @@ export class Converters {
 			}
 			if (value?.speeds) {
 				converted.speeds = Object.fromEntries(
-					["air", "land", "water"].map(k => [k, conversion.converter(value.speeds[k])])
+					["burrow", "climb", "fly", "swim", "walk", "air", "land", "water"]
+						.map(k => [k, conversion.converter(value.speeds[k])])
 				);
 			}
 			const detectionModeKeys = new Set(["lightPerception", "basicSight", "seeAll", "feelTremor", "blindsight", "senseInvisibility", "seeInvisibility", "senseAll"]);
@@ -388,6 +385,14 @@ export class Converters {
 			return habitat.map(hab => {
 				return hab.subtype ? foundry.utils.mergeObject(hab, { subtype: translation ?? hab.subtype }) : hab;
 			});
+		};
+	}
+
+	static advancementIdentifier() {
+		return (identifier, translation, advancement) => {
+			if (identifier?.length) return identifier;
+			const name = advancement?.name;
+			return name ? dnd5e.utils.formatIdentifier(name) : identifier;
 		};
 	}
 

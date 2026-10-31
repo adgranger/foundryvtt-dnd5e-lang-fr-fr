@@ -5902,6 +5902,25 @@
         }
       }
     },
+    "Faithful Hound": {
+      "name": "Faithful Hound",
+      "items": {
+        "See Invisibility": {
+          "name": "See Invisibility",
+          "description": "<p>The hound sees &amp;reference[invisible apply=false] creatures and can see into the Ethereal Plane. It ignores illusions.</p>"
+        },
+        "Bite": {
+          "name": "Bite",
+          "description": "<p>At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's Attack bonus is equal to your Spellcasting ability modifier + your Proficiency Bonus. On a hit, it deals 4d8 piercing damage.</p>"
+        }
+      },
+      "effects": {
+        "Invisible": {
+          "name": "Invisible",
+          "description": "<p>You are invisible to all creatures except your summoner.</p>"
+        }
+      }
+    },
     "Fire Elemental": {
       "name": "Fire Elemental",
       "description": "<p><em>Token artwork by <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em></p>",
@@ -5991,6 +6010,25 @@
           "name": "Rock",
           "description": "<p>[[/attack extended]]. [[/damage extended]].</p>",
           "chat": "<p>The [[lookup @name]]{monster} attacks with its [[lookup @item.name]].</p>"
+        }
+      }
+    },
+    "Flaming Sphere": {
+      "name": "Flaming Sphere",
+      "description": "<p>@embed[Compendium.dnd5e.spells.Item.FjYE214HTERCRZNm inline]{Flaming Sphere}</p>",
+      "items": {
+        "Roll": {
+          "name": "Roll",
+          "description": "<p>You move the Sphere up to 30 feet. If you ram the sphere into a creature, that creature must make the saving throw against the sphere's damage, and the sphere stops moving this turn.</p><p>When you move the Sphere, you can direct it over barriers up to 5 feet tall and jump it across pits up to 10 feet wide.</p>",
+          "activities": {
+            "Roll Sphere": {
+              "name": "Roll Sphere"
+            }
+          }
+        },
+        "Fiery Illumination": {
+          "name": "Fiery Illumination",
+          "description": "<p>The sphere ignites flammable Objects not being worn or carried, and it sheds &amp;reference[bright light] in a 20-foot radius and &amp;reference[dim light] for an additional 20 feet.</p>"
         }
       }
     },
@@ -7946,7 +7984,7 @@
     },
     "Guardian of Faith": {
       "name": "Guardian of Faith",
-      "description": "<p>@Embed[Compendium.dnd5e.spells24.Item.phbsplGuardianof caption=false]</p>",
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.TgHsuhNasPbhu8MO caption=false]</p>",
       "customType": "Spectral Guardian",
       "items": {
         "Guarded Area": {
@@ -12711,6 +12749,17 @@
               "condition": "When the [[lookup @name lowercase]]{monster} dies."
             }
           }
+        }
+      }
+    },
+    "Spiritual Weapon": {
+      "name": "Spiritual Weapon",
+      "description": "<p>@Embed[Compendium.dnd5e.spells.Item.JbxsYXxSOTZbf9I0 caption=false]</p>",
+      "customType": "Spectral Force",
+      "items": {
+        "Move and Attack": {
+          "name": "Move and Attack",
+          "description": "<p>As a Bonus Action on your later turns, you can move the force up to 20 feet and repeat the attack against a creature within 5 feet of it. On a hit, the target takes Force damage equal to 1d8 plus your spellcasting ability modifier.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above the 2nd.</p>"
         }
       }
     },
