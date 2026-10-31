@@ -47,7 +47,8 @@
         },
         "Acrobatic Movement": {
             "name": "Déplacement acrobatique",
-            "description": "<p>Tant que vous ne portez pas d'armure ni de bouclier, vous recevez la capacité de vous déplacer à votre tour le long de surfaces verticales et à travers des liquides sans tomber.</p>"
+            "description": "<p>Tant que vous ne portez pas d'armure ni de bouclier, vous recevez la capacité de vous déplacer à votre tour le long de surfaces verticales et à travers des liquides sans tomber.</p>",
+            "requirements": "Moine"
         },
         "Action Surge": {
             "name": "Fougue",
@@ -64,7 +65,8 @@
         },
         "Arcane Apotheosis": {
             "name": "Apothéose arcanique",
-            "description": "<p>Tant que votre aptitude Sorcellerie innée est active, vous pouvez recourir à une option de Métamagie à chacun de vos tours sans dépenser de points de Sorcellerie.</p><section class=\"secret\" id=\"secret-iZWf2qqSDxd9o6eN\"><p><strong>Note Foundry</strong></p><p>Décochez l'option Consommation lorsque vous utilisez l'option Métamagie que vous souhaitez utiliser gratuitement.</p></section>"
+            "description": "<p>Tant que votre aptitude Sorcellerie innée est active, vous pouvez recourir à une option de Métamagie à chacun de vos tours sans dépenser de points de Sorcellerie.</p><section class=\"secret\" id=\"secret-iZWf2qqSDxd9o6eN\"><p><strong>Note Foundry</strong></p><p>Décochez l'option Consommation lorsque vous utilisez l'option Métamagie que vous souhaitez utiliser gratuitement.</p></section>",
+            "requirements": "Ensorceleur"
         },
         "Arcane Recovery": {
             "name": "Restauration magique",
@@ -249,17 +251,33 @@
         "Blessed Strikes": {
             "name": "Impacts bénis",
             "description": "<p>La puissance divine vous anime au combat. Vous recevez l'une des options suivantes de votre choix (si vous avez obtenu une de ces options par une sous-classe de Clerc issue d'un ouvrage plus ancien, ne retenez que l'option choisie par la présente aptitude).</p><p><strong>Impact divin.</strong> Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme, vous pouvez lui infliger 1d8 dégâts supplémentaires du type que vous choisissez entre nécrotiques et radiants.</p><p><strong>Incantation puissante.</strong> Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Clerc.</p><section id=\"secret-1YTjpzZamslVlTTM\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lors de la progression, vous pourrez choisir l'option que vous préférez.</p></section>",
-            "requirements": "Clerc"
+            "requirements": "Clerc",
+            "advancement": {
+                "Blessed Strikes Choice": {
+                    "name": "Choix d'Impacts bénis"
+                }
+            }
         },
         "Blessed Strikes: Divine Strike": {
             "name": "Impacts bénis : Impact divin",
             "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme, vous pouvez lui infliger 1d8 dégâts supplémentaires du type que vous choisissez entre nécrotiques et radiants.</p><section id=\"secret-iZHQe1DZBrtcFZCk\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les dégâts de cette aptitude augmentent automatiquement lorsque vous obtenez @UUID[Compendium.dnd5e.classes24.Item.phbclcImprovedBl]{Impacts bénis améliorés}.</p></section>",
-            "requirements": "Clerc"
+            "requirements": "Clerc",
+            "activities": {
+                "Divine Strike": {
+                    "name": "Impact divin"
+                }
+            }
         },
         "Blessed Strikes: Potent Spellcasting": {
             "name": "Impacts bénis : Incantation puissante",
             "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Clerc.</p><section class=\"secret\" id=\"secret-bDHa7ClHZ3YPWKvs\"><p><strong>Note Foundry</strong></p><p>Ces dégâts supplémentaires ne sont pas automatiquement inclus dans vos sorts mineurs.</p><p>Vous pouvez ajouter [[lookup @abilities.wis.mod]] au champ Bonus situationnel de vos jets de dégâts de sort mineur ou vous pouvez l'ajouter de manière permanente à vos sorts mineurs en ajoutant \"@abilities.wis.mod\" (sans les guillemets) dans le champ Bonus. </p><p>Sinon, l'activité <strong>Dégâts</strong> de cette aptitude inclut votre modificateur de Sagesse et vous permet de choisir le type de dégâts dans la boîte de dialogue du jet.</p></section>",
-            "requirements": "Clerc"
+            "requirements": "Clerc",
+            "activities": {
+                "Heal": {
+                    "name": "Guérison",
+                    "condition": "Lorsque vous lancez un sort mineur de Clerc et infligez des dégâts à une créature par son biais"
+                }
+            }
         },
         "Blessed Warrior": {
             "name": "Combattant béni",
@@ -274,7 +292,8 @@
         },
         "Body and Mind": {
             "name": "Esprit et corps",
-            "description": "<p>Le développement de votre corps et de votre esprit atteint de nouveaux sommets. Vos valeurs de Dextérité et Sagesse augmentent de 4, jusqu'à un maximum de 25.</p>"
+            "description": "<p>Le développement de votre corps et de votre esprit atteint de nouveaux sommets. Vos valeurs de Dextérité et Sagesse augmentent de 4, jusqu'à un maximum de 25.</p>",
+            "requirements": "Moine"
         },
         "Bonus Proficiencies": {
             "name": "Maîtrises supplémentaires",
@@ -292,6 +311,27 @@
                 "Hamstrung": {
                     "name": "Jarret",
                     "description": "<p>Touché par un coup au jarret, la Vitesse de ce personnage a été réduite de 4,50 m jusqu'au début du prochain tour de l'attaquant.</p>"
+                },
+                "Staggered": {
+                    "name": "Stupéfié",
+                    "description": "<p>Touché par un coup stupéfiant, ce personnage a un Désavantage à son prochain jet de sauvegarde et ne peut pas effectuer d'attaques d'Opportunité jusqu'au début du prochain tour de l'attaquant.</p>"
+                },
+                "Sundered": {
+                    "name": "Déchiré",
+                    "description": "<p>Touché par un coup déchirant, le prochain jet d'attaque effectué avant le début de votre tour suivant par une autre créature contre la cible bénéficie d'un bonus de +5.</p>"
+                }
+            },
+            "activities": {
+                "Staggering Blow": {
+                    "name": "Coup stupéfiant"
+                },
+                "Sundering Blow": {
+                    "name": "Coup déchirant"
+                }
+            },
+            "advancement": {
+                "Brutal Strike": {
+                    "name": "Coup brutal"
                 }
             }
         },
@@ -330,6 +370,10 @@
                 },
                 "Turn Undead": {
                     "name": "Renvoi des morts-vivants",
+                    "target": "Mort-vivant de votre choix"
+                },
+                "Sear Undead": {
+                    "name": "Calcination de mort-vivant",
                     "target": "Mort-vivant de votre choix"
                 }
             },
@@ -383,6 +427,12 @@
                 },
                 "Armor Training": {
                     "name": "Formation aux armures"
+                },
+                "Channel Divinity": {
+                    "name": "Conduit divin"
+                },
+                "Cantrips": {
+                    "name": "Sorts mineurs"
                 }
             }
         },
@@ -535,16 +585,28 @@
                     "condition": "Si vous réduisez ainsi les dégâts à 0",
                     "range": "1,50 m pour les attaques de corps à corps ou 18 m pour les attaques à distance",
                     "target": "Ne bénéficie pas d'un Abri total"
+                },
+                "Redirect (Any Damage)": {
+                    "condition": "Si vous réduisez ainsi les dégâts à 0",
+                    "range": "1,50 m pour les attaques de corps à corps ou 18 m pour les attaques à distance",
+                    "target": "Ne bénéficie pas d'un Abri total"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Deflect Energy": {
             "name": "Parade énergétique",
-            "description": "<p>Vous pouvez désormais recourir à l'aptitude Déviation d'assaut contre les attaques qui infligent tout type de dégâts, et non plus seulement contondants, perforants ou tranchants.</p><section class=\"secret\" id=\"secret-XAQmFmc4TpSF2Oh1\"><p>L'activité <strong>Réduire</strong> peut être utilisée pour se soigner afin de réduire le total des dégâts si ce n'est pas suffisant pour les réduire à 0.</p><p>L'activité <strong>Dévier</strong> peut être utilisée pour lancer des dégâts et consommer une utilisation de vos points de Credo si vous pouvez les réduire à 0. Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet. Les dés augmentent automatiquement au fur et à mesure que vous montez en niveau.</p></section>"
+            "description": "<p>Vous pouvez désormais recourir à l'aptitude Déviation d'assaut contre les attaques qui infligent tout type de dégâts, et non plus seulement contondants, perforants ou tranchants.</p><section class=\"secret\" id=\"secret-XAQmFmc4TpSF2Oh1\"><p>L'activité <strong>Réduire</strong> peut être utilisée pour se soigner afin de réduire le total des dégâts si ce n'est pas suffisant pour les réduire à 0.</p><p>L'activité <strong>Dévier</strong> peut être utilisée pour lancer des dégâts et consommer une utilisation de vos points de Credo si vous pouvez les réduire à 0. Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet. Les dés augmentent automatiquement au fur et à mesure que vous montez en niveau.</p></section>",
+            "requirements": "Moine"
         },
         "Deft Explorer": {
             "name": "Fin explorateur",
-            "description": "<p>Vos voyages incessants vous ont permis de recevoir les bénéfices suivants.</p><p><strong>Expertise.</strong> Choisissez l'une de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans cette compétence.</p><p><strong>Langues.</strong> Vous connaissez deux langues de votre choix dans les tables des langues du chapitre 2.</p><section class=\"secret\" id=\"secret-MKYXod5Sdpyj2x7V\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire des choix lorsque vous ajouterez la classe Rôdeur à votre feuille de personnage.</p></section>"
+            "description": "<p>Vos voyages incessants vous ont permis de recevoir les bénéfices suivants.</p><p><strong>Expertise.</strong> Choisissez l'une de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans cette compétence.</p><p><strong>Langues.</strong> Vous connaissez deux langues de votre choix dans les tables des langues du chapitre 2.</p><section class=\"secret\" id=\"secret-MKYXod5Sdpyj2x7V\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire des choix lorsque vous ajouterez la classe Rôdeur à votre feuille de personnage.</p></section>",
+            "advancement": {
+                "Expertise": {
+                    "name": "Expertise"
+                }
+            }
         },
         "Devil's Sight": {
             "name": "Vision du diable",
@@ -603,12 +665,13 @@
         },
         "Disciplined Survivor": {
             "name": "Survivant discipliné",
-            "description": "<p>Votre discipline physique et mentale vous octroie la maîtrise de tous les jets de sauvegarde.</p><p>De plus, chaque fois que vous effectuez un jet de sauvegarde et ratez, vous pouvez dépenser 1 point de Credo pour le rejouer et conserver le nouveau jet.</p><section class=\"secret\" id=\"secret-VLGTfBDBcfExjSXG\"><p><strong>Note Foundry</strong></p><p>Vous obtiendrez automatiquement la Maîtrise des jets de sauvegarde supplémentaires en montant de niveau.</p><p>Utilisez cette aptitude pour dépenser 1 point de Credo.</p></section>",
+            "description": "<p>Votre discipline physique et mentale vous octroie la maîtrise de tous les jets de sauvegarde.</p><p>De plus, chaque fois que vous effectuez un jet de sauvegarde et ratez, vous pouvez dépenser 1 point de Credo pour le rejouer et conserver le nouveau jet.</p>",
             "effects": {
                 "Disciplined Survivor": {
                     "name": "Survivant discipliné"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Distant Spell": {
             "name": "Sort ample",
@@ -628,7 +691,12 @@
         "Divine Order": {
             "name": "Ordre divin",
             "description": "<p>Vous consacrez votre existence à l'un des rôles sacrés suivants, au choix.</p><p><strong>Protecteur.</strong> Combattant chevronné, vous recevez la maîtrise des armes de guerre et la formation aux armures lourdes.</p><p><strong>Thaumaturge.</strong> Vous connaissez un sort mineur supplémentaire issu de la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{liste du Clerc}. De plus, votre lien mystique vous octroie un bonus aux tests d'Intelligence (Arcanes et Religion). Ce bonus est égal à votre modificateur de Sagesse (minimum +1).</p><section class=\"secret\" id=\"secret-mBkdTF86GHVjdNKD\"><p><strong>Note Foundry</strong></p><p>Lors de la progression, vous pourrez choisir l'option que vous préférez.</p></section>",
-            "requirements": "Clerc"
+            "requirements": "Clerc",
+            "advancement": {
+                "Divine Order Choice": {
+                    "name": "Choix de l'Ordre divin"
+                }
+            }
         },
         "Divine Order: Protector": {
             "name": "Ordre divin : Protecteur",
@@ -646,7 +714,13 @@
         },
         "Draconic Resilience": {
             "name": "Résistance draconique",
-            "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p><section class=\"secret\" id=\"secret-uBlQVhOqmjWWiLc4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum de points de vie et met en place votre défense sans armure, qui peut être désactivée si vous préférez utiliser une armure.</p></section>"
+            "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p><section class=\"secret\" id=\"secret-uBlQVhOqmjWWiLc4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum de points de vie et met en place votre défense sans armure, qui peut être désactivée si vous préférez utiliser une armure.</p></section>",
+            "requirements": "Sorcellerie draconique",
+            "effects": {
+                "Draconic Resilience": {
+                    "name": "Résistance draconique"
+                }
+            }
         },
         "Draconic Sorcery": {
             "name": "Sorcellerie draconique",
@@ -659,11 +733,18 @@
         },
         "Draconic Spells": {
             "name": "Sorts draconiques",
-            "description": "<p>Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts draconiques</caption><thead><tr><td>Niveau d'Ensorceleur</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{injonction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplAlterSelf0]{modification d'apparence}, @UUID[Compendium.dnd5e.spells24.Item.phbsplChromaticO]{orbe chromatique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDragonsBre]{souffle du dragon}</em></td></tr><tr><td>5</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{terreur}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{vol}</em></td></tr><tr><td>7</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCharmMonst]{charme-monstre}, @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{œil du mage}</em></td></tr><tr><td>9</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{mythes et légendes}</em></td></tr></tbody></table><section class=\"secret\" id=\"secret-kL8H0ClyrUNajoht\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>"
+            "description": "<p>Lorsque vous atteignez un niveau d'Ensorceleur spécifié dans la table Sorts draconiques, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts draconiques</caption><thead><tr><td>Niveau d'Ensorceleur</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{injonction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplAlterSelf0]{modification d'apparence}, @UUID[Compendium.dnd5e.spells24.Item.phbsplChromaticO]{orbe chromatique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDragonsBre]{souffle du dragon}</em></td></tr><tr><td>5</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplFear000000]{terreur}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFly0000000]{vol}</em></td></tr><tr><td>7</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplCharmMonst]{charme-monstre}, @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{œil du mage}</em></td></tr><tr><td>9</td><td><em>@UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLegendLore]{mythes et légendes}</em></td></tr></tbody></table><section class=\"secret\" id=\"secret-kL8H0ClyrUNajoht\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>",
+            "requirements": "Sorcellerie draconique",
+            "advancement": {
+                "Draconic Spells": {
+                    "name": "Sorts draconiques"
+                }
+            }
         },
         "Dragon Companion": {
             "name": "Compagnon draconique",
-            "description": "<p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon} sans composante matérielle. Vous pouvez aussi le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long.</p><p>Chaque fois que vous commencez à lancer ce sort, vous pouvez en modifier l'incantation afin qu'elle ne nécessite pas la Concentration. Ce faisant, la durée du sort passe à 1 minute pour cette incantation.</p><section id=\"secret-dxl0rjuVblJvTXgy\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude peut être utilisée pour suivre votre utilisation gratuite. Lorsque vous lancez le sort, vous pouvez décocher la case « Consommation » et, éventuellement, la case « Concentration ».</p></section>"
+            "description": "<p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon} sans composante matérielle. Vous pouvez aussi le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long.</p><p>Chaque fois que vous commencez à lancer ce sort, vous pouvez en modifier l'incantation afin qu'elle ne nécessite pas la Concentration. Ce faisant, la durée du sort passe à 1 minute pour cette incantation.</p><section id=\"secret-dxl0rjuVblJvTXgy\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude peut être utilisée pour suivre votre utilisation gratuite. Lorsque vous lancez le sort, vous pouvez décocher la case « Consommation » et, éventuellement, la case « Concentration ».</p></section>",
+            "requirements": "Sorcellerie draconique"
         },
         "Dragon Wings": {
             "name": "Ailes draconiques",
@@ -681,7 +762,8 @@
                     "name": "Ailé",
                     "description": "<p>Ces ailes persistent 1 heure ou jusqu'à ce que vous les révoquiez (pas d'action requise). Pour toute la durée, vous bénéficiez d'une Vitesse de vol de 18 m.</p>"
                 }
-            }
+            },
+            "requirements": "Sorcellerie draconique"
         },
         "Druid": {
             "name": "Druide",
@@ -809,7 +891,8 @@
         },
         "Elemental Affinity": {
             "name": "Affinité élémentaire",
-            "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la Résistance à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p><section class=\"secret\" id=\"secret-3vHUORtVzoP6V4xF\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir le type de dégâts au fur et à mesure que vous montez en niveau. Les dégâts supplémentaires ne sont pas automatiquement ajoutés, mais cette aptitude comprend une activité pour chaque type de dégâts.</p><p>Vous pouvez accélérer l'utilisation de cette aptitude en plaçant le type de dégâts que vous avez choisi en haut de la liste et il sera utilisé automatiquement lors de l'utilisation de cette aptitude.</p></section>"
+            "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la Résistance à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p><section class=\"secret\" id=\"secret-3vHUORtVzoP6V4xF\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir le type de dégâts au fur et à mesure que vous montez en niveau. Les dégâts supplémentaires ne sont pas automatiquement ajoutés, mais cette aptitude comprend une activité pour chaque type de dégâts.</p><p>Vous pouvez accélérer l'utilisation de cette aptitude en plaçant le type de dégâts que vous avez choisi en haut de la liste et il sera utilisé automatiquement lors de l'utilisation de cette aptitude.</p></section>",
+            "requirements": "Sorcellerie draconique"
         },
         "Elemental Fury": {
             "name": "Fureur élémentaire",
@@ -857,11 +940,18 @@
         },
         "Empowered Strikes": {
             "name": "Frappes renforcées",
-            "description": "<p>Chaque fois que vous infligez des dégâts avec une attaque à mains nues, ceux-ci sont à votre convenance des dégâts de force ou du type normal de l'attaque.</p><section class=\"secret\" id=\"secret-Hg8UeaCyLgncM7iJ\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Frappes renforcées</strong> de cette aptitude peut vous permettre de choisir entre les dégâts de Force et les dégâts normaux dans la boîte de dialogue du jet. Elle utilise votre dé d'Arts martiaux (actuellement [[lookup @scale.monk.die]]) pour les dégâts et sera automatiquement mise à jour au fur et à mesure que vous montez en niveau.</p></section>"
+            "description": "<p>Chaque fois que vous infligez des dégâts avec une attaque à mains nues, ceux-ci sont à votre convenance des dégâts de force ou du type normal de l'attaque.</p><section class=\"secret\" id=\"secret-Hg8UeaCyLgncM7iJ\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Frappes renforcées</strong> de cette aptitude peut vous permettre de choisir entre les dégâts de Force et les dégâts normaux dans la boîte de dialogue du jet. Elle utilise votre dé d'Arts martiaux (actuellement [[lookup @scale.monk.die]]) pour les dégâts et sera automatiquement mise à jour au fur et à mesure que vous montez en niveau.</p></section>",
+            "requirements": "Moine",
+            "effects": {
+                "Empowered Strikes": {
+                    "name": "Frappes renforcées"
+                }
+            }
         },
         "Evasion": {
             "name": "Esquive totale",
-            "description": "<p>Quand vous êtes soumis à un effet qui vous permet d'effectuer un jet de sauvegarde de Dextérité pour réduire les dégâts de moitié, vous ne subissez aucun dégât en cas de sauvegarde réussie, et seulement la moitié en cas d'échec.</p><p>Vous ne bénéficiez pas de cette aptitude si vous subissez l'état Neutralisé.</p>"
+            "description": "<p>Quand vous êtes soumis à un effet qui vous permet d'effectuer un jet de sauvegarde de Dextérité pour réduire les dégâts de moitié, vous ne subissez aucun dégât en cas de sauvegarde réussie, et seulement la moitié en cas d'échec.</p><p>Vous ne bénéficiez pas de cette aptitude si vous subissez l'état Neutralisé.</p>",
+            "requirements": "Moine"
         },
         "Evocation Savant": {
             "name": "Évocateur érudit",
@@ -1066,7 +1156,8 @@
         },
         "Fleet Step": {
             "name": "Foulée preste",
-            "description": "<p>Lorsque vous entreprenez une action Bonus autre que Porté par le vent, vous pouvez aussi recourir à Porté par le vent aussitôt après cette action Bonus.</p>"
+            "description": "<p>Lorsque vous entreprenez une action Bonus autre que Porté par le vent, vous pouvez aussi recourir à Porté par le vent aussitôt après cette action Bonus.</p>",
+            "requirements": "Credo de la Paume"
         },
         "Foe Slayer": {
             "name": "Tueur implacable",
@@ -1097,7 +1188,8 @@
                 "Regain Sorcery Points": {
                     "name": "Regain de points de Sorcellerie"
                 }
-            }
+            },
+            "requirements": "Ensorceleur"
         },
         "Frenzy": {
             "name": "Frénésie",
@@ -1151,7 +1243,8 @@
         },
         "Heightened Focus": {
             "name": "Credo accru",
-            "description": "<p>Déluge de coups, Patience défensive et Porté par le vent reçoivent respectivement les bénéfices suivants.</p><p><strong>Déluge de coups.</strong> Vous pouvez dépenser 1 point de Credo pour recourir à Déluge de coups et effectuer trois attaques à mains nues au lieu de deux.</p><p><strong>Patience défensive.</strong> Lorsque vous dépensez un point de Credo pour recourir à Patience défensive, vous recevez des points de vie temporaires égaux à deux jets de votre dé d'Arts martiaux.</p><p><strong>Porté par le vent.</strong> Lorsque vous dépensez un point de Credo pour recourir à Porté par le vent, vous pouvez choisir une créature consentante dans un rayon de 1,50 m, de taille G ou inférieure. Vous déplacez la créature avec vous jusqu'à la fin de votre tour. Le déplacement de la créature ne provoque pas d'attaques d'Opportunité.</p><section class=\"secret\" id=\"secret-OnZBuksoGlTtaJJC\"><p><strong>Note Foundry</strong></p><p>L'aptitude <strong>Déluge de coups</strong> dépense 1 point de Credo et vous pouvez alors effectuer trois attaques à mains nues.</p><p>L'aptitude <strong>Patience défensive</strong> lancera les points de vie temporaires pour vous.</p></section>"
+            "description": "<p>Déluge de coups, Patience défensive et Porté par le vent reçoivent respectivement les bénéfices suivants.</p><p><strong>Déluge de coups.</strong> Vous pouvez dépenser 1 point de Credo pour recourir à Déluge de coups et effectuer trois attaques à mains nues au lieu de deux.</p><p><strong>Patience défensive.</strong> Lorsque vous dépensez un point de Credo pour recourir à Patience défensive, vous recevez des points de vie temporaires égaux à deux jets de votre dé d'Arts martiaux.</p><p><strong>Porté par le vent.</strong> Lorsque vous dépensez un point de Credo pour recourir à Porté par le vent, vous pouvez choisir une créature consentante dans un rayon de 1,50 m, de taille G ou inférieure. Vous déplacez la créature avec vous jusqu'à la fin de votre tour. Le déplacement de la créature ne provoque pas d'attaques d'Opportunité.</p><section class=\"secret\" id=\"secret-OnZBuksoGlTtaJJC\"><p><strong>Note Foundry</strong></p><p>L'aptitude <strong>Déluge de coups</strong> dépense 1 point de Credo et vous pouvez alors effectuer trois attaques à mains nues.</p><p>L'aptitude <strong>Patience défensive</strong> lancera les points de vie temporaires pour vous.</p></section>",
+            "requirements": "Moine"
         },
         "Heightened Spell": {
             "name": "Sort intensifié",
@@ -1199,7 +1292,13 @@
         },
         "Hunter's Prey": {
             "name": "Proie du chasseur",
-            "description": "<p>Vous recevez l'une des aptitudes suivantes au choix. Chaque fois que vous terminez un Repos court ou long, vous pouvez remplacer l'option choisie par l'autre.</p><p><strong>Briseur de hordes.</strong> Une fois à chacun de vos tours quand vous effectuez une attaque avec arme, vous pouvez effectuer une nouvelle attaque avec la même arme contre une créature différente dans un rayon de 1,50 m de la cible initiale et à portée de cette arme, à condition de ne pas l'avoir déjà attaquée ce tour-ci.</p><p><strong>Goût du sang.</strong> Votre ténacité vient à bout des ennemis les plus robustes. Lorsque vous touchez une créature avec une arme, celle-ci inflige 1d8 dégâts supplémentaires à la cible s'il lui manque des points de vie. Vous ne pouvez infliger ces dégâts supplémentaires qu'une seule fois par tour.</p><section class=\"secret\" id=\"secret-I2q5Nm7g6mkLjH5Y\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité <strong>Goût du sang</strong> pour les dégâts supplémentaires. Vous pouvez sélectionner le bon type de dégâts dans la boîte de dialogue du jet.</p><p>Pour l'option <strong>Briseur de hordes</strong>, il suffit d'effectuer une nouvelle attaque.</p></section>"
+            "description": "<p>Vous recevez l'une des aptitudes suivantes au choix. Chaque fois que vous terminez un Repos court ou long, vous pouvez remplacer l'option choisie par l'autre.</p><p><strong>Briseur de hordes.</strong> Une fois à chacun de vos tours quand vous effectuez une attaque avec arme, vous pouvez effectuer une nouvelle attaque avec la même arme contre une créature différente dans un rayon de 1,50 m de la cible initiale et à portée de cette arme, à condition de ne pas l'avoir déjà attaquée ce tour-ci.</p><p><strong>Goût du sang.</strong> Votre ténacité vient à bout des ennemis les plus robustes. Lorsque vous touchez une créature avec une arme, celle-ci inflige 1d8 dégâts supplémentaires à la cible s'il lui manque des points de vie. Vous ne pouvez infliger ces dégâts supplémentaires qu'une seule fois par tour.</p><section class=\"secret\" id=\"secret-I2q5Nm7g6mkLjH5Y\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité <strong>Goût du sang</strong> pour les dégâts supplémentaires. Vous pouvez sélectionner le bon type de dégâts dans la boîte de dialogue du jet.</p><p>Pour l'option <strong>Briseur de hordes</strong>, il suffit d'effectuer une nouvelle attaque.</p></section>",
+            "activities": {
+                "Colossus Slayer": {
+                    "name": "Goût du sang",
+                    "condition": "Une fois par tour, lorsque vous touchez une créature avec une arme"
+                }
+            }
         },
         "Hurl Through Hell": {
             "name": "Traversée des enfers",
@@ -1269,7 +1368,8 @@
                     "name": "Sorcellerie innée",
                     "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1. (Automatisé)</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez. (Non automatisé)</p>"
                 }
-            }
+            },
+            "requirements": "Ensorceleur"
         },
         "Instinctive Pounce": {
             "name": "Bond instinctif",
@@ -1400,7 +1500,12 @@
         "Life Domain Spells": {
             "name": "Sorts du Domaine de la Vie",
             "description": "<p>Votre lien au domaine divin veille à ce que certains de vos sorts soient toujours préparés. Lorsque vous atteignez un niveau de Clerc spécifié dans la table Sorts du Domaine de la Vie, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts du Domaine de la Vie</caption><thead><tr><td>Niveau de Clerc</td><td>Sorts préparés</td></tr></thead><tbody><tr><td>3</td><td><p>@UUID[Compendium.dnd5e.spells24.Item.phbsplAid0000000]{aide}, @UUID[Compendium.dnd5e.spells24.Item.phbsplBless00000]{bénédiction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLesserRest]{restauration partielle},<br />@UUID[Compendium.dnd5e.spells24.Item.phbsplCureWounds]{soins}</p></td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplMassHealin]{mot de guérison de groupe}, @UUID[Compendium.dnd5e.spells24.Item.phbsplRevivify00]{retour à la vie}</td></tr><tr><td>7</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAuraofLife]{aura de vie}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDeathWard0]{protection contre la mort}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplGreaterRes]{restauration suprême}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMassCureWo]{soins de groupe}</td></tr></tbody></table><section class=\"secret\" id=\"secret-Z9pAhvumQlf7onuP\"><p><strong>Note Foundry</strong></p><p>Ces sorts vous sont accordés automatiquement à mesure que vous progressez.</p></section>",
-            "requirements": "Domaine de la Vie"
+            "requirements": "Domaine de la Vie",
+            "advancement": {
+                "Life Domain Spells": {
+                    "name": "Sorts du Domaine de la Vie"
+                }
+            }
         },
         "Lifedrinker": {
             "name": "Buveuse de vie",
@@ -1457,7 +1562,8 @@
                         "3": "{} (Arts martiaux)"
                     }
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Mask of Many Faces": {
             "name": "Mille visages",
@@ -1512,7 +1618,13 @@
         },
         "Metamagic": {
             "name": "Métamagie",
-            "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p><section id=\"secret-IKw7Qq4qXvzx5Iqj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir des options de métamagie au fur et à mesure de votre montée en niveau.</p></section>"
+            "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p><section id=\"secret-IKw7Qq4qXvzx5Iqj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir des options de métamagie au fur et à mesure de votre montée en niveau.</p></section>",
+            "requirements": "Ensorceleur",
+            "advancement": {
+                "Metamagic": {
+                    "name": "Métamagie"
+                }
+            }
         },
         "Mindless Rage": {
             "name": "Rage aveugle",
@@ -1521,6 +1633,11 @@
             "effects": {
                 "Mindless Rage": {
                     "name": "Rage aveugle"
+                }
+            },
+            "activities": {
+                "Apply": {
+                    "name": "Appliquer"
                 }
             }
         },
@@ -1552,6 +1669,12 @@
                 },
                 "Focus Points": {
                     "name": "Points de Credo"
+                },
+                "Martial Arts": {
+                    "name": "Arts martiaux"
+                },
+                "Epic Boon": {
+                    "name": "Faveur épique"
                 }
             }
         },
@@ -1572,6 +1695,9 @@
                 },
                 "Step of the Wind": {
                     "name": "Porté par le vent"
+                },
+                "Flurry of Blows (Heightened)": {
+                    "chatFlavor": "Effectuer deux [[/item Attaque à mains nues]]{attaques à mains nues}"
                 }
             }
         },
@@ -1685,7 +1811,12 @@
         },
         "Oath of Devotion Spells": {
             "name": "Sorts du Serment de Dévotion",
-            "description": "<p>La magie de votre serment vous assure d'avoir certains sorts disponibles en permanence ; lorsque vous atteignez un niveau de Paladin spécifié dans la table Sorts du Serment de Dévotion, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts du Serment de Dévotion</caption><thead><tr><td>Niveau de Paladin</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplShieldofFa]{bouclier de la foi}, @UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{protection contre le mal et le bien}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAid0000000]{aide}, @UUID[Compendium.dnd5e.spells24.Item.phbsplZoneofTrut]{zone de vérité}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{dissipation de la magie}, @UUID[Compendium.dnd5e.spells24.Item.phbsplBeaconofHo]{lueur d'espoir}</td></tr><tr><td>13</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplGuardianof]{gardien de la foi}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFreedomofM]{liberté de mouvement}</td></tr><tr><td>17</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFlameStrik]{colonne de flamme}, @UUID[Compendium.dnd5e.spells24.Item.phbsplCommune000]{communion}</td></tr></tbody></table><section class=\"secret\" id=\"secret-BJb1nvUMxSS77zuz\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>"
+            "description": "<p>La magie de votre serment vous assure d'avoir certains sorts disponibles en permanence ; lorsque vous atteignez un niveau de Paladin spécifié dans la table Sorts du Serment de Dévotion, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts du Serment de Dévotion</caption><thead><tr><td>Niveau de Paladin</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplShieldofFa]{bouclier de la foi}, @UUID[Compendium.dnd5e.spells24.Item.phbEvilAndGoodPr]{protection contre le mal et le bien}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplAid0000000]{aide}, @UUID[Compendium.dnd5e.spells24.Item.phbsplZoneofTrut]{zone de vérité}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplDispelMagi]{dissipation de la magie}, @UUID[Compendium.dnd5e.spells24.Item.phbsplBeaconofHo]{lueur d'espoir}</td></tr><tr><td>13</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplGuardianof]{gardien de la foi}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFreedomofM]{liberté de mouvement}</td></tr><tr><td>17</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFlameStrik]{colonne de flamme}, @UUID[Compendium.dnd5e.spells24.Item.phbsplCommune000]{communion}</td></tr></tbody></table><section class=\"secret\" id=\"secret-BJb1nvUMxSS77zuz\"><p><strong>Note Foundry</strong></p><p>Les sorts sont automatiquement accordés au fur et à mesure que vous montez en niveau.</p></section>",
+            "advancement": {
+                "Oath of Devotion Spells": {
+                    "name": "Sorts du Serment de Dévotion"
+                }
+            }
         },
         "One with Shadows": {
             "name": "Maître des ombres",
@@ -1718,7 +1849,8 @@
                 "Addled": {
                     "name": "Hésitation"
                 }
-            }
+            },
+            "requirements": "Credo de la Paume"
         },
         "Otherworldly Leap": {
             "name": "Saut d'outre-monde",
@@ -1808,6 +1940,12 @@
                 },
                 "Armor Training": {
                     "name": "Formation aux armures"
+                },
+                "Channel Divinity": {
+                    "name": "Conduit divin"
+                },
+                "Epic Boon": {
+                    "name": "Faveur épique"
                 }
             }
         },
@@ -1837,7 +1975,8 @@
         },
         "Perfect Focus": {
             "name": "Credo parachevé",
-            "description": "<p>Lorsque vous jouez l'Initiative, que vous ne recourez pas à Métabolisme surnaturel et qu'il vous reste moins de 4 points de Credo, vous en récupérez jusqu'à en avoir 4.</p><section id=\"secret-BCqdmLkKRacPf9tr\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude ne permet pas de récupérer automatiquement les points de Credo dépensés.</p></section>"
+            "description": "<p>Lorsque vous jouez l'Initiative, que vous ne recourez pas à Métabolisme surnaturel et qu'il vous reste moins de 4 points de Credo, vous en récupérez jusqu'à en avoir 4.</p><section id=\"secret-BCqdmLkKRacPf9tr\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude ne permet pas de récupérer automatiquement les points de Credo dépensés.</p></section>",
+            "requirements": "Moine"
         },
         "Persistent Rage": {
             "name": "Rage persistante",
@@ -1874,6 +2013,12 @@
             "effects": {
                 "Primal Knowledge": {
                     "name": "Savoir primal"
+                }
+            },
+            "advancement": {
+                "Primal Knowledge": {
+                    "name": "Savoir primal",
+                    "hint": "Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste des compétences disponibles aux Barbares de niveau 1."
                 }
             }
         },
@@ -1929,7 +2074,8 @@
                 "Lethal Vibrations": {
                     "name": "Vibrations mortelles"
                 }
-            }
+            },
+            "requirements": "Credo de la Paume"
         },
         "Radiant Strikes": {
             "name": "Frappes radiantes",
@@ -1947,6 +2093,11 @@
             "effects": {
                 "Rage": {
                     "name": "Rage"
+                }
+            },
+            "activities": {
+                "Activate": {
+                    "name": "Activer"
                 }
             }
         },
@@ -1971,6 +2122,9 @@
                 },
                 "Armor Training": {
                     "name": "Formation aux armures"
+                },
+                "Epic Boon": {
+                    "name": "Faveur épique"
                 }
             }
         },
@@ -2190,7 +2344,8 @@
                 "Reduce": {
                     "name": "Réduire"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Smite of Protection": {
             "name": "Châtiment de protection",
@@ -2223,6 +2378,12 @@
                 },
                 "Sorcery Points": {
                     "name": "Points de Sorcellerie"
+                },
+                "Cantrips": {
+                    "name": "Sorts mineurs"
+                },
+                "Epic Boon": {
+                    "name": "Faveur épique"
                 }
             }
         },
@@ -2233,7 +2394,8 @@
                 "Restore Sorcery Points": {
                     "name": "Restaurer des points de Sorcellerie"
                 }
-            }
+            },
+            "requirements": "Ensorceleur"
         },
         "Sorcery Incarnate": {
             "name": "Sorcellerie incarnée",
@@ -2242,7 +2404,8 @@
                 "Restore Innate Sorcery": {
                     "name": "Restaurer Sorcellerie innée"
                 }
-            }
+            },
+            "requirements": "Ensorceleur"
         },
         "Spell Mastery": {
             "name": "Maîtrise des sorts",
@@ -2304,7 +2467,8 @@
                 "Slowed": {
                     "name": "Ralenti"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Subtle Spell": {
             "name": "Sort subtil",
@@ -2332,7 +2496,8 @@
                 "Superior Defense": {
                     "name": "Défense supérieure"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Superior Hunter's Defense": {
             "name": "Défense de chasseur supérieure",
@@ -2346,7 +2511,16 @@
         },
         "Superior Hunter's Prey": {
             "name": "Proie du chasseur supérieure",
-            "description": "<p>Une fois par tour, lorsque vous infligez des dégâts à une créature marquée par votre <em>marque du chasseur</em>, vous pouvez également infliger les dégâts supplémentaires de ce sort à une créature différente que vous voyez dans un rayon de 9 m de la première.</p><section id=\"secret-AuiRnxdHXs9cXvQV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer les dégâts de la Marque du chasseur ou utiliser l'activité <strong>Dégâts</strong> sur cette aptitude.</p></section>"
+            "description": "<p>Une fois par tour, lorsque vous infligez des dégâts à une créature marquée par votre <em>marque du chasseur</em>, vous pouvez également infliger les dégâts supplémentaires de ce sort à une créature différente que vous voyez dans un rayon de 9 m de la première.</p><section id=\"secret-AuiRnxdHXs9cXvQV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer les dégâts de la Marque du chasseur ou utiliser l'activité <strong>Dégâts</strong> sur cette aptitude.</p></section>",
+            "activities": {
+                "Hunter's Mark Damage": {
+                    "name": "Dégâts de Marque du chasseur",
+                    "range": "De la créature blessée"
+                },
+                "Improved Hunter's Mark Damage": {
+                    "range": "De la créature blessée"
+                }
+            }
         },
         "Superior Inspiration": {
             "name": "Inspiration supérieure",
@@ -2492,7 +2666,8 @@
                 "Unarmored Movement": {
                     "name": "Déplacement sans armure"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Uncanny Dodge": {
             "name": "Esquive instinctive",
@@ -2511,7 +2686,8 @@
                 "Uncanny Metabolism": {
                     "name": "Métabolisme surnaturel"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "Use Magic Device": {
             "name": "Utilisation d'objets magiques",
@@ -2592,7 +2768,20 @@
         "Weapon Mastery": {
             "name": "Bottes d'arme",
             "description": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix, par exemple la hache à deux mains et la hachette. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Barbare, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table Aptitudes du Barbare.</p>",
-            "requirements": "Barbare"
+            "requirements": "Barbare",
+            "advancement": {
+                "Weapon Mastery": {
+                    "name": "Bottes d'arme"
+                },
+                "WYkWGiSyjLN4WC4x": {
+                    "name": "Bottes d'arme",
+                    "hint": "Votre entraînement martial vous permet de recourir à la botte d'armes supplémentaires."
+                },
+                "EUfvF7zVF9ooQGUg": {
+                    "name": "Bottes d'arme",
+                    "hint": "Votre entraînement martial vous permet de recourir à la botte d'armes supplémentaires."
+                }
+            }
         },
         "Whispers of the Grave": {
             "name": "Murmures de la tombe",
@@ -2606,7 +2795,8 @@
         },
         "Wholeness of Body": {
             "name": "Plénitude physique",
-            "description": "<p>Vous recevez l'aptitude de vous soigner. Par une action Bonus, vous pouvez lancer votre dé d'Arts martiaux. Vous récupérez autant de points de vie que le nombre obtenu plus votre modificateur de Sagesse (minimum de 1 point de vie récupéré).</p><p>Vous pouvez recourir à cette aptitude autant de fois que votre modificateur de Sagesse (minimum d'une fois) et vous récupérez ce quota en terminant un Repos long.</p>"
+            "description": "<p>Vous recevez l'aptitude de vous soigner. Par une action Bonus, vous pouvez lancer votre dé d'Arts martiaux. Vous récupérez autant de points de vie que le nombre obtenu plus votre modificateur de Sagesse (minimum de 1 point de vie récupéré).</p><p>Vous pouvez recourir à cette aptitude autant de fois que votre modificateur de Sagesse (minimum d'une fois) et vous récupérez ce quota en terminant un Repos long.</p>",
+            "requirements": "Credo de la Paume"
         },
         "Wild Companion": {
             "name": "Compagnon sauvage",
@@ -2712,7 +2902,8 @@
         },
         "phbmnkExtraAttac": {
             "name": "Attaque supplémentaire",
-            "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>"
+            "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>",
+            "requirements": "Moine"
         },
         "phbmnkUnarmedStr": {
             "name": "Attaque à mains nues",
@@ -2730,7 +2921,7 @@
                     "name": "À terre"
                 }
             },
-            "description": "<p>Vous pouvez recourir à la Dextérité au lieu de la Force pour les jets d'attaque et de dégâts si vous &Reference[Unarmed Strike]{attaquez à mains nues}. Vous pouvez lancer votre dé d'Arts martiaux à la place des dégâts normaux.</p><p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>"
+            "description": "<p><em>Voir : @UUID[Compendium.dnd5e.classes24.Item.phbmnkMartialArt]{Arts martiaux (Moine)}</em></p>"
         },
         "phbmnkUnarmoredD": {
             "name": "Défense sans armure",
@@ -2739,7 +2930,8 @@
                 "Unarmored Defense": {
                     "name": "Défense sans armure"
                 }
-            }
+            },
+            "requirements": "Moine"
         },
         "phbpdnChannelDiv": {
             "name": "Conduit divin",
@@ -2761,7 +2953,12 @@
         },
         "phbpdnFightingSt": {
             "name": "Style de combat",
-            "description": "<p>Vous recevez le don de @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstBlessedWar caption=false]</p>"
+            "description": "<p>Vous recevez le don de @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstBlessedWar caption=false]</p>",
+            "advancement": {
+                "Fighting Style": {
+                    "name": "Style de combat"
+                }
+            }
         },
         "phbpdnSpellcasti": {
             "name": "Sorts",
@@ -2769,7 +2966,12 @@
         },
         "phbpdnWeaponMast": {
             "name": "Bottes d'arme",
-            "description": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux types d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple l'épée longue et la javeline.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez changer le type d'arme que vous avez choisi. Vous pourriez par exemple décider d'opter pour les propriétés Bottes de la hallebarde et du fléau d'armes.</p>"
+            "description": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux types d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple l'épée longue et la javeline.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez changer le type d'arme que vous avez choisi. Vous pourriez par exemple décider d'opter pour les propriétés Bottes de la hallebarde et du fléau d'armes.</p>",
+            "advancement": {
+                "Weapon Mastery": {
+                    "name": "Bottes d'arme"
+                }
+            }
         },
         "phbrgeEvasion000": {
             "name": "Esquive totale",
@@ -2785,7 +2987,12 @@
         },
         "phbrgrExpertise0": {
             "name": "Expertise",
-            "description": "<p>Choisissez deux de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans ces compétences.</p><section class=\"secret\" id=\"secret-8Sp7JCTIzt2U5K6u\"><p><strong>Note Foundry</strong></p><p>Un choix vous sera proposé lorsque vous atteindrez ce niveau.</p></section>"
+            "description": "<p>Choisissez deux de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans ces compétences.</p><section class=\"secret\" id=\"secret-8Sp7JCTIzt2U5K6u\"><p><strong>Note Foundry</strong></p><p>Un choix vous sera proposé lorsque vous atteindrez ce niveau.</p></section>",
+            "advancement": {
+                "Expertise": {
+                    "name": "Expertise"
+                }
+            }
         },
         "phbrgrExtraAttac": {
             "name": "Attaque supplémentaire",
@@ -2793,7 +3000,12 @@
         },
         "phbrgrFightingSt": {
             "name": "Style de combat",
-            "description": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{don de Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstDruidicWar caption=false]</p>"
+            "description": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{don de Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstDruidicWar caption=false]</p>",
+            "advancement": {
+                "Fighting Style": {
+                    "name": "Style de combat"
+                }
+            }
         },
         "phbrgrSpellcasti": {
             "name": "Sorts",
@@ -2801,15 +3013,39 @@
         },
         "phbrgrWeaponMast": {
             "name": "Bottes d'arme",
-            "description": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux types d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple l'arc long et l'épée courte.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez changer le type d'arme que vous avez choisi. Vous pourriez par exemple décider d'opter pour les propriétés Bottes du cimeterre et de l'épée longue.</p>"
+            "description": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux types d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple l'arc long et l'épée courte.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez changer le type d'arme que vous avez choisi. Vous pourriez par exemple décider d'opter pour les propriétés Bottes du cimeterre et de l'épée longue.</p>",
+            "advancement": {
+                "Weapon Mastery": {
+                    "name": "Bottes d'arme"
+                }
+            }
         },
         "phbscrSpellcasti": {
             "name": "Sorts",
-            "description": "<p>C'est en puisant dans votre magie innée que vous lancez vos sorts. Reportez-vous au chapitre 7 pour les @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.b2QVn25z2N1ykWpf]{règles d'incantation}. Les informations ci-après expliquent comment utiliser ces règles avec les sorts d'Ensorceleur, qui figurent dans la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.VfZ5mH2ZuyFq82Ga]{liste Sorts d'Ensorceleur}.</p><p><strong>Sorts mineurs.</strong> Vous connaissez quatre sorts mineurs d'Ensorceleur de votre choix. @UUID[Compendium.dnd5e.spells24.Item.phbsplSorcerousB]{Éruption ensorcelée}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{lumière}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShockingGr]{poigne électrique} et @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{prestidigitation} sont recommandés. Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'un de vos sorts mineurs de cette aptitude par un autre sort mineur d'Ensorceleur de votre choix.</p><p>Lorsque vous atteignez les niveaux 4 et 10 d'Ensorceleur, vous apprenez un autre sort mineur d'Ensorceleur de votre choix, comme indiqué en colonne Sorts mineurs de la table Aptitudes de l'Ensorceleur.</p><p><strong>Emplacements de sort.</strong> La @UUID[Compendium.dnd5e.content24.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#aptitudes-de-classe]{table Aptitudes de l'Ensorceleur} vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et supérieur. Vous récupérez tous les emplacements dépensés en terminant un Repos long.</p><p><strong>Sorts préparés du 1<sup>er</sup> niveau et plus.</strong> Vous devez préparer la liste des sorts du 1<sup>er</sup> niveau et supérieur que cette aptitude vous permet de lancer. Pour commencer, choisissez deux sorts d'Ensorceleur du 1<sup>er</sup> niveau. <em>Détection de la magie</em> et <em>mains brûlantes</em> sont recommandés.</p><p>Le nombre de sorts de votre liste augmente à mesure que vous recevez des niveaux d'Ensorceleur, comme l'indique la colonne Sorts préparés de la table Aptitudes de l'Ensorceleur. Chaque fois que ce nombre augmente, choisissez des sorts d'Ensorceleur supplémentaires jusqu'à ce que le nombre de sorts de votre liste corresponde au nombre indiqué dans la table Aptitudes de l'Ensorceleur. Ces sorts doivent être d'un niveau pour lequel vous disposez d'emplacements de sort. Si, par exemple, vous êtes un Ensorceleur de niveau 3, votre liste de sorts préparés peut inclure six sorts d'Ensorceleur du 1<sup>er</sup> ou 2<sup>e</sup> niveau, répartis à votre guise.</p><p>Si une autre aptitude d'Ensorceleur vous octroie des sorts toujours préparés, ces sorts ne sont pas décomptés du nombre de sorts que vous pouvez préparer avec la présente aptitude, mais ils sont considérés pour vous comme des sorts d'Ensorceleur.</p><p><strong>Modification des sorts préparés.</strong> Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer un sort de votre liste par un autre sort d'Ensorceleur pour lequel vous disposez d'au moins un emplacement.</p><p><strong>Caractéristique d'incantation.</strong> Le Charisme est la caractéristique d'incantation de vos sorts d'Ensorceleur.</p><p><strong>Focaliseur d'incantation.</strong> Vous pouvez vous servir d'un focaliseur arcanique comme focaliseur d'incantation de vos sorts d'Ensorceleur.</p>"
+            "description": "<p>C'est en puisant dans votre magie innée que vous lancez vos sorts. Reportez-vous au chapitre 7 pour les @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.b2QVn25z2N1ykWpf]{règles d'incantation}. Les informations ci-après expliquent comment utiliser ces règles avec les sorts d'Ensorceleur, qui figurent dans la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.VfZ5mH2ZuyFq82Ga]{liste Sorts d'Ensorceleur}.</p><p><strong>Sorts mineurs.</strong> Vous connaissez quatre sorts mineurs d'Ensorceleur de votre choix. @UUID[Compendium.dnd5e.spells24.Item.phbsplSorcerousB]{Éruption ensorcelée}, @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{lumière}, @UUID[Compendium.dnd5e.spells24.Item.phbsplShockingGr]{poigne électrique} et @UUID[Compendium.dnd5e.spells24.Item.phbsplPrestidigi]{prestidigitation} sont recommandés. Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'un de vos sorts mineurs de cette aptitude par un autre sort mineur d'Ensorceleur de votre choix.</p><p>Lorsque vous atteignez les niveaux 4 et 10 d'Ensorceleur, vous apprenez un autre sort mineur d'Ensorceleur de votre choix, comme indiqué en colonne Sorts mineurs de la table Aptitudes de l'Ensorceleur.</p><p><strong>Emplacements de sort.</strong> La @UUID[Compendium.dnd5e.content24.JournalEntry.phbSorcerer00000.JournalEntryPage.fsqRUA4acVXH4I3O#aptitudes-de-classe]{table Aptitudes de l'Ensorceleur} vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et supérieur. Vous récupérez tous les emplacements dépensés en terminant un Repos long.</p><p><strong>Sorts préparés du 1<sup>er</sup> niveau et plus.</strong> Vous devez préparer la liste des sorts du 1<sup>er</sup> niveau et supérieur que cette aptitude vous permet de lancer. Pour commencer, choisissez deux sorts d'Ensorceleur du 1<sup>er</sup> niveau. <em>Détection de la magie</em> et <em>mains brûlantes</em> sont recommandés.</p><p>Le nombre de sorts de votre liste augmente à mesure que vous recevez des niveaux d'Ensorceleur, comme l'indique la colonne Sorts préparés de la table Aptitudes de l'Ensorceleur. Chaque fois que ce nombre augmente, choisissez des sorts d'Ensorceleur supplémentaires jusqu'à ce que le nombre de sorts de votre liste corresponde au nombre indiqué dans la table Aptitudes de l'Ensorceleur. Ces sorts doivent être d'un niveau pour lequel vous disposez d'emplacements de sort. Si, par exemple, vous êtes un Ensorceleur de niveau 3, votre liste de sorts préparés peut inclure six sorts d'Ensorceleur du 1<sup>er</sup> ou 2<sup>e</sup> niveau, répartis à votre guise.</p><p>Si une autre aptitude d'Ensorceleur vous octroie des sorts toujours préparés, ces sorts ne sont pas décomptés du nombre de sorts que vous pouvez préparer avec la présente aptitude, mais ils sont considérés pour vous comme des sorts d'Ensorceleur.</p><p><strong>Modification des sorts préparés.</strong> Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer un sort de votre liste par un autre sort d'Ensorceleur pour lequel vous disposez d'au moins un emplacement.</p><p><strong>Caractéristique d'incantation.</strong> Le Charisme est la caractéristique d'incantation de vos sorts d'Ensorceleur.</p><p><strong>Focaliseur d'incantation.</strong> Vous pouvez vous servir d'un focaliseur arcanique comme focaliseur d'incantation de vos sorts d'Ensorceleur.</p>",
+            "requirements": "Ensorceleur"
         },
         "phbwzdSpellcasti": {
             "name": "Sorts",
             "description": "<p>En tant qu'étudiant de la magie profane, vous avez appris à lancer des sorts. Reportez-vous au chapitre 7 pour les @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.b2QVn25z2N1ykWpf]{règles d'incantation}. Les informations ci-après expliquent comment utiliser ces règles avec les sorts de Magicien, qui figurent dans la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz]{liste Sorts de Magicien}.</p><p><strong>Sorts mineurs.</strong> Vous connaissez trois sorts mineurs de Magicien de votre choix. @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Lumière}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{main du mage} et @UUID[Compendium.dnd5e.spells24.Item.phbsplRayofFrost]{rayon de givre} sont recommandés. Chaque fois que vous terminez un Repos long, vous pouvez remplacer l'un de vos sorts mineurs de cette aptitude par un autre sort mineur de Magicien de votre choix.</p><p>Lorsque vous atteignez les niveaux 4 et 10 de Magicien, vous apprenez un autre sort mineur de Magicien de votre choix, comme indiqué en colonne Sorts mineurs de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbWizard0000000.JournalEntryPage.g7cMRWzsgAsEF7zC#aptitudes-de-classe]{Aptitudes du Magicien}.</p><p><strong>Grimoire.</strong> Votre apprentissage de Magicien s'est conclu par la création d'un livre unique : votre grimoire. Cet objet de taille TP pèse 1,5 kg, contient 100 pages et ne peut être lu que par vous-même ou une tierce personne lançant le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{identification}. Vous déterminez l'aspect et les matériaux employés dans la confection du grimoire : il peut s'agir d'un ouvrage doré à l'or fin comme d'un recueil de feuilles de vélin reliées par de la ficelle.</p><p>Le grimoire contient les sorts du 1<sup>er</sup> niveau et plus que vous connaissez. Il commence avec six sorts de Magicien du 1<sup>er</sup> niveau de votre choix. @UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{Armure du mage}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{détection de la magie}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFeatherFal]{feuille morte}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectile magique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{sommeil} et @UUID[Compendium.dnd5e.spells24.Item.phbsplThunderwav]{vague tonnante} sont recommandés.</p><p>Chaque fois que vous gagnez un niveau de Magicien après le premier, ajoutez deux sorts de Magicien de votre choix à votre grimoire. Chacun doit être d'un niveau pour lequel vous disposez d'emplacements de sort, comme indiqué sur la table Aptitudes du Magicien. Ces sorts sont l'aboutissement des recherches arcaniques que vous menez régulièrement.</p><p><strong>Emplacements de sort.</strong> La table Aptitudes du Magicien vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et supérieur. Vous récupérez tous les emplacements dépensés en terminant un Repos long.</p><p><strong>Sorts préparés du 1<sup>er</sup> niveau et plus.</strong> Vous devez préparer la liste des sorts du 1<sup>er</sup> niveau et supérieur que cette aptitude vous permet de lancer. À cette fin, choisissez quatre sorts de votre grimoire. Ces sorts doivent être d'un niveau pour lequel vous disposez d'emplacements de sort.</p><p>Le nombre de sorts de votre liste augmente à mesure que vous recevez des niveaux de Magicien, comme l'indique la colonne Sorts préparés de la table Aptitudes du Magicien. Chaque fois que ce nombre augmente, choisissez des sorts de Magicien supplémentaires jusqu'à ce que le nombre de sorts de votre liste corresponde au nombre indiqué dans la table. Ces sorts doivent être d'un niveau pour lequel vous disposez d'emplacements de sort. Si, par exemple, vous êtes un Magicien de niveau 3, votre liste de sorts préparés peut inclure six sorts de Magicien du 1<sup>er</sup> ou 2<sup>e</sup> niveau choisis dans votre grimoire, répartis à votre guise.</p><p>Si une autre aptitude de Magicien vous octroie des sorts toujours préparés, ces sorts ne sont pas décomptés du nombre de sorts que vous pouvez préparer avec la présente aptitude, mais ils sont considérés pour vous comme des sorts de Magicien.</p><p><strong>Modification des sorts préparés.</strong> Chaque fois que vous terminez un Repos long, vous pouvez changer votre liste de sorts préparés en remplaçant des sorts par d'autres sorts de Magicien de votre grimoire.</p><p><strong>Caractéristique d'incantation.</strong> L'Intelligence est la caractéristique d'incantation de vos sorts de Magicien.</p><p><strong>Focaliseur d'incantation.</strong> Vous pouvez vous servir d'un focaliseur arcanique ou de votre grimoire comme focaliseur d'incantation de vos sorts de Magicien.</p>"
+        },
+        "Elemental Affinity: Acid": {
+            "requirements": "Sorcellerie draconique"
+        },
+        "Elemental Affinity: Cold": {
+            "requirements": "Sorcellerie draconique"
+        },
+        "Elemental Affinity: Fire": {
+            "requirements": "Sorcellerie draconique"
+        },
+        "Elemental Affinity: Lightning": {
+            "requirements": "Sorcellerie draconique"
+        },
+        "Elemental Affinity: Poison": {
+            "requirements": "Sorcellerie draconique"
+        },
+        "Self-Restoration": {
+            "requirements": "Moine"
         }
     }
 }

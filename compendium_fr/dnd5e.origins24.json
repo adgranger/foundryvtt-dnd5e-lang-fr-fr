@@ -137,7 +137,12 @@
         "Giant Ancestry": {
             "name": "Ascendance gigante",
             "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
-            "requirements": "Goliath"
+            "requirements": "Goliath",
+            "advancement": {
+                "Giant Ancestry": {
+                    "name": "Ascendance gigante"
+                }
+            }
         },
         "Gnomish Cunning": {
             "name": "Ruse gnome",
@@ -247,7 +252,12 @@
         "Otherworldly Presence": {
             "name": "Présence d'outre-monde",
             "description": "<p>Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque ce sort vous est octroyé, il vous permet de choisir votre caractéristique d'incantation.</p></section>",
-            "requirements": "Tieffelin"
+            "requirements": "Tieffelin",
+            "advancement": {
+                "Cantrip": {
+                    "name": "Sort mineur"
+                }
+            }
         },
         "Powerful Build": {
             "name": "Forte carrure",
@@ -300,7 +310,12 @@
         "Skillful": {
             "name": "Compétent",
             "description": "<p>Vous recevez la maîtrise d'une compétence de votre choix.</p><section id=\"secret-lvP62g2xTxkz2VN3\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ce choix vous sera proposé lorsque vous sélectionnerez cette espèce.</p></section>",
-            "requirements": "Humain"
+            "requirements": "Humain",
+            "advancement": {
+                "Skillful": {
+                    "name": "Compétent"
+                }
+            }
         },
         "Soldier": {
             "name": "Soldat",
@@ -347,7 +362,188 @@
         "Versatile": {
             "name": "Polyvalent",
             "description": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{don d'origines} de votre choix. @UUID[Compendium.dnd5e.feats24.Item.phbftSkilled0000]{Doué} est recommandé.</p><section id=\"secret-9E1yve6WHohyBage\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ce choix vous sera proposé lorsque vous sélectionnerez cette espèce.</p></section>",
-            "requirements": "Humain"
+            "requirements": "Humain",
+            "advancement": {
+                "Versatile": {
+                    "name": "Polyvalent"
+                }
+            }
+        },
+        "Abyssal": {
+            "name": "Abyssal",
+            "requirements": "Tieffelin"
+        },
+        "Black Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Blue Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Brass Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Bronze Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Chthonic": {
+            "requirements": "Tieffelin"
+        },
+        "Cloud's Jaunt (Cloud Giant)": {
+            "description": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
+            "requirements": "Goliath",
+            "activities": {
+                "Cloud's Jaunt": {
+                    "name": "Saut des nuées",
+                    "target": "Espace inoccupé"
+                }
+            }
+        },
+        "Copper Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Draconic Ancestry": {
+            "name": "Ascendance draconique"
+        },
+        "Drow": {
+            "name": "Elfe drow",
+            "requirements": "Elfe",
+            "advancement": {
+                "Drow Traits": {
+                    "name": "Traits des drows"
+                }
+            }
+        },
+        "Elf": {
+            "name": "Elfe",
+            "advancement": {
+                "Elf Traits": {
+                    "name": "Traits des elfes"
+                }
+            }
+        },
+        "Elven Lineage": {
+            "requirements": "Elfe"
+        },
+        "Fiendish Legacy": {
+            "requirements": "Tieffelin"
+        },
+        "Fire's Burn (Fire Giant)": {
+            "requirements": "Goliath",
+            "activities": {
+                "Burn": {
+                    "name": "Brûlure"
+                }
+            }
+        },
+        "Forest Gnome": {
+            "requirements": "Gnome",
+            "advancement": {
+                "Cantrip": {
+                    "name": "Sort mineur"
+                },
+                "Spell": {
+                    "name": "Sort"
+                }
+            }
+        },
+        "Frost's Chill (Frost Giant)": {
+            "requirements": "Goliath",
+            "activities": {
+                "Chill": {
+                    "name": "On ne bouge plus"
+                }
+            },
+            "effects": {
+                "Chilled": {
+                    "name": "Gelé"
+                }
+            }
+        },
+        "Gnome": {
+            "name": "Gnome",
+            "advancement": {
+                "Gnome Traits": {
+                    "name": "Traits des gnomes"
+                }
+            }
+        },
+        "Gnomish Lineage": {
+            "requirements": "Gnome"
+        },
+        "Gold Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Green Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "High Elf": {
+            "name": "Haut-elfe",
+            "requirements": "Elfe",
+            "advancement": {
+                "High Elf Traits": {
+                    "name": "Traits des hauts-elfes"
+                }
+            }
+        },
+        "Hill's Tumble (Hill Giant)": {
+            "requirements": "Goliath"
+        },
+        "Infernal": {
+            "name": "Infernal",
+            "requirements": "Tieffelin"
+        },
+        "Red Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Rock Gnome": {
+            "name": "Gnome des roches",
+            "requirements": "Gnome",
+            "advancement": {
+                "Cantrips": {
+                    "name": "Sorts mineurs"
+                }
+            }
+        },
+        "Silver Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Stone's Endurance (Stone Giant)": {
+            "requirements": "Goliath",
+            "activities": {
+                "heal": {
+                    "condition": "Quand vous subissez des dégâts"
+                }
+            }
+        },
+        "Storm's Thunder (Storm Giant)": {
+            "requirements": "Goliath"
+        },
+        "Tiefling": {
+            "name": "Tieffelin",
+            "advancement": {
+                "Tiefling Traits": {
+                    "name": "Traits des tieffelins"
+                }
+            }
+        },
+        "White Dragon Ancestor": {
+            "requirements": "Drakéide"
+        },
+        "Wood Elf": {
+            "requirements": "Elfe",
+            "advancement": {
+                "Wood Elf Traits": {
+                    "name": "Traits des elfes sylvestres"
+                },
+                "FRJszO7cYchbaGzt": {
+                    "name": "Traits des elfes sylvestres",
+                    "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                },
+                "zFsEPXauTgmYxqiJ": {
+                    "name": "Traits des elfes sylvestres",
+                    "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
+                }
+            }
         }
     }
 }

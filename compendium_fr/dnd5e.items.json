@@ -3297,7 +3297,12 @@
     },
     "Potion of Poison": {
       "name": "Potion toxique",
-      "description": "<p>Cette décoction a l'apparence, l'odeur et le goût d'une potion de guérison ou d'une autre potion bénéfique. Il s'agit toutefois d'un poison masqué par quelque illusion magique. Le sort identification révèle sa vraie nature.</p><p>Si vous la buvez, vous subissez [[/damage]]{3d6 dégâts de poison} et devez réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonné}. Au début de chacun de vos tours tant que vous êtes ainsi empoisonné, vous subissez [[/damage]]{3d6 dégâts de poison}. À la fin de chacun de vos tours, vous pouvez réitérer ce jet de sauvegarde. En cas de réussite, les dégâts de poison que vous subissez lors de vos tours suivants diminuent de 1d6. Le poison prend fin lorsque les dégâts tombent à 0.</p><section class=\"secret\" id=\"secret-zrLCcwvOwukVWTvT\"><p>Pour plus de commodité, vous pouvez utiliser les enrichisseurs ([[/damage 2d6 poison]] ou [[/damage 1d6 poison]]) pour effectuer le jet de dégâts pour la réduction des dégâts.</p></section>"
+      "description": "<p>Cette décoction a l'apparence, l'odeur et le goût d'une potion de guérison ou d'une autre potion bénéfique. Il s'agit toutefois d'un poison masqué par quelque illusion magique. Le sort identification révèle sa vraie nature.</p><p>Si vous la buvez, vous subissez [[/damage]]{3d6 dégâts de poison} et devez réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonné}. Au début de chacun de vos tours tant que vous êtes ainsi empoisonné, vous subissez [[/damage]]{3d6 dégâts de poison}. À la fin de chacun de vos tours, vous pouvez réitérer ce jet de sauvegarde. En cas de réussite, les dégâts de poison que vous subissez lors de vos tours suivants diminuent de 1d6. Le poison prend fin lorsque les dégâts tombent à 0.</p><section class=\"secret\" id=\"secret-zrLCcwvOwukVWTvT\"><p>Pour plus de commodité, vous pouvez utiliser les enrichisseurs ([[/damage 2d6 poison]] ou [[/damage 1d6 poison]]) pour effectuer le jet de dégâts pour la réduction des dégâts.</p></section>",
+      "effects": {
+        "Poisoned": {
+          "name": "Empoisonné"
+        }
+      }
     },
     "Potion of Poison Resistance": {
       "name": "Potion de résistance au poison",
@@ -5174,6 +5179,78 @@
     "kj5DNiBKasYWyuj6": {
       "name": "Accessoires de déguisement",
       "description": "<p>Cette pochette de maquillage, de teintures et d'accessoires vous permet d'altérer votre apparence physique. La maîtrise de ces accessoires vous permet d'ajouter votre bonus de maîtrise à tout test de caractéristique visant à créer un déguisement visuel.</p>"
+    },
+    "Assassin's Blood": {
+      "name": "Sang d'assassin",
+      "effects": {
+        "Poisoned": {
+          "name": "Empoisonné"
+        }
+      }
+    },
+    "Burnt Othur Fumes": {
+      "name": "Fumées d'othur"
+    },
+    "Crawler Mucus": {
+      "name": "Mucus de rampant",
+      "effects": {
+        "Poisoned & Paralyzed": {
+          "name": "Empoisonné et Paralysé"
+        }
+      }
+    },
+    "Drow Poison": {
+      "name": "Poison de l'elfe drow",
+      "effects": {
+        "Poisoned": {
+          "name": "Empoisonné"
+        },
+        "Poisoned & Unconscious": {
+          "name": "Empoisonné et Inconscient"
+        }
+      }
+    },
+    "Essence of Ether": {
+      "name": "Essence éthérée",
+      "effects": {
+        "Poisoned & Unconscious": {
+          "name": "Empoisonné et Inconscient"
+        }
+      }
+    },
+    "Malice": {
+      "name": "Malice"
+    },
+    "Midnight Tears": {
+      "name": "Larmes de minuit"
+    },
+    "Oil of Taggit": {
+      "name": "Huile de taggit",
+      "effects": {
+        "Poisoned & Unconscious": {
+          "name": "Empoisonné et Inconscient"
+        }
+      }
+    },
+    "Pale Tincture": {
+      "name": "Teinture pâle",
+      "effects": {
+        "Poisoned": {
+          "name": "Empoisonné"
+        }
+      }
+    },
+    "Purple Worm Poison": {
+      "name": "Poison de ver pourpre"
+    },
+    "Serpent Venom": {
+      "name": "Venin de serpent"
+    },
+    "Torpor": {
+      "name": "Torpeur"
+    },
+    "Wyvern Poison": {
+      "name": "Poison de vouivre"
     }
   }
 }
