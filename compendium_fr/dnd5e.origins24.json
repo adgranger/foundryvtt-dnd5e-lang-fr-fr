@@ -39,7 +39,7 @@
         },
         "Adrenaline Rush": {
             "name": "Poussée d'adrénaline",
-            "description": "<p>Vous pouvez entreprendre l'action Pointe par une action Bonus. Quand vous faites ainsi, vous recevez un nombre de points de vie temporaires égal à votre bonus de maîtrise.</p><p>Vous pouvez recourir à ce trait autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos court ou long.</p>",
+            "description": "<p>Vous pouvez entreprendre l'action &Reference[Dash]{Pointe} par une action Bonus. Quand vous faites ainsi, vous recevez un nombre de points de vie temporaires égal à votre bonus de maîtrise.</p><p>Vous pouvez recourir à ce trait autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos court ou long.</p>",
             "requirements": "Orc",
             "activities": {
                 "Adrenaline Rush: Dash": {
@@ -49,13 +49,21 @@
         },
         "Brave": {
             "name": "Brave",
-            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde visant à éviter l'état &Reference[Frightened] ou à y mettre fin.</p>",
+            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde visant à éviter l'état &Reference[Frightened apply=false] ou à y mettre fin.</p>",
             "requirements": "Halfelin"
         },
         "Breath Weapon": {
             "name": "Souffle",
-            "description": "<p>Lorsque vous entreprenez l'action Attaque à votre tour, vous pouvez remplacer l'une de vos attaques par une expiration d'énergie magique sous la forme d'un Cône de 4,50 m ou d'une Ligne de 9 m de long et 1,50 m de large (choisissez la forme à chaque fois). Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité (DD 8 + votre modificateur de Constitution + votre bonus de maîtrise). En cas d'échec, la créature subit 1d10 dégâts du type déterminé par votre trait Ascendance draconique. En cas de réussite, elle ne subit que la moitié de ces dégâts. Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux de personnage 5 (2d10), 11 (3d10) et 17 (4d10).</p><p>Vous pouvez recourir à ce Souffle autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p><section class=\"secret\" id=\"secret-iuhfGfxgl8GeYWBf\"><p><strong>Note Foundry</strong></p><p>Les activités <strong>Souffle (Cône)</strong> et <strong>Souffle (Ligne)</strong> sont toutes deux configurées pour leur type de gabarit et incluent chaque type de dégâts. Les dégâts évoluent également en fonction du niveau.</p><p>Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet de dégâts. L'activité se souviendra ensuite de votre choix sur le type de dégâts. Vous pouvez éditer les activités pour supprimer les autres types de dégâts afin d'éviter cela.</p></section>",
-            "requirements": "Drakéide"
+            "description": "<p>Lorsque vous entreprenez l'action Attaque à votre tour, vous pouvez remplacer l'une de vos attaques par une expiration d'énergie magique sous la forme d'un Cône de 4,50 m ou d'une Ligne de 9 m de long et 1,50 m de large (choisissez la forme à chaque fois).</p><p>Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité (DD 8 + votre modificateur de Constitution + votre bonus de maîtrise). En cas d'échec, la créature subit 1d10 dégâts du type déterminé par votre trait Ascendance draconique. En cas de réussite, elle ne subit que la moitié de ces dégâts.</p><p>Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux de personnage 5 (2d10), 11 (3d10) et 17 (4d10).</p><p>Vous pouvez recourir à ce Souffle autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p>",
+            "requirements": "Drakéide",
+            "activities": {
+                "Exhale Cone": {
+                    "name": "Expirer un cône"
+                },
+                "Exhale Line": {
+                    "name": "Expirer une ligne"
+                }
+            }
         },
         "Criminal": {
             "name": "Criminel",
@@ -81,7 +89,7 @@
         },
         "Draconic Flight": {
             "name": "Vol draconique",
-            "description": "<p>Lorsque vous atteignez le niveau de personnage 5, vous pouvez canaliser la magie draconique pour vous octroyer le vol de façon temporaire. Par une action Bonus, il vous pousse des ailes spectrales dans le dos qui persistent 10 minutes ou jusqu'à ce que vous rétractiez ces ailes (pas d'action requise) ou subissiez l'état Neutralisé. Pour toute la durée, vous disposez d'une Vitesse de vol égale à votre Vitesse. Vos ailes semblent être faites de la même énergie que votre souffle. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-pP4PH5jVYBp1OEa3\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif pour le suivi, mais elle n'accorde pas automatiquement la vitesse de vol.</p></section>",
+            "description": "<p>Lorsque vous atteignez le niveau de personnage 5, vous pouvez canaliser la magie draconique pour vous octroyer le vol de façon temporaire. Par une action Bonus, il vous pousse des ailes spectrales dans le dos qui persistent 10 minutes ou jusqu'à ce que vous rétractiez ces ailes (pas d'action requise) ou subissiez l'état Neutralisé. Pour toute la durée, vous disposez d'une Vitesse de vol égale à votre Vitesse. Vos ailes semblent être faites de la même énergie que votre souffle. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
             "activities": {
                 "Draconic Flight": {
                     "name": "Vol draconique"
@@ -95,16 +103,19 @@
         },
         "Dragonborn": {
             "name": "Drakéide",
-            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspDragonborn0 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"dragonborn-traits\">Traits des drakéides</h3><p><strong>Type de créature : </strong>Humanoïde</p><p><strong>Catégorie de taille : </strong>M (moyenne, entre 1,50 m et 2,15 m)</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que drakéide, vous disposez des traits spéciaux suivants.</p><p><strong>Ascendance draconique.</strong> Votre lignée remonte à un géniteur dragon. Choisissez le type de dragon dans la table Ancêtres draconiques. Ce choix affecte vos traits Souffle et Résistance aux dégâts, ainsi que votre apparence.</p><table><caption>Ancêtres draconiques</caption><thead><tr><td>Dragon</td><td>Type de dégâts</td><td>Dragon</td><td>Type de dégâts</td></tr></thead><tbody><tr><td>Airain</td><td>Feu</td><td>Cuivre</td><td>Acide</td></tr><tr><td>Argent</td><td>Froid</td><td>Noir</td><td>Acide</td></tr><tr><td>Blanc</td><td>Froid</td><td>Or</td><td>Feu</td></tr><tr><td>Bleu</td><td>Foudre</td><td>Rouge</td><td>Feu</td></tr><tr><td>Bronze</td><td>Foudre</td><td>Vert</td><td>Poison</td></tr></tbody></table><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance au type de dégâts déterminé par votre trait Ascendance draconique.</p><p><strong>Souffle.</strong> Lorsque vous entreprenez l'action Attaque à votre tour, vous pouvez remplacer l'une de vos attaques par une expiration d'énergie magique sous la forme d'un Cône de 4,50 m ou d'une Ligne de 9 m de long et 1,50 m de large (choisissez la forme à chaque fois). Chaque créature prise dans la zone effectue un jet de sauvegarde de Dextérité (DD 8 + votre modificateur de Constitution + votre bonus de maîtrise). En cas d'échec, la créature subit 1d10 dégâts du type déterminé par votre trait Ascendance draconique. En cas de réussite, elle ne subit que la moitié de ces dégâts. Les dégâts augmentent de 1d10 lorsque vous atteignez les niveaux de personnage 5 (2d10), 11 (3d10) et 17 (4d10).</p><p>Vous pouvez recourir à ce Souffle autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 18 m.</p><p><strong>Vol draconique.</strong> Lorsque vous atteignez le niveau de personnage 5, vous pouvez canaliser la magie draconique pour vous octroyer le vol de façon temporaire. Par une action Bonus, il vous pousse des ailes spectrales dans le dos qui persistent 10 minutes ou jusqu'à ce que vous rétractiez ces ailes (pas d'action requise) ou subissiez l'état Neutralisé. Pour toute la durée, vous disposez d'une Vitesse de vol égale à votre Vitesse. Vos ailes semblent être faites de la même énergie que votre souffle. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
+            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspDragonborn0 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"dragonborn-traits\">Traits des drakéides</h3><p><strong>Type de créature :</strong> Humanoïde<br><strong>Catégorie de taille :</strong> M (moyenne, entre 1,50 m et 2,15 m)<br><strong>Vitesse :</strong> 9 m</p><p>En tant que drakéide, vous disposez des traits spéciaux suivants.</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptDraconiAnc caption=false cite=false nameStyle=inline]</p><p><em><strong>Résistance aux dégâts.</strong></em> Vous bénéficiez de la &Reference[Resistance] au type de dégâts déterminé par votre trait Ascendance draconique.</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptBreathWeap caption=false cite=false nameStyle=inline]</p><p><em><strong>Vision dans le noir.</strong></em> Vous disposez de la &Reference[Darkvision] sur 18 m.</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptDraconicFl caption=false cite=false nameStyle=inline]</p>",
             "advancement": {
                 "65BqBxGcj6z4S803": {
                     "hint": "M (moyenne, entre 1,50 m et 2,15 m)"
+                },
+                "Dragonborn Traits": {
+                    "name": "Traits Drakéide"
                 }
             }
         },
         "Dwarf": {
             "name": "Nain",
-            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspDwarf000000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"dwarf-traits\">Traits des nains</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 1,50 m)</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que nain, vous disposez des traits spéciaux suivants.</p><p><strong>Connaissance de la pierre.</strong> Par une action Bonus, vous recevez la Perception des vibrations à 18 m pendant 10 minutes. Cette Perception des vibrations nécessite que vous soyez sur une surface en pierre ou en contact physique avec une telle surface. Cette pierre peut être naturelle ou façonnée.</p><p>Vous pouvez recourir à cette action Bonus autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p><p><strong>Résistance naine.</strong> Vous bénéficiez de la Résistance aux dégâts de poison. Vous avez en outre l'Avantage aux jets de sauvegarde visant à éviter l'état Empoisonné ou à y mettre un terme sur vous-même.</p><p><strong>Ténacité naine.</strong> Votre maximum de points de vie augmente de 1, et augmente encore de 1 chaque fois que vous gagnez un niveau.</p><p><strong>Vision dans le noir. </strong>Vous disposez de la Vision dans le noir sur 36 m.</p>",
+            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspDwarf000000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"dwarf-traits\">Traits des nains</h3><p><strong>Type de créature :</strong> Humanoïde<br><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 1,50 m)<br><strong>Vitesse :</strong> 9 m</p><p>En tant que nain, vous disposez des traits spéciaux suivants.</p><div class=\"hide-secrets\"><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptStonecunni caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptDwarvenRes caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptDwarvenTou caption=false cite=false nameStyle=inline]</p><p><em><strong>Vision dans le noir.</strong></em> Vous disposez de la &Reference[Darkvision] sur 36 m.</p></div>",
             "advancement": {
                 "6HdONjMD4UozXSfC": {
                     "hint": "M (moyenne, entre 1,20 m et 1,50 m)"
@@ -116,12 +127,17 @@
         },
         "Dwarven Resilience": {
             "name": "Résistance naine",
-            "description": "<p>Vous bénéficiez de la Résistance aux dégâts de poison. Vous avez en outre l'Avantage aux jets de sauvegarde visant à éviter l'état Empoisonné ou à y mettre un terme sur vous-même.</p><section id=\"secret-EDaMIgklKLK2il2D\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous obtenez automatiquement la Résistance aux dégâts de poison, mais pas d'Avantage aux jets de sauvegarde pour éviter ou mettre fin à l'état Empoisonné.</p></section>",
-            "requirements": "Nain"
+            "description": "<p>Vous bénéficiez de la &Reference[Resistance] aux dégâts de poison. Vous avez en outre l'Avantage aux jets de sauvegarde visant à éviter l'état &Reference[Poisoned apply=false] ou à y mettre un terme sur vous-même.</p><section id=\"secret-EDaMIgklKLK2il2D\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous obtenez automatiquement la Résistance aux dégâts de poison, mais pas d'Avantage aux jets de sauvegarde pour éviter ou mettre fin à l'état Empoisonné.</p></section>",
+            "requirements": "Nain",
+            "advancement": {
+                "S3kro3b0bq0Ks6Y8": {
+                    "hint": "<p>Vous bénéficiez de la Résistance aux dégâts de poison.</p>"
+                }
+            }
         },
         "Dwarven Toughness": {
             "name": "Ténacité naine",
-            "description": "<p>Votre maximum de points de vie augmente de 1, et augmente encore de 1 chaque fois que vous gagnez un niveau.</p><section class=\"secret\" id=\"secret-FK9DFLudP5EzEss9\"><p><strong>Note Foundry</strong></p><p>L'augmentation maximale des points de vie est gérée automatiquement à chaque niveau.</p></section>",
+            "description": "<p>Votre maximum de points de vie augmente de 1, et augmente encore de 1 chaque fois que vous gagnez un niveau.</p>",
             "requirements": "Nain",
             "effects": {
                 "Dwarven Toughness": {
@@ -131,12 +147,12 @@
         },
         "Fey Ancestry": {
             "name": "Ascendance féerique",
-            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde visant à éviter l'état &Reference[Charmed] ou à y mettre un terme.</p>",
+            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde visant à éviter l'état &Reference[Charmed apply=false] ou à y mettre un terme.</p>",
             "requirements": "Elfe"
         },
         "Giant Ancestry": {
             "name": "Ascendance gigante",
-            "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+            "description": "<p>Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptFiresBurn0 caption=false cite=false classes=\"subfeature\" nameStyle=inline]{Brûlure ignée (géants du feu)}</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptStonesEndu caption=false cite=false classes=\"subfeature\" nameStyle=inline]{Endurance de la pierre (géants des pierres)}</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptFrostsChil caption=false cite=false classes=\"subfeature\" nameStyle=inline]{Froid mordant (géants du givre)}</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptHillsTumbl caption=false cite=false classes=\"subfeature\" nameStyle=inline]{Renversement des coteaux (géants des collines)}</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptCloudsJaun caption=false cite=false classes=\"subfeature\" nameStyle=inline]{Saut des nuées (géants des nuages)}</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptStormsThun caption=false cite=false classes=\"subfeature\" nameStyle=inline]{Tonnerre des cieux (géants des tempêtes)}</p>",
             "requirements": "Goliath",
             "advancement": {
                 "Giant Ancestry": {
@@ -157,7 +173,7 @@
         },
         "Goliath": {
             "name": "Goliath",
-            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspGoliath0000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"goliath-traits\">Traits des goliaths</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 2,15 m et 2,45 m)</p><p><strong>Vitesse :</strong> 10,50 m</p><p>En tant que goliath, vous disposez des traits spéciaux suivants.</p><p><strong>Ascendance gigante.</strong> Vous êtes un lointain descendant des géants. Choisissez l'un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :</p><p><strong>Brûlure ignée (géants du feu).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p><p><strong>Endurance de la pierre (géants des pierres).</strong> Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p><p><strong>Froid mordant (géants du givre).</strong> Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p><p><strong>Renversement des coteaux (géants des collines).</strong> Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p><p><strong>Saut des nuées (géants des nuages).</strong> Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p><p><strong>Tonnerre des cieux (géants des tempêtes).</strong> Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p><p><strong>Forme de géant.</strong> À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Forte carrure.</strong> Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
+            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspGoliath0000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"goliath-traits\">Traits des goliaths</h3><p><strong>Type de créature :</strong> Humanoïde<br><strong>Catégorie de taille :</strong> M (moyenne, entre 2,15 m et 2,45 m)<br><strong>Vitesse :</strong> 10,50 m</p><p>En tant que goliath, vous disposez des traits spéciaux suivants.</p><div class=\"hide-secrets\"><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptGiantAnces caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptLargeForm0 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptPowerfulBu caption=false cite=false nameStyle=inline]</p></div>",
             "advancement": {
                 "LETPMtBLvmzWUUb0": {
                     "hint": "M (moyenne, entre 2,15 m et 2,45 m)"
@@ -169,7 +185,7 @@
         },
         "Halfling": {
             "name": "Halfelin",
-            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspHalfling000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"halfling-traits\">Traits des halfelins</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> P (petite, entre 60 cm et 90 cm)</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant que halfelin, vous disposez des traits spéciaux suivants.</p><p><strong>Agilité halfeline.</strong> Vous pouvez vous déplacer dans l'espace de toute créature d'une catégorie de taille supérieure à la vôtre, mais ne pouvez pas vous arrêter dans le même espace que celle-ci.</p><p><strong>Brave.</strong> Vous avez l'Avantage aux jets de sauvegarde visant à éviter l'état Effrayé ou à y mettre un terme.</p><p><strong>Chance.</strong> Lorsque vous obtenez un 1 au d20 d'un Test d20, vous pouvez relancer le dé, mais devez utiliser le nouveau résultat.</p><p><strong>Discrétion naturelle.</strong> Il vous suffit d'être dans l'ombre d'une créature dont la catégorie de taille est d'au moins un cran supérieure à la vôtre pour pouvoir entreprendre l'action Furtivité.</p>",
+            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspHalfling000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"halfling-traits\">Traits des halfelins</h3><p><strong>Type de créature :</strong> Humanoïde<br><strong>Catégorie de taille :</strong> P (petite, entre 60 cm et 90 cm)<br><strong>Vitesse :</strong> 9 m</p><p>En tant que halfelin, vous disposez des traits spéciaux suivants.</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptHalflingNi caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptBrave00000 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptLuck000000 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptNaturallyS caption=false cite=false nameStyle=inline]</p>",
             "advancement": {
                 "GYp1vi82hSEoe3mO": {
                     "hint": "P (petite, entre 60 cm et 90 cm)"
@@ -191,10 +207,10 @@
         },
         "Human": {
             "name": "Humain",
-            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspHuman000000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"human-traits\">Traits des humains</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 60 cm à 1,20 m), à choisir lors de la sélection de l'espèce</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant qu'humain, vous disposez des traits spéciaux suivants.</p><p><strong>Compétent.</strong> Vous recevez la maîtrise d'une compétence de votre choix.</p><p><strong>Ingénieux.</strong> Vous recevez l'Inspiration héroïque chaque fois que vous terminez un Repos long.</p><p><strong>Polyvalent.</strong> Vous recevez le don d'origines de votre choix (cf. chapitre 5). Doué est recommandé.</p>",
+            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspHuman000000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"human-traits\">Traits des humains</h3><p><strong>Type de créature :</strong> Humanoïde<br><strong>Catégorie de taille :</strong> M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, de 60 cm à 1,20 m), à choisir lors de la sélection de l'espèce<br><strong>Vitesse :</strong> 9 m</p><p>En tant qu'humain, vous disposez des traits spéciaux suivants.</p><div class=\"hide-secrets\"><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptSkillful00 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptResourcefu caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptVersatile0 caption=false cite=false nameStyle=inline]</p></div>",
             "advancement": {
                 "dLxv96vt2B2KOEe2": {
-                    "hint": "M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, entre 60 cm et 1,20 m), à choisir lors de la sélection de cette espèce"
+                    "hint": "<p>M (moyenne, entre 1,20 m et 2,15 m) ou P (petite, entre 60 cm et 1,20 m), à choisir lors de la sélection de cette espèce</p>"
                 },
                 "Human Traits": {
                     "name": "Traits des humains"
@@ -203,12 +219,12 @@
         },
         "Keen Senses": {
             "name": "Sens aiguisés",
-            "description": "<p>Vous bénéficiez de la maîtrise de la compétence Intuition, Perception ou Survie au choix.</p><section id=\"secret-Tecxufp7EFDVqTEY\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire votre choix après avoir sélectionné cette espèce.</p></section>",
+            "description": "<p>Vous bénéficiez de la maîtrise de la compétence Intuition, Perception ou Survie au choix.</p>",
             "requirements": "Elfe"
         },
         "Large Form": {
             "name": "Forme de géant",
-            "description": "<p>À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section class=\"secret\" id=\"secret-MnS2QCGjgh6nXxEa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise l'augmentation de votre Vitesse et l'Avantage aux tests de Force.</p></section>",
+            "description": "<p>À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l'espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu'à ce que vous y mettiez un terme (pas d'action requise). Pour toute la durée, vous avez l'Avantage aux tests de Force et votre &Reference[Speed] augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
             "requirements": "Goliath",
             "activities": {
                 "Enlarge": {
@@ -224,7 +240,7 @@
         },
         "Luck": {
             "name": "Chance",
-            "description": "<p>Lorsque vous obtenez un 1 au d20 d'un Test d20, vous pouvez relancer le dé, mais devez utiliser le nouveau résultat.</p>",
+            "description": "<p>Lorsque vous obtenez un 1 au d20 d'un &Reference[D20 Test], vous pouvez relancer le dé, mais devez utiliser le nouveau résultat.</p>",
             "requirements": "Halfelin",
             "effects": {
                 "Luck": {
@@ -239,10 +255,10 @@
         },
         "Orc": {
             "name": "Orc",
-            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspOrc00000000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"orc-traits\">Traits des orcs</h3><p><strong>Type de créature :</strong> Humanoïde</p><p><strong>Catégorie de taille :</strong> M (moyenne, entre 1,80 m et 2,15 m)</p><p><strong>Vitesse :</strong> 9 m</p><p>En tant qu'orc, vous disposez des traits spéciaux suivants.</p><p><strong>Acharnement.</strong> Si vous tombez à 0 point de vie sans être tué sur le coup, vous pouvez en fait vous retrouver à 1 point de vie. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><p><strong>Poussée d'adrénaline.</strong> Vous pouvez entreprendre l'action Pointe par une action Bonus. Quand vous faites ainsi, vous recevez un nombre de points de vie temporaires égal à votre bonus de maîtrise.</p><p>Vous pouvez recourir à ce trait autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos court ou long.</p><p><strong>Vision dans le noir.</strong> Vous disposez de la Vision dans le noir sur 36 m.</p>",
+            "description": "<p>@Embed[Compendium.dnd5e.content24.JournalEntry.phbAppendixSpeci.JournalEntryPage.phbspOrc00000000 inline classes=\"free-rules-embed\"]</p><h3 data-anchor=\"orc-traits\">Traits des orcs</h3><p><strong>Type de créature :</strong> Humanoïde<br><strong>Catégorie de taille :</strong> M (moyenne, entre 1,80 m et 2,15 m)<br><strong>Vitesse :</strong> 9 m</p><p>En tant qu'orc, vous disposez des traits spéciaux suivants.</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptRelentless caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.origins24.Item.phbsptAdrenaline caption=false cite=false nameStyle=inline]</p><p><em><strong>Vision dans le noir.</strong></em> Vous disposez de la &Reference[Darkvision] sur 36 m.</p>",
             "advancement": {
                 "B2sUOuY0KhoULqlX": {
-                    "hint": "M (moyenne, entre 1,80 m et 2,15 m)"
+                    "hint": "<p>M (moyenne, entre 1,80 m et 2,15 m)</p>"
                 },
                 "Orc Traits": {
                     "name": "Traits des orcs"
@@ -251,7 +267,7 @@
         },
         "Otherworldly Presence": {
             "name": "Présence d'outre-monde",
-            "description": "<p>Vous connaissez le sort mineur @UUID[Compendium.dnd5e.spells24.Item.phbsplThaumaturg]{thaumaturgie}. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p><section id=\"secret-i3PjM9HLuO2Xcae7\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque ce sort vous est octroyé, il vous permet de choisir votre caractéristique d'incantation.</p></section>",
+            "description": "<p>Vous connaissez le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplThaumaturg]{thaumaturgie}</em>. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d'incantation que celle du trait Héritage fiélon.</p>",
             "requirements": "Tieffelin",
             "advancement": {
                 "Cantrip": {
@@ -261,7 +277,7 @@
         },
         "Powerful Build": {
             "name": "Forte carrure",
-            "description": "<p>Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état &Reference[Grappled apply=false]. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p><section class=\"secret\" id=\"secret-7qaTRjmRe4PD41G3\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui augmente automatiquement votre taille lors de la détermination de la capacité de charge.</p></section>",
+            "description": "<p>Vous avez l'Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l'état &Reference[Grappled apply=false]. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.</p>",
             "requirements": "Goliath",
             "effects": {
                 "Powerful Build": {
@@ -282,7 +298,7 @@
         },
         "Resourceful": {
             "name": "Ingénieux",
-            "description": "<p>Vous recevez l'Inspiration héroïque chaque fois que vous terminez un Repos long.</p>",
+            "description": "<p>Vous recevez l'@UUID[Compendium.dnd5e.content24.JournalEntry.phbAppendixCRule.JournalEntryPage.AQ1oTG7jHy5kZuN9]{Inspiration héroïque} chaque fois que vous terminez un Repos long.</p><section id=\"secret-76Fxj5ArEsAJk2ZO\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'utilisation de cette aptitude ne confère pas automatiquement l'Inspiration héroïque.</p></section>",
             "requirements": "Humain"
         },
         "Sage": {
@@ -309,7 +325,7 @@
         },
         "Skillful": {
             "name": "Compétent",
-            "description": "<p>Vous recevez la maîtrise d'une compétence de votre choix.</p><section id=\"secret-lvP62g2xTxkz2VN3\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ce choix vous sera proposé lorsque vous sélectionnerez cette espèce.</p></section>",
+            "description": "<p>Vous recevez la maîtrise d'une compétence de votre choix.</p>",
             "requirements": "Humain",
             "advancement": {
                 "Skillful": {
@@ -341,7 +357,7 @@
         },
         "Stonecunning": {
             "name": "Connaissance de la pierre",
-            "description": "<p>Par une action Bonus, vous recevez la &Reference[Tremorsense] à 18 m pendant 10 minutes. Cette Perception des vibrations nécessite que vous soyez sur une surface en pierre ou en contact physique avec une telle surface. Cette pierre peut être naturelle ou façonnée.</p><p>Vous pouvez recourir à cette action Bonus autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p><section class=\"secret\" id=\"secret-7BtT80083mC3Eavg\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend les utilisations limitées et un effet actif qui vous accorde les 18 m de la Perception des vibrations. Elle ne met pas automatiquement à jour les paramètres de vision de votre token.</p></section>",
+            "description": "<p>Par une action Bonus, vous recevez la &Reference[Tremorsense] à 18 m pendant 10 minutes. Cette Perception des vibrations nécessite que vous soyez sur une surface en pierre ou en contact physique avec une telle surface. Cette pierre peut être naturelle ou façonnée.</p><p>Vous pouvez recourir à cette action Bonus autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long.</p>",
             "requirements": "Nain",
             "activities": {
                 "Stonecunning": {
@@ -361,7 +377,7 @@
         },
         "Versatile": {
             "name": "Polyvalent",
-            "description": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{don d'origines} de votre choix. @UUID[Compendium.dnd5e.feats24.Item.phbftSkilled0000]{Doué} est recommandé.</p><section id=\"secret-9E1yve6WHohyBage\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ce choix vous sera proposé lorsque vous sélectionnerez cette espèce.</p></section>",
+            "description": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{don d'origines} de votre choix. @UUID[Compendium.dnd-players-handbook.feats.Item.phbftSkilled0000]{Doué} est recommandé.</p>",
             "requirements": "Humain",
             "advancement": {
                 "Versatile": {
@@ -371,22 +387,45 @@
         },
         "Abyssal": {
             "name": "Abyssal",
-            "requirements": "Tieffelin"
+            "requirements": "Tieffelin",
+            "description": "<table><caption><p>Traits d'Héritage Abyssal</p></caption><thead><tr><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>Vous bénéficiez de la &Reference[Resistance] aux dégâts de poison. Vous connaissez en outre le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPoisonSpra]{bouffée de poison}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]{rayon empoisonné}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]{immobilisation de personne}</em></p></td></tr></tbody></table>",
+            "advancement": {
+                "V8h8fLg4XG1QGewy": {
+                    "hint": "<p>Vous bénéficiez de la Résistance aux dégâts de poison.</p>"
+                },
+                "Abyssal Traits": {
+                    "name": "Traits Abyssal"
+                }
+            }
         },
         "Black Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique noir"
         },
         "Blue Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique bleu"
         },
         "Brass Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique d'airain"
         },
         "Bronze Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique de bronze"
         },
         "Chthonic": {
-            "requirements": "Tieffelin"
+            "requirements": "Tieffelin",
+            "name": "Chtonien",
+            "description": "<table><caption><p>Traits d'Héritage Chtonien</p></caption><thead><tr><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>Vous bénéficiez de la &Reference[Resistance] aux dégâts nécrotiques. Vous connaissez en outre le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplChillTouch]{contact glacial}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFalseLife0]{simulacre de vie}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofEnfee]{rayon affaiblissant}</em></p></td></tr></tbody></table>",
+            "advancement": {
+                "O6M9VGAwHx9Kkfhj": {
+                    "hint": "<p>Vous bénéficiez de la Résistance aux dégâts nécrotiques.</p>"
+                },
+                "Chthonic Traits": {
+                    "name": "Traits Chtonien"
+                }
+            }
         },
         "Cloud's Jaunt (Cloud Giant)": {
             "description": "<p>Par une action Bonus, vous pouvez vous téléporter magiquement d'un maximum de 9 m dans un espace inoccupé que vous voyez.</p>",
@@ -396,20 +435,36 @@
                     "name": "Saut des nuées",
                     "target": "Espace inoccupé"
                 }
-            }
+            },
+            "name": "Saut des nuées (géants des nuages)"
         },
         "Copper Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique de cuivre"
         },
         "Draconic Ancestry": {
-            "name": "Ascendance draconique"
+            "name": "Ascendance draconique",
+            "description": "<p>Votre lignée remonte à un géniteur dragon. Choisissez le type de dragon dans la table « Ancêtres draconiques ». Ce choix affecte vos traits Souffle et Résistance aux dégâts, ainsi que votre apparence.</p><table><caption><p>Ancêtres draconiques</p></caption><thead><tr><th><p>Dragon</p></th><th><p>Type de dégâts</p></th><th><p>Dragon</p></th><th><p>Type de dégâts</p></th></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncBras]{Airain}</p></td><td><p>Feu</p></td><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncCopp]{Cuivre}</p></td><td><p>Acide</p></td></tr><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncSilv]{Argent}</p></td><td><p>Froid</p></td><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncBlac]{Noir}</p></td><td><p>Acide</p></td></tr><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncWhit]{Blanc}</p></td><td><p>Froid</p></td><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncGold]{Or}</p></td><td><p>Feu</p></td></tr><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncBlue]{Bleu}</p></td><td><p>Foudre</p></td><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncRed0]{Rouge}</p></td><td><p>Feu</p></td></tr><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncBron]{Bronze}</p></td><td><p>Foudre</p></td><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptDrgAncGree]{Vert}</p></td><td><p>Poison</p></td></tr></tbody></table>",
+            "advancement": {
+                "Choose Ancestry": {
+                    "hint": "<p>Votre lignée remonte à un géniteur dragon. Choisissez le type de dragon dans la table « Ancêtres draconiques ». Ce choix affecte vos traits Souffle et Résistance aux dégâts, ainsi que votre apparence.</p>",
+                    "name": "Choisir l'ascendance"
+                }
+            }
         },
         "Drow": {
-            "name": "Elfe drow",
+            "name": "Drow",
             "requirements": "Elfe",
             "advancement": {
                 "Drow Traits": {
-                    "name": "Traits des drows"
+                    "name": "Traits Drow"
+                }
+            },
+            "description": "<table><caption><p>Aptitudes de lignage Drow</p></caption><thead><tr><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>La portée de votre &Reference[Darkvision] passe à 36 m. Vous connaissez également le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDancingLig]{lumières dansantes}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFaerieFire]{lueurs féeriques}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{ténèbres}</em></p></td></tr></tbody></table>",
+            "effects": {
+                "Drow Lineage": {
+                    "name": "Lignage Drow",
+                    "description": "<p>La portée de votre &Reference[Darkvision] passe à 36 m.</p>"
                 }
             }
         },
@@ -425,15 +480,26 @@
             "requirements": "Elfe"
         },
         "Fiendish Legacy": {
-            "requirements": "Tieffelin"
+            "requirements": "Tieffelin",
+            "name": "Héritage fiélon",
+            "description": "<p>Votre héritage vous octroie des aptitudes surnaturelles. Choisissez un héritage dans la table Héritages fiélons. Vous recevez le bénéfice de niveau 1 de l'héritage choisi.</p><p>Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat.</p><p>L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l'héritage).</p><table><caption><p>Héritages fiélons</p></caption><thead><tr><td><p>Héritage</p></td><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptAbyssalLeg]{Abyssal}</p></td><td><p>Vous bénéficiez de la &Reference[Resistance] aux dégâts de poison. Vous connaissez en outre le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPoisonSpra]{bouffée de poison}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofSickn]{rayon empoisonné}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHoldPerson]{immobilisation de personne}</em></p></td></tr><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptChthonicLe]{Chtonien}</p></td><td><p>Vous bénéficiez de la &Reference[Resistance] aux dégâts nécrotiques. Vous connaissez en outre le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplChillTouch]{contact glacial}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFalseLife0]{simulacre de vie}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplRayofEnfee]{rayon affaiblissant}</em></p></td></tr><tr><td><p>@UUID[Compendium.dnd5e.origins24.Item.phbsptInfernalLe]{Infernal}</p></td><td><p>Vous bénéficiez de la &Reference[Resistance] aux dégâts de feu. Vous connaissez en outre le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireBolt00]{trait de feu}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHellishReb]{représailles infernales}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{ténèbres}</em></p></td></tr></tbody></table>",
+            "advancement": {
+                "Choose Legacy": {
+                    "name": "Choisir l'héritage",
+                    "hint": "<p>Votre héritage vous octroie des aptitudes surnaturelles. Choisissez un héritage dans la table Héritages fiélons.</p>"
+                }
+            }
         },
         "Fire's Burn (Fire Giant)": {
             "requirements": "Goliath",
             "activities": {
                 "Burn": {
-                    "name": "Brûlure"
+                    "name": "Brûlure",
+                    "condition": "Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts"
                 }
-            }
+            },
+            "name": "Brûlure ignée (géants du feu)",
+            "description": "<p>Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible.</p>"
         },
         "Forest Gnome": {
             "requirements": "Gnome",
@@ -450,14 +516,17 @@
             "requirements": "Goliath",
             "activities": {
                 "Chill": {
-                    "name": "On ne bouge plus"
+                    "name": "On ne bouge plus",
+                    "condition": "Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts"
                 }
             },
             "effects": {
                 "Chilled": {
                     "name": "Gelé"
                 }
-            }
+            },
+            "name": "Froid mordant (géants du givre)",
+            "description": "<p>Lorsque vous touchez une cible avec un jet d'attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa Vitesse de 3 m jusqu'au début de votre tour suivant.</p>"
         },
         "Gnome": {
             "name": "Gnome",
@@ -471,10 +540,12 @@
             "requirements": "Gnome"
         },
         "Gold Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique d'or"
         },
         "Green Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique vert"
         },
         "High Elf": {
             "name": "Haut-elfe",
@@ -483,17 +554,36 @@
                 "High Elf Traits": {
                     "name": "Traits des hauts-elfes"
                 }
-            }
+            },
+            "description": "<table><caption><p>Aptitudes de lignage Haut-elfe</p></caption><thead><tr><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>Vous connaissez le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPrestidigi]{prestidigitation}</em>. Chaque fois que vous terminez un Repos long, vous pouvez remplacer ce sort mineur par un autre sort mineur de la liste de sorts du Magicien. </p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDetectMagi]{détection de la magie}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplMistyStep0]{foulée brumeuse}</em></p></td></tr></tbody></table>"
         },
         "Hill's Tumble (Hill Giant)": {
-            "requirements": "Goliath"
+            "requirements": "Goliath",
+            "name": "Renversement des coteaux (géants des collines)",
+            "description": "<p>Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l'état &Reference[Prone].</p>",
+            "activities": {
+                "Hill's Tumble": {
+                    "name": "Renversement des coteaux",
+                    "condition": "Lorsque vous touchez une créature de taille G ou inférieure avec un jet d'attaque et lui infligez des dégâts"
+                }
+            }
         },
         "Infernal": {
             "name": "Infernal",
-            "requirements": "Tieffelin"
+            "requirements": "Tieffelin",
+            "description": "<table><caption><p>Traits d'Héritage Infernal</p></caption><thead><tr><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>Vous bénéficiez de la &Reference[Resistance] aux dégâts de feu. Vous connaissez en outre le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireBolt00]{trait de feu}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHellishReb]{représailles infernales}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDarkness00]{ténèbres}</em></p></td></tr></tbody></table>",
+            "advancement": {
+                "9V9xGP0Fsqh3NDsB": {
+                    "hint": "<p>Vous bénéficiez de la Résistance aux dégâts de feu.</p>"
+                },
+                "Infernal Traits": {
+                    "name": "Traits Infernal"
+                }
+            }
         },
         "Red Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique rouge"
         },
         "Rock Gnome": {
             "name": "Gnome des roches",
@@ -505,18 +595,29 @@
             }
         },
         "Silver Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique d'argent"
         },
         "Stone's Endurance (Stone Giant)": {
             "requirements": "Goliath",
             "activities": {
                 "heal": {
-                    "condition": "Quand vous subissez des dégâts"
+                    "condition": "Lorsque vous subissez des dégâts"
                 }
-            }
+            },
+            "name": "Endurance de la pierre (géants des pierres)",
+            "description": "<p>Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue.</p>"
         },
         "Storm's Thunder (Storm Giant)": {
-            "requirements": "Goliath"
+            "requirements": "Goliath",
+            "name": "Tonnerre des cieux (géants des tempêtes)",
+            "description": "<p>Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre.</p>",
+            "activities": {
+                "Storm's Thunder": {
+                    "name": "Tonnerre des cieux",
+                    "condition": "Lorsque vous subissez des dégâts de la part d'une créature dans un rayon de 18 m"
+                }
+            }
         },
         "Tiefling": {
             "name": "Tieffelin",
@@ -527,7 +628,8 @@
             }
         },
         "White Dragon Ancestor": {
-            "requirements": "Drakéide"
+            "requirements": "Drakéide",
+            "name": "Ancêtre draconique blanc"
         },
         "Wood Elf": {
             "requirements": "Elfe",
@@ -543,7 +645,8 @@
                     "name": "Traits des elfes sylvestres",
                     "hint": "L'Intelligence, la Sagesse ou le Charisme est votre caractéristique d'incantation pour les sorts que vous lancez avec ce trait."
                 }
-            }
+            },
+            "description": "<table><caption><p>Aptitudes de lignage Elfe sylvestre</p></caption><thead><tr><td><p>Niveau 1</p></td><td><p>Niveau 3</p></td><td><p>Niveau 5</p></td></tr></thead><tbody><tr><td><p>Votre Vitesse passe à 10,50 m. Vous connaissez également le sort mineur <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDruidcraft]{druidisme}</em>.</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplLongstride]{grande foulée}</em></p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPasswithou]{passage sans trace}</em></p></td></tr></tbody></table>"
         }
     }
 }
