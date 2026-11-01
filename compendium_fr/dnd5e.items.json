@@ -3297,7 +3297,7 @@
     },
     "Potion of Poison": {
       "name": "Potion toxique",
-      "description": "<p>Cette décoction a l'apparence, l'odeur et le goût d'une potion de guérison ou d'une autre potion bénéfique. Il s'agit toutefois d'un poison masqué par quelque illusion magique. Le sort identification révèle sa vraie nature.</p><p>Si vous la buvez, vous subissez [[/damage]]{3d6 dégâts de poison} et devez réussir un jet de sauvegarde de [[/save]] sous peine d'être &reference[poisoned]{empoisonné}. Au début de chacun de vos tours tant que vous êtes ainsi empoisonné, vous subissez [[/damage]]{3d6 dégâts de poison}. À la fin de chacun de vos tours, vous pouvez réitérer ce jet de sauvegarde. En cas de réussite, les dégâts de poison que vous subissez lors de vos tours suivants diminuent de 1d6. Le poison prend fin lorsque les dégâts tombent à 0.</p><section class=\"secret\" id=\"secret-zrLCcwvOwukVWTvT\"><p>Pour plus de commodité, vous pouvez utiliser les enrichisseurs ([[/damage 2d6 poison]] ou [[/damage 1d6 poison]]) pour effectuer le jet de dégâts pour la réduction des dégâts.</p></section>",
+      "description": "<p>Cette décoction a l'apparence, l'odeur et le goût d'une potion de guérison ou d'une autre potion bénéfique. Il s'agit toutefois d'un poison masqué par quelque illusion magique. Le sort identification révèle sa vraie nature.</p><p>Si vous la buvez, vous subissez [[/damage]] et devez réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonné}. Au début de chacun de vos tours tant que vous êtes ainsi empoisonné, vous subissez [[/damage]]. À la fin de chacun de vos tours, vous pouvez réitérer ce jet de sauvegarde. En cas de réussite, les dégâts de poison que vous subissez lors de vos tours suivants diminuent de 1d6. Le poison prend fin lorsque les dégâts tombent à 0.</p><section id=\"secret-zrLCcwvOwukVWTvT\" class=\"secret\"><p>Pour plus de commodité, vous pouvez utiliser les enrichisseurs ([[/damage 2d6 poison]] ou [[/damage 1d6 poison]]) pour effectuer le jet de dégâts pour la réduction des dégâts.</p></section>",
       "effects": {
         "Poisoned": {
           "name": "Empoisonné"
@@ -4692,7 +4692,13 @@
     },
     "Truth Serum": {
       "name": "Sérum de vérité",
-      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned]{empoisonnée} pendant 1 heure. Ainsi empoisonnée, la créature est incapable de mentir sciemment, comme si elle subissait l'effet du sort @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3]{zone de vérité}.</p>"
+      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 1 heure. Ainsi empoisonnée, la créature est incapable de mentir sciemment, comme si elle subissait l'effet du sort @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3]{zone de vérité}.</p>",
+      "effects": {
+        "Can't Lie": {
+          "name": "Incapable de mentir",
+          "description": "<p>Vous êtes incapable de mentir sciemment, comme si vous subissiez l'effet du sort @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3]{zone de vérité}.</p>"
+        }
+      }
     },
     "Two-Person Tent": {
       "name": "Tente 2 personnes",
@@ -5186,10 +5192,20 @@
         "Poisoned": {
           "name": "Empoisonné"
         }
-      }
+      },
+      "description": "<p>Une créature exposée à ce poison effectue un jet de sauvegarde de [[/save]]. En cas d'échec, elle subit [[/damage average]] et devient &Reference[poisoned apply=false]{empoisonnée} pendant 24 heures. En cas de réussite, la créature subit la moitié de ces dégâts et n'est pas empoisonnée.</p>"
     },
     "Burnt Othur Fumes": {
-      "name": "Fumées d'othur"
+      "name": "Fumées d'othur",
+      "description": "<p>Une créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et de devoir réitérer le JS au début de chacun de ses tours. À chaque nouvel échec, elle subit [[/damage average activity=699G3YGOfe67nPbM]]. Une fois qu'elle a réussi trois JS, le poison prend fin.</p>",
+      "activities": {
+        "Save (initial)": {
+          "name": "Sauvegarde (initial)"
+        },
+        "Save (following)": {
+          "name": "Sauvegarde (suivante)"
+        }
+      }
     },
     "Crawler Mucus": {
       "name": "Mucus de rampant",
@@ -5197,10 +5213,11 @@
         "Poisoned & Paralyzed": {
           "name": "Empoisonné et Paralysé"
         }
-      }
+      },
+      "description": "<p>Ce poison se recueille sur un rampant neutralisé ou mort. Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 1 minute. Ainsi empoisonnée, la créature est &Reference[paralyzed apply=false]{paralysée}. Elle peut réitérer le jet de sauvegarde à la fin de chacun de ses tours et met un terme à l'effet sur elle-même en cas de réussite.</p>"
     },
     "Drow Poison": {
-      "name": "Poison de l'elfe drow",
+      "name": "Poison drow",
       "effects": {
         "Poisoned": {
           "name": "Empoisonné"
@@ -5208,7 +5225,8 @@
         "Poisoned & Unconscious": {
           "name": "Empoisonné et Inconscient"
         }
-      }
+      },
+      "description": "<p>Ce poison n'est normalement concocté que par les drows, toujours en un lieu éloigné des rayons du soleil. Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 1 heure. Si le jet de sauvegarde échoue d'au moins 5, la créature est &Reference[unconscious apply=false]{inconsciente} tant qu'elle est empoisonnée de cette manière. Elle reprend conscience si elle subit des dégâts ou si une autre créature consacre une action à la secouer.</p>"
     },
     "Essence of Ether": {
       "name": "Essence éthérée",
@@ -5216,13 +5234,21 @@
         "Poisoned & Unconscious": {
           "name": "Empoisonné et Inconscient"
         }
-      }
+      },
+      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 8 heures. Ainsi empoisonnée, la créature est &Reference[unconscious apply=false]{inconsciente}. Elle reprend conscience si elle subit des dégâts ou si une autre créature consacre une action à la secouer.</p>"
     },
     "Malice": {
-      "name": "Malice"
+      "name": "Malice",
+      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 1 heure. Ainsi empoisonnée, la créature est &Reference[blinded apply=false]{aveuglée}.</p>",
+      "effects": {
+        "Poisoned & Blinded": {
+          "name": "Empoisonné et Aveuglé"
+        }
+      }
     },
     "Midnight Tears": {
-      "name": "Larmes de minuit"
+      "name": "Larmes de minuit",
+      "description": "<p>Une créature qui avale ce poison ne souffre d'aucun désagrément jusqu'aux douze coups de minuit. Si le poison n'a pas été neutralisé avant cela, la créature effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>"
     },
     "Oil of Taggit": {
       "name": "Huile de taggit",
@@ -5230,7 +5256,8 @@
         "Poisoned & Unconscious": {
           "name": "Empoisonné et Inconscient"
         }
-      }
+      },
+      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant 24 heures. Ainsi empoisonnée, la créature est &Reference[unconscious apply=false]{inconsciente}. La créature se réveille si elle subit des dégâts.</p>"
     },
     "Pale Tincture": {
       "name": "Teinture pâle",
@@ -5238,19 +5265,29 @@
         "Poisoned": {
           "name": "Empoisonné"
         }
-      }
+      },
+      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine de subir [[/damage average]] et d'être &Reference[poisoned apply=false]{empoisonnée}. Une créature ainsi empoisonnée doit réitérer le JS toutes les 24 heures et subit [[/damage average]] en cas d'échec. Tant que ce poison est actif, les dégâts qu'il inflige ne peuvent être soignés par quelque moyen que ce soit. À l'issue de sept sauvegardes réussies, l'effet prend fin et la créature se soigne normalement.</p>"
     },
     "Purple Worm Poison": {
-      "name": "Poison de ver pourpre"
+      "name": "Poison de ver pourpre",
+      "description": "<p>Ce poison se recueille sur un ver pourpre mort ou neutralisé. Toute créature exposée à ce poison effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>"
     },
     "Serpent Venom": {
-      "name": "Venin de serpent"
+      "name": "Venin de serpent",
+      "description": "<p>Ce poison se recueille sur un serpent venimeux géant, neutralisé ou mort. Toute créature exposée à ce poison effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>"
     },
     "Torpor": {
-      "name": "Torpeur"
+      "name": "Torpeur",
+      "description": "<p>Toute créature exposée à ce poison doit réussir un jet de sauvegarde de [[/save]] sous peine d'être &Reference[poisoned apply=false]{empoisonnée} pendant [[/r 4d6]] heures. Ainsi empoisonnée, la créature est &Reference[incapacitated apply=false]{neutralisée}.</p>",
+      "effects": {
+        "Poisoned & Incapacitated": {
+          "name": "Empoisonné et Neutralisé"
+        }
+      }
     },
     "Wyvern Poison": {
-      "name": "Poison de vouivre"
+      "name": "Poison de vouivre",
+      "description": "<p>Ce poison se recueille sur une vouivre morte ou neutralisée. Toute créature exposée à ce poison effectue un jet de sauvegarde de [[/save]] et subit [[/damage average]] en cas d'échec, la moitié en cas de réussite.</p>"
     }
   }
 }
