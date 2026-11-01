@@ -1669,7 +1669,8 @@
     "Empty": "Aucun dégât configuré. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour ajouter des parties de dégâts.",
     "EmptyExceptBase": "Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour ajouter des parties de dégâts supplémentaires.",
     "Resistance": {
-      "Falling": "Chute"
+      "Falling": "Chute",
+      "UniqueCategory": "Types uniques"
     }
   },
   "DND5E.Damage": "Dégâts",
@@ -1894,7 +1895,8 @@
       "Group": {
         "Rules": "Règles",
         "Custom": "Personnalisé",
-        "Standard": "Standard"
+        "Standard": "Standard",
+        "DamageApplicationOptions": "Options d'application des dégâts"
       },
       "Type": {
         "Bonus": {
@@ -1908,6 +1910,18 @@
         },
         "Minimum": {
           "Label": "Jet minimum"
+        },
+        "DowngradeImmunityResistance": {
+          "Label": "Réduire l'Immunité et la Résistance"
+        },
+        "IgnoreImmunity": {
+          "Label": "Ignorer l'Immunité"
+        },
+        "IgnoreResistance": {
+          "Label": "Ignorer la Résistance"
+        },
+        "IgnoreVulnerability": {
+          "Label": "Ignorer la Vulnérabilité"
         }
       },
       "Key": {
@@ -1915,7 +1929,8 @@
         "Check": "Tests de caractéristique",
         "D20": "Tests d20",
         "Damage": "Jets de dégâts",
-        "Save": "Jets de sauvegarde"
+        "Save": "Jets de sauvegarde",
+        "Healing": "Jets de soin"
       }
     },
     "DisabledTooltip": {
@@ -1969,7 +1984,8 @@
     },
     "Warning": {
       "RollCondition": "Les conditions d'effet ne peuvent pas référencer des propriétés « roll. ». Déplacez cette condition dans les modifications individuelles pour que l'effet soit appliqué.",
-      "StatusCondition": "Les effets qui accordent des états ne peuvent pas également être conditionnés par des états. Déplacez cette condition dans les modifications individuelles pour que l'effet soit appliqué."
+      "StatusCondition": "Les effets qui accordent des états ne peuvent pas également être conditionnés par des états. Déplacez cette condition dans les modifications individuelles pour que l'effet soit appliqué.",
+      "DependentsWithoutGM": "La suppression de {name} entraîne également la suppression des objets, activités ou effets associés et nécessite la présence d'un MJ actif."
     }
   },
   "DND5E.ENCHANT": {
@@ -2092,12 +2108,30 @@
       "magical": {
         "label": "Magique",
         "hint": "Cet enchantement est magique et devrait être désactivé lorsque la magie n'est pas disponible."
+      },
+      "rider": {
+        "activities": {
+          "hint": "Ces activités supplémentaires seront ajoutées à l'objet enchanté lorsque cet enchantement est appliqué, et supprimées lorsque l'enchantement est supprimé.",
+          "label": "Activités supplémentaires"
+        },
+        "effects": {
+          "hint": "Ces effets supplémentaires seront ajoutés à l'objet enchanté lorsque cet enchantement est appliqué, et supprimés lorsque l'enchantement est supprimé.",
+          "label": "Effets supplémentaires"
+        },
+        "items": {
+          "hint": "Ces objets supplémentaires seront ajoutés à la créature lorsqu'un de ses objets est enchanté, et seront supprimés si l'enchantement est retiré.",
+          "label": "Objets supplémentaires"
+        },
+        "label": "Lié"
       }
     },
     "Transfer": {
       "DisabledTooltip": "Cet enchantement est actuellement sélectionné dans une ou plusieurs activités d'enchantement de son objet, et ne peut donc pas s'appliquer directement à l'objet.",
       "Hint": "Si coché, cet enchantement sera appliqué directement à son objet parent.",
       "Label": "Appliquer l'enchantement à l'objet"
+    },
+    "Rider": {
+      "Activity": "Activité additionnelle d'enchantement"
     }
   },
   "DND5E.Environment": "Environnement",
@@ -2156,7 +2190,12 @@
     "Vehicle": {
       "Label": "Aptitude du véhicule"
     },
-    "PietyTrait": "Trait de Piété"
+    "PietyTrait": "Trait de Piété",
+    "Species": {
+      "Label": "Aptitude d'espèce",
+      "LabelLegacy": "Aptitude de race",
+      "Lineage": "Lignage"
+    }
   },
   "DND5E.Focus": {
     "Label": "Focaliseur d'incantation",
@@ -2286,7 +2325,8 @@
       "xp": "Distribuer les PX et la monnaie mis en commun"
     },
     "Warning": {
-      "PlaceMembers": "Erreur lors du placement des tokens dans la scène."
+      "PlaceMembers": "Erreur lors du placement des tokens dans la scène.",
+      "SupportedItemOnly": "Seuls les objets physiques et de renom sont supportés."
     },
     "Vehicle": {
       "Count": {
@@ -3136,7 +3176,10 @@
       "Wildcard": "Vous devez avoir le droit 'Utiliser le navigateur de fichiers' pour invoquer des créatures avec des illustrations génériques.",
       "PlaceTokens": "Erreur lors du placement des invocations dans la scène."
     },
-    "Hint": "Invoquer une nouvelle créature sur la scène."
+    "Hint": "Invoquer une nouvelle créature sur la scène.",
+    "DamageChanges": {
+      "Label": "Altération des dégâts"
+    }
   },
   "DND5E.Summoning": {
     "Label": "Invocation"
@@ -3765,7 +3808,8 @@
     "StatusSurprised": "Surpris",
     "StatusThreeQuartersCover": "Abri supérieur",
     "StatusTotalCover": "Abri total",
-    "StatusTransformed": "Transformé"
+    "StatusTransformed": "Transformé",
+    "StatusAntimagic": "Antimagie"
   },
   "TYPES.JournalEntryPage.class": "Résumé de classe",
   "TYPES.JournalEntryPage.map": "Emplacement de la carte",
@@ -4157,6 +4201,10 @@
     "SUMMARIZECHAT": {
       "Hint": "Ajoute certains résultats sous forme de résumés plutôt que sous forme de cartes de tchat complètes.",
       "Name": "Cartes de tchat résumées"
+    },
+    "RENOWN": {
+      "Hint": "Activer le suivi facultatif de Renom pour les personnages et les groupes.",
+      "Name": "Valeurs de Renom"
     }
   },
   "SIDEBAR.SortModePriority": "Trier par priorité",
@@ -4648,7 +4696,11 @@
     },
     "Communication": {
       "Telepathy": "Télépathie",
-      "Label": "Communication à distance"
+      "Label": "Communication à distance",
+      "Formatter": {
+        "Units": "{name} unités",
+        "Value": "{name} portée"
+      }
     },
     "All": "Toutes les langues",
     "Label": "Langue",
@@ -6054,7 +6106,8 @@
   "TYPES.RegionBehavior": {
     "dnd5e.difficultTerrain": "Terrain difficile",
     "dnd5e.rotateArea": "Zone de rotation",
-    "dnd5e.applyActiveEffect": "Appliquer un effet actif (5e)"
+    "dnd5e.applyActiveEffect": "Appliquer un effet actif (5e)",
+    "dnd5e.antimagic": "Antimagie"
   },
   "DND5E.Challenge": "Facteur de puissance",
   "DND5E.ENCOUNTER": {
@@ -6287,7 +6340,8 @@
     "Vehicle": "Fiche de véhicule D&D 5e",
     "RollTable": "Fiche de table aléatoire D&D 5e",
     "ActiveEffect": "Fiche d'effet actif D&D 5e",
-    "AdventureImporter": "Importateur d'aventure D&D 5e"
+    "AdventureImporter": "Importateur d'aventure D&D 5e",
+    "Faction": "Fiche de faction D&D 5e"
   },
   "DND5E.SkillRoll": "Test de {ability} ({skill})",
   "DND5E.SpellLevelSpell": "{level} ({n} Emplacements)",
@@ -6605,9 +6659,10 @@
   },
   "TYPES.HINTS": {
     "RegionBehavior": {
-      "dnd5e.difficultTerrain": "Marquez une région comme terrain difficile, puis définissez son type et les entités concernées.",
+      "dnd5e.difficultTerrain": "Marquez une Région comme Terrain difficile, puis définissez son type et les entités concernées.",
       "dnd5e.rotateArea": "Faites pivoter les tokens, les tuiles, les murs et autres objets autour d'un point de pivot central.",
-      "dnd5e.applyActiveEffect": "Appliquer des effets actifs aux tokens lorsqu'ils se trouvent dans la région et répondent à certains critères."
+      "dnd5e.applyActiveEffect": "Appliquer des effets actifs aux tokens lorsqu'ils se trouvent dans la région et répondent à certains critères.",
+      "dnd5e.antimagic": "Empêcher l'utilisation de toute caractéristique magique ou objet magique dans la région."
     }
   },
   "DND5E.Gear": {
@@ -7194,5 +7249,40 @@
       "modules": "Contenu officiel"
     },
     "Title": "Bienvenue dans D&D 5e"
+  },
+  "TYPES.Actor": {
+    "faction": "Faction",
+    "factionPl": "Factions"
+  },
+  "TYPES.Item": {
+    "renown": "Renom",
+    "renownPl": "Renom"
+  },
+  "DND5E.FACTION": {
+    "Action": {
+      "AddMember": "Ajouter un membre"
+    }
+  },
+  "DND5E.FilterGroupFaction": "Grouper par faction",
+  "DND5E.RENOWN": {
+    "Action": {
+      "AddModifier": "Ajouter un modificateur de Renom",
+      "DeleteModifier": "Supprimer le modificateur de Renom"
+    },
+    "Empty": "Il n'y a pas encore de modificateurs de Renom. Utilisez le bouton <i class=\"fas fa-plus\"></i> ci-dessus pour en ajouter un.",
+    "FIELDS": {
+      "modifiers": {
+        "element": {
+          "faction.label": "Faction",
+          "value": {
+            "label": "Valeur",
+            "placeholder": "0"
+          }
+        },
+        "label": "Modificateurs"
+      }
+    },
+    "Unknown": "Inconnu",
+    "Search": "Renom de recherche"
   }
 }
