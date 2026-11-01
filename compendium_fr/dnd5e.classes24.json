@@ -33,7 +33,7 @@
     "entries": {
         "Abjure Foes": {
             "name": "Abjuration d'ennemis",
-            "description": "<p>Au prix de l'action Magie, vous pouvez dépenser une utilisation de Conduit divin de cette classe afin de vous faire craindre de vos ennemis. Tout en brandissant votre symbole sacré ou votre arme, vous pouvez cibler un nombre de créatures égal à votre modificateur de Charisme (minimum d'une créature) que vous voyez dans un rayon de 18 m. Chaque cible doit réussir un jet de sauvegarde de Sagesse sous peine de subir l'état &Reference[Frightened] pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Tant qu'elle subit cet état Effrayé, la cible ne peut faire qu'une seule des choses suivantes à son tour : se déplacer, entreprendre une action ou une action Bonus.</p><section class=\"secret\" id=\"secret-lu2BuwFj2pnJ367b\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui applique l'état Effrayé.</p></section>",
+            "description": "<p>Au prix de l'action &Reference[Magic], vous pouvez dépenser une utilisation de Conduit divin de cette classe afin de vous faire craindre de vos ennemis. Tout en brandissant votre symbole sacré ou votre arme, vous pouvez cibler un nombre de créatures égal à votre modificateur de Charisme (minimum d'une créature) que vous voyez dans un rayon de 18 m. Chaque cible doit réussir un jet de sauvegarde de Sagesse sous peine de subir l'état &Reference[Frightened apply=false] pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. Tant qu'elle subit cet état Effrayé, la cible ne peut faire qu'une seule des choses suivantes à son tour : se déplacer, entreprendre une action ou une action Bonus.</p>",
             "activities": {
                 "save": {
                     "target": "Que vous voyez"
@@ -118,11 +118,11 @@
         },
         "Aura Expansion": {
             "name": "Aura étendue",
-            "description": "<p>Votre Aura de protection est désormais une Émanation de 9 m.</p><section id=\"secret-gH6lYObbkvAgLL2q\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>La portée de vos auras est automatiquement mise à jour au fur et à mesure que vous montez en niveau.</p></section>"
+            "description": "<p>Votre Aura de protection est désormais une Émanation de 9 m.</p>"
         },
         "Aura of Courage": {
             "name": "Aura de courage",
-            "description": "<p>Vous-même et vos alliés jouissez de l'Immunité contre l'état Effrayé au sein de votre Aura de protection. Si un allié Effrayé pénètre dans l'aura, cet état est réprimé sur cet allié tant qu'il s'y trouve.</p><section id=\"secret-equ8xnC2DFxkcJAn\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui permet de repérer les personnes qui se trouvent dans votre aura, mais elle n'est pas automatiquement ajoutée/supprimée et ne supprime pas non plus l'état Effrayé.</p></section>",
+            "description": "<p>Vous-même et vos alliés jouissez de l'Immunité contre l'état Effrayé au sein de votre Aura de protection. Si un allié Effrayé pénètre dans l'aura, cet état est réprimé sur cet allié tant qu'il s'y trouve.</p><section id=\"secret-equ8xnC2DFxkcJAn\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui permet de repérer les personnes qui se trouvent dans votre aura, mais elle n'est pas automatiquement ajoutée/supprimée.</p></section>",
             "activities": {
                 "Aura of Courage": {
                     "name": "Aura de courage"
@@ -145,7 +145,7 @@
         },
         "Aura of Protection": {
             "name": "Aura de protection",
-            "description": "<p>Vous diffusez une aura protectrice indiscernable sous forme d'Émanation dans un rayon de 3 m. Cette aura est inactive tant que vous subissez l'état &Reference[Incapacitated apply=false].</p><p>Vous-même et vos alliés dans l'aura recevez un bonus aux jets de sauvegarde égal à votre modificateur de Charisme (bonus minimum de +1, actuellement [[lookup @abilities.cha.mod]]).</p><p>Si un autre Paladin est présent, une créature ne peut bénéficier que d'une seule Aura de protection à la fois ; la créature choisit l'aura dont elle bénéficie.</p><section class=\"secret\" id=\"secret-PEdASVYFq26DP4Fq\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui améliore automatiquement vos jets de sauvegarde, mais elle ne doit pas être utilisée pour d'autres personnages impactés, car elle ajoutera leur modificateur de Charisme et non celui du Paladin. Ils doivent ajouter votre modificateur manuellement.</p></section>",
+            "description": "<p>Vous diffusez une aura protectrice indiscernable sous forme d'Émanation dans un rayon de 3 m. Cette aura est inactive tant que vous subissez l'état &Reference[Incapacitated apply=false].</p><p>Vous-même et vos alliés dans l'aura recevez un bonus aux jets de sauvegarde égal à votre modificateur de Charisme (bonus minimum de +1, actuellement [[lookup @abilities.cha.mod]]).</p><p>Si un autre Paladin est présent, une créature ne peut bénéficier que d'une seule Aura de protection à la fois ; la créature choisit l'aura dont elle bénéficie.</p>",
             "effects": {
                 "Protected": {
                     "name": "Protégé"
@@ -260,7 +260,7 @@
         },
         "Blessed Strikes: Divine Strike": {
             "name": "Impacts bénis : Impact divin",
-            "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme, vous pouvez lui infliger 1d8 dégâts supplémentaires du type que vous choisissez entre nécrotiques et radiants.</p><section id=\"secret-iZHQe1DZBrtcFZCk\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les dégâts de cette aptitude augmentent automatiquement lorsque vous obtenez @UUID[Compendium.dnd5e.classes24.Item.phbclcImprovedBl]{Impacts bénis améliorés}.</p></section>",
+            "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme, vous pouvez lui infliger 1d8 dégâts supplémentaires du type que vous choisissez entre nécrotiques et radiants.</p>",
             "requirements": "Clerc",
             "activities": {
                 "Divine Strike": {
@@ -270,7 +270,7 @@
         },
         "Blessed Strikes: Potent Spellcasting": {
             "name": "Impacts bénis : Incantation puissante",
-            "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Clerc.</p><section class=\"secret\" id=\"secret-bDHa7ClHZ3YPWKvs\"><p><strong>Note Foundry</strong></p><p>Ces dégâts supplémentaires ne sont pas automatiquement inclus dans vos sorts mineurs.</p><p>Vous pouvez ajouter [[lookup @abilities.wis.mod]] au champ Bonus situationnel de vos jets de dégâts de sort mineur ou vous pouvez l'ajouter de manière permanente à vos sorts mineurs en ajoutant \"@abilities.wis.mod\" (sans les guillemets) dans le champ Bonus. </p><p>Sinon, l'activité <strong>Dégâts</strong> de cette aptitude inclut votre modificateur de Sagesse et vous permet de choisir le type de dégâts dans la boîte de dialogue du jet.</p></section>",
+            "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Clerc.</p>",
             "requirements": "Clerc",
             "activities": {
                 "Heal": {
@@ -286,7 +286,7 @@
             "advancement": {
                 "Choose Cantrips": {
                     "name": "Choisir sorts mineurs",
-                    "hint": "Vous apprenez deux sorts mineurs de Clerc de votre choix. Assistance et flamme sacrée sont recommandés. Les sorts mineurs choisis sont considérés pour vous comme des sorts de Paladin, et le Charisme est la caractéristique d'incantation associée. Chaque fois que vous gagnez un niveau de Paladin, vous pouvez remplacer l'un de ces sorts mineurs par un autre sort mineur de Clerc."
+                    "hint": "<p>Vous apprenez deux sorts mineurs de Clerc de votre choix. Assistance et flamme sacrée sont recommandés. Les sorts mineurs choisis sont considérés pour vous comme des sorts de Paladin, et le Charisme est la caractéristique d'incantation associée. Chaque fois que vous gagnez un niveau de Paladin, vous pouvez remplacer l'un de ces sorts mineurs par un autre sort mineur de Clerc.</p>"
                 }
             }
         },
@@ -528,7 +528,7 @@
         },
         "Danger Sense": {
             "name": "Sens du danger",
-            "description": "<p>Vous acquérez un talent surnaturel qui vous permet d'esquiver plus aisément les dangers que d'autres remarqueraient trop tard. Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated].</p><section id=\"secret-gIJELszWrIqRFCxF\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude automatise l'Avantage aux jets de sauvegarde de Dextérité, mais n'est pas automatiquement désactivée lorsqu'il est Neutralisé. Elle peut être temporairement désactivée dans l'onglet Effets.</p></section>",
+            "description": "<p>Vous acquérez un talent surnaturel qui vous permet d'esquiver plus aisément les dangers que d'autres remarqueraient trop tard. Vous avez l'Avantage aux jets de sauvegarde de Dextérité, sauf si vous subissez l'état &Reference[Incapacitated apply=false].</p>",
             "requirements": "Barbare",
             "effects": {
                 "Danger Sense": {
@@ -574,7 +574,7 @@
         },
         "Deflect Attacks": {
             "name": "Déviation d'assaut",
-            "description": "<p>Lorsqu'un jet d'attaque vous touche et que ses dégâts incluent des dégâts contondants, perforants ou tranchants, vous pouvez jouer une Réaction pour réduire contre vous les dégâts totaux de l'attaque. La réduction est égale à 1d10 plus votre modificateur de Dextérité et votre niveau de Moine.</p><p>Si vous réduisez ainsi les dégâts à 0, vous pouvez dépenser 1 point de Credo pour dévier une partie de l'impact à votre guise. Dans ce cas, choisissez une créature que vous voyez dans un rayon de 1,50 m si l'attaque était de corps à corps, ou une créature que vous voyez dans un rayon de 18 m et qui ne bénéficie pas d'un Abri total si l'attaque était à distance. Cette créature doit réussir un jet de sauvegarde de Dextérité sous peine de subir des dégâts égaux à deux jets de votre dé d'Arts martiaux plus votre modificateur de Dextérité. Les dégâts sont du même type que ceux infligés par l'attaque.</p><section class=\"secret\" id=\"secret-zWGu1AEB09UqQ21D\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Réduire</strong> peut être utilisée pour se soigner afin de réduire le total des dégâts si ce n'est pas suffisant pour les réduire à 0.</p><p>L'activité <strong>Dévier</strong> peut être utilisée pour lancer des dégâts et consommer une utilisation de vos points de Credo si vous pouvez les réduire à 0. Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet. Les dés augmentent automatiquement au fur et à mesure que vous montez en niveau.</p></section>",
+            "description": "<p>Lorsqu'un jet d'attaque vous touche et que ses dégâts incluent des dégâts contondants, perforants ou tranchants, vous pouvez jouer une Réaction pour réduire contre vous les dégâts totaux de l'attaque. La réduction est égale à 1d10 plus votre modificateur de Dextérité et votre niveau de Moine.</p><p>Si vous réduisez ainsi les dégâts à 0, vous pouvez dépenser 1 point de Credo pour dévier une partie de l'impact à votre guise. Dans ce cas, choisissez une créature que vous voyez dans un rayon de 1,50 m si l'attaque était de corps à corps, ou une créature que vous voyez dans un rayon de 18 m et qui ne bénéficie pas d'un Abri total si l'attaque était à distance. Cette créature doit réussir un jet de sauvegarde de Dextérité sous peine de subir des dégâts égaux à deux jets de votre dé d'Arts martiaux plus votre modificateur de Dextérité. Les dégâts sont du même type que ceux infligés par l'attaque.</p>",
             "activities": {
                 "Reduce": {
                     "name": "Réduire",
@@ -596,12 +596,12 @@
         },
         "Deflect Energy": {
             "name": "Parade énergétique",
-            "description": "<p>Vous pouvez désormais recourir à l'aptitude Déviation d'assaut contre les attaques qui infligent tout type de dégâts, et non plus seulement contondants, perforants ou tranchants.</p><section class=\"secret\" id=\"secret-XAQmFmc4TpSF2Oh1\"><p>L'activité <strong>Réduire</strong> peut être utilisée pour se soigner afin de réduire le total des dégâts si ce n'est pas suffisant pour les réduire à 0.</p><p>L'activité <strong>Dévier</strong> peut être utilisée pour lancer des dégâts et consommer une utilisation de vos points de Credo si vous pouvez les réduire à 0. Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet. Les dés augmentent automatiquement au fur et à mesure que vous montez en niveau.</p></section>",
+            "description": "<p>Vous pouvez désormais recourir à l'aptitude Déviation d'assaut contre les attaques qui infligent tout type de dégâts, et non plus seulement contondants, perforants ou tranchants.</p>",
             "requirements": "Moine"
         },
         "Deft Explorer": {
             "name": "Fin explorateur",
-            "description": "<p>Vos voyages incessants vous ont permis de recevoir les bénéfices suivants.</p><p><strong>Expertise.</strong> Choisissez l'une de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans cette compétence.</p><p><strong>Langues.</strong> Vous connaissez deux langues de votre choix dans les tables des langues du chapitre 2.</p><section class=\"secret\" id=\"secret-MKYXod5Sdpyj2x7V\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire des choix lorsque vous ajouterez la classe Rôdeur à votre feuille de personnage.</p></section>",
+            "description": "<p>Vos voyages incessants vous ont permis de recevoir les bénéfices suivants.</p><p><em><strong>Expertise.</strong></em> Choisissez l'une de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans cette compétence.</p><p><em><strong>Langues.</strong></em> Vous connaissez deux langues de votre choix dans les tables des langues du chapitre 2.</p>",
             "advancement": {
                 "Expertise": {
                     "name": "Expertise"
@@ -685,7 +685,7 @@
         },
         "Divine Intervention": {
             "name": "Intervention divine",
-            "description": "<p>Vous pouvez faire appel à votre divinité ou votre panthéon pour intercéder en votre faveur. Au prix de l'action Magie, choisissez un @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{sort de Clerc} du 5<sup>e</sup> niveau ou inférieur dont l'incantation ne demande pas une Réaction. Dans le cadre de cette même action, vous lancez le sort sans dépenser d'emplacement en vous passant de composantes matérielles. Une fois que vous avez utilisé cette aptitude, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-LP7yqqobTjOqeswv\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Décochez la case « Consommation » lorsque vous lancez le sort pour l'utilisation gratuite. Cette aptitude peut être utilisée pour suivre les utilisations disponibles.</p></section>",
+            "description": "<p>Vous pouvez faire appel à votre divinité ou votre panthéon pour intercéder en votre faveur. Au prix de l'action &Reference[Magic], choisissez un @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{sort de Clerc} du 5<sup>e</sup> niveau ou inférieur dont l'incantation ne demande pas une Réaction. Dans le cadre de cette même action, vous lancez le sort sans dépenser d'emplacement en vous passant de composantes matérielles. Une fois que vous avez utilisé cette aptitude, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-LP7yqqobTjOqeswv\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Décochez la case « Consommation » lorsque vous lancez le sort pour l'utilisation gratuite. Cette aptitude peut être utilisée pour suivre les utilisations disponibles.</p></section>",
             "requirements": "Clerc"
         },
         "Divine Order": {
@@ -714,7 +714,7 @@
         },
         "Draconic Resilience": {
             "name": "Résistance draconique",
-            "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p><section class=\"secret\" id=\"secret-uBlQVhOqmjWWiLc4\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum de points de vie et met en place votre défense sans armure, qui peut être désactivée si vous préférez utiliser une armure.</p></section>",
+            "description": "<p>La magie qui vous habite se manifeste sous la forme de traits propres à votre don draconique. Votre maximum de points de vie initial augmente de 3, puis de 1 chaque fois que vous gagnez un niveau supplémentaire d'Ensorceleur.</p><p>Certaines parties de votre corps sont en outre couvertes d'écailles rappelant celles d'un dragon. Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et de Charisme.</p>",
             "requirements": "Sorcellerie draconique",
             "effects": {
                 "Draconic Resilience": {
@@ -743,12 +743,12 @@
         },
         "Dragon Companion": {
             "name": "Compagnon draconique",
-            "description": "<p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplSummonDrag]{convocation de dragon} sans composante matérielle. Vous pouvez aussi le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long.</p><p>Chaque fois que vous commencez à lancer ce sort, vous pouvez en modifier l'incantation afin qu'elle ne nécessite pas la Concentration. Ce faisant, la durée du sort passe à 1 minute pour cette incantation.</p><section id=\"secret-dxl0rjuVblJvTXgy\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude peut être utilisée pour suivre votre utilisation gratuite. Lorsque vous lancez le sort, vous pouvez décocher la case « Consommation » et, éventuellement, la case « Concentration ».</p></section>",
+            "description": "<p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSummonDrag]{convocation de dragon}</em> sans composante matérielle. Vous pouvez aussi le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long.</p><p>Chaque fois que vous commencez à lancer ce sort, vous pouvez en modifier l'incantation afin qu'elle ne nécessite pas la Concentration. Ce faisant, la durée du sort passe à 1 minute pour cette incantation.</p>",
             "requirements": "Sorcellerie draconique"
         },
         "Dragon Wings": {
             "name": "Ailes draconiques",
-            "description": "<p>Par une action Bonus, vous faites apparaître des ailes draconiques dans votre dos. Ces ailes persistent 1 heure ou jusqu'à ce que vous les révoquiez (pas d'action requise). Pour toute la durée, vous bénéficiez d'une Vitesse de vol de 18 m.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser 3 points de Sorcellerie (pas d'action requise) pour en récupérer l'usage.</p><section class=\"secret\" id=\"secret-sOSBeegnxa98QlIn\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Ailes draconiques</strong> comprend un effet actif qui vous accorde une Vitesse de vol de 18 m.</p><p>L'activité <strong>Restaurer l'utilisation</strong> peut être utilisée pour dépenser les points de Sorcellerie afin de restaurer une utilisation de l'activité <strong>Ailes draconiques</strong>.</p></section>",
+            "description": "<p>Par une action Bonus, vous faites apparaître des ailes draconiques dans votre dos. Ces ailes persistent 1 heure ou jusqu'à ce que vous les révoquiez (pas d'action requise). Pour toute la durée, vous bénéficiez d'une Vitesse de vol de 18 m.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser 3 points de Sorcellerie (pas d'action requise) pour en récupérer l'usage.</p>",
             "activities": {
                 "Dragon Wings": {
                     "name": "Ailes draconiques"
@@ -891,7 +891,7 @@
         },
         "Elemental Affinity": {
             "name": "Affinité élémentaire",
-            "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la Résistance à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p><section class=\"secret\" id=\"secret-3vHUORtVzoP6V4xF\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir le type de dégâts au fur et à mesure que vous montez en niveau. Les dégâts supplémentaires ne sont pas automatiquement ajoutés, mais cette aptitude comprend une activité pour chaque type de dégâts.</p><p>Vous pouvez accélérer l'utilisation de cette aptitude en plaçant le type de dégâts que vous avez choisi en haut de la liste et il sera utilisé automatiquement lors de l'utilisation de cette aptitude.</p></section>",
+            "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la &Reference[Resistance] à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
             "requirements": "Sorcellerie draconique"
         },
         "Elemental Fury": {
@@ -940,7 +940,7 @@
         },
         "Empowered Strikes": {
             "name": "Frappes renforcées",
-            "description": "<p>Chaque fois que vous infligez des dégâts avec une attaque à mains nues, ceux-ci sont à votre convenance des dégâts de force ou du type normal de l'attaque.</p><section class=\"secret\" id=\"secret-Hg8UeaCyLgncM7iJ\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Frappes renforcées</strong> de cette aptitude peut vous permettre de choisir entre les dégâts de Force et les dégâts normaux dans la boîte de dialogue du jet. Elle utilise votre dé d'Arts martiaux (actuellement [[lookup @scale.monk.die]]) pour les dégâts et sera automatiquement mise à jour au fur et à mesure que vous montez en niveau.</p></section>",
+            "description": "<p>Chaque fois que vous infligez des dégâts avec une attaque à mains nues, ceux-ci sont à votre convenance des dégâts de force ou du type normal de l'attaque.</p>",
             "requirements": "Moine",
             "effects": {
                 "Empowered Strikes": {
@@ -950,7 +950,7 @@
         },
         "Evasion": {
             "name": "Esquive totale",
-            "description": "<p>Quand vous êtes soumis à un effet qui vous permet d'effectuer un jet de sauvegarde de Dextérité pour réduire les dégâts de moitié, vous ne subissez aucun dégât en cas de sauvegarde réussie, et seulement la moitié en cas d'échec.</p><p>Vous ne bénéficiez pas de cette aptitude si vous subissez l'état Neutralisé.</p>",
+            "description": "<p>Quand vous êtes soumis à un effet qui vous permet d'effectuer un jet de sauvegarde de Dextérité pour réduire les dégâts de moitié, vous ne subissez aucun dégât en cas de sauvegarde réussie, et seulement la moitié en cas d'échec.</p><p>Vous ne bénéficiez pas de cette aptitude si vous subissez l'état &Reference[Incapacitated apply=false].</p>",
             "requirements": "Moine"
         },
         "Evocation Savant": {
@@ -988,7 +988,7 @@
         },
         "Faithful Steed": {
             "name": "Fidèle destrier",
-            "description": "<p>Vous pouvez faire appel à un destrier d'outre-monde. Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplFindSteed0]{appel de destrier} est toujours considéré comme préparé pour vous.</p><p>Vous pouvez en outre le lancer une fois sans dépenser d'emplacement de sort et récupérez cette faculté en terminant un Repos long.<section class=\"secret\" id=\"secret-XC2S9ToogFr41act\"><p><strong>Note Foundry</strong></p><p>Le sort appel de destrier est ajouté à votre liste de sorts comme toujours préparé et avec une utilisation gratuite par Repos long lorsque vous atteignez ce niveau.</p></section>"
+            "description": "<p>Vous pouvez faire appel à un destrier d'outre-monde. Le sort @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFindSteed0]{appel de destrier} est toujours considéré comme préparé pour vous.</p><p>Vous pouvez en outre le lancer une fois sans dépenser d'emplacement de sort et récupérez cette faculté en terminant un Repos long.</p>"
         },
         "Fast Hands": {
             "name": "Mains lestes",
@@ -1017,7 +1017,7 @@
         },
         "Favored Enemy": {
             "name": "Ennemi juré",
-            "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
+            "description": "<p>Le sort @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHuntersMar]{marque du chasseur} est toujours préparé pour vous. Vous pouvez le lancer deux fois sans dépenser d'emplacement de sort, et vous récupérez toutes les utilisations de cette aptitude en terminant un Repos long.</p><p>Le nombre de fois où vous pouvez lancer ce sort sans dépenser d'emplacement de sort augmente à mesure que vous gagnez des niveaux de Rôdeur, comme spécifié dans la colonne Ennemi juré de la table Aptitudes du Rôdeur.</p>",
             "advancement": {
                 "Favored Enemy": {
                     "name": "Ennemi juré"
@@ -1036,7 +1036,7 @@
         },
         "Feral Senses": {
             "name": "Sens sauvages",
-            "description": "<p>Fort d'un lien étroit avec les forces de la nature, vous jouissez de la Vision aveugle dans un rayon de 9 m.</p><section class=\"secret\" id=\"secret-g31kKSDLrDEpbpbo\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui améliore votre Vision aveugle à 9 m si vous ne l'avez pas déjà.</p></section>",
+            "description": "<p>Fort d'un lien étroit avec les forces de la nature, vous jouissez de la &Reference[Blindsight] dans un rayon de 9 m.</p>",
             "effects": {
                 "Feral Senses": {
                     "name": "Sens sauvages"
@@ -1161,7 +1161,7 @@
         },
         "Foe Slayer": {
             "name": "Tueur implacable",
-            "description": "<p>Le dé de dégât de votre @UUID[Compendium.dnd5e.spells24.Item.phbsplHuntersMar]{marque du chasseur} passe de d6 à d10.</p><section id=\"secret-GUET2urq4zcuitcV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez utiliser cette aptitude à la place de l'activité <strong>Dégâts bonus de marque</strong> du sort <em>Marque du chasseur</em>.</p></section>",
+            "description": "<p>Le dé de dégât de votre @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHuntersMar]{marque du chasseur} passe de d6 à d10.</p><section id=\"secret-GUET2urq4zcuitcV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez utiliser cette aptitude à la place de l'activité <strong>Dégâts bonus de marque</strong> du sort <em>Marque du chasseur</em>.</p></section>",
             "activities": {
                 "Improved Hunter's Mark Damage": {
                     "name": "Dégâts améliorés de la marque du chasseur"
@@ -1193,7 +1193,7 @@
         },
         "Frenzy": {
             "name": "Frénésie",
-            "description": "<p>Si vous recourez à Témérité alors que votre Rage est active, vous infligez des dégâts supplémentaires à la première cible que vous touchez à votre tour avec une attaque basée sur la Force. Pour déterminer ces dégâts supplémentaires, lancez autant de d6 que votre bonus de Rage aux dégâts et faites en la somme. Ces dégâts sont du même type que ceux de l'arme ou l'attaque à mains nues employée pour l'attaque.</p><section id=\"secret-EsDSGWYhmnmiS9Cu\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Dégâts</strong> s'adapte automatiquement à votre progression et vous permet de sélectionner le type de dégâts à utiliser dans la boîte de dialogue du jet de dégâts. Votre choix sera alors mémorisé.</p></section>",
+            "description": "<p>Si vous recourez à Témérité alors que votre Rage est active, vous infligez des dégâts supplémentaires à la première cible que vous touchez à votre tour avec une attaque basée sur la Force. Pour déterminer ces dégâts supplémentaires, lancez autant de d6 que votre bonus de Rage aux dégâts et faites en la somme. Ces dégâts sont du même type que ceux de l'arme ou l'attaque à mains nues employée pour l'attaque.</p>",
             "requirements": "Voie du Berserker"
         },
         "Gaze of Two Minds": {
@@ -1238,7 +1238,7 @@
         },
         "Greater Divine Intervention": {
             "name": "Intervention divine suprême",
-            "description": "<p>Vous pouvez invoquer une intervention divine encore plus radicale. Lorsque vous recourez à l'aptitude Intervention divine, vous pouvez opter pour @UUID[Compendium.dnd5e.spells24.Item.phbsplWish000000]{souhait} comme choix de sort. Dans un tel cas, vous devez terminer [[/r 2d4]] Repos longs avant de pouvoir réutiliser Intervention divine.</p><section class=\"secret\" id=\"secret-LP9WqNdaJevppYeM\"><p><strong>Note Foundry</strong></p><p>Cette aptitude consomme une utilisation de votre Intervention Divine mais ne peut pas recharger automatiquement l'utilisation après le nombre de Repos longs obtenus.</p></section>",
+            "description": "<p>Vous pouvez invoquer une intervention divine encore plus radicale. Lorsque vous recourez à l'aptitude Intervention divine, vous pouvez opter pour <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWish000000]{souhait}</em> comme choix de sort. Dans un tel cas, vous devez terminer [[/r 2d4]] Repos longs avant de pouvoir réutiliser Intervention divine.</p><section id=\"secret-LP9WqNdaJevppYeM\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude consomme une utilisation de votre Intervention Divine mais ne peut pas recharger automatiquement l'utilisation après le nombre de Repos longs obtenus.</p></section>",
             "requirements": "Clerc"
         },
         "Heightened Focus": {
@@ -1315,7 +1315,7 @@
         },
         "Improved Blessed Strikes": {
             "name": "Impacts bénis améliorés",
-            "description": "<p>L'option retenue pour Impacts bénis se renforce.</p><p><strong>Impact divin.</strong> Les dégâts supplémentaires de votre Impact divin passent à 2d8.</p><p><strong>Incantation puissante.</strong> Lorsque vous lancez un sort mineur de Clerc et infligez des dégâts à une créature par son biais, vous pouvez insuffler de la vitalité à une créature dans un rayon de 18 m ou à vous-même, par l'acquisition de points de vie temporaires égaux au double de votre modificateur de Sagesse.</p><section class=\"secret\" id=\"secret-UW0So7XcJyHUaivE\"><p><strong>Note Foundry</strong></p><p>Si vous avez choisi <strong>Impact divin</strong>, les dégâts sont automatiquement augmentés. Si vous avez choisi <strong>Incantation puissante</strong>, vous pouvez utiliser l'activité Incantation puissante de cette aptitude.</p></section>",
+            "description": "<p>L'option retenue pour Impacts bénis se renforce.</p><p><em><strong>Impact divin.</strong></em> Les dégâts supplémentaires de votre Impact divin passent à 2d8.</p><p><em><strong>Incantation puissante.</strong></em> Lorsque vous lancez un sort mineur de Clerc et infligez des dégâts à une créature par son biais, vous pouvez insuffler de la vitalité à une créature dans un rayon de 18 m ou à vous-même, par l'acquisition de points de vie temporaires égaux au double de votre modificateur de Sagesse.</p>",
             "requirements": "Clerc"
         },
         "Improved Brutal Strike": {
@@ -1325,7 +1325,7 @@
         },
         "Improved Brutal Strike (2)": {
             "name": "Coup brutal amélioré (2)",
-            "description": "<p>Les dégâts supplémentaires de votre Coup brutal passent à 2d10. De plus, vous pouvez appliquer simultanément deux effets différents de l'aptitude lorsque vous recourez à Coup brutal.</p><section id=\"secret-XCUecJBPB6amtvj9\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Le jet de dégâts dans Coup Brutal sera automatiquement mis à l'échelle pour utiliser cette nouvelle valeur.</p></section>",
+            "description": "<p>Les dégâts supplémentaires de votre Coup brutal passent à 2d10. De plus, vous pouvez appliquer simultanément deux effets différents de l'aptitude lorsque vous recourez à Coup brutal.</p>",
             "requirements": "Barbare"
         },
         "Improved Critical": {
@@ -1362,11 +1362,11 @@
         },
         "Innate Sorcery": {
             "name": "Sorcellerie innée",
-            "description": "<p>Un événement de votre passé a laissé une marque indélébile sur vous, faisant éclore une magie bouillonnante. Par une action Bonus, vous pouvez libérer cette magie pendant 1 minute, au cours de laquelle vous recevez les bénéfices suivants :</p><ul><li>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</li><li>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</li></ul><p>Vous pouvez recourir à cette aptitude deux fois, et récupérez ce quota en terminant un Repos long.</p><section id=\"secret-nB2j1T08cVjrcuAj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente le DD de sauvegarde des sorts. L'Avantage sur les jets d'attaque n'est pas automatique.</p></section>",
+            "description": "<p>Un événement de votre passé a laissé une marque indélébile sur vous, faisant éclore une magie bouillonnante. Par une action Bonus, vous pouvez libérer cette magie pendant 1 minute, au cours de laquelle vous recevez les bénéfices suivants :</p><ul><li><p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</p></li><li><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</p></li></ul><p>Vous pouvez recourir à cette aptitude deux fois, et récupérez ce quota en terminant un Repos long.</p>",
             "effects": {
                 "Innate Sorcery": {
                     "name": "Sorcellerie innée",
-                    "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1. (Automatisé)</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez. (Non automatisé)</p>"
+                    "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</p>"
                 }
             },
             "requirements": "Ensorceleur"
@@ -1378,7 +1378,7 @@
         },
         "Intimidating Presence": {
             "name": "Présence intimidante",
-            "description": "<p>Par une action Bonus, vous pouvez inspirer la terreur chez autrui grâce à votre présence et votre puissance primale. Ce faisant, chaque créature de votre choix dans une Émanation de 9 m centrée sur vous effectue un jet de sauvegarde de Sagesse (DD 8 plus votre modificateur de Force et votre bonus de maîtrise). En cas d'échec, la créature subit l'état &Reference[Frightened] pendant 1 minute. À la fin de chacun des tours d'une créature Effrayée, celle-ci réitère le JS et met un terme à l'effet sur elle-même en cas de réussite.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser une utilisation de votre Rage (pas d'action requise) pour en récupérer l'usage.</p><section class=\"secret\" id=\"secret-vRQdGrtACAbxH4Tm\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Sauvegarder</strong> inclut un effet actif qui ajoute l'état Effrayé.</p><p>L'activité <strong>Recharger</strong> consomme une utilisation de Rage et recharge votre utilisation de Présence intimidante.</p></section>",
+            "description": "<p>Par une action Bonus, vous pouvez inspirer la terreur chez autrui grâce à votre présence et votre puissance primale. Ce faisant, chaque créature de votre choix dans une Émanation de 9 m centrée sur vous effectue un jet de sauvegarde de Sagesse (DD 8 plus votre modificateur de Force et votre bonus de maîtrise). En cas d'échec, la créature subit l'état &Reference[Frightened apply=false] pendant 1 minute. À la fin de chacun des tours d'une créature Effrayée, celle-ci réitère le JS et met un terme à l'effet sur elle-même en cas de réussite.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser une utilisation de votre Rage (pas d'action requise) pour en récupérer l'usage.</p>",
             "requirements": "Voie du Berserker",
             "activities": {
                 "Recharge with Rage": {
@@ -1618,7 +1618,7 @@
         },
         "Metamagic": {
             "name": "Métamagie",
-            "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p><section id=\"secret-IKw7Qq4qXvzx5Iqj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir des options de métamagie au fur et à mesure de votre montée en niveau.</p></section>",
+            "description": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie au choix parmi les « Options de métamagie ». Les options choisies vous permettent de modifier ponctuellement le sort que vous lancez. Pour recourir à une option, vous devez dépenser son coût exprimé en points de Sorcellerie.</p><p>Vous ne pouvez appliquer qu'une option de Métamagie à l'incantation d'un sort, sauf si l'une des options précise le contraire.</p><p>Chaque fois que vous gagnez un niveau d'Ensorceleur, vous pouvez remplacer l'une de vos options de Métamagie par une autre qui vous est inconnue. Vous recevez deux options supplémentaires au niveau 10 d'Ensorceleur et deux de plus au niveau 17.</p>",
             "requirements": "Ensorceleur",
             "advancement": {
                 "Metamagic": {
@@ -1628,7 +1628,7 @@
         },
         "Mindless Rage": {
             "name": "Rage aveugle",
-            "description": "<p>Vous avez l'Immunité contre les états &Reference[Charmed] et &Reference[Frightened] tant que votre Rage est active. Si vous subissez déjà l'état Charmé ou Effrayé au moment où vous entrez en Rage, l'état en question prend fin sur vous.</p><section class=\"secret\" id=\"secret-CnCRD0Dyvx4FFGfV\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui confère l'Immunité aux états Charmé et Effrayé. Cependant, il ne s'applique pas automatiquement lorsque vous déclenchez votre Rage.</p></section>",
+            "description": "<p>Vous avez l'Immunité contre les états &Reference[Charmed apply=false] et &Reference[Frightened apply=false] tant que votre Rage est active. Si vous subissez déjà l'état Charmé ou Effrayé au moment où vous entrez en Rage, l'état en question prend fin sur vous.</p><section id=\"secret-CnCRD0Dyvx4FFGfV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui confère l'Immunité aux états Charmé et Effrayé. Cependant, il ne s'applique pas automatiquement lorsque vous déclenchez votre Rage.</p></section>",
             "requirements": "Voie du Berserker",
             "effects": {
                 "Mindless Rage": {
@@ -1766,7 +1766,7 @@
         },
         "Nature's Veil": {
             "name": "Voile de la nature",
-            "description": "<p>Vous invoquez les esprits de la nature afin de vous cacher magiquement. Par une action Bonus, vous pouvez vous octroyer l'état Invisible jusqu'à la fin de votre tour suivant.</p><p>Vous pouvez recourir à cette aptitude autant de fois que votre modificateur de Sagesse (minimum d'une fois) et récupérez ce quota en terminant un Repos long.</p><section id=\"secret-CrVc4y9VaKTGeCuG\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui applique l'état Invisible.</p></section>",
+            "description": "<p>Vous invoquez les esprits de la nature afin de vous cacher magiquement. Par une action Bonus, vous pouvez vous octroyer l'état &Reference[Invisible apply=false] jusqu'à la fin de votre tour suivant.</p><p>Vous pouvez recourir à cette aptitude autant de fois que votre modificateur de Sagesse (minimum d'une fois) et récupérez ce quota en terminant un Repos long.</p>",
             "activities": {
                 "Veil": {
                     "name": "Voile"
@@ -1951,7 +1951,7 @@
         },
         "Paladin's Smite": {
             "name": "Châtiment de paladin",
-            "description": "<p>Le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplDivineSmit]{châtiment divin} est toujours préparé pour vous. Vous pouvez en outre lancer ce sort sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p><section id=\"secret-47mDL7wHB8aQP7SD\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque vous atteignez ce niveau, le sort châtiment divin est ajouté à vos sorts en tant que sort toujours préparé et avec une utilisation gratuite.</p></section>"
+            "description": "<p>Le sort @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDivineSmit]{châtiment divin} est toujours préparé pour vous. Vous pouvez en outre lancer ce sort sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p>"
         },
         "Path of the Berserker": {
             "name": "Voie du Berserker",
@@ -1980,7 +1980,7 @@
         },
         "Persistent Rage": {
             "name": "Rage persistante",
-            "description": "<p>Lorsque vous jouez l'Initiative, vous pouvez récupérer toutes vos utilisations de Rage. Après avoir récupéré ainsi vos utilisations de Rage, vous devez terminer un Repos long pour pouvoir le refaire.</p><p>De plus, votre Rage est si féroce qu'elle persiste désormais 10 minutes sans vous demander de la prolonger activement de round en round. Votre Rage prend fin prématurément si vous subissez l'état &Reference[Unconscious] (l'état &Reference[Incapacitated] seul n'y met plus fin) ou si vous enfilez une armure lourde.</p><section class=\"secret\" id=\"secret-3IS0iUbWZ04tp74k\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité qui peut être utilisée lorsque vous lancez l'Initiative, ce qui rechargera toutes vos utilisations de Rage.</p></section>",
+            "description": "<p>Lorsque vous jouez l'Initiative, vous pouvez récupérer toutes vos utilisations de Rage. Après avoir récupéré ainsi vos utilisations de Rage, vous devez terminer un Repos long pour pouvoir le refaire.</p><p>De plus, votre Rage est si féroce qu'elle persiste désormais 10 minutes sans vous demander de la prolonger activement de round en round. Votre Rage prend fin prématurément si vous subissez l'état &Reference[Unconscious apply=false] (l'état &Reference[Incapacitated apply=false] seul n'y met plus fin) ou si vous enfilez une armure lourde.</p>",
             "requirements": "Barbare"
         },
         "Potent Cantrip": {
@@ -1993,7 +1993,7 @@
         },
         "Preserve Life": {
             "name": "Survivance",
-            "description": "<p>Au prix de l'action Magie, vous présentez votre symbole sacré et dépensez une utilisation de Conduit divin pour libérer des énergies curatives qui restituent autant de points de vie que le quintuple de votre niveau de Clerc. Choisissez des créatures &Reference[Bloodied] dans un rayon de 9 m (vous pouvez vous inclure) et répartissez ces points de vie entre elles. Cette aptitude ne permet pas à une créature de dépasser la moitié de son maximum de points de vie.</p><section class=\"secret\" id=\"secret-vybBdwcDQO3jMVDo\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Soigner</strong> ne limite pas automatiquement les PV gagnés à 50 % du maximum de la cible.</p></section>",
+            "description": "<p>Au prix de l'action &Reference[Magic], vous présentez votre symbole sacré et dépensez une utilisation de Conduit divin pour libérer des énergies curatives qui restituent autant de points de vie que le quintuple de votre niveau de Clerc. Choisissez des créatures &Reference[Bloodied] dans un rayon de 9 m (vous pouvez vous inclure) et répartissez ces points de vie entre elles. Cette aptitude ne permet pas à une créature de dépasser la moitié de son maximum de points de vie.</p><section id=\"secret-vybBdwcDQO3jMVDo\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Soigner</strong> ne limite pas automatiquement les PV gagnés à 50 % du maximum de la cible.</p></section>",
             "requirements": "Domaine de la Vie",
             "activities": {
                 "heal": {
@@ -2008,7 +2008,7 @@
         },
         "Primal Knowledge": {
             "name": "Savoir primal",
-            "description": "<p>Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste de compétences disponibles aux Barbares de niveau 1.</p><p>De plus, tant que votre Rage est active, vous pouvez canaliser les énergies primales lorsque vous tentez certaines tâches ; chaque fois que vous effectuez un test de caractéristique avec l'une des compétences suivantes, vous pouvez en faire un test de Force même s'il s'agit normalement d'une autre caractéristique : Acrobaties, Discrétion, Intimidation, Perception et Survie. Lorsque vous recourez à cette aptitude, votre Force illustre les énergies primales qui vous animent, et affûtent vos sens, votre aplomb et votre agilité.</p><section class=\"secret\" id=\"secret-himIRZuFGInNkZgU\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui fera en sorte que ces compétences utilisent automatiquement votre modificateur de Force s'il est supérieur à la valeur de caractéristique normalement associé à la compétence.</p></section>",
+            "description": "<p>Vous recevez la maîtrise d'une autre compétence de votre choix dans la liste de compétences disponibles aux Barbares de niveau 1.</p><p>De plus, tant que votre Rage est active, vous pouvez canaliser les énergies primales lorsque vous tentez certaines tâches ; chaque fois que vous effectuez un test de caractéristique avec l'une des compétences suivantes, vous pouvez en faire un test de Force même s'il s'agit normalement d'une autre caractéristique : Acrobaties, Discrétion, Intimidation, Perception et Survie. Lorsque vous recourez à cette aptitude, votre Force illustre les énergies primales qui vous animent, et affûtent vos sens, votre aplomb et votre agilité.</p>",
             "requirements": "Barbare",
             "effects": {
                 "Primal Knowledge": {
@@ -2059,7 +2059,7 @@
         },
         "Quivering Palm": {
             "name": "Paume vibratoire",
-            "description": "<p>Vous apprenez à produire des vibrations potentiellement mortelles dans le corps d'autrui. Lorsque vous touchez une créature avec une attaque à mains nues, vous pouvez dépenser 4 points de Credo pour déclencher ces vibrations imperceptibles, qui persistent autant de jours que votre niveau de Moine. Ces vibrations sont inoffensives jusqu'à ce que vous consacriez une action à y mettre fin. Par ailleurs, lorsque vous entreprenez l'action Attaque à votre tour, vous pouvez renoncer à l'une des attaques pour mettre un terme aux vibrations. Pour ce faire, vous et la cible devez vous trouver sur le même plan d'existence. Quand vous mettez fin aux vibrations, la cible effectue un jet de sauvegarde de Constitution, et subit 10d12 dégâts de force en cas d'échec, la moitié en cas de réussite.</p><p>Vous ne pouvez avoir qu'une créature à la fois sous l'effet de cette aptitude. Vous pouvez aussi mettre fin aux vibrations de façon inoffensive (pas d'action requise).</p><section id=\"secret-BSTexn4tHp20evAQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Vibrations imperceptibles</strong> dépense 4 points de Credo et comprend un effet actif qui peut être utilisé pour suivre la cible dans laquelle vous avez installé des vibrations mortelles.</p><p>L'activité <strong>Fin des vibrations</strong> comprend les jets de sauvegarde et les jets de dégâts.</p></section>",
+            "description": "<p>Vous apprenez à produire des vibrations potentiellement mortelles dans le corps d'autrui. Lorsque vous touchez une créature avec une attaque à mains nues, vous pouvez dépenser 4 points de Credo pour déclencher ces vibrations imperceptibles, qui persistent autant de jours que votre niveau de Moine. Ces vibrations sont inoffensives jusqu'à ce que vous consacriez une action à y mettre fin. Par ailleurs, lorsque vous entreprenez l'action Attaque à votre tour, vous pouvez renoncer à l'une des attaques pour mettre un terme aux vibrations. Pour ce faire, vous et la cible devez vous trouver sur le même plan d'existence. Quand vous mettez fin aux vibrations, la cible effectue un jet de sauvegarde de Constitution, et subit 10d12 dégâts de force en cas d'échec, la moitié en cas de réussite.</p><p>Vous ne pouvez avoir qu'une créature à la fois sous l'effet de cette aptitude. Vous pouvez aussi mettre fin aux vibrations de façon inoffensive (pas d'action requise).</p>",
             "activities": {
                 "End Vibrations": {
                     "name": "Fin des vibrations",
@@ -2079,7 +2079,7 @@
         },
         "Radiant Strikes": {
             "name": "Frappes radiantes",
-            "description": "<p>Vos frappes s'accompagnent désormais de puissance surnaturelle. Quand vous touchez une cible avec un jet d'attaque avec une arme de corps à corps ou à mains nues, cette cible subit 1d8 dégâts radiants supplémentaires.</p><section class=\"secret\" id=\"secret-fSg1MH5IBJqfecX2\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui ajoute automatiquement les dégâts radiants à tous les jets de dégâts effectués avec vos attaques d'armes de corps à corps et à mains nues.</p></section>",
+            "description": "<p>Vos frappes s'accompagnent désormais de puissance surnaturelle. Quand vous touchez une cible avec un jet d'attaque avec une arme de corps à corps ou à mains nues, cette cible subit 1d8 dégâts radiants supplémentaires.</p>",
             "effects": {
                 "Radiant Strikes": {
                     "name": "Frappes radiantes"
@@ -2144,7 +2144,7 @@
         },
         "Relentless Rage": {
             "name": "Rage implacable",
-            "description": "<p>Votre Rage vous permet de continuer à combattre malgré les pires blessures. Si vous tombez à 0 point de vie alors que votre Rage est active et que vous ne mourez pas sur le coup, vous pouvez effectuer un jet de sauvegarde de Constitution DD 10. En cas de réussite, vos points de vie se retrouvent en fait au double de votre niveau de Barbare.</p><p>Par la suite et chaque fois que vous réutilisez cette aptitude, le DD augmente de 5. Lorsque vous terminez un Repos court ou long, le DD retombe à 10.</p><section class=\"secret\" id=\"secret-GTpuSHXh1ZobcQYd\"><p><strong>Note Foundry</strong></p><p>Cette aptitude augmente automatiquement le DD de 5 si vous consommez la ressource lors de son activation. Elle est également automatiquement réinitialisée à 10 après un Repos court ou long.</p></section>",
+            "description": "<p>Votre Rage vous permet de continuer à combattre malgré les pires blessures. Si vous tombez à 0 point de vie alors que votre Rage est active et que vous ne mourez pas sur le coup, vous pouvez effectuer un jet de sauvegarde de Constitution DD 10. En cas de réussite, vos points de vie se retrouvent en fait au double de votre niveau de Barbare.</p><p>Par la suite et chaque fois que vous réutilisez cette aptitude, le DD augmente de 5. Lorsque vous terminez un Repos court ou long, le DD retombe à 10.</p>",
             "requirements": "Barbare"
         },
         "Reliable Talent": {
@@ -2258,7 +2258,7 @@
         },
         "Sacred Weapon": {
             "name": "Arme sacrée",
-            "description": "<p>Lorsque vous entreprenez l'action Attaque, vous pouvez dépenser une utilisation de votre Conduit divin pour imprégner d'énergie positive une arme de corps à corps que vous brandissez. Pendant 10 minutes ou jusqu'à ce que vous recouriez de nouveau à cette aptitude, vous ajoutez votre modificateur de Charisme aux jets d'attaque effectués avec cette arme (bonus minimum de +1), et chaque fois que vous touchez avec elle, vous décidez si elle inflige son type de dégâts normal ou des dégâts radiants.</p><p>L'arme émet également une Lumière vive dans un rayon de 6 m, et une Lumière faible sur 6 m de plus.</p><p>Vous pouvez mettre fin à cet effet de façon anticipée (pas d'action requise). L'effet cesse également si vous cessez de porter l'arme.</p>",
+            "description": "<p>Lorsque vous entreprenez l'action &Reference[Attack], vous pouvez dépenser une utilisation de votre Conduit divin pour imprégner d'énergie positive une arme de corps à corps que vous brandissez. Pendant 10 minutes ou jusqu'à ce que vous recouriez de nouveau à cette aptitude, vous ajoutez votre modificateur de Charisme aux jets d'attaque effectués avec cette arme (bonus minimum de +1), et chaque fois que vous touchez avec elle, vous décidez si elle inflige son type de dégâts normal ou des dégâts radiants.</p><p>L'arme émet également une Lumière vive dans un rayon de 6 m, et une Lumière faible sur 6 m de plus.</p><p>Vous pouvez mettre fin à cet effet de façon anticipée (pas d'action requise). L'effet cesse également si vous cessez de porter l'arme.</p>",
             "effects": {
                 "Sacred Weapon": {
                     "name": "Arme sacrée",
@@ -2283,7 +2283,7 @@
         },
         "Sear Undead": {
             "name": "Calcination de mort-vivant",
-            "description": "<p>Chaque fois que vous recourez à Renvoi des morts-vivants, vous pouvez lancer autant de d8 que votre modificateur de Sagesse (minimum 1d8, actuellement [[lookup @abilities.wis.mod]]) et les ajouter. Chaque Mort-vivant qui rate son JS contre cette utilisation de Renvoi des morts-vivants subit autant de dégâts radiants que le total de ces dés. Ces dégâts ne mettent pas fin aux effets du renvoi.</p><section class=\"secret\" id=\"secret-VJPPRFTlu1fFg8XB\"><p><strong>Note Foundry</strong></p><p>Cette aptitude peut être utilisée à la place de Renvoi des morts-vivants. Elle consomme une utilisation de Conduit divin, inclut la sauvegarde, les effets actifs pour les états et le jet de dégâts de cette aptitude.</p></section>",
+            "description": "<p>Chaque fois que vous recourez à Renvoi des morts-vivants, vous pouvez lancer autant de d8 que votre modificateur de Sagesse (minimum 1d8, actuellement [[lookup @abilities.wis.mod]]) et les ajouter. Chaque Mort-vivant qui rate son JS contre cette utilisation de Renvoi des morts-vivants subit autant de dégâts radiants que le total de ces dés. Ces dégâts ne mettent pas fin aux effets du renvoi.</p>",
             "requirements": "Clerc"
         },
         "Second Wind": {
@@ -2349,7 +2349,7 @@
         },
         "Smite of Protection": {
             "name": "Châtiment de protection",
-            "description": "<p>Votre châtiment magique rayonne désormais d'une énergie protectrice. Chaque fois que vous lancez @UUID[Compendium.dnd5e.spells24.Item.phbsplDivineSmit]{châtiment divin}, vous-même et vos alliés bénéficiez d'un Abri partiel dans votre Aura de protection. L'aura bénéficie de cette aptitude jusqu'au début de votre tour suivant.</p><section class=\"secret\" id=\"secret-zaNpOup6oPMC6RtV\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui confère le statut Abri partiel, mais celui-ci n'est pas automatiquement accordé lorsque les créatures entrent/sortent de votre aura.</p></section>",
+            "description": "<p>Votre châtiment magique rayonne désormais d'une énergie protectrice. Chaque fois que vous lancez @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDivineSmit]{châtiment divin}, vous-même et vos alliés bénéficiez d'un Abri partiel dans votre Aura de protection. L'aura bénéficie de cette aptitude jusqu'au début de votre tour suivant.</p><section id=\"secret-zaNpOup6oPMC6RtV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui confère le statut Abri partiel, mais celui-ci n'est pas automatiquement accordé lorsque les créatures entrent/sortent de votre aura.</p></section>",
             "effects": {
                 "Smite of Protection": {
                     "name": "Châtiment de protection"
@@ -2389,7 +2389,7 @@
         },
         "Sorcerous Restoration": {
             "name": "Restauration ensorcelée",
-            "description": "<p>En terminant un Repos court, vous récupérez les points de Sorcellerie dépensés à concurrence de la moitié de votre niveau d'Ensorceleur (arrondir à l'inférieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-mYrbb0UHsBGBUVbN\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une utilisation gratuite par Repos long. Utilisez-la pour regagner automatiquement le nombre correct de points de Sorcellerie.</p></section>",
+            "description": "<p>En terminant un Repos court, vous récupérez les points de Sorcellerie dépensés à concurrence de la moitié de votre niveau d'Ensorceleur (arrondir à l'inférieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
             "activities": {
                 "Restore Sorcery Points": {
                     "name": "Restaurer des points de Sorcellerie"
@@ -2399,7 +2399,7 @@
         },
         "Sorcery Incarnate": {
             "name": "Sorcellerie incarnée",
-            "description": "<p>S'il ne vous reste aucune utilisation de Sorcellerie innée, vous pouvez y recourir en dépensant 2 points de Sorcellerie et l'activez par une action Bonus.</p><p>En outre et tant que votre aptitude Sorcellerie innée est active, vous pouvez utiliser jusqu'à deux de vos options de Métamagie pour chaque sort que vous lancez.</p><section id=\"secret-l8yUYHYrWEjQI4Q0\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude permet de consommer 2 points de Sorcellerie et de restaurer une utilisation de Sorcellerie innée.</p></section>",
+            "description": "<p>S'il ne vous reste aucune utilisation de Sorcellerie innée, vous pouvez y recourir en dépensant 2 points de Sorcellerie et l'activez par une action Bonus.</p><p>En outre et tant que votre aptitude Sorcellerie innée est active, vous pouvez utiliser jusqu'à deux de vos options de Métamagie pour chaque sort que vous lancez.</p>",
             "activities": {
                 "Restore Innate Sorcery": {
                     "name": "Restaurer Sorcellerie innée"
@@ -2454,7 +2454,7 @@
         },
         "Stunning Strike": {
             "name": "Frappe étourdissante",
-            "description": "<p>Une fois par tour, lorsque vous touchez une créature avec une arme de Moine ou à mains nues, vous pouvez dépenser 1 point de Credo pour tenter de placer une frappe étourdissante. La cible effectue un jet de sauvegarde de Constitution. En cas d'échec, la cible subit l'état Étourdi jusqu'au début de votre tour suivant. En cas de réussite, la Vitesse de la cible est réduite de moitié jusqu'au début de votre tour suivant et le prochain jet d'attaque contre la cible dans cet intervalle a l'Avantage.</p><section class=\"secret\" id=\"secret-bfJBOqZfcoIiBtoP\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend le jet de sauvegarde et un effet actif Étourdi qui applique l'état Étourdi en cas d'échec, ainsi qu'un effet actif Ralenti qui réduit de moitié la Vitesse et confère un Avantage au prochain jet d'attaque effectué contre lui en cas de réussite.</p></section>",
+            "description": "<p>Une fois par tour, lorsque vous touchez une créature avec une arme de Moine ou à mains nues, vous pouvez dépenser 1 point de Credo pour tenter de placer une frappe étourdissante. La cible effectue un jet de sauvegarde de Constitution. En cas d'échec, la cible subit l'état &Reference[Stunned apply=false] jusqu'au début de votre tour suivant. En cas de réussite, la Vitesse de la cible est réduite de moitié jusqu'au début de votre tour suivant et le prochain jet d'attaque contre la cible dans cet intervalle a l'Avantage.</p>",
             "activities": {
                 "save": {
                     "condition": "Une fois par tour, lorsque vous touchez une créature avec une arme de Moine ou à mains nues"
@@ -2491,7 +2491,7 @@
         },
         "Superior Defense": {
             "name": "Défense supérieure",
-            "description": "<p>Au début de votre tour, vous pouvez dépenser 3 points de Credo pour consolider votre corps pendant 1 minute (l'effet prend fin si vous subissez l'état Neutralisé). Durant cet intervalle, vous bénéficiez de la Résistance à tous les dégâts hormis ceux de force.</p><section id=\"secret-jojCvqn1dDjsyTzI\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude dépense 3 points de Credo et comprend un effet actif qui applique les Résistances correspondantes.</p></section>",
+            "description": "<p>Au début de votre tour, vous pouvez dépenser 3 points de Credo pour consolider votre corps pendant 1 minute (l'effet prend fin si vous subissez l'état &Reference[Incapacitated apply=false]). Durant cet intervalle, vous bénéficiez de la Résistance à tous les dégâts hormis ceux de force.</p>",
             "effects": {
                 "Superior Defense": {
                     "name": "Défense supérieure"
@@ -2501,7 +2501,7 @@
         },
         "Superior Hunter's Defense": {
             "name": "Défense de chasseur supérieure",
-            "description": "<p>Quand vous subissez des dégâts, vous pouvez jouer votre Réaction pour vous octroyer la Résistance aux éventuels autres dégâts du même type jusqu'à la fin de ce tour.</p><section class=\"secret\" id=\"secret-9xLaYNr0fhUQLYuZ\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif pour la Résistance à chaque type de dégâts, qui peut être appliqué pour obtenir la Résistance correspondante. Veillez à désactiver/supprimer l'effet actif précédent dans l'onglet « Effets » de votre feuille lorsque vous changez de Résistance.</p></section>",
+            "description": "<p>Quand vous subissez des dégâts, vous pouvez jouer votre Réaction pour vous octroyer la Résistance aux éventuels autres dégâts du même type jusqu'à la fin de ce tour.</p>",
             "activities": {
                 "Resistances": {
                     "name": "Résistances",
@@ -2511,7 +2511,7 @@
         },
         "Superior Hunter's Prey": {
             "name": "Proie du chasseur supérieure",
-            "description": "<p>Une fois par tour, lorsque vous infligez des dégâts à une créature marquée par votre <em>marque du chasseur</em>, vous pouvez également infliger les dégâts supplémentaires de ce sort à une créature différente que vous voyez dans un rayon de 9 m de la première.</p><section id=\"secret-AuiRnxdHXs9cXvQV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer les dégâts de la Marque du chasseur ou utiliser l'activité <strong>Dégâts</strong> sur cette aptitude.</p></section>",
+            "description": "<p>Une fois par tour, lorsque vous infligez des dégâts à une créature marquée par votre <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHuntersMar]{marque du chasseur}</em>, vous pouvez également infliger les dégâts supplémentaires de ce sort à une créature différente que vous voyez dans un rayon de 9 m de la première.</p><section id=\"secret-AuiRnxdHXs9cXvQV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez appliquer les dégâts de la Marque du chasseur ou utiliser l'activité <strong>Dégâts</strong> sur cette aptitude.</p></section>",
             "activities": {
                 "Hunter's Mark Damage": {
                     "name": "Dégâts de Marque du chasseur",
@@ -2661,7 +2661,7 @@
         },
         "Unarmored Movement": {
             "name": "Déplacement sans armure",
-            "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez ni armure ni bouclier. Ce bonus évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la table Aptitudes du Moine.</p><p><strong>Augmentation actuelle :</strong> [[lookup @scale.monk.unarmored-movement]]</p>",
+            "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez ni armure ni bouclier. Ce bonus évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la table Aptitudes du Moine.</p>",
             "effects": {
                 "Unarmored Movement": {
                     "name": "Déplacement sans armure"
@@ -2681,7 +2681,7 @@
         },
         "Uncanny Metabolism": {
             "name": "Métabolisme surnaturel",
-            "description": "<p>Lorsque vous jouez l'Initiative, vous pouvez récupérer tous vos points de Credo dépensés. Ce faisant, lancez votre dé d'Arts martiaux et récupérez autant de points de vie que votre niveau de Moine plus le résultat du dé.</p><p>Une fois que vous avez utilisé cette aptitude, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-KTgTyrtJJBs1nIDS\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'utilisation de cette aptitude permet de restaurer tous les points de Credo dépensés et offre un jet de soin pour restaurer vos points de vie. Il y a une seule utilisation gratuite par Repos long.</p></section>",
+            "description": "<p>Lorsque vous jouez l'Initiative, vous pouvez récupérer tous vos points de Credo dépensés. Ce faisant, lancez votre dé d'Arts martiaux et récupérez autant de points de vie que votre niveau de Moine plus le résultat du dé.</p><p>Une fois que vous avez utilisé cette aptitude, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
             "activities": {
                 "Uncanny Metabolism": {
                     "name": "Métabolisme surnaturel"
@@ -2925,7 +2925,7 @@
         },
         "phbmnkUnarmoredD": {
             "name": "Défense sans armure",
-            "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et Sagesse.</p><section class=\"secret\" id=\"secret-yjsIRRlbUz035Dnj\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui met à jour votre classe d'armure.</p></section>",
+            "description": "<p>Tant que vous ne portez pas d'armure, votre classe d'armure de base est égale à 10 + vos modificateurs de Dextérité et Sagesse.</p>",
             "effects": {
                 "Unarmored Defense": {
                     "name": "Défense sans armure"
@@ -2949,7 +2949,7 @@
         },
         "phbpdnExtraAttac": {
             "name": "Attaque supplémentaire",
-            "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action Attaque à votre tour.</p>"
+            "description": "<p>Vous pouvez attaquer deux fois au lieu d'une lorsque vous entreprenez l'action &Reference[Attack] à votre tour.</p>"
         },
         "phbpdnFightingSt": {
             "name": "Style de combat",
@@ -2987,7 +2987,7 @@
         },
         "phbrgrExpertise0": {
             "name": "Expertise",
-            "description": "<p>Choisissez deux de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans ces compétences.</p><section class=\"secret\" id=\"secret-8Sp7JCTIzt2U5K6u\"><p><strong>Note Foundry</strong></p><p>Un choix vous sera proposé lorsque vous atteindrez ce niveau.</p></section>",
+            "description": "<p>Choisissez deux de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans ces compétences.</p>",
             "advancement": {
                 "Expertise": {
                     "name": "Expertise"
