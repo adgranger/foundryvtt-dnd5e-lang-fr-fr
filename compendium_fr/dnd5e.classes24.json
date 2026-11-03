@@ -323,10 +323,12 @@
             },
             "activities": {
                 "Staggering Blow": {
-                    "name": "Coup stupéfiant"
+                    "name": "Coup stupéfiant",
+                    "description": "<p>La cible a le Désavantage à son prochain jet de sauvegarde et ne peut pas effectuer d'&Reference[Opportunity Attacks]{attaque d'Opportunité} jusqu'au début de votre tour suivant.</p>"
                 },
                 "Sundering Blow": {
-                    "name": "Coup déchirant"
+                    "name": "Coup déchirant",
+                    "description": "<p>Le prochain jet d'attaque effectué avant le début de votre tour suivant par une autre créature contre la cible bénéficie d'un bonus de +5. Un même jet d'attaque ne peut bénéficier que d'un seul bonus de Coup déchirant.</p>"
                 },
                 "Extra Damage": {
                     "name": "Dégâts supplémentaires",
@@ -1196,13 +1198,15 @@
         },
         "Font of Magic": {
             "name": "Réserve arcanique",
-            "description": "<p>Vous pouvez puiser dans la réserve de magie qui sommeille en vous. Cette réserve est figurée par des points de Sorcellerie, qui vous permettent de créer une variété d'effets magiques.</p><p>Vous disposez de 2 points de Sorcellerie et en recevez davantage à mesure que vous atteignez des niveaux plus élevés, comme indiqué en colonne Points de Sorcellerie de la table Aptitudes de l'Ensorceleur. Vous ne pouvez pas avoir plus de points de Sorcellerie que ce qui est indiqué sur la table à votre niveau. Vous récupérez tous les points de Sorcellerie dépensés en terminant un Repos long.</p><p>Vous pouvez utiliser vos points de Sorcellerie pour alimenter les options ci-dessous, ainsi que d'autres aptitudes comme Métamagie, qui recourent à ces points.</p><p><strong>Conversion d'emplacements de sort en points de Sorcellerie.</strong> Dépenser un emplacement de sort vous permet de recevoir un nombre de points de Sorcellerie égal au niveau de l'emplacement (pas d'action requise).</p><p><strong>Création d'emplacements de sort.</strong> Par une action Bonus, vous pouvez transformer des points de Sorcellerie non dépensés en un emplacement de sort. La table Création d'emplacements de sort indique le coût de création d'un emplacement de sort selon son niveau, ainsi que le niveau minimum d'Ensorceleur requis pour créer un tel emplacement. Vous ne pouvez pas créer un emplacement de sort au-dessus du 5<sup>e</sup> niveau.</p><p>Tout emplacement de sort créé avec cette aptitude disparaît quand vous terminez un Repos long.</p><table><caption>Création d'emplacements de sort</caption><thead><tr><td>Niveau d'emplacement de sort</td><td>Coût en points de Sorcellerie</td><td>Niveau d'Ensorceleur minimum</td></tr></thead><tbody><tr><td>1</td><td>2</td><td>2</td></tr><tr><td>2</td><td>3</td><td>3</td></tr><tr><td>3</td><td>5</td><td>5</td></tr><tr><td>4</td><td>6</td><td>7</td></tr><tr><td>5</td><td>7</td><td>9</td></tr></tbody></table><section class=\"secret\" id=\"secret-Q72pdf6OJGSybxFV\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Regain d'emplacement de sort.</strong> permet de convertir vos points de Sorcellerie en emplacements de sort.</p><p>L'activité <strong>Regain de points de Sorcellerie</strong> permet de convertir l'emplacement de sort choisi en points de Sorcellerie.</p></section>",
+            "description": "<p>Vous pouvez puiser dans la réserve de magie qui sommeille en vous. Cette réserve est figurée par des points de Sorcellerie, qui vous permettent de créer une variété d'effets magiques.</p><p>Vous disposez de 2 points de Sorcellerie et en recevez davantage à mesure que vous atteignez des niveaux plus élevés, comme indiqué en colonne Points de Sorcellerie de la table Aptitudes de l'Ensorceleur. Vous ne pouvez pas avoir plus de points de Sorcellerie que ce qui est indiqué sur la table à votre niveau. Vous récupérez tous les points de Sorcellerie dépensés en terminant un Repos long.</p><p>Vous pouvez utiliser vos points de Sorcellerie pour alimenter les options ci-dessous, ainsi que d'autres aptitudes comme Métamagie, qui recourent à ces points.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbscrFontOfMagi.Activity.qAphJay1yKd7VWxH caption=false cite=false nameStyle=inline]{Conversion d'emplacements de sort en points de Sorcellerie}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbscrFontOfMagi.Activity.rYDgagyWjp6f3jtO caption=false cite=false nameStyle=inline]{Création d'emplacements de sort}</p><table><caption><p>Création d'emplacements de sort</p></caption><thead><tr><th><p>Niveau d'emplacement de sort</p></th><th><p>Coût en points de Sorcellerie</p></th><th><p>Niveau d'Ensorceleur minimum</p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>2</p></td><td><p>2</p></td></tr><tr><td><p>2</p></td><td><p>3</p></td><td><p>3</p></td></tr><tr><td><p>3</p></td><td><p>5</p></td><td><p>5</p></td></tr><tr><td><p>4</p></td><td><p>6</p></td><td><p>7</p></td></tr><tr><td><p>5</p></td><td><p>7</p></td><td><p>9</p></td></tr></tbody></table>",
             "activities": {
                 "Regain Spell Slot": {
-                    "name": "Regain d'emplacement de sort"
+                    "name": "Regain d'emplacement de sort",
+                    "description": "<p>Par une action Bonus, vous pouvez transformer des points de Sorcellerie non dépensés en un emplacement de sort. La table Création d'emplacements de sort indique le coût de création d'un emplacement de sort selon son niveau, ainsi que le niveau minimum d'Ensorceleur requis pour créer un tel emplacement. Vous ne pouvez pas créer un emplacement de sort au-dessus du 5<sup>e</sup> niveau.</p><p>Tout emplacement de sort créé avec cette aptitude disparaît quand vous terminez un Repos long.</p>"
                 },
                 "Regain Sorcery Points": {
-                    "name": "Regain de points de Sorcellerie"
+                    "name": "Regain de points de Sorcellerie",
+                    "description": "<p>Dépenser un emplacement de sort vous permet de recevoir un nombre de points de Sorcellerie égal au niveau de l'emplacement (pas d'action requise).</p>"
                 }
             },
             "requirements": "Ensorceleur"
@@ -1259,7 +1263,7 @@
         },
         "Heightened Focus": {
             "name": "Credo accru",
-            "description": "<p>Déluge de coups, Patience défensive et Porté par le vent reçoivent respectivement les bénéfices suivants.</p><p><strong>Déluge de coups.</strong> Vous pouvez dépenser 1 point de Credo pour recourir à Déluge de coups et effectuer trois attaques à mains nues au lieu de deux.</p><p><strong>Patience défensive.</strong> Lorsque vous dépensez un point de Credo pour recourir à Patience défensive, vous recevez des points de vie temporaires égaux à deux jets de votre dé d'Arts martiaux.</p><p><strong>Porté par le vent.</strong> Lorsque vous dépensez un point de Credo pour recourir à Porté par le vent, vous pouvez choisir une créature consentante dans un rayon de 1,50 m, de taille G ou inférieure. Vous déplacez la créature avec vous jusqu'à la fin de votre tour. Le déplacement de la créature ne provoque pas d'attaques d'Opportunité.</p><section class=\"secret\" id=\"secret-OnZBuksoGlTtaJJC\"><p><strong>Note Foundry</strong></p><p>L'aptitude <strong>Déluge de coups</strong> dépense 1 point de Credo et vous pouvez alors effectuer trois attaques à mains nues.</p><p>L'aptitude <strong>Patience défensive</strong> lancera les points de vie temporaires pour vous.</p></section>",
+            "description": "<p>Déluge de coups, Patience défensive et Porté par le vent reçoivent respectivement les bénéfices suivants.</p><p><em><strong>Déluge de coups.</strong></em> Vous pouvez dépenser 1 point de Credo pour recourir à Déluge de coups et effectuer trois attaques à mains nues au lieu de deux.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.KpoKztsxm5yuJWk6 caption=false cite=false nameStyle=inline]{Patience défensive}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.R3sqnBDwAjve0FvW caption=false cite=false nameStyle=inline]{Porté par le vent}</p>",
             "requirements": "Moine"
         },
         "Heightened Spell": {
@@ -1278,7 +1282,7 @@
         },
         "Holy Nimbus": {
             "name": "Nimbe sacré",
-            "description": "<p>Par une action Bonus, votre Aura de protection est renforcée de puissance sacrée, ce qui octroie les bénéfices ci-après pendant 10 minutes ou jusqu'à ce que vous décidiez d'y mettre fin (pas d'action requise). Une fois que vous avez utilisé cette aptitude, vous devez terminer un Repos long pour pouvoir y recourir de nouveau. Vous pouvez également retrouver son usage en dépensant un emplacement de sort du 5<sup>e</sup> niveau (pas d'action requise).</p><p><strong>Dégâts radiants.</strong> Chaque fois qu'un ennemi débute son tour dans l'aura, cette créature subit un total de dégâts radiants égal à votre modificateur de Charisme + votre bonus de maîtrise.</p><p><strong>Lumière du soleil.</strong> L'aura est inondée d'une Lumière vive qui est la lumière du soleil.</p><p><strong>Périmètre sacré.</strong> Vous bénéficiez de l'Avantage à tout jet de sauvegarde que vous contraint d'effectuer un Fielon ou un Mort-vivant.</p><section id=\"secret-WendmZ2xiuj3cSwE\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif pour le suivi de votre Nimbe sacré, mais elle n'automatise pas l'Avantage aux jets de sauvegarde.</p><p>L'activité <strong>Nimbe sacré</strong> inclut un jet de dégâts.</p><p>L'activité <strong>Récupérer l'usage</strong> consommera un emplacement de sort du 5<sup>e</sup> niveau et restaurera une utilisation de cette aptitude.</p></section>",
+            "description": "<p>Par une action Bonus, votre Aura de protection est renforcée de puissance sacrée, ce qui octroie les bénéfices ci-après pendant 10 minutes ou jusqu'à ce que vous décidiez d'y mettre fin (pas d'action requise). Une fois que vous avez utilisé cette aptitude, vous devez terminer un Repos long pour pouvoir y recourir de nouveau. Vous pouvez également retrouver son usage en dépensant un emplacement de sort du 5<sup>e</sup> niveau (pas d'action requise).</p><p><em><strong>Dégâts radiants.</strong></em> Chaque fois qu'un ennemi débute son tour dans l'aura, cette créature subit un total de dégâts radiants égal à votre modificateur de Charisme + votre bonus de maîtrise.</p><p><em><strong>Lumière du soleil.</strong></em> L'aura est inondée d'une &Reference[Bright Light] qui est la lumière du soleil.</p><p><em><strong>Périmètre sacré.</strong></em> Vous bénéficiez de l'Avantage à tout jet de sauvegarde que vous contraint d'effectuer un Fielon ou un Mort-vivant.</p><section id=\"secret-WendmZ2xiuj3cSwE\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif pour le suivi de votre Nimbe sacré, mais elle n'automatise pas l'Avantage aux jets de sauvegarde.</p><p>L'activité <strong>Nimbe sacré</strong> inclut un jet de dégâts.</p><p>L'activité <strong>Récupérer l'usage</strong> consommera un emplacement de sort du 5<sup>e</sup> niveau et restaurera une utilisation de cette aptitude.</p></section>",
             "activities": {
                 "Holy Nimbus": {
                     "name": "Nimbe sacré"
@@ -1308,11 +1312,12 @@
         },
         "Hunter's Prey": {
             "name": "Proie du chasseur",
-            "description": "<p>Vous recevez l'une des aptitudes suivantes au choix. Chaque fois que vous terminez un Repos court ou long, vous pouvez remplacer l'option choisie par l'autre.</p><p><strong>Briseur de hordes.</strong> Une fois à chacun de vos tours quand vous effectuez une attaque avec arme, vous pouvez effectuer une nouvelle attaque avec la même arme contre une créature différente dans un rayon de 1,50 m de la cible initiale et à portée de cette arme, à condition de ne pas l'avoir déjà attaquée ce tour-ci.</p><p><strong>Goût du sang.</strong> Votre ténacité vient à bout des ennemis les plus robustes. Lorsque vous touchez une créature avec une arme, celle-ci inflige 1d8 dégâts supplémentaires à la cible s'il lui manque des points de vie. Vous ne pouvez infliger ces dégâts supplémentaires qu'une seule fois par tour.</p><section class=\"secret\" id=\"secret-I2q5Nm7g6mkLjH5Y\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité <strong>Goût du sang</strong> pour les dégâts supplémentaires. Vous pouvez sélectionner le bon type de dégâts dans la boîte de dialogue du jet.</p><p>Pour l'option <strong>Briseur de hordes</strong>, il suffit d'effectuer une nouvelle attaque.</p></section>",
+            "description": "<p>Vous recevez l'une des aptitudes suivantes au choix. Chaque fois que vous terminez un Repos court ou long, vous pouvez remplacer l'option choisie par l'autre.</p><p><em><strong>Briseur de hordes.</strong></em> Une fois à chacun de vos tours quand vous effectuez une attaque avec arme, vous pouvez effectuer une nouvelle attaque avec la même arme contre une créature différente dans un rayon de 1,50 m de la cible initiale et à portée de cette arme, à condition de ne pas l'avoir déjà attaquée ce tour-ci.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgrHuntersPre.Activity.Ek6m8ZY5Df7Mp6DO caption=false cite=false nameStyle=inline]</p><section id=\"secret-I2q5Nm7g6mkLjH5Y\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité <strong>Goût du sang</strong> pour les dégâts supplémentaires. Vous pouvez sélectionner le bon type de dégâts dans la boîte de dialogue du jet.</p><p>Pour l'option <strong>Briseur de hordes</strong>, il suffit d'effectuer une nouvelle attaque.</p></section>",
             "activities": {
                 "Colossus Slayer": {
                     "name": "Goût du sang",
-                    "condition": "Une fois par tour, lorsque vous touchez une créature avec une arme"
+                    "condition": "Une fois par tour, lorsque vous touchez une créature avec une arme",
+                    "description": "<p>Votre ténacité vient à bout des ennemis les plus robustes. Lorsque vous touchez une créature avec une arme, celle-ci inflige 1d8 dégâts supplémentaires à la cible s'il lui manque des points de vie. Vous ne pouvez infliger ces dégâts supplémentaires qu'une seule fois par tour.</p>"
                 }
             }
         },
@@ -1336,7 +1341,7 @@
         },
         "Improved Brutal Strike": {
             "name": "Coup brutal amélioré",
-            "description": "<p>Vous avez développé de nouveaux coups féroces. Les effets ci-après figurent désormais dans vos options de Coup brutal.</p><p><strong>Coup déchirant.</strong> Le prochain jet d'attaque effectué avant le début de votre tour suivant par une autre créature contre la cible bénéficie d'un bonus de +5. Un même jet d'attaque ne peut bénéficier que d'un seul bonus de Coup déchirant.</p><p><strong>Coup stupéfiant.</strong> La cible a le Désavantage à son prochain jet de sauvegarde et ne peut pas effectuer d'attaque d'Opportunité jusqu'au début de votre tour suivant.</p><section class=\"secret\" id=\"secret-5KFPx8fyh5NldmJp\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une activité pour chaque option qui comprend un effet actif pour suivre les Coups déchirants et stupéfiants, mais n'automatise pas leurs effets.</p></section>",
+            "description": "<p>Vous avez développé de nouveaux coups féroces. Les effets ci-après figurent désormais dans vos options de Coup brutal.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbbrbBrutalStri.Activity.MP1qQsApCj19F2M5 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbbrbBrutalStri.Activity.vcAdrcmUKQWA68QT caption=false cite=false nameStyle=inline]</p>",
             "requirements": "Barbare"
         },
         "Improved Brutal Strike (2)": {
@@ -1493,7 +1498,7 @@
         },
         "Lay on Hands": {
             "name": "Imposition des mains",
-            "description": "<p>Votre contact béni peut soigner les blessures. Vous disposez d'une réserve de puissance curatrice qui se reconstitue lorsque vous terminez un Repos long. Cette réserve vous permet de restituer un total de points de vie égal à cinq fois votre niveau de Paladin.</p><p>Par une action Bonus, vous pouvez puiser tout ou partie de cette réserve et, d'un simple contact, restituer autant de points de vie à une créature (qui peut être vous-même) à concurrence du maximum de cette réserve.</p><p>Vous pouvez également dépenser 5 points de vie de la réserve de puissance curatrice pour supprimer l'état Empoisonné affectant la créature ; ces points ne font pas récupérer de pv à la créature.</p><section id=\"secret-CgxYFHh5PcKwwbwk\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Soigner</strong> vous permet de choisir le nombre de points de vie que vous souhaitez restaurer et réduit votre réserve d'Imposition des mains de ce montant.</p><p>L'activité <strong>Supprimer le poison</strong> réduit votre réserve de 5 mais n'enlève pas automatiquement l'état Empoisonné.</p></section>",
+            "description": "<p>Votre contact béni peut soigner les blessures. Vous disposez d'une réserve de puissance curatrice qui se reconstitue lorsque vous terminez un Repos long. Cette réserve vous permet de restituer un total de points de vie égal à cinq fois votre niveau de Paladin.</p><p>Par une action Bonus, vous pouvez puiser tout ou partie de cette réserve et, d'un simple contact, restituer autant de points de vie à une créature (qui peut être vous-même) à concurrence du maximum de cette réserve.</p><p>Vous pouvez également dépenser 5 points de vie de la réserve de puissance curatrice pour supprimer l'état &Reference[Poisoned apply=false] affectant la créature ; ces points ne font pas récupérer de pv à la créature.</p><section id=\"secret-CgxYFHh5PcKwwbwk\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Supprimer le poison</strong> réduit votre réserve de 5 mais n'enlève pas automatiquement l'état Empoisonné.</p></section>",
             "activities": {
                 "Remove Poison": {
                     "name": "Supprimer le poison"
@@ -1561,7 +1566,7 @@
         },
         "Martial Arts": {
             "name": "Arts martiaux",
-            "description": "<p>Votre pratique des arts martiaux vous permet de maîtriser des styles de combat axés sur vos attaques à mains nues et vos armes de Moine, à savoir :</p><ul><li>Les armes courantes de corps à corps</li><li>Les armes de guerre dotées de la propriété Légère</li></ul><p>Tant que vous combattez à mains nues ou avec des armes de Moine et que vous ne portez ni armure ni bouclier, vous recevez les bénéfices suivants.</p><p><strong>Attaque à mains nues supplémentaire.</strong> Vous pouvez effectuer une attaque à mains nues par une action Bonus.</p><p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1d6 à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Dé d'Arts martiaux actuel :</strong> [[lookup @scale.monk.die]]</p><p><strong>Attaques lestes.</strong>Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p><section class=\"secret\" id=\"secret-krbGYn2lplFe7kOG\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut des activités pour enchanter une arme qui ajoute une activité <strong>Attaque de Moine</strong> qui intègre les changements mentionnés ci-dessus.</p></section>",
+            "description": "<p>Votre pratique des arts martiaux vous permet de maîtriser des styles de combat axés sur vos attaques à mains nues et vos armes de Moine, à savoir :</p><ul><li><p>Les armes courantes de corps à corps</p></li><li><p>Les armes de guerre dotées de la propriété Légère</p></li></ul><p>Tant que vous combattez à mains nues ou avec des armes de Moine et que vous ne portez ni armure ni bouclier, vous recevez les bénéfices suivants.</p><p><em><strong>Attaque à mains nues supplémentaire.</strong></em> Vous pouvez effectuer une attaque à mains nues par une action Bonus.</p><p><em><strong>Dé d'Arts martiaux.</strong></em> Vous pouvez lancer 1d6 à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><em><strong>Attaques lestes.</strong></em> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
             "activities": {
                 "Master Simple Weapon": {
                     "name": "Maître en arme courante"
@@ -1573,7 +1578,7 @@
             "effects": {
                 "Dexterous Attacks & Martial Arts Damage": {
                     "name": "Attaques lestes et dégâts de Arts martiaux",
-                    "description": "<p><strong>Dé d'Arts martiaux.</strong> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><strong>Attaques lestes.</strong> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
+                    "description": "<p><em><strong>Dé d'Arts martiaux.</strong></em> Vous pouvez lancer 1[[lookup @scale.monk.die]] à la place des dégâts normaux de votre attaque à mains nues et de vos armes de Moine. Ce dé évolue à mesure que vous gagnez des niveaux de Moine, comme indiqué dans la colonne Dé d'Arts martiaux de la table Aptitudes du Moine.</p><p><em><strong>Attaques lestes.</strong></em> Vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour les jets d'attaque et de dégâts si vous attaquez à mains nues ou avec des armes de Moine. De plus, lorsque vous recourez à l'option Bousculade ou Lutte de votre attaque à mains nues, vous pouvez appliquer votre modificateur de Dextérité au lieu de celui de Force pour en déterminer le DD de sauvegarde.</p>",
                     "changes": {
                         "3": "{} (Arts martiaux)"
                     }
@@ -1696,7 +1701,7 @@
         },
         "Monk's Focus": {
             "name": "Credo du moine",
-            "description": "<p>Votre discipline et votre formation martiale vous mettent de puiser dans la source d'énergie extraordinaire qui est en vous. Cette énergie est représentée par les points de Credo. Votre niveau de Moine détermine le nombre de points dont vous disposez, comme indiqué dans la colonne Points de Credo de la table Aptitudes du Moine.</p><p>Vous pouvez dépenser ces points pour améliorer ou alimenter certaines aptitudes de Moine. Vous débutez en connaissant trois de ces aptitudes : Déluge de coups, Patience défensive et Porté par le vent, détaillées chacune ci-après.</p><p>Lorsque vous dépensez un point de Credo, il n'est plus disponible jusqu'à ce que vous terminiez un Repos court ou long, à l'issue duquel vous récupérez tous vos points dépensés.</p><p>Certaines aptitudes basées sur les points de Credo imposent un jet de sauvegarde à votre cible. Le DD de sauvegarde est égal à 8 plus votre modificateur de Sagesse et votre bonus de maîtrise.</p><p><strong>Déluge de coups.</strong> Vous pouvez dépenser 1 point de Credo pour effectuer deux attaques à mains nues au prix d'une action Bonus.</p><p><strong>Patience défensive.</strong> Vous pouvez entreprendre l'action Désengagement par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Esquive.</p><p><strong>Porté par le vent.</strong> Vous pouvez entreprendre l'action Pointe par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Pointe, et de doubler votre distance de saut pour ce tour.</p><section class=\"secret\" id=\"secret-Kb8gEVefEUz6IHer\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Déluge de coups.</strong> est une action Bonus qui dépense un point de Credo et inclut le jet d'attaque et les dégâts pour un coup sans armure en utilisant votre dé d'arts martiaux qui évolue automatiquement au fur et à mesure que vous montez en niveau.</p><p>L'activité <strong>Patience défensive</strong> est une action Bonus qui comprend un effet actif pour le suivi du Désengagement. L'activité <strong>Patience défensive (point de Credo)</strong> dépense un point de Credo et comprend un effet actif qui ajoute le statut Esquive.</p><p>L'activité <strong>Porté par le vent</strong> est une action Bonus qui dépense 1 point de Credo et comprend un effet actif qui permet de savoir si vous êtes Désengagé.</p></section>",
+            "description": "<p>Votre discipline et votre formation martiale vous mettent de puiser dans la source d'énergie extraordinaire qui est en vous. Cette énergie est représentée par les points de Credo. Votre niveau de Moine détermine le nombre de points dont vous disposez, comme indiqué dans la colonne Points de Credo de la table Aptitudes du Moine.</p><p>Vous pouvez dépenser ces points pour améliorer ou alimenter certaines aptitudes de Moine. Vous débutez en connaissant trois de ces aptitudes : Déluge de coups, Patience défensive et Porté par le vent, détaillées chacune ci-après.</p><p>Lorsque vous dépensez un point de Credo, il n'est plus disponible jusqu'à ce que vous terminiez un Repos court ou long, à l'issue duquel vous récupérez tous vos points dépensés.</p><p>Certaines aptitudes basées sur les points de Credo imposent un jet de sauvegarde à votre cible. Le DD de sauvegarde est égal à 8 plus votre modificateur de Sagesse et votre bonus de maîtrise.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.2ghJTBhilLrFn9xT caption=false cite=false nameStyle=inline]</p><p><em><strong>Patience défensive.</strong></em> Vous pouvez entreprendre l'action Désengagement par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Esquive.</p><p><em><strong>Porté par le vent.</strong></em> Vous pouvez entreprendre l'action Pointe par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Pointe, et de doubler votre distance de saut pour ce tour.</p>",
             "requirements": "Moine",
             "activities": {
                 "Flurry of Blows": {
@@ -1714,6 +1719,12 @@
                 },
                 "Flurry of Blows (Heightened)": {
                     "chatFlavor": "Effectuer deux [[/item Attaque à mains nues]]{attaques à mains nues}"
+                },
+                "Patient Defense (Focus Point, Heightened)": {
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.7xj7b6e8tDznDSrE inline classes=\"hide-in-embed\"]</p><p>Lorsque vous dépensez un point de Credo pour recourir à Patience défensive, vous recevez des points de vie temporaires égaux à deux jets de votre dé d'Arts martiaux.</p>"
+                },
+                "Step of the Wind (Focus Point, Heightened)": {
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.Iv2YrISquTZWEjjN inline classes=\"hide-in-embed\"]</p><p>Lorsque vous dépensez un point de Credo pour recourir à Porté par le vent, vous pouvez choisir une créature consentante dans un rayon de 1,50 m, de taille G ou inférieure. Vous déplacez la créature avec vous jusqu'à la fin de votre tour. Le déplacement de la créature ne provoque pas d'attaques d'Opportunité.</p>"
                 }
             }
         },
@@ -1846,24 +1857,28 @@
         },
         "Open Hand Technique": {
             "name": "Technique de la Paume",
-            "description": "<p>Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups, vous pouvez imposer l'un des effets suivants à cette cible.</p><p><strong>Bourrade.</strong> La cible doit réussir un jet de sauvegarde de Force sous peine d'être repoussée de vous d'un maximum de 4,50 m.</p><p><strong>Hésitation.</strong> La cible ne peut pas effectuer d'attaque d'Opportunité jusqu'au début de son tour suivant.</p><p><strong>Renversement.</strong> La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état À terre.</p><section id=\"secret-4BkgU26V2trst09S\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Hésitation</strong> comprend un effet actif permettant de suivre la cible repoussée.</p><p>L'activité <strong>Renversement</strong> comprend un effet actif qui applique l'état À terre.</p></section>",
+            "description": "<p>Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups, vous pouvez imposer l'un des effets suivants à cette cible.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkOpenHandTe.Activity.XoaS0RtDCGAqrQsf caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkOpenHandTe.Activity.1jdSaWanuRrdkVs3 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkOpenHandTe.Activity.5Qgc0K3TfuonkPIG caption=false cite=false nameStyle=inline]</p>",
             "activities": {
                 "Addle": {
                     "name": "Hésitation",
-                    "condition": "Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups"
+                    "condition": "Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups",
+                    "description": "<p>La cible ne peut pas effectuer d'attaque d'Opportunité jusqu'au début de son tour suivant.</p>"
                 },
                 "Push": {
                     "name": "Bourrade",
-                    "condition": "Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups"
+                    "condition": "Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups",
+                    "description": "<p>La cible doit réussir un jet de sauvegarde de Force sous peine d'être repoussée de vous d'un maximum de 4,50 m.</p>"
                 },
                 "Topple": {
                     "name": "Renversement",
-                    "condition": "Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups"
+                    "condition": "Chaque fois que vous touchez une créature avec l'une des attaques octroyées par Déluge de coups",
+                    "description": "<p>La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir l'état &Reference[Prone apply=false].</p>"
                 }
             },
             "effects": {
                 "Addled": {
-                    "name": "Hésitation"
+                    "name": "Hésitation",
+                    "description": "<p>La cible ne peut pas effectuer d'attaque d'Opportunité jusqu'au début de son tour suivant.</p>"
                 }
             },
             "requirements": "Credo de la Paume"
@@ -2104,7 +2119,7 @@
         },
         "Rage": {
             "name": "Rage",
-            "description": "<p>Vous pouvez vous animer d'une force primitive appelée Rage, qui vous investit d'une puissance et d'une résistance accrues. Vous pouvez entrer en Rage, par une action Bonus, si vous ne portez pas d'armure lourde.</p><p>Vous pouvez entrer en Rage autant de fois par jour qu'indiqué dans la colonne Rages de la table Aptitudes du Barbare, pour votre niveau de Barbare. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Tant que votre Rage est active, les règles suivantes s'appliquent.</p><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p><p><strong>Ni Concentration ni sorts.</strong> Vous ne pouvez pas maintenir votre Concentration ni lancer de sorts.</p><p><strong>Durée.</strong> La Rage persiste jusqu'à la fin de votre tour suivant, mais se termine prématurément si vous enfilez une armure lourde ou subissez l'état Neutralisé. Si votre Rage est encore active lorsque votre tour suivant intervient, vous pouvez la prolonger d'un round par n'importe laquelle des choses suivantes :</p><ul><li>Effectuer un jet d'attaque contre un ennemi.</li><li>Contraindre un ennemi à effectuer un jet de sauvegarde.</li><li>Entreprendre une action Bonus pour prolonger votre Rage.</li></ul><p>Chaque fois que la Rage est prolongée, elle persiste jusqu'à la fin de votre tour suivant. Vous pouvez maintenir votre Rage pendant un maximum de 10 minutes.</p><section class=\"secret\" id=\"secret-o72MSFMdhSQC7kYa\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise la Résistance et les dégâts supplémentaires. Elle recharge également automatiquement vos utilisations de Rage lors des Repos courts et longs.</p></section>",
+            "description": "<p>Vous pouvez vous animer d'une force primitive appelée Rage, qui vous investit d'une puissance et d'une résistance accrues. Vous pouvez entrer en Rage, par une action Bonus, si vous ne portez pas d'armure lourde.</p><p>Vous pouvez entrer en Rage autant de fois par jour qu'indiqué dans la colonne Rages de la table Aptitudes du Barbare, pour votre niveau de Barbare. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Tant que votre Rage est active, les règles suivantes s'appliquent.</p><p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p><p><strong>Ni Concentration ni sorts.</strong> Vous ne pouvez pas maintenir votre Concentration ni lancer de sorts.</p><p><strong>Durée.</strong> La Rage persiste jusqu'à la fin de votre tour suivant, mais se termine prématurément si vous enfilez une armure lourde ou subissez l'état Neutralisé. Si votre Rage est encore active lorsque votre tour suivant intervient, vous pouvez la prolonger d'un round par n'importe laquelle des choses suivantes :</p><ul><li><p>Effectuer un jet d'attaque contre un ennemi.</p></li><li><p>Contraindre un ennemi à effectuer un jet de sauvegarde.</p></li><li><p>Entreprendre une action Bonus pour prolonger votre Rage.</p></li></ul><p>Chaque fois que la Rage est prolongée, elle persiste jusqu'à la fin de votre tour suivant. Vous pouvez maintenir votre Rage pendant un maximum de 10 minutes.</p>",
             "requirements": "Barbare",
             "effects": {
                 "Rage": {
@@ -2146,7 +2161,7 @@
         },
         "Reckless Attack": {
             "name": "Témérité",
-            "description": "<p>Vous pouvez renoncer à toute velléité de vous défendre au profit d'une férocité accrue. Quand vous effectuez le premier jet d'attaque de votre tour, vous pouvez décider d'attaquer avec témérité. Ce faisant, vous avez l'Avantage aux jets d'attaque basés sur la Force jusqu'au début de votre tour suivant, mais les jets d'attaque contre vous ont l'Avantage dans le même intervalle.</p><section id=\"secret-W7MI2ZVKsMQcSW6d\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif permettant de savoir si vous êtes imprudent ou non, mais elle n'automatise pas l'Avantage sur vos attaques ou les attaques contre vous.</p></section>",
+            "description": "<p>Vous pouvez renoncer à toute velléité de vous défendre au profit d'une férocité accrue. Quand vous effectuez le premier jet d'attaque de votre tour, vous pouvez décider d'attaquer avec témérité. Ce faisant, vous avez l'Avantage aux jets d'attaque basés sur la Force jusqu'au début de votre tour suivant, mais les jets d'attaque contre vous ont l'Avantage dans le même intervalle.</p><section id=\"secret-W7MI2ZVKsMQcSW6d\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif permettant de gérer l’avantage lors de vos attaques, mais elle n’automatise pas l’avantage lors des attaques dirigées contre vous.</p></section>",
             "requirements": "Barbare",
             "effects": {
                 "Reckless": {
@@ -2202,7 +2217,7 @@
         },
         "Restoring Touch": {
             "name": "Toucher réparateur",
-            "description": "<p>Lorsque vous utilisez Imposition des mains sur une créature vous pouvez également lui retirer un ou plusieurs des états ci-après : Assourdi, Aveuglé, Charmé, Effrayé, Étourdi ou Paralysé. Vous devez dépenser 5 points de vie de la réserve de soins d'Imposition des mains pour chacun des états que vous supprimez ; ces points ne rendent pas de pv à la créature.</p><section class=\"secret\" id=\"secret-jxD0l6XyrF6DQqyI\"><p><strong>Note Foundry</strong></p><p>Cette aptitude permet de sélectionner le nombre d'états que vous souhaitez supprimer, ce qui consommera automatiquement le nombre correct de votre réserve d'Imposition des mains.</p></section>"
+            "description": "<p>Lorsque vous utilisez Imposition des mains sur une créature vous pouvez également lui retirer un ou plusieurs des états ci-après : &Reference[Deafened apply=false], &Reference[Blinded apply=false], &Reference[Charmed apply=false], &Reference[Frightened apply=false], &Reference[Stunned apply=false] ou &Reference[Paralyzed apply=false]. Vous devez dépenser 5 points de vie de la réserve de soins d'Imposition des mains pour chacun des états que vous supprimez ; ces points ne rendent pas de pv à la créature.</p><section id=\"secret-jxD0l6XyrF6DQqyI\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude permet de sélectionner le nombre d'états que vous souhaitez supprimer, ce qui consommera automatiquement le nombre correct de votre réserve d'Imposition des mains.</p></section>"
         },
         "Retaliation": {
             "name": "Représailles",
@@ -2265,7 +2280,7 @@
         },
         "Roving": {
             "name": "Arpenteur",
-            "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez pas d'armure lourde. Vous disposez en outre d'une Vitesse d'escalade et de nage égales à votre valeur de Vitesse.</p>",
+            "description": "<p>Votre Vitesse augmente de 3 m tant que vous ne portez pas d'armure lourde. Vous disposez en outre d'une Vitesse d'escalade et de nage égales à votre valeur de Vitesse.</p><section class=\"secret\" id=\"secret-XnQYiG0fJWJSHkQw\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui peut être désactivé si vous portez une armure lourde.</p></section>",
             "effects": {
                 "Roving": {
                     "name": "Arpenteur"
@@ -2614,13 +2629,15 @@
         },
         "Tireless": {
             "name": "Infatigable",
-            "description": "<p>Les forces primitives vous soutiennent désormais lors de vos périples, ce qui vous octroie les bénéfices suivants.</p><p><strong>Points de vie temporaires.</strong> Au prix de l'action Magie, vous pouvez vous octroyer un nombre de points de vie temporaires égal à 1d8 + votre modificateur de Sagesse (minimum +1). Vous pouvez recourir à cette action autant de fois que votre modificateur de Sagesse (minimum d'une fois) et récupérez ce quota en terminant un Repos long.</p><p><strong>Diminuer l'Épuisement.</strong> Chaque fois que vous terminez un Repos court, votre éventuel niveau d'Épuisement diminue de 1.</p><section id=\"secret-wlhwV2MDwGKQ8plw\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Points de vie temporaires</strong> peut vous appliquer les points de vie temporaires.</p><p>L'activité <strong>Diminuer l'Épuisement</strong> diminuera votre Épuisement.</p></section>",
+            "description": "<p>Les forces primitives vous soutiennent désormais lors de vos périples, ce qui vous octroie les bénéfices suivants.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgrTireless00.Activity.T17ZXCxvxeDwPoz5 caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgrTireless00.Activity.y2cSZJxteG7Yew0u caption=false cite=false nameStyle=inline]</p>",
             "activities": {
                 "Temporary Hit Points": {
-                    "name": "Points de vie temporaires"
+                    "name": "Points de vie temporaires",
+                    "description": "<p>Au prix de l'action &Reference[Magic], vous pouvez vous octroyer un nombre de points de vie temporaires égal à 1d8 + votre modificateur de Sagesse (minimum +1). Vous pouvez recourir à cette action autant de fois que votre modificateur de Sagesse (minimum d'une fois) et récupérez ce quota en terminant un Repos long.</p>"
                 },
                 "Decrease Exhaustion": {
-                    "name": "Diminuer l'Épuisement"
+                    "name": "Diminuer l'Épuisement",
+                    "description": "<p>Chaque fois que vous terminez un Repos court, votre éventuel niveau d'Épuisement diminue de 1.</p>"
                 }
             }
         },
@@ -2969,7 +2986,7 @@
         },
         "phbpdnFightingSt": {
             "name": "Style de combat",
-            "description": "<p>Vous recevez le don de @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstBlessedWar caption=false]</p>",
+            "description": "<p>Vous recevez le don de @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstBlessedWar caption=false nameStyle=inline]</p>",
             "advancement": {
                 "Fighting Style": {
                     "name": "Style de combat"
@@ -3016,7 +3033,7 @@
         },
         "phbrgrFightingSt": {
             "name": "Style de combat",
-            "description": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{don de Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstDruidicWar caption=false]</p>",
+            "description": "<p>Vous recevez le don de Style de combat de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstDruidicWar caption=false nameStyle=inline]</p>",
             "advancement": {
                 "Fighting Style": {
                     "name": "Style de combat"
