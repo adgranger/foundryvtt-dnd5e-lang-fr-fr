@@ -246,7 +246,12 @@
         "Blessed Healer": {
             "name": "Guérisseur béni",
             "description": "<p>Les sorts de guérison que vous lancez sur autrui vous soignent également. Aussitôt après avoir lancé par un emplacement un sort qui restitue des points de vie à une ou plusieurs créatures autres que vous, vous récupérez un nombre de points de vie égal à 2 plus le niveau de l'emplacement.</p><section class=\"secret\" id=\"secret-B3oOPhBUFT9dOwUQ\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité de soin. Réglez l'évolution sur le niveau de l'emplacement de sort que vous lancez et elle vous fournira un jet de soin.</p></section>",
-            "requirements": "Domaine de la Vie"
+            "requirements": "Domaine de la Vie",
+            "activities": {
+                "heal": {
+                    "condition": "Lorsque vous lancez un sort avec un emplacement de sort qui rend des points de vie à une ou plusieurs créatures autres que vous"
+                }
+            }
         },
         "Blessed Strikes": {
             "name": "Impacts bénis",
@@ -254,7 +259,8 @@
             "requirements": "Clerc",
             "advancement": {
                 "Blessed Strikes Choice": {
-                    "name": "Choix d'Impacts bénis"
+                    "name": "Choix d'Impacts bénis",
+                    "hint": "<p>La puissance divine vous anime au combat. Vous recevez l'une des options suivantes de votre choix (si vous avez obtenu une de ces options par une sous-classe de Clerc issue d'un ouvrage plus ancien, ne retenez que l'option choisie par la présente aptitude).</p>"
                 }
             }
         },
@@ -264,7 +270,16 @@
             "requirements": "Clerc",
             "activities": {
                 "Divine Strike": {
-                    "name": "Impact divin"
+                    "name": "Impact divin",
+                    "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme, vous pouvez lui infliger 1d8 dégâts supplémentaires du type que vous choisissez entre nécrotiques et radiants.</p>",
+                    "target": "Lorsque vous touchez une créature par un jet d'attaque avec une arme une fois par tour",
+                    "condition": "Lorsque vous touchez une créature par un jet d'attaque avec une arme"
+                },
+                "Improved Divine Strike": {
+                    "condition": "Lorsque vous touchez une créature par un jet d'attaque avec une arme",
+                    "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme, vous pouvez lui infliger 2d8 dégâts supplémentaires du type que vous choisissez entre nécrotiques et radiants.</p>",
+                    "name": "Impact divin amélioré",
+                    "target": "Lorsque vous touchez une créature par un jet d'attaque avec une arme une fois par tour"
                 }
             }
         },
@@ -274,8 +289,13 @@
             "requirements": "Clerc",
             "activities": {
                 "Heal": {
-                    "name": "Guérison",
+                    "name": "Soigner",
                     "condition": "Lorsque vous lancez un sort mineur de Clerc et infligez des dégâts à une créature par son biais"
+                }
+            },
+            "effects": {
+                "Potent Spellcasting": {
+                    "name": "Incantation puissante"
                 }
             }
         },
@@ -391,7 +411,8 @@
                 },
                 "Sear Undead": {
                     "name": "Calcination de mort-vivant",
-                    "target": "Mort-vivant de votre choix"
+                    "target": "Mort-vivant de votre choix",
+                    "description": "<p>Au prix de l'action &Reference[Magic], vous brandissez votre symbole sacré pour condamner les Morts-vivants. Chaque Mort-vivant de votre choix dans un rayon de 9 m effectue un jet de sauvegarde de Sagesse. En cas d'échec, la créature subit les états &Reference[Frightened apply=false] et &Reference[Incapacitated apply=false] pendant 1 minute. Pour toute la durée, elle s'efforce de s'éloigner de vous autant que possible à chacun de ses tours. Cet effet prend fin prématurément si la créature subit des dégâts, si vous subissez l'état Neutralisé ou si vous mourez.</p><p>Chaque fois que vous recourez à Renvoi des morts-vivants, vous pouvez lancer autant de d8 que votre modificateur de Sagesse (minimum 1d8, actuellement [[lookup @abilities.wis.mod]]) et les ajouter. Chaque Mort-vivant qui rate son JS contre cette utilisation de Renvoi des morts-vivants subit autant de dégâts radiants que le total de ces dés. Ces dégâts ne mettent pas fin aux effets du renvoi.</p>"
                 }
             },
             "effects": {
@@ -450,6 +471,9 @@
                 },
                 "Cantrips": {
                     "name": "Sorts mineurs"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
                 }
             }
         },
@@ -712,14 +736,20 @@
             "requirements": "Clerc",
             "advancement": {
                 "Divine Order Choice": {
-                    "name": "Choix de l'Ordre divin"
+                    "name": "Choix de l'Ordre divin",
+                    "hint": "<p>Vous consacrez votre existence à l'un des rôles sacrés suivants, au choix.</p>"
                 }
             }
         },
         "Divine Order: Protector": {
             "name": "Ordre divin : Protecteur",
             "description": "<p>Combattant chevronné, vous recevez la maîtrise des armes de guerre et la formation aux armures lourdes.</p>",
-            "requirements": "Clerc"
+            "requirements": "Clerc",
+            "advancement": {
+                "Protector": {
+                    "name": "Protecteur"
+                }
+            }
         },
         "Divine Order: Thaumaturge": {
             "name": "Ordre divin : Thaumaturge",
@@ -910,7 +940,12 @@
         "Elemental Affinity": {
             "name": "Affinité élémentaire",
             "description": "<p>Votre magie draconique présente une affinité avec un type de dégâts associé aux dragons. Choisissez l'un des types suivants : acide, feu, foudre, froid ou poison.</p><p>Vous avez la &Reference[Resistance] à ce type de dégâts, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "advancement": {
+                "Choose Elemental Affinity": {
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbscrElementalA inline]</p>"
+                }
+            }
         },
         "Elemental Fury": {
             "name": "Fureur élémentaire",
@@ -962,7 +997,8 @@
             "requirements": "Moine",
             "effects": {
                 "Empowered Strikes": {
-                    "name": "Frappes renforcées"
+                    "name": "Frappes renforcées",
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkEmpoweredS inline]</p>"
                 }
             }
         },
@@ -1214,7 +1250,12 @@
         "Frenzy": {
             "name": "Frénésie",
             "description": "<p>Si vous recourez à Témérité alors que votre Rage est active, vous infligez des dégâts supplémentaires à la première cible que vous touchez à votre tour avec une attaque basée sur la Force. Pour déterminer ces dégâts supplémentaires, lancez autant de d6 que votre bonus de Rage aux dégâts et faites en la somme. Ces dégâts sont du même type que ceux de l'arme ou l'attaque à mains nues employée pour l'attaque.</p>",
-            "requirements": "Voie du Berserker"
+            "requirements": "Voie du Berserker",
+            "activities": {
+                "Extra Damage": {
+                    "name": "Dégâts supplémentaires"
+                }
+            }
         },
         "Gaze of Two Minds": {
             "name": "Perception transférée",
@@ -1977,6 +2018,9 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
                 }
             }
         },
@@ -2035,7 +2079,12 @@
         "Primal Champion": {
             "name": "Champion primitif",
             "description": "<p>Vous incarnez la puissance primitive. Vos valeurs de Force et de Constitution augmentent de 4, jusqu'à un maximum de 25.</p>",
-            "requirements": "Barbare"
+            "requirements": "Barbare",
+            "advancement": {
+                "Yj4v0ul6dJiogWZy": {
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbbrbPrimalCham inline]</p>"
+                }
+            }
         },
         "Primal Knowledge": {
             "name": "Savoir primal",
@@ -2156,6 +2205,9 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
                 }
             }
         },
@@ -2415,6 +2467,9 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
                 }
             }
         },
@@ -2549,7 +2604,8 @@
                     "range": "De la créature blessée"
                 },
                 "Improved Hunter's Mark Damage": {
-                    "range": "De la créature blessée"
+                    "range": "De la créature blessée",
+                    "name": "Dégâts améliorés de la marque du chasseur"
                 }
             }
         },
@@ -2968,10 +3024,11 @@
         },
         "phbpdnChannelDiv": {
             "name": "Conduit divin",
-            "description": "<p>Vous pouvez canaliser l'énergie divine directement depuis les Plans Extérieurs afin de produire des effets magiques. Vous débutez avec un seul de ces effets : Perception divine décrite ci-après. D'autres aptitudes de Paladin octroient des effets supplémentaires de Conduit divin. Chaque fois que vous recourez au Conduit divin de cette classe, vous choisissez l'effet associé que vous souhaitez générer.</p><p>Vous pouvez utiliser deux fois le Conduit divin de cette classe. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez toutes ses utilisations en terminant un Repos long. Vous recevez une utilisation supplémentaire en atteignant le niveau 11 de Paladin.</p><p>Si un effet de Conduit divin entraîne un jet de sauvegarde, le DD est égal au DD de sauvegarde des sorts de l'aptitude Sorts de cette classe.</p><p><strong>Perception divine.</strong> Par une action Bonus, vous ouvrez votre conscience à la présence de créatures de type Céleste, Fiélon et Mort-vivant. Pendant 10 minutes ou jusqu'à ce que vous subissiez l'état Neutralisé, vous savez où se trouve toute créature des types précités dans un rayon de 18 m, et connaissez son type de créature. Dans ce même rayon, vous détectez en outre la présence de tout lieu ou objet qui a été consacré ou profané, comme avec le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplHallow0000]{sanctification}.</p><section class=\"secret\" id=\"secret-lIHCt32JLE7PAUbn\"><p><strong>Note Foundry</strong></p><p>Les utilisations de votre Conduit divin augmentent automatiquement au fur et à mesure que vous montez en niveau. Il regagne automatiquement les utilisations correctes après les Repos courts et longs.</p><p>L'activité <strong>Perception divine</strong> comprend un Effet actif mais elle ne révèle pas automatiquement les créatures données.</p></section>",
+            "description": "<p>Vous pouvez canaliser l'énergie divine directement depuis les Plans Extérieurs afin de produire des effets magiques. Vous débutez avec un seul de ces effets : Perception divine décrite ci-après. D'autres aptitudes de Paladin octroient des effets supplémentaires de Conduit divin. Chaque fois que vous recourez au Conduit divin de cette classe, vous choisissez l'effet associé que vous souhaitez générer.</p><p>Vous pouvez utiliser deux fois le Conduit divin de cette classe. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez toutes ses utilisations en terminant un Repos long. Vous recevez une utilisation supplémentaire en atteignant le niveau 11 de Paladin.</p><p>Si un effet de Conduit divin entraîne un jet de sauvegarde, le DD est égal au DD de sauvegarde des sorts de l'aptitude Sorts de cette classe.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbpdnChannelDiv.Activity.kjHydAAcspH9wVPI caption=false cite=false nameStyle=inline]</p><section id=\"secret-lIHCt32JLE7PAUbn\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Perception divine</strong> comprend un Effet actif mais elle ne révèle pas automatiquement les créatures données.</p></section>",
             "activities": {
                 "Divine Sense": {
-                    "name": "Perception divine"
+                    "name": "Perception divine",
+                    "description": "<p>Par une action Bonus, vous ouvrez votre conscience à la présence de créatures de type Céleste, Fiélon et Mort-vivant. Pendant 10 minutes ou jusqu'à ce que vous subissiez l'état &Reference[Incapacitated apply=false], vous savez où se trouve toute créature des types précités dans un rayon de 18 m, et connaissez son type de créature. Dans ce même rayon, vous détectez en outre la présence de tout lieu ou objet qui a été consacré ou profané, comme avec le sort @UUID[Compendium.dnd-players-handbook.spells.Item.phbsplHallow0000]{sanctification}.</p>"
                 }
             },
             "effects": {
@@ -3023,7 +3080,8 @@
             "description": "<p>Choisissez deux de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans ces compétences.</p>",
             "advancement": {
                 "Expertise": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>Choisissez deux de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans ces compétences.</p>"
                 }
             }
         },
