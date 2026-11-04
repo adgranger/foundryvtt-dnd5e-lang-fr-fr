@@ -179,6 +179,9 @@
                 },
                 "Rages": {
                     "name": "Rages"
+                },
+                "llft9LHzCcVGZr1R": {
+                    "hint": "<p>Vous recevez la sous-classe de Barbare de votre choix. Les sous-classes Voie de l'Arbre-Monde, Voie du Berserker, Voie du Cœur sauvage et Voie du Zélateur sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Barbare. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Barbare.</p>"
                 }
             }
         },
@@ -474,6 +477,9 @@
                 },
                 "Prepared Spells": {
                     "name": "Sorts préparés"
+                },
+                "xtHP27K3z3naIFTi": {
+                    "hint": "<p>Vous recevez la sous-classe de Clerc de votre choix. Les sous-classes Domaine de la Guerre, Domaine de la Lumière, Domaine de la Ruse et Domaine de la Vie sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Clerc. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Clerc.</p>"
                 }
             }
         },
@@ -631,7 +637,8 @@
                 "Redirect (Any Damage)": {
                     "condition": "Si vous réduisez ainsi les dégâts à 0",
                     "range": "1,50 m pour les attaques de corps à corps ou 18 m pour les attaques à distance",
-                    "target": "Ne bénéficie pas d'un Abri total"
+                    "target": "Ne bénéficie pas d'un Abri total",
+                    "name": "Dévier (tous dégâts)"
                 }
             },
             "requirements": "Moine"
@@ -646,7 +653,11 @@
             "description": "<p>Vos voyages incessants vous ont permis de recevoir les bénéfices suivants.</p><p><em><strong>Expertise.</strong></em> Choisissez l'une de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans cette compétence.</p><p><em><strong>Langues.</strong></em> Vous connaissez deux langues de votre choix dans les tables des langues du chapitre 2.</p>",
             "advancement": {
                 "Expertise": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>Choisissez l'une de vos maîtrises de compétence ne bénéficiant pas de l'Expertise. Vous recevez l'Expertise dans cette compétence.</p>"
+                },
+                "wzh6lW4bOlQy4geS": {
+                    "hint": "<p>Vous connaissez deux langues de votre choix dans les tables des langues du chapitre 2.</p>"
                 }
             }
         },
@@ -713,7 +724,14 @@
                     "name": "Survivant discipliné"
                 }
             },
-            "requirements": "Moine"
+            "requirements": "Moine",
+            "activities": {
+                "Reroll Saving Throw": {
+                    "name": "Rejouer un jet de sauvegarde",
+                    "condition": "Lorsque vous effectuez un jet de sauvegarde et ratez",
+                    "description": "<p>Chaque fois que vous effectuez un jet de sauvegarde et ratez, vous pouvez dépenser 1 point de Credo pour le rejouer et conserver le nouveau jet.</p>"
+                }
+            }
         },
         "Distant Spell": {
             "name": "Sort ample",
@@ -792,7 +810,12 @@
         "Dragon Companion": {
             "name": "Compagnon draconique",
             "description": "<p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSummonDrag]{convocation de dragon}</em> sans composante matérielle. Vous pouvez aussi le lancer une fois sans dépenser d'emplacement de sort et récupérez cette aptitude en terminant un Repos long.</p><p>Chaque fois que vous commencez à lancer ce sort, vous pouvez en modifier l'incantation afin qu'elle ne nécessite pas la Concentration. Ce faisant, la durée du sort passe à 1 minute pour cette incantation.</p>",
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "activities": {
+                "Summon Dragon (No Concentration)": {
+                    "name": "Convocation de dragon (pas de Concentration)"
+                }
+            }
         },
         "Dragon Wings": {
             "name": "Ailes draconiques",
@@ -943,7 +966,8 @@
             "requirements": "Sorcellerie draconique",
             "advancement": {
                 "Choose Elemental Affinity": {
-                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbscrElementalA inline]</p>"
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbscrElementalA inline]</p>",
+                    "name": "Choisir l'affinité élémentaire"
                 }
             }
         },
@@ -1431,7 +1455,12 @@
                     "description": "<p>Le DD de sauvegarde de vos sorts d'Ensorceleur augmente de 1.</p><p>Vous avez l'Avantage aux jets d'attaque des sorts d'Ensorceleur que vous lancez.</p>"
                 }
             },
-            "requirements": "Ensorceleur"
+            "requirements": "Ensorceleur",
+            "activities": {
+                "Unleash Magic": {
+                    "name": "Libérer la magie"
+                }
+            }
         },
         "Instinctive Pounce": {
             "name": "Bond instinctif",
@@ -1449,7 +1478,8 @@
             },
             "effects": {
                 "Intimidated": {
-                    "name": "Intimidé"
+                    "name": "Intimidé",
+                    "description": "<p>En cas d'échec, la créature subit l'état &Reference[Frightened apply=false] pendant 1 minute. À la fin de chacun des tours d'une créature Effrayée, celle-ci réitère le JS et met un terme à l'effet sur elle-même en cas de réussite.</p>"
                 }
             }
         },
@@ -1684,7 +1714,8 @@
             "requirements": "Ensorceleur",
             "advancement": {
                 "Metamagic": {
-                    "name": "Métamagie"
+                    "name": "Métamagie",
+                    "hint": "<p>Grâce à la magie qui bouillonne en vous, vous pouvez altérer les sorts au gré des besoins ; vous recevez deux options de Métamagie.</p>"
                 }
             }
         },
@@ -1737,35 +1768,50 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "OGo9kMbx7cFuGx00": {
+                    "hint": "<p>Vous recevez la sous-classe de Moine de votre choix. Les sous-classes Credo des Éléments, Credo de la Miséricorde, Credo de l'Ombre et Credo de la Paume sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Moine. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Moine.</p>"
                 }
             }
         },
         "Monk's Focus": {
             "name": "Credo du moine",
-            "description": "<p>Votre discipline et votre formation martiale vous mettent de puiser dans la source d'énergie extraordinaire qui est en vous. Cette énergie est représentée par les points de Credo. Votre niveau de Moine détermine le nombre de points dont vous disposez, comme indiqué dans la colonne Points de Credo de la table Aptitudes du Moine.</p><p>Vous pouvez dépenser ces points pour améliorer ou alimenter certaines aptitudes de Moine. Vous débutez en connaissant trois de ces aptitudes : Déluge de coups, Patience défensive et Porté par le vent, détaillées chacune ci-après.</p><p>Lorsque vous dépensez un point de Credo, il n'est plus disponible jusqu'à ce que vous terminiez un Repos court ou long, à l'issue duquel vous récupérez tous vos points dépensés.</p><p>Certaines aptitudes basées sur les points de Credo imposent un jet de sauvegarde à votre cible. Le DD de sauvegarde est égal à 8 plus votre modificateur de Sagesse et votre bonus de maîtrise.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.2ghJTBhilLrFn9xT caption=false cite=false nameStyle=inline]</p><p><em><strong>Patience défensive.</strong></em> Vous pouvez entreprendre l'action Désengagement par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Esquive.</p><p><em><strong>Porté par le vent.</strong></em> Vous pouvez entreprendre l'action Pointe par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Pointe, et de doubler votre distance de saut pour ce tour.</p>",
+            "description": "<p>Votre discipline et votre formation martiale vous mettent de puiser dans la source d'énergie extraordinaire qui est en vous. Cette énergie est représentée par les points de Credo. Votre niveau de Moine détermine le nombre de points dont vous disposez, comme indiqué dans la colonne Points de Credo de la table Aptitudes du Moine.</p><p>Vous pouvez dépenser ces points pour améliorer ou alimenter certaines aptitudes de Moine. Vous débutez en connaissant trois de ces aptitudes : Déluge de coups, Patience défensive et Porté par le vent, détaillées chacune ci-après.</p><p>Lorsque vous dépensez un point de Credo, il n'est plus disponible jusqu'à ce que vous terminiez un Repos court ou long, à l'issue duquel vous récupérez tous vos points dépensés.</p><p>Certaines aptitudes basées sur les points de Credo imposent un jet de sauvegarde à votre cible. Le DD de sauvegarde est égal à 8 plus votre modificateur de Sagesse et votre bonus de maîtrise.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.2ghJTBhilLrFn9xT caption=false cite=false nameStyle=inline]</p><p><em><strong>Patience défensive.</strong></em> Vous pouvez entreprendre l'action Désengagement par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Esquive.</p><p><em><strong>Porté par le vent.</strong></em> Vous pouvez entreprendre l'action &Reference[Dash] par une action Bonus. Vous avez aussi la possibilité, par une action Bonus et la dépense de 1 point de Credo, d'entreprendre à la fois l'action Désengagement et l'action Pointe, et de doubler votre distance de saut pour ce tour.</p>",
             "requirements": "Moine",
             "activities": {
                 "Flurry of Blows": {
                     "name": "Déluge de coups",
-                    "chatFlavor": "Effectuer deux [[/item Attaque à mains nues]]{attaques à mains nues}"
+                    "chatFlavor": "Effectuer deux [[/item Attaque à mains nues]]{attaques à mains nues}",
+                    "description": "<p>Vous pouvez dépenser 1 point de Credo pour effectuer deux attaques à mains nues au prix d'une action Bonus.</p>"
                 },
                 "Patient Defense (Focus Point)": {
-                    "name": "Patience défensive (point de Credo)"
+                    "name": "Patience défensive (point de Credo)",
+                    "description": "<p>Vous pouvez par une action Bonus et la dépense de 1 point de Credo, entreprendre à la fois l'action &Reference[Disengage] et l'action &Reference[Dodge].</p>"
                 },
                 "Patient Defense": {
-                    "name": "Patience défensive"
+                    "name": "Patience défensive",
+                    "description": "<p>Vous pouvez entreprendre l'action &Reference[Disengage] par une action Bonus.</p>"
                 },
                 "Step of the Wind": {
-                    "name": "Porté par le vent"
+                    "name": "Porté par le vent",
+                    "description": "<p>Vous pouvez entreprendre l'action &Reference[Dash] par une action Bonus.</p>"
                 },
                 "Flurry of Blows (Heightened)": {
-                    "chatFlavor": "Effectuer deux [[/item Attaque à mains nues]]{attaques à mains nues}"
+                    "chatFlavor": "Effectuer deux [[/item Attaque à mains nues]]{attaques à mains nues}",
+                    "name": "Déluge de coups (accru)",
+                    "description": "<p>Vous pouvez dépenser 1 point de Credo pour effectuer trois attaques à mains nues au prix d'une action Bonus.</p>"
                 },
                 "Patient Defense (Focus Point, Heightened)": {
-                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.7xj7b6e8tDznDSrE inline classes=\"hide-in-embed\"]</p><p>Lorsque vous dépensez un point de Credo pour recourir à Patience défensive, vous recevez des points de vie temporaires égaux à deux jets de votre dé d'Arts martiaux.</p>"
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.7xj7b6e8tDznDSrE inline classes=\"hide-in-embed\"]</p><p>Lorsque vous dépensez un point de Credo pour recourir à Patience défensive, vous recevez des points de vie temporaires égaux à deux jets de votre dé d'Arts martiaux.</p>",
+                    "name": "Patience défensive (point de Credo, accru)"
                 },
                 "Step of the Wind (Focus Point, Heightened)": {
-                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.Iv2YrISquTZWEjjN inline classes=\"hide-in-embed\"]</p><p>Lorsque vous dépensez un point de Credo pour recourir à Porté par le vent, vous pouvez choisir une créature consentante dans un rayon de 1,50 m, de taille G ou inférieure. Vous déplacez la créature avec vous jusqu'à la fin de votre tour. Le déplacement de la créature ne provoque pas d'attaques d'Opportunité.</p>"
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbmnkMonksFocus.Activity.Iv2YrISquTZWEjjN inline classes=\"hide-in-embed\"]</p><p>Lorsque vous dépensez un point de Credo pour recourir à Porté par le vent, vous pouvez choisir une créature consentante dans un rayon de 1,50 m, de taille G ou inférieure. Vous déplacez la créature avec vous jusqu'à la fin de votre tour. Le déplacement de la créature ne provoque pas d'attaques d'Opportunité.</p>",
+                    "name": "Porté par le vent (point de Credo, accru)"
+                },
+                "Step of the Wind (Focus Point)": {
+                    "name": "Porté par le vent (point de Credo)",
+                    "description": "<p>Vous pouvez par une action Bonus et la dépense de 1 point de Credo, entreprendre à la fois l'action &Reference[Disengage] et l'action &Reference[Dash], et de doubler votre distance de saut pour ce tour.</p>"
                 }
             }
         },
@@ -2021,6 +2067,9 @@
                 },
                 "Prepared Spells": {
                     "name": "Sorts préparés"
+                },
+                "tU89l5dpMkYJBBJ5": {
+                    "hint": "<p>Vous recevez la sous-classe de Paladin de votre choix. Les sous-classes Serment des Anciens, Serment de Dévotion, Serment de Gloire et Serment de Vengeance sont détaillées après le descriptif de la classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Paladin. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Paladin.</p>"
                 }
             }
         },
@@ -2056,7 +2105,12 @@
         "Persistent Rage": {
             "name": "Rage persistante",
             "description": "<p>Lorsque vous jouez l'Initiative, vous pouvez récupérer toutes vos utilisations de Rage. Après avoir récupéré ainsi vos utilisations de Rage, vous devez terminer un Repos long pour pouvoir le refaire.</p><p>De plus, votre Rage est si féroce qu'elle persiste désormais 10 minutes sans vous demander de la prolonger activement de round en round. Votre Rage prend fin prématurément si vous subissez l'état &Reference[Unconscious apply=false] (l'état &Reference[Incapacitated apply=false] seul n'y met plus fin) ou si vous enfilez une armure lourde.</p>",
-            "requirements": "Barbare"
+            "requirements": "Barbare",
+            "activities": {
+                "Regain Rage": {
+                    "name": "Récupérer Rage"
+                }
+            }
         },
         "Potent Cantrip": {
             "name": "Sort mineur appuyé",
@@ -2172,7 +2226,8 @@
             "requirements": "Barbare",
             "effects": {
                 "Rage": {
-                    "name": "Rage"
+                    "name": "Rage",
+                    "description": "<p><strong>Résistance aux dégâts.</strong> Vous bénéficiez de la Résistance aux dégâts contondants, perforants et tranchants.</p><p><strong>Dégâts de Rage.</strong> Lorsque vous effectuez une attaque basée sur la Force, que ce soit avec une arme ou à mains nues, et que vous infligez des dégâts à la cible, vous bénéficiez pour ces dégâts d'un bonus qui augmente lorsque vous gagnez des niveaux de Barbare, comme indiqué à la colonne Dégâts de Rage de la table Aptitudes du Barbare.</p><p><strong>Avantage en Force.</strong> Vous avez l'Avantage aux tests de Force et aux jets de sauvegarde de Force.</p>"
                 }
             },
             "activities": {
@@ -2208,6 +2263,9 @@
                 },
                 "Prepared Spells": {
                     "name": "Sorts préparés"
+                },
+                "eJTiCO9yVqCP1Ptd": {
+                    "hint": "<p>Vous recevez la sous-classe de Rôdeur de votre choix. Les sous-classes Belluaire, Chasseur, Traqueur des ténèbres et Vagabond féerique sont détaillées après le descriptif de la classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Rôdeur. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Rôdeur.</p>"
                 }
             }
         },
@@ -2228,7 +2286,12 @@
         "Relentless Rage": {
             "name": "Rage implacable",
             "description": "<p>Votre Rage vous permet de continuer à combattre malgré les pires blessures. Si vous tombez à 0 point de vie alors que votre Rage est active et que vous ne mourez pas sur le coup, vous pouvez effectuer un jet de sauvegarde de Constitution DD 10. En cas de réussite, vos points de vie se retrouvent en fait au double de votre niveau de Barbare.</p><p>Par la suite et chaque fois que vous réutilisez cette aptitude, le DD augmente de 5. Lorsque vous terminez un Repos court ou long, le DD retombe à 10.</p>",
-            "requirements": "Barbare"
+            "requirements": "Barbare",
+            "activities": {
+                "save": {
+                    "condition": "Lorsque vous tombez à 0 point de vie alors que votre Rage est active et que vous ne mourez pas sur le coup"
+                }
+            }
         },
         "Reliable Talent": {
             "name": "Savoir-faire",
@@ -2348,6 +2411,9 @@
                     "changes": {
                         "0": ", Arme sacrée"
                     }
+                },
+                "Sacred Weapon Light": {
+                    "name": "Lumière d'Arme sacrée"
                 }
             },
             "activities": {
@@ -2470,6 +2536,9 @@
                 },
                 "Prepared Spells": {
                     "name": "Sorts préparés"
+                },
+                "q7N6Am8hFSq15JTl": {
+                    "hint": "<p>Vous recevez la sous-classe d'Ensorceleur de votre choix. Les sous-classes Sorcellerie aberrante, Sorcellerie draconique, Sorcellerie mécanique et Sorcellerie sauvage sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux d'Ensorceleur. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel d'Ensorceleur.</p>"
                 }
             }
         },
@@ -2580,10 +2649,16 @@
             "description": "<p>Au début de votre tour, vous pouvez dépenser 3 points de Credo pour consolider votre corps pendant 1 minute (l'effet prend fin si vous subissez l'état &Reference[Incapacitated apply=false]). Durant cet intervalle, vous bénéficiez de la Résistance à tous les dégâts hormis ceux de force.</p>",
             "effects": {
                 "Superior Defense": {
-                    "name": "Défense supérieure"
+                    "name": "Défense supérieure",
+                    "description": "<p>Vous bénéficiez de la Résistance à tous les dégâts hormis ceux de force.</p>"
                 }
             },
-            "requirements": "Moine"
+            "requirements": "Moine",
+            "activities": {
+                "Bolster": {
+                    "name": "Consolider"
+                }
+            }
         },
         "Superior Hunter's Defense": {
             "name": "Défense de chasseur supérieure",
@@ -2860,7 +2935,8 @@
             "requirements": "Barbare",
             "advancement": {
                 "Weapon Mastery": {
-                    "name": "Bottes d'arme"
+                    "name": "Bottes d'arme",
+                    "hint": "<p>Votre entraînement martial vous permet de recourir à la botte de deux types d'arme de corps à corps courante ou de guerre de votre choix.</p>"
                 },
                 "WYkWGiSyjLN4WC4x": {
                     "name": "Bottes d'arme",
@@ -3046,7 +3122,8 @@
             "description": "<p>Vous recevez le don de @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{Style de combat} de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstBlessedWar caption=false nameStyle=inline]</p>",
             "advancement": {
                 "Fighting Style": {
-                    "name": "Style de combat"
+                    "name": "Style de combat",
+                    "hint": "<p>Vous recevez le don de Style de combat de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p>"
                 }
             }
         },
@@ -3094,7 +3171,8 @@
             "description": "<p>Vous recevez le don de Style de combat de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p><hr /><p>@Embed[Compendium.dnd5e.classes24.Item.phbfstDruidicWar caption=false nameStyle=inline]</p>",
             "advancement": {
                 "Fighting Style": {
-                    "name": "Style de combat"
+                    "name": "Style de combat",
+                    "hint": "<p>Vous recevez le don de Style de combat de votre choix. Au lieu de choisir l'un de ces dons, vous pouvez choisir l'option ci-dessous.</p>"
                 }
             }
         },
@@ -3121,22 +3199,95 @@
             "description": "<p>En tant qu'étudiant de la magie profane, vous avez appris à lancer des sorts. Reportez-vous au chapitre 7 pour les @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.b2QVn25z2N1ykWpf]{règles d'incantation}. Les informations ci-après expliquent comment utiliser ces règles avec les sorts de Magicien, qui figurent dans la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz]{liste Sorts de Magicien}.</p><p><strong>Sorts mineurs.</strong> Vous connaissez trois sorts mineurs de Magicien de votre choix. @UUID[Compendium.dnd5e.spells24.Item.phbsplLight00000]{Lumière}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMageHand00]{main du mage} et @UUID[Compendium.dnd5e.spells24.Item.phbsplRayofFrost]{rayon de givre} sont recommandés. Chaque fois que vous terminez un Repos long, vous pouvez remplacer l'un de vos sorts mineurs de cette aptitude par un autre sort mineur de Magicien de votre choix.</p><p>Lorsque vous atteignez les niveaux 4 et 10 de Magicien, vous apprenez un autre sort mineur de Magicien de votre choix, comme indiqué en colonne Sorts mineurs de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbWizard0000000.JournalEntryPage.g7cMRWzsgAsEF7zC#aptitudes-de-classe]{Aptitudes du Magicien}.</p><p><strong>Grimoire.</strong> Votre apprentissage de Magicien s'est conclu par la création d'un livre unique : votre grimoire. Cet objet de taille TP pèse 1,5 kg, contient 100 pages et ne peut être lu que par vous-même ou une tierce personne lançant le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplIdentify00]{identification}. Vous déterminez l'aspect et les matériaux employés dans la confection du grimoire : il peut s'agir d'un ouvrage doré à l'or fin comme d'un recueil de feuilles de vélin reliées par de la ficelle.</p><p>Le grimoire contient les sorts du 1<sup>er</sup> niveau et plus que vous connaissez. Il commence avec six sorts de Magicien du 1<sup>er</sup> niveau de votre choix. @UUID[Compendium.dnd5e.spells24.Item.phbsplMageArmor0]{Armure du mage}, @UUID[Compendium.dnd5e.spells24.Item.phbsplDetectMagi]{détection de la magie}, @UUID[Compendium.dnd5e.spells24.Item.phbsplFeatherFal]{feuille morte}, @UUID[Compendium.dnd5e.spells24.Item.phbsplMagicMissi]{projectile magique}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSleep00000]{sommeil} et @UUID[Compendium.dnd5e.spells24.Item.phbsplThunderwav]{vague tonnante} sont recommandés.</p><p>Chaque fois que vous gagnez un niveau de Magicien après le premier, ajoutez deux sorts de Magicien de votre choix à votre grimoire. Chacun doit être d'un niveau pour lequel vous disposez d'emplacements de sort, comme indiqué sur la table Aptitudes du Magicien. Ces sorts sont l'aboutissement des recherches arcaniques que vous menez régulièrement.</p><p><strong>Emplacements de sort.</strong> La table Aptitudes du Magicien vous indique le nombre d'emplacements de sort dont vous disposez pour lancer vos sorts du 1<sup>er</sup> niveau et supérieur. Vous récupérez tous les emplacements dépensés en terminant un Repos long.</p><p><strong>Sorts préparés du 1<sup>er</sup> niveau et plus.</strong> Vous devez préparer la liste des sorts du 1<sup>er</sup> niveau et supérieur que cette aptitude vous permet de lancer. À cette fin, choisissez quatre sorts de votre grimoire. Ces sorts doivent être d'un niveau pour lequel vous disposez d'emplacements de sort.</p><p>Le nombre de sorts de votre liste augmente à mesure que vous recevez des niveaux de Magicien, comme l'indique la colonne Sorts préparés de la table Aptitudes du Magicien. Chaque fois que ce nombre augmente, choisissez des sorts de Magicien supplémentaires jusqu'à ce que le nombre de sorts de votre liste corresponde au nombre indiqué dans la table. Ces sorts doivent être d'un niveau pour lequel vous disposez d'emplacements de sort. Si, par exemple, vous êtes un Magicien de niveau 3, votre liste de sorts préparés peut inclure six sorts de Magicien du 1<sup>er</sup> ou 2<sup>e</sup> niveau choisis dans votre grimoire, répartis à votre guise.</p><p>Si une autre aptitude de Magicien vous octroie des sorts toujours préparés, ces sorts ne sont pas décomptés du nombre de sorts que vous pouvez préparer avec la présente aptitude, mais ils sont considérés pour vous comme des sorts de Magicien.</p><p><strong>Modification des sorts préparés.</strong> Chaque fois que vous terminez un Repos long, vous pouvez changer votre liste de sorts préparés en remplaçant des sorts par d'autres sorts de Magicien de votre grimoire.</p><p><strong>Caractéristique d'incantation.</strong> L'Intelligence est la caractéristique d'incantation de vos sorts de Magicien.</p><p><strong>Focaliseur d'incantation.</strong> Vous pouvez vous servir d'un focaliseur arcanique ou de votre grimoire comme focaliseur d'incantation de vos sorts de Magicien.</p>"
         },
         "Elemental Affinity: Acid": {
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "name": "Affinité élémentaire : Acide",
+            "description": "<p>Vous avez la &Reference[Resistance] aux dégâts d'acide, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
+            "effects": {
+                "Bonus Acid Damage": {
+                    "name": "Dégâts d'acide bonus",
+                    "description": "<p>Lorsque vous lancez un sort qui inflige des dégâts d'acide, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>"
+                }
+            },
+            "advancement": {
+                "GtZSPY1PbRCl5lH3": {
+                    "hint": "<p>Vous avez la &Reference[Resistance] aux dégâts d'acide.</p>"
+                }
+            }
         },
         "Elemental Affinity: Cold": {
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "name": "Affinité élémentaire : Froid",
+            "description": "<p>Vous avez la &Reference[Resistance] aux dégâts de froid, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
+            "effects": {
+                "Bonus Cold Damage": {
+                    "name": "Dégâts de froid bonus",
+                    "description": "<p>Lorsque vous lancez un sort qui inflige des dégâts de froid, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>"
+                }
+            },
+            "advancement": {
+                "GtZSPY1PbRCl5lH3": {
+                    "hint": "<p>Vous avez la &Reference[Resistance] aux dégâts de froid.</p>"
+                }
+            }
         },
         "Elemental Affinity: Fire": {
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "name": "Affinité élémentaire : Feu",
+            "description": "<p>Vous avez la &Reference[Resistance] aux dégâts de feu, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
+            "effects": {
+                "Bonus Fire Damage": {
+                    "name": "Dégâts de feu bonus",
+                    "description": "<p>Lorsque vous lancez un sort qui inflige des dégâts de feu, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>"
+                }
+            },
+            "advancement": {
+                "GtZSPY1PbRCl5lH3": {
+                    "hint": "<p>Vous avez la &Reference[Resistance] aux dégâts de feu.</p>"
+                }
+            }
         },
         "Elemental Affinity: Lightning": {
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "name": "Affinité élémentaire : Foudre",
+            "description": "<p>Vous avez la &Reference[Resistance] aux dégâts de foudre, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
+            "effects": {
+                "Bonus Lightning Damage": {
+                    "name": "Dégâts de foudre bonus",
+                    "description": "<p>Lorsque vous lancez un sort qui inflige des dégâts de foudre, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>"
+                }
+            },
+            "advancement": {
+                "GtZSPY1PbRCl5lH3": {
+                    "hint": "<p>Vous avez la &Reference[Resistance] aux dégâts de foudre.</p>"
+                }
+            }
         },
         "Elemental Affinity: Poison": {
-            "requirements": "Sorcellerie draconique"
+            "requirements": "Sorcellerie draconique",
+            "name": "Affinité élémentaire : Poison",
+            "description": "<p>Vous avez la &Reference[Resistance] aux dégâts de poison, et lorsque vous lancez un sort qui inflige des dégâts de ce type, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>",
+            "effects": {
+                "Bonus Poison Damage": {
+                    "name": "Dégâts de poison bonus",
+                    "description": "<p>Lorsque vous lancez un sort qui inflige des dégâts de poison, vous pouvez ajouter votre modificateur de Charisme à un jet de dégâts de ce sort.</p>"
+                }
+            },
+            "advancement": {
+                "GtZSPY1PbRCl5lH3": {
+                    "hint": "<p>Vous avez la &Reference[Resistance] aux dégâts de poison.</p>"
+                }
+            }
         },
         "Self-Restoration": {
-            "requirements": "Moine"
+            "requirements": "Moine",
+            "name": "Autosubsistance",
+            "description": "<p>Par la seule force de l'esprit, vous pouvez vous débarrasser de l'un des états suivants à la fin de chacun de vos tours : &Reference[Charmed apply=false], &Reference[Frightened apply=false] ou &Reference[Poisoned apply=false].</p><p>De plus, vous passer de nourriture et d'eau ne vous impose pas de niveaux d'&Reference[Exhaustion apply=false].</p>",
+            "effects": {
+                "Self-Restoration": {
+                    "name": "Autosubsistance",
+                    "description": "<p>Vous passer de nourriture et d'eau ne vous impose pas de niveaux d'&Reference[Exhaustion apply=false].</p>"
+                }
+            }
         }
     }
 }
