@@ -150,7 +150,15 @@
         },
         "Animal Shapes": {
             "name": "Métamorphose animale",
-            "description": "<p>Choisissez autant de créatures consentantes que vous souhaitez, parmi celles que vous voyez à portée. Chaque cible se transforme en Bête de taille G ou inférieure de votre choix, dont le facteur de puissance ne dépasse pas 4. Vous pouvez opter pour une forme différente pour chaque cible. Aux tours suivants, vous pouvez entreprendre l'action Magie pour de nouveau transformer les cibles.</p><p>Le profil de jeu de chaque cible est remplacé par celui de la Bête choisie, à l'exception de son type de créature, de ses points de vie et dés de vie, de sa faculté de communication, de son alignement et de ses valeurs d'Intelligence, Sagesse et Charisme, qui restent les siens. Les actions de la cible sont limitées par l'anatomie de la Bête retenue et elle ne peut pas lancer de sorts. L'équipement porté par la cible se fond dans sa nouvelle forme, sachant qu'elle ne peut pas recourir à cet équipement tant qu'elle reste sous cette forme.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de la première forme adoptée. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent. La transformation persiste pour toute la durée, sauf si la cible y met prématurément un terme par une action Bonus.</p>"
+            "description": "<p>Choisissez autant de créatures consentantes que vous souhaitez, parmi celles que vous voyez à portée. Chaque cible se transforme en Bête de taille G ou inférieure de votre choix, dont le facteur de puissance ne dépasse pas 4. Vous pouvez opter pour une forme différente pour chaque cible. Aux tours suivants, vous pouvez entreprendre l'action Magie pour de nouveau transformer les cibles.</p><p>Le profil de jeu de chaque cible est remplacé par celui de la Bête choisie, à l'exception de son type de créature, de ses points de vie et dés de vie, de sa faculté de communication, de son alignement et de ses valeurs d'Intelligence, Sagesse et Charisme, qui restent les siens. Les actions de la cible sont limitées par l'anatomie de la Bête retenue et elle ne peut pas lancer de sorts. L'équipement porté par la cible se fond dans sa nouvelle forme, sachant qu'elle ne peut pas recourir à cet équipement tant qu'elle reste sous cette forme.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de la première forme adoptée. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent. La transformation persiste pour toute la durée, sauf si la cible y met prématurément un terme par une action Bonus.</p>",
+            "activities": {
+                "Initial Transformation": {
+                    "name": "Transformation initiale"
+                },
+                "Follow Up Transformations": {
+                    "name": "Transformations suivantes"
+                }
+            }
         },
         "Animate Dead": {
             "name": "Animation des morts",
@@ -510,7 +518,24 @@
         },
         "Call Lightning": {
             "name": "Appel de la foudre",
-            "description": "<p>Un nuage menaçant se présente en un point que vous voyez à portée et qui vous surplombe directement. Il prend la forme d'un Cylindre haut de 3 m pour un rayon de 18 m.</p><p>À l'incantation du sort, choisissez un point que vous voyez sous le nuage. Un trait de foudre jaillit du nuage vers ce point. Chaque créature située dans un rayon de 1,50 m de ce point effectue un jet de sauvegarde de Dextérité et subit 3d10 dégâts de foudre en cas d'échec, la moitié en cas de réussite</p><p>Jusqu'à la fin du sort, vous pouvez entreprendre l'action Magie pour invoquer chaque fois un nouvel éclair, en ciblant le même point ou un autre.</p><p>Si vous êtes en extérieur et en conditions orageuses à l'incantation du sort, il vous donne le contrôle de l'orage en cours au lieu d'en créer un. Dans de telles conditions, les dégâts du sort augmentent de 1d10.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>"
+            "description": "<p>Un nuage menaçant se présente en un point que vous voyez à portée et qui vous surplombe directement. Il prend la forme d'un Cylindre haut de 3 m pour un rayon de 18 m.</p><p>À l'incantation du sort, choisissez un point que vous voyez sous le nuage. Un trait de foudre jaillit du nuage vers ce point. Chaque créature située dans un rayon de 1,50 m de ce point effectue un jet de sauvegarde de Dextérité et subit 3d10 dégâts de foudre en cas d'échec, la moitié en cas de réussite</p><p>Jusqu'à la fin du sort, vous pouvez entreprendre l'action Magie pour invoquer chaque fois un nouvel éclair, en ciblant le même point ou un autre.</p><p>Si vous êtes en extérieur et en conditions orageuses à l'incantation du sort, il vous donne le contrôle de l'orage en cours au lieu d'en créer un. Dans de telles conditions, les dégâts du sort augmentent de 1d10.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d10 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p><section id=\"secret-UISNs3WQbYOUh9Zp\" class=\"secret hide-in-embed\"><p><strong>Note Foundry</strong></p><p>Pour les coups de foudre suivants, choisissez le niveau du sort utilisé lors du lancement initial. Ces coups de foudre ne consomment pas d’autre emplacement de sort.</p></section>",
+            "activities": {
+                "Lightning Strike": {
+                    "name": "Trait de foudre",
+                    "chatFlavor": "La foudre frappe un point situé sous le nuage, dans un rayon de 1,50 m",
+                    "description": "<p>Invoquez la foudre en un point situé sous le nuage. Les créatures situées dans un rayon de 1,50 m de ce point effectuent un jet de sauvegarde de Dextérité pour éviter 3d10 dégâts de foudre.</p>",
+                    "range": "Sous le nuage"
+                },
+                "Cast Spell": {
+                    "name": "Lancer un sort",
+                    "description": "<p>Invoquez un imposant nuage au-dessus de vos têtes, qui rassemble le tonnerre et les éclairs au-dessus du champ de bataille, tandis que vous prenez le contrôle de la tempête.</p>"
+                },
+                "Lightning Strike (Storm)": {
+                    "name": "Trait de foudre (orage)",
+                    "description": "<p>Utilisez cette activité pour lancer un sort dont la puissance est amplifiée par l'orage. Les créatures situées dans un rayon de 1,50 m de ce point effectuent un jet de sauvegarde de Dextérité pour éviter 4d10 dégâts de foudre.</p>",
+                    "range": "Sous le nuage"
+                }
+            }
         },
         "Calm Emotions": {
             "name": "Apaisement des émotions",
@@ -961,6 +986,12 @@
                     "name": "Déguisé",
                     "description": "<p>Pour comprendre que vous êtes déguisé, une créature doit consacrer l'action Étude à vous examiner et réussir un test d'[[/check ability=int skill=inv]] assorti de votre DD de sauvegarde des sorts.</p>"
                 }
+            },
+            "activities": {
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
+                }
             }
         },
         "Disintegrate": {
@@ -1381,6 +1412,16 @@
                     "name": "Bouclier frais",
                     "description": "<p>Chaque fois qu'une créature située dans un rayon de 1,50 m de vous vous touche avec un jet d'attaque de corps à corps, l'assaillant subit [[/damage 2d8 type=cold]]{2d8} dégâts de froid.</p>"
                 }
+            },
+            "activities": {
+                "Cast Spell": {
+                    "name": "Lancer un sort"
+                },
+                "Flame Eruption": {
+                    "name": "Éruption de flammes",
+                    "condition": "une créature située dans un rayon de 1,50 m de vous vous touche avec une attaque de corps à corps",
+                    "target": "créature attaquante"
+                }
             }
         },
         "Fire Storm": {
@@ -1732,7 +1773,16 @@
         "Hallucinatory Terrain": {
             "name": "Terrain hallucinatoire",
             "description": "<p>Un terrain naturel qui pourrait loger dan un Cube de 45 m apparaît comme un autre type de terrain naturel, sur le plans visuel, auditif et olfactif. Ainsi un champ ou une route pourrait se présenter comme un marais , une colline, une crevasse glaciaire ou autre environnement difficile ou infranchissable. Une mare pourrait apparaitre comme une jolie prairie, un précipice comme une pente douce et un ravin comme une route large et dégagée. Les bâtiments, l'équipement et les créatures de la zone ne changent pas.</p><p>Les propriétés tactiles du terrain ne changent pas non plus, si bien qu'une créature qui pénètre dans la zone remarquera probablement l'illusion. Si la différence n'est pas évidente au contact, une créature qui examine la zone peut entreprendre l'action Étude pour tenter un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde de sort afin de percer l'illusion à jour. Une créature qui discerne le subterfuge perçoit une image vague superposée au véritable terrain.</p>",
-            "materials": "un champignon"
+            "materials": "un champignon",
+            "activities": {
+                "Cast Spell": {
+                    "name": "Lancer un sort"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
+                }
+            }
         },
         "Harm": {
             "name": "Contamination",
@@ -2002,7 +2052,7 @@
         },
         "Incendiary Cloud": {
             "name": "Nuage incendiaire",
-            "description": "<p>Un nuage tourbillonnant de fumée se manifeste, chargé de flammèches, sous forme d'une Sphère de 6 m de rayon centrée sur un point à portée. La zone du nuage présente une &Reference[HeavilyObscured]. Elle persiste pour toute la durée, à moins qu'un vent fort (comme celui engendré par <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{bourrasque}</em>) la disperse.</p><p>Chaque créature prise dans le nuage à son apparition effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de feu en cas d'échec, la moitié en cas de réussite. Toute créature qui voit la Sphère se déplacer dans son espace, ou qui pénètre dans la Sphère ou y termine son tour est également soumise à ce JS. Une même créature n'effectue en aucun cas ce JS plus d'une fois par tour.</p><p>Le nuage s'éloigne de 3 m de vous au début de chacun de vos tours, dans la direction de votre choix.</p>",
+            "description": "<p>Un nuage tourbillonnant de fumée se manifeste, chargé de flammèches, sous forme d'une Sphère de 6 m de rayon centrée sur un point à portée. La zone du nuage présente une &Reference[HeavilyObscured]. Elle persiste pour toute la durée, à moins qu'un vent fort (comme celui engendré par <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{bourrasque}</em>) la disperse.</p><p>Chaque créature prise dans le nuage à son apparition effectue un jet de sauvegarde de Dextérité, et subit 10d8 dégâts de feu en cas d'échec, la moitié en cas de réussite. Toute créature qui voit la Sphère se déplacer dans son espace, ou qui pénètre dans la Sphère ou y termine son tour est également soumise à ce JS. Une même créature n'effectue en aucun cas ce JS plus d'une fois par tour.</p><p>Le nuage s'éloigne de 3 m de vous au début de chacun de vos tours, dans la direction de votre choix.</p>",
             "activities": {
                 "Create Cloud": {
                     "name": "Créer un nuage"
@@ -2232,7 +2282,16 @@
         "Major Image": {
             "name": "Image majeure",
             "description": "<p>Vous créez l'image d'un objet, d'une créature ou autre phénomène visible dont la taille ne dépasse pas celle d'un Cube de 6 m. L'image apparaît en un endroit que vous voyez à portée et persiste pour toute la durée. Elle semble réelle, avec les sons, les odeurs et la température attendus, mais elle ne peut infliger de dégâts ni d'états.</p><p>Si vous êtes à portée de l'illusion, vous pouvez entreprendre l'action Magie pour déplacer l'image vers un autre point à portée du sort. Lors de ce déplacement, vous pouvez modifier l'aspect de l'image afin que ses mouvements paraissent naturels. Exemple : si vous créez l'image d'une créature que vous faites déplacer, vous pouvez faire en sorte qu'elle donne l'impression de marcher. De même, vous pouvez lui faire produire des sons à votre guise et même la faire participer à une conversation.</p><p>Toute interaction physique avec l'image percera l'illusion, car elle n'est pas tangible. Une créature qui entreprend l'action Étude pour examiner l'image peut comprendre qu'il s'agit d'une illusion en réussissant un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. Une créature qui perce l'illusion voit au travers et ne perçoit que de manière amoindrie les propriétés sensorielles produites par l'image.</p><p><strong>Emplacement de niveau supérieur.</strong> Lancé par un emplacement du 4<sup>e</sup> niveau ou supérieur, le sort persiste jusqu'à dissipation sans besoin de Concentration.</p>",
-            "materials": "un peu de laine brute"
+            "materials": "un peu de laine brute",
+            "activities": {
+                "Create Illusion": {
+                    "name": "Créer une illusion"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
+                }
+            }
         },
         "Mass Cure Wounds": {
             "name": "Soins de groupe",
@@ -2320,6 +2379,10 @@
                         "Image": "Image",
                         "Sound": "Son"
                     }
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
                 }
             }
         },
@@ -2427,6 +2490,10 @@
                 },
                 "Phantasm Damage": {
                     "name": "Dégâts fantasmatiques"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
                 }
             },
             "effects": {
@@ -2500,7 +2567,14 @@
         "Polymorph": {
             "name": "Métamorphose",
             "description": "<p>Vous tentez de transformer en Bête une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine d'être métamorphosée en Bête pour toute la durée. Cette forme est une Bête de votre choix dont le facteur de puissance est inférieur ou égal à celui de la cible (ou à son niveau, si elle n'a pas de facteur de puissance). Le profil de la cible est remplacé par celui de la Bête retenue, si ce n'est que la cible conserve son alignement, sa personnalité, son type de créature, ses points de vie et ses dés de vie. L'annexe B propose un échantillon de profils de Bêtes.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de sa forme de Bête. Le sort prend fin prématurément sur la cible s'il ne lui reste plus de points de vie temporaires. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent.</p><p>La cible est limitée dans les actions qu'elle peut entreprendre par l'anatomie de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.</p><p>L'équipement porté par la cible se fond dans sa nouvelle forme. La créature ne peut pas utiliser son équipement ni en bénéficier de quelque manière que ce soit.</p>",
-            "materials": "une chrysalide"
+            "materials": "une chrysalide",
+            "activities": {
+                "transform": {
+                    "profiles": {
+                        "Creature into Creature": "Créature en créature"
+                    }
+                }
+            }
         },
         "Power Word Heal": {
             "name": "Mot de pouvoir guérisseur",
@@ -2630,6 +2704,10 @@
             "activities": {
                 "Create Illusion": {
                     "name": "Créer une illusion"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
                 }
             }
         },
@@ -2640,6 +2718,10 @@
             "activities": {
                 "Create Illusion": {
                     "name": "Créer une illusion"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
                 }
             }
         },
@@ -3011,6 +3093,10 @@
                 },
                 "Change Appearance": {
                     "name": "Changement d'aspect"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
                 }
             },
             "effects": {
@@ -3039,7 +3125,15 @@
         "Shapechange": {
             "name": "Changement de forme",
             "description": "<p>Vous vous métamorphosez en une autre créature pour toute la durée, mais avez la possibilité d'entreprendre l'action Magie pour adopter une autre forme couverte par le sort. La nouvelle forme doit être une créature dont le facteur de puissance n'est pas supérieur à votre niveau ou FP. Vous devez déjà avoir vu une telle créature, qui ne doit être ni un Artificiel ni un Mort-vivant.</p><p>À l'incantation du sort, vous recevez autant de points de vie temporaires que les points de vie de la première forme adoptée. S'il vous en reste quand le sort prend fin, ces pv temporaires disparaissent.</p><p>Votre profil de jeu est remplacé par celui de la créature retenue, mais vous conservez certains de vos aspects : type de créature, alignement, personnalité, valeurs d'Intelligence, de Sagesse et de Charisme, points de vie, dés de vie, maitrises et faculté de communication. Si vous disposez de l'aptitude Sorts ou Incantation, vous la conservez aussi.</p><p>Lors de la transformation, vous déterminez si votre équipement tombe au sol ou change de taille et de configuration pour s'adapter à votre nouvelle forme.</p>",
-            "materials": "diadème de jade d'une valeur minimale de 1 500 po"
+            "materials": "diadème de jade d'une valeur minimale de 1 500 po",
+            "activities": {
+                "Initial Transformation": {
+                    "name": "Transformation initiale"
+                },
+                "Follow Up Transformations": {
+                    "name": "Transformations suivantes"
+                }
+            }
         },
         "Shatter": {
             "name": "Fracassement",
@@ -3139,7 +3233,16 @@
             "name": "Image silencieuse",
             "description": "<p>Vous créez l'image d'un objet, d'une créature ou autre phénomène visible dont la taille ne dépasse pas celle d'un Cube de 4,50 m. L'image apparaît en un endroit à portée et persiste pour toute la durée. Elle est purement visuelle, dépourvue de son, d'odeur et de tout autre effet sensoriel.</p><p>Au prix de l'action Magie, vous pouvez déplacer l'image en un point à portée. Lors de ce déplacement, vous pouvez modifier l'aspect de l'image afin que ses mouvements paraissent naturels. Exemple : si vous créez l'image d'une créature que vous faites déplacer, vous pouvez faire en sorte qu'elle donne l'impression de marcher.</p><p>Toute interaction physique avec l'image percera l'illusion, car elle n'est pas tangible. Une créature qui entreprend l'action Étude pour examiner l'image peut comprendre qu'il s'agit d'une illusion en réussissant un test d'[[/check ability=int skill=inv dc=@attributes.spell.dc]] assorti de votre DD de sauvegarde des sorts. Une créature qui perce l'illusion voit à travers l'image.</p>",
             "materials": "un peu de laine brute",
-            "condition": "un peu de laine brute"
+            "condition": "un peu de laine brute",
+            "activities": {
+                "Create Illusion": {
+                    "name": "Créer une illusion"
+                },
+                "Study": {
+                    "name": "Étude",
+                    "condition": "Action Étude entreprise par une autre créature"
+                }
+            }
         },
         "Simulacrum": {
             "name": "Simulacre",
@@ -3237,7 +3340,15 @@
         "Spirit Guardians": {
             "name": "Esprits gardiens",
             "description": "<p>Des esprits protecteurs volètent autour de vous pour toute la durée, sous forme d'une Émanation de 4,50 m. Si vous êtes bon ou neutre, ces formes spectrales paraissent angéliques ou féeriques (à votre convenance). Si vous êtes mauvais, elles paraissent fiélonnes.</p><p>À l'incantation du sort, vous pouvez désigner des créatures qui ne seront pas affectées par ces esprits. Toutes les autres créatures voient leur Vitesse réduite de moitié dans la zone ; de plus, lorsque l'Émanation pénètre dans l'espace d'une telle créature ou que celle-ci entre dans l'Émanation pour la première fois d'un tour ou y termine son propre tour, elle effectue un jet de sauvegarde de Sagesse. En cas d'échec, elle subit 3d8 dégâts radiants (si vous êtes bon ou neutre) ou 3d8 dégâts nécrotiques (si vous êtes mauvais). En cas de réussite, la créature subit la moitié de ces dégâts. Une même créature n'effectue en aucun cas ce JS plus d'une fois par tour.</p><p><strong>Emplacement de niveau supérieur.</strong> Les dégâts augmentent de 1d8 par niveau d'emplacement au-delà du 3<sup>e</sup>.</p>",
-            "materials": "un parchemin de prière"
+            "materials": "un parchemin de prière",
+            "activities": {
+                "Cast Spell": {
+                    "name": "Lancer un sort"
+                },
+                "Spirit Guardians Save": {
+                    "name": "Sauvegarde Esprits gardiens"
+                }
+            }
         },
         "Spiritual Weapon": {
             "name": "Arme spirituelle",
@@ -3255,7 +3366,7 @@
         },
         "Stinking Cloud": {
             "name": "Nuage nauséabond",
-            "description": "<p>Vous créez une Sphère d'un rayon de 6 m remplie de vapeurs nauséeuses jaunes, centrée sur un point à portée. Le nuage présente une &Reference[heavilyobscured]. Le nuage flotte sur place pour toute la durée, à moins qu'un vent fort (comme celui engendré par <em>@UUID[Compendium.dnd5e.spells24.Item.phbsplGustofWind]{bourrasque}</em>) le disperse.</p><p>Chaque créature qui commence son tour dans la Sphère doit réussir un jet de sauvegarde de Constitution sous peine de subir l'état &Reference[poisoned apply=false] jusqu'à la fin du tour en cours. Ainsi Empoisonnée, la créature ne peut pas entreprendre d'action ni d'action Bonus.</p>",
+            "description": "<p>Vous créez une Sphère d'un rayon de 6 m remplie de vapeurs nauséeuses jaunes, centrée sur un point à portée. Le nuage présente une &Reference[heavilyobscured]. Le nuage flotte sur place pour toute la durée, à moins qu'un vent fort (comme celui engendré par <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGustofWind]{bourrasque}</em>) le disperse.</p><p>Chaque créature qui commence son tour dans la Sphère doit réussir un jet de sauvegarde de Constitution sous peine de subir l'état &Reference[poisoned apply=false] jusqu'à la fin du tour en cours. Ainsi Empoisonnée, la créature ne peut pas entreprendre d'action ni d'action Bonus.</p>",
             "materials": "un œuf pourri",
             "activities": {
                 "Start of Turn Save": {
@@ -3500,8 +3611,16 @@
         },
         "True Polymorph": {
             "name": "Métamorphose suprême",
-            "description": "<p>Choisissez une créature ou un objet non magique que vous voyez à portée. La créature se métamorphose en une autre créature ou en objet non magique, ou l'objet se transforme en créature (sachant qu'il ne peut pas au départ être porté par une autre créature). La transformation persiste pour toute la durée, sauf si la cible meurt ou est détruite. Toutefois, si vous maintenez votre Concentration pour la totalité de la durée du sort, celui-ci persiste jusqu'à dissipation.</p><p>Une créature non consentante peut effectuer un jet de sauvegarde de Sagesse. En cas de réussite, elle n'est pas affectée par le sort.</p><p><strong>Créature en créature.</strong> Si vous transformez une créature en autre sorte de créature, vous choisissez sa nouvelle forme à votre guise, mais le facteur de puissance de celle-ci ne doit pas dépasser celui de la cible (ou son niveau). Le profil de la cible est remplacé par celui de la nouvelle forme, si ce n'est qu'elle conserve ses points de vie, ses dés de vie, son alignement et sa personnalité.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de la nouvelle forme. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent.</p><p>La cible est limitée dans les actions qu'elle peut entreprendre par l'anatomie de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.</p><p>L'équipement porté par la cible se fond dans sa nouvelle forme. La créature ne peut pas utiliser son équipement ni en bénéficier de quelque manière que ce soit.</p><p><strong>Objet en créature.</strong> Vous pouvez transformer un objet en la créature de votre choix, à condition que la catégorie de taille de celle-ci ne dépasse pas celle de l'objet et que son facteur de puissance n'excède pas 9. La créature est Amicale envers vous et vos compagnons. Au combat, elle joue ses tours juste après les vôtres et se soumet à vos instructions.</p><p>Si le sort persiste plus d'une heure, vous perdez le contrôle de la créature. Elle est susceptible de rester Amicale à votre égard selon la manière dont vous l'avez traitée.</p><p><strong>Créature en objet.</strong> Si vous transformez une créature en objet, elle adopte sa nouvelle forme en fusionnant avec tout ce qu'elle porte, à condition que la taille de l'objet n'excède pas celle de la créature. Le profil de la créature devient celui de l'objet et la créature ne garde a posteriori (si le sort prend fin et qu'elle retrouve sa forme normale) aucun souvenir du temps passé sous cette forme.</p><section class=\"secret\" id=\"secret-IB4vzIqK9EZU3ho1\"><p><strong>Note Foundry</strong></p><p>Un acteur peut être glissé sur la feuille de la créature métamorphosé par le maître du jeu pour gérer la transformation.</p></section>",
-            "materials": "une goutte de mercure, une bon morceau de gomme arabique et une volute de fumée"
+            "description": "<p>Choisissez une créature ou un objet non magique que vous voyez à portée. La créature se métamorphose en une autre créature ou en objet non magique, ou l'objet se transforme en créature (sachant qu'il ne peut pas au départ être porté par une autre créature). La transformation persiste pour toute la durée, sauf si la cible meurt ou est détruite. Toutefois, si vous maintenez votre Concentration pour la totalité de la durée du sort, celui-ci persiste jusqu'à dissipation.</p><p>Une créature non consentante peut effectuer un jet de sauvegarde de Sagesse. En cas de réussite, elle n'est pas affectée par le sort.</p><p><strong>Créature en créature.</strong> Si vous transformez une créature en autre sorte de créature, vous choisissez sa nouvelle forme à votre guise, mais le facteur de puissance de celle-ci ne doit pas dépasser celui de la cible (ou son niveau). Le profil de la cible est remplacé par celui de la nouvelle forme, si ce n'est qu'elle conserve ses points de vie, ses dés de vie, son alignement et sa personnalité.</p><p>La cible reçoit autant de points de vie temporaires que les points de vie de la nouvelle forme. S'il reste de ces pv temporaires à la cible quand le sort prend fin, ils disparaissent.</p><p>La cible est limitée dans les actions qu'elle peut entreprendre par l'anatomie de sa nouvelle forme, et elle ne peut ni parler ni lancer de sorts.</p><p>L'équipement porté par la cible se fond dans sa nouvelle forme. La créature ne peut pas utiliser son équipement ni en bénéficier de quelque manière que ce soit.</p><p><strong>Objet en créature.</strong> Vous pouvez transformer un objet en la créature de votre choix, à condition que la catégorie de taille de celle-ci ne dépasse pas celle de l'objet et que son facteur de puissance n'excède pas 9. La créature est Amicale envers vous et vos compagnons. Au combat, elle joue ses tours juste après les vôtres et se soumet à vos instructions.</p><p>Si le sort persiste plus d'une heure, vous perdez le contrôle de la créature. Elle est susceptible de rester Amicale à votre égard selon la manière dont vous l'avez traitée.</p><p><strong>Créature en objet.</strong> Si vous transformez une créature en objet, elle adopte sa nouvelle forme en fusionnant avec tout ce qu'elle porte, à condition que la taille de l'objet n'excède pas celle de la créature. Le profil de la créature devient celui de l'objet et la créature ne garde a posteriori (si le sort prend fin et qu'elle retrouve sa forme normale) aucun souvenir du temps passé sous cette forme.</p>",
+            "materials": "une goutte de mercure, une bon morceau de gomme arabique et une volute de fumée",
+            "activities": {
+                "transform": {
+                    "profiles": {
+                        "Object into Creature": "Objet en créature",
+                        "Creature into Creature": "Créature en créature"
+                    }
+                }
+            }
         },
         "True Resurrection": {
             "name": "Résurrection suprême",
