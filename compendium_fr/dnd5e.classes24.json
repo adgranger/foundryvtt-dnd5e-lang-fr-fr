@@ -513,20 +513,23 @@
         },
         "Cunning Strike": {
             "name": "Frappe malicieuse",
-            "description": "<p>Vous avez mis au point des façons astucieuses d'utiliser votre Attaque sournoise. Lorsque vous infligez des dégâts d'Attaque sournoise, vous pouvez ajouter l'un des effets de Frappe malicieuse ci-après. Chaque effet présente un coût exprimé en dé, qui correspond au nombre de dés d'Attaque sournoise auquel vous renoncez pour ajouter cet effet. Vous retirez le ou les dés avant le lancer, et l'effet se produit immédiatement après que les dégâts de l'attaque ont été infligés. Si, par exemple, vous ajoutez l'effet Poison, retirez 1d6 aux dégâts d'Attaque sournoise avant le lancer.</p><p>Si un effet de Frappe malicieuse entraîne un jet de sauvegarde, le DD est égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise.</p><p><strong>Croc-en-jambe (coût : 1d6).</strong> Si la cible est une taille G ou inférieure, elle doit réussir un jet de sauvegarde de Dextérité ou sous peine de subir l'état &Reference[Prone].</p><p><strong>Poison (coût : 1d6).</strong> Vous ajoutez une toxine à votre coup contraignant la cible à effectuer un jet de sauvegarde de Constitution. En cas d'échec, la cible subit l'état &Reference[Poisoned] pendant 1 minute. La cible réitère le JS à la fin de chacun de ses tours et met un terme à l'effet Empoisonné sur elle-même en cas de réussite.</p><p>Pour recourir à cet effet, vous devez avoir un matériel d'empoisonneur sur vous.</p><p><strong>Repli (coût : 1d6).</strong> Immédiatement après l'attaque, vous vous déplacez à concurrence de la moitié de votre Vitesse sans provoquer d'attaque d'Opportunité.</p><section class=\"secret\" id=\"secret-kCs7nMVrTvJRlkCy\"><p><strong>Note Foundry</strong></p><p>Après avoir utilisé les effets de Frappe malicieuse, utilisez l'activité <strong>Attaque sournoise malicieuse</strong> sur cette aptitude. Il vous demandera de sélectionner le nombre de dés que vous avez dépensés pour les effets et les déduira automatiquement de votre jet d'Attaque sournoise.</p><p>Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet de dégâts.</p><p>L'activité <strong>Croc-en-jambe</strong> inclut un effet actif qui applique l'état À terre ou vous pouvez utiliser la condition en ligne ci-dessus.</p><p>L'activité <strong>Poison</strong> inclut un effet actif qui applique l'état Empoisonné.</p></section>",
+            "description": "<p>Vous avez mis au point des façons astucieuses d'utiliser votre Attaque sournoise. Lorsque vous infligez des dégâts d'Attaque sournoise, vous pouvez ajouter l'un des effets de Frappe malicieuse ci-après. Chaque effet présente un coût exprimé en dé, qui correspond au nombre de dés d'Attaque sournoise auquel vous renoncez pour ajouter cet effet. Vous retirez le ou les dés avant le lancer, et l'effet se produit immédiatement après que les dégâts de l'attaque ont été infligés. Si, par exemple, vous ajoutez l'effet Poison, retirez 1d6 aux dégâts d'Attaque sournoise avant le lancer.</p><p>Si un effet de Frappe malicieuse entraîne un jet de sauvegarde, le DD est égal à 8 + votre modificateur de Dextérité + votre bonus de maîtrise.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeCunningStr.Activity.dWcCw1vTWRMx4YzD caption=false cite=false nameStyle=inline]{Croc-en-jambe (coût : 1d6)}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeCunningStr.Activity.n64fvJMT9fPUy7DH caption=false cite=false nameStyle=inline]{Poison (coût : 1d6)}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeCunningStr.Activity.m2bRZ1YeD3yf9nV7 caption=false cite=false nameStyle=inline]{Repli (coût : 1d6)}</p><section id=\"secret-kCs7nMVrTvJRlkCy\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Après avoir utilisé les effets de Frappe malicieuse, utilisez l'activité <strong>Attaque sournoise malicieuse</strong> sur l'aptitude Attaque sournoise. Elle vous demandera de sélectionner le nombre de dés que vous avez dépensés pour les effets et les déduira automatiquement de votre jet d'Attaque sournoise.</p></section>",
             "activities": {
                 "Poison": {
                     "name": "Poison",
-                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise"
+                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise",
+                    "description": "<p>Vous ajoutez une toxine à votre coup contraignant la cible à effectuer un jet de sauvegarde de Constitution. En cas d'échec, la cible subit l'état &Reference[Poisoned apply=false] pendant 1 minute. La cible réitère le JS à la fin de chacun de ses tours et met un terme à l'effet Empoisonné sur elle-même en cas de réussite.</p><p>Pour recourir à cet effet, vous devez avoir un matériel d'empoisonneur sur vous.</p>"
                 },
                 "Trip": {
                     "name": "Croc-en-jambe",
                     "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise",
-                    "target": "Taille G ou inférieure"
+                    "target": "Taille G ou inférieure",
+                    "description": "<p>Si la cible est une taille G ou inférieure, elle doit réussir un jet de sauvegarde de Dextérité ou sous peine de subir l'état &Reference[Prone apply=false].</p>"
                 },
                 "Withdraw": {
                     "name": "Repli",
-                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise"
+                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise",
+                    "description": "<p>Immédiatement après l'attaque, vous vous déplacez à concurrence de la moitié de votre &Reference[Speed] sans provoquer d'attaque d'Opportunité.</p>"
                 }
             },
             "requirements": "Roublard"
@@ -635,7 +638,7 @@
         },
         "Devil's Sight": {
             "name": "Vision du diable",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+</p></blockquote><p>Vous voyez normalement en conditions de Lumière faible et de Ténèbres, que celles-ci soient magiques ou non, dans un rayon de 36 m.</p><section class=\"secret\" id=\"secret-RVsijULbRFU2b9ZU\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui vous confère la Vision dans le noir jusqu'à 36 m.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Vous voyez normalement en conditions de Lumière faible et de Ténèbres, que celles-ci soient magiques ou non, dans un rayon de 36 m.</p>",
             "effects": {
                 "Devil's Sight": {
                     "name": "Vision du diable"
@@ -644,25 +647,29 @@
         },
         "Devious Strikes": {
             "name": "Coups vicieux",
-            "description": "<p>Vous avez appris de nouveaux coups bas pour « agrémenter » votre Attaque sournoise. Les effets ci-après figurent désormais dans vos options de Frappe malicieuse.</p><p><strong>Assommer (coût : 6d6).</strong> La cible doit réussir un jet de sauvegarde de Constitution, faute de quoi elle subit l'état &Reference[Unconscious] pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. La cible réitère le JS à la fin de chacun de ses tours et met un terme à l'état Inconscient sur elle-même en cas de réussite.</p><p><strong>Aveugler (coût : 3d6).</strong> La cible doit réussir un jet de sauvegarde de Dextérité, faute de quoi elle subit l'état &Reference[Blinded] jusqu'à la fin de son tour suivant.</p><p><strong>Hébéter (coût : 2d6).</strong> La cible doit réussir un jet de sauvegarde de Constitution faute de quoi, à son tour suivant, elle ne pourra entreprendre que l'une des actions ci-après : déplacement ou action ou une action Bonus.</p><section class=\"secret\" id=\"secret-1jUuw8B9GvVx5ctH\"><p><strong>Note Foundry</strong></p><p>Après avoir utilisé les effets de Frappe malicieuse, utilisez l'activité [[/item Frappe malicieuse Activity=Attaque sournoise malicieuse]]{Attaque sournoise malicieuse}.</p><p>Vous pouvez contrôler le type de dégâts dans la boîte de dialogue du jet de dégâts.</p><p>L'activité <strong>Assommer</strong> comprend un effet actif qui applique l'état Inconscient.</p><p>L'activité <strong>Aveugler</strong> comprend un effet actif qui applique l'état Aveuglé.</p><p> L'activité <strong>Hébéter</strong> inclut un effet actif pour suivre la cible hébétée mais elle n'automatise pas l'effet.</p></section>",
+            "description": "<p>Vous avez appris de nouveaux coups bas pour « agrémenter » votre Attaque sournoise. Les effets ci-après figurent désormais dans vos options de Frappe malicieuse.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeDeviousStr.Activity.3eq7lcmpkJJBU2KO caption=false cite=false nameStyle=inline]{Assommer (coût : 6d6)}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeDeviousStr.Activity.ki4lIPVGNA0HjEzH caption=false cite=false nameStyle=inline]{Aveugler (coût : 3d6)}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeDeviousStr.Activity.4TnBjQTJzt9UjUos caption=false cite=false nameStyle=inline]{Hébéter (coût : 2d6)}</p>",
             "activities": {
                 "Daze": {
                     "name": "Hébéter",
-                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise"
+                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise",
+                    "description": "<p>La cible doit réussir un jet de sauvegarde de Constitution faute de quoi, à son tour suivant, elle ne pourra entreprendre que l'une des actions ci-après : déplacement ou action ou une action Bonus.</p>"
                 },
                 "Knock Out": {
                     "name": "Assommer",
-                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise"
+                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise",
+                    "description": "<p>La cible doit réussir un jet de sauvegarde de Constitution, faute de quoi elle subit l'état &Reference[Unconscious apply=false] pendant 1 minute ou jusqu'à ce qu'elle subisse des dégâts. La cible réitère le JS à la fin de chacun de ses tours et met un terme à l'état Inconscient sur elle-même en cas de réussite.</p>"
                 },
                 "Obscure": {
                     "name": "Aveugler",
-                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise"
+                    "condition": "Lorsque vous infligez des dégâts d'Attaque sournoise",
+                    "description": "<p>La cible doit réussir un jet de sauvegarde de Dextérité, faute de quoi elle subit l'état &Reference[Blinded apply=false] jusqu'à la fin de son tour suivant.</p>"
                 }
             },
             "requirements": "Roublard",
             "effects": {
                 "Dazed": {
-                    "description": "<p>À son tour suivant, la cible ne pourra entreprendre que l'une des actions ci-après : déplacement ou action ou une action Bonus.</p>"
+                    "description": "<p>À son tour suivant, la cible ne pourra entreprendre que l'une des actions ci-après : déplacement ou action ou une action Bonus.</p>",
+                    "name": "Hébété"
                 }
             }
         },
@@ -832,7 +839,7 @@
         },
         "Druidic": {
             "name": "Druidique",
-            "description": "<p>Vous connaissez le druidique, la langue secrète des Druides. En apprenant cette langue ancestrale, vous avez aussi percé les mystères magiques de la conversation animale ; le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplSpeakwithA]{communication avec les animaux} est toujours préparé en ce qui vous concerne.</p><p>Vous pouvez recourir au druidique pour laisser des messages cachés. Vous et tous ceux qui connaissent cet idiome repérez automatiquement de tels messages. D'autres peuvent aussi détecter la présence de tels signes en réussissant un test d'[[/check inv 15]], mais sont incapables d'en déchiffrer le sens.</p><section class=\"secret\" id=\"secret-5uD3Qi61JX7q2Fk8\"><p><strong>Note Foundry</strong></p><p>Druidique et communication avec les animaux sont automatiquement ajoutés lors de la progression.</p></section>",
+            "description": "<p>Vous connaissez le druidique, la langue secrète des Druides. En apprenant cette langue ancestrale, vous avez aussi percé les mystères magiques de la conversation animale ; le sort <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]{communication avec les animaux}</em> est toujours préparé en ce qui vous concerne.</p><p>Vous pouvez recourir au druidique pour laisser des messages cachés. Vous et tous ceux qui connaissent cet idiome repérez automatiquement de tels messages. D'autres peuvent aussi détecter la présence de tels signes en réussissant un test d'[[/check inv 15]], mais sont incapables d'en déchiffrer le sens.</p>",
             "requirements": "Druide",
             "advancement": {
                 "Speak with Animals": {
@@ -856,12 +863,12 @@
         },
         "Eldritch Invocations": {
             "name": "Manifestations occultes",
-            "description": "<p>Vos recherches ésotériques vous ont permis de dénicher des Manifestations occultes, fragments de savoir interdit qui vous octroient divers pouvoirs magiques. Vous recevez une manifestation de votre choix, comme @UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pacte du grimoire}. Ces manifestations sont décrites en section « @UUID[Compendium.dnd5e.content24.JournalEntry.phbWarlock000000.JournalEntryPage.FA4hxx49eazhISIt]{Options de Manifestation occulte} ».</p><p><strong>Prérequis.</strong> Si une manifestation s'accompagne d'un prérequis, vous devez le remplir pour pouvoir l'apprendre. Si, par exemple, une manifestation nécessite que vous soyez un Occultiste de niveau 5 ou supérieur, vous ne pourrez choisir cette manifestation qu'une fois atteint le niveau 5 dans cette classe.</p><p><strong>Remplacer et recevoir des manifestations.</strong> Chaque fois que vous gagnez un niveau d'Occultiste, vous pouvez remplacer l'une de vos manifestations par une autre pour laquelle vous remplissez les conditions. Vous ne pouvez pas remplacer une manifestation si elle est un prérequis à une autre manifestation dont vous disposez.</p><p>Vous en apprendrez d'autres que vous choisirez à plus haut niveau, comme le montre la colonne Manifestations de la table Aptitudes de l'Occultiste.</p><p><strong>Manifestations occultes max. actuellement :</strong> [[lookup @scale.warlock.invocations-known]]</p><p>Vous ne pouvez pas choisir la même manifestation plus d'une fois, sauf si sa description précise le contraire.</p><section class=\"secret\" id=\"secret-Oe1om6AaBjTtabpK\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire vos choix au fur et à mesure que vous progresserez en niveau. Le système de progression ne vous empêche pas de prendre des manifestations, mais assurez-vous de remplir les conditions requises avant d'en choisir une.</p></section>",
+            "description": "<p>Vos recherches ésotériques vous ont permis de dénicher des Manifestations occultes, fragments de savoir interdit qui vous octroient divers pouvoirs magiques. Vous recevez une manifestation de votre choix, comme @UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pacte du grimoire}. Ces manifestations sont décrites en section « @UUID[Compendium.dnd5e.content24.JournalEntry.phbWarlock000000.JournalEntryPage.FA4hxx49eazhISIt]{Options de Manifestation occulte} ».</p><p><em><strong>Prérequis.</strong></em> Si une manifestation s'accompagne d'un prérequis, vous devez le remplir pour pouvoir l'apprendre. Si, par exemple, une manifestation nécessite que vous soyez un Occultiste de niveau 5 ou supérieur, vous ne pourrez choisir cette manifestation qu'une fois atteint le niveau 5 dans cette classe.</p><p><em><strong>Remplacer et recevoir des manifestations.</strong></em> Chaque fois que vous gagnez un niveau d'Occultiste, vous pouvez remplacer l'une de vos manifestations par une autre pour laquelle vous remplissez les conditions. Vous ne pouvez pas remplacer une manifestation si elle est un prérequis à une autre manifestation dont vous disposez.</p><p>Vous en apprendrez d'autres que vous choisirez à plus haut niveau, comme le montre la colonne Manifestations de la table Aptitudes de l'Occultiste.</p><p>Vous ne pouvez pas choisir la même manifestation plus d'une fois, sauf si sa description précise le contraire.</p>",
             "requirements": "Occultiste"
         },
         "Eldritch Master": {
             "name": "Maître de l'occulte",
-            "description": "<p>Lorsque vous utilisez votre aptitude Rouerie magique, vous récupérez tous les emplacements de sort dépensés de Magie de pacte.</p><section id=\"secret-Ei3yWRJ5hdPjWIH0\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Utilisez cette aptitude pour restaurer tous les emplacements de sort dépensés de Magie de pacte. Cela consommera l'utilisation gratuite de votre aptitude Rouerie magique.</p></section>",
+            "description": "<p>Lorsque vous utilisez votre aptitude Rouerie magique, vous récupérez tous les emplacements de sort dépensés de Magie de pacte.</p>",
             "requirements": "Occultiste"
         },
         "Eldritch Mind": {
@@ -880,7 +887,7 @@
         },
         "Eldritch Spear": {
             "name": "Lance occulte",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+, un sort mineur d'Occultiste infligeant des dégâts</p></blockquote><p>Choisissez l'un de vos sorts mineurs d'Occultistes connus qui inflige des dégâts et présente une portée de 3 m ou plus. Lorsque vous lancez ce sort, sa portée augmente de 9 m par niveau d'Occultiste.</p><p><strong>Répétable.</strong> Vous pouvez recevoir cette manifestation plus d'une fois. Chaque fois, choisissez un sort mineur conforme différent.</p><section id=\"secret-7hr3xIfya7IOq7pj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Utilisez l'activité <strong>Augmenter la portée</strong> et faites glisser le sort mineur choisi sur la carte de discussion pour augmenter sa portée et ajouter « , Lance occulte » pour faciliter son identification.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+, un sort mineur d'Occultiste infligeant des dégâts</p></div><p>Choisissez l'un de vos sorts mineurs d'Occultistes connus qui inflige des dégâts et présente une portée de 3 m ou plus. Lorsque vous lancez ce sort, sa portée augmente de 9 m par niveau d'Occultiste.</p><p><em><strong>Répétable.</strong></em> Vous pouvez recevoir cette manifestation plus d'une fois. Chaque fois, choisissez un sort mineur conforme différent.</p><section id=\"secret-7hr3xIfya7IOq7pj\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Utilisez l'activité <strong>Augmenter la portée</strong> et faites glisser le sort mineur choisi sur la carte de discussion pour augmenter sa portée et ajouter « (Lance occulte) » pour faciliter son identification.</p></section>",
             "requirements": "Sort mineur d'Occultiste infligeant des dégâts",
             "activities": {
                 "Increase Range": {
@@ -909,21 +916,39 @@
         },
         "Elemental Fury": {
             "name": "Fureur élémentaire",
-            "description": "<p>La puissance des éléments coule en vous. Vous recevez l'une des options suivantes, au choix.</p><p><strong>Attaques primitives.</strong> Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme ou une attaque de Bête sous Forme sauvage, vous pouvez infliger à la cible 1d8 dégâts de [[/damage 1d8 type=fire]]{feu}, [[/damage 1d8 type=lightning]]{foudre}, [[/damage 1d8 type=cold]]{froid} ou [[/damage 1d8 type=thunder]]{tonnerre} (choisissez quand vous touchez).</p><p><strong>Incantation puissante.</strong> Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Druide.</p><section id=\"secret-kkxN7n7UL9XB7kWf\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire un choix lors de la progression.</p></section>",
-            "requirements": "Druide"
+            "description": "<p>La puissance des éléments coule en vous. Vous recevez l'une des options suivantes, au choix.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbFuryPrimalStr caption=false cite=false nameStyle=inline]{Attaques primitives}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbFuryPotentSpe caption=false cite=false nameStyle=inline]{Incantation puissante}</p>",
+            "requirements": "Druide",
+            "advancement": {
+                "Choose Elemental Fury": {
+                    "name": "Choisir Fureur élémentaire",
+                    "hint": "<p>La puissance des éléments coule en vous. Vous recevez l'une des options suivantes, au choix.</p>"
+                }
+            }
         },
         "Elemental Fury: Potent Spellcasting": {
             "name": "Fureur élémentaire : Incantation puissante",
-            "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Druide (actuellement, [[lookup @abilities.wis.mod]]).</p><section class=\"secret\" id=\"secret-kC2Lr5eZe550Tams\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas l'ajout du modificateur de Sagesse aux sorts mineurs de Druide.</p></section>",
-            "requirements": "Druide"
+            "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Druide.</p>",
+            "requirements": "Druide",
+            "effects": {
+                "Potent Spellcasting": {
+                    "name": "Incantation puissante",
+                    "description": "<p>Ajoutez votre modificateur de Sagesse aux dégâts que vous infligez par tout sort mineur de Druide.</p>"
+                }
+            }
         },
         "Elemental Fury: Primal Strike": {
             "name": "Fureur élémentaire : Attaques primitives",
-            "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme ou une attaque de Bête sous Forme sauvage, vous pouvez infliger à la cible 1d8 dégâts de [[/damage 1d8 type=fire]]{feu}, [[/damage 1d8 type=lightning]]{foudre}, [[/damage 1d8 type=cold]]{froid} ou [[/damage 1d8 type=thunder]]{tonnerre} (choisissez quand vous touchez).</p><section class=\"secret\" id=\"secret-teMMREyPGTtod1kP\"><p><strong>Note Foundry</strong></p><p>Les dégâts de cette aptitude augmenteront automatiquement lorsque vous gagnerez @UUID[Compendium.dnd5e.classes24.Item.phbdrdImprovedEl]{Fureur élémentaire améliorée}. Si vous utilisez l'activité, vous pourrez sélectionner le type de dégâts lors du jet. Par défaut, il s'agira du type de dégâts que vous avez choisi précédemment.</p></section>",
+            "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme ou une attaque de Bête sous Forme sauvage, vous pouvez infliger à la cible 1d8 dégâts de feu, foudre, froid ou tonnerre (choisissez quand vous touchez).</p>",
             "requirements": "Druide",
             "activities": {
                 "Primal Strike": {
-                    "name": "Attaques primitives"
+                    "name": "Attaques primitives",
+                    "condition": "Lorsque vous touchez une créature par un jet d'attaque avec une arme ou une attaque de Bête sous Forme sauvage"
+                },
+                "Improved Primal Strike": {
+                    "name": "Attaques primitives améliorées",
+                    "condition": "Lorsque vous touchez une créature par un jet d'attaque avec une arme ou une attaque de Bête sous Forme sauvage",
+                    "description": "<p>Une fois à chacun de vos tours, lorsque vous touchez une créature par un jet d'attaque avec une arme ou une attaque de Bête sous Forme sauvage, vous pouvez infliger à la cible 2d8 dégâts de feu, foudre, froid ou tonnerre (choisissez quand vous touchez).</p>"
                 }
             }
         },
@@ -1011,13 +1036,15 @@
         },
         "Fast Hands": {
             "name": "Mains lestes",
-            "description": "<p>Par une action Bonus, vous effectuez l'une des choses suivantes :</p><p><strong>Escamotage.</strong> Effectuez un test de Dextérité (Escamotage) pour crocheter une serrure, désamorcer un piège avec les outils de voleur ou faire les poches.</p><p><strong>Utilisation d'objet.</strong> Effectuez l'action Utilisation ou Magie pour utiliser un objet magique qui nécessite cette action.</p><section id=\"secret-jnQLm5F5Pq3fBPRp\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les activités <strong>Escamotage</strong> et <strong>Outils de voleur</strong> comprennent les tests correspondants.</p><p>L'activité <strong>Utilisation d'objet</strong> peut être utilisée pour suivre l'utilisation des actions Bonus.</p></section>",
+            "description": "<p>Par une action Bonus, vous effectuez l'une des choses suivantes :</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeFastHands0.Activity.G2QVu7o56FSQvuhy caption=false cite=false nameStyle=inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeFastHands0.Activity.5pHgM0ZQStN6rIGE caption=false cite=false nameStyle=inline]</p>",
             "activities": {
                 "Sleight of Hand": {
-                    "name": "Escamotage"
+                    "name": "Escamotage",
+                    "description": "<p>Effectuez un test de Dextérité (Escamotage) pour crocheter une serrure, désamorcer un piège avec les outils de voleur ou faire les poches.</p>"
                 },
                 "Use an Object": {
-                    "name": "Utilisation d'objet"
+                    "name": "Utilisation d'objet",
+                    "description": "<p>Effectuez l'action &Reference[Utilize] ou &Reference[Magic] pour utiliser un objet magique qui nécessite cette action.</p>"
                 }
             },
             "requirements": "Voleur"
@@ -1066,7 +1093,7 @@
         },
         "Fiend Spells": {
             "name": "Sorts du Fiélon",
-            "description": "<p>La magie de votre protecteur vous assure d'avoir certains sorts disponibles en permanence ; lorsque vous atteignez un niveau d'Occultiste spécifié dans la table Sorts du Fiélon, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption>Sorts du Fiélon</caption><thead><tr><td>Niveau d'Occultiste</td><td>Sorts</td></tr></thead><tbody><tr><td>3</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplCommand000]{injonction}, @UUID[Compendium.dnd5e.spells24.Item.phbsplBurningHan]{mains brûlantes}, @UUID[Compendium.dnd5e.spells24.Item.phbsplScorchingR]{rayon ardent}, @UUID[Compendium.dnd5e.spells24.Item.phbsplSuggestion]{suggestion}</td></tr><tr><td>5</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFireball00]{boule de feu}, @UUID[Compendium.dnd5e.spells24.Item.phbsplStinkingCl]{nuage nauséabond},</td></tr><tr><td>7</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplFireShield]{bouclier de feu}, @UUID[Compendium.dnd5e.spells24.Item.phbsplWallofFire]{mur de feu}</td></tr><tr><td>9</td><td>@UUID[Compendium.dnd5e.spells24.Item.phbsplInsectPlag]{fléau d'insectes}, @UUID[Compendium.dnd5e.spells24.Item.phbsplGeas000000]{quête}</td></tr></tbody></table><section class=\"secret\" id=\"secret-Az5JbDGwh8PLTt7g\"><p><strong>Note Foundry</strong></p><p>Au fur et à mesure que vous montez en niveau, ces sorts vous sont automatiquement attribués.</p></section>",
+            "description": "<p>La magie de votre protecteur vous assure d'avoir certains sorts disponibles en permanence ; lorsque vous atteignez un niveau d'Occultiste spécifié dans la table Sorts du Fiélon, les sorts qui y figurent sont toujours préparés pour vous.</p><table><caption><p>Sorts du Fiélon</p></caption><thead><tr><td><p>Niveau d'Occultiste</p></td><td><p>Sorts</p></td></tr></thead><tbody><tr><td><p>3</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplCommand000]{injonction}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplBurningHan]{mains brûlantes}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplScorchingR]{rayon ardent}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSuggestion]{suggestion}</em></p></td></tr><tr><td><p>5</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireball00]{boule de feu}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplStinkingCl]{nuage nauséabond}</em></p></td></tr><tr><td><p>7</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFireShield]{bouclier de feu}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWallofFire]{mur de feu}</em></p></td></tr><tr><td><p>9</p></td><td><p><em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInsectPlag]{fléau d'insectes}</em>, <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplGeas000000]{quête}</em></p></td></tr></tbody></table>",
             "requirements": "Protecteur Fiélon",
             "advancement": {
                 "Fiend Spells": {
@@ -1119,7 +1146,7 @@
         },
         "Fiendish Vigor": {
             "name": "Vigueur fiélonne",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+</p></blockquote><p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplFalseLife0]{simulacre de vie} sur vous-même sans dépenser d'emplacement de sort. À l'incantation du sort avec cette aptitude, vous ne lancez pas le dé pour les points de vie temporaires ; vous obtenez automatiquement le résultat le plus élevé du dé.</p><section class=\"secret\" id=\"secret-9kRkRSKEmbOaga6L\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Simulacre de vie</strong> comprend le maximum de soins.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFalseLife0]{simulacre de vie}</em> sur vous-même sans dépenser d'emplacement de sort. À l'incantation du sort avec cette aptitude, vous ne lancez pas le dé pour les points de vie temporaires ; vous obtenez automatiquement le résultat le plus élevé du dé.</p><section id=\"secret-9kRkRSKEmbOaga6L\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Simulacre de vie</strong> comprend le maximum de soins.</p></section>",
             "activities": {
                 "False Life": {
                     "name": "Simulacre de vie"
@@ -1179,7 +1206,7 @@
         },
         "Font of Inspiration": {
             "name": "Source d'inspiration",
-            "description": "<p>Vous récupérez désormais tout votre quota d'Inspiration bardique lorsque vous terminez un Repos court ou long.</p><p>De plus, vous pouvez dépenser un emplacement de sort (pas d'action requise) pour récupérer une utilisation d'Inspiration bardique.</p><section class=\"secret\" id=\"secret-KgQeVfHTLTrKK1s0\"><p><strong>Note Foundry</strong></p><p>Vous devez mettre à jour l'aptitude Inspiration bardique sur votre feuille afin qu'elle se recharge après un Repos court, car elle est réglée par défaut sur un Repos long. L'activité <strong>Recharger avec un emplacement de sort</strong> consommera un emplacement de sort et vous permettra d'utiliser une nouvelle fois l'Inspiration bardique.</p></section>",
+            "description": "<p>Vous récupérez désormais tout votre quota d'Inspiration bardique lorsque vous terminez un Repos court ou long.</p><p>De plus, vous pouvez dépenser un emplacement de sort (pas d'action requise) pour récupérer une utilisation d'Inspiration bardique.</p>",
             "requirements": "Barde",
             "activities": {
                 "Recharge with Spell Slot": {
@@ -1224,11 +1251,11 @@
         },
         "Gift of the Depths": {
             "name": "Présent des profondeurs",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 5+</p></blockquote><p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p>Vous pouvez en outre lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplWaterBreat]{respiration aquatique} une fois sans dépenser d'emplacement de sort. Vous devez terminer un Repos long avant de pouvoir le relancer ainsi.</p><section id=\"secret-aH09PLbY0nXMKypM\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Présent des profondeurs</strong> consomme une utilisation limitée et comprend un effet actif pour le suivi des créatures choisies.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p>Vous pouvez en outre lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]{respiration aquatique}</em> une fois sans dépenser d'emplacement de sort. Vous devez terminer un Repos long avant de pouvoir le relancer ainsi.</p>"
         },
         "Gift of the Protectors": {
             "name": "Présent des sauveurs",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 9+, manifestation @UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pacte du grimoire}</p></blockquote><p>Une nouvelle page apparaît dans votre @UUID[Compendium.dnd5e.classes24.Item.phbwlkBookOfShad]{Codex des Ombres} quand vous l'invoquez. Avec votre permission, une créature peut entreprendre une action afin d'écrire son nom sur cette page, qui peut contenir autant de noms que votre modificateur de Charisme (un nom au minimum).</p><p>Quand une créature dont le nom figure sur la page tombe à 0 point de vie sans être tuée sur le coup, elle tombe en fait magiquement à 1 point de vie. Une fois cette magie activée, aucune créature ne peut plus en profiter jusqu'à ce que vous terminiez un Repos long.</p><p>Au prix de l'action Magie, vous pouvez effacer un nom figurant sur la page, d'un simple contact.</p><section id=\"secret-VzLQ7nRPLs0fIkvE\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Protéger</strong> consomme une utilisation de son activité qui se rafraîchit à chaque Repos long.</p><p>L'activité <strong>Écrire un nom</strong> consomme une utilisation de l'objet qui peut être utilisée pour suivre le nombre de noms que vous avez écrits.</p><p>L'activité <strong>Effacer un nom</strong> rétablit l'usage de l'objet et permet d'ajouter un autre nom.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 9+, manifestation @UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pacte du grimoire}</p></div><p>Une nouvelle page apparaît dans votre @UUID[Compendium.dnd5e.classes24.Item.phbwlkBookOfShad]{Codex des Ombres} quand vous l'invoquez. Avec votre permission, une créature peut entreprendre une action afin d'écrire son nom sur cette page, qui peut contenir autant de noms que votre modificateur de Charisme (un nom au minimum).</p><p>Quand une créature dont le nom figure sur la page tombe à 0 point de vie sans être tuée sur le coup, elle tombe en fait magiquement à 1 point de vie. Une fois cette magie activée, aucune créature ne peut plus en profiter jusqu'à ce que vous terminiez un Repos long.</p><p>Au prix de l'action &Reference[Magic], vous pouvez effacer un nom figurant sur la page, d'un simple contact.</p><section id=\"secret-VzLQ7nRPLs0fIkvE\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Protéger</strong> consomme une utilisation de son activité qui se rafraîchit à chaque Repos long.</p><p>L'activité <strong>Écrire un nom</strong> consomme une utilisation de l'objet qui peut être utilisée pour suivre le nombre de noms que vous avez écrits.</p><p>L'activité <strong>Effacer un nom</strong> rétablit l'usage de l'objet et permet d'ajouter un autre nom.</p></section>",
             "activities": {
                 "Protect": {
                     "name": "Protéger",
@@ -1310,7 +1337,7 @@
         },
         "Hurl Through Hell": {
             "name": "Traversée des enfers",
-            "description": "<p>Une fois par tour, quand vous touchez une créature avec un jet d'attaque, vous pouvez tenter de projeter instantanément la cible dans les Plans Inférieurs. La cible doit réussir un jet de sauvegarde de Charisme assorti de votre DD de sauvegarde des sorts, faute de quoi elle disparaît, précipitée dans un paysage de cauchemar. La cible subit 8d10 dégâts psychiques si elle n'est pas un Fiélon et l'état &Reference[Incapacitated] jusqu'à la fin de votre tour suivant, puis elle retourne dans l'espace qu'elle occupait précédemment ou dans l'espace inoccupé le plus proche.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser un emplacement de sort de Magie de pacte (pas d'action requise) pour en récupérer l'usage.</p><section class=\"secret\" id=\"secret-gG3gHikiPJVXNkev\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une utilisation limitée.</p><p>L'activité <strong>Récupérer l'usage</strong> permet de dépenser un emplacement de sort de Magie de pacte et de récupérer l'usage de cette aptitude.</p></section>",
+            "description": "<p>Une fois par tour, quand vous touchez une créature avec un jet d'attaque, vous pouvez tenter de projeter instantanément la cible dans les Plans Inférieurs. La cible doit réussir un jet de sauvegarde de Charisme assorti de votre DD de sauvegarde des sorts, faute de quoi elle disparaît, précipitée dans un paysage de cauchemar. La cible subit 8d10 dégâts psychiques si elle n'est pas un Fiélon et l'état &Reference[Incapacitated apply=false] jusqu'à la fin de votre tour suivant, puis elle retourne dans l'espace qu'elle occupait précédemment ou dans l'espace inoccupé le plus proche.</p><p>Une fois cette aptitude utilisée, vous devez terminer un Repos long ou dépenser un emplacement de sort de Magie de pacte (pas d'action requise) pour en récupérer l'usage.</p>",
             "activities": {
                 "Hurl Through Hell": {
                     "name": "Traversée des enfers",
@@ -1339,7 +1366,7 @@
         },
         "Improved Critical": {
             "name": "Critique amélioré",
-            "description": "<p>Vos jets d'attaque avec des armes et à mains nues obtiennent un Coup critique sur un résultat de 19 ou 20 sur le d20.</p><section class=\"secret\" id=\"secret-dBJx5qqxTcKzMys8\"><p><strong>Note Foundry</strong></p><p>Cette aptitude augmente automatiquement le seuil de Coup critique à 19.</p></section>",
+            "description": "<p>Vos jets d'attaque avec des armes et à mains nues obtiennent un Coup critique sur un résultat de 19 ou 20 sur le d20.</p>",
             "effects": {
                 "Improved Critical": {
                     "name": "Critique amélioré"
@@ -1349,17 +1376,17 @@
         },
         "Improved Cunning Strike": {
             "name": "Frappe malicieuse améliorée",
-            "description": "<p>Vous pouvez utiliser jusqu'à deux effets de Frappe malicieuse lorsque vous infligez des dégâts d'Attaque sournoise, en acquittant le coût en dés pour chaque effet.</p><section class=\"secret\" id=\"secret-8yelsP7k8fXkEA5W\"><p><strong>Note Foundry</strong></p><p>Après avoir utilisé les effets de Frappe malicieuse, utilisez l'activité [[/item Frappe malicieuse activity=Attaque sournoise malicieuse]]{Attaque sournoise malicieuse}. Il vous sera demander de sélectionner le nombre de dés que vous avez dépensés pour les effets et les déduira automatiquement de votre jet d'attaque sournoise.</p><p>Vous pouvez contrôler le type de dégâts dans la boîte de dialogue du jet de dégâts.</p></section>",
+            "description": "<p>Vous pouvez utiliser jusqu'à deux effets de Frappe malicieuse lorsque vous infligez des dégâts d'Attaque sournoise, en acquittant le coût en dés pour chaque effet.</p>",
             "requirements": "Roublard"
         },
         "Improved Elemental Fury": {
             "name": "Fureur élémentaire améliorée",
-            "description": "<p>L'option retenue pour votre Fureur élémentaire se renforce, comme suit.</p><p><strong>Attaques primitives.</strong> Les dégâts supplémentaires d'Attaques primitives passent à 2d8.</p><p><strong>Incantation puissante.</strong> Lorsque vous lancez un sort mineur de Druide avec une portée de 3 m ou plus, cette portée augmente de 90 m.</p><section id=\"secret-7G1qK3zQ41zJONSd\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les dégâts de Attaques primitives sont automatiquement augmentés à ce niveau. Cette aptitude n'automatise pas les changements de portée.</p></section>",
+            "description": "<p>L'option retenue pour votre Fureur élémentaire se renforce, comme suit.</p><p><em><strong>Attaques primitives.</strong></em> Les dégâts supplémentaires d'Attaques primitives passent à 2d8.</p><p><em><strong>Incantation puissante.</strong></em> Lorsque vous lancez un sort mineur de Druide avec une portée de 3 m ou plus, cette portée augmente de 90 m.</p><section id=\"secret-7G1qK3zQ41zJONSd\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas les changements de portée.</p></section>",
             "requirements": "Druide"
         },
         "Indomitable": {
             "name": "Inflexible",
-            "description": "<p>Si vous ratez un jet de sauvegarde, vous pouvez le rejouer avec un bonus égal à votre niveau de Guerrier (actuellement, [[lookup @classes.fighter.levels]]). Dans ce cas, c'est forcément le nouveau jet qui s'applique et vous devez ensuite terminer un Repos long avant de pouvoir recourir de nouveau à cette aptitude.</p><p>Vous pouvez recourir deux fois à cette aptitude avant un Repos long à partir du niveau 13, puis trois fois à partir du niveau 17.</p><section class=\"secret\" id=\"secret-eVLmL8YfOocgD4rC\"><p><strong>Note Foundry</strong></p><p>Les utilisations maximales de cette aptitude évoluent automatiquement à mesure que vous progressez.</p></section>",
+            "description": "<p>Si vous ratez un jet de sauvegarde, vous pouvez le rejouer avec un bonus égal à votre niveau de Guerrier. Dans ce cas, c'est forcément le nouveau jet qui s'applique et vous devez ensuite terminer un Repos long avant de pouvoir recourir de nouveau à cette aptitude.</p><p>Vous pouvez recourir deux fois à cette aptitude avant un Repos long à partir du niveau 13, puis trois fois à partir du niveau 17.</p>",
             "requirements": "Guerrier",
             "activities": {
                 "Reroll": {
@@ -1416,7 +1443,7 @@
         },
         "Investment of the Chain Master": {
             "name": "Engagement du maître des chaînes",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 5+, manifestation @UUID[Compendium.dnd5e.classes24.Item.phbinvPactChain0]{Pacte de la chaîne}</p></blockquote><p>Lorsque vous lancez @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{appel de familier}, vous insufflez une dose de puissance occulte au familier convoqué, ce qui lui octroie les bénéfices suivants.</p><p><strong>Aérien ou aquatique.</strong> Le familier reçoit une Vitesse de vol ou une Vitesse de nage (à votre convenance) de 12 m.</p><p><strong>Attaque rapide.</strong> Par une action Bonus, vous pouvez ordonner au familier d'entreprendre l'action Attaquer.</p><p><strong>Dégâts nécrotiques ou radiants.</strong> Chaque fois que le familier inflige des dégâts contondants, perforants ou tranchants, vous pouvez décider qu'il inflige des dégâts nécrotiques ou radiants à la place.</p><p><strong>Votre DD de sauvegarde.</strong> Si le familier impose un jet de sauvegarde à une créature, il le fait avec votre DD de sauvegarde des sorts.</p><p><strong>Résistance.</strong> Lorsque le familier subit des dégâts, vous pouvez jouer votre Réaction pour lui octroyer la Résistance contre ces dégâts.</p><section class=\"secret\" id=\"secret-D3vSCo0uEG4Kp1X6\"><p><strong>Note Foundry</strong></p><p>Les activités <strong>Appel de familier avec Vol</strong> et <strong>avec Nage</strong> vous permettent toutes deux de convoqué un familier avec le bonus de déplacement correspondant. Ces deux activités consomment un emplacement de sort de Magie de pacte.</p><p>L'activité <strong>Engager avec la Résistance</strong> comprend un effet actif pour la Résistance à chaque type de dégâts qui peut être appliqué pour obtenir la Résistance correspondante. Veillez à désactiver/supprimer l'effet actif précédent dans l'onglet « Effets » de votre feuille lorsque vous changez de Résistance.</p><p>Le familier utilise automatiquement votre DD de sauvegarde.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+, manifestation @UUID[Compendium.dnd5e.classes24.Item.phbinvPactChain0]{Pacte de la chaîne}</p></div><p>Lorsque vous lancez <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFindFamili]{appel de familier}</em>, vous insufflez une dose de puissance occulte au familier convoqué, ce qui lui octroie les bénéfices suivants.</p><p><em><strong>Aérien ou aquatique.</strong></em> Le familier reçoit une Vitesse de vol ou une Vitesse de nage (à votre convenance) de 12 m.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvInvestment.Activity.nVygzzH0AxhOMaxu caption=false cite=false nameStyle=inline]</p><p><em><strong>Dégâts nécrotiques ou radiants.</strong></em> Chaque fois que le familier inflige des dégâts contondants, perforants ou tranchants, vous pouvez décider qu'il inflige des dégâts nécrotiques ou radiants à la place.</p><p><em><strong>Votre DD de sauvegarde.</strong></em> Si le familier impose un jet de sauvegarde à une créature, il le fait avec votre DD de sauvegarde des sorts.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbinvInvestment.Activity.fHEY2QcPTBaT4lBF caption=false cite=false nameStyle=inline]</p><section id=\"secret-D3vSCo0uEG4Kp1X6\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Les activités <strong>Appel de familier</strong> appliqueront à la fois des effets <strong>Aérien</strong> et <strong>Aquatique</strong> à la créature invoquée. L'effet non utilisé sur la créature peut être supprimé.</p><p>L'activité <strong>Résistance</strong> comprend un effet actif optionnel permettant de résister à chaque type de dégâts.</p></section>",
             "effects": {
                 "Resist Acid": {
                     "name": "Résistance à l'acide"
@@ -1456,12 +1483,21 @@
                 },
                 "Resist Thunder": {
                     "name": "Résistance au tonnerre"
+                },
+                "Aerial": {
+                    "name": "Aérien",
+                    "description": "<p><strong>Aérien ou aquatique.</strong> Le familier reçoit une Vitesse de vol ou une Vitesse de nage (à votre convenance) de 12 m.</p>"
+                },
+                "Aquatic": {
+                    "name": "Aquatique",
+                    "description": "<p><strong>Aérien ou aquatique.</strong> Le familier reçoit une Vitesse de vol ou une Vitesse de nage (à votre convenance) de 12 m.</p>"
                 }
             },
             "activities": {
                 "Resistance": {
                     "name": "Résistance",
-                    "target": "Votre familier"
+                    "target": "Votre familier",
+                    "description": "<p>Lorsque le familier subit des dégâts, vous pouvez jouer votre Réaction pour lui octroyer la Résistance contre ces dégâts.</p>"
                 },
                 "Find Familiar": {
                     "name": "Appel de familier",
@@ -1471,12 +1507,18 @@
                 },
                 "Find Familiar (Expanded Options)": {
                     "name": "Appel de familier (options élargies)"
+                },
+                "Quick Attack": {
+                    "name": "Attaque rapide",
+                    "chatFlavor": "Le familier entreprend l'action Attaque",
+                    "description": "<p>Par une action Bonus, vous pouvez ordonner au familier d'entreprendre l'action &Reference[Attack].</p>",
+                    "target": "le familier"
                 }
             }
         },
         "Jack of All Trades": {
             "name": "Touche-à-tout",
-            "description": "<p>Vous pouvez ajouter la moitié de votre bonus de maîtrise (arrondi à l'inférieur) à tout test de caractéristique que vous effectuez sans avoir la maîtrise de compétence associée, à condition que votre bonus de maîtrise ne s'y applique pas par ailleurs.</p><p>Exemple : si vous effectuez un test de Force (Athlétisme) sans avoir la maîtrise d'Athlétisme, vous pouvez ajouter la moitié de votre bonus de maîtrise au test.</p><section id=\"secret-su4PzYrZZDdS1qZg\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui vous confère automatiquement la moitié de votre bonus de maîtrise pour toutes les compétences que vous ne maîtrisez pas actuellement.</p></section>",
+            "description": "<p>Vous pouvez ajouter la moitié de votre bonus de maîtrise (arrondi à l'inférieur) à tout test de caractéristique que vous effectuez sans avoir la maîtrise de compétence associée, à condition que votre bonus de maîtrise ne s'y applique pas par ailleurs.</p><p>Exemple : si vous effectuez un test de Force (Athlétisme) sans avoir la maîtrise d'Athlétisme, vous pouvez ajouter la moitié de votre bonus de maîtrise au test.</p>",
             "requirements": "Barde",
             "effects": {
                 "Jack of All Trades": {
@@ -1486,7 +1528,7 @@
         },
         "Land's Aid": {
             "name": "Aval de la terre",
-            "description": "<p>Au prix de l'action Magie, vous pouvez dépenser une utilisation de Forme sauvage en choisissant un point dans un rayon de 18 m. Des fleurs nourricières et des ronces vampiriques se manifestent quelques instants dans une Sphère de 3 m de rayon centrée sur ce point. Chaque créature que vous choisissez dans la Sphère effectue un jet de sauvegarde de Constitution assorti de votre DD de sauvegarde des sorts, et subit 2d6 dégâts nécrotiques en cas d'échec, la moitié en cas de réussite. Une créature de votre choix dans cette zone récupère [[/healing @scale.land.lands-aid]]{[[lookup @scale.land.lands-aid]] points de vie.</p><p>Les dégâts et les soins augmentent de 1d6 lorsque vous atteignez les niveaux 10 (3d6) et 14 (4d6) de Druide.</p><section class=\"secret\" id=\"secret-T1DFK6QJjzeJsysz\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une activité pour le jet de sauvegarde et le soin.</p><p>Les valeurs de soins et de dégâts s'adaptent automatiquement à la montée en niveau.</p></section>",
+            "description": "<p>Au prix de l'action &Reference[Magic], vous pouvez dépenser une utilisation de Forme sauvage en choisissant un point dans un rayon de 18 m. Des fleurs nourricières et des ronces vampiriques se manifestent quelques instants dans une Sphère de 3 m de rayon centrée sur ce point. Chaque créature que vous choisissez dans la Sphère effectue un jet de sauvegarde de Constitution assorti de votre DD de sauvegarde des sorts, et subit 2d6 dégâts nécrotiques en cas d'échec, la moitié en cas de réussite. Une créature de votre choix dans cette zone récupère 2d6 points de vie.</p><p>Les dégâts et les soins augmentent de 1d6 lorsque vous atteignez les niveaux 10 (3d6) et 14 (4d6) de Druide.</p>",
             "requirements": "Cercle de la Terre"
         },
         "Lay on Hands": {
@@ -1523,7 +1565,7 @@
         },
         "Lifedrinker": {
             "name": "Buveuse de vie",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 9+, manifestation @UUID[Compendium.dnd5e.classes24.Item.phbinvPactBlade0]{Pacte de la lame}</p></blockquote><p>Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte, vous pouvez lui infliger 1d6 points de dégâts supplémentaires nécrotiques, psychiques ou radiants (au choix), et vous pouvez dépenser l'un de vos dés de vie pour le lancer et regagner un nombre de points de vie égal au résultat obtenu + votre modificateur de Constitution (minimum de 1 point de vie).</p><section class=\"secret\" id=\"secret-1Hta9I4donszrwIQ\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Dégâts</strong> vous permet de choisir le type de dégâts dans la boîte de dialogue du jet. Les activités <strong>Soigner (plus grand dé de vie)</strong> et <strong>plus petit dé de vie</strong> dépensent le dé de vie concerné et fournissent un jet de soins avec votre modificateur de Constitution inclus. Le choix n'a d'importance que si vous êtes multiclassé avec plusieurs types de dé de vie.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 9+, manifestation @UUID[Compendium.dnd5e.classes24.Item.phbinvPactBlade0]{Pacte de la lame}</p></div><p>Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte, vous pouvez lui infliger 1d6 points de dégâts supplémentaires nécrotiques, psychiques ou radiants (au choix), et vous pouvez dépenser l'un de vos dés de vie pour le lancer et regagner un nombre de points de vie égal au résultat obtenu + votre modificateur de Constitution (minimum de 1 point de vie).</p>",
             "activities": {
                 "Heal (Largest Hit Die)": {
                     "name": "Soigner (plus grand dé de vie)",
@@ -1537,7 +1579,7 @@
         },
         "Magical Cunning": {
             "name": "Rouerie magique",
-            "description": "<p>Vous pouvez accomplir un rite ésotérique qui dure 1 minute. À la fin de ce délai, vous regagnez des emplacements de sorts de Magie de pacte dépensés, à concurrence de la moitié du maximum (arrondie au supérieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p><section id=\"secret-uXJIaDc9mWHsrILV\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une utilisation gratuite et rétablit le nombre correct d'emplacements de sorts de Magie de pacte.</p></section>",
+            "description": "<p>Vous pouvez accomplir un rite ésotérique qui dure 1 minute. À la fin de ce délai, vous regagnez des emplacements de sorts de Magie de pacte dépensés, à concurrence de la moitié du maximum (arrondie au supérieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
             "requirements": "Occultiste"
         },
         "Magical Discoveries": {
@@ -1574,11 +1616,11 @@
         },
         "Mask of Many Faces": {
             "name": "Mille visages",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+</p></blockquote><p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplDisguiseSe]{déguisement} sans dépenser d'emplacement de sort.</p><section class=\"secret\" id=\"secret-vIzXrLvsSDtyMciU\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Utiliser</strong> peut être utilisée à la place de Déguisement et comprend un effet actif qui permet de savoir quand vous êtes déguisé.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplDisguiseSe]{déguisement}</em> sans dépenser d'emplacement de sort.</p>"
         },
         "Master of Myriad Forms": {
             "name": "Maître des formes",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 5+</p></blockquote><p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplAlterSelf0]{modification d'apparence} sans dépenser d'emplacement de sort.</p><section class=\"secret\" id=\"secret-x7wmXuFqGaXQspxB\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut les activités de modification d'apparence.</p><p>Les activités <strong>Adaptation aquatique</strong>, <strong>Armes naturelles</strong> et <strong>Changement d'aspect</strong> incluent des effets actifs pour le suivi de votre choix et requièrent de la Concentration.</p><p>Les activités <strong>Attaquer</strong> peuvent être utilisées pour vos jets d'attaque/dégâts lorsque vous choisissez l'option <strong>Armes naturelles</strong>.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplAlterSelf0]{modification d'apparence}</em> sans dépenser d'emplacement de sort.</p>"
         },
         "Memorize Spell": {
             "name": "Mémorisation de sort",
@@ -1613,7 +1655,7 @@
         },
         "Misty Visions": {
             "name": "Vision embrumées",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+</p></blockquote><p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplSilentImag]{image silencieuse} sans dépenser d'emplacement de sort.</p><section class=\"secret\" id=\"secret-zbni49FP84e1UILg\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut les activités d'image silencieuse et peut être utilisée à sa place.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSilentImag]{image silencieuse}</em> sans dépenser d'emplacement de sort.</p>"
         },
         "Monk": {
             "name": "Moine",
@@ -1736,7 +1778,7 @@
         },
         "Nature's Ward": {
             "name": "Protégé de dame Nature",
-            "description": "<p>Vous êtes immunisé contre l'état Empoisonné et bénéficiez de la Résistance contre les dégâts du type associé à votre choix d'environnement actuel pour l'aptitude Sorts de cercle, comme indiqué dans la table Protégé de dame Nature.</p><table><caption>Protégé de dame Nature</caption><thead><tr><td>Environnement</td><td>Résistance</td></tr></thead><tbody><tr><td>Aride</td><td>Feu</td></tr><tr><td>Polaire</td><td>Froid</td></tr><tr><td>Tempéré</td><td>Foudre</td></tr><tr><td>Tropical</td><td>Poison</td></tr></tbody></table><section class=\"secret\" id=\"secret-0muLLDjt1zqXptme\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif pour l'immunité contre l'état Empoisonné et un effet actif pour chaque type d'environnement. Vous pouvez activer l'effet actif pour le type d'environnement choisi.</p></section>",
+            "description": "<p>Vous êtes immunisé contre l'état &Reference[Poisoned apply=false] et bénéficiez de la &Reference[Resistance] contre les dégâts du type associé à votre choix d'environnement actuel pour l'aptitude Sorts de cercle, comme indiqué dans la table Protégé de dame Nature.</p><table><caption><p>Protégé de dame Nature</p></caption><thead><tr><td><p>Environnement</p></td><td><p>Résistance</p></td></tr></thead><tbody><tr><td><p>Aride</p></td><td><p>Feu</p></td></tr><tr><td><p>Polaire</p></td><td><p>Froid</p></td></tr><tr><td><p>Tempéré</p></td><td><p>Foudre</p></td></tr><tr><td><p>Tropical</p></td><td><p>Poison</p></td></tr></tbody></table>",
             "requirements": "Cercle de la Terre",
             "advancement": {
                 "Poisoned Immunity": {
@@ -1764,7 +1806,7 @@
         },
         "One with Shadows": {
             "name": "Maître des ombres",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 5+</p></blockquote><p>Tant que vous vous trouvez dans une zone de &Reference[Dim Light] ou de &Reference[Darkness], vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplInvisibili]{invisibilité} sur vous-même sans dépenser d'emplacement de sort.</p><section class=\"secret\" id=\"secret-SvwkLQLYzHCKzuss\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Utiliser</strong> peut être utilisée à la place du sort Invisibilité et comprend un effet actif qui active l'état Invisible.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Tant que vous vous trouvez dans une zone de &Reference[Dim Light] ou de &Reference[Darkness], vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{invisibilité}</em> sur vous-même sans dépenser d'emplacement de sort.</p>"
         },
         "Open Hand Technique": {
             "name": "Technique de la Paume",
@@ -1796,11 +1838,11 @@
         },
         "Otherworldly Leap": {
             "name": "Saut d'outre-monde",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+</p></blockquote><p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplJump000000]{saut} sur vous-même sans dépenser d'emplacement de sort.</p><section id=\"secret-JpQyXOJAkEKVXxff\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude peut être utilisée à la place du sort Saut et comprend un effet actif pour le suivi.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplJump000000]{saut}</em> sur vous-même sans dépenser d'emplacement de sort.</p>"
         },
         "Overchannel": {
             "name": "Surcharge magique",
-            "description": "<p>Vous savez désormais augmenter la puissance de vos sorts. Lorsque vous lancez un sort de Magicien avec un emplacement de sort du 1<sup>er</sup> au 5<sup>e</sup> niveau et infligeant des dégâts, vous pouvez infliger le maximum de dégâts avec ce sort au tour où vous le lancez.</p><p>La première fois que vous procédez ainsi, vous ne subissez aucun effet indésirable. Si vous recourez de nouveau à cette aptitude avant d'avoir terminé un Repos long, vous subissez 2d12 dégâts nécrotiques pour chaque niveau de l'emplacement de sort, aussitôt après l'avoir lancé. Ces dégâts ne sont pas affectés par la Résistance et l'Immunité.</p><p>Chaque fois que vous réutilisez cette aptitude avant de terminer un Repos long, les dégâts nécrotiques par niveau de sort augmentent de 1d12.</p><section class=\"secret\" id=\"secret-Uh2cD0di8YB1gKPG\"><p><strong>Note Foundry</strong></p><p>Cette aptitude est limitée à des usages permettant de savoir combien de fois elle a été utilisée pour automatiser les dégâts.</p><p>L'activité <strong>Première utilisation</strong> comprend une utilisation gratuite de l'activité et rétablit toutes les utilisations de l'aptitude.</p><p>L'activité <strong>Deuxième utilisation et plus</strong> consomme une utilisation et augmente automatiquement les dégâts. Elle doit être utilisée pour toutes les utilisations suivantes jusqu'à ce que vous ayez terminé un Repos long.</p></section>",
+            "description": "<p>Vous savez désormais augmenter la puissance de vos sorts. Lorsque vous lancez un sort de Magicien avec un emplacement de sort du 1<sup>er</sup> au 5<sup>e</sup> niveau et infligeant des dégâts, vous pouvez infliger le maximum de dégâts avec ce sort au tour où vous le lancez.</p><p>La première fois que vous procédez ainsi, vous ne subissez aucun effet indésirable. Si vous recourez de nouveau à cette aptitude avant d'avoir terminé un Repos long, vous subissez 2d12 dégâts nécrotiques pour chaque niveau de l'emplacement de sort, aussitôt après l'avoir lancé. Ces dégâts ne sont pas affectés par la Résistance et l'Immunité.</p><p>Chaque fois que vous réutilisez cette aptitude avant de terminer un Repos long, les dégâts nécrotiques par niveau de sort augmentent de 1d12.</p>",
             "requirements": "Évocateur",
             "activities": {
                 "Overchannel": {
@@ -1836,7 +1878,7 @@
         },
         "Pact of the Chain": {
             "name": "Pacte de la chaîne",
-            "description": "<p>Vous apprenez le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{appel de familier} que vous pouvez lancer au prix de l'action Magie sans dépenser d'emplacement de sort.</p><p>À l'incantation du sort, vous pouvez choisir l'une des formes normales pour votre familier ou l'une des formes spéciales suivantes : @UUID[Compendium.dnd5e.actors24.Actor.mmImp00000000000]{diablotin}, @UUID[Compendium.dnd5e.actors24.Actor.mmSprite00000000]{esprit follet}, @UUID[Compendium.dnd5e.actors24.Actor.mmPseudodragon00]{pseudodragon}, @UUID[Compendium.dnd5e.actors24.Actor.mmQuasit00000000]{quasit}, @UUID[Compendium.dnd5e.actors24.Actor.mmSphinxOfWonder]{sphinx merveilleux}, @UUID[Compendium.dnd5e.actors24.Actor.mmVenomousSnake0]{serpent venimeux}, @UUID[Compendium.dnd5e.actors24.Actor.mmSkeleton000000]{squelette} ou têtard slaad.</p><p>En outre, lorsque vous entreprenez l'action Attaque, vous pouvez renoncer à l'une de vos attaques pour permettre à votre familier d'effectuer l'une de ses attaques en jouant sa Réaction.</p><section class=\"secret\" id=\"secret-aKbhLPfPD3R9Y1KL\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Appel de familier</strong> comprend les options de convocation normales et l'activité <strong>Appel de familier (options élargies)</strong> comprend les options supplémentaires.</p></section>",
+            "description": "<p>Vous apprenez le sort <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFindFamili]{appel de familier}</em> que vous pouvez lancer au prix de l'action &Reference[Magic] sans dépenser d'emplacement de sort.</p><p>À l'incantation du sort, vous pouvez choisir l'une des formes normales pour votre familier ou l'une des formes spéciales suivantes : <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmImp00000000000]{diablotin}</strong>, <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSprite00000000]{esprit follet}</strong>, <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmPseudodragon00]{pseudodragon}</strong>, <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmQuasit00000000]{quasit}</strong>, <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSphinxOfWonder]{sphinx merveilleux}</strong>, <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmVenomousSnake0]{serpent venimeux}</strong>, <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSkeleton000000]{squelette}</strong> ou <strong>@UUID[Compendium.dnd-monster-manual.actors.Actor.mmSlaadTadpole00]{têtard slaad}</strong>.</p><p>En outre, lorsque vous entreprenez l'action Attaque, vous pouvez renoncer à l'une de vos attaques pour permettre à votre familier d'effectuer l'une de ses attaques en jouant sa Réaction.</p><section id=\"secret-aKbhLPfPD3R9Y1KL\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Appel de familier</strong> comprend les options de convocation normales et l'activité <strong>Appel de familier (options élargies)</strong> comprend les options supplémentaires.</p></section>",
             "activities": {
                 "Find Familiar": {
                     "name": "Appel de familier",
@@ -1930,7 +1972,7 @@
         },
         "Potent Cantrip": {
             "name": "Sort mineur appuyé",
-            "description": "<p>Vos sorts mineurs restent redoutables pour les créatures qui croyaient s'y soustraire. Lorsque vous lancez un sort mineur sur une créature et que vous ratez votre jet d'attaque ou que la cible réussit son jet de sauvegarde, celle-ci subit la moitié des dégâts éventuels du sort mineur mais aucun effet supplémentaire de ce dernier.</p><section id=\"secret-fJby40y1vz8RXGG4\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Une fois le token sélectionné, vous pouvez soit faire un clic droit sur la carte de discussion du jet de dégâts et sélectionner <span class=\"reference\"><em class=\"fas fa-user-shield\"> </em>Appliquer la moitié comme dégâts</span> ou cliquez sur le bouton « 1/2 » puis sur le bouton <span class=\"reference\"><em class=\"fa-solid fa-reply-all\"> </em>Appliquer</span>.</p></section>",
+            "description": "<p>Vos sorts mineurs restent redoutables pour les créatures qui croyaient s'y soustraire. Lorsque vous lancez un sort mineur sur une créature et que vous ratez votre jet d'attaque ou que la cible réussit son jet de sauvegarde, celle-ci subit la moitié des dégâts éventuels du sort mineur mais aucun effet supplémentaire de ce dernier.</p>",
             "requirements": "Évocateur"
         },
         "Precise Hunter": {
@@ -1975,18 +2017,42 @@
         },
         "Primal Order": {
             "name": "Ordre primitif",
-            "description": "<p>Vous consacrez votre existence à l'un des rôles sacrés suivants, au choix.</p><p><strong>Gardien.</strong> Combattant chevronné, vous recevez la maîtrise des armes de guerre et la formation aux armures intermédiaires.</p><p><strong>Mage.</strong> Vous connaissez un sort mineur supplémentaire tiré de la liste du Druide. De plus, votre lien mystique vous octroie un bonus aux tests d'Intelligence (Arcanes et Nature). Ce bonus est égal à votre modificateur de Sagesse (minimum +1).</p><section id=\"secret-SgYOtpnQW9hL4WJ8\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à faire un choix lors de la progression.</p></section>",
-            "requirements": "Druide"
+            "description": "<p>Vous consacrez votre existence à l'un des rôles sacrés suivants, au choix.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbPrimalOrderWa caption=false cite=false nameStyle=inline]{Gardien}</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbPrimalOrderMa caption=false cite=false nameStyle=inline]{Mage}</p>",
+            "requirements": "Druide",
+            "advancement": {
+                "Choose Primal Order": {
+                    "name": "Choisir Ordre primitif",
+                    "hint": "<p>Vous consacrez votre existence à l'un des rôles sacrés suivants, au choix.</p>"
+                }
+            }
         },
         "Primal Order: Magician": {
             "name": "Ordre primitif : Mage",
-            "description": "<p>Vous connaissez un sort mineur supplémentaire tiré de la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU#sorts-mineurs]{liste du Druide}. De plus, votre lien mystique vous octroie un bonus aux tests d'Intelligence (Arcanes et Nature). Ce bonus est égal à votre modificateur de Sagesse (minimum +1, actuellement [[lookup @abilities.wis.mod]]).</p><section class=\"secret\" id=\"secret-adiIB9wCX5zZdZ9F\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut un effet actif qui automatise l'augmentation de vos sorts mineurs connus et le bonus à vos tests d'Arcane et de Nature.</p></section>",
-            "requirements": "Druide"
+            "description": "<p>Vous connaissez un sort mineur supplémentaire tiré de la @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU#sorts-mineurs]{liste du Druide}. De plus, votre lien mystique vous octroie un bonus aux tests d'Intelligence (Arcanes et Nature). Ce bonus est égal à votre modificateur de Sagesse (minimum +1).</p>",
+            "requirements": "Druide",
+            "effects": {
+                "Magician Checks & Cantrip": {
+                    "name": "Tests et sort mineur de Mage",
+                    "description": "<p>Votre lien mystique vous octroie un bonus aux tests d'Intelligence (Arcanes et Nature). Ce bonus est égal à votre modificateur de Sagesse (minimum +1).</p>"
+                }
+            },
+            "advancement": {
+                "Extra Druid Cantrip": {
+                    "name": "Sort mineur supplémentaire du Druide",
+                    "hint": "<p>Vous connaissez un sort mineur supplémentaire tiré de la liste du Druide.</p>"
+                }
+            }
         },
         "Primal Order: Warden": {
             "name": "Ordre primitif : Gardien",
-            "description": "<p>Combattant chevronné, vous recevez la maîtrise des armes de guerre et la formation aux armures intermédiaires.</p><section id=\"secret-hVQSjHcU93Zpf54G\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui automatise l'ajout de votre maîtrise d'armes de guerre et de votre formation aux armures intermédiaires.</p></section>",
-            "requirements": "Druide"
+            "description": "<p>Combattant chevronné, vous recevez la maîtrise des armes de guerre et la formation aux armures intermédiaires.</p>",
+            "requirements": "Druide",
+            "advancement": {
+                "Trained for Battle": {
+                    "name": "Combattant chevronné",
+                    "hint": "<p>Combattant chevronné, vous recevez la maîtrise des armes de guerre et la formation aux armures intermédiaires.</p>"
+                }
+            }
         },
         "Quickened Spell": {
             "name": "Sort accéléré",
@@ -2102,7 +2168,7 @@
         },
         "Reliable Talent": {
             "name": "Savoir-faire",
-            "description": "<p>Chaque fois que vous effectuez un test de caractéristique qui repose sur une compétence ou un outil dont vous avez la maîtrise, tout résultat inférieur ou égal à 9 sur le d20 est considéré comme un 10.</p><section class=\"secret\" id=\"secret-FOATC0HOce35kD20\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui automatise le jet minimum de 10 sur vos compétences et vos maîtrises d'outils.</p></section>",
+            "description": "<p>Chaque fois que vous effectuez un test de caractéristique qui repose sur une compétence ou un outil dont vous avez la maîtrise, tout résultat inférieur ou égal à 9 sur le d20 est considéré comme un 10.</p>",
             "effects": {
                 "Reliable Talent": {
                     "name": "Savoir-faire"
@@ -2112,7 +2178,7 @@
         },
         "Remarkable Athlete": {
             "name": "Athlète accompli",
-            "description": "<p>Grâce à vos qualités athlétiques, vous avez l'Avantage aux jets d'Initiative et aux tests de Force (Athlétisme).</p><p>De plus, aussitôt après avoir obtenu un Coup critique, vous pouvez vous déplacer à concurrence de la moitié de votre Vitesse sans provoquer d'attaques d'Opportunité.</p><section class=\"secret\" id=\"secret-uyi38uA0t76MZ3Ae\"><p><strong>Note Foundry</strong></p><p>Cette aptitude confère automatiquement l'Avantage aux jets d'Initiative.</p></section>",
+            "description": "<p>Grâce à vos qualités athlétiques, vous avez l'Avantage aux jets d'Initiative et aux tests de Force (Athlétisme).</p><p>De plus, aussitôt après avoir obtenu un Coup critique, vous pouvez vous déplacer à concurrence de la moitié de votre &Reference[Speed] sans provoquer d'attaques d'Opportunité.</p>",
             "effects": {
                 "Remarkable Athlete": {
                     "name": "Athlète accompli"
@@ -2122,7 +2188,7 @@
         },
         "Repelling Blast": {
             "name": "Décharge répulsive",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 2+, un sort mineur d'Occultiste infligeant des dégâts via un jet d'attaque</p></blockquote><p>Choisissez l'un de vos sorts mineurs d'Occultiste connus qui nécessite un jet d'attaque. Lorsque vous touchez une créature de taille G ou inférieure avec ce sort mineur, vous pouvez repousser cette créature de vous d'un maximum de 3 m, en ligne droite.</p><p><strong>Répétable.</strong> Vous pouvez recevoir cette manifestation plus d'une fois. Chaque fois, choisissez un sort mineur conforme différent.</p><section class=\"secret\" id=\"secret-5xV7SaKI7sGaeKvq\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Rendre répulsif</strong> peut être utilisée pour enchanter un sort mineur qui ajoute « , Répulsif » en guise de rappel.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+, un sort mineur d'Occultiste infligeant des dégâts via un jet d'attaque</p></div><p>Choisissez l'un de vos sorts mineurs d'Occultiste connus qui nécessite un jet d'attaque. Lorsque vous touchez une créature de taille G ou inférieure avec ce sort mineur, vous pouvez repousser cette créature de vous d'un maximum de 3 m, en ligne droite.</p><p><em><strong>Répétable.</strong></em> Vous pouvez recevoir cette manifestation plus d'une fois. Chaque fois, choisissez un sort mineur conforme différent.</p><section id=\"secret-5xV7SaKI7sGaeKvq\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Rendre répulsif</strong> peut être utilisée pour enchanter un sort mineur qui ajoute « (Répulsif) » en guise de rappel.</p></section>",
             "requirements": "Sort mineur d'Occultiste infligeant des dégâts via un jet d'attaque",
             "activities": {
                 "Make Repelling": {
@@ -2237,12 +2303,12 @@
         },
         "Second Wind": {
             "name": "Second souffle",
-            "description": "<p>Vous disposez d'une réserve limitée d'endurance mentale et physique dans laquelle puiser. Par une action Bonus, vous pouvez y recourir pour récupérer des points de vie égaux à 1d10 + votre niveau de Guerrier.</p><p>Vous pouvez recourir deux fois à cette aptitude. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez d'autres utilisations de cette aptitude, comme indiqué à la colonne Second souffle de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbFighter000000.JournalEntryPage.wDELe3k25FQvYdrq#aptitudes-de-classe]{Aptitudes du Guerrier}.</p><section class=\"secret\" id=\"secret-GEvXAMpxWEFigqSc\"><p><strong>Note Foundry</strong></p><p>Cette aptitude adapte automatiquement l'utilisation et récupère le nombre correct d'utilisations lors d'un Repos court et long.</p></section>",
+            "description": "<p>Vous disposez d'une réserve limitée d'endurance mentale et physique dans laquelle puiser. Par une action Bonus, vous pouvez y recourir pour récupérer des points de vie égaux à 1d10 + votre niveau de Guerrier.</p><p>Vous pouvez recourir deux fois à cette aptitude. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez d'autres utilisations de cette aptitude, comme indiqué à la colonne Second souffle de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbFighter000000.JournalEntryPage.wDELe3k25FQvYdrq#aptitudes-de-classe]{Aptitudes du Guerrier}.</p>",
             "requirements": "Guerrier"
         },
         "Second-Story Work": {
             "name": "Monte-en-l'air",
-            "description": "<p>Rompu à l'accès aux endroits difficiles, vous recevez les bénéfices ci-après.</p><p><strong>Escaladeur.</strong> Vous recevez une Vitesse d'escalade égale à votre Vitesse.</p><p><strong>Sauteur.</strong> Vous pouvez déterminer votre distance de &Reference[Jumping]{saut} en utilisant votre Dextérité plutôt que votre Force.</p><section class=\"secret\" id=\"secret-7BCLTkAFUjinYhJw\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'ajoute pas automatiquement la Vitesse d'escalade et devra être ajoutée manuellement.</p></section>",
+            "description": "<p>Rompu à l'accès aux endroits difficiles, vous recevez les bénéfices ci-après.</p><p><em><strong>Escaladeur.</strong></em> Vous recevez une Vitesse d'escalade égale à votre &Reference[Speed].</p><p><em><strong>Sauteur.</strong></em> Vous pouvez déterminer votre distance de &Reference[Jumping]{saut} en utilisant votre Dextérité plutôt que votre Force.</p>",
             "effects": {
                 "Second-Story Work": {
                     "name": "Monte-en-l'air"
@@ -2287,7 +2353,7 @@
         },
         "Slippery Mind": {
             "name": "Esprit fuyant",
-            "description": "<p>Votre esprit retors est particulièrement difficile a contrôler. Vous recevez la maîtrise des jets de sauvegarde de Sagesse et de Charisme.</p><section id=\"secret-57oM7wI8FDY1iw4F\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ces maîtrises sont accordées automatiquement à mesure que vous montez de niveau.</p></section>",
+            "description": "<p>Votre esprit retors est particulièrement difficile a contrôler. Vous recevez la maîtrise des jets de sauvegarde de Sagesse et de Charisme.</p>",
             "requirements": "Roublard"
         },
         "Slow Fall": {
@@ -2454,7 +2520,7 @@
         },
         "Superior Critical": {
             "name": "Critique supérieur",
-            "description": "<p>Vos jets d'attaque avec des armes et à mains nues obtiennent un Coup critique sur un résultat de 18, 19 ou 20 sur le d20.</p><section id=\"secret-zQkYyojU3VNzw6kH\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude augmente automatiquement le seuil de Coup critique à 18.</p></section>",
+            "description": "<p>Vos jets d'attaque avec des armes et à mains nues obtiennent un Coup critique sur un résultat de 18, 19 ou 20 sur le d20.</p>",
             "effects": {
                 "Superior Critical": {
                     "name": "Critique supérieur"
@@ -2526,8 +2592,21 @@
         },
         "Survivor": {
             "name": "Survivant",
-            "description": "<p>Vous atteignez le summum de l'endurance martiale, ce qui vous octroie ces bénéfices.</p><p><strong>Résilience héroïque.</strong> Au début de chacun de vos tours, si vous êtes En péril et doté d'au moins 1 point de vie, vous récupérez un nombre de pv égal à 5 + votre modificateur de Constitution.</p><p><strong>Trompe-la-mort.</strong> Vous avez l'Avantage aux jets de sauvegarde contre la mort. De plus, lorsque vous obtenez un jet de 18 ou 19 à un JS contre la mort, vous en tirez les mêmes bénéfices que si vous aviez obtenu un 20.</p><section id=\"secret-z1Nr871ifr67hchm\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas les modifications aux jets de sauvegarde contre la mort. Elle inclut une activité de soin, mais ne l'ajoute pas automatiquement lorsque vous êtes En péril.</p></section>",
-            "requirements": "Champion"
+            "description": "<p>Vous atteignez le summum de l'endurance martiale, ce qui vous octroie ces bénéfices.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbftrSurvivor00.Activity.5Fo0QwzexIPyLP3W caption=false cite=false nameStyle=inline]</p><p><em><strong>Trompe-la-mort.</strong></em> Vous avez l'Avantage aux jets de sauvegarde contre la mort. De plus, lorsque vous obtenez un jet de 18 ou 19 à un JS contre la mort, vous en tirez les mêmes bénéfices que si vous aviez obtenu un 20.</p><section id=\"secret-z1Nr871ifr67hchm\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas les modifications aux jets de sauvegarde contre la mort en cas de jet de 18 ou 19.</p></section>",
+            "requirements": "Champion",
+            "activities": {
+                "Heroic Rally": {
+                    "name": "Résilience héroïque",
+                    "condition": "si En péril",
+                    "description": "<p>Au début de chacun de vos tours, si vous êtes &Reference[Bloodied apply=false] et doté d'au moins 1 point de vie, vous récupérez un nombre de pv égal à 5 + votre modificateur de Constitution.</p>"
+                }
+            },
+            "effects": {
+                "Defy Death": {
+                    "name": "Trompe-la-mort",
+                    "description": "<p><strong>Note :</strong> Cet effet ne modifie pas le résultat d'un jet de sauvegarde contre la mort lorsque l'on obtient un 18 ou un 19.</p>"
+                }
+            }
         },
         "Tactical Master": {
             "name": "Botte tactique",
@@ -2661,7 +2740,7 @@
         },
         "Uncanny Dodge": {
             "name": "Esquive instinctive",
-            "description": "<p>Lorsqu'un assaillant que vous voyez vous touche avec un jet d'attaque, vous pouvez jouer votre Réaction pour réduire de moitié les dégâts de cette attaque (arrondir à l'inférieur).</p><section class=\"secret\" id=\"secret-fLqTNntX7T0swRsu\"><p><strong>Note Foundry</strong></p><p>Une fois le token sélectionné, vous pouvez soit faire un clic droit sur la carte de discussion du jet de dégâts et sélectionner <span class=\"reference\"><em class=\"fas fa-user-shield\"> </em>Appliquer la moitié comme dégâts</span> ou cliquez sur le bouton « 1/2 » puis sur le bouton <span class=\"reference\"><em class=\"fa-solid fa-reply-all\"> </em>Appliquer</span>.</p></section>",
+            "description": "<p>Lorsqu'un assaillant que vous voyez vous touche avec un jet d'attaque, vous pouvez jouer votre Réaction pour réduire de moitié les dégâts de cette attaque (arrondir à l'inférieur).</p>",
             "requirements": "Roublard",
             "activities": {
                 "Dodge": {
@@ -2682,18 +2761,25 @@
         },
         "Use Magic Device": {
             "name": "Utilisation d'objets magiques",
-            "description": "<p>Vous avez appris à tirer le meilleur parti des objets magiques, ce qui vous octroie les bénéfices suivants.</p><p><strong>Charges.</strong> Chaque fois que vous utilisez une propriété d'objet magique qui dépense des charges, lancez [[/r 1d6]]. Sur un résultat de 6, vous utilisez la propriété sans dépenser la moindre charge. </p><p><strong>Harmonisation.</strong> Vous pouvez être harmonisé avec un maximum de quatre objets à la fois.</p><p><strong>Parchemins.</strong> Vous pouvez utiliser n'importe quel <em>parchemin de sort</em>, en recourant à l'Intelligence comme caractéristique d'incantation pour le sort qui y est inscrit. Si ce sort est un sort mineur ou un sort du 1<sup>er</sup> niveau, vous le lancez à coup sûr. Si le parchemin contient un sort de niveau supérieur, vous devez au préalable réussir un test d'[[/skill arc]] (DD 10 + le niveau du sort). En cas de réussite, vous lancez le sort inscrit sur le parchemin. En cas d'échec, le parchemin se désintègre.</p><section class=\"secret\" id=\"secret-2tHTpsolDU6Nggvo\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui augmente automatiquement votre maximum d'harmonisation.</p><p>Lorsque vous utilisez une propriété d'objet qui dépense des charges, lancez le d6 et décochez la case de consommation pour l'utiliser gratuitement.</p></section>",
+            "description": "<p>Vous avez appris à tirer le meilleur parti des objets magiques, ce qui vous octroie les bénéfices suivants.</p><p><em><strong>Charges.</strong></em> Chaque fois que vous utilisez une propriété d'objet magique qui dépense des charges, lancez [[/r 1d6]]. Sur un résultat de 6, vous utilisez la propriété sans dépenser la moindre charge.</p><p><em><strong>Harmonisation.</strong></em> Vous pouvez être harmonisé avec un maximum de quatre objets à la fois.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeUseMagicDe.Activity.mrK57dSVtwgDGh3F caption=false cite=false nameStyle=inline]{Parchemins}</p><section id=\"secret-2tHTpsolDU6Nggvo\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Lorsque vous utilisez une propriété d'objet qui dépense des charges, lancez le d6 et décochez la case de consommation pour l'utiliser gratuitement.</p></section>",
             "effects": {
                 "Attunement Bonus": {
                     "name": "Harmonisation bonus",
                     "description": "<p>L'aptitude Utilisation d'objets magiques vous permet de vous harmonisé avec un maximum de quatre objets à la fois.</p>"
                 }
             },
-            "requirements": "Voleur"
+            "requirements": "Voleur",
+            "activities": {
+                "Use Scroll": {
+                    "name": "Utiliser un parchemin",
+                    "condition": "Lorsque vous essayez d'utiliser un parchemin de sort supérieur au 1er niveau",
+                    "description": "<p>Vous pouvez utiliser n'importe quel <em>parchemin de sort</em>, en recourant à l'Intelligence comme caractéristique d'incantation pour le sort qui y est inscrit. Si ce sort est un sort mineur ou un sort du 1<sup>er</sup> niveau, vous le lancez à coup sûr. Si le parchemin contient un sort de niveau supérieur, vous devez au préalable réussir un test d'Intelligence (Arcanes) (DD 10 + le niveau du sort). En cas de réussite, vous lancez le sort inscrit sur le parchemin. En cas d'échec, le parchemin se désintègre.</p>"
+                }
+            }
         },
         "Visions of Distant Realms": {
             "name": "Royaumes lointains",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 9+</p></blockquote><p>Vous pouvez lancer @UUID[Compendium.dnd5e.spells24.Item.phbsplArcaneEye0]{œil du mage} sans dépenser d'emplacement de sort.</p><section class=\"secret\" id=\"secret-yVljO3Op1LVKKBRZ\"><p><strong>Note Foundry</strong></p><p>Cette aptitude peut être utilisée à la place de l'œil du mage et comprend une activité <strong>Invoquer</strong>.</p></section>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 9+</p></div><p>Vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplArcaneEye0]{œil du mage}</em> sans dépenser d'emplacement de sort.</p>"
         },
         "Warlock": {
             "name": "Occultiste",
@@ -2776,7 +2862,7 @@
         },
         "Wild Companion": {
             "name": "Compagnon sauvage",
-            "description": "<p>Vous pouvez convoquer un esprit de la nature qui adopte une forme animale pour vous assister. Au prix de l'action Magie, vous pouvez dépenser un emplacement ou une utilisation de Forme sauvage pour lancer le sort @UUID[Compendium.dnd5e.spells24.Item.phbsplFindFamili]{appel de familier} sans composantes matérielles.</p><p>Lorsque vous lancez ainsi le sort, le familier est une Fée et disparaît lorsque vous terminez un Repos long.</p><section id=\"secret-4iYtjsPCmpeQTKY5\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend une activité d'invocation qui peut être utilisée pour appeler votre compagnon sauvage. Vous pouvez choisir de dépenser une utilisation de forme sauvage ou un emplacement de sort pour l'activer.</p><p>L'invocation ne disparaît pas automatiquement à la fin d'un Repos long.</p></section>",
+            "description": "<p>Vous pouvez convoquer un esprit de la nature qui adopte une forme animale pour vous assister. Au prix de l'action &Reference[Magic], vous pouvez dépenser un emplacement ou une utilisation de Forme sauvage pour lancer le sort <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplFindFamili]{appel de familier}</em> sans composantes matérielles.</p><p>Lorsque vous lancez ainsi le sort, le familier est une Fée et disparaît lorsque vous terminez un Repos long.</p>",
             "requirements": "Druide",
             "activities": {
                 "Find Familiar": {
@@ -2786,7 +2872,7 @@
         },
         "Wild Resurgence": {
             "name": "Regain sauvage",
-            "description": "<p>Une fois à chacun de vos tours, s'il ne vous reste aucune utilisation de Forme sauvage, vous pouvez vous en octroyer une en dépensant un emplacement de sort (pas d'action requise).</p><p>De plus, vous pouvez dépenser une utilisation de Forme sauvage (pas d'action requise) pour vous octroyer un emplacement du 1<sup>er</sup> niveau, après quoi vous devez terminer un Repos long pour le refaire.</p><section class=\"secret\" id=\"secret-b0eq9t1Lkei4tN53\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Regain de Forme sauvage</strong> consomme un emplacement de sort et vous accorde une autre utilisation de Forme sauvage.</p><p>L'activité <strong>Regain d'emplacement de sort</strong> consommera une utilisation de Forme sauvage et vous accordera un emplacement du 1<sup>er</sup> niveau.</p></section>",
+            "description": "<p>Une fois à chacun de vos tours, s'il ne vous reste aucune utilisation de Forme sauvage, vous pouvez vous en octroyer une en dépensant un emplacement de sort (pas d'action requise).</p><p>De plus, vous pouvez dépenser une utilisation de Forme sauvage (pas d'action requise) pour vous octroyer un emplacement du 1<sup>er</sup> niveau, après quoi vous devez terminer un Repos long pour le refaire.</p>",
             "requirements": "Druide",
             "activities": {
                 "Regain Spell Slot": {
@@ -2800,7 +2886,7 @@
         },
         "Wild Shape": {
             "name": "Forme sauvage",
-            "description": "<p>Le pouvoir de la nature vous permet d'adopter la forme d'un animal. Par une action Bonus, vous vous métamorphosez en Bête, forme apprise par le biais de cette aptitude (cf. Formes connues, plus loin). Vous restez sous cette forme autant d'heures que la moitié de votre niveau de Druide (actuellement [[lookup @classes.druid.levels]]), mais la quittez prématurément si vous recourez de nouveau à Forme sauvage, subissez l'état Neutralisé ou mourez. Vous pouvez aussi quitter la forme par une action Bonus.</p><p><strong>Nombre d'utilisations.</strong> Vous pouvez recourir deux fois à Forme sauvage. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Vous en recevez des utilisations supplémentaires à certains niveaux de Druide, comme indiqué à la colonne Forme sauvage de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbDruid00000000.JournalEntryPage.UCOh3zlvGxyk5jLr#aptitudes-de-classe]{Aptitudes du Druide}.</p><p><strong>Nombre actuel d'utilisations :</strong> [[lookup @scale.druid.wild-shape-uses]]</p><p><strong>Formes connues.</strong> Vous connaissez quatre formes de Bête pour cette aptitude, choisies parmi les profils de Bête dont le facteur de puissance n'excède pas 1/4 et dépourvus de Vitesse de vol. @UUID[Compendium.dnd5e.actors24.Actor.mmSpider00000000]{Araignée}, @UUID[Compendium.dnd5e.actors24.Actor.mmRidingHorse000]{cheval de selle}, @UUID[Compendium.dnd5e.actors24.Actor.mmWolf0000000000]{loup} et @UUID[Compendium.dnd5e.actors24.Actor.mmRat00000000000]{rat} sont recommandés.</p><section class=\"fvtt advice\"><figure class=\"icon\"><img class=\"vtt-outline\" src=\"icons/vtt-512.png\" /></figure><article><h3>Automatisation de Forme sauvage</h3><p>Lorsque vous avez sélectionné la créature que vous souhaitez transformer en forme sauvage, vous pouvez la faire glisser sur votre feuille de personnage, sélectionner l'option Forme sauvage et Foundry mettra automatiquement votre feuille à jour. Vous pouvez annuler la transformation en haut de votre feuille ou en faisant un clic droit sur votre Acteur dans la barre latérale.</p></article></section><p>Chaque fois que vous terminez un Repos long, vous pouvez remplacer l'une de vos formes connues par une autre forme autorisée.</p><p>Lorsque vous atteignez certains niveaux de Druide, votre nombre de formes connues et le facteur de puissance maximal associé augmentent, comme indiqué sur la table Formes de bête. De plus, à partir du niveau 8, vous pouvez adopter une forme dotée d'une Vitesse de vol.</p><p><strong>Limite actuelle des formes connues :</strong> [[lookup @scale.druid.known-forms]]</p><p><strong>Limite actuelle du FP :</strong> [[lookup @scale.druid.wild-shape]]</p><p>Si votre maître du donjon l'autorise, vous pouvez consulter le <em>Manuel des monstres</em> ou d'autres sources pour choisir vos formes connues.</p><table><caption>Formes de bête</caption><thead><tr><td>Niveau de Druide</td><td>Formes connues</td><td>FP max.</td><td>Vitesse de vol</td></tr></thead><tbody><tr><td>2</td><td>4</td><td>1/4</td><td>Non</td></tr><tr><td>4</td><td>6</td><td>1/2</td><td>Non</td></tr><tr><td>8</td><td>8</td><td>1</td><td>Oui</td></tr></tbody></table><p><strong>Règles sous métamorphose.</strong> Tant que vous êtes sous forme de bête, vous conservez votre personnalité, vos souvenirs et votre faculté de parole, et les règles suivantes s'appliquent :</p><p><strong>Points de vie temporaires.</strong> Lorsque vous adoptez une Forme sauvage, vous recevez autant de points de vie temporaires que votre niveau de Druide.</p><p><strong>Profil de jeu.</strong> Votre profil est remplacé par celui de la Bête choisie, mais vous conservez les aspects suivants : type de créature ; points de vie ; dés de vie ; valeurs d'Intelligence, Sagesse et Charisme ; aptitudes de classe ; langues ; et dons. Vous conservez aussi vos maîtrises de compétence et de jet de sauvegarde, et appliquez le bonus de maîtrise correspondant, et vous recevez les maîtrises de la créature. Quand le modificateur de compétence ou de JS du profil de Bête est supérieur au vôtre, celui de la Bête s'applique.</p><p><strong>Pas d'incantation.</strong> Vous ne pouvez pas lancer de sorts, mais la métamorphose ne rompt pas votre Concentration, pas plus qu'elle n'interfère avec les sorts que vous avez déjà lancés.</p><p><strong>Objets.</strong> Votre faculté de manipuler des objets dépend des membres et appendices de la forme et non plus des vôtres. En outre, vous décidez si votre équipement tombe dans votre espace, fusionne avec votre nouvelle forme ou est porté par elle. L'équipement porté fonctionne normalement, mais c'est au MD de décider si une pièce d'équipement donnée peut être portée par la créature, en fonction de la forme et de la taille de celle-ci. Votre équipement ne change pas de taille ni de forme pour s'adapter à votre silhouette animale ; toute pièce d'équipement que la forme sauvage ne peut pas porter doit soit tomber au sol, soit fusionner avec elle. L'équipement qui fusionne avec la forme reste sans effet tant que vous restez sous cette forme.</p><section class=\"secret\" id=\"secret-FZNGONDktXDnwY0x\"><p><strong>Note Foundry</strong></p><p>Vous pouvez activer cette aptitude pour suivre les utilisations de votre Forme sauvage.</p><p>Il rétablit automatiquement une utilisation lors d'un Repos court et toutes les utilisations lors d'un Repos long.</p></section>",
+            "description": "<p>Le pouvoir de la nature vous permet d'adopter la forme d'un animal. Par une action Bonus, vous vous métamorphosez en Bête, forme apprise par le biais de cette aptitude (cf. Formes connues, plus loin). Vous restez sous cette forme autant d'heures que la moitié de votre niveau de Druide (actuellement [[lookup @classes.druid.levels]]), mais la quittez prématurément si vous recourez de nouveau à Forme sauvage, subissez l'état Neutralisé ou mourez. Vous pouvez aussi quitter la forme par une action Bonus.</p><p><em><strong>Nombre d'utilisations.</strong></em> Vous pouvez recourir deux fois à Forme sauvage. Vous en regagnez une utilisation lorsque vous terminez un Repos court, et récupérez tout le quota en terminant un Repos long.</p><p>Vous en recevez des utilisations supplémentaires à certains niveaux de Druide, comme indiqué à la colonne Forme sauvage de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbDruid00000000.JournalEntryPage.UCOh3zlvGxyk5jLr#aptitudes-de-classe]{Aptitudes du Druide}.</p><p><em><strong>Formes connues.</strong></em> Vous connaissez quatre formes de Bête pour cette aptitude, choisies parmi les profils de Bête dont le facteur de puissance n'excède pas 1/4 et dépourvus de Vitesse de vol. @UUID[Compendium.dnd-monster-manual.actors.Actor.mmSpider00000000]{Araignée}, @UUID[Compendium.dnd-monster-manual.actors.Actor.mmRidingHorse000]{cheval de selle}, @UUID[Compendium.dnd-monster-manual.actors.Actor.mmWolf0000000000]{loup} et @UUID[Compendium.dnd-monster-manual.actors.Actor.mmRat00000000000]{rat} sont recommandés.</p><section class=\"fvtt advice\"><figure class=\"icon\"><img src=\"icons/vtt-512.png\"></figure><article><h3>Automatisation de Forme sauvage</h3><p>Cette aptitude comprend une activité <strong>Transformer</strong>. Lorsque vous l'utilisez, vous pouvez sélectionner la créature en laquelle vous souhaitez vous transformer à l'aide du navigateur de compendium. Vous pouvez annuler la transformation en haut de votre fiche en cliquant sur le menu « kebab » (trois points verticaux) et en sélectionnant <strong>Restaurer la transformation</strong>.</p></article></section><p>Chaque fois que vous terminez un Repos long, vous pouvez remplacer l'une de vos formes connues par une autre forme autorisée.</p><p>Lorsque vous atteignez certains niveaux de Druide, votre nombre de formes connues et le facteur de puissance maximal associé augmentent, comme indiqué sur la table Formes de bête. De plus, à partir du niveau 8, vous pouvez adopter une forme dotée d'une Vitesse de vol.</p><p><strong>Limite actuelle des formes connues :</strong> [[lookup @scale.wild-shape.forms]]{4}</p><p><strong>Limite actuelle du FP :</strong> [[lookup @scale.wild-shape.cr]]{1/4}</p><p>Si votre maître du donjon l'autorise, vous pouvez consulter le <em>Manuel des monstres</em> ou d'autres sources pour choisir vos formes connues.</p><table><caption><p>Formes de bête</p></caption><thead><tr><td><p>Niveau de Druide</p></td><td><p>Formes connues</p></td><td><p>FP max.</p></td><td><p>Vitesse de vol</p></td></tr></thead><tbody><tr><td><p>2</p></td><td><p>4</p></td><td><p>1/4</p></td><td><p>Non</p></td></tr><tr><td><p>4</p></td><td><p>6</p></td><td><p>1/2</p></td><td><p>Non</p></td></tr><tr><td><p>8</p></td><td><p>8</p></td><td><p>1</p></td><td><p>Oui</p></td></tr></tbody></table><p><em><strong>Règles sous métamorphose.</strong></em> Tant que vous êtes sous forme de bête, vous conservez votre personnalité, vos souvenirs et votre faculté de parole, et les règles suivantes s'appliquent :</p><div class=\"subfeature\"><p><strong>Points de vie temporaires.</strong> Lorsque vous adoptez une Forme sauvage, vous recevez autant de points de vie temporaires que votre niveau de Druide.</p><p><strong>Profil de jeu.</strong> Votre profil est remplacé par celui de la Bête choisie, mais vous conservez les aspects suivants : type de créature ; points de vie ; dés de vie ; valeurs d'Intelligence, Sagesse et Charisme ; aptitudes de classe ; langues ; et dons. Vous conservez aussi vos maîtrises de compétence et de jet de sauvegarde, et appliquez le bonus de maîtrise correspondant, et vous recevez les maîtrises de la créature. Quand le modificateur de compétence ou de JS du profil de Bête est supérieur au vôtre, celui de la Bête s'applique.</p><p><strong>Pas d'incantation.</strong> Vous ne pouvez pas lancer de sorts, mais la métamorphose ne rompt pas votre Concentration, pas plus qu'elle n'interfère avec les sorts que vous avez déjà lancés.</p><p><strong>Objets.</strong> Votre faculté de manipuler des objets dépend des membres et appendices de la forme et non plus des vôtres. En outre, vous décidez si votre équipement tombe dans votre espace, fusionne avec votre nouvelle forme ou est porté par elle. L'équipement porté fonctionne normalement, mais c'est au MD de décider si une pièce d'équipement donnée peut être portée par la créature, en fonction de la forme et de la taille de celle-ci. Votre équipement ne change pas de taille ni de forme pour s'adapter à votre silhouette animale ; toute pièce d'équipement que la forme sauvage ne peut pas porter doit soit tomber au sol, soit fusionner avec elle. L'équipement qui fusionne avec la forme reste sans effet tant que vous restez sous cette forme.</p></div>",
             "requirements": "Druide",
             "activities": {
                 "transform": {
@@ -2822,7 +2908,7 @@
         },
         "Witch Sight": {
             "name": "Vision sorcière",
-            "description": "<blockquote><p>Prérequis : niveau d'Occultiste 15+</p></blockquote><p>Vous disposez de la Vision lucide sur 9 m.</p><section id=\"secret-yUE0N1X1QX3kZHcx\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude comprend un effet actif qui vous confère automatiquement une Vision lucide.</p></section>",
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 15+</p></div><p>Vous disposez de la &Reference[Truesight] sur 9 m.</p>",
             "effects": {
                 "Truesight": {
                     "name": "Vision lucide"
@@ -2852,7 +2938,7 @@
         },
         "Words of Creation": {
             "name": "Verbe de la création",
-            "description": "<p>Vous avez maîtrisé deux des paroles du Verbe de la création : celles de la vie et de la mort. Les sorts @UUID[Compendium.dnd5e.spells24.Item.phbsplPowerWordH]{mot de pouvoir guérisseur} et @UUID[Compendium.dnd5e.spells24.Item.phbsplPowerWordK]{mot de pouvoir mortel} sont désormais constamment préparés en ce qui vous concerne. Lorsque vous lancez l'un de ces sorts, vous pouvez cibler une seconde créature si elle se trouve dans un rayon de 3 m de la première cible.</p><section id=\"secret-aHHp3ZnTrWPHHB7j\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Ces sorts vous sont automatiquement attribués lorsque vous passez au niveau supérieur.</p></section>",
+            "description": "<p>Vous avez maîtrisé deux des paroles du Verbe de la création : celles de la vie et de la mort. Les sorts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordH]{mot de pouvoir guérisseur}</em> et <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]{mot de pouvoir mortel}</em> sont désormais constamment préparés en ce qui vous concerne. Lorsque vous lancez l'un de ces sorts, vous pouvez cibler une seconde créature si elle se trouve dans un rayon de 3 m de la première cible.</p>",
             "requirements": "Barde"
         },
         "phbclcSpellcasti": {
@@ -2872,7 +2958,7 @@
         },
         "phbftrWeaponMast": {
             "name": "Bottes d'arme",
-            "description": "<p>Votre entraînement martial vous permet de recourir à la botte de trois types d'arme courante ou de guerre de votre choix. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbFighter000000.JournalEntryPage.wDELe3k25FQvYdrq#aptitudes-de-classe]{Aptitudes du Guerrier}.</p><section class=\"secret\" id=\"secret-Qfoze6XoZUYIlAnw\"><p><strong>Note Foundry</strong></p><p>Pour modifier vos bottes, activez le mode « Éditer » de votre feuille. Dans l'onglet « Détails », cliquez sur l'icône en forme de rouage à côté de « Armes » en bas à droite. Vous pouvez cocher une case dans la colonne de maîtrise des armes choisies.</p></section>",
+            "description": "<p>Votre entraînement martial vous permet de recourir à la botte de trois types d'arme courante ou de guerre de votre choix. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p><p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez la faculté de recourir à la botte d'autres types d'arme, comme indiqué à la colonne Bottes d'arme de la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbFighter000000.JournalEntryPage.wDELe3k25FQvYdrq#aptitudes-de-classe]{Aptitudes du Guerrier}.</p><section id=\"secret-Qfoze6XoZUYIlAnw\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Pour modifier vos bottes, activez le mode « Éditer » de votre feuille. Dans l'onglet « Détails », cliquez sur l'icône en forme de rouage à côté de « Armes » en bas à droite. Vous pouvez cocher une case dans la colonne de maîtrise des armes choisies.</p></section>",
             "requirements": "Guerrier",
             "advancement": {
                 "Weapon Mastery": {
@@ -2966,12 +3052,12 @@
         },
         "phbrgeEvasion000": {
             "name": "Esquive totale",
-            "description": "<p>Votre agilité vous permet d'esquiver certains dangers. Quand vous êtes soumis à un effet qui vous permet d'effectuer un jeu de sauvegarde de Dextérité pour réduire les dégâts de moitié, vous ne subissez aucun dégât en cas de sauvegarde réussie, et seulement la moitié en cas d'échec.</p><p>Vous ne pouvez pas recourir à cette aptitude si vous subissez l'état Neutralisé.</p><section class=\"secret\" id=\"secret-mJSoikZHwVq6UUDf\"><p><strong>Note Foundry</strong></p><p>Une fois le token sélectionné, vous pouvez soit faire un clic droit sur la carte de discussion du jet de dégâts et sélectionner <span class=\"reference\"><em class=\"fas fa-user-shield\"> </em>Appliquer la moitié comme dégâts</span> ou cliquez sur le bouton « 1/2 » puis sur le bouton <span class=\"reference\"><em class=\"fa-solid fa-reply-all\"> </em>Appliquer</span>.</p></section>",
+            "description": "<p>Votre agilité vous permet d'esquiver certains dangers. Quand vous êtes soumis à un effet qui vous permet d'effectuer un jeu de sauvegarde de Dextérité pour réduire les dégâts de moitié, vous ne subissez aucun dégât en cas de sauvegarde réussie, et seulement la moitié en cas d'échec.</p><p>Vous ne pouvez pas recourir à cette aptitude si vous subissez l'état &Reference[Incapacitated apply=false].</p>",
             "requirements": "Roublard"
         },
         "phbrgeExpertise0": {
             "name": "Expertise",
-            "description": "<p>Vous recevez l'Expertise dans deux de vos maîtrises de compétence au choix. Escamotage et Discrétion ont recommandés si vous en avez la maîtrise.</p><p>Au niveau 6 de Roublard, vous recevez l'Expertise dans deux maîtrises de compétences supplémentaire au choix.</p><section id=\"secret-d8cc1fheUe7P6H44\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous serez invité à choisir votre Expertise au fur et à mesure que vous montez en niveau.</p></section>",
+            "description": "<p>Vous recevez l'&Reference[Expertise] dans deux de vos maîtrises de compétence au choix. Escamotage et Discrétion ont recommandés si vous en avez la maîtrise.</p><p>Au niveau 6 de Roublard, vous recevez l'Expertise dans deux maîtrises de compétences supplémentaire au choix.</p>",
             "requirements": "Roublard",
             "advancement": {
                 "Expertise": {
