@@ -63,7 +63,13 @@
         "Additional Fighting Style": {
             "name": "Style de combat supplémentaire",
             "description": "<p>Vous recevez un autre don de @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.sbHImaCB8ZMEHYkb]{Style de combat} de votre choix.</p>",
-            "requirements": "Champion"
+            "requirements": "Champion",
+            "advancement": {
+                "Choose Fighting Style": {
+                    "name": "Choisir Style de combat",
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbftrAdditional inline]</p>"
+                }
+            }
         },
         "Agonizing Blast": {
             "name": "Décharge déchirante",
@@ -71,7 +77,12 @@
             "requirements": "Sort mineur d'Occultiste infligeant des dégâts",
             "effects": {
                 "Agonizing Blast": {
-                    "name": "Décharge déchirante"
+                    "name": "Décharge déchirante",
+                    "description": "<p>Choisissez l'un de vos sorts mineurs d'Occultiste connus qui inflige des dégâts. Vous pouvez ajouter votre modificateur de Charisme aux jets de dégâts de ce sort.</p>",
+                    "changes": {
+                        "0": "{} (déchirante)",
+                        "2": "{}<hr><p>Vous pouvez ajouter votre modificateur de Charisme aux jets de dégâts de ce sort.</p>"
+                    }
                 }
             },
             "activities": {
@@ -212,6 +223,15 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
+                },
+                "Bardic Die": {
+                    "name": "Dé bardique"
+                },
+                "pqZADBERYfrNsOMx": {
+                    "hint": "<p>Vous recevez la sous-classe de Barde de votre choix. Les sous-classes Collège de la Danse, Collège du Savoir, Collège de la Séduction et Collège de la Vaillance sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Barde. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Barde.</p>"
                 }
             }
         },
@@ -225,7 +245,8 @@
                     "roll": "Inspiration bardique"
                 },
                 "Regain Inspiration": {
-                    "description": "<p>Lorsque vous lancez l'Initiative, vous récupérez des utilisations d'Inspiration bardique s'il vous en reste une ou moins, jusqu'à en avoir deux.</p>"
+                    "description": "<p>Lorsque vous lancez l'Initiative, vous récupérez des utilisations d'Inspiration bardique s'il vous en reste une ou moins, jusqu'à en avoir deux.</p>",
+                    "name": "Récupérer l'Inspiration"
                 }
             },
             "effects": {
@@ -320,7 +341,12 @@
         "Bonus Proficiencies": {
             "name": "Maîtrises supplémentaires",
             "description": "<p>Vous recevez la maîtrise de 3 compétences, au choix.</p>",
-            "requirements": "Collège du Savoir"
+            "requirements": "Collège du Savoir",
+            "advancement": {
+                "zXNjqYhloLv46FqV": {
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbbrdBonusProfi inline]</p>"
+                }
+            }
         },
         "Book of Shadows": {
             "name": "Codex des Ombres"
@@ -428,7 +454,13 @@
         "Circle of the Land Spells": {
             "name": "Sorts du Cercle de la Terre",
             "description": "<p>Chaque fois que vous terminez un Repos long, choisissez un type d'environnement entre : aride, polaire, tempéré et tropical. Consultez parmi les tables ci-après celle qui correspond au type retenu ; les sorts énumérés pour votre niveau de Druide et les niveaux inférieurs sont préparés en ce qui vous concerne.</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdLandArid00 inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdLandPolar0 inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdLandTemper inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdLandTropic inline]</p><section id=\"secret-0B8V69GLRm5swkth\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Il est possible de modifier ce choix lors d'un Repos long en relançant la progression de cette aptitude et en sélectionnant un autre type d'environnement.</p></section>",
-            "requirements": "Cercle de la Terre"
+            "requirements": "Cercle de la Terre",
+            "advancement": {
+                "Choose Land Type": {
+                    "name": "Choisir un type d'environnement",
+                    "hint": "<p>Chaque fois que vous terminez un Repos long, choisissez un type d'environnement entre : aride, polaire, tempéré et tropical.</p>"
+                }
+            }
         },
         "Cleric": {
             "name": "Clerc",
@@ -476,7 +508,8 @@
             "requirements": "Occultiste",
             "advancement": {
                 "Contact Other Plane": {
-                    "name": "Contact avec les plans"
+                    "name": "Contact avec les plans",
+                    "hint": "<p>Dans le passé, vous contactiez généralement votre protecteur par le biais d'intermédiaires. Vous pouvez désormais communiquer directement avec lui ; le sort contact avec les plans est considéré comme toujours préparé pour vous.</p>"
                 }
             }
         },
@@ -486,7 +519,8 @@
             "requirements": "Barde",
             "activities": {
                 "Counter": {
-                    "condition": "Vous ou une créature dans un rayon de 9 m rate un jet de sauvegarde contre un effet qui impose l'état Charmé ou Effrayé"
+                    "condition": "Vous ou une créature dans un rayon de 9 m rate un jet de sauvegarde contre un effet qui impose l'état Charmé ou Effrayé",
+                    "name": "Contrer"
                 }
             }
         },
@@ -679,11 +713,20 @@
         },
         "Disciple of Life": {
             "name": "Disciple de la Vie",
-            "description": "<p>Lorsqu'un sort que vous lancez par un emplacement restitue des points de vie à une créature, celle-ci récupère des points de vie supplémentaires au tour où vous lancez le sort. Ces points de vie supplémentaires sont égaux à 2 plus le niveau de l'emplacement de sort.</p><section class=\"secret\" id=\"secret-Gy6bYP3AKuabnUlQ\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut une activité de soin. Réglez l'évolution sur le niveau de l'emplacement de sort que vous lancez et elle vous fournira un jet de soin.</p></section>",
+            "description": "<p>Lorsqu'un sort que vous lancez par un emplacement restitue des points de vie à une créature, celle-ci récupère des points de vie supplémentaires au tour où vous lancez le sort. Ces points de vie supplémentaires sont égaux à 2 plus le niveau de l'emplacement de sort.</p><section id=\"secret-Gy6bYP3AKuabnUlQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Utilisez l'activité Enchanter un sort de soins pour appliquer l'effet Disciple de la Vie aux sorts de soins éligibles de votre personnage.</p></section>",
             "requirements": "Domaine de la Vie",
             "effects": {
                 "Disciple of Life": {
-                    "name": "Disciple de la Vie"
+                    "name": "Disciple de la Vie",
+                    "changes": {
+                        "1": "{} (Enchanté)"
+                    }
+                }
+            },
+            "activities": {
+                "Enchant Healing Spell": {
+                    "name": "Enchanter un sort de soins",
+                    "description": "<p>Appliquez l'enchantement Disciple de la Vie à un sort de soins éligible de votre personnage.</p>"
                 }
             }
         },
@@ -834,6 +877,12 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
+                },
+                "jOMGuG8a0KfmaeJd": {
+                    "hint": "<p>Vous recevez la sous-classe de Druide de votre choix. Les sous-classes Cercle des Astres, Cercle de la Lune, Cercle des Mers et Cercle de la Terre sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Druide. Pour le reste de votre carrière. vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Druide.</p>"
                 }
             }
         },
@@ -843,10 +892,12 @@
             "requirements": "Druide",
             "advancement": {
                 "Speak with Animals": {
-                    "name": "Communication avec les animaux"
+                    "name": "Communication avec les animaux",
+                    "hint": "<p>Vous connaissez le druidique, la langue secrète des Druides. En apprenant cette langue ancestrale, vous avez aussi percé les mystères magiques de la conversation animale ; le sort <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplSpeakwithA]{communication avec les animaux}</em> est toujours préparé en ce qui vous concerne.</p>"
                 },
                 "Druidic": {
-                    "name": "Druidique"
+                    "name": "Druidique",
+                    "hint": "<p>Vous connaissez le druidique, la langue secrète des Druides.</p>"
                 }
             }
         },
@@ -864,7 +915,13 @@
         "Eldritch Invocations": {
             "name": "Manifestations occultes",
             "description": "<p>Vos recherches ésotériques vous ont permis de dénicher des Manifestations occultes, fragments de savoir interdit qui vous octroient divers pouvoirs magiques. Vous recevez une manifestation de votre choix, comme @UUID[Compendium.dnd5e.classes24.Item.phbinvPactTome00]{Pacte du grimoire}. Ces manifestations sont décrites en section « @UUID[Compendium.dnd5e.content24.JournalEntry.phbWarlock000000.JournalEntryPage.FA4hxx49eazhISIt]{Options de Manifestation occulte} ».</p><p><em><strong>Prérequis.</strong></em> Si une manifestation s'accompagne d'un prérequis, vous devez le remplir pour pouvoir l'apprendre. Si, par exemple, une manifestation nécessite que vous soyez un Occultiste de niveau 5 ou supérieur, vous ne pourrez choisir cette manifestation qu'une fois atteint le niveau 5 dans cette classe.</p><p><em><strong>Remplacer et recevoir des manifestations.</strong></em> Chaque fois que vous gagnez un niveau d'Occultiste, vous pouvez remplacer l'une de vos manifestations par une autre pour laquelle vous remplissez les conditions. Vous ne pouvez pas remplacer une manifestation si elle est un prérequis à une autre manifestation dont vous disposez.</p><p>Vous en apprendrez d'autres que vous choisirez à plus haut niveau, comme le montre la colonne Manifestations de la table Aptitudes de l'Occultiste.</p><p>Vous ne pouvez pas choisir la même manifestation plus d'une fois, sauf si sa description précise le contraire.</p>",
-            "requirements": "Occultiste"
+            "requirements": "Occultiste",
+            "advancement": {
+                "Choose Eldritch Invocation": {
+                    "name": "Choisir une manifestation occulte",
+                    "hint": "<p>Vos recherches ésotériques vous ont permis de dénicher des Manifestations occultes, fragments de savoir interdit qui vous octroient divers pouvoirs magiques.</p>"
+                }
+            }
         },
         "Eldritch Master": {
             "name": "Maître de l'occulte",
@@ -873,7 +930,12 @@
         },
         "Eldritch Mind": {
             "name": "Esprit occulte",
-            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Constitution visant à maintenir la Concentration.</p>"
+            "description": "<p>Vous avez l'Avantage aux jets de sauvegarde de Constitution visant à maintenir la Concentration.</p>",
+            "effects": {
+                "Concentration Advantage": {
+                    "name": "Avantage à la Concentration"
+                }
+            }
         },
         "Eldritch Smite": {
             "name": "Frappe occulte",
@@ -898,7 +960,8 @@
                 "Eldritch Spear": {
                     "name": "Lance occulte",
                     "changes": {
-                        "1": "{} (Lance occulte)"
+                        "1": "{} (Lance occulte)",
+                        "2": "{}<hr><p>Lorsque vous lancez ce sort, sa portée augmente de 9 m par niveau d'Occultiste.</p>"
                     }
                 }
             }
@@ -959,11 +1022,12 @@
         },
         "Empowered Evocation": {
             "name": "Évocation améliorée",
-            "description": "<p>Chaque fois que vous lancez un sort de Magicien de l'école de l'Évocation, vous pouvez ajouter votre modificateur d'Intelligence à un jet de dégâts de ce sort.</p><section class=\"secret\" id=\"secret-3cdT0RlurgG5XV4o\"><p><strong>Note Foundry</strong></p><p>Vous pouvez ajouter votre modificateur d'Intelligence au bonus situationnel du sort dans la boîte de dialogue des dégâts ou utiliser l'activité <strong>Dégâts</strong> de cette aptitude qui vous permet de sélectionner le type de dégâts dans la boîte de dialogue des dégâts.</p></section>",
+            "description": "<p>Chaque fois que vous lancez un sort de Magicien de l'école de l'Évocation, vous pouvez ajouter votre modificateur d'Intelligence à un jet de dégâts de ce sort.</p><section id=\"secret-3cdT0RlurgG5XV4o\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Vous pouvez ajouter votre modificateur d'Intelligence au bonus situationnel du sort dans la boîte de dialogue des dégâts ou utiliser l'activité <strong>Dégâts supplémentaires</strong> de cette aptitude qui vous permet de sélectionner le type de dégâts dans la boîte de dialogue des dégâts.</p></section>",
             "requirements": "Évocateur",
             "activities": {
                 "Extra Damage": {
-                    "condition": "Chaque fois que vous lancez un sort de Magicien de l'école de l'Évocation"
+                    "condition": "Chaque fois que vous lancez un sort de Magicien de l'école de l'Évocation",
+                    "name": "Dégâts supplémentaires"
                 }
             }
         },
@@ -1008,10 +1072,12 @@
             "requirements": "Barde",
             "advancement": {
                 "Expertise": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>Vous recevez l'&Reference[Expertise] dans deux de vos maîtrises de compétence au choix. Persuasion et Représentation sont recommandées si vous en avez la maîtrise.</p>"
                 },
                 "e8hDmktYGVFiT6M0": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>Vous recevez l'&Reference[Expertise] dans deux maîtrises de compétences supplémentaires au choix.</p>"
                 }
             }
         },
@@ -1097,7 +1163,8 @@
             "requirements": "Protecteur Fiélon",
             "advancement": {
                 "Fiend Spells": {
-                    "name": "Sorts du Fiélon"
+                    "name": "Sorts du Fiélon",
+                    "hint": "<p>La magie de votre protecteur vous assure d'avoir certains sorts disponibles en permanence ; lorsque vous atteignez un niveau d'Occultiste spécifié dans la table Sorts du Fiélon, les sorts qui y figurent sont toujours préparés pour vous.</p>"
                 }
             }
         },
@@ -1186,7 +1253,8 @@
             "requirements": "Guerrier",
             "advancement": {
                 "Fighting Style": {
-                    "name": "Style de combat"
+                    "name": "Style de combat",
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbftrFightingSt inline]</p>"
                 }
             }
         },
@@ -1251,7 +1319,13 @@
         },
         "Gift of the Depths": {
             "name": "Présent des profondeurs",
-            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p>Vous pouvez en outre lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]{respiration aquatique}</em> une fois sans dépenser d'emplacement de sort. Vous devez terminer un Repos long avant de pouvoir le relancer ainsi.</p>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p><p>Vous pouvez en outre lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplWaterBreat]{respiration aquatique}</em> une fois sans dépenser d'emplacement de sort. Vous devez terminer un Repos long avant de pouvoir le relancer ainsi.</p>",
+            "effects": {
+                "Water Breathing & Swim Speed": {
+                    "name": "Respiration aquatique et Vitesse de nage",
+                    "description": "<p>Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l'eau.</p>"
+                }
+            }
         },
         "Gift of the Protectors": {
             "name": "Présent des sauveurs",
@@ -1390,7 +1464,9 @@
             "requirements": "Guerrier",
             "activities": {
                 "Reroll": {
-                    "roll": "Bonus"
+                    "roll": "Bonus",
+                    "name": "Rejouer",
+                    "condition": "Lorsque vous ratez un jet de sauvegarde"
                 }
             },
             "advancement": {
@@ -1529,7 +1605,17 @@
         "Land's Aid": {
             "name": "Aval de la terre",
             "description": "<p>Au prix de l'action &Reference[Magic], vous pouvez dépenser une utilisation de Forme sauvage en choisissant un point dans un rayon de 18 m. Des fleurs nourricières et des ronces vampiriques se manifestent quelques instants dans une Sphère de 3 m de rayon centrée sur ce point. Chaque créature que vous choisissez dans la Sphère effectue un jet de sauvegarde de Constitution assorti de votre DD de sauvegarde des sorts, et subit 2d6 dégâts nécrotiques en cas d'échec, la moitié en cas de réussite. Une créature de votre choix dans cette zone récupère 2d6 points de vie.</p><p>Les dégâts et les soins augmentent de 1d6 lorsque vous atteignez les niveaux 10 (3d6) et 14 (4d6) de Druide.</p>",
-            "requirements": "Cercle de la Terre"
+            "requirements": "Cercle de la Terre",
+            "advancement": {
+                "Damage & Healing": {
+                    "name": "Dégâts et soins"
+                }
+            },
+            "activities": {
+                "heal": {
+                    "range": "Dans la sphère de dégâts"
+                }
+            }
         },
         "Lay on Hands": {
             "name": "Imposition des mains",
@@ -1542,7 +1628,13 @@
         },
         "Lessons of the First Ones": {
             "name": "Enseignement des Premiers-Nés",
-            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Fort de la sapience d'une entité très ancienne du multivers, vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{don d'origines} de votre choix.</p><p><em><strong>Répétable.</strong></em> Vous pouvez recevoir cette manifestation plus d'une fois. Chaque fois, choisissez un don d'origines différent.</p>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 2+</p></div><p>Fort de la sapience d'une entité très ancienne du multivers, vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{don d'origines} de votre choix.</p><p><em><strong>Répétable.</strong></em> Vous pouvez recevoir cette manifestation plus d'une fois. Chaque fois, choisissez un don d'origines différent.</p>",
+            "advancement": {
+                "Choose Origin Feat": {
+                    "name": "Choisir un don d'origine",
+                    "hint": "<p>Vous recevez le @UUID[Compendium.dnd5e.content24.JournalEntry.phbFeats00000000.JournalEntryPage.otAeQs0TLHYIBNuj]{don d'origines} de votre choix.</p>"
+                }
+            }
         },
         "Life Domain": {
             "name": "Domaine de la Vie",
@@ -1569,23 +1661,45 @@
             "activities": {
                 "Heal (Largest Hit Die)": {
                     "name": "Soigner (plus grand dé de vie)",
-                    "condition": "Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte"
+                    "condition": "Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte",
+                    "description": "<p>Vous pouvez dépenser l'un de vos dés de vie pour le lancer et regagner un nombre de points de vie égal au résultat obtenu + votre modificateur de Constitution (minimum de 1 point de vie).</p>"
                 },
                 "Heal (Smallest Hit Die)": {
                     "name": "Soigner (plus petit dé de vie)",
-                    "condition": "Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte"
+                    "condition": "Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte",
+                    "description": "<p>Vous pouvez dépenser l'un de vos dés de vie pour le lancer et regagner un nombre de points de vie égal au résultat obtenu + votre modificateur de Constitution (minimum de 1 point de vie).</p>"
+                },
+                "Extra Damage": {
+                    "name": "Dégâts supplémentaires",
+                    "condition": "Lorsque vous touchez une créature avec votre arme de pacte",
+                    "description": "<p>Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte, vous pouvez lui infliger 1d6 points de dégâts supplémentaires nécrotiques, psychiques ou radiants (au choix).</p>"
                 }
             }
         },
         "Magical Cunning": {
             "name": "Rouerie magique",
             "description": "<p>Vous pouvez accomplir un rite ésotérique qui dure 1 minute. À la fin de ce délai, vous regagnez des emplacements de sorts de Magie de pacte dépensés, à concurrence de la moitié du maximum (arrondie au supérieur). Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>",
-            "requirements": "Occultiste"
+            "requirements": "Occultiste",
+            "activities": {
+                "Perform Esoteric Rite": {
+                    "name": "Accomplir un rite ésotérique"
+                },
+                "Perform Master Rite": {
+                    "name": "Accomplir un rite suprême",
+                    "description": "<p>Vous pouvez accomplir un rite ésotérique qui dure 1 minute. À la fin de ce délai, vous regagnez tous vos emplacements de sorts de Magie de pacte dépensés. Une fois cette aptitude utilisée, vous devez terminer un Repos long pour pouvoir y recourir de nouveau.</p>"
+                }
+            }
         },
         "Magical Discoveries": {
             "name": "Découvertes magiques",
             "description": "<p>Vous apprenez deux sorts de votre choix. Chacun de ces sorts peut être issu de la liste du @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.SkHptN2PTzFGDaEj]{Clerc}, du @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.LhvuDQEyrCdg5EfU]{Druide} ou du @UUID[Compendium.dnd5e.content24.JournalEntry.phbSpells0000000.JournalEntryPage.6AnqLUowgdsqMFvz]{Magicien}. Chaque sort retenu doit être un sort mineur ou d'un niveau pour lequel vous disposez d'au moins un emplacement, comme indiqué dans la table @UUID[Compendium.dnd5e.content24.JournalEntry.phbBard000000000.JournalEntryPage.V8pqIWlaL9GhY61t#aptitudes-de-classe]{Aptitudes du Barde}.</p><p>Ces sorts sont toujours préparés en ce qui vous concerne. Chaque fois que vous gagnez un niveau de Barde, vous pouvez remplacer l'un des sorts par un autre sort remplissant ces conditions.</p>",
-            "requirements": "Collège du Savoir"
+            "requirements": "Collège du Savoir",
+            "advancement": {
+                "Choose Spells": {
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbbrdMagicalDis inline]</p>",
+                    "name": "Choisir des sorts"
+                }
+            }
         },
         "Magical Secrets": {
             "name": "Secrets magiques",
@@ -1625,7 +1739,12 @@
         "Memorize Spell": {
             "name": "Mémorisation de sort",
             "description": "<p>Chaque fois que vous terminez un Repos court, vous pouvez étudier votre grimoire et remplacer l'un des sorts de Magicien du 1<sup>er</sup> niveau ou supérieur préparé dans le cadre de l'aptitude Sorts par un autre sort du 1<sup>er</sup> niveau ou plus tiré du grimoire.</p>",
-            "requirements": "Magicien"
+            "requirements": "Magicien",
+            "activities": {
+                "Memorize": {
+                    "name": "Mémoriser"
+                }
+            }
         },
         "Metamagic": {
             "name": "Métamagie",
@@ -1737,28 +1856,65 @@
         "Mystic Arcanum": {
             "name": "Arcanum mystique",
             "description": "<p>Votre protecteur vous octroie un secret magique appelé arcanum. Choisissez un sort d'Occultiste du 6<sup>e</sup> niveau pour cet arcanum.</p><p>Vous pouvez lancer ce sort d'arcanum sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p><p>Comme indiqué dans la table Aptitudes de l'Occultiste, vous recevez un autre sort d'Occultiste de votre choix qui peut être lancé de cette manière lorsque vous atteignez les niveaux 13 (sort du 7<sup>e</sup> niveau), 15 (sort du 8<sup>e</sup> niveau) et 17 (sort du 9<sup>e</sup> niveau) d'Occultiste. Vous récupérez toutes vos utilisations d'Arcanum mystique en terminant un Repos long.</p><p>Chaque fois que vous gagnez un niveau d'Occultiste, vous pouvez remplacer l'un de vos sorts d'arcanum par un autre sort d'Occultiste du même niveau.</p>",
-            "requirements": "Occultiste"
+            "requirements": "Occultiste",
+            "advancement": {
+                "Choose Level 6 Spell": {
+                    "name": "Choisir un sort du 6e niveau",
+                    "hint": "<p>Votre protecteur vous octroie un secret magique appelé arcanum. Choisissez un sort d'Occultiste du 6<sup>e</sup> niveau pour cet arcanum.</p><p>Vous pouvez lancer ce sort d'arcanum sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p>"
+                },
+                "Choose Level 7 Spell": {
+                    "name": "Choisir un sort du 7e niveau",
+                    "hint": "<p>Votre protecteur vous octroie un secret magique appelé arcanum. Choisissez un sort d'Occultiste du 7<sup>e</sup> niveau pour cet arcanum.</p><p>Vous pouvez lancer ce sort d'arcanum sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p>"
+                },
+                "Choose Level 8 Spell": {
+                    "name": "Choisir un sort du 8e niveau",
+                    "hint": "<p>Votre protecteur vous octroie un secret magique appelé arcanum. Choisissez un sort d'Occultiste du 8<sup>e</sup> niveau pour cet arcanum.</p><p>Vous pouvez lancer ce sort d'arcanum sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p>"
+                },
+                "Choose Level 9 Spell": {
+                    "name": "Choisir un sort du 9e niveau",
+                    "hint": "<p>Votre protecteur vous octroie un secret magique appelé arcanum. Choisissez un sort d'Occultiste du 9<sup>e</sup> niveau pour cet arcanum.</p><p>Vous pouvez lancer ce sort d'arcanum sans dépenser d'emplacement de sort, sachant que vous devez ensuite terminer un Repos long avant de pouvoir le relancer par ce biais.</p>"
+                }
+            }
         },
         "Natural Recovery": {
             "name": "Ressourcement",
-            "description": "<p>Vous pouvez lancer l'un des sorts du 1<sup>er</sup> niveau ou supérieur préparés par le biais de l'aptitude Sorts de cercle sans dépenser d'emplacement, après quoi il vous faut terminer un Repos long pour pouvoir le relancer ainsi.</p><p>En outre, quand vous terminez un Repos court, vous pouvez désigner des emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements dépensés ne doit pas excéder la moitié de votre niveau de Druide (arrondie au supérieur, actuellement [[lookup @classes.druid.levels]]), et aucun d'eux ne doit être du 6<sup>e</sup> niveau ou supérieur. Exemple : si vous êtes Druide de niveau 6, vous pouvez récupérer un maximum de trois niveaux d'emplacements de sort. Vous pouvez ainsi récupérer un emplacement du 3<sup>e</sup> niveau, un emplacement du 2<sup>e</sup> et un du 1<sup>er</sup>, ou trois emplacements du 1<sup>er</sup>. Une fois que vous avez récupéré des emplacements par cette aptitude, vous devez terminer un Repos long pour pouvoir le refaire.</p><section class=\"secret\" id=\"secret-xLFXthYlJ7wwFlSS\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Lancer un sort</strong> peut être utilisée pour suivre son unique utilisation gratuite.</p><p>L'activité <strong>Récupérer un emplacement de sort</strong> n'automatise pas la restauration des emplacements de sorts mais peut être utilisée pour suivre son utilisation unique.</p></section>",
+            "description": "<p>Vous pouvez lancer l'un des sorts du 1<sup>er</sup> niveau ou supérieur préparés par le biais de l'aptitude Sorts de cercle sans dépenser d'emplacement, après quoi il vous faut terminer un Repos long pour pouvoir le relancer ainsi.</p><p>En outre, quand vous terminez un Repos court, vous pouvez désigner des emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements dépensés ne doit pas excéder la moitié de votre niveau de Druide (arrondie au supérieur), et aucun d'eux ne doit être du 6<sup>e</sup> niveau ou supérieur. Exemple : si vous êtes Druide de niveau 6, vous pouvez récupérer un maximum de trois niveaux d'emplacements de sort. Vous pouvez ainsi récupérer un emplacement du 3<sup>e</sup> niveau, un emplacement du 2<sup>e</sup> et un du 1<sup>er</sup>, ou trois emplacements du 1<sup>er</sup>. Une fois que vous avez récupéré des emplacements par cette aptitude, vous devez terminer un Repos long pour pouvoir le refaire.</p><section id=\"secret-xLFXthYlJ7wwFlSS\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Récupérer un emplacement de sort</strong> n'automatise pas la restauration des emplacements de sorts mais peut être utilisée pour suivre son utilisation unique.</p></section>",
             "requirements": "Cercle de la Terre",
             "activities": {
                 "Cast Spell": {
-                    "name": "Lancer un sort"
+                    "name": "Lancer un sort",
+                    "description": "<p>Vous pouvez lancer l'un des sorts du 1<sup>er</sup> niveau ou supérieur préparés par le biais de l'aptitude Sorts de cercle sans dépenser d'emplacement, après quoi il vous faut terminer un Repos long pour pouvoir le relancer ainsi.</p>"
                 },
                 "Recover Spell Slots": {
-                    "name": "Récupérer un emplacement de sort"
+                    "name": "Récupérer un emplacement de sort",
+                    "description": "<p>Quand vous terminez un Repos court, vous pouvez désigner des emplacements de sort dépensés que vous souhaitez récupérer. La somme des niveaux de ces emplacements dépensés ne doit pas excéder la moitié de votre niveau de Druide (arrondie au supérieur, actuellement [[lookup @classes.druid.levels]]), et aucun d'eux ne doit être du 6<sup>e</sup> niveau ou supérieur. Exemple : si vous êtes Druide de niveau 6, vous pouvez récupérer un maximum de trois niveaux d'emplacements de sort. Vous pouvez ainsi récupérer un emplacement du 3<sup>e</sup> niveau, un emplacement du 2<sup>e</sup> et un du 1<sup>er</sup>, ou trois emplacements du 1<sup>er</sup>. Une fois que vous avez récupéré des emplacements par cette aptitude, vous devez terminer un Repos long pour pouvoir le refaire.</p>"
                 }
             }
         },
         "Nature's Sanctuary": {
             "name": "Sanctuaire de dame Nature",
-            "description": "<p>Au prix de l'action Magie, vous pouvez dépenser une utilisation de Forme sauvage pour faire apparaître au sol des plantes grimpantes et arbres spectraux dans un Cube de 4,50 m, dans un rayon de 36 m de vous. Ces végétaux spectraux persistent pendant 1 minute, mais disparaissent prématurément si vous subissez l'état Neutralisé ou mourez. Vous et vos alliés bénéficiez d'un Abri partiel dans la zone et vos alliés reçoivent la Résistance que vous octroie actuellement Protégé de dame Nature tant qu'ils restent dans la zone.</p><p>Par une action Bonus, vous pouvez déplacer au sol le Cube d'un maximum de 18 m, à condition qu'il reste dans un rayon de 36 m de vous.</p><section class=\"secret\" id=\"secret-OyXlvV2zR9s0WXyn\"><p><strong>Note Foundry</strong></p><p>Cette aptitude inclut des effets actifs pour chaque type d'environnement de Sanctuaire de dame Nature et ajoute l'effet d'un Abri partiel qui applique automatiquement les bonus correspondants. Appliquez l'effet correspondant à vos alliés.</p><p>Cependant, ces effets actifs ne sont pas automatiquement ajoutés/supprimés aux acteurs dans la zone désignée.</p><p>Il comprend également une activité qui peut être utilisée pour suivre l'utilisation de votre action Bonus lorsque vous déplacez les plantes grimpantes et les arbres spectraux.</p></section>",
+            "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdNaturesSan.Activity.dnd5eactivity000 inline]</p><p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdNaturesSan.Activity.oV51RLBkYFH4MPrS inline]</p><section id=\"secret-OyXlvV2zR9s0WXyn\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude propose une activité pour chaque type d'environnement. Sélectionnez celle qui correspond à votre type d'environnement actuel : les effets appropriés s'appliqueront alors automatiquement à vos alliés présents dans la région concernée.</p></section>",
             "requirements": "Cercle de la Terre",
             "activities": {
                 "Move": {
-                    "name": "Se déplacer"
+                    "name": "Se déplacer",
+                    "description": "<p>Par une action Bonus, vous pouvez déplacer au sol le Cube d'un maximum de 18 m, à condition qu'il reste dans un rayon de 36 m de vous.</p>"
+                },
+                "Place Sanctuary (Arid)": {
+                    "name": "Placer un sanctuaire (aride)",
+                    "description": "<p>Au prix de l'action &Reference[Magic], vous pouvez dépenser une utilisation de Forme sauvage pour faire apparaître au sol des plantes grimpantes et arbres spectraux dans un Cube de 4,50 m, dans un rayon de 36 m de vous. Ces végétaux spectraux persistent pendant 1 minute, mais disparaissent prématurément si vous subissez l'état &Reference[Incapacitated apply=false] ou mourez. Vous et vos alliés bénéficiez d'un &Reference[Half Cover] dans la zone et vos alliés reçoivent la &Reference[Resistance] que vous octroie actuellement Protégé de dame Nature tant qu'ils restent dans la zone.</p>"
+                },
+                "Place Sanctuary (Polar)": {
+                    "name": "Placer un sanctuaire (polaire)",
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdNaturesSan.Activity.dnd5eactivity000 inline]</p>"
+                },
+                "Place Sanctuary (Temperate)": {
+                    "name": "Placer un sanctuaire (tempéré)",
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdNaturesSan.Activity.dnd5eactivity000 inline]</p>"
+                },
+                "Place Sanctuary (Tropical)": {
+                    "name": "Placer un sanctuaire (tropical)",
+                    "description": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbdrdNaturesSan.Activity.dnd5eactivity000 inline]</p>"
                 }
             }
         },
@@ -1806,7 +1962,12 @@
         },
         "One with Shadows": {
             "name": "Maître des ombres",
-            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Tant que vous vous trouvez dans une zone de &Reference[Dim Light] ou de &Reference[Darkness], vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{invisibilité}</em> sur vous-même sans dépenser d'emplacement de sort.</p>"
+            "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 5+</p></div><p>Tant que vous vous trouvez dans une zone de &Reference[Dim Light] ou de &Reference[Darkness], vous pouvez lancer <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplInvisibili]{invisibilité}</em> sur vous-même sans dépenser d'emplacement de sort.</p>",
+            "activities": {
+                "uF0beZxnJDJ6LQp8": {
+                    "condition": "Dans une zone de Lumière faible ou de Ténèbres"
+                }
+            }
         },
         "Open Hand Technique": {
             "name": "Technique de la Paume",
@@ -1893,7 +2054,17 @@
         },
         "Pact of the Tome": {
             "name": "Pacte du grimoire",
-            "description": "<p>En cousant ensemble des filaments d'ombre, vous invoquez un grimoire qui apparaît dans votre main à la fin d'un Repos court ou long. Ce @UUID[Compendium.dnd5e.classes24.Item.phbwlkBookOfShad]{Codex des Ombres} (il vous appartient d'en déterminer l'apparence) renferme une magie occulte à laquelle vous seul avez accès, et qui vous octroie les bénéfices suivants. Le grimoire disparaît si vous en invoquez un autre par le biais de cette aptitude ou si vous mourez.</p><p><em><strong>Sorts mineurs et rituels.</strong></em> Lorsque le grimoire apparaît, choisissez trois sorts mineurs, puis deux sorts du 1<sup>er</sup> niveau portant la mention « rituel ». Ces sorts peuvent appartenir à la liste de sorts de n'importe quelle classe, et doivent être des sorts que vous n'avez pas déjà préparés. Tant que le grimoire est sur vous, les sorts choisis sont préparés et fonctionnent pour vous comme des sorts d'Occultiste.</p><p><em><strong>Focaliseur d'incantation.</strong></em> Vous pouvez vous servir du grimoire comme focaliseur d'incantation.</p>"
+            "description": "<p>En cousant ensemble des filaments d'ombre, vous invoquez un grimoire qui apparaît dans votre main à la fin d'un Repos court ou long. Ce @UUID[Compendium.dnd5e.classes24.Item.phbwlkBookOfShad]{Codex des Ombres} (il vous appartient d'en déterminer l'apparence) renferme une magie occulte à laquelle vous seul avez accès, et qui vous octroie les bénéfices suivants. Le grimoire disparaît si vous en invoquez un autre par le biais de cette aptitude ou si vous mourez.</p><p><em><strong>Sorts mineurs et rituels.</strong></em> Lorsque le grimoire apparaît, choisissez trois sorts mineurs, puis deux sorts du 1<sup>er</sup> niveau portant la mention « rituel ». Ces sorts peuvent appartenir à la liste de sorts de n'importe quelle classe, et doivent être des sorts que vous n'avez pas déjà préparés. Tant que le grimoire est sur vous, les sorts choisis sont préparés et fonctionnent pour vous comme des sorts d'Occultiste.</p><p><em><strong>Focaliseur d'incantation.</strong></em> Vous pouvez vous servir du grimoire comme focaliseur d'incantation.</p>",
+            "advancement": {
+                "Book of Shadows Cantrips": {
+                    "name": "Sorts mineurs du Codex des Ombres",
+                    "hint": "<p>Lorsque le grimoire apparaît, choisissez trois sorts mineurs.</p>"
+                },
+                "Book of Shadows Rituals": {
+                    "name": "Rituels du Codex des Ombres",
+                    "hint": "<p>Lorsque le grimoire apparaît, choisissez deux sorts du 1<sup>er</sup> niveau portant la mention « rituel ».</p>"
+                }
+            }
         },
         "Paladin": {
             "name": "Paladin",
@@ -2200,7 +2371,8 @@
                     "name": "Décharge répulsive",
                     "description": "<p>Choisissez l'un de vos sorts mineurs d'Occultiste connus qui nécessite un jet d'attaque. Lorsque vous touchez une créature de taille G ou inférieure avec ce sort mineur, vous pouvez repousser cette créature de vous d'un maximum de 3 m, en ligne droite.</p>",
                     "changes": {
-                        "0": "{} (Répulsif)"
+                        "0": "{} (Répulsif)",
+                        "1": "{}<hr><p>Lorsque vous touchez une créature de taille G ou inférieure avec ce sort mineur, vous pouvez repousser cette créature de vous d'un maximum de 3 m, en ligne droite.</p>"
                     }
                 }
             }
@@ -2249,6 +2421,9 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "YW6yxOO45ACMgnJT": {
+                    "hint": "<p>Vous recevez la sous-classe de Roublard de votre choix. Les sous-classes Âme acérée, Arnaqueur arcanique, Assassin et Voleur sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Roublard. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Roublard.</p>"
                 }
             }
         },
@@ -2287,7 +2462,8 @@
             "requirements": "Magicien",
             "advancement": {
                 "Expertise": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbwzdScholar000 inline]</p>"
                 }
             }
         },
@@ -2328,7 +2504,7 @@
         },
         "Signature Spells": {
             "name": "Sorts de prédilection",
-            "description": "<p>Choisissez deux sorts de Magicien du 3<sup>e</sup> niveau de votre grimoire comme sorts de prédilection. Ces sorts sont considérés comme toujours préparés pour vous, et vous pouvez les lancer une fois chacun au 3<sup>e</sup> niveau sans dépense d'emplacement de sort. Après cela, vous devez terminer un Repos court ou long avant de pouvoir les relancer sans emplacement. Si vous souhaitez les lancer à un niveau supérieur, vous devez toutefois dépenser un emplacement de sort.</p><section class=\"secret\" id=\"secret-fzEf6z2A0SKM0qHw\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Faire la prédilection</strong> peut être utilisée pour enchanter deux sorts, ce qui les marque comme « Toujours préparé » et ajoute « , Prédilection» à leur titre pour faciliter leur identification.</p><p>Les activités <strong>Dépenser le premier sort</strong> et <strong>Dépenser le second sort</strong> peuvent être utilisées pour suivre votre utilisation gratuite de chaque sort et votre rafraîchissement lors d'un Repos court et long.</p></section>",
+            "description": "<p>Choisissez deux sorts de Magicien du 3<sup>e</sup> niveau de votre grimoire comme sorts de prédilection. Ces sorts sont considérés comme toujours préparés pour vous, et vous pouvez les lancer une fois chacun au 3<sup>e</sup> niveau sans dépense d'emplacement de sort. Après cela, vous devez terminer un Repos court ou long avant de pouvoir les relancer sans emplacement. Si vous souhaitez les lancer à un niveau supérieur, vous devez toutefois dépenser un emplacement de sort.</p><section id=\"secret-fzEf6z2A0SKM0qHw\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Faire la prédilection</strong> peut être utilisée pour enchanter deux sorts, ce qui les marque comme « Toujours préparé » et ajoute « (Prédilection) » à leur titre pour faciliter leur identification.</p><p>Les activités <strong>Dépenser le premier sort</strong> et <strong>Dépenser le second sort</strong> peuvent être utilisées pour suivre votre utilisation gratuite de chaque sort et votre rafraîchissement lors d'un Repos court et long.</p></section>",
             "activities": {
                 "Make Signature": {
                     "name": "Faire la prédilection"
@@ -2354,7 +2530,12 @@
         "Slippery Mind": {
             "name": "Esprit fuyant",
             "description": "<p>Votre esprit retors est particulièrement difficile a contrôler. Vous recevez la maîtrise des jets de sauvegarde de Sagesse et de Charisme.</p>",
-            "requirements": "Roublard"
+            "requirements": "Roublard",
+            "advancement": {
+                "FiaNLovfP6tnY4tD": {
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeSlipperyMi inline]</p>"
+                }
+            }
         },
         "Slow Fall": {
             "name": "Chute ralentie",
@@ -2377,7 +2558,7 @@
         },
         "Sneak Attack": {
             "name": "Attaque sournoise",
-            "description": "<p>Vous savez porter des attaques qui exploitent subtilement les baisses d'attention de l'adversaire. Une fois par tour et à condition que l'attaque soit portée avec une arme présentant la propriété Finesse ou À distance, vous pouvez infliger 1d6 dégâts supplémentaires à une créature que vous touchez avec un jet d'attaque pour lequel vous avez l'Avantage. Ces dégâts supplémentaires sont du même type que celui de l'arme.</p><p>Vous n'avez pas besoin d'avoir l'Avantage au jet d'attaque si au moins l'un de vos alliés se trouve dans un rayon de 1,50 m de la cible, à condition que cet allié ne subisse pas l'état Neutralisé et que vous ne subissiez pas le Désavantage au jet d'attaque.</p><p>Ces dégâts supplémentaires augmentent à mesure que vous gagnez des niveaux de Roublard, comme l'indique la colonne Attaque sournoise de la table Aptitudes du Roublard.</p><p><strong>Dégâts actuels de Attaque sournoise :</strong> [[lookup @scale.rogue.sneak-attack]]</p><section class=\"secret\" id=\"secret-ulLpai4CguAExpmN\"><p><strong>Note Foundry</strong></p><p>Les dégâts de votre attaque sournoise augmenteront automatiquement à mesure que vous monterez de niveau. Vous pouvez sélectionner le type de dégâts dans la boîte de dialogue du jet de dégâts.</p></section>",
+            "description": "<p>Vous savez porter des attaques qui exploitent subtilement les baisses d'attention de l'adversaire. Une fois par tour et à condition que l'attaque soit portée avec une arme présentant la propriété Finesse ou À distance, vous pouvez infliger 1d6 dégâts supplémentaires à une créature que vous touchez avec un jet d'attaque pour lequel vous avez l'Avantage. Ces dégâts supplémentaires sont du même type que celui de l'arme.</p><p>Vous n'avez pas besoin d'avoir l'Avantage au jet d'attaque si au moins l'un de vos alliés se trouve dans un rayon de 1,50 m de la cible, à condition que cet allié ne subisse pas l'état Neutralisé et que vous ne subissiez pas le Désavantage au jet d'attaque.</p><p>Ces dégâts supplémentaires augmentent à mesure que vous gagnez des niveaux de Roublard, comme l'indique la colonne Attaque sournoise de la table Aptitudes du Roublard.</p>",
             "requirements": "Roublard",
             "activities": {
                 "Sneak Attack": {
@@ -2443,7 +2624,7 @@
         },
         "Spell Mastery": {
             "name": "Maîtrise des sorts",
-            "description": "<p>Vous avez atteint une telle maîtrise de certains sorts que vous pouvez désormais les lancer à volonté. Choisissez un sort du 1<sup>er</sup> niveau et un sort du 2<sup>e</sup> niveau dans votre grimoire, dont le temps d'incantation est d'une action. Ces sorts sont considérés comme toujours préparés pour vous, et vous pouvez les lancer à leur niveau le plus bas sans dépenser d'emplacement de sort. Si vous souhaitez les lancer à un niveau supérieur, vous devez toutefois dépenser un emplacement de sort.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez étudier votre grimoire et remplacer l'un de ces sorts par un sort conforme du même niveau tiré du grimoire.</p><section class=\"secret\" id=\"secret-OhEjtOfrcVMJh1qk\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Maître des sorts</strong> comprend un enchantement qui marque les sorts comme étant « Toujours préparé » et ajoute « Maîtrisé » à leur nom pour faciliter leur identification.</p><p>Décochez la case « Consommation » lorsque vous lancez un sort au niveau le plus bas. Vous pouvez faire glisser plusieurs sorts sur la même carte de tchat.</p></section>",
+            "description": "<p>Vous avez atteint une telle maîtrise de certains sorts que vous pouvez désormais les lancer à volonté. Choisissez un sort du 1<sup>er</sup> niveau et un sort du 2<sup>e</sup> niveau dans votre grimoire, dont le temps d'incantation est d'une action. Ces sorts sont considérés comme toujours préparés pour vous, et vous pouvez les lancer à leur niveau le plus bas sans dépenser d'emplacement de sort. Si vous souhaitez les lancer à un niveau supérieur, vous devez toutefois dépenser un emplacement de sort.</p><p>Chaque fois que vous terminez un Repos long, vous pouvez étudier votre grimoire et remplacer l'un de ces sorts par un sort conforme du même niveau tiré du grimoire.</p><section id=\"secret-OhEjtOfrcVMJh1qk\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>L'activité <strong>Maître des sorts</strong> comprend un enchantement qui marque les sorts comme étant « Toujours préparé » et ajoute « (Maîtrisé) » à leur nom pour faciliter leur identification.</p><p>Décochez la case « Consommation » lorsque vous lancez un sort au niveau le plus bas. Vous pouvez faire glisser plusieurs sorts sur la même carte de tchat.</p></section>",
             "activities": {
                 "Master Spell": {
                     "name": "Maître des sorts"
@@ -2454,7 +2635,8 @@
                     "name": "Maitrisé",
                     "changes": {
                         "0": "{} (Maitrisé)"
-                    }
+                    },
+                    "description": "<p>Ces sorts sont considérés comme toujours préparés pour vous, et vous pouvez les lancer à leur niveau le plus bas sans dépenser d'emplacement de sort. Si vous souhaitez les lancer à un niveau supérieur, vous devez toutefois dépenser un emplacement de sort.</p>"
                 }
             },
             "requirements": "Magicien"
@@ -2487,7 +2669,7 @@
         },
         "Studied Attacks": {
             "name": "Attaques avisées",
-            "description": "<p>Vous savez étudier la défense de l'adversaire au fil de vos attaques. Si vous effectuez un jet d'attaque contre une créature et que vous ratez, vous avez l'Avantage à votre prochain jet d'attaque contre elle intervenant avant la fin de votre tour suivant.</p><section class=\"secret\" id=\"secret-JB6LwCHybmUrbihQ\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas l'Avantage à votre prochain jet d'attaque.</p></section>",
+            "description": "<p>Vous savez étudier la défense de l'adversaire au fil de vos attaques. Si vous effectuez un jet d'attaque contre une créature et que vous ratez, vous avez l'Avantage à votre prochain jet d'attaque contre elle intervenant avant la fin de votre tour suivant.</p><section id=\"secret-JB6LwCHybmUrbihQ\" class=\"secret\"><p><strong>Note Foundry</strong></p><p>Cette aptitude n'automatise pas l'Avantage à votre prochain jet d'attaque.</p></section>",
             "requirements": "Guerrier"
         },
         "Stunning Strike": {
@@ -2625,7 +2807,8 @@
             "activities": {
                 "Add Bonus": {
                     "roll": "Bonus de test",
-                    "condition": "Lorsque vous ratez un test de caractéristique"
+                    "condition": "Lorsque vous ratez un test de caractéristique",
+                    "name": "Ajouter un bonus"
                 }
             }
         },
@@ -2645,11 +2828,12 @@
         },
         "Thieves' Cant": {
             "name": "Argot des voleurs",
-            "description": "<p>Vous avez appris diverses langues auprès des communautés dans lesquelles vous avez fait vos armes de Roublard. Vous connaissez l'argot des voleurs et une autre langue, que vous choisissez dans les tables des langues dans @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.t1WP9VEevo4TOTXw#choisissez-vos-langues]{Création de personnage}.</p><section class=\"secret\" id=\"secret-xG1Y223QZRsrOTCZ\"><p><strong>Note Foundry</strong></p><p>Argot des voleurs sera ajouté automatiquement à votre feuille et vous serez invité à choisir la langue supplémentaire.</p></section>",
+            "description": "<p>Vous avez appris diverses langues auprès des communautés dans lesquelles vous avez fait vos armes de Roublard. Vous connaissez l'argot des voleurs et une autre langue, que vous choisissez dans les tables des langues dans @UUID[Compendium.dnd5e.content24.JournalEntry.phbCreatingAChar.JournalEntryPage.t1WP9VEevo4TOTXw#choisissez-vos-langues]{chapitre 2}.</p>",
             "requirements": "Roublard",
             "advancement": {
                 "Thieves' Cant": {
-                    "name": "Argot des voleurs"
+                    "name": "Argot des voleurs",
+                    "hint": "<p>@Embed[Compendium.dnd5e.classes24.Item.phbrgeThievesCan inline]</p>"
                 }
             }
         },
@@ -2820,6 +3004,9 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
                 }
             }
         },
@@ -2867,6 +3054,9 @@
             "activities": {
                 "Find Familiar": {
                     "name": "Appel de familier"
+                },
+                "Cast with Wild Shape": {
+                    "name": "Lancer avec Forme sauvage"
                 }
             }
         },
@@ -2876,11 +3066,13 @@
             "requirements": "Druide",
             "activities": {
                 "Regain Spell Slot": {
-                    "name": "Regain d'emplacement de sort"
+                    "name": "Regain d'emplacement de sort",
+                    "description": "<p>Vous pouvez dépenser une utilisation de Forme sauvage (pas d'action requise) pour vous octroyer un emplacement du 1<sup>er</sup> niveau, après quoi vous devez terminer un Repos long pour le refaire.</p>"
                 },
                 "Regain Wild Shape": {
                     "name": "Regain de Forme sauvage",
-                    "condition": "Une fois à chacun de vos tours"
+                    "condition": "Une fois à chacun de vos tours",
+                    "description": "<p>Une fois à chacun de vos tours, s'il ne vous reste aucune utilisation de Forme sauvage, vous pouvez vous en octroyer une en dépensant un emplacement de sort (pas d'action requise).</p>"
                 }
             }
         },
@@ -2911,7 +3103,8 @@
             "description": "<div class=\"item-entry-details\"><p class=\"item-entry-tag\">Prérequis : niveau d'Occultiste 15+</p></div><p>Vous disposez de la &Reference[Truesight] sur 9 m.</p>",
             "effects": {
                 "Truesight": {
-                    "name": "Vision lucide"
+                    "name": "Vision lucide",
+                    "description": "<p>Vous disposez de la &Reference[Truesight] sur 9 m.</p>"
                 }
             }
         },
@@ -2933,13 +3126,24 @@
                 },
                 "Epic Boon": {
                     "name": "Faveur épique"
+                },
+                "Prepared Spells": {
+                    "name": "Sorts préparés"
+                },
+                "KTYjh1MKLvOtrZ3u": {
+                    "hint": "<p>Vous recevez la sous-classe de Magicien de votre choix. Les sous-classes Abjurateur, Devin, Évocateur et Illusionniste sont détaillées après la description de cette classe. Une sous-classe est une spécialisation qui vous octroie des aptitudes à certains niveaux de Magicien. Pour le reste de votre carrière, vous bénéficiez de chacune des aptitudes de la sous-classe choisie, à concurrence de votre niveau actuel de Magicien.</p>"
                 }
             }
         },
         "Words of Creation": {
             "name": "Verbe de la création",
             "description": "<p>Vous avez maîtrisé deux des paroles du Verbe de la création : celles de la vie et de la mort. Les sorts <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordH]{mot de pouvoir guérisseur}</em> et <em>@UUID[Compendium.dnd-players-handbook.spells.Item.phbsplPowerWordK]{mot de pouvoir mortel}</em> sont désormais constamment préparés en ce qui vous concerne. Lorsque vous lancez l'un de ces sorts, vous pouvez cibler une seconde créature si elle se trouve dans un rayon de 3 m de la première cible.</p>",
-            "requirements": "Barde"
+            "requirements": "Barde",
+            "advancement": {
+                "Words of Life and Death": {
+                    "name": "Verbe de la vie et de la mort"
+                }
+            }
         },
         "phbclcSpellcasti": {
             "name": "Sorts",
@@ -2962,16 +3166,20 @@
             "requirements": "Guerrier",
             "advancement": {
                 "Weapon Mastery": {
-                    "name": "Bottes d'arme"
+                    "name": "Bottes d'arme",
+                    "hint": "<p>Votre entraînement martial vous permet de recourir à la botte de trois types d'arme courante ou de guerre de votre choix. Chaque fois que vous terminez un Repos long, vous pouvez accomplir des exercices martiaux pour changer l'un de ces choix.</p>"
                 },
                 "oQeuiFaWAVOPtJPt": {
-                    "name": "Bottes d'arme"
+                    "name": "Bottes d'arme",
+                    "hint": "<p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez la faculté de recourir à la botte d'autres types d'arme.</p>"
                 },
                 "4QKhDAuuM8x78quv": {
-                    "name": "Bottes d'arme"
+                    "name": "Bottes d'arme",
+                    "hint": "<p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez la faculté de recourir à la botte d'autres types d'arme.</p>"
                 },
                 "YSAbsXV9zn9eX9p7": {
-                    "name": "Bottes d'arme"
+                    "name": "Bottes d'arme",
+                    "hint": "<p>Lorsque vous atteignez certains niveaux de Guerrier, vous recevez la faculté de recourir à la botte d'autres types d'arme.</p>"
                 }
             }
         },
@@ -3057,14 +3265,16 @@
         },
         "phbrgeExpertise0": {
             "name": "Expertise",
-            "description": "<p>Vous recevez l'&Reference[Expertise] dans deux de vos maîtrises de compétence au choix. Escamotage et Discrétion ont recommandés si vous en avez la maîtrise.</p><p>Au niveau 6 de Roublard, vous recevez l'Expertise dans deux maîtrises de compétences supplémentaire au choix.</p>",
+            "description": "<p>Vous recevez l'&Reference[Expertise] dans deux de vos maîtrises de compétence au choix. Escamotage et Discrétion ont recommandés si vous en avez la maîtrise.</p><p>Au niveau 6 de Roublard, vous recevez l'Expertise dans deux maîtrises de compétences supplémentaires au choix.</p>",
             "requirements": "Roublard",
             "advancement": {
                 "Expertise": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>Vous recevez l'&Reference[Expertise] dans deux de vos maîtrises de compétence au choix. Escamotage et Discrétion ont recommandés si vous en avez la maîtrise.</p>"
                 },
                 "sqWH6tnUg7jiGaEj": {
-                    "name": "Expertise"
+                    "name": "Expertise",
+                    "hint": "<p>Vous recevez l'&Reference[Expertise] dans deux maîtrises de compétences supplémentaires au choix.</p>"
                 }
             }
         },
@@ -3074,7 +3284,8 @@
             "requirements": "Roublard",
             "advancement": {
                 "Weapon Mastery": {
-                    "name": "Bottes d'arme"
+                    "name": "Bottes d'arme",
+                    "hint": "<p>Votre entraînement martial vous permet de recourir à la propriété Botte de deux type d'arme de votre choix parmi celles dont vous avez la maîtrise, par exemple la dague et l'arc court.</p>"
                 }
             }
         },
